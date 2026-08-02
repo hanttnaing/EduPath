@@ -1,0 +1,24 @@
+[
+  {
+    "university_id": "uni_jp_001",
+    "university_name": "The University of Tokyo",
+    "country_id": "country_jp",
+    "city": "Tokyo",
+    "university_type": "Public",
+    "official_website": "https://www.u-tokyo.ac.jp/en/",
+    "establishment_year": 1877,
+    "global_ranking": null,
+    "ranking_source": null,
+    "ranking_year": null,
+    "degree_levels": [
+      "Bachelor",
+      "Master",
+      "PhD"
+    ],
+    "scholarship_available": true,
+    "source_url": "https://www.u-tokyo.ac.jp/en/about/about.html",
+    "collected_at": "2026-07-29",
+    "last_verified_at": "2026-07-29",
+    "freshness_status": "current"
+  }
+]

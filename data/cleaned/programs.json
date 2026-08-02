@@ -1,0 +1,28 @@
+[
+  {
+    "program_id": "prog_jp_001",
+    "university_id": "uni_jp_001",
+    "program_name": "English Program in Information Science and Technology",
+    "field_of_study": "Information Science and Technology",
+    "degree_level": "Master",
+    "duration_years": null,
+    "study_mode": null,
+    "language_of_instruction": "English",
+    "tuition_fee": 535800,
+    "tuition_currency": "JPY",
+    "tuition_period": "Annual",
+    "minimum_gpa": null,
+    "gpa_scale": null,
+    "ielts_requirement": null,
+    "toefl_requirement": null,
+    "intake": [
+      "April",
+      "October"
+    ],
+    "application_deadline": null,
+    "program_url": "https://www.i.u-tokyo.ac.jp/ist_en/en-course/prg.shtml",
+    "collected_at": "2026-08-02",
+    "last_verified_at": "2026-08-02",
+    "freshness_status": "current"
+  }
+]
