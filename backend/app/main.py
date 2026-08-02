@@ -21,6 +21,8 @@ from backend.app.schemas import (
     ProgramListResponse,
     ProgramResponse,
     RootResponse,
+    ScholarshipListResponse,
+    ScholarshipResponse,
     UniversityListResponse,
     UniversityResponse,
 )
@@ -529,3 +531,196 @@ def get_country(
 
     return country
 
+# ---------------------------------------------------------
+# List and filter scholarships
+# ---------------------------------------------------------
+
+@app.get(
+    "/api/scholarships",
+    response_model=ScholarshipListResponse,
+    tags=["Scholarships"],
+)
+def list_scholarships(
+    country_id: str | None = Query(
+        default=None,
+        description="Filter scholarships by country ID.",
+        examples=["country_jp"],
+    ),
+    host_university_id: str | None = Query(
+        default=None,
+        description=(
+            "Filter scholarships by host university ID."
+        ),
+        examples=["uni_jp_001"],
+    ),
+    degree_level: str | None = Query(
+        default=None,
+        description="Filter by an eligible degree level.",
+        examples=["Master"],
+    ),
+    field_of_study: str | None = Query(
+        default=None,
+        description="Filter by an eligible field of study.",
+        examples=["Computer Science"],
+    ),
+    funding_type: str | None = Query(
+        default=None,
+        description="Filter by scholarship funding type.",
+        examples=["Fully Funded"],
+    ),
+    scholarship_status: str | None = Query(
+        default=None,
+        description="Filter by scholarship status.",
+        examples=["upcoming"],
+    ),
+    application_cycle: str | None = Query(
+        default=None,
+        description="Filter by application cycle.",
+        examples=["2027"],
+    ),
+    min_monthly_allowance: float | None = Query(
+        default=None,
+        ge=0,
+        description=(
+            "Return scholarships whose monthly allowance "
+            "is greater than or equal to this value."
+        ),
+        examples=[100000],
+    ),
+    skip: int = Query(
+        default=0,
+        ge=0,
+        description="Number of scholarship records to skip.",
+    ),
+    limit: int = Query(
+        default=20,
+        ge=1,
+        le=100,
+        description=(
+            "Maximum number of scholarship records "
+            "to return."
+        ),
+    ),
+) -> dict[str, Any]:
+    """Return scholarships using optional search filters."""
+
+    query: dict[str, Any] = {}
+
+    if country_id is not None:
+        query["country_id"] = country_id
+
+    if host_university_id is not None:
+        query["host_university_id"] = host_university_id
+
+    if degree_level is not None:
+        query["degree_levels"] = degree_level
+
+    if field_of_study is not None:
+        query["fields_of_study"] = field_of_study
+
+    if funding_type is not None:
+        query["funding_type"] = funding_type
+
+    if scholarship_status is not None:
+        query["scholarship_status"] = (
+            scholarship_status.lower()
+        )
+
+    if application_cycle is not None:
+        query["application_cycle"] = application_cycle
+
+    if min_monthly_allowance is not None:
+        query["monthly_allowance"] = {
+            "$ne": None,
+            "$gte": min_monthly_allowance,
+        }
+
+    database = get_database()
+    collection = database["scholarships"]
+
+    try:
+        total = collection.count_documents(query)
+
+        cursor = (
+            collection
+            .find(
+                query,
+                {
+                    "_id": 0,
+                    "content_hash": 0,
+                    "created_at": 0,
+                    "database_updated_at": 0,
+                },
+            )
+            .sort(
+                [
+                    ("application_deadline", ASCENDING),
+                    ("scholarship_name", ASCENDING),
+                ]
+            )
+            .skip(skip)
+            .limit(limit)
+        )
+
+        scholarships = list(cursor)
+
+    except PyMongoError as error:
+        raise HTTPException(
+            status_code=(
+                status.HTTP_500_INTERNAL_SERVER_ERROR
+            ),
+            detail=(
+                "Unable to retrieve scholarship records."
+            ),
+        ) from error
+
+    return {
+        "total": total,
+        "count": len(scholarships),
+        "items": scholarships,
+    }
+
+
+# ---------------------------------------------------------
+# Find one scholarship
+# ---------------------------------------------------------
+
+@app.get(
+    "/api/scholarships/{scholarship_id}",
+    response_model=ScholarshipResponse,
+    tags=["Scholarships"],
+)
+def get_scholarship(
+    scholarship_id: str,
+) -> dict[str, Any]:
+    """Return one scholarship using its unique ID."""
+
+    database = get_database()
+    collection = database["scholarships"]
+
+    try:
+        scholarship = collection.find_one(
+            {"scholarship_id": scholarship_id},
+            {
+                "_id": 0,
+                "content_hash": 0,
+                "created_at": 0,
+                "database_updated_at": 0,
+            },
+        )
+
+    except PyMongoError as error:
+        raise HTTPException(
+            status_code=(
+                status.HTTP_500_INTERNAL_SERVER_ERROR
+            ),
+            detail="Unable to retrieve the scholarship.",
+        ) from error
+
+    if scholarship is None:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Scholarship not found.",
+        )
+
+    return scholarship

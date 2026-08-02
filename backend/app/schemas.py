@@ -119,3 +119,63 @@ class CountryListResponse(BaseModel):
     total: int
     count: int
     items: list[CountryResponse]
+
+class ScholarshipResponse(BaseModel):
+    """Public scholarship data returned by the API."""
+
+    model_config = ConfigDict(extra="ignore")
+
+    scholarship_id: str
+    scholarship_name: str
+
+    provider_name: str
+    provider_type: str
+
+    country_id: str
+    host_university_id: str | None = None
+
+    eligible_nationalities: list[str] | None = None
+    degree_levels: list[str]
+    fields_of_study: list[str] | None = None
+
+    minimum_gpa: int | float | None = None
+    gpa_scale: int | float | None = None
+
+    ielts_requirement: int | float | None = None
+    toefl_requirement: int | None = None
+    age_limit: int | None = None
+
+    funding_type: str
+    tuition_coverage: str | None = None
+
+    monthly_allowance: int | float | None = None
+    allowance_currency: str | None = None
+
+    travel_allowance: str | None = None
+    accommodation_support: str | None = None
+    health_insurance: str | None = None
+
+    required_documents: list[str] | None = None
+
+    application_opening_date: datetime | None = None
+    application_deadline: datetime | None = None
+
+    scholarship_status: str
+    application_cycle: str
+
+    official_website: str
+    source_url: str
+
+    collected_at: datetime
+    last_verified_at: datetime
+
+    freshness_status: str
+    data_quality_status: str
+
+
+class ScholarshipListResponse(BaseModel):
+    """Response returned for a scholarship list request."""
+
+    total: int
+    count: int
+    items: list[ScholarshipResponse]

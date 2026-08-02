@@ -718,3 +718,362 @@ def test_invalid_currency_code_length(
 
     assert response.status_code == 422
 
+# ---------------------------------------------------------
+# Scholarship API tests
+# ---------------------------------------------------------
+
+def test_list_scholarships(
+    client: TestClient,
+) -> None:
+    """The scholarship list should contain the pilot record."""
+
+    response = client.get("/api/scholarships")
+
+    assert response.status_code == 200
+
+    response_data = response.json()
+
+    assert response_data["total"] >= 1
+    assert response_data["count"] >= 1
+    assert isinstance(response_data["items"], list)
+
+    scholarship_ids = {
+        scholarship["scholarship_id"]
+        for scholarship in response_data["items"]
+    }
+
+    assert "sch_jp_001" in scholarship_ids
+
+
+def test_get_existing_scholarship(
+    client: TestClient,
+) -> None:
+    """An existing scholarship ID should return its record."""
+
+    response = client.get(
+        "/api/scholarships/sch_jp_001"
+    )
+
+    assert response.status_code == 200
+
+    scholarship = response.json()
+
+    assert scholarship["scholarship_id"] == "sch_jp_001"
+    assert scholarship["country_id"] == "country_jp"
+
+    assert (
+        scholarship["host_university_id"]
+        == "uni_jp_001"
+    )
+
+    assert scholarship["provider_type"] == "Government"
+    assert scholarship["funding_type"] == "Fully Funded"
+
+    assert scholarship["monthly_allowance"] == 143000
+    assert scholarship["allowance_currency"] == "JPY"
+
+    assert "Master" in scholarship["degree_levels"]
+    assert "PhD" in scholarship["degree_levels"]
+
+    assert (
+        "Computer Science"
+        in scholarship["fields_of_study"]
+    )
+
+    assert scholarship["scholarship_status"] == "upcoming"
+    assert scholarship["application_cycle"] == "2027"
+
+    assert scholarship[
+        "application_opening_date"
+    ].startswith("2026-10-19")
+
+    assert scholarship[
+        "application_deadline"
+    ].startswith("2026-10-30")
+
+
+def test_get_nonexistent_scholarship(
+    client: TestClient,
+) -> None:
+    """An unknown scholarship ID should return HTTP 404."""
+
+    response = client.get(
+        "/api/scholarships/sch_jp_999"
+    )
+
+    assert response.status_code == 404
+
+    assert response.json() == {
+        "detail": "Scholarship not found."
+    }
+
+
+def test_filter_scholarships_by_country_and_university(
+    client: TestClient,
+) -> None:
+    """Country and host-university filters should work together."""
+
+    response = client.get(
+        "/api/scholarships",
+        params={
+            "country_id": "country_jp",
+            "host_university_id": "uni_jp_001",
+        },
+    )
+
+    assert response.status_code == 200
+
+    response_data = response.json()
+
+    assert response_data["count"] >= 1
+
+    for scholarship in response_data["items"]:
+        assert scholarship["country_id"] == "country_jp"
+
+        assert (
+            scholarship["host_university_id"]
+            == "uni_jp_001"
+        )
+
+
+def test_filter_scholarships_by_degree_level(
+    client: TestClient,
+) -> None:
+    """Degree-level filtering should match an array value."""
+
+    response = client.get(
+        "/api/scholarships",
+        params={
+            "degree_level": "Master",
+        },
+    )
+
+    assert response.status_code == 200
+
+    response_data = response.json()
+
+    assert response_data["count"] >= 1
+
+    for scholarship in response_data["items"]:
+        assert "Master" in scholarship["degree_levels"]
+
+
+def test_filter_scholarships_by_field_of_study(
+    client: TestClient,
+) -> None:
+    """Field filtering should match Computer Science."""
+
+    response = client.get(
+        "/api/scholarships",
+        params={
+            "field_of_study": "Computer Science",
+        },
+    )
+
+    assert response.status_code == 200
+
+    response_data = response.json()
+
+    assert response_data["count"] >= 1
+
+    for scholarship in response_data["items"]:
+        assert (
+            "Computer Science"
+            in scholarship["fields_of_study"]
+        )
+
+
+def test_filter_scholarships_by_funding_type(
+    client: TestClient,
+) -> None:
+    """Funding filtering should return fully funded records."""
+
+    response = client.get(
+        "/api/scholarships",
+        params={
+            "funding_type": "Fully Funded",
+        },
+    )
+
+    assert response.status_code == 200
+
+    response_data = response.json()
+
+    assert response_data["count"] >= 1
+
+    for scholarship in response_data["items"]:
+        assert (
+            scholarship["funding_type"]
+            == "Fully Funded"
+        )
+
+
+def test_case_insensitive_scholarship_status_filter(
+    client: TestClient,
+) -> None:
+    """Uppercase status input should be converted to lowercase."""
+
+    response = client.get(
+        "/api/scholarships",
+        params={
+            "scholarship_status": "UPCOMING",
+        },
+    )
+
+    assert response.status_code == 200
+
+    response_data = response.json()
+
+    assert response_data["count"] >= 1
+
+    for scholarship in response_data["items"]:
+        assert (
+            scholarship["scholarship_status"]
+            == "upcoming"
+        )
+
+
+def test_filter_scholarships_by_application_cycle(
+    client: TestClient,
+) -> None:
+    """Application-cycle filtering should return 2027 records."""
+
+    response = client.get(
+        "/api/scholarships",
+        params={
+            "application_cycle": "2027",
+        },
+    )
+
+    assert response.status_code == 200
+
+    response_data = response.json()
+
+    assert response_data["count"] >= 1
+
+    for scholarship in response_data["items"]:
+        assert scholarship["application_cycle"] == "2027"
+
+
+def test_scholarship_allowance_thresholds(
+    client: TestClient,
+) -> None:
+    """Allowance filtering should support result and no-result cases."""
+
+    affordable_response = client.get(
+        "/api/scholarships",
+        params={
+            "min_monthly_allowance": 100000,
+        },
+    )
+
+    assert affordable_response.status_code == 200
+
+    affordable_data = affordable_response.json()
+
+    assert affordable_data["count"] >= 1
+
+    for scholarship in affordable_data["items"]:
+        assert scholarship["monthly_allowance"] is not None
+
+        assert (
+            scholarship["monthly_allowance"]
+            >= 100000
+        )
+
+    high_allowance_response = client.get(
+        "/api/scholarships",
+        params={
+            "min_monthly_allowance": 150000,
+        },
+    )
+
+    assert high_allowance_response.status_code == 200
+
+    high_allowance_data = high_allowance_response.json()
+
+    assert high_allowance_data["total"] == 0
+    assert high_allowance_data["count"] == 0
+    assert high_allowance_data["items"] == []
+
+
+def test_combined_scholarship_filters(
+    client: TestClient,
+) -> None:
+    """All scholarship filters should work together."""
+
+    response = client.get(
+        "/api/scholarships",
+        params={
+            "country_id": "country_jp",
+            "host_university_id": "uni_jp_001",
+            "degree_level": "Master",
+            "field_of_study": "Computer Science",
+            "funding_type": "Fully Funded",
+            "scholarship_status": "upcoming",
+            "application_cycle": "2027",
+            "min_monthly_allowance": 100000,
+        },
+    )
+
+    assert response.status_code == 200
+
+    response_data = response.json()
+
+    assert response_data["count"] >= 1
+
+    scholarship_ids = {
+        scholarship["scholarship_id"]
+        for scholarship in response_data["items"]
+    }
+
+    assert "sch_jp_001" in scholarship_ids
+
+    for scholarship in response_data["items"]:
+        assert scholarship["country_id"] == "country_jp"
+
+        assert (
+            scholarship["host_university_id"]
+            == "uni_jp_001"
+        )
+
+        assert "Master" in scholarship["degree_levels"]
+
+        assert (
+            "Computer Science"
+            in scholarship["fields_of_study"]
+        )
+
+        assert (
+            scholarship["funding_type"]
+            == "Fully Funded"
+        )
+
+        assert (
+            scholarship["scholarship_status"]
+            == "upcoming"
+        )
+
+        assert scholarship["application_cycle"] == "2027"
+
+        assert scholarship["monthly_allowance"] is not None
+
+        assert (
+            scholarship["monthly_allowance"]
+            >= 100000
+        )
+
+
+def test_negative_monthly_allowance_validation(
+    client: TestClient,
+) -> None:
+    """A negative allowance value should return HTTP 422."""
+
+    response = client.get(
+        "/api/scholarships",
+        params={
+            "min_monthly_allowance": -1,
+        },
+    )
+
+    assert response.status_code == 422

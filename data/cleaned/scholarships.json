@@ -1,0 +1,59 @@
+[
+  {
+    "scholarship_id": "sch_jp_001",
+    "scholarship_name": "Japanese Government (MEXT) Scholarship - University Recommendation (General Selection), IST, October 2027",
+    "provider_name": "Ministry of Education, Culture, Sports, Science and Technology (MEXT)",
+    "provider_type": "Government",
+    "country_id": "country_jp",
+    "host_university_id": "uni_jp_001",
+    "eligible_nationalities": null,
+    "degree_levels": [
+      "Master",
+      "PhD"
+    ],
+    "fields_of_study": [
+      "Computer Science",
+      "Mathematical Informatics",
+      "Information Physics and Computing",
+      "Information and Communication Engineering",
+      "Mechano-Informatics",
+      "Creative Informatics"
+    ],
+    "minimum_gpa": null,
+    "gpa_scale": null,
+    "ielts_requirement": null,
+    "toefl_requirement": null,
+    "age_limit": null,
+    "funding_type": "Fully Funded",
+    "tuition_coverage": "Exam fee, entrance fee, and tuition exempted",
+    "monthly_allowance": 143000,
+    "allowance_currency": "JPY",
+    "travel_allowance": "Round-trip travel expenses under specified conditions",
+    "accommodation_support": null,
+    "health_insurance": null,
+    "required_documents": [
+      "Application form",
+      "academic transcripts",
+      "GPA calculation form",
+      "graduation or degree certificate",
+      "English proficiency certificate",
+      "research summary",
+      "research achievements if applicable",
+      "field of study and research plan",
+      "recommendation letter",
+      "passport copy",
+      "conditional acceptance of prospective supervisor",
+      "examination fee receipt"
+    ],
+    "application_opening_date": "2026-10-19",
+    "application_deadline": "2026-10-30",
+    "scholarship_status": "upcoming",
+    "application_cycle": "2027",
+    "official_website": "https://www.i.u-tokyo.ac.jp/edu/inter_ex/oir/scholarship_e.shtml",
+    "source_url": "https://www.i.u-tokyo.ac.jp/edu/MEXT_General_Guidelines_E_Oct2027.pdf",
+    "collected_at": "2026-08-02",
+    "last_verified_at": "2026-08-02",
+    "freshness_status": "current",
+    "data_quality_status": "verified"
+  }
+]
