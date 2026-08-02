@@ -1,0 +1,50 @@
+[
+  {
+    "country_id": "country_jp",
+    "country_name": "Japan",
+    "region": "East Asia",
+    "capital_city": "Tokyo",
+    "currency_code": "JPY",
+    "main_language": [
+      "Japanese"
+    ],
+    "estimated_living_cost": null,
+    "cost_currency": null,
+    "source_url": "https://www.studyinjapan.go.jp/en/",
+    "collected_at": "2026-08-02",
+    "last_verified_at": "2026-08-02"
+  },
+  {
+    "country_id": "country_sg",
+    "country_name": "Singapore",
+    "region": "Southeast Asia",
+    "capital_city": "Singapore",
+    "currency_code": "SGD",
+    "main_language": [
+      "English",
+      "Malay",
+      "Mandarin",
+      "Tamil"
+    ],
+    "estimated_living_cost": null,
+    "cost_currency": null,
+    "source_url": "https://www.moe.gov.sg/",
+    "collected_at": "2026-08-02",
+    "last_verified_at": "2026-08-02"
+  },
+  {
+    "country_id": "country_my",
+    "country_name": "Malaysia",
+    "region": "Southeast Asia",
+    "capital_city": "Kuala Lumpur",
+    "currency_code": "MYR",
+    "main_language": [
+      "Malay"
+    ],
+    "estimated_living_cost": null,
+    "cost_currency": null,
+    "source_url": "https://www.mqa.gov.my/",
+    "collected_at": "2026-08-02",
+    "last_verified_at": "2026-08-02"
+  }
+]

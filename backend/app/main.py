@@ -15,6 +15,8 @@ from backend.app.database import (
 )
 
 from backend.app.schemas import (
+    CountryListResponse,
+    CountryResponse,
     HealthResponse,
     ProgramListResponse,
     ProgramResponse,
@@ -22,7 +24,6 @@ from backend.app.schemas import (
     UniversityListResponse,
     UniversityResponse,
 )
-
 
 # ---------------------------------------------------------
 # Application lifespan
@@ -396,3 +397,135 @@ def get_program(
         )
 
     return program
+
+# ---------------------------------------------------------
+# List and filter countries
+# ---------------------------------------------------------
+
+@app.get(
+    "/api/countries",
+    response_model=CountryListResponse,
+    tags=["Countries"],
+)
+def list_countries(
+    region: str | None = Query(
+        default=None,
+        description="Filter countries by region.",
+        examples=["Southeast Asia"],
+    ),
+    currency_code: str | None = Query(
+        default=None,
+        min_length=3,
+        max_length=3,
+        description="Filter countries by currency code.",
+        examples=["SGD"],
+    ),
+    language: str | None = Query(
+        default=None,
+        description="Filter by a main language.",
+        examples=["English"],
+    ),
+    skip: int = Query(
+        default=0,
+        ge=0,
+        description="Number of country records to skip.",
+    ),
+    limit: int = Query(
+        default=20,
+        ge=1,
+        le=100,
+        description="Maximum number of countries to return.",
+    ),
+) -> dict[str, Any]:
+    """Return country records using optional filters."""
+
+    query: dict[str, Any] = {}
+
+    if region is not None:
+        query["region"] = region
+
+    if currency_code is not None:
+        query["currency_code"] = currency_code.upper()
+
+    if language is not None:
+        query["main_language"] = language
+
+    database = get_database()
+    collection = database["countries"]
+
+    try:
+        total = collection.count_documents(query)
+
+        cursor = (
+            collection
+            .find(
+                query,
+                {
+                    "_id": 0,
+                    "content_hash": 0,
+                    "created_at": 0,
+                    "database_updated_at": 0,
+                },
+            )
+            .sort("country_name", ASCENDING)
+            .skip(skip)
+            .limit(limit)
+        )
+
+        countries = list(cursor)
+
+    except PyMongoError as error:
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail="Unable to retrieve country records.",
+        ) from error
+
+    return {
+        "total": total,
+        "count": len(countries),
+        "items": countries,
+    }
+
+
+# ---------------------------------------------------------
+# Find one country
+# ---------------------------------------------------------
+
+@app.get(
+    "/api/countries/{country_id}",
+    response_model=CountryResponse,
+    tags=["Countries"],
+)
+def get_country(
+    country_id: str,
+) -> dict[str, Any]:
+    """Return one country using its unique ID."""
+
+    database = get_database()
+    collection = database["countries"]
+
+    try:
+        country = collection.find_one(
+            {"country_id": country_id},
+            {
+                "_id": 0,
+                "content_hash": 0,
+                "created_at": 0,
+                "database_updated_at": 0,
+            },
+        )
+
+    except PyMongoError as error:
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail="Unable to retrieve the country.",
+        ) from error
+
+    if country is None:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Country not found.",
+        )
+
+    return country
+

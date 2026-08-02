@@ -93,4 +93,29 @@ class ProgramListResponse(BaseModel):
     count: int
     items: list[ProgramResponse]
 
-    
+class CountryResponse(BaseModel):
+    """Public country data returned by the API."""
+
+    model_config = ConfigDict(extra="ignore")
+
+    country_id: str
+    country_name: str
+    region: str
+    capital_city: str
+    currency_code: str
+    main_language: list[str]
+
+    estimated_living_cost: int | float | None = None
+    cost_currency: str | None = None
+
+    source_url: str
+    collected_at: datetime
+    last_verified_at: datetime
+
+
+class CountryListResponse(BaseModel):
+    """Response returned for a country list request."""
+
+    total: int
+    count: int
+    items: list[CountryResponse]
