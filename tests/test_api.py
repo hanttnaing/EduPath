@@ -1077,3 +1077,158 @@ def test_negative_monthly_allowance_validation(
     )
 
     assert response.status_code == 422
+
+# ---------------------------------------------------------
+# Programme recommendation API tests
+# ---------------------------------------------------------
+
+def test_program_recommendations_for_existing_user(
+    client: TestClient,
+) -> None:
+    """A valid user should receive ranked recommendations."""
+
+    response = client.get(
+        "/api/recommendations/programs/user_test_001"
+    )
+
+    assert response.status_code == 200
+
+    response_data = response.json()
+
+    assert response_data["user_id"] == "user_test_001"
+    assert response_data["total_program_candidates"] >= 1
+    assert response_data["eligible_candidates"] >= 1
+    assert response_data["returned_recommendations"] >= 1
+
+    assert isinstance(
+        response_data["recommendations"],
+        list,
+    )
+
+    program_ids = {
+        recommendation["program_id"]
+        for recommendation
+        in response_data["recommendations"]
+    }
+
+    assert "prog_jp_001" in program_ids
+
+
+def test_program_recommendation_explainability(
+    client: TestClient,
+) -> None:
+    """Recommendations should include scores and explanations."""
+
+    response = client.get(
+        "/api/recommendations/programs/user_test_001",
+        params={"top_k": 5},
+    )
+
+    assert response.status_code == 200
+
+    recommendations = response.json()["recommendations"]
+
+    pilot_recommendation = next(
+        recommendation
+        for recommendation in recommendations
+        if recommendation["program_id"] == "prog_jp_001"
+    )
+
+    assert (
+        pilot_recommendation["university_id"]
+        == "uni_jp_001"
+    )
+
+    assert (
+        pilot_recommendation["university_name"]
+        == "The University of Tokyo"
+    )
+
+    assert pilot_recommendation["country_name"] == "Japan"
+
+    assert (
+        pilot_recommendation["known_eligibility_status"]
+        == "eligible_under_known_rules"
+    )
+
+    assert 0 <= pilot_recommendation["match_score"] <= 100
+
+    assert pilot_recommendation["maximum_score"] == 100
+
+    assert isinstance(
+        pilot_recommendation["score_breakdown"],
+        dict,
+    )
+
+    assert isinstance(
+        pilot_recommendation["match_reasons"],
+        list,
+    )
+
+    assert len(
+        pilot_recommendation["match_reasons"]
+    ) >= 1
+
+    assert isinstance(
+        pilot_recommendation["requirement_gaps"],
+        list,
+    )
+
+
+def test_program_recommendation_top_k(
+    client: TestClient,
+) -> None:
+    """The API should respect the top_k limit."""
+
+    response = client.get(
+        "/api/recommendations/programs/user_test_001",
+        params={"top_k": 1},
+    )
+
+    assert response.status_code == 200
+
+    response_data = response.json()
+
+    assert response_data["returned_recommendations"] <= 1
+
+    assert len(
+        response_data["recommendations"]
+    ) <= 1
+
+
+def test_program_recommendations_for_unknown_user(
+    client: TestClient,
+) -> None:
+    """An unknown user ID should return HTTP 404."""
+
+    response = client.get(
+        "/api/recommendations/programs/user_test_999"
+    )
+
+    assert response.status_code == 404
+
+    assert response.json() == {
+        "detail": (
+            "User profile 'user_test_999' was not found."
+        )
+    }
+
+
+def test_invalid_program_recommendation_top_k(
+    client: TestClient,
+) -> None:
+    """Values outside the allowed top_k range should fail."""
+
+    zero_response = client.get(
+        "/api/recommendations/programs/user_test_001",
+        params={"top_k": 0},
+    )
+
+    assert zero_response.status_code == 422
+
+    excessive_response = client.get(
+        "/api/recommendations/programs/user_test_001",
+        params={"top_k": 21},
+    )
+
+    assert excessive_response.status_code == 422

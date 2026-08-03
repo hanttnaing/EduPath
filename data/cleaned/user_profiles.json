@@ -1,0 +1,24 @@
+[
+  {
+    "user_id": "user_test_001",
+    "nationality": "Myanmar",
+    "current_education_level": "Bachelor",
+    "target_degree_level": "Master",
+    "preferred_major": "Computer Science",
+    "gpa": 3.5,
+    "gpa_scale": 4,
+    "ielts_score": 6.5,
+    "toefl_score": null,
+    "annual_budget": 600000,
+    "budget_currency": "JPY",
+    "preferred_countries": [
+      "Japan"
+    ],
+    "scholarship_required": true,
+    "preferred_funding_type": "Fully Funded",
+    "preferred_intake": "October",
+    "saved_universities": [],
+    "saved_scholarships": [],
+    "recommendation_history": []
+  }
+]

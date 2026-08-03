@@ -22,3 +22,6 @@ __pycache__/
 # Operating system files
 .DS_Store
 Thumbs.db
+
+# Generated recommendation outputs
+data/cleaned/program_recommendations.json
