@@ -1232,3 +1232,171 @@ def test_invalid_program_recommendation_top_k(
     )
 
     assert excessive_response.status_code == 422
+
+# ---------------------------------------------------------
+# Scholarship recommendation API tests
+# ---------------------------------------------------------
+
+def test_scholarship_recommendations_for_existing_user(
+    client: TestClient,
+) -> None:
+    """A valid user should receive scholarship recommendations."""
+
+    response = client.get(
+        "/api/recommendations/scholarships/user_test_001"
+    )
+
+    assert response.status_code == 200
+
+    response_data = response.json()
+
+    assert response_data["user_id"] == "user_test_001"
+
+    assert (
+        response_data["total_scholarship_candidates"]
+        >= 1
+    )
+
+    assert response_data["eligible_candidates"] >= 1
+
+    assert (
+        response_data["returned_recommendations"]
+        >= 1
+    )
+
+    assert isinstance(
+        response_data["recommendations"],
+        list,
+    )
+
+    scholarship_ids = {
+        recommendation["scholarship_id"]
+        for recommendation
+        in response_data["recommendations"]
+    }
+
+    assert "sch_jp_001" in scholarship_ids
+
+
+def test_scholarship_recommendation_explainability(
+    client: TestClient,
+) -> None:
+    """Scholarship results should include explanations."""
+
+    response = client.get(
+        "/api/recommendations/scholarships/user_test_001",
+        params={"top_k": 5},
+    )
+
+    assert response.status_code == 200
+
+    recommendations = response.json()["recommendations"]
+
+    pilot_recommendation = next(
+        recommendation
+        for recommendation in recommendations
+        if recommendation["scholarship_id"]
+        == "sch_jp_001"
+    )
+
+    assert pilot_recommendation["country_name"] == "Japan"
+
+    assert (
+        pilot_recommendation["host_university_id"]
+        == "uni_jp_001"
+    )
+
+    assert (
+        pilot_recommendation["funding_type"]
+        == "Fully Funded"
+    )
+
+    assert (
+        pilot_recommendation["known_eligibility_status"]
+        == "eligible_under_known_rules"
+    )
+
+    assert 0 <= pilot_recommendation["match_score"] <= 100
+
+    assert pilot_recommendation["maximum_score"] == 100
+
+    assert isinstance(
+        pilot_recommendation["score_breakdown"],
+        dict,
+    )
+
+    assert isinstance(
+        pilot_recommendation["match_reasons"],
+        list,
+    )
+
+    assert len(
+        pilot_recommendation["match_reasons"]
+    ) >= 1
+
+    assert isinstance(
+        pilot_recommendation["requirement_gaps"],
+        list,
+    )
+
+
+def test_scholarship_recommendation_top_k(
+    client: TestClient,
+) -> None:
+    """The scholarship API should respect top_k."""
+
+    response = client.get(
+        "/api/recommendations/scholarships/user_test_001",
+        params={"top_k": 1},
+    )
+
+    assert response.status_code == 200
+
+    response_data = response.json()
+
+    assert (
+        response_data["returned_recommendations"]
+        <= 1
+    )
+
+    assert len(
+        response_data["recommendations"]
+    ) <= 1
+
+
+def test_scholarship_recommendations_for_unknown_user(
+    client: TestClient,
+) -> None:
+    """An unknown user should return HTTP 404."""
+
+    response = client.get(
+        "/api/recommendations/scholarships/user_test_999"
+    )
+
+    assert response.status_code == 404
+
+    assert response.json() == {
+        "detail": (
+            "User profile 'user_test_999' was not found."
+        )
+    }
+
+
+def test_invalid_scholarship_recommendation_top_k(
+    client: TestClient,
+) -> None:
+    """Invalid top_k values should return HTTP 422."""
+
+    zero_response = client.get(
+        "/api/recommendations/scholarships/user_test_001",
+        params={"top_k": 0},
+    )
+
+    assert zero_response.status_code == 422
+
+    excessive_response = client.get(
+        "/api/recommendations/scholarships/user_test_001",
+        params={"top_k": 21},
+    )
+
+    assert excessive_response.status_code == 422

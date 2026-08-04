@@ -25,3 +25,6 @@ Thumbs.db
 
 # Generated recommendation outputs
 data/cleaned/program_recommendations.json
+
+# Generated scholarship recommendation output
+data/cleaned/scholarship_recommendations.json

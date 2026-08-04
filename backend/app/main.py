@@ -15,6 +15,9 @@ from backend.app.database import (
 )
 
 from scripts.recommend_programs import generate_recommendations
+from scripts.recommend_scholarships import (
+    generate_scholarship_recommendations,
+)
 
 from backend.app.schemas import (
     CountryListResponse,
@@ -780,6 +783,63 @@ def get_program_recommendations(
             ),
             detail=(
                 "Unable to generate programme "
+                "recommendations."
+            ),
+        ) from error
+
+# ---------------------------------------------------------
+# Scholarship recommendations
+# ---------------------------------------------------------
+
+@app.get(
+    "/api/recommendations/scholarships/{user_id}",
+    tags=["Recommendations"],
+)
+def get_scholarship_recommendations(
+    user_id: str,
+    top_k: int = Query(
+        default=5,
+        ge=1,
+        le=20,
+        description=(
+            "Maximum number of scholarship recommendations "
+            "to return."
+        ),
+    ),
+) -> dict[str, Any]:
+    """
+    Generate ranked scholarship recommendations for one user.
+
+    The recommendation engine applies:
+    - hard eligibility filtering,
+    - weighted scoring,
+    - TF-IDF cosine similarity,
+    - match reasons,
+    - requirement gaps.
+    """
+
+    database = get_database()
+
+    try:
+        return generate_scholarship_recommendations(
+            database=database,
+            user_id=user_id,
+            top_k=top_k,
+        )
+
+    except ValueError as error:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail=str(error),
+        ) from error
+
+    except PyMongoError as error:
+        raise HTTPException(
+            status_code=(
+                status.HTTP_500_INTERNAL_SERVER_ERROR
+            ),
+            detail=(
+                "Unable to generate scholarship "
                 "recommendations."
             ),
         ) from error
