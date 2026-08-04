@@ -1400,3 +1400,222 @@ def test_invalid_scholarship_recommendation_top_k(
     )
 
     assert excessive_response.status_code == 422
+
+# ---------------------------------------------------------
+# User profile read API tests
+# ---------------------------------------------------------
+
+def test_list_user_profiles(
+    client: TestClient,
+) -> None:
+    """The API should return the pilot user profile."""
+
+    response = client.get("/api/user-profiles")
+
+    assert response.status_code == 200
+
+    response_data = response.json()
+
+    assert response_data["returned_profiles"] >= 1
+
+    assert isinstance(
+        response_data["profiles"],
+        list,
+    )
+
+    pilot_profile = next(
+        profile
+        for profile in response_data["profiles"]
+        if profile["user_id"] == "user_test_001"
+    )
+
+    assert pilot_profile["nationality"] == "Myanmar"
+
+    assert (
+        pilot_profile["target_degree_level"]
+        == "Master"
+    )
+
+    assert (
+        pilot_profile["preferred_major"]
+        == "Computer Science"
+    )
+
+    assert "Japan" in pilot_profile[
+        "preferred_countries"
+    ]
+
+    assert pilot_profile["scholarship_required"] is True
+
+    # Internal MongoDB and ETL fields must not be exposed.
+    assert "_id" not in pilot_profile
+    assert "content_hash" not in pilot_profile
+    assert "created_at" not in pilot_profile
+    assert "database_updated_at" not in pilot_profile
+
+
+def test_get_existing_user_profile(
+    client: TestClient,
+) -> None:
+    """The detail endpoint should return one profile."""
+
+    response = client.get(
+        "/api/user-profiles/user_test_001"
+    )
+
+    assert response.status_code == 200
+
+    profile = response.json()
+
+    assert profile["user_id"] == "user_test_001"
+    assert profile["nationality"] == "Myanmar"
+
+    assert (
+        profile["current_education_level"]
+        == "Bachelor"
+    )
+
+    assert profile["target_degree_level"] == "Master"
+
+    assert profile["preferred_major"] == "Computer Science"
+
+    assert profile["gpa"] == 3.5
+    assert profile["gpa_scale"] == 4
+    assert profile["ielts_score"] == 6.5
+    assert profile["toefl_score"] is None
+
+    assert profile["annual_budget"] == 600000
+    assert profile["budget_currency"] == "JPY"
+
+    assert profile["preferred_countries"] == [
+        "Japan"
+    ]
+
+    assert profile["scholarship_required"] is True
+
+    assert (
+        profile["preferred_funding_type"]
+        == "Fully Funded"
+    )
+
+    assert profile["preferred_intake"] == "October"
+
+    assert isinstance(
+        profile["saved_universities"],
+        list,
+    )
+
+    assert isinstance(
+        profile["saved_scholarships"],
+        list,
+    )
+
+    assert isinstance(
+        profile["recommendation_history"],
+        list,
+    )
+
+    assert "_id" not in profile
+    assert "content_hash" not in profile
+    assert "created_at" not in profile
+    assert "database_updated_at" not in profile
+
+
+def test_user_profile_nationality_and_degree_filters(
+    client: TestClient,
+) -> None:
+    """Nationality and degree filters should work."""
+
+    response = client.get(
+        "/api/user-profiles",
+        params={
+            "nationality": "Myanmar",
+            "target_degree_level": "Master",
+        },
+    )
+
+    assert response.status_code == 200
+
+    response_data = response.json()
+
+    assert response_data["returned_profiles"] >= 1
+
+    for profile in response_data["profiles"]:
+        assert profile["nationality"] == "Myanmar"
+
+        assert (
+            profile["target_degree_level"]
+            == "Master"
+        )
+
+
+def test_user_profile_country_and_scholarship_filters(
+    client: TestClient,
+) -> None:
+    """Country and scholarship filters should work."""
+
+    response = client.get(
+        "/api/user-profiles",
+        params={
+            "preferred_country": "Japan",
+            "scholarship_required": "true",
+        },
+    )
+
+    assert response.status_code == 200
+
+    response_data = response.json()
+
+    assert response_data["returned_profiles"] >= 1
+
+    pilot_user_ids = {
+        profile["user_id"]
+        for profile in response_data["profiles"]
+    }
+
+    assert "user_test_001" in pilot_user_ids
+
+    for profile in response_data["profiles"]:
+        assert "Japan" in profile[
+            "preferred_countries"
+        ]
+
+        assert profile["scholarship_required"] is True
+
+
+def test_get_unknown_user_profile(
+    client: TestClient,
+) -> None:
+    """An unknown user ID should return HTTP 404."""
+
+    response = client.get(
+        "/api/user-profiles/user_test_999"
+    )
+
+    assert response.status_code == 404
+
+    assert response.json() == {
+        "detail": (
+            "User profile 'user_test_999' was not found."
+        )
+    }
+
+
+def test_invalid_user_profile_limit(
+    client: TestClient,
+) -> None:
+    """Values outside the limit range should fail."""
+
+    zero_response = client.get(
+        "/api/user-profiles",
+        params={"limit": 0},
+    )
+
+    assert zero_response.status_code == 422
+
+    excessive_response = client.get(
+        "/api/user-profiles",
+        params={"limit": 101},
+    )
+
+    assert excessive_response.status_code == 422

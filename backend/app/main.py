@@ -843,3 +843,125 @@ def get_scholarship_recommendations(
                 "recommendations."
             ),
         ) from error
+
+# ---------------------------------------------------------
+# User profiles
+# ---------------------------------------------------------
+
+@app.get(
+    "/api/user-profiles",
+    tags=["User Profiles"],
+)
+def list_user_profiles(
+    nationality: str | None = Query(
+        default=None,
+        description="Filter profiles by nationality.",
+    ),
+    target_degree_level: str | None = Query(
+        default=None,
+        description="Filter by target degree level.",
+    ),
+    preferred_country: str | None = Query(
+        default=None,
+        description="Filter by preferred country.",
+    ),
+    scholarship_required: bool | None = Query(
+        default=None,
+        description="Filter by scholarship requirement.",
+    ),
+    limit: int = Query(
+        default=20,
+        ge=1,
+        le=100,
+    ),
+) -> dict[str, Any]:
+    """Return user profiles with optional filters."""
+
+    database = get_database()
+
+    query: dict[str, Any] = {}
+
+    if nationality:
+        query["nationality"] = nationality
+
+    if target_degree_level:
+        query["target_degree_level"] = (
+            target_degree_level
+        )
+
+    if preferred_country:
+        query["preferred_countries"] = preferred_country
+
+    if scholarship_required is not None:
+        query["scholarship_required"] = (
+            scholarship_required
+        )
+
+    try:
+        profiles = list(
+            database["user_profiles"]
+            .find(
+                query,
+                {
+                    "_id": 0,
+                    "content_hash": 0,
+                    "created_at": 0,
+                    "database_updated_at": 0,
+                },
+            )
+            .limit(limit)
+        )
+
+        return {
+            "returned_profiles": len(profiles),
+            "profiles": profiles,
+        }
+
+    except PyMongoError as error:
+        raise HTTPException(
+            status_code=(
+                status.HTTP_500_INTERNAL_SERVER_ERROR
+            ),
+            detail="Unable to retrieve user profiles.",
+        ) from error
+
+
+@app.get(
+    "/api/user-profiles/{user_id}",
+    tags=["User Profiles"],
+)
+def get_user_profile(
+    user_id: str,
+) -> dict[str, Any]:
+    """Return one user profile by user ID."""
+
+    database = get_database()
+
+    try:
+        profile = database["user_profiles"].find_one(
+            {"user_id": user_id},
+            {
+                "_id": 0,
+                "content_hash": 0,
+                "created_at": 0,
+                "database_updated_at": 0,
+            },
+        )
+
+    except PyMongoError as error:
+        raise HTTPException(
+            status_code=(
+                status.HTTP_500_INTERNAL_SERVER_ERROR
+            ),
+            detail="Unable to retrieve the user profile.",
+        ) from error
+
+    if profile is None:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail=(
+                f"User profile '{user_id}' was not found."
+            ),
+        )
+
+    return profile
