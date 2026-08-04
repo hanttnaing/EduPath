@@ -4,6 +4,7 @@ from datetime import datetime
 
 from pydantic import BaseModel, ConfigDict, Field
 
+from pydantic import BaseModel, Field
 
 class RootResponse(BaseModel):
     """Response shown at the API root URL."""
@@ -179,3 +180,85 @@ class ScholarshipListResponse(BaseModel):
     total: int
     count: int
     items: list[ScholarshipResponse]
+
+# ---------------------------------------------------------
+# User profile schemas
+# ---------------------------------------------------------
+
+class UserProfileCreate(BaseModel):
+    """Data required to create a new user profile."""
+
+    user_id: str = Field(
+        min_length=3,
+        max_length=100,
+    )
+
+    nationality: str = Field(
+        min_length=2,
+        max_length=100,
+    )
+
+    current_education_level: str = Field(
+        min_length=2,
+        max_length=50,
+    )
+
+    target_degree_level: str = Field(
+        min_length=2,
+        max_length=50,
+    )
+
+    preferred_major: str = Field(
+        min_length=2,
+        max_length=200,
+    )
+
+    gpa: float | None = Field(
+        default=None,
+        ge=0,
+    )
+
+    gpa_scale: float | None = Field(
+        default=None,
+        gt=0,
+    )
+
+    ielts_score: float | None = Field(
+        default=None,
+        ge=0,
+        le=9,
+    )
+
+    toefl_score: int | None = Field(
+        default=None,
+        ge=0,
+        le=120,
+    )
+
+    annual_budget: float | None = Field(
+        default=None,
+        ge=0,
+    )
+
+    budget_currency: str | None = Field(
+        default=None,
+        min_length=3,
+        max_length=3,
+    )
+
+    preferred_countries: list[str] = Field(
+        min_length=1,
+    )
+
+    scholarship_required: bool
+
+    preferred_funding_type: str | None = Field(
+        default=None,
+        max_length=100,
+    )
+
+    preferred_intake: str | None = Field(
+        default=None,
+        max_length=100,
+    )
+

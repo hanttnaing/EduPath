@@ -5,7 +5,14 @@ from typing import Any
 
 from fastapi import FastAPI, HTTPException, Query, status
 from pymongo import ASCENDING
-from pymongo.errors import PyMongoError
+from pymongo.errors import (
+    DuplicateKeyError,
+    PyMongoError,
+)
+from datetime import datetime, timezone
+from backend.app.schemas import (
+    UserProfileCreate,
+)
 
 from backend.app.database import (
     DATABASE_NAME,
@@ -965,3 +972,307 @@ def get_user_profile(
         )
 
     return profile
+
+# ---------------------------------------------------------
+# Create user profile
+# ---------------------------------------------------------
+
+@app.post(
+    "/api/user-profiles",
+    status_code=status.HTTP_201_CREATED,
+    tags=["User Profiles"],
+)
+def create_user_profile(
+    payload: UserProfileCreate,
+) -> dict[str, Any]:
+    """Create a new user profile in MongoDB."""
+
+    database = get_database()
+
+    profile = payload.model_dump()
+
+    # -----------------------------------------------------
+    # Clean required text fields
+    # -----------------------------------------------------
+
+    required_text_fields = [
+        "user_id",
+        "nationality",
+        "current_education_level",
+        "target_degree_level",
+        "preferred_major",
+    ]
+
+    for field_name in required_text_fields:
+        cleaned_value = str(
+            profile[field_name]
+        ).strip()
+
+        if not cleaned_value:
+            raise HTTPException(
+                status_code=(
+                    status.HTTP_422_UNPROCESSABLE_ENTITY
+                ),
+                detail=(
+                    f"Field '{field_name}' "
+                    "cannot be blank."
+                ),
+            )
+
+        profile[field_name] = cleaned_value
+
+    # -----------------------------------------------------
+    # Clean optional text fields
+    # -----------------------------------------------------
+
+    optional_text_fields = [
+        "preferred_funding_type",
+        "preferred_intake",
+    ]
+
+    for field_name in optional_text_fields:
+        value = profile.get(field_name)
+
+        if value is not None:
+            cleaned_value = str(value).strip()
+
+            profile[field_name] = (
+                cleaned_value
+                if cleaned_value
+                else None
+            )
+
+    # -----------------------------------------------------
+    # GPA validation
+    # -----------------------------------------------------
+
+    gpa = profile.get("gpa")
+    gpa_scale = profile.get("gpa_scale")
+
+    if gpa is not None and gpa_scale is None:
+        raise HTTPException(
+            status_code=(
+                status.HTTP_422_UNPROCESSABLE_ENTITY
+            ),
+            detail=(
+                "Field 'gpa_scale' is required "
+                "when GPA is provided."
+            ),
+        )
+
+    if gpa is None and gpa_scale is not None:
+        raise HTTPException(
+            status_code=(
+                status.HTTP_422_UNPROCESSABLE_ENTITY
+            ),
+            detail=(
+                "Field 'gpa' is required "
+                "when GPA scale is provided."
+            ),
+        )
+
+    if (
+        gpa is not None
+        and gpa_scale is not None
+        and gpa > gpa_scale
+    ):
+        raise HTTPException(
+            status_code=(
+                status.HTTP_422_UNPROCESSABLE_ENTITY
+            ),
+            detail=(
+                "GPA cannot be greater than GPA scale."
+            ),
+        )
+
+    # -----------------------------------------------------
+    # Budget validation
+    # -----------------------------------------------------
+
+    annual_budget = profile.get("annual_budget")
+    budget_currency = profile.get(
+        "budget_currency"
+    )
+
+    if (
+        annual_budget is not None
+        and budget_currency is None
+    ):
+        raise HTTPException(
+            status_code=(
+                status.HTTP_422_UNPROCESSABLE_ENTITY
+            ),
+            detail=(
+                "Field 'budget_currency' is required "
+                "when annual budget is provided."
+            ),
+        )
+
+    if (
+        annual_budget is None
+        and budget_currency is not None
+    ):
+        raise HTTPException(
+            status_code=(
+                status.HTTP_422_UNPROCESSABLE_ENTITY
+            ),
+            detail=(
+                "Field 'annual_budget' is required "
+                "when budget currency is provided."
+            ),
+        )
+
+    if budget_currency is not None:
+        profile["budget_currency"] = (
+            budget_currency.strip().upper()
+        )
+
+    # -----------------------------------------------------
+    # Scholarship preference validation
+    # -----------------------------------------------------
+
+    if (
+        profile["scholarship_required"] is True
+        and profile.get("preferred_funding_type")
+        is None
+    ):
+        raise HTTPException(
+            status_code=(
+                status.HTTP_422_UNPROCESSABLE_ENTITY
+            ),
+            detail=(
+                "Field 'preferred_funding_type' "
+                "is required when scholarship_required "
+                "is true."
+            ),
+        )
+
+    # -----------------------------------------------------
+    # Preferred-country cleaning
+    # -----------------------------------------------------
+
+    cleaned_preferred_countries = [
+        country.strip()
+        for country in profile[
+            "preferred_countries"
+        ]
+        if country.strip()
+    ]
+
+    cleaned_preferred_countries = list(
+        dict.fromkeys(cleaned_preferred_countries)
+    )
+
+    if not cleaned_preferred_countries:
+        raise HTTPException(
+            status_code=(
+                status.HTTP_422_UNPROCESSABLE_ENTITY
+            ),
+            detail=(
+                "At least one preferred country "
+                "is required."
+            ),
+        )
+
+    profile["preferred_countries"] = (
+        cleaned_preferred_countries
+    )
+
+    try:
+        # -------------------------------------------------
+        # Validate preferred countries against MongoDB
+        # -------------------------------------------------
+
+        country_documents = database[
+            "countries"
+        ].find(
+            {
+                "country_name": {
+                    "$in": cleaned_preferred_countries
+                }
+            },
+            {
+                "_id": 0,
+                "country_name": 1,
+            },
+        )
+
+        existing_country_names = {
+            country["country_name"]
+            for country in country_documents
+        }
+
+        missing_country_names = sorted(
+            set(cleaned_preferred_countries)
+            - existing_country_names
+        )
+
+        if missing_country_names:
+            raise HTTPException(
+                status_code=(
+                    status.HTTP_422_UNPROCESSABLE_ENTITY
+                ),
+                detail=(
+                    "The following preferred countries "
+                    "do not exist: "
+                    + ", ".join(missing_country_names)
+                ),
+            )
+
+        # -------------------------------------------------
+        # Prepare runtime fields
+        # -------------------------------------------------
+
+        current_time = datetime.now(timezone.utc)
+
+        profile["saved_universities"] = []
+        profile["saved_scholarships"] = []
+        profile["recommendation_history"] = []
+        profile["created_at"] = current_time
+        profile["database_updated_at"] = (
+            current_time
+        )
+
+        database["user_profiles"].insert_one(
+            profile
+        )
+
+    except DuplicateKeyError as error:
+        raise HTTPException(
+            status_code=status.HTTP_409_CONFLICT,
+            detail=(
+                f"User profile '{profile['user_id']}' "
+                "already exists."
+            ),
+        ) from error
+
+    except HTTPException:
+        raise
+
+    except PyMongoError as error:
+        raise HTTPException(
+            status_code=(
+                status.HTTP_500_INTERNAL_SERVER_ERROR
+            ),
+            detail="Unable to create the user profile.",
+        ) from error
+
+    # Do not expose internal database fields.
+    public_profile = {
+        key: value
+        for key, value in profile.items()
+        if key
+        not in {
+            "_id",
+            "content_hash",
+            "created_at",
+            "database_updated_at",
+        }
+    }
+
+    return {
+        "message": (
+            "User profile created successfully."
+        ),
+        "profile": public_profile,
+    }

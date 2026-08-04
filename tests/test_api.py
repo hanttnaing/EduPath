@@ -7,6 +7,7 @@ from fastapi.testclient import TestClient
 
 from backend.app.main import app
 
+from backend.app.database import get_database
 
 # ---------------------------------------------------------
 # Shared FastAPI test client
@@ -1619,3 +1620,274 @@ def test_invalid_user_profile_limit(
     )
 
     assert excessive_response.status_code == 422
+
+# ---------------------------------------------------------
+# User profile create API tests
+# ---------------------------------------------------------
+
+CREATE_TEST_USER_ID = "user_api_create_test_001"
+
+
+def delete_create_test_user() -> None:
+    """Remove the temporary profile used by create tests."""
+
+    database = get_database()
+
+    database["user_profiles"].delete_many(
+        {"user_id": CREATE_TEST_USER_ID}
+    )
+
+
+def build_valid_create_profile() -> dict:
+    """Return a valid profile request body."""
+
+    return {
+        "user_id": CREATE_TEST_USER_ID,
+        "nationality": "Myanmar",
+        "current_education_level": "Bachelor",
+        "target_degree_level": "Master",
+        "preferred_major": (
+            "Information Science and Technology"
+        ),
+        "gpa": 3.3,
+        "gpa_scale": 4.0,
+        "ielts_score": 6.5,
+        "toefl_score": None,
+        "annual_budget": 700000,
+        "budget_currency": "JPY",
+        "preferred_countries": [
+            "Japan"
+        ],
+        "scholarship_required": True,
+        "preferred_funding_type": "Fully Funded",
+        "preferred_intake": "October",
+    }
+
+
+def test_create_user_profile_successfully(
+    client: TestClient,
+) -> None:
+    """A valid profile should be created with HTTP 201."""
+
+    delete_create_test_user()
+
+    try:
+        request_data = build_valid_create_profile()
+
+        response = client.post(
+            "/api/user-profiles",
+            json=request_data,
+        )
+
+        assert response.status_code == 201
+
+        response_data = response.json()
+
+        assert (
+            response_data["message"]
+            == "User profile created successfully."
+        )
+
+        profile = response_data["profile"]
+
+        assert profile["user_id"] == CREATE_TEST_USER_ID
+        assert profile["nationality"] == "Myanmar"
+
+        assert (
+            profile["target_degree_level"]
+            == "Master"
+        )
+
+        assert (
+            profile["preferred_major"]
+            == "Information Science and Technology"
+        )
+
+        assert profile["gpa"] == 3.3
+        assert profile["gpa_scale"] == 4.0
+        assert profile["ielts_score"] == 6.5
+        assert profile["annual_budget"] == 700000
+        assert profile["budget_currency"] == "JPY"
+
+        assert profile["preferred_countries"] == [
+            "Japan"
+        ]
+
+        assert profile["scholarship_required"] is True
+
+        assert (
+            profile["preferred_funding_type"]
+            == "Fully Funded"
+        )
+
+        assert profile["saved_universities"] == []
+        assert profile["saved_scholarships"] == []
+        assert profile["recommendation_history"] == []
+
+        # Internal database fields must not be exposed.
+        assert "_id" not in profile
+        assert "content_hash" not in profile
+        assert "created_at" not in profile
+        assert "database_updated_at" not in profile
+
+        detail_response = client.get(
+            f"/api/user-profiles/{CREATE_TEST_USER_ID}"
+        )
+
+        assert detail_response.status_code == 200
+
+    finally:
+        delete_create_test_user()
+
+
+def test_create_duplicate_user_profile(
+    client: TestClient,
+) -> None:
+    """Creating the same user ID twice should return 409."""
+
+    delete_create_test_user()
+
+    try:
+        request_data = build_valid_create_profile()
+
+        first_response = client.post(
+            "/api/user-profiles",
+            json=request_data,
+        )
+
+        assert first_response.status_code == 201
+
+        duplicate_response = client.post(
+            "/api/user-profiles",
+            json=request_data,
+        )
+
+        assert duplicate_response.status_code == 409
+
+        assert duplicate_response.json() == {
+            "detail": (
+                f"User profile '{CREATE_TEST_USER_ID}' "
+                "already exists."
+            )
+        }
+
+    finally:
+        delete_create_test_user()
+
+
+def test_create_profile_with_invalid_country(
+    client: TestClient,
+) -> None:
+    """An unknown preferred country should return 422."""
+
+    delete_create_test_user()
+
+    request_data = build_valid_create_profile()
+
+    request_data["preferred_countries"] = [
+        "Unknown Country"
+    ]
+
+    response = client.post(
+        "/api/user-profiles",
+        json=request_data,
+    )
+
+    assert response.status_code == 422
+
+    assert response.json() == {
+        "detail": (
+            "The following preferred countries "
+            "do not exist: Unknown Country"
+        )
+    }
+
+    detail_response = client.get(
+        f"/api/user-profiles/{CREATE_TEST_USER_ID}"
+    )
+
+    assert detail_response.status_code == 404
+
+
+def test_create_profile_with_invalid_gpa(
+    client: TestClient,
+) -> None:
+    """GPA must not be greater than the GPA scale."""
+
+    delete_create_test_user()
+
+    request_data = build_valid_create_profile()
+
+    request_data["gpa"] = 4.5
+    request_data["gpa_scale"] = 4.0
+
+    response = client.post(
+        "/api/user-profiles",
+        json=request_data,
+    )
+
+    assert response.status_code == 422
+
+    assert response.json() == {
+        "detail": (
+            "GPA cannot be greater than GPA scale."
+        )
+    }
+
+
+def test_create_profile_budget_requires_currency(
+    client: TestClient,
+) -> None:
+    """A budget value should require a currency code."""
+
+    delete_create_test_user()
+
+    request_data = build_valid_create_profile()
+
+    request_data["annual_budget"] = 700000
+    request_data["budget_currency"] = None
+
+    response = client.post(
+        "/api/user-profiles",
+        json=request_data,
+    )
+
+    assert response.status_code == 422
+
+    assert response.json() == {
+        "detail": (
+            "Field 'budget_currency' is required "
+            "when annual budget is provided."
+        )
+    }
+
+
+def test_create_profile_scholarship_requires_funding_type(
+    client: TestClient,
+) -> None:
+    """
+    A scholarship-seeking user should provide a
+    preferred funding type.
+    """
+
+    delete_create_test_user()
+
+    request_data = build_valid_create_profile()
+
+    request_data["scholarship_required"] = True
+    request_data["preferred_funding_type"] = None
+
+    response = client.post(
+        "/api/user-profiles",
+        json=request_data,
+    )
+
+    assert response.status_code == 422
+
+    assert response.json() == {
+        "detail": (
+            "Field 'preferred_funding_type' "
+            "is required when scholarship_required "
+            "is true."
+        )
+    }
