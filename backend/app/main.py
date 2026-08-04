@@ -10,8 +10,10 @@ from pymongo.errors import (
     PyMongoError,
 )
 from datetime import datetime, timezone
+
 from backend.app.schemas import (
     UserProfileCreate,
+    UserProfileUpdate,
 )
 
 from backend.app.database import (
@@ -1276,3 +1278,401 @@ def create_user_profile(
         ),
         "profile": public_profile,
     }
+
+# ---------------------------------------------------------
+# Update user profile
+# ---------------------------------------------------------
+
+@app.patch(
+    "/api/user-profiles/{user_id}",
+    tags=["User Profiles"],
+)
+def update_user_profile(
+    user_id: str,
+    payload: UserProfileUpdate,
+) -> dict[str, Any]:
+    """Update selected fields of an existing user profile."""
+
+    database = get_database()
+
+    updates = payload.model_dump(
+        exclude_unset=True,
+    )
+
+    if not updates:
+        raise HTTPException(
+            status_code=(
+                status.HTTP_422_UNPROCESSABLE_ENTITY
+            ),
+            detail=(
+                "At least one profile field "
+                "must be provided."
+            ),
+        )
+
+    try:
+        existing_profile = database[
+            "user_profiles"
+        ].find_one(
+            {"user_id": user_id}
+        )
+
+    except PyMongoError as error:
+        raise HTTPException(
+            status_code=(
+                status.HTTP_500_INTERNAL_SERVER_ERROR
+            ),
+            detail=(
+                "Unable to retrieve the user profile."
+            ),
+        ) from error
+
+    if existing_profile is None:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail=(
+                f"User profile '{user_id}' "
+                "was not found."
+            ),
+        )
+
+    # -----------------------------------------------------
+    # Clean required text fields
+    # -----------------------------------------------------
+
+    required_text_fields = [
+        "nationality",
+        "current_education_level",
+        "target_degree_level",
+        "preferred_major",
+    ]
+
+    for field_name in required_text_fields:
+        if field_name not in updates:
+            continue
+
+        value = updates[field_name]
+
+        if value is None:
+            raise HTTPException(
+                status_code=(
+                    status.HTTP_422_UNPROCESSABLE_ENTITY
+                ),
+                detail=(
+                    f"Field '{field_name}' "
+                    "cannot be null."
+                ),
+            )
+
+        cleaned_value = str(value).strip()
+
+        if not cleaned_value:
+            raise HTTPException(
+                status_code=(
+                    status.HTTP_422_UNPROCESSABLE_ENTITY
+                ),
+                detail=(
+                    f"Field '{field_name}' "
+                    "cannot be blank."
+                ),
+            )
+
+        updates[field_name] = cleaned_value
+
+    # -----------------------------------------------------
+    # Clean optional text fields
+    # -----------------------------------------------------
+
+    optional_text_fields = [
+        "preferred_funding_type",
+        "preferred_intake",
+    ]
+
+    for field_name in optional_text_fields:
+        if field_name not in updates:
+            continue
+
+        value = updates[field_name]
+
+        if value is not None:
+            cleaned_value = str(value).strip()
+
+            updates[field_name] = (
+                cleaned_value
+                if cleaned_value
+                else None
+            )
+
+    # -----------------------------------------------------
+    # Clean budget currency
+    # -----------------------------------------------------
+
+    if (
+        "budget_currency" in updates
+        and updates["budget_currency"] is not None
+    ):
+        updates["budget_currency"] = str(
+            updates["budget_currency"]
+        ).strip().upper()
+
+    # -----------------------------------------------------
+    # Clean preferred countries
+    # -----------------------------------------------------
+
+    if "preferred_countries" in updates:
+        preferred_countries = updates[
+            "preferred_countries"
+        ]
+
+        if preferred_countries is None:
+            raise HTTPException(
+                status_code=(
+                    status.HTTP_422_UNPROCESSABLE_ENTITY
+                ),
+                detail=(
+                    "Field 'preferred_countries' "
+                    "cannot be null."
+                ),
+            )
+
+        cleaned_countries = [
+            country.strip()
+            for country in preferred_countries
+            if country.strip()
+        ]
+
+        cleaned_countries = list(
+            dict.fromkeys(cleaned_countries)
+        )
+
+        if not cleaned_countries:
+            raise HTTPException(
+                status_code=(
+                    status.HTTP_422_UNPROCESSABLE_ENTITY
+                ),
+                detail=(
+                    "At least one preferred country "
+                    "is required."
+                ),
+            )
+
+        updates["preferred_countries"] = (
+            cleaned_countries
+        )
+
+    # -----------------------------------------------------
+    # Merge existing data with incoming changes
+    # -----------------------------------------------------
+
+    merged_profile = {
+        **existing_profile,
+        **updates,
+    }
+
+    # -----------------------------------------------------
+    # GPA validation
+    # -----------------------------------------------------
+
+    gpa = merged_profile.get("gpa")
+    gpa_scale = merged_profile.get("gpa_scale")
+
+    if gpa is not None and gpa_scale is None:
+        raise HTTPException(
+            status_code=(
+                status.HTTP_422_UNPROCESSABLE_ENTITY
+            ),
+            detail=(
+                "Field 'gpa_scale' is required "
+                "when GPA is provided."
+            ),
+        )
+
+    if gpa is None and gpa_scale is not None:
+        raise HTTPException(
+            status_code=(
+                status.HTTP_422_UNPROCESSABLE_ENTITY
+            ),
+            detail=(
+                "Field 'gpa' is required "
+                "when GPA scale is provided."
+            ),
+        )
+
+    if (
+        gpa is not None
+        and gpa_scale is not None
+        and gpa > gpa_scale
+    ):
+        raise HTTPException(
+            status_code=(
+                status.HTTP_422_UNPROCESSABLE_ENTITY
+            ),
+            detail=(
+                "GPA cannot be greater than GPA scale."
+            ),
+        )
+
+    # -----------------------------------------------------
+    # Budget validation
+    # -----------------------------------------------------
+
+    annual_budget = merged_profile.get(
+        "annual_budget"
+    )
+
+    budget_currency = merged_profile.get(
+        "budget_currency"
+    )
+
+    if (
+        annual_budget is not None
+        and budget_currency is None
+    ):
+        raise HTTPException(
+            status_code=(
+                status.HTTP_422_UNPROCESSABLE_ENTITY
+            ),
+            detail=(
+                "Field 'budget_currency' is required "
+                "when annual budget is provided."
+            ),
+        )
+
+    if (
+        annual_budget is None
+        and budget_currency is not None
+    ):
+        raise HTTPException(
+            status_code=(
+                status.HTTP_422_UNPROCESSABLE_ENTITY
+            ),
+            detail=(
+                "Field 'annual_budget' is required "
+                "when budget currency is provided."
+            ),
+        )
+
+    # -----------------------------------------------------
+    # Scholarship preference validation
+    # -----------------------------------------------------
+
+    if (
+        merged_profile.get("scholarship_required")
+        is True
+        and not merged_profile.get(
+            "preferred_funding_type"
+        )
+    ):
+        raise HTTPException(
+            status_code=(
+                status.HTTP_422_UNPROCESSABLE_ENTITY
+            ),
+            detail=(
+                "Field 'preferred_funding_type' "
+                "is required when scholarship_required "
+                "is true."
+            ),
+        )
+
+    try:
+        # -------------------------------------------------
+        # Country relationship validation
+        # -------------------------------------------------
+
+        if "preferred_countries" in updates:
+            country_documents = database[
+                "countries"
+            ].find(
+                {
+                    "country_name": {
+                        "$in": updates[
+                            "preferred_countries"
+                        ]
+                    }
+                },
+                {
+                    "_id": 0,
+                    "country_name": 1,
+                },
+            )
+
+            existing_country_names = {
+                country["country_name"]
+                for country in country_documents
+            }
+
+            missing_country_names = sorted(
+                set(
+                    updates["preferred_countries"]
+                )
+                - existing_country_names
+            )
+
+            if missing_country_names:
+                raise HTTPException(
+                    status_code=(
+                        status.HTTP_422_UNPROCESSABLE_ENTITY
+                    ),
+                    detail=(
+                        "The following preferred countries "
+                        "do not exist: "
+                        + ", ".join(
+                            missing_country_names
+                        )
+                    ),
+                )
+
+        updates["database_updated_at"] = (
+            datetime.now(timezone.utc)
+        )
+
+        database["user_profiles"].update_one(
+            {"user_id": user_id},
+            {
+                "$set": updates,
+            },
+        )
+
+        updated_profile = database[
+            "user_profiles"
+        ].find_one(
+            {"user_id": user_id},
+            {
+                "_id": 0,
+                "content_hash": 0,
+                "created_at": 0,
+                "database_updated_at": 0,
+            },
+        )
+
+    except HTTPException:
+        raise
+
+    except PyMongoError as error:
+        raise HTTPException(
+            status_code=(
+                status.HTTP_500_INTERNAL_SERVER_ERROR
+            ),
+            detail=(
+                "Unable to update the user profile."
+            ),
+        ) from error
+
+    if updated_profile is None:
+        raise HTTPException(
+            status_code=(
+                status.HTTP_500_INTERNAL_SERVER_ERROR
+            ),
+            detail=(
+                "The updated user profile "
+                "could not be retrieved."
+            ),
+        )
+
+    return {
+        "message": (
+            "User profile updated successfully."
+        ),
+        "profile": updated_profile,
+    }
+

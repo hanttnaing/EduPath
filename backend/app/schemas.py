@@ -262,3 +262,80 @@ class UserProfileCreate(BaseModel):
         max_length=100,
     )
 
+class UserProfileUpdate(BaseModel):
+    """Optional fields used to update a user profile."""
+
+    nationality: str | None = Field(
+        default=None,
+        min_length=2,
+        max_length=100,
+    )
+
+    current_education_level: str | None = Field(
+        default=None,
+        min_length=2,
+        max_length=50,
+    )
+
+    target_degree_level: str | None = Field(
+        default=None,
+        min_length=2,
+        max_length=50,
+    )
+
+    preferred_major: str | None = Field(
+        default=None,
+        min_length=2,
+        max_length=200,
+    )
+
+    gpa: float | None = Field(
+        default=None,
+        ge=0,
+    )
+
+    gpa_scale: float | None = Field(
+        default=None,
+        gt=0,
+    )
+
+    ielts_score: float | None = Field(
+        default=None,
+        ge=0,
+        le=9,
+    )
+
+    toefl_score: int | None = Field(
+        default=None,
+        ge=0,
+        le=120,
+    )
+
+    annual_budget: float | None = Field(
+        default=None,
+        ge=0,
+    )
+
+    budget_currency: str | None = Field(
+        default=None,
+        min_length=3,
+        max_length=3,
+    )
+
+    preferred_countries: list[str] | None = Field(
+        default=None,
+        min_length=1,
+    )
+
+    scholarship_required: bool | None = None
+
+    preferred_funding_type: str | None = Field(
+        default=None,
+        max_length=100,
+    )
+
+    preferred_intake: str | None = Field(
+        default=None,
+        max_length=100,
+    )
+

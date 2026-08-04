@@ -1891,3 +1891,346 @@ def test_create_profile_scholarship_requires_funding_type(
             "is true."
         )
     }
+
+# ---------------------------------------------------------
+# User profile update API tests
+# ---------------------------------------------------------
+
+UPDATE_TEST_USER_ID = "user_api_update_test_001"
+
+
+def delete_update_test_user() -> None:
+    """Remove the temporary profile used by update tests."""
+
+    database = get_database()
+
+    database["user_profiles"].delete_many(
+        {"user_id": UPDATE_TEST_USER_ID}
+    )
+
+
+def build_valid_update_test_profile() -> dict:
+    """Return a valid request body for an update-test user."""
+
+    return {
+        "user_id": UPDATE_TEST_USER_ID,
+        "nationality": "Myanmar",
+        "current_education_level": "Bachelor",
+        "target_degree_level": "Master",
+        "preferred_major": "Computer Science",
+        "gpa": 3.2,
+        "gpa_scale": 4.0,
+        "ielts_score": 6.5,
+        "toefl_score": None,
+        "annual_budget": 650000,
+        "budget_currency": "JPY",
+        "preferred_countries": [
+            "Japan"
+        ],
+        "scholarship_required": True,
+        "preferred_funding_type": "Fully Funded",
+        "preferred_intake": "October",
+    }
+
+
+def create_update_test_user(
+    client: TestClient,
+) -> None:
+    """Create a fresh temporary profile for update tests."""
+
+    delete_update_test_user()
+
+    response = client.post(
+        "/api/user-profiles",
+        json=build_valid_update_test_profile(),
+    )
+
+    assert response.status_code == 201
+
+
+def test_update_user_profile_successfully(
+    client: TestClient,
+) -> None:
+    """PATCH should update only the submitted fields."""
+
+    create_update_test_user(client)
+
+    try:
+        response = client.patch(
+            f"/api/user-profiles/{UPDATE_TEST_USER_ID}",
+            json={
+                "annual_budget": 750000,
+                "preferred_intake": "April",
+            },
+        )
+
+        assert response.status_code == 200
+
+        response_data = response.json()
+
+        assert (
+            response_data["message"]
+            == "User profile updated successfully."
+        )
+
+        profile = response_data["profile"]
+
+        assert profile["user_id"] == UPDATE_TEST_USER_ID
+        assert profile["annual_budget"] == 750000
+        assert profile["preferred_intake"] == "April"
+
+        # Fields not included in PATCH must remain unchanged.
+        assert profile["nationality"] == "Myanmar"
+
+        assert (
+            profile["current_education_level"]
+            == "Bachelor"
+        )
+
+        assert profile["target_degree_level"] == "Master"
+        assert profile["preferred_major"] == "Computer Science"
+        assert profile["gpa"] == 3.2
+        assert profile["gpa_scale"] == 4.0
+        assert profile["budget_currency"] == "JPY"
+
+        assert profile["preferred_countries"] == [
+            "Japan"
+        ]
+
+        assert profile["scholarship_required"] is True
+
+        assert (
+            profile["preferred_funding_type"]
+            == "Fully Funded"
+        )
+
+        assert profile["saved_universities"] == []
+        assert profile["saved_scholarships"] == []
+        assert profile["recommendation_history"] == []
+
+        # Internal fields must not be returned.
+        assert "_id" not in profile
+        assert "content_hash" not in profile
+        assert "created_at" not in profile
+        assert "database_updated_at" not in profile
+
+        detail_response = client.get(
+            f"/api/user-profiles/{UPDATE_TEST_USER_ID}"
+        )
+
+        assert detail_response.status_code == 200
+
+        saved_profile = detail_response.json()
+
+        assert saved_profile["annual_budget"] == 750000
+        assert saved_profile["preferred_intake"] == "April"
+
+    finally:
+        delete_update_test_user()
+
+
+def test_update_unknown_user_profile(
+    client: TestClient,
+) -> None:
+    """Updating an unknown user should return HTTP 404."""
+
+    response = client.patch(
+        "/api/user-profiles/user_update_unknown_999",
+        json={
+            "annual_budget": 750000,
+        },
+    )
+
+    assert response.status_code == 404
+
+    assert response.json() == {
+        "detail": (
+            "User profile "
+            "'user_update_unknown_999' was not found."
+        )
+    }
+
+
+def test_update_profile_with_empty_request(
+    client: TestClient,
+) -> None:
+    """An empty PATCH body should return HTTP 422."""
+
+    create_update_test_user(client)
+
+    try:
+        response = client.patch(
+            f"/api/user-profiles/{UPDATE_TEST_USER_ID}",
+            json={},
+        )
+
+        assert response.status_code == 422
+
+        assert response.json() == {
+            "detail": (
+                "At least one profile field "
+                "must be provided."
+            )
+        }
+
+    finally:
+        delete_update_test_user()
+
+
+def test_update_profile_with_invalid_gpa(
+    client: TestClient,
+) -> None:
+    """GPA must not exceed the GPA scale."""
+
+    create_update_test_user(client)
+
+    try:
+        response = client.patch(
+            f"/api/user-profiles/{UPDATE_TEST_USER_ID}",
+            json={
+                "gpa": 5.0,
+                "gpa_scale": 4.0,
+            },
+        )
+
+        assert response.status_code == 422
+
+        assert response.json() == {
+            "detail": (
+                "GPA cannot be greater than GPA scale."
+            )
+        }
+
+        # Failed validation must not modify stored data.
+        detail_response = client.get(
+            f"/api/user-profiles/{UPDATE_TEST_USER_ID}"
+        )
+
+        assert detail_response.status_code == 200
+        assert detail_response.json()["gpa"] == 3.2
+        assert detail_response.json()["gpa_scale"] == 4.0
+
+    finally:
+        delete_update_test_user()
+
+
+def test_update_profile_with_invalid_country(
+    client: TestClient,
+) -> None:
+    """An unknown preferred country should return HTTP 422."""
+
+    create_update_test_user(client)
+
+    try:
+        response = client.patch(
+            f"/api/user-profiles/{UPDATE_TEST_USER_ID}",
+            json={
+                "preferred_countries": [
+                    "Unknown Country"
+                ]
+            },
+        )
+
+        assert response.status_code == 422
+
+        assert response.json() == {
+            "detail": (
+                "The following preferred countries "
+                "do not exist: Unknown Country"
+            )
+        }
+
+        detail_response = client.get(
+            f"/api/user-profiles/{UPDATE_TEST_USER_ID}"
+        )
+
+        assert detail_response.status_code == 200
+
+        assert detail_response.json()[
+            "preferred_countries"
+        ] == ["Japan"]
+
+    finally:
+        delete_update_test_user()
+
+
+def test_update_profile_budget_requires_currency(
+    client: TestClient,
+) -> None:
+    """An existing budget cannot keep a null currency."""
+
+    create_update_test_user(client)
+
+    try:
+        response = client.patch(
+            f"/api/user-profiles/{UPDATE_TEST_USER_ID}",
+            json={
+                "budget_currency": None,
+            },
+        )
+
+        assert response.status_code == 422
+
+        assert response.json() == {
+            "detail": (
+                "Field 'budget_currency' is required "
+                "when annual budget is provided."
+            )
+        }
+
+        detail_response = client.get(
+            f"/api/user-profiles/{UPDATE_TEST_USER_ID}"
+        )
+
+        assert detail_response.status_code == 200
+        assert detail_response.json()[
+            "budget_currency"
+        ] == "JPY"
+
+    finally:
+        delete_update_test_user()
+
+
+def test_update_profile_scholarship_requires_funding_type(
+    client: TestClient,
+) -> None:
+    """
+    A scholarship-seeking profile must retain a
+    preferred funding type.
+    """
+
+    create_update_test_user(client)
+
+    try:
+        response = client.patch(
+            f"/api/user-profiles/{UPDATE_TEST_USER_ID}",
+            json={
+                "preferred_funding_type": None,
+            },
+        )
+
+        assert response.status_code == 422
+
+        assert response.json() == {
+            "detail": (
+                "Field 'preferred_funding_type' "
+                "is required when scholarship_required "
+                "is true."
+            )
+        }
+
+        detail_response = client.get(
+            f"/api/user-profiles/{UPDATE_TEST_USER_ID}"
+        )
+
+        assert detail_response.status_code == 200
+
+        assert (
+            detail_response.json()[
+                "preferred_funding_type"
+            ]
+            == "Fully Funded"
+        )
+
+    finally:
+        delete_update_test_user()
