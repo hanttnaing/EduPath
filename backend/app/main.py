@@ -1825,3 +1825,155 @@ def save_university_for_user(
         ),
     }
 
+# ---------------------------------------------------------
+# Unsave university
+# ---------------------------------------------------------
+
+@app.delete(
+    (
+        "/api/user-profiles/{user_id}"
+        "/saved-universities/{university_id}"
+    ),
+    tags=["Saved Opportunities"],
+)
+def unsave_university_for_user(
+    user_id: str,
+    university_id: str,
+) -> dict[str, Any]:
+    """Remove one university from a user's saved list."""
+
+    database = get_database()
+
+    try:
+        # -------------------------------------------------
+        # Check whether the user profile exists
+        # -------------------------------------------------
+
+        profile = database["user_profiles"].find_one(
+            {"user_id": user_id},
+            {
+                "_id": 0,
+                "user_id": 1,
+                "saved_universities": 1,
+            },
+        )
+
+        if profile is None:
+            raise HTTPException(
+                status_code=status.HTTP_404_NOT_FOUND,
+                detail=(
+                    f"User profile '{user_id}' "
+                    "was not found."
+                ),
+            )
+
+        # -------------------------------------------------
+        # Check whether the university exists
+        # -------------------------------------------------
+
+        university = database["universities"].find_one(
+            {"university_id": university_id},
+            {
+                "_id": 0,
+                "university_id": 1,
+                "university_name": 1,
+                "country_id": 1,
+                "city": 1,
+                "university_type": 1,
+            },
+        )
+
+        if university is None:
+            raise HTTPException(
+                status_code=status.HTTP_404_NOT_FOUND,
+                detail=(
+                    f"University '{university_id}' "
+                    "was not found."
+                ),
+            )
+
+        existing_saved_universities = (
+            profile.get("saved_universities") or []
+        )
+
+        # -------------------------------------------------
+        # Return safely when it is not currently saved
+        # -------------------------------------------------
+
+        if university_id not in existing_saved_universities:
+            return {
+                "message": (
+                    "University is not currently saved."
+                ),
+                "university": university,
+                "saved_universities": (
+                    existing_saved_universities
+                ),
+            }
+
+        # -------------------------------------------------
+        # Remove the university ID from the array
+        # -------------------------------------------------
+
+        database["user_profiles"].update_one(
+            {"user_id": user_id},
+            {
+                "$pull": {
+                    "saved_universities": university_id,
+                },
+                "$set": {
+                    "database_updated_at": (
+                        datetime.now(timezone.utc)
+                    ),
+                },
+            },
+        )
+
+        updated_profile = database[
+            "user_profiles"
+        ].find_one(
+            {"user_id": user_id},
+            {
+                "_id": 0,
+                "saved_universities": 1,
+            },
+        )
+
+    except HTTPException:
+        raise
+
+    except PyMongoError as error:
+        raise HTTPException(
+            status_code=(
+                status.HTTP_500_INTERNAL_SERVER_ERROR
+            ),
+            detail=(
+                "Unable to remove the saved university."
+            ),
+        ) from error
+
+    if updated_profile is None:
+        raise HTTPException(
+            status_code=(
+                status.HTTP_500_INTERNAL_SERVER_ERROR
+            ),
+            detail=(
+                "The updated user profile "
+                "could not be retrieved."
+            ),
+        )
+
+    return {
+        "message": (
+            "University removed from saved list "
+            "successfully."
+        ),
+        "university": university,
+        "saved_universities": (
+            updated_profile.get(
+                "saved_universities",
+                [],
+            )
+        ),
+    }
+

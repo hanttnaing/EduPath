@@ -2530,3 +2530,307 @@ def test_save_unknown_university(
     finally:
         delete_save_university_test_user()
 
+# ---------------------------------------------------------
+# Unsave university API tests
+# ---------------------------------------------------------
+
+UNSAVE_UNIVERSITY_TEST_USER_ID = (
+    "user_api_unsave_university_test_001"
+)
+
+UNSAVE_PILOT_UNIVERSITY_ID = "uni_jp_001"
+
+
+def delete_unsave_university_test_user() -> None:
+    """Remove the temporary unsave-university test user."""
+
+    database = get_database()
+
+    database["user_profiles"].delete_many(
+        {
+            "user_id": (
+                UNSAVE_UNIVERSITY_TEST_USER_ID
+            )
+        }
+    )
+
+
+def build_unsave_university_test_profile() -> dict:
+    """Return valid data for the temporary test profile."""
+
+    return {
+        "user_id": UNSAVE_UNIVERSITY_TEST_USER_ID,
+        "nationality": "Myanmar",
+        "current_education_level": "Bachelor",
+        "target_degree_level": "Master",
+        "preferred_major": "Computer Science",
+        "gpa": 3.4,
+        "gpa_scale": 4.0,
+        "ielts_score": 6.5,
+        "toefl_score": None,
+        "annual_budget": 700000,
+        "budget_currency": "JPY",
+        "preferred_countries": [
+            "Japan"
+        ],
+        "scholarship_required": True,
+        "preferred_funding_type": "Fully Funded",
+        "preferred_intake": "October",
+    }
+
+
+def create_unsave_university_test_user(
+    client: TestClient,
+) -> None:
+    """Create a fresh profile for unsave tests."""
+
+    delete_unsave_university_test_user()
+
+    response = client.post(
+        "/api/user-profiles",
+        json=build_unsave_university_test_profile(),
+    )
+
+    assert response.status_code == 201
+
+
+def save_pilot_university_for_unsave_test(
+    client: TestClient,
+) -> None:
+    """Save the pilot university before removing it."""
+
+    response = client.post(
+        (
+            f"/api/user-profiles/"
+            f"{UNSAVE_UNIVERSITY_TEST_USER_ID}"
+            f"/saved-universities/"
+            f"{UNSAVE_PILOT_UNIVERSITY_ID}"
+        )
+    )
+
+    assert response.status_code == 200
+
+
+def test_unsave_university_successfully(
+    client: TestClient,
+) -> None:
+    """A saved university should be removed successfully."""
+
+    create_unsave_university_test_user(client)
+
+    try:
+        save_pilot_university_for_unsave_test(client)
+
+        response = client.delete(
+            (
+                f"/api/user-profiles/"
+                f"{UNSAVE_UNIVERSITY_TEST_USER_ID}"
+                f"/saved-universities/"
+                f"{UNSAVE_PILOT_UNIVERSITY_ID}"
+            )
+        )
+
+        assert response.status_code == 200
+
+        response_data = response.json()
+
+        assert (
+            response_data["message"]
+            == (
+                "University removed from saved list "
+                "successfully."
+            )
+        )
+
+        university = response_data["university"]
+
+        assert (
+            university["university_id"]
+            == UNSAVE_PILOT_UNIVERSITY_ID
+        )
+
+        assert (
+            university["university_name"]
+            == "The University of Tokyo"
+        )
+
+        assert university["country_id"] == "country_jp"
+        assert university["city"] == "Tokyo"
+
+        assert (
+            university["university_type"]
+            == "Public"
+        )
+
+        assert response_data["saved_universities"] == []
+
+    finally:
+        delete_unsave_university_test_user()
+
+
+def test_unsaved_university_is_removed_from_profile(
+    client: TestClient,
+) -> None:
+    """The saved university should disappear from MongoDB."""
+
+    create_unsave_university_test_user(client)
+
+    try:
+        save_pilot_university_for_unsave_test(client)
+
+        delete_response = client.delete(
+            (
+                f"/api/user-profiles/"
+                f"{UNSAVE_UNIVERSITY_TEST_USER_ID}"
+                f"/saved-universities/"
+                f"{UNSAVE_PILOT_UNIVERSITY_ID}"
+            )
+        )
+
+        assert delete_response.status_code == 200
+
+        profile_response = client.get(
+            (
+                f"/api/user-profiles/"
+                f"{UNSAVE_UNIVERSITY_TEST_USER_ID}"
+            )
+        )
+
+        assert profile_response.status_code == 200
+
+        profile = profile_response.json()
+
+        assert profile["saved_universities"] == []
+
+        # Other runtime data should remain unchanged.
+        assert profile["saved_scholarships"] == []
+        assert profile["recommendation_history"] == []
+
+        # Other profile fields must remain unchanged.
+        assert profile["nationality"] == "Myanmar"
+
+        assert (
+            profile["preferred_major"]
+            == "Computer Science"
+        )
+
+        assert profile["annual_budget"] == 700000
+
+    finally:
+        delete_unsave_university_test_user()
+
+
+def test_unsave_university_that_is_not_saved(
+    client: TestClient,
+) -> None:
+    """
+    Removing an unsaved university should return safely
+    without creating an error.
+    """
+
+    create_unsave_university_test_user(client)
+
+    try:
+        response = client.delete(
+            (
+                f"/api/user-profiles/"
+                f"{UNSAVE_UNIVERSITY_TEST_USER_ID}"
+                f"/saved-universities/"
+                f"{UNSAVE_PILOT_UNIVERSITY_ID}"
+            )
+        )
+
+        assert response.status_code == 200
+
+        response_data = response.json()
+
+        assert (
+            response_data["message"]
+            == "University is not currently saved."
+        )
+
+        assert response_data["saved_universities"] == []
+
+        profile_response = client.get(
+            (
+                f"/api/user-profiles/"
+                f"{UNSAVE_UNIVERSITY_TEST_USER_ID}"
+            )
+        )
+
+        assert profile_response.status_code == 200
+
+        assert profile_response.json()[
+            "saved_universities"
+        ] == []
+
+    finally:
+        delete_unsave_university_test_user()
+
+
+def test_unsave_university_for_unknown_user(
+    client: TestClient,
+) -> None:
+    """An unknown user should return HTTP 404."""
+
+    response = client.delete(
+        (
+            "/api/user-profiles/"
+            "user_unsave_unknown_999"
+            "/saved-universities/"
+            f"{UNSAVE_PILOT_UNIVERSITY_ID}"
+        )
+    )
+
+    assert response.status_code == 404
+
+    assert response.json() == {
+        "detail": (
+            "User profile 'user_unsave_unknown_999' "
+            "was not found."
+        )
+    }
+
+
+def test_unsave_unknown_university(
+    client: TestClient,
+) -> None:
+    """An unknown university should return HTTP 404."""
+
+    create_unsave_university_test_user(client)
+
+    try:
+        response = client.delete(
+            (
+                f"/api/user-profiles/"
+                f"{UNSAVE_UNIVERSITY_TEST_USER_ID}"
+                "/saved-universities/"
+                "uni_unknown_999"
+            )
+        )
+
+        assert response.status_code == 404
+
+        assert response.json() == {
+            "detail": (
+                "University 'uni_unknown_999' "
+                "was not found."
+            )
+        }
+
+        profile_response = client.get(
+            (
+                f"/api/user-profiles/"
+                f"{UNSAVE_UNIVERSITY_TEST_USER_ID}"
+            )
+        )
+
+        assert profile_response.status_code == 200
+
+        assert profile_response.json()[
+            "saved_universities"
+        ] == []
+
+    finally:
+        delete_unsave_university_test_user()
+
