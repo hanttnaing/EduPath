@@ -1,4 +1,5 @@
 from __future__ import annotations
+from uuid import uuid4
 
 from contextlib import asynccontextmanager
 from typing import Any
@@ -773,11 +774,36 @@ def get_program_recommendations(
     database = get_database()
 
     try:
-        return generate_recommendations(
+        recommendation_result = generate_recommendations(
             database=database,
             user_id=user_id,
             top_k=top_k,
         )
+
+        recommendations = recommendation_result.get(
+            "recommendations",
+            [],
+        )
+
+        recommended_program_ids = [
+            recommendation["program_id"]
+            for recommendation in recommendations
+            if (
+                isinstance(recommendation, dict)
+                and isinstance(
+                    recommendation.get("program_id"),
+                    str,
+                )
+            )
+        ]
+
+        append_recommendation_history(
+            user_id=user_id,
+            recommendation_type="program",
+            recommended_ids=recommended_program_ids,
+        )
+
+        return recommendation_result
 
     except ValueError as error:
         raise HTTPException(
@@ -2503,3 +2529,85 @@ def get_recommendation_history(
             recommendation_history
         ),
     }
+
+# ---------------------------------------------------------
+# Recommendation history helper
+# ---------------------------------------------------------
+
+MAX_RECOMMENDATION_HISTORY_ITEMS = 50
+
+
+def append_recommendation_history(
+    user_id: str,
+    recommendation_type: str,
+    recommended_ids: list[str],
+) -> dict[str, Any]:
+    """
+    Append one recommendation run to a user's history.
+
+    Only the latest 50 history records are retained.
+    """
+
+    cleaned_recommended_ids = list(
+        dict.fromkeys(
+            recommendation_id.strip()
+            for recommendation_id in recommended_ids
+            if (
+                isinstance(recommendation_id, str)
+                and recommendation_id.strip()
+            )
+        )
+    )
+
+    current_time = datetime.now(timezone.utc)
+
+    history_item = {
+        "history_id": f"history_{uuid4().hex}",
+        "recommendation_type": recommendation_type,
+        "created_at": current_time,
+        "result_count": len(cleaned_recommended_ids),
+        "recommended_ids": cleaned_recommended_ids,
+    }
+
+    database = get_database()
+
+    try:
+        update_result = database[
+            "user_profiles"
+        ].update_one(
+            {"user_id": user_id},
+            {
+                "$push": {
+                    "recommendation_history": {
+                        "$each": [history_item],
+                        "$slice": (
+                            -MAX_RECOMMENDATION_HISTORY_ITEMS
+                        ),
+                    }
+                },
+                "$set": {
+                    "database_updated_at": current_time,
+                },
+            },
+        )
+
+    except PyMongoError as error:
+        raise HTTPException(
+            status_code=(
+                status.HTTP_500_INTERNAL_SERVER_ERROR
+            ),
+            detail=(
+                "Unable to save recommendation history."
+            ),
+        ) from error
+
+    if update_result.matched_count == 0:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail=(
+                f"User profile '{user_id}' "
+                "was not found."
+            ),
+        )
+
+    return history_item
