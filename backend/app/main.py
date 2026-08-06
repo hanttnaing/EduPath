@@ -2283,3 +2283,160 @@ def unsave_scholarship_for_user(
             )
         ),
     }
+
+# ---------------------------------------------------------
+# Get saved opportunities
+# ---------------------------------------------------------
+
+@app.get(
+    (
+        "/api/user-profiles/{user_id}"
+        "/saved-opportunities"
+    ),
+    tags=["Saved Opportunities"],
+)
+def get_saved_opportunities(
+    user_id: str,
+) -> dict[str, Any]:
+    """
+    Return the university and scholarship details saved
+    by one user.
+    """
+
+    database = get_database()
+
+    try:
+        # -------------------------------------------------
+        # Find the user profile
+        # -------------------------------------------------
+
+        profile = database["user_profiles"].find_one(
+            {"user_id": user_id},
+            {
+                "_id": 0,
+                "user_id": 1,
+                "saved_universities": 1,
+                "saved_scholarships": 1,
+            },
+        )
+
+        if profile is None:
+            raise HTTPException(
+                status_code=status.HTTP_404_NOT_FOUND,
+                detail=(
+                    f"User profile '{user_id}' "
+                    "was not found."
+                ),
+            )
+
+        saved_university_ids = (
+            profile.get("saved_universities") or []
+        )
+
+        saved_scholarship_ids = (
+            profile.get("saved_scholarships") or []
+        )
+
+        # -------------------------------------------------
+        # Retrieve saved university documents
+        # -------------------------------------------------
+
+        university_documents = list(
+            database["universities"].find(
+                {
+                    "university_id": {
+                        "$in": saved_university_ids
+                    }
+                },
+                {
+                    "_id": 0,
+                    "university_id": 1,
+                    "university_name": 1,
+                    "country_id": 1,
+                    "city": 1,
+                    "university_type": 1,
+                    "established_year": 1,
+                    "degrees_offered": 1,
+                    "scholarship_available": 1,
+                },
+            )
+        )
+
+        university_by_id = {
+            university["university_id"]: university
+            for university in university_documents
+        }
+
+        # Preserve the order in the user's saved list.
+        saved_universities = [
+            university_by_id[university_id]
+            for university_id in saved_university_ids
+            if university_id in university_by_id
+        ]
+
+        # -------------------------------------------------
+        # Retrieve saved scholarship documents
+        # -------------------------------------------------
+
+        scholarship_documents = list(
+            database["scholarships"].find(
+                {
+                    "scholarship_id": {
+                        "$in": saved_scholarship_ids
+                    }
+                },
+                {
+                    "_id": 0,
+                    "scholarship_id": 1,
+                    "scholarship_name": 1,
+                    "provider_name": 1,
+                    "provider_type": 1,
+                    "country_id": 1,
+                    "university_id": 1,
+                    "degree_levels": 1,
+                    "funding_type": 1,
+                    "application_status": 1,
+                    "application_opening_date": 1,
+                    "application_deadline": 1,
+                },
+            )
+        )
+
+        scholarship_by_id = {
+            scholarship["scholarship_id"]: scholarship
+            for scholarship in scholarship_documents
+        }
+
+        # Preserve the order in the user's saved list.
+        saved_scholarships = [
+            scholarship_by_id[scholarship_id]
+            for scholarship_id in saved_scholarship_ids
+            if scholarship_id in scholarship_by_id
+        ]
+
+    except HTTPException:
+        raise
+
+    except PyMongoError as error:
+        raise HTTPException(
+            status_code=(
+                status.HTTP_500_INTERNAL_SERVER_ERROR
+            ),
+            detail=(
+                "Unable to retrieve saved opportunities."
+            ),
+        ) from error
+
+    return {
+        "user_id": user_id,
+        "saved_university_count": len(
+            saved_universities
+        ),
+        "saved_scholarship_count": len(
+            saved_scholarships
+        ),
+        "saved_universities": saved_universities,
+        "saved_scholarships": saved_scholarships,
+    }
+
+

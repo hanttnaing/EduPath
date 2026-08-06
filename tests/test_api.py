@@ -3419,3 +3419,307 @@ def test_unsave_unknown_scholarship(
     finally:
         delete_unsave_scholarship_test_user()
 
+# ---------------------------------------------------------
+# Saved opportunities detail API tests
+# ---------------------------------------------------------
+
+SAVED_OPPORTUNITIES_TEST_USER_ID = (
+    "user_api_saved_opportunities_test_001"
+)
+
+SAVED_OPPORTUNITIES_UNIVERSITY_ID = "uni_jp_001"
+SAVED_OPPORTUNITIES_SCHOLARSHIP_ID = "sch_jp_001"
+
+
+def delete_saved_opportunities_test_user() -> None:
+    """Remove the temporary saved-opportunities test user."""
+
+    database = get_database()
+
+    database["user_profiles"].delete_many(
+        {
+            "user_id": (
+                SAVED_OPPORTUNITIES_TEST_USER_ID
+            )
+        }
+    )
+
+
+def build_saved_opportunities_test_profile() -> dict:
+    """Return valid data for the temporary test profile."""
+
+    return {
+        "user_id": SAVED_OPPORTUNITIES_TEST_USER_ID,
+        "nationality": "Myanmar",
+        "current_education_level": "Bachelor",
+        "target_degree_level": "Master",
+        "preferred_major": "Computer Science",
+        "gpa": 3.4,
+        "gpa_scale": 4.0,
+        "ielts_score": 6.5,
+        "toefl_score": None,
+        "annual_budget": 700000,
+        "budget_currency": "JPY",
+        "preferred_countries": [
+            "Japan"
+        ],
+        "scholarship_required": True,
+        "preferred_funding_type": "Fully Funded",
+        "preferred_intake": "October",
+    }
+
+
+def create_saved_opportunities_test_user(
+    client: TestClient,
+) -> None:
+    """Create a fresh temporary profile."""
+
+    delete_saved_opportunities_test_user()
+
+    response = client.post(
+        "/api/user-profiles",
+        json=build_saved_opportunities_test_profile(),
+    )
+
+    assert response.status_code == 201
+
+
+def save_university_for_saved_opportunities_test(
+    client: TestClient,
+) -> None:
+    """Save the pilot university for the temporary user."""
+
+    response = client.post(
+        (
+            f"/api/user-profiles/"
+            f"{SAVED_OPPORTUNITIES_TEST_USER_ID}"
+            f"/saved-universities/"
+            f"{SAVED_OPPORTUNITIES_UNIVERSITY_ID}"
+        )
+    )
+
+    assert response.status_code == 200
+
+
+def save_scholarship_for_saved_opportunities_test(
+    client: TestClient,
+) -> None:
+    """Save the pilot scholarship for the temporary user."""
+
+    response = client.post(
+        (
+            f"/api/user-profiles/"
+            f"{SAVED_OPPORTUNITIES_TEST_USER_ID}"
+            f"/saved-scholarships/"
+            f"{SAVED_OPPORTUNITIES_SCHOLARSHIP_ID}"
+        )
+    )
+
+    assert response.status_code == 200
+
+
+def get_saved_opportunities_test_endpoint() -> str:
+    """Return the saved-opportunities endpoint."""
+
+    return (
+        f"/api/user-profiles/"
+        f"{SAVED_OPPORTUNITIES_TEST_USER_ID}"
+        "/saved-opportunities"
+    )
+
+
+def test_get_saved_opportunities_with_both_types(
+    client: TestClient,
+) -> None:
+    """
+    Saved university and scholarship details should both
+    be returned.
+    """
+
+    create_saved_opportunities_test_user(client)
+
+    try:
+        save_university_for_saved_opportunities_test(client)
+        save_scholarship_for_saved_opportunities_test(client)
+
+        response = client.get(
+            get_saved_opportunities_test_endpoint()
+        )
+
+        assert response.status_code == 200
+
+        response_data = response.json()
+
+        assert (
+            response_data["user_id"]
+            == SAVED_OPPORTUNITIES_TEST_USER_ID
+        )
+
+        assert response_data["saved_university_count"] == 1
+        assert response_data["saved_scholarship_count"] == 1
+
+        assert len(response_data["saved_universities"]) == 1
+        assert len(response_data["saved_scholarships"]) == 1
+
+        university = response_data["saved_universities"][0]
+
+        assert (
+            university["university_id"]
+            == SAVED_OPPORTUNITIES_UNIVERSITY_ID
+        )
+
+        assert (
+            university["university_name"]
+            == "The University of Tokyo"
+        )
+
+        assert university["country_id"] == "country_jp"
+        assert university["city"] == "Tokyo"
+        assert university["university_type"] == "Public"
+        assert university["established_year"] == 1877
+
+        assert university["degrees_offered"] == [
+            "Bachelor",
+            "Master",
+            "PhD",
+        ]
+
+        assert university["scholarship_available"] is True
+
+        scholarship = response_data[
+            "saved_scholarships"
+        ][0]
+
+        assert (
+            scholarship["scholarship_id"]
+            == SAVED_OPPORTUNITIES_SCHOLARSHIP_ID
+        )
+
+        assert scholarship["country_id"] == "country_jp"
+
+        assert (
+            scholarship["university_id"]
+            == SAVED_OPPORTUNITIES_UNIVERSITY_ID
+        )
+
+        assert scholarship["funding_type"] == "Fully Funded"
+
+        assert scholarship["degree_levels"] == [
+            "Master",
+            "PhD",
+        ]
+
+    finally:
+        delete_saved_opportunities_test_user()
+
+
+def test_get_saved_opportunities_with_empty_lists(
+    client: TestClient,
+) -> None:
+    """A new user should receive two empty saved lists."""
+
+    create_saved_opportunities_test_user(client)
+
+    try:
+        response = client.get(
+            get_saved_opportunities_test_endpoint()
+        )
+
+        assert response.status_code == 200
+
+        response_data = response.json()
+
+        assert response_data["saved_university_count"] == 0
+        assert response_data["saved_scholarship_count"] == 0
+        assert response_data["saved_universities"] == []
+        assert response_data["saved_scholarships"] == []
+
+    finally:
+        delete_saved_opportunities_test_user()
+
+
+def test_get_saved_opportunities_with_university_only(
+    client: TestClient,
+) -> None:
+    """A user may have only a saved university."""
+
+    create_saved_opportunities_test_user(client)
+
+    try:
+        save_university_for_saved_opportunities_test(client)
+
+        response = client.get(
+            get_saved_opportunities_test_endpoint()
+        )
+
+        assert response.status_code == 200
+
+        response_data = response.json()
+
+        assert response_data["saved_university_count"] == 1
+        assert response_data["saved_scholarship_count"] == 0
+
+        assert response_data["saved_universities"][0][
+            "university_id"
+        ] == SAVED_OPPORTUNITIES_UNIVERSITY_ID
+
+        assert response_data["saved_scholarships"] == []
+
+    finally:
+        delete_saved_opportunities_test_user()
+
+
+def test_get_saved_opportunities_with_scholarship_only(
+    client: TestClient,
+) -> None:
+    """A user may have only a saved scholarship."""
+
+    create_saved_opportunities_test_user(client)
+
+    try:
+        save_scholarship_for_saved_opportunities_test(client)
+
+        response = client.get(
+            get_saved_opportunities_test_endpoint()
+        )
+
+        assert response.status_code == 200
+
+        response_data = response.json()
+
+        assert response_data["saved_university_count"] == 0
+        assert response_data["saved_scholarship_count"] == 1
+
+        assert response_data["saved_universities"] == []
+
+        assert response_data["saved_scholarships"][0][
+            "scholarship_id"
+        ] == SAVED_OPPORTUNITIES_SCHOLARSHIP_ID
+
+    finally:
+        delete_saved_opportunities_test_user()
+
+
+def test_get_saved_opportunities_for_unknown_user(
+    client: TestClient,
+) -> None:
+    """An unknown user should return HTTP 404."""
+
+    response = client.get(
+        (
+            "/api/user-profiles/"
+            "user_saved_opportunities_unknown_999"
+            "/saved-opportunities"
+        )
+    )
+
+    assert response.status_code == 404
+
+    assert response.json() == {
+        "detail": (
+            "User profile "
+            "'user_saved_opportunities_unknown_999' "
+            "was not found."
+        )
+    }
+
