@@ -3576,9 +3576,9 @@ def test_get_saved_opportunities_with_both_types(
         assert university["country_id"] == "country_jp"
         assert university["city"] == "Tokyo"
         assert university["university_type"] == "Public"
-        assert university["established_year"] == 1877
+        assert university["establishment_year"] == 1877
 
-        assert university["degrees_offered"] == [
+        assert university["degree_levels"] == [
             "Bachelor",
             "Master",
             "PhD",
@@ -3598,7 +3598,7 @@ def test_get_saved_opportunities_with_both_types(
         assert scholarship["country_id"] == "country_jp"
 
         assert (
-            scholarship["university_id"]
+            scholarship["host_university_id"]
             == SAVED_OPPORTUNITIES_UNIVERSITY_ID
         )
 
@@ -3719,6 +3719,362 @@ def test_get_saved_opportunities_for_unknown_user(
         "detail": (
             "User profile "
             "'user_saved_opportunities_unknown_999' "
+            "was not found."
+        )
+    }
+
+# ---------------------------------------------------------
+# Recommendation history read API tests
+# ---------------------------------------------------------
+
+RECOMMENDATION_HISTORY_TEST_USER_ID = (
+    "user_api_recommendation_history_test_001"
+)
+
+
+def delete_recommendation_history_test_user() -> None:
+    """Remove the temporary recommendation-history user."""
+
+    database = get_database()
+
+    database["user_profiles"].delete_many(
+        {
+            "user_id": (
+                RECOMMENDATION_HISTORY_TEST_USER_ID
+            )
+        }
+    )
+
+
+def build_recommendation_history_test_profile() -> dict:
+    """Return valid data for the temporary test profile."""
+
+    return {
+        "user_id": RECOMMENDATION_HISTORY_TEST_USER_ID,
+        "nationality": "Myanmar",
+        "current_education_level": "Bachelor",
+        "target_degree_level": "Master",
+        "preferred_major": "Computer Science",
+        "gpa": 3.4,
+        "gpa_scale": 4.0,
+        "ielts_score": 6.5,
+        "toefl_score": None,
+        "annual_budget": 700000,
+        "budget_currency": "JPY",
+        "preferred_countries": [
+            "Japan"
+        ],
+        "scholarship_required": True,
+        "preferred_funding_type": "Fully Funded",
+        "preferred_intake": "October",
+    }
+
+
+def create_recommendation_history_test_user(
+    client: TestClient,
+) -> None:
+    """Create a fresh temporary profile."""
+
+    delete_recommendation_history_test_user()
+
+    response = client.post(
+        "/api/user-profiles",
+        json=build_recommendation_history_test_profile(),
+    )
+
+    assert response.status_code == 201
+
+
+def get_recommendation_history_test_endpoint() -> str:
+    """Return the recommendation-history endpoint."""
+
+    return (
+        f"/api/user-profiles/"
+        f"{RECOMMENDATION_HISTORY_TEST_USER_ID}"
+        "/recommendation-history"
+    )
+
+
+def set_test_recommendation_history(
+    recommendation_history: list[dict],
+) -> None:
+    """Set recommendation history directly in MongoDB."""
+
+    database = get_database()
+
+    database["user_profiles"].update_one(
+        {
+            "user_id": (
+                RECOMMENDATION_HISTORY_TEST_USER_ID
+            )
+        },
+        {
+            "$set": {
+                "recommendation_history": (
+                    recommendation_history
+                )
+            }
+        },
+    )
+
+
+def test_get_empty_recommendation_history(
+    client: TestClient,
+) -> None:
+    """A new profile should have an empty history."""
+
+    create_recommendation_history_test_user(client)
+
+    try:
+        response = client.get(
+            get_recommendation_history_test_endpoint()
+        )
+
+        assert response.status_code == 200
+
+        response_data = response.json()
+
+        assert (
+            response_data["user_id"]
+            == RECOMMENDATION_HISTORY_TEST_USER_ID
+        )
+
+        assert (
+            response_data[
+                "recommendation_history_count"
+            ]
+            == 0
+        )
+
+        assert (
+            response_data["recommendation_history"]
+            == []
+        )
+
+    finally:
+        delete_recommendation_history_test_user()
+
+
+def test_get_single_recommendation_history_item(
+    client: TestClient,
+) -> None:
+    """One stored history item should be returned."""
+
+    create_recommendation_history_test_user(client)
+
+    try:
+        history_item = {
+            "history_id": "history_test_001",
+            "recommendation_type": "program",
+            "created_at": (
+                "2026-08-06T04:30:00+00:00"
+            ),
+            "result_count": 1,
+            "recommended_ids": [
+                "prog_jp_001"
+            ],
+        }
+
+        set_test_recommendation_history(
+            [history_item]
+        )
+
+        response = client.get(
+            get_recommendation_history_test_endpoint()
+        )
+
+        assert response.status_code == 200
+
+        response_data = response.json()
+
+        assert (
+            response_data[
+                "recommendation_history_count"
+            ]
+            == 1
+        )
+
+        assert response_data[
+            "recommendation_history"
+        ] == [history_item]
+
+        returned_item = response_data[
+            "recommendation_history"
+        ][0]
+
+        assert (
+            returned_item["history_id"]
+            == "history_test_001"
+        )
+
+        assert (
+            returned_item["recommendation_type"]
+            == "program"
+        )
+
+        assert returned_item["recommended_ids"] == [
+            "prog_jp_001"
+        ]
+
+    finally:
+        delete_recommendation_history_test_user()
+
+
+def test_get_multiple_recommendation_history_items(
+    client: TestClient,
+) -> None:
+    """Multiple history items should preserve their order."""
+
+    create_recommendation_history_test_user(client)
+
+    try:
+        recommendation_history = [
+            {
+                "history_id": "history_test_001",
+                "recommendation_type": "program",
+                "created_at": (
+                    "2026-08-06T04:30:00+00:00"
+                ),
+                "result_count": 1,
+                "recommended_ids": [
+                    "prog_jp_001"
+                ],
+            },
+            {
+                "history_id": "history_test_002",
+                "recommendation_type": "scholarship",
+                "created_at": (
+                    "2026-08-06T04:35:00+00:00"
+                ),
+                "result_count": 1,
+                "recommended_ids": [
+                    "sch_jp_001"
+                ],
+            },
+        ]
+
+        set_test_recommendation_history(
+            recommendation_history
+        )
+
+        response = client.get(
+            get_recommendation_history_test_endpoint()
+        )
+
+        assert response.status_code == 200
+
+        response_data = response.json()
+
+        assert (
+            response_data[
+                "recommendation_history_count"
+            ]
+            == 2
+        )
+
+        returned_history = response_data[
+            "recommendation_history"
+        ]
+
+        assert returned_history == recommendation_history
+
+        assert (
+            returned_history[0]["history_id"]
+            == "history_test_001"
+        )
+
+        assert (
+            returned_history[1]["history_id"]
+            == "history_test_002"
+        )
+
+        assert (
+            returned_history[0][
+                "recommendation_type"
+            ]
+            == "program"
+        )
+
+        assert (
+            returned_history[1][
+                "recommendation_type"
+            ]
+            == "scholarship"
+        )
+
+    finally:
+        delete_recommendation_history_test_user()
+
+
+def test_missing_recommendation_history_defaults_to_empty(
+    client: TestClient,
+) -> None:
+    """
+    A missing recommendation_history field should be
+    treated as an empty list.
+    """
+
+    create_recommendation_history_test_user(client)
+
+    try:
+        database = get_database()
+
+        database["user_profiles"].update_one(
+            {
+                "user_id": (
+                    RECOMMENDATION_HISTORY_TEST_USER_ID
+                )
+            },
+            {
+                "$unset": {
+                    "recommendation_history": ""
+                }
+            },
+        )
+
+        response = client.get(
+            get_recommendation_history_test_endpoint()
+        )
+
+        assert response.status_code == 200
+
+        response_data = response.json()
+
+        assert (
+            response_data[
+                "recommendation_history_count"
+            ]
+            == 0
+        )
+
+        assert (
+            response_data["recommendation_history"]
+            == []
+        )
+
+    finally:
+        delete_recommendation_history_test_user()
+
+
+def test_get_recommendation_history_for_unknown_user(
+    client: TestClient,
+) -> None:
+    """An unknown user should return HTTP 404."""
+
+    response = client.get(
+        (
+            "/api/user-profiles/"
+            "user_recommendation_history_unknown_999"
+            "/recommendation-history"
+        )
+    )
+
+    assert response.status_code == 404
+
+    assert response.json() == {
+        "detail": (
+            "User profile "
+            "'user_recommendation_history_unknown_999' "
             "was not found."
         )
     }

@@ -2355,8 +2355,8 @@ def get_saved_opportunities(
                     "country_id": 1,
                     "city": 1,
                     "university_type": 1,
-                    "established_year": 1,
-                    "degrees_offered": 1,
+                    "establishment_year": 1,
+                    "degree_levels": 1,
                     "scholarship_available": 1,
                 },
             )
@@ -2367,12 +2367,12 @@ def get_saved_opportunities(
             for university in university_documents
         }
 
-        # Preserve the order in the user's saved list.
         saved_universities = [
             university_by_id[university_id]
             for university_id in saved_university_ids
             if university_id in university_by_id
         ]
+    
 
         # -------------------------------------------------
         # Retrieve saved scholarship documents
@@ -2392,13 +2392,13 @@ def get_saved_opportunities(
                     "provider_name": 1,
                     "provider_type": 1,
                     "country_id": 1,
-                    "university_id": 1,
+                    "host_university_id": 1,
                     "degree_levels": 1,
                     "funding_type": 1,
-                    "application_status": 1,
+                    "scholarship_status": 1,
                     "application_opening_date": 1,
                     "application_deadline": 1,
-                },
+                }
             )
         )
 
@@ -2439,4 +2439,67 @@ def get_saved_opportunities(
         "saved_scholarships": saved_scholarships,
     }
 
+# ---------------------------------------------------------
+# Get recommendation history
+# ---------------------------------------------------------
 
+@app.get(
+    (
+        "/api/user-profiles/{user_id}"
+        "/recommendation-history"
+    ),
+    tags=["Recommendation History"],
+)
+def get_recommendation_history(
+    user_id: str,
+) -> dict[str, Any]:
+    """Return the recommendation history of one user."""
+
+    database = get_database()
+
+    try:
+        profile = database["user_profiles"].find_one(
+            {"user_id": user_id},
+            {
+                "_id": 0,
+                "user_id": 1,
+                "recommendation_history": 1,
+            },
+        )
+
+        if profile is None:
+            raise HTTPException(
+                status_code=status.HTTP_404_NOT_FOUND,
+                detail=(
+                    f"User profile '{user_id}' "
+                    "was not found."
+                ),
+            )
+
+        recommendation_history = (
+            profile.get("recommendation_history") or []
+        )
+
+    except HTTPException:
+        raise
+
+    except PyMongoError as error:
+        raise HTTPException(
+            status_code=(
+                status.HTTP_500_INTERNAL_SERVER_ERROR
+            ),
+            detail=(
+                "Unable to retrieve "
+                "recommendation history."
+            ),
+        ) from error
+
+    return {
+        "user_id": user_id,
+        "recommendation_history_count": len(
+            recommendation_history
+        ),
+        "recommendation_history": (
+            recommendation_history
+        ),
+    }
