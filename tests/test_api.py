@@ -2834,3 +2834,295 @@ def test_unsave_unknown_university(
     finally:
         delete_unsave_university_test_user()
 
+# ---------------------------------------------------------
+# Save scholarship API tests
+# ---------------------------------------------------------
+
+SAVE_SCHOLARSHIP_TEST_USER_ID = (
+    "user_api_save_scholarship_test_001"
+)
+
+PILOT_SCHOLARSHIP_ID = "sch_jp_001"
+
+
+def delete_save_scholarship_test_user() -> None:
+    """Remove the temporary save-scholarship test user."""
+
+    database = get_database()
+
+    database["user_profiles"].delete_many(
+        {
+            "user_id": (
+                SAVE_SCHOLARSHIP_TEST_USER_ID
+            )
+        }
+    )
+
+
+def build_save_scholarship_test_profile() -> dict:
+    """Return valid data for the temporary test user."""
+
+    return {
+        "user_id": SAVE_SCHOLARSHIP_TEST_USER_ID,
+        "nationality": "Myanmar",
+        "current_education_level": "Bachelor",
+        "target_degree_level": "Master",
+        "preferred_major": "Computer Science",
+        "gpa": 3.4,
+        "gpa_scale": 4.0,
+        "ielts_score": 6.5,
+        "toefl_score": None,
+        "annual_budget": 700000,
+        "budget_currency": "JPY",
+        "preferred_countries": [
+            "Japan"
+        ],
+        "scholarship_required": True,
+        "preferred_funding_type": "Fully Funded",
+        "preferred_intake": "October",
+    }
+
+
+def create_save_scholarship_test_user(
+    client: TestClient,
+) -> None:
+    """Create a fresh profile for scholarship-save tests."""
+
+    delete_save_scholarship_test_user()
+
+    response = client.post(
+        "/api/user-profiles",
+        json=build_save_scholarship_test_profile(),
+    )
+
+    assert response.status_code == 201
+
+
+def test_save_scholarship_successfully(
+    client: TestClient,
+) -> None:
+    """A valid scholarship should be saved successfully."""
+
+    create_save_scholarship_test_user(client)
+
+    try:
+        response = client.post(
+            (
+                f"/api/user-profiles/"
+                f"{SAVE_SCHOLARSHIP_TEST_USER_ID}"
+                f"/saved-scholarships/"
+                f"{PILOT_SCHOLARSHIP_ID}"
+            )
+        )
+
+        assert response.status_code == 200
+
+        response_data = response.json()
+
+        assert (
+            response_data["message"]
+            == "Scholarship saved successfully."
+        )
+
+        scholarship = response_data["scholarship"]
+
+        assert (
+            scholarship["scholarship_id"]
+            == PILOT_SCHOLARSHIP_ID
+        )
+
+        assert response_data["saved_scholarships"] == [
+            PILOT_SCHOLARSHIP_ID
+        ]
+
+    finally:
+        delete_save_scholarship_test_user()
+
+
+def test_saved_scholarship_is_stored_in_profile(
+    client: TestClient,
+) -> None:
+    """The scholarship ID should persist in MongoDB."""
+
+    create_save_scholarship_test_user(client)
+
+    try:
+        save_response = client.post(
+            (
+                f"/api/user-profiles/"
+                f"{SAVE_SCHOLARSHIP_TEST_USER_ID}"
+                f"/saved-scholarships/"
+                f"{PILOT_SCHOLARSHIP_ID}"
+            )
+        )
+
+        assert save_response.status_code == 200
+
+        profile_response = client.get(
+            (
+                f"/api/user-profiles/"
+                f"{SAVE_SCHOLARSHIP_TEST_USER_ID}"
+            )
+        )
+
+        assert profile_response.status_code == 200
+
+        profile = profile_response.json()
+
+        assert profile["saved_scholarships"] == [
+            PILOT_SCHOLARSHIP_ID
+        ]
+
+        # Other runtime fields must remain unchanged.
+        assert profile["saved_universities"] == []
+        assert profile["recommendation_history"] == []
+
+        # Important profile data must remain unchanged.
+        assert profile["nationality"] == "Myanmar"
+
+        assert (
+            profile["preferred_major"]
+            == "Computer Science"
+        )
+
+        assert profile["annual_budget"] == 700000
+
+    finally:
+        delete_save_scholarship_test_user()
+
+
+def test_save_same_scholarship_without_duplicate(
+    client: TestClient,
+) -> None:
+    """Saving the same scholarship twice must not duplicate it."""
+
+    create_save_scholarship_test_user(client)
+
+    try:
+        endpoint = (
+            f"/api/user-profiles/"
+            f"{SAVE_SCHOLARSHIP_TEST_USER_ID}"
+            f"/saved-scholarships/"
+            f"{PILOT_SCHOLARSHIP_ID}"
+        )
+
+        first_response = client.post(endpoint)
+
+        assert first_response.status_code == 200
+
+        second_response = client.post(endpoint)
+
+        assert second_response.status_code == 200
+
+        second_data = second_response.json()
+
+        assert (
+            second_data["message"]
+            == "Scholarship is already saved."
+        )
+
+        assert second_data["saved_scholarships"] == [
+            PILOT_SCHOLARSHIP_ID
+        ]
+
+        assert (
+            second_data["saved_scholarships"].count(
+                PILOT_SCHOLARSHIP_ID
+            )
+            == 1
+        )
+
+        profile_response = client.get(
+            (
+                f"/api/user-profiles/"
+                f"{SAVE_SCHOLARSHIP_TEST_USER_ID}"
+            )
+        )
+
+        assert profile_response.status_code == 200
+
+        saved_scholarships = profile_response.json()[
+            "saved_scholarships"
+        ]
+
+        assert saved_scholarships == [
+            PILOT_SCHOLARSHIP_ID
+        ]
+
+        assert (
+            saved_scholarships.count(
+                PILOT_SCHOLARSHIP_ID
+            )
+            == 1
+        )
+
+    finally:
+        delete_save_scholarship_test_user()
+
+
+def test_save_scholarship_for_unknown_user(
+    client: TestClient,
+) -> None:
+    """An unknown user should return HTTP 404."""
+
+    response = client.post(
+        (
+            "/api/user-profiles/"
+            "user_save_scholarship_unknown_999"
+            "/saved-scholarships/"
+            f"{PILOT_SCHOLARSHIP_ID}"
+        )
+    )
+
+    assert response.status_code == 404
+
+    assert response.json() == {
+        "detail": (
+            "User profile "
+            "'user_save_scholarship_unknown_999' "
+            "was not found."
+        )
+    }
+
+
+def test_save_unknown_scholarship(
+    client: TestClient,
+) -> None:
+    """An unknown scholarship should not be saved."""
+
+    create_save_scholarship_test_user(client)
+
+    try:
+        response = client.post(
+            (
+                f"/api/user-profiles/"
+                f"{SAVE_SCHOLARSHIP_TEST_USER_ID}"
+                "/saved-scholarships/"
+                "sch_unknown_999"
+            )
+        )
+
+        assert response.status_code == 404
+
+        assert response.json() == {
+            "detail": (
+                "Scholarship 'sch_unknown_999' "
+                "was not found."
+            )
+        }
+
+        profile_response = client.get(
+            (
+                f"/api/user-profiles/"
+                f"{SAVE_SCHOLARSHIP_TEST_USER_ID}"
+            )
+        )
+
+        assert profile_response.status_code == 200
+
+        profile = profile_response.json()
+
+        assert profile["saved_scholarships"] == []
+
+    finally:
+        delete_save_scholarship_test_user()

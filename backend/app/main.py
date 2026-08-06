@@ -1977,3 +1977,153 @@ def unsave_university_for_user(
         ),
     }
 
+# ---------------------------------------------------------
+# Save scholarship
+# ---------------------------------------------------------
+
+@app.post(
+    (
+        "/api/user-profiles/{user_id}"
+        "/saved-scholarships/{scholarship_id}"
+    ),
+    tags=["Saved Opportunities"],
+)
+def save_scholarship_for_user(
+    user_id: str,
+    scholarship_id: str,
+) -> dict[str, Any]:
+    """Save one scholarship to a user's profile."""
+
+    database = get_database()
+
+    try:
+        # -------------------------------------------------
+        # Check whether the user profile exists
+        # -------------------------------------------------
+
+        profile = database["user_profiles"].find_one(
+            {"user_id": user_id},
+            {
+                "_id": 0,
+                "user_id": 1,
+                "saved_scholarships": 1,
+            },
+        )
+
+        if profile is None:
+            raise HTTPException(
+                status_code=status.HTTP_404_NOT_FOUND,
+                detail=(
+                    f"User profile '{user_id}' "
+                    "was not found."
+                ),
+            )
+
+        # -------------------------------------------------
+        # Check whether the scholarship exists
+        # -------------------------------------------------
+
+        scholarship = database["scholarships"].find_one(
+            {"scholarship_id": scholarship_id},
+            {
+                "_id": 0,
+                "scholarship_id": 1,
+                "scholarship_name": 1,
+                "provider_name": 1,
+                "provider_type": 1,
+                "country_id": 1,
+                "university_id": 1,
+                "degree_levels": 1,
+                "funding_type": 1,
+                "application_status": 1,
+                "application_deadline": 1,
+            },
+        )
+
+        if scholarship is None:
+            raise HTTPException(
+                status_code=status.HTTP_404_NOT_FOUND,
+                detail=(
+                    f"Scholarship '{scholarship_id}' "
+                    "was not found."
+                ),
+            )
+
+        existing_saved_scholarships = (
+            profile.get("saved_scholarships") or []
+        )
+
+        # -------------------------------------------------
+        # Prevent duplicate scholarship IDs
+        # -------------------------------------------------
+
+        if scholarship_id in existing_saved_scholarships:
+            return {
+                "message": "Scholarship is already saved.",
+                "scholarship": scholarship,
+                "saved_scholarships": (
+                    existing_saved_scholarships
+                ),
+            }
+
+        # -------------------------------------------------
+        # Add the scholarship ID to the saved list
+        # -------------------------------------------------
+
+        database["user_profiles"].update_one(
+            {"user_id": user_id},
+            {
+                "$addToSet": {
+                    "saved_scholarships": scholarship_id,
+                },
+                "$set": {
+                    "database_updated_at": (
+                        datetime.now(timezone.utc)
+                    ),
+                },
+            },
+        )
+
+        updated_profile = database[
+            "user_profiles"
+        ].find_one(
+            {"user_id": user_id},
+            {
+                "_id": 0,
+                "saved_scholarships": 1,
+            },
+        )
+
+    except HTTPException:
+        raise
+
+    except PyMongoError as error:
+        raise HTTPException(
+            status_code=(
+                status.HTTP_500_INTERNAL_SERVER_ERROR
+            ),
+            detail="Unable to save the scholarship.",
+        ) from error
+
+    if updated_profile is None:
+        raise HTTPException(
+            status_code=(
+                status.HTTP_500_INTERNAL_SERVER_ERROR
+            ),
+            detail=(
+                "The updated user profile "
+                "could not be retrieved."
+            ),
+        )
+
+    return {
+        "message": "Scholarship saved successfully.",
+        "scholarship": scholarship,
+        "saved_scholarships": (
+            updated_profile.get(
+                "saved_scholarships",
+                [],
+            )
+        ),
+    }
+
