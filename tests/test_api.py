@@ -2234,3 +2234,299 @@ def test_update_profile_scholarship_requires_funding_type(
 
     finally:
         delete_update_test_user()
+
+# ---------------------------------------------------------
+# Save university API tests
+# ---------------------------------------------------------
+
+SAVE_UNIVERSITY_TEST_USER_ID = (
+    "user_api_save_university_test_001"
+)
+
+PILOT_UNIVERSITY_ID = "uni_jp_001"
+
+
+def delete_save_university_test_user() -> None:
+    """Remove the temporary save-university test profile."""
+
+    database = get_database()
+
+    database["user_profiles"].delete_many(
+        {
+            "user_id": (
+                SAVE_UNIVERSITY_TEST_USER_ID
+            )
+        }
+    )
+
+
+def build_save_university_test_profile() -> dict:
+    """Return valid data for the temporary test user."""
+
+    return {
+        "user_id": SAVE_UNIVERSITY_TEST_USER_ID,
+        "nationality": "Myanmar",
+        "current_education_level": "Bachelor",
+        "target_degree_level": "Master",
+        "preferred_major": "Computer Science",
+        "gpa": 3.4,
+        "gpa_scale": 4.0,
+        "ielts_score": 6.5,
+        "toefl_score": None,
+        "annual_budget": 700000,
+        "budget_currency": "JPY",
+        "preferred_countries": [
+            "Japan"
+        ],
+        "scholarship_required": True,
+        "preferred_funding_type": "Fully Funded",
+        "preferred_intake": "October",
+    }
+
+
+def create_save_university_test_user(
+    client: TestClient,
+) -> None:
+    """Create a fresh profile for save-university tests."""
+
+    delete_save_university_test_user()
+
+    response = client.post(
+        "/api/user-profiles",
+        json=build_save_university_test_profile(),
+    )
+
+    assert response.status_code == 201
+
+
+def test_save_university_successfully(
+    client: TestClient,
+) -> None:
+    """A valid university should be saved successfully."""
+
+    create_save_university_test_user(client)
+
+    try:
+        response = client.post(
+            (
+                f"/api/user-profiles/"
+                f"{SAVE_UNIVERSITY_TEST_USER_ID}"
+                f"/saved-universities/"
+                f"{PILOT_UNIVERSITY_ID}"
+            )
+        )
+
+        assert response.status_code == 200
+
+        response_data = response.json()
+
+        assert (
+            response_data["message"]
+            == "University saved successfully."
+        )
+
+        university = response_data["university"]
+
+        assert (
+            university["university_id"]
+            == PILOT_UNIVERSITY_ID
+        )
+
+        assert (
+            university["university_name"]
+            == "The University of Tokyo"
+        )
+
+        assert university["country_id"] == "country_jp"
+        assert university["city"] == "Tokyo"
+
+        assert (
+            university["university_type"]
+            == "Public"
+        )
+
+        assert response_data["saved_universities"] == [
+            PILOT_UNIVERSITY_ID
+        ]
+
+    finally:
+        delete_save_university_test_user()
+
+
+def test_saved_university_is_stored_in_profile(
+    client: TestClient,
+) -> None:
+    """The saved university should persist in MongoDB."""
+
+    create_save_university_test_user(client)
+
+    try:
+        save_response = client.post(
+            (
+                f"/api/user-profiles/"
+                f"{SAVE_UNIVERSITY_TEST_USER_ID}"
+                f"/saved-universities/"
+                f"{PILOT_UNIVERSITY_ID}"
+            )
+        )
+
+        assert save_response.status_code == 200
+
+        profile_response = client.get(
+            (
+                f"/api/user-profiles/"
+                f"{SAVE_UNIVERSITY_TEST_USER_ID}"
+            )
+        )
+
+        assert profile_response.status_code == 200
+
+        profile = profile_response.json()
+
+        assert profile["saved_universities"] == [
+            PILOT_UNIVERSITY_ID
+        ]
+
+        # Other runtime fields must remain unchanged.
+        assert profile["saved_scholarships"] == []
+        assert profile["recommendation_history"] == []
+
+    finally:
+        delete_save_university_test_user()
+
+
+def test_save_same_university_without_duplicate(
+    client: TestClient,
+) -> None:
+    """Saving the same university twice must not duplicate it."""
+
+    create_save_university_test_user(client)
+
+    try:
+        endpoint = (
+            f"/api/user-profiles/"
+            f"{SAVE_UNIVERSITY_TEST_USER_ID}"
+            f"/saved-universities/"
+            f"{PILOT_UNIVERSITY_ID}"
+        )
+
+        first_response = client.post(endpoint)
+
+        assert first_response.status_code == 200
+
+        second_response = client.post(endpoint)
+
+        assert second_response.status_code == 200
+
+        second_data = second_response.json()
+
+        assert (
+            second_data["message"]
+            == "University is already saved."
+        )
+
+        assert second_data["saved_universities"] == [
+            PILOT_UNIVERSITY_ID
+        ]
+
+        assert (
+            second_data["saved_universities"].count(
+                PILOT_UNIVERSITY_ID
+            )
+            == 1
+        )
+
+        profile_response = client.get(
+            (
+                f"/api/user-profiles/"
+                f"{SAVE_UNIVERSITY_TEST_USER_ID}"
+            )
+        )
+
+        assert profile_response.status_code == 200
+
+        saved_universities = profile_response.json()[
+            "saved_universities"
+        ]
+
+        assert saved_universities == [
+            PILOT_UNIVERSITY_ID
+        ]
+
+        assert (
+            saved_universities.count(
+                PILOT_UNIVERSITY_ID
+            )
+            == 1
+        )
+
+    finally:
+        delete_save_university_test_user()
+
+
+def test_save_university_for_unknown_user(
+    client: TestClient,
+) -> None:
+    """An unknown user should return HTTP 404."""
+
+    response = client.post(
+        (
+            "/api/user-profiles/"
+            "user_save_unknown_999"
+            "/saved-universities/"
+            f"{PILOT_UNIVERSITY_ID}"
+        )
+    )
+
+    assert response.status_code == 404
+
+    assert response.json() == {
+        "detail": (
+            "User profile 'user_save_unknown_999' "
+            "was not found."
+        )
+    }
+
+
+def test_save_unknown_university(
+    client: TestClient,
+) -> None:
+    """An unknown university should not be saved."""
+
+    create_save_university_test_user(client)
+
+    try:
+        response = client.post(
+            (
+                f"/api/user-profiles/"
+                f"{SAVE_UNIVERSITY_TEST_USER_ID}"
+                "/saved-universities/"
+                "uni_unknown_999"
+            )
+        )
+
+        assert response.status_code == 404
+
+        assert response.json() == {
+            "detail": (
+                "University 'uni_unknown_999' "
+                "was not found."
+            )
+        }
+
+        profile_response = client.get(
+            (
+                f"/api/user-profiles/"
+                f"{SAVE_UNIVERSITY_TEST_USER_ID}"
+            )
+        )
+
+        assert profile_response.status_code == 200
+
+        assert profile_response.json()[
+            "saved_universities"
+        ] == []
+
+    finally:
+        delete_save_university_test_user()
+
