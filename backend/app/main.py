@@ -856,11 +856,38 @@ def get_scholarship_recommendations(
     database = get_database()
 
     try:
-        return generate_scholarship_recommendations(
-            database=database,
-            user_id=user_id,
-            top_k=top_k,
+        recommendation_result = (
+            generate_scholarship_recommendations(
+                database=database,
+                user_id=user_id,
+                top_k=top_k,
+            )
         )
+
+        recommendations = recommendation_result.get(
+            "recommendations",
+            [],
+        )
+
+        recommended_scholarship_ids = [
+            recommendation["scholarship_id"]
+            for recommendation in recommendations
+            if (
+                isinstance(recommendation, dict)
+                and isinstance(
+                    recommendation.get("scholarship_id"),
+                    str,
+                )
+            )
+        ]
+
+        append_recommendation_history(
+            user_id=user_id,
+            recommendation_type="scholarship",
+            recommended_ids=recommended_scholarship_ids,
+        )
+
+        return recommendation_result
 
     except ValueError as error:
         raise HTTPException(

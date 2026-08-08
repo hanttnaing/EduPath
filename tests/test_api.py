@@ -4456,3 +4456,373 @@ def test_program_recommendation_history_not_saved_for_invalid_top_k(
 
     finally:
         delete_program_history_test_user()
+
+# ---------------------------------------------------------
+# Scholarship recommendation history tests
+# ---------------------------------------------------------
+
+SCHOLARSHIP_HISTORY_TEST_USER_ID = (
+    "user_api_scholarship_history_test_001"
+)
+
+
+def delete_scholarship_history_test_user() -> None:
+    """Remove the temporary scholarship-history test user."""
+
+    database = get_database()
+
+    database["user_profiles"].delete_many(
+        {
+            "user_id": SCHOLARSHIP_HISTORY_TEST_USER_ID
+        }
+    )
+
+
+def build_scholarship_history_test_profile(
+    preferred_country: str = "Japan",
+) -> dict:
+    """Return valid data for the temporary test profile."""
+
+    return {
+        "user_id": SCHOLARSHIP_HISTORY_TEST_USER_ID,
+        "nationality": "Myanmar",
+        "current_education_level": "Bachelor",
+        "target_degree_level": "Master",
+        "preferred_major": "Computer Science",
+        "gpa": 3.4,
+        "gpa_scale": 4.0,
+        "ielts_score": 6.5,
+        "toefl_score": None,
+        "annual_budget": 700000,
+        "budget_currency": "JPY",
+        "preferred_countries": [
+            preferred_country
+        ],
+        "scholarship_required": True,
+        "preferred_funding_type": "Fully Funded",
+        "preferred_intake": "October",
+    }
+
+
+def create_scholarship_history_test_user(
+    client: TestClient,
+    preferred_country: str = "Japan",
+) -> None:
+    """Create a fresh scholarship-history test profile."""
+
+    delete_scholarship_history_test_user()
+
+    response = client.post(
+        "/api/user-profiles",
+        json=build_scholarship_history_test_profile(
+            preferred_country=preferred_country,
+        ),
+    )
+
+    assert response.status_code == 201
+
+
+def get_scholarship_history_test_endpoint(
+    top_k: int = 5,
+) -> str:
+    """Return the scholarship recommendation endpoint."""
+
+    return (
+        f"/api/recommendations/scholarships/"
+        f"{SCHOLARSHIP_HISTORY_TEST_USER_ID}"
+        f"?top_k={top_k}"
+    )
+
+
+def get_scholarship_history_read_endpoint() -> str:
+    """Return the recommendation-history endpoint."""
+
+    return (
+        f"/api/user-profiles/"
+        f"{SCHOLARSHIP_HISTORY_TEST_USER_ID}"
+        "/recommendation-history"
+    )
+
+
+def test_scholarship_recommendation_history_is_created(
+    client: TestClient,
+) -> None:
+    """One scholarship run should create one history item."""
+
+    create_scholarship_history_test_user(client)
+
+    try:
+        recommendation_response = client.get(
+            get_scholarship_history_test_endpoint()
+        )
+
+        assert recommendation_response.status_code == 200
+
+        recommendation_data = (
+            recommendation_response.json()
+        )
+
+        recommendations = recommendation_data.get(
+            "recommendations",
+            [],
+        )
+
+        expected_scholarship_ids = [
+            recommendation["scholarship_id"]
+            for recommendation in recommendations
+        ]
+
+        history_response = client.get(
+            get_scholarship_history_read_endpoint()
+        )
+
+        assert history_response.status_code == 200
+
+        history_data = history_response.json()
+
+        assert (
+            history_data[
+                "recommendation_history_count"
+            ]
+            == 1
+        )
+
+        history_item = history_data[
+            "recommendation_history"
+        ][0]
+
+        assert (
+            history_item["recommendation_type"]
+            == "scholarship"
+        )
+
+        assert (
+            history_item["result_count"]
+            == len(recommendations)
+        )
+
+        assert (
+            history_item["recommended_ids"]
+            == expected_scholarship_ids
+        )
+
+        assert history_item["history_id"].startswith(
+            "history_"
+        )
+
+        assert isinstance(
+            history_item["created_at"],
+            str,
+        )
+
+    finally:
+        delete_scholarship_history_test_user()
+
+
+def test_scholarship_recommendation_history_persists_in_profile(
+    client: TestClient,
+) -> None:
+    """The history item should persist in the profile."""
+
+    create_scholarship_history_test_user(client)
+
+    try:
+        recommendation_response = client.get(
+            get_scholarship_history_test_endpoint()
+        )
+
+        assert recommendation_response.status_code == 200
+
+        profile_response = client.get(
+            (
+                f"/api/user-profiles/"
+                f"{SCHOLARSHIP_HISTORY_TEST_USER_ID}"
+            )
+        )
+
+        assert profile_response.status_code == 200
+
+        profile = profile_response.json()
+
+        recommendation_history = profile[
+            "recommendation_history"
+        ]
+
+        assert len(recommendation_history) == 1
+
+        history_item = recommendation_history[0]
+
+        assert (
+            history_item["recommendation_type"]
+            == "scholarship"
+        )
+
+        assert history_item["history_id"].startswith(
+            "history_"
+        )
+
+        # Saving history must not affect saved opportunities.
+        assert profile["saved_universities"] == []
+        assert profile["saved_scholarships"] == []
+
+    finally:
+        delete_scholarship_history_test_user()
+
+
+def test_scholarship_recommendation_history_appends_runs(
+    client: TestClient,
+) -> None:
+    """Two recommendation runs should create two records."""
+
+    create_scholarship_history_test_user(client)
+
+    try:
+        first_response = client.get(
+            get_scholarship_history_test_endpoint()
+        )
+
+        assert first_response.status_code == 200
+
+        second_response = client.get(
+            get_scholarship_history_test_endpoint(
+                top_k=1,
+            )
+        )
+
+        assert second_response.status_code == 200
+
+        history_response = client.get(
+            get_scholarship_history_read_endpoint()
+        )
+
+        assert history_response.status_code == 200
+
+        history_data = history_response.json()
+
+        assert (
+            history_data[
+                "recommendation_history_count"
+            ]
+            == 2
+        )
+
+        history_items = history_data[
+            "recommendation_history"
+        ]
+
+        assert len(history_items) == 2
+
+        assert (
+            history_items[0]["recommendation_type"]
+            == "scholarship"
+        )
+
+        assert (
+            history_items[1]["recommendation_type"]
+            == "scholarship"
+        )
+
+        assert (
+            history_items[0]["history_id"]
+            != history_items[1]["history_id"]
+        )
+
+    finally:
+        delete_scholarship_history_test_user()
+
+
+def test_scholarship_recommendation_history_saves_empty_result(
+    client: TestClient,
+) -> None:
+    """A zero-result scholarship run should be recorded."""
+
+    create_scholarship_history_test_user(
+        client,
+        preferred_country="Singapore",
+    )
+
+    try:
+        recommendation_response = client.get(
+            get_scholarship_history_test_endpoint()
+        )
+
+        assert recommendation_response.status_code == 200
+
+        recommendation_data = (
+            recommendation_response.json()
+        )
+
+        assert recommendation_data.get(
+            "recommendations",
+            [],
+        ) == []
+
+        history_response = client.get(
+            get_scholarship_history_read_endpoint()
+        )
+
+        assert history_response.status_code == 200
+
+        history_data = history_response.json()
+
+        assert (
+            history_data[
+                "recommendation_history_count"
+            ]
+            == 1
+        )
+
+        history_item = history_data[
+            "recommendation_history"
+        ][0]
+
+        assert (
+            history_item["recommendation_type"]
+            == "scholarship"
+        )
+
+        assert history_item["result_count"] == 0
+        assert history_item["recommended_ids"] == []
+
+    finally:
+        delete_scholarship_history_test_user()
+
+
+def test_scholarship_recommendation_history_not_saved_for_invalid_top_k(
+    client: TestClient,
+) -> None:
+    """An invalid request must not create history."""
+
+    create_scholarship_history_test_user(client)
+
+    try:
+        response = client.get(
+            get_scholarship_history_test_endpoint(
+                top_k=0,
+            )
+        )
+
+        assert response.status_code == 422
+
+        history_response = client.get(
+            get_scholarship_history_read_endpoint()
+        )
+
+        assert history_response.status_code == 200
+
+        history_data = history_response.json()
+
+        assert (
+            history_data[
+                "recommendation_history_count"
+            ]
+            == 0
+        )
+
+        assert (
+            history_data["recommendation_history"]
+            == []
+        )
+
+    finally:
+        delete_scholarship_history_test_user()
