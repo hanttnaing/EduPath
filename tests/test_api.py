@@ -4826,3 +4826,256 @@ def test_scholarship_recommendation_history_not_saved_for_invalid_top_k(
 
     finally:
         delete_scholarship_history_test_user()
+
+# ---------------------------------------------------------
+# Delete user profile API tests
+# ---------------------------------------------------------
+
+DELETE_PROFILE_TEST_USER_ID = (
+    "user_api_delete_profile_test_001"
+)
+
+
+def cleanup_delete_profile_test_user() -> None:
+    """Remove the temporary delete-profile test user."""
+
+    database = get_database()
+
+    database["user_profiles"].delete_many(
+        {
+            "user_id": DELETE_PROFILE_TEST_USER_ID
+        }
+    )
+
+
+def build_delete_profile_test_data() -> dict:
+    """Return valid data for a temporary profile."""
+
+    return {
+        "user_id": DELETE_PROFILE_TEST_USER_ID,
+        "nationality": "Myanmar",
+        "current_education_level": "Bachelor",
+        "target_degree_level": "Master",
+        "preferred_major": "Computer Science",
+        "gpa": 3.4,
+        "gpa_scale": 4.0,
+        "ielts_score": 6.5,
+        "toefl_score": None,
+        "annual_budget": 700000,
+        "budget_currency": "JPY",
+        "preferred_countries": [
+            "Japan"
+        ],
+        "scholarship_required": True,
+        "preferred_funding_type": "Fully Funded",
+        "preferred_intake": "October",
+    }
+
+
+def create_delete_profile_test_user(
+    client: TestClient,
+) -> None:
+    """Create a fresh temporary user profile."""
+
+    cleanup_delete_profile_test_user()
+
+    response = client.post(
+        "/api/user-profiles",
+        json=build_delete_profile_test_data(),
+    )
+
+    assert response.status_code == 201
+
+
+def test_delete_user_profile_successfully(
+    client: TestClient,
+) -> None:
+    """A valid user profile should be deleted."""
+
+    create_delete_profile_test_user(client)
+
+    try:
+        response = client.delete(
+            (
+                f"/api/user-profiles/"
+                f"{DELETE_PROFILE_TEST_USER_ID}"
+            )
+        )
+
+        assert response.status_code == 200
+
+        assert response.json() == {
+            "message": (
+                "User profile deleted successfully."
+            ),
+            "deleted_user_id": (
+                DELETE_PROFILE_TEST_USER_ID
+            ),
+        }
+
+    finally:
+        cleanup_delete_profile_test_user()
+
+
+def test_deleted_user_profile_cannot_be_retrieved(
+    client: TestClient,
+) -> None:
+    """A deleted profile should return 404 on GET."""
+
+    create_delete_profile_test_user(client)
+
+    try:
+        delete_response = client.delete(
+            (
+                f"/api/user-profiles/"
+                f"{DELETE_PROFILE_TEST_USER_ID}"
+            )
+        )
+
+        assert delete_response.status_code == 200
+
+        get_response = client.get(
+            (
+                f"/api/user-profiles/"
+                f"{DELETE_PROFILE_TEST_USER_ID}"
+            )
+        )
+
+        assert get_response.status_code == 404
+
+        assert get_response.json() == {
+            "detail": (
+                f"User profile "
+                f"'{DELETE_PROFILE_TEST_USER_ID}' "
+                "was not found."
+            )
+        }
+
+    finally:
+        cleanup_delete_profile_test_user()
+
+
+def test_delete_profile_removes_runtime_data(
+    client: TestClient,
+) -> None:
+    """
+    Deleting a profile should remove its saved items
+    and recommendation history with the document.
+    """
+
+    create_delete_profile_test_user(client)
+
+    try:
+        database = get_database()
+
+        database["user_profiles"].update_one(
+            {
+                "user_id": DELETE_PROFILE_TEST_USER_ID
+            },
+            {
+                "$set": {
+                    "saved_universities": [
+                        "uni_jp_001"
+                    ],
+                    "saved_scholarships": [
+                        "sch_jp_001"
+                    ],
+                    "recommendation_history": [
+                        {
+                            "history_id": (
+                                "history_delete_test_001"
+                            ),
+                            "recommendation_type": (
+                                "program"
+                            ),
+                            "result_count": 1,
+                            "recommended_ids": [
+                                "prog_jp_001"
+                            ],
+                        }
+                    ],
+                }
+            },
+        )
+
+        response = client.delete(
+            (
+                f"/api/user-profiles/"
+                f"{DELETE_PROFILE_TEST_USER_ID}"
+            )
+        )
+
+        assert response.status_code == 200
+
+        deleted_document = database[
+            "user_profiles"
+        ].find_one(
+            {
+                "user_id": DELETE_PROFILE_TEST_USER_ID
+            }
+        )
+
+        assert deleted_document is None
+
+    finally:
+        cleanup_delete_profile_test_user()
+
+
+def test_delete_user_profile_twice_returns_404(
+    client: TestClient,
+) -> None:
+    """Deleting the same profile twice should return 404."""
+
+    create_delete_profile_test_user(client)
+
+    try:
+        first_response = client.delete(
+            (
+                f"/api/user-profiles/"
+                f"{DELETE_PROFILE_TEST_USER_ID}"
+            )
+        )
+
+        assert first_response.status_code == 200
+
+        second_response = client.delete(
+            (
+                f"/api/user-profiles/"
+                f"{DELETE_PROFILE_TEST_USER_ID}"
+            )
+        )
+
+        assert second_response.status_code == 404
+
+        assert second_response.json() == {
+            "detail": (
+                f"User profile "
+                f"'{DELETE_PROFILE_TEST_USER_ID}' "
+                "was not found."
+            )
+        }
+
+    finally:
+        cleanup_delete_profile_test_user()
+
+
+def test_delete_unknown_user_profile(
+    client: TestClient,
+) -> None:
+    """An unknown user should return HTTP 404."""
+
+    response = client.delete(
+        (
+            "/api/user-profiles/"
+            "user_delete_unknown_999"
+        )
+    )
+
+    assert response.status_code == 404
+
+    assert response.json() == {
+        "detail": (
+            "User profile 'user_delete_unknown_999' "
+            "was not found."
+        )
+    }

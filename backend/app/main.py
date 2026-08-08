@@ -2638,3 +2638,69 @@ def append_recommendation_history(
         )
 
     return history_item
+
+# ---------------------------------------------------------
+# Delete user profile
+# ---------------------------------------------------------
+
+@app.delete(
+    "/api/user-profiles/{user_id}",
+    tags=["User Profiles"],
+)
+def delete_user_profile(
+    user_id: str,
+) -> dict[str, Any]:
+    """Delete one user profile permanently."""
+
+    database = get_database()
+
+    try:
+        profile = database["user_profiles"].find_one(
+            {"user_id": user_id},
+            {
+                "_id": 0,
+                "user_id": 1,
+            },
+        )
+
+        if profile is None:
+            raise HTTPException(
+                status_code=status.HTTP_404_NOT_FOUND,
+                detail=(
+                    f"User profile '{user_id}' "
+                    "was not found."
+                ),
+            )
+
+        delete_result = database[
+            "user_profiles"
+        ].delete_one(
+            {"user_id": user_id}
+        )
+
+    except HTTPException:
+        raise
+
+    except PyMongoError as error:
+        raise HTTPException(
+            status_code=(
+                status.HTTP_500_INTERNAL_SERVER_ERROR
+            ),
+            detail="Unable to delete the user profile.",
+        ) from error
+
+    if delete_result.deleted_count != 1:
+        raise HTTPException(
+            status_code=(
+                status.HTTP_500_INTERNAL_SERVER_ERROR
+            ),
+            detail=(
+                "The user profile could not be deleted."
+            ),
+        )
+
+    return {
+        "message": "User profile deleted successfully.",
+        "deleted_user_id": user_id,
+    }
+
