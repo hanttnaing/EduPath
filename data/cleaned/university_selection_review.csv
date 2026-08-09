@@ -1,0 +1,215 @@
+﻿country_id,country_name,country_code,ror_id,university_name,city,establishment_year,official_website,ror_last_modified,collected_at,candidate_status,source_order,quality_score,review_status,review_reason,final_selection_status
+country_jp,Japan,JP,https://ror.org/024yc3q36,Tottori University,Tottori-shi,1949,http://www.tottori-u.ac.jp/english/,2026-03-31,2026-08-09,To Review,1,19,Eligible,,Selected - Official Verification Required
+country_jp,Japan,JP,https://ror.org/00wwj8r66,Yamato University,Suita,2014,http://www.yamato-u.ac.jp/index_e.html,2024-12-11,2026-08-09,To Review,2,19,Eligible,,Selected - Official Verification Required
+country_jp,Japan,JP,https://ror.org/02cntp233,Daido University,Nagoya,1939,http://www.daido-it.ac.jp/,2024-12-11,2026-08-09,To Review,3,19,Eligible,,Selected - Official Verification Required
+country_jp,Japan,JP,https://ror.org/022b6b871,Jobu University,Isesaki,1950,http://www.jobu.ac.jp/,2024-12-11,2026-08-09,To Review,4,19,Eligible,,Selected - Official Verification Required
+country_jp,Japan,JP,https://ror.org/05q041y44,Kokugakuin University,Tokyo,1882,https://www.kokugakuin.ac.jp/,2024-12-11,2026-08-09,To Review,5,19,Eligible,,Selected - Official Verification Required
+country_jp,Japan,JP,https://ror.org/05tjaf288,Komazawa University,Tokyo,1592,https://www.komazawa-u.ac.jp/,2024-12-11,2026-08-09,To Review,6,19,Eligible,,Selected - Official Verification Required
+country_jp,Japan,JP,https://ror.org/03wkbyb17,Morioka University,Takizawa,1981,http://www.morioka-u.ac.jp,2024-12-11,2026-08-09,To Review,7,19,Eligible,,Selected - Official Verification Required
+country_jp,Japan,JP,https://ror.org/03a42q045,Nara University,Nara,1969,http://www.nara-u.ac.jp/,2024-12-11,2026-08-09,To Review,8,19,Eligible,,Selected - Official Verification Required
+country_jp,Japan,JP,https://ror.org/03jzxkg37,Senshu University,Tokyo,1880,http://www.senshu-u.ac.jp/,2024-12-11,2026-08-09,To Review,9,19,Eligible,,Selected - Official Verification Required
+country_jp,Japan,JP,https://ror.org/05qh38f12,Takushoku University,Tokyo,1900,https://www.takushoku-u.ac.jp/,2024-12-11,2026-08-09,To Review,10,19,Eligible,,Selected - Official Verification Required
+country_jp,Japan,JP,https://ror.org/00d440w27,Tenri University,Tenri,1925,http://www.tenri-u.ac.jp/,2024-12-11,2026-08-09,To Review,11,19,Eligible,,Selected - Official Verification Required
+country_jp,Japan,JP,https://ror.org/03jeahd70,Shikoku University,Tokushima,1925,https://www.shikoku-u.ac.jp/,2024-12-11,2026-08-09,To Review,12,19,Eligible,,Selected - Official Verification Required
+country_jp,Japan,JP,https://ror.org/053h75930,Bunkyo University,Tokyo,1927,http://www.bunkyo.ac.jp,2024-12-11,2026-08-09,To Review,13,19,Eligible,,Not Selected
+country_jp,Japan,JP,https://ror.org/03x1wer98,Kaetsu University,Tokyo,2001,http://www.kaetsu.ac.jp/english/,2024-12-11,2026-08-09,To Review,14,19,Eligible,,Not Selected
+country_jp,Japan,JP,https://ror.org/027dkjg03,Keisen University,Tokyo,1988,http://www.keisen.ac.jp/,2024-12-11,2026-08-09,To Review,15,19,Eligible,,Not Selected
+country_jp,Japan,JP,https://ror.org/0496p0503,Rissho University,Tokyo,1580,http://www.ris.ac.jp,2024-12-11,2026-08-09,To Review,16,19,Eligible,,Not Selected
+country_jp,Japan,JP,https://ror.org/04q5p4a74,Seisen University,Tokyo,1938,https://www.seisen-u.ac.jp,2024-12-11,2026-08-09,To Review,17,19,Eligible,,Not Selected
+country_jp,Japan,JP,https://ror.org/021anqv82,Shirayuri University,Tokyo,1881,https://www.shirayuri.ac.jp,2024-12-11,2026-08-09,To Review,18,19,Eligible,,Not Selected
+country_jp,Japan,JP,https://ror.org/00c2t9540,Taisho University,Tokyo,1885,https://www.tais.ac.jp/,2024-12-11,2026-08-09,To Review,19,19,Eligible,,Not Selected
+country_jp,Japan,JP,https://ror.org/00dwyn417,Takachiho University,Tokyo,1903,https://www.takachiho.jp/,2024-12-11,2026-08-09,To Review,20,19,Eligible,,Not Selected
+country_jp,Japan,JP,https://ror.org/0172hvg27,Aichi University,Toyohashi,1946,http://www.aichi-u.ac.jp,2024-12-11,2026-08-09,To Review,21,19,Eligible,,Not Selected
+country_jp,Japan,JP,https://ror.org/0036qse20,Ohkagakuen University,Toyota,1903,https://www.ohkagakuen-u.ac.jp/,2024-12-11,2026-08-09,To Review,22,19,Eligible,,Not Selected
+country_jp,Japan,JP,https://ror.org/01wz7zs96,Mimasaka University,Tsuyama,1915,https://mimasaka.jp/,2024-12-11,2026-08-09,To Review,23,19,Eligible,,Not Selected
+country_jp,Japan,JP,https://ror.org/03aptyv62,Nagano University,Ueda,1966,https://www.nagano.ac.jp/,2024-12-11,2026-08-09,To Review,24,19,Eligible,,Not Selected
+country_jp,Japan,JP,https://ror.org/03yz74e78,Shiseikan University,Yamaguchi,1967,http://www.shiseikan.ac.jp/,2024-12-11,2026-08-09,To Review,25,19,Eligible,,Not Selected
+country_jp,Japan,JP,https://ror.org/04mdddd78,Minobusan University,Yamanashi,1556,http://www.min.ac.jp/,2024-12-11,2026-08-09,To Review,26,19,Eligible,,Not Selected
+country_jp,Japan,JP,https://ror.org/0556naa44,Yokkaichi University,Yokkaichi,1946,https://www.yokkaichi-u.ac.jp/,2024-12-11,2026-08-09,To Review,27,19,Eligible,,Not Selected
+country_jp,Japan,JP,https://ror.org/0314zyy82,Ferris University,Yokohama,1870,https://www.ferris.ac.jp/,2024-12-11,2026-08-09,To Review,28,19,Eligible,,Not Selected
+country_jp,Japan,JP,https://ror.org/04p9zgs78,Seigakuin University,Ageo,1988,https://www.seigakuin.jp/,2024-12-11,2026-08-09,To Review,29,19,Eligible,,Not Selected
+country_jp,Japan,JP,https://ror.org/0085wxm22,Seijoh University,Okazaki,1941,http://www.seijoh-u.ac.jp/,2024-12-11,2026-08-09,To Review,30,19,Eligible,,Not Selected
+country_jp,Japan,JP,https://ror.org/03vgqy581,Asahikawa University,Asahikawa,1898,http://www.asahikawa-u.ac.jp/,2024-12-11,2026-08-09,To Review,31,19,Eligible,,Not Selected
+country_jp,Japan,JP,https://ror.org/043223922,Aino University,Takatsuki,2004,http://www.aino.ac.jp/,2024-12-11,2026-08-09,To Review,32,19,Eligible,,Not Selected
+country_jp,Japan,JP,https://ror.org/03b657f73,Kio University,Kōryō Chō,1946,http://www.kio.ac.jp/,2024-12-11,2026-08-09,To Review,33,19,Eligible,,Not Selected
+country_jp,Japan,JP,https://ror.org/05m1gnk07,Korea University,Tokyo,1956,https://www.korea-u.ac.jp,2024-12-11,2026-08-09,To Review,34,19,Eligible,,Not Selected
+country_jp,Japan,JP,https://ror.org/038sdcw17,Cyber University,Fukuoka,2007,https://www.cyber-u.ac.jp,2024-12-11,2026-08-09,To Review,35,19,Eligible,,Not Selected
+country_jp,Japan,JP,https://ror.org/048j6n969,Shubun University,Ichinomiya,2008,https://www.shubun.ac.jp,2024-12-11,2026-08-09,To Review,36,19,Eligible,,Not Selected
+country_jp,Japan,JP,https://ror.org/00zxty319,Naragakuen University,Nara,1984,http://www.naragakuen-u.jp/,2024-12-11,2026-08-09,To Review,37,19,Eligible,,Not Selected
+country_jp,Japan,JP,https://ror.org/01sbmsw53,Saku University,Saku,2008,https://www.saku.ac.jp,2024-12-11,2026-08-09,To Review,38,19,Eligible,,Not Selected
+country_jp,Japan,JP,https://ror.org/02rcadd38,Nagaoka University,Nagaoka,1973,https://www.nagaokauniv.ac.jp/,2024-12-11,2026-08-09,To Review,39,19,Eligible,,Not Selected
+country_jp,Japan,JP,https://ror.org/04w7k2121,University of Fukuchiyama,Fukuchiyama,2000,https://www.fukuchiyama.ac.jp,2024-12-11,2026-08-09,To Review,40,19,Eligible,,Not Selected
+country_jp,Japan,JP,https://ror.org/04ke9yr06,Seisa University,Ashibetsu,1985,http://www.seisa.ac.jp/,2024-12-11,2026-08-09,To Review,41,19,Eligible,,Not Selected
+country_jp,Japan,JP,https://ror.org/0330rc745,Ashikaga University,Ashikaga,1967,http://www.ashitech.ac.jp/,2024-12-11,2026-08-09,To Review,42,19,Eligible,,Not Selected
+country_sg,Singapore,SG,https://ror.org/01s57k749,Singapore University of Social Sciences,Singapore,2005,https://www.suss.edu.sg,2025-02-26,2026-08-09,To Review,43,19,Eligible,,Selected - Official Verification Required
+country_sg,Singapore,SG,https://ror.org/00mbfhq81,Newcastle University Singapore,Singapore,2007,http://www.ncl.ac.uk/singapore/,2024-12-11,2026-08-09,To Review,44,19,Eligible,,Selected - Official Verification Required
+country_sg,Singapore,SG,https://ror.org/050qmg959,Singapore Management University,Singapore,2000,https://www.smu.edu.sg,2026-06-02,2026-08-09,To Review,45,19,Eligible,,Selected - Official Verification Required
+country_sg,Singapore,SG,https://ror.org/02e7b5302,Nanyang Technological University,Singapore,1991,https://www.ntu.edu.sg,2025-11-24,2026-08-09,To Review,46,19,Eligible,,Selected - Official Verification Required
+country_sg,Singapore,SG,https://ror.org/01tgyzw49,National University of Singapore,Singapore,1905,http://www.nus.edu.sg/,2026-07-20,2026-08-09,To Review,47,19,Eligible,,Selected - Official Verification Required
+country_sg,Singapore,SG,https://ror.org/025yypj46,"National University Cancer Institute, Singapore",Singapore,2008,https://www.ncis.com.sg,2024-12-11,2026-08-09,To Review,48,-1,Exclude,Suspicious institution type: cancer institute,Not Selected
+country_sg,Singapore,SG,https://ror.org/05tjjsh18,National University Health System,Singapore,2008,http://www.nuhs.edu.sg/#,2024-12-11,2026-08-09,To Review,49,-1,Exclude,Suspicious institution type: health system,Not Selected
+country_sg,Singapore,SG,https://ror.org/05jzgzx91,University of Glasgow Singapore,Singapore,2011,https://www.gla.ac.uk/study/singapore/,2024-12-11,2026-08-09,To Review,50,19,Eligible,,Selected - Official Verification Required
+country_sg,Singapore,SG,https://ror.org/01y5z8p89,James Cook University Singapore,Singapore,2003,https://www.jcu.edu.sg/,2024-12-11,2026-08-09,To Review,51,19,Eligible,,Selected - Official Verification Required
+country_sg,Singapore,SG,https://ror.org/03evaaw16,University of Wales Institute Cardiff,Singapore,,,2024-12-11,2026-08-09,To Review,52,12,Needs Review,Missing or invalid official website,Not Selected
+country_sg,Singapore,SG,https://ror.org/05j6fvn87,Singapore University of Technology and Design,Singapore,2009,https://www.sutd.edu.sg,2026-06-02,2026-08-09,To Review,53,19,Eligible,,Selected - Official Verification Required
+country_sg,Singapore,SG,https://ror.org/021gztm71,NUS High School of Mathematics and Science,Singapore,2005,https://www.nushigh.edu.sg,2024-12-11,2026-08-09,To Review,54,15,Needs Review,Name does not contain University/Universiti; may still be a valid higher-education institution,Not Selected
+country_sg,Singapore,SG,https://ror.org/02j1m6098,Duke-NUS Medical School,Singapore,2005,https://www.duke-nus.edu.sg/,2024-12-11,2026-08-09,To Review,55,15,Needs Review,Name does not contain University/Universiti; may still be a valid higher-education institution,Not Selected
+country_my,Malaysia,MY,https://ror.org/00p43ne90,Mahsa University,Kuala Lumpur,2005,http://www.mahsa.edu.my/,2024-12-11,2026-08-09,To Review,56,19,Eligible,,Selected - Official Verification Required
+country_my,Malaysia,MY,https://ror.org/037zqsm37,Nilai University,Kampung Baharu Nilai,1997,https://www.nilai.edu.my/,2024-12-11,2026-08-09,To Review,57,19,Eligible,,Selected - Official Verification Required
+country_my,Malaysia,MY,https://ror.org/05crr5s63,SEGi University,Petaling Jaya,1977,https://segi.edu.my,2024-12-11,2026-08-09,To Review,58,19,Eligible,,Selected - Official Verification Required
+country_my,Malaysia,MY,https://ror.org/00wfd0g93,Perdana University,Kota Kinabalu,2011,https://www.perdanauniversity.edu.my,2026-07-20,2026-08-09,To Review,59,19,Eligible,,Selected - Official Verification Required
+country_my,Malaysia,MY,https://ror.org/04mjt7f73,Sunway University,Petaling Jaya,2004,https://sunwayuniversity.edu.my,2024-12-11,2026-08-09,To Review,60,19,Eligible,,Selected - Official Verification Required
+country_my,Malaysia,MY,https://ror.org/007gerq75,AIMST University,Bedong,2001,https://aimst.edu.my,2024-12-11,2026-08-09,To Review,61,19,Eligible,,Selected - Official Verification Required
+country_my,Malaysia,MY,https://ror.org/05njtdr40,MILA University,Kampung Baharu Nilai,,https://miu.edu.my,2024-12-11,2026-08-09,To Review,62,17,Eligible,,Not Selected
+country_my,Malaysia,MY,https://ror.org/00kb5s826,GlobalNxt University,Kuala Lumpur,2001,https://www.globalnxt.edu.my,2026-01-29,2026-08-09,To Review,63,19,Eligible,,Selected - Official Verification Required
+country_my,Malaysia,MY,https://ror.org/04d4wjw61,IMU University,Kuala Lumpur,1992,https://imu.edu.my,2026-02-24,2026-08-09,To Review,64,19,Eligible,,Selected - Official Verification Required
+country_my,Malaysia,MY,https://ror.org/04zrbnc33,Multimedia University,Malacca,1996,https://www.mmu.edu.my/,2024-12-11,2026-08-09,To Review,65,19,Eligible,,Not Selected
+country_my,Malaysia,MY,https://ror.org/02y2cxp25,HELP University,Kuala Lumpur,1986,https://help.edu.my/,2024-12-11,2026-08-09,To Review,66,19,Eligible,,Not Selected
+country_my,Malaysia,MY,https://ror.org/0498pcx51,Taylor's University,Subang Jaya,1969,http://university.taylors.edu.my/,2026-07-20,2026-08-09,To Review,67,19,Eligible,,Not Selected
+country_my,Malaysia,MY,https://ror.org/019787q29,UCSI University,Kuala Lumpur,1986,https://www.ucsiuniversity.edu.my,2026-07-20,2026-08-09,To Review,68,19,Eligible,,Not Selected
+country_my,Malaysia,MY,https://ror.org/02nd88213,Raffles University Iskandar,Johor Bahru,2012,http://www.raffles-university.edu.my/,2024-12-11,2026-08-09,To Review,69,19,Eligible,,Not Selected
+country_my,Malaysia,MY,https://ror.org/03c3mm140,Southern University College,Skudai,1990,http://www.southern.edu.my/chinese/home.html,2024-12-11,2026-08-09,To Review,70,19,Eligible,,Not Selected
+country_my,Malaysia,MY,https://ror.org/02d6w7230,TATI University College,Cukai,1993,http://www.tatiuc.edu.my/,2024-12-11,2026-08-09,To Review,71,19,Eligible,,Not Selected
+country_my,Malaysia,MY,https://ror.org/037yy5v69,Open University Malaysia,Kuala Lumpur,2000,http://www.oum.edu.my/,2024-12-11,2026-08-09,To Review,72,19,Eligible,,Not Selected
+country_my,Malaysia,MY,https://ror.org/02weg9v26,Wawasan Open University,George Town,2006,http://www.wou.edu.my/,2024-12-11,2026-08-09,To Review,73,19,Eligible,,Not Selected
+country_my,Malaysia,MY,https://ror.org/00rzspn62,University of Malaya,Kuala Lumpur,1949,https://www.um.edu.my/,2026-06-23,2026-08-09,To Review,74,19,Eligible,,Not Selected
+country_my,Malaysia,MY,https://ror.org/0331wa828,Xiamen University Malaysia,Sepang,2015,http://www.xmu.edu.my/,2026-07-20,2026-08-09,To Review,75,19,Eligible,,Not Selected
+country_my,Malaysia,MY,https://ror.org/04f1eek20,University of Cyberjaya,Kuala Selangor,2005,https://cyberjaya.edu.my,2026-07-20,2026-08-09,To Review,76,19,Eligible,,Not Selected
+country_my,Malaysia,MY,https://ror.org/040v70252,Universiti of Malaysia Sabah,Kota Kinabalu,1994,https://ums.edu.my,2024-12-11,2026-08-09,To Review,77,19,Eligible,,Not Selected
+country_my,Malaysia,MY,https://ror.org/01704wp68,Universiti Malaysia Pahang Al-Sultan Abdullah,Pekan,2002,https://www.umpsa.edu.my,2024-12-11,2026-08-09,To Review,78,19,Eligible,,Not Selected
+country_my,Malaysia,MY,https://ror.org/05qkpaf51,Albukhary International University,Alor Star,2010,https://aiu.edu.my,2024-12-11,2026-08-09,To Review,79,19,Eligible,,Not Selected
+country_my,Malaysia,MY,https://ror.org/03pvs5g92,University of Wollongong Malaysia,Shah Alam,1983,https://www.uow.edu.my,2024-12-11,2026-08-09,To Review,80,19,Eligible,,Not Selected
+country_my,Malaysia,MY,https://ror.org/02yd50j87,Lincoln University College,Petaling Jaya,2002,https://www.lincoln.edu.my/,2024-12-11,2026-08-09,To Review,81,19,Eligible,,Not Selected
+country_my,Malaysia,MY,https://ror.org/01he7e113,KPJ Healthcare University,Labu,,https://kpju.edu.my,2024-12-11,2026-08-09,To Review,82,17,Eligible,,Not Selected
+country_my,Malaysia,MY,https://ror.org/01qz28660,Alfa University College,Subang Jaya,1998,https://alfa.edu.my,2024-12-11,2026-08-09,To Review,83,19,Eligible,,Not Selected
+country_my,Malaysia,MY,https://ror.org/02ny9gx17,Innovative University College,Subang Jaya,1999,https://innovative.edu.my,2026-02-24,2026-08-09,To Review,84,19,Eligible,,Not Selected
+country_my,Malaysia,MY,https://ror.org/02ktf7592,City University Malaysia,Kuala Selangor,1984,https://city.edu.my,2026-04-14,2026-08-09,To Review,85,19,Eligible,,Not Selected
+country_my,Malaysia,MY,https://ror.org/03fj82m46,INTI International University,Kampung Baharu Nilai,1986,https://newinti.edu.my/,2025-05-05,2026-08-09,To Review,86,19,Eligible,,Not Selected
+country_my,Malaysia,MY,https://ror.org/00yncr324,Monash University Malaysia,Subang Jaya,1998,https://www.monash.edu.my/,2025-05-05,2026-08-09,To Review,87,19,Eligible,,Not Selected
+country_my,Malaysia,MY,https://ror.org/03f7dts09,Jesselton University College,Kota Kinabalu,2022,https://www.jesselton.edu.my,2025-06-24,2026-08-09,To Review,88,19,Eligible,,Not Selected
+country_my,Malaysia,MY,https://ror.org/00vkd8x05,Selangor Islamic University,Putrajaya,1995,https://www.uis.edu.my,2025-08-26,2026-08-09,To Review,89,19,Eligible,,Not Selected
+country_my,Malaysia,MY,https://ror.org/0199x1p30,Linton University College,Ipoh,2005,https://www.linton.edu.my,2025-04-28,2026-08-09,To Review,90,19,Eligible,,Not Selected
+country_my,Malaysia,MY,https://ror.org/024fm2y42,Curtin University Sarawak,Miri,1999,https://curtin.edu.my,2024-12-11,2026-08-09,To Review,91,19,Eligible,,Not Selected
+country_my,Malaysia,MY,https://ror.org/03j4n8s31,University of Selangor,Shah Alam,1999,https://unisel.edu.my,2024-12-11,2026-08-09,To Review,92,19,Eligible,,Not Selected
+country_my,Malaysia,MY,https://ror.org/031my5009,Asia e University,Kuala Lumpur,2002,https://aeu.edu.my,2026-01-29,2026-08-09,To Review,93,19,Eligible,,Not Selected
+country_kr,South Korea,KR,https://ror.org/03mc8zn46,Yeonsung University,Anyang-si,1977,http://www.yeonsung.ac.kr/,2024-12-11,2026-08-09,To Review,94,19,Eligible,,Selected - Official Verification Required
+country_kr,South Korea,KR,https://ror.org/03w9szr81,Bucheon University,Bucheon-si,1979,https://www.bc.ac.kr,2024-12-11,2026-08-09,To Review,95,19,Eligible,,Selected - Official Verification Required
+country_kr,South Korea,KR,https://ror.org/0483r5v56,Changshin University,Changwon,1991,http://www.csc.ac.kr/,2024-12-11,2026-08-09,To Review,96,19,Eligible,,Selected - Official Verification Required
+country_kr,South Korea,KR,https://ror.org/03r6cc113,Kundong University,Andong,1992,http://www.kundong.ac.kr/,2024-12-11,2026-08-09,To Review,97,19,Exclude,University is closed.,Not Selected
+country_kr,South Korea,KR,https://ror.org/02fg4j559,Gimcheon University,Gimcheon,1978,http://www.gimcheon.ac.kr/site/english/,2024-12-11,2026-08-09,To Review,98,19,Eligible,,Selected - Official Verification Required
+country_kr,South Korea,KR,https://ror.org/057p3dx48,Hanil University,Wanju,1998,http://www.hanil.ac.kr/eng/,2024-12-11,2026-08-09,To Review,99,19,Eligible,,Selected - Official Verification Required
+country_kr,South Korea,KR,https://ror.org/056fjw561,Induk University,Seoul,1971,http://www.induk.ac.kr/,2024-12-11,2026-08-09,To Review,100,19,Eligible,,Selected - Official Verification Required
+country_kr,South Korea,KR,https://ror.org/04zzths72,Ansan University,Ansan-si,1972,https://www.ansan.ac.kr,2024-12-11,2026-08-09,To Review,101,19,Eligible,,Selected - Official Verification Required
+country_kr,South Korea,KR,https://ror.org/04qwasw26,Daekyeung University,Gyeongsan-si,1992,http://eng.tk.ac.kr/,2024-12-11,2026-08-09,To Review,102,19,Eligible,,Not Selected
+country_kr,South Korea,KR,https://ror.org/00s9dpb54,Myongji University,Seoul,1948,http://www.mju.ac.kr/mbs/mjuen/index.jsp,2024-12-11,2026-08-09,To Review,103,19,Eligible,,Not Selected
+country_kr,South Korea,KR,https://ror.org/02e9zc863,Kwangwoon University,Seoul,1934,http://www-eng.kw.ac.kr/,2024-12-11,2026-08-09,To Review,104,19,Eligible,,Not Selected
+country_kr,South Korea,KR,https://ror.org/032xf8h46,Kyonggi University,Suwon,1947,http://www.kyonggi.ac.kr/KyonggiEng.kgu,2024-12-11,2026-08-09,To Review,105,19,Eligible,,Not Selected
+country_kr,South Korea,KR,https://ror.org/05h9pgm95,Kyungsung University,Busan,1955,https://cms1.ks.ac.kr/eng/Main.do,2024-12-11,2026-08-09,To Review,106,19,Eligible,,Not Selected
+country_kr,South Korea,KR,https://ror.org/01whq8m38,Mokwon University,Daejeon,1954,http://www.mokwon.ac.kr/eng,2024-12-11,2026-08-09,To Review,107,19,Eligible,,Not Selected
+country_kr,South Korea,KR,https://ror.org/015v9d997,Jeonju University,Jeonju,1964,http://www.jj.ac.kr/eng/,2024-12-11,2026-08-09,To Review,108,19,Eligible,,Not Selected
+country_kr,South Korea,KR,https://ror.org/02eqchk86,Daejeon University,Daejeon,1979,http://www.dju.ac.kr/foreign/eng/html/main.htm#,2024-12-11,2026-08-09,To Review,109,19,Eligible,,Not Selected
+country_kr,South Korea,KR,https://ror.org/01cwbae71,Hannam University,Daejeon,1956,http://www.hannam.ac.kr/eng/html/main/main.html,2024-12-11,2026-08-09,To Review,110,19,Eligible,,Not Selected
+country_kr,South Korea,KR,https://ror.org/02jv06474,Hanseo University,Seosan City,1992,http://www.hanseo.ac.kr/main.do?s=english,2024-12-11,2026-08-09,To Review,111,19,Eligible,,Not Selected
+country_kr,South Korea,KR,https://ror.org/0382k6j58,Nambu University,Gwangju,1998,http://www.nambu.ac.kr/default.asp,2024-12-11,2026-08-09,To Review,112,19,Eligible,,Not Selected
+country_kr,South Korea,KR,https://ror.org/00wygsf57,Dongseo University,Busan,1992,http://uni.dongseo.ac.kr/eng/,2024-12-11,2026-08-09,To Review,113,19,Eligible,,Not Selected
+country_kr,South Korea,KR,https://ror.org/010zncz41,JEI University,Incheon,1970,http://eng.jeiu.ac.kr/,2024-12-11,2026-08-09,To Review,114,19,Eligible,,Not Selected
+country_kr,South Korea,KR,https://ror.org/01tbn4j76,Gumi University,Gumi,1991,http://www.gumi.ac.kr/english/,2024-12-11,2026-08-09,To Review,115,19,Eligible,,Not Selected
+country_kr,South Korea,KR,https://ror.org/006pshn89,Seojeong University,Yangju,2000,http://www.seojeong.ac.kr/,2024-12-11,2026-08-09,To Review,116,19,Eligible,,Not Selected
+country_kr,South Korea,KR,https://ror.org/00zec6783,Tongwon University,Gwangju,1993,http://www.tw.ac.kr/,2024-12-11,2026-08-09,To Review,117,19,Eligible,,Not Selected
+country_kr,South Korea,KR,https://ror.org/01qj9e285,Yuhan University,Bucheon-si,1977,http://www.yuhan.ac.kr/en/enterInfo/ei1001.jsp,2024-12-11,2026-08-09,To Review,118,19,Eligible,,Not Selected
+country_kr,South Korea,KR,https://ror.org/05v1ekw79,Dongyang University,Andong,1994,http://www.dyu.ac.kr/,2024-12-11,2026-08-09,To Review,119,19,Eligible,,Not Selected
+country_kr,South Korea,KR,https://ror.org/050mgpz97,Jungwon University,Koesan,2009,http://eng.jwu.ac.kr/site/siteView.jwu,2024-12-11,2026-08-09,To Review,120,19,Eligible,,Not Selected
+country_kr,South Korea,KR,https://ror.org/024kwvm84,Kyungil University,Gyeongsan-si,1963,http://eng.kiu.ac.kr/english/index.htm,2024-12-11,2026-08-09,To Review,121,19,Eligible,,Not Selected
+country_kr,South Korea,KR,https://ror.org/00ncqx842,Seowon University,Cheongju-si,1968,http://www.seowon.ac.kr,2024-12-11,2026-08-09,To Review,122,19,Eligible,,Not Selected
+country_kr,South Korea,KR,https://ror.org/02dzzka09,Sungkyul University,Anyang-si,1962,http://en.sungkyul.ac.kr/mbs/skueng/index.jsp,2024-12-11,2026-08-09,To Review,123,19,Eligible,,Not Selected
+country_kr,South Korea,KR,https://ror.org/0509ndt57,Namseoul University,Cheonan,1994,http://eng.nsu.ac.kr/,2024-12-11,2026-08-09,To Review,124,19,Eligible,,Not Selected
+country_kr,South Korea,KR,https://ror.org/048t58j41,Kwangshin University,Gwangju,1954,http://www.kwangshin.ac.kr/,2024-12-11,2026-08-09,To Review,125,19,Eligible,,Not Selected
+country_kr,South Korea,KR,https://ror.org/03xf99d80,Hanlyo University,Gwangyang,1994,http://www.hanlyo.ac.kr/hanlyo/,2024-12-11,2026-08-09,To Review,126,19,Eligible,,Not Selected
+country_kr,South Korea,KR,https://ror.org/00p8em311,Gyeongju University,Gyeongju,1981,http://eng.gu.ac.kr/,2024-12-11,2026-08-09,To Review,127,19,Eligible,,Not Selected
+country_kr,South Korea,KR,https://ror.org/01jt32312,Uiduk University,Gyeongju,1996,http://www.uu.ac.kr/,2024-12-11,2026-08-09,To Review,128,19,Eligible,,Not Selected
+country_kr,South Korea,KR,https://ror.org/045qyjz25,Baekseok University,Cheonan,1994,http://www.bu.ac.kr/english/index.jsp,2024-12-11,2026-08-09,To Review,129,19,Eligible,,Not Selected
+country_kr,South Korea,KR,https://ror.org/018pdh902,Anyang University,Anyang-si,1948,http://home.anyang.ac.kr/eng/index.htm,2024-12-11,2026-08-09,To Review,130,19,Eligible,,Not Selected
+country_tw,Taiwan,TW,https://ror.org/04cjpzj07,Meiho University,Pingtung City,1966,http://dotweb.meiho.edu.tw/enmeiho/index.html,2024-12-11,2026-08-09,To Review,131,19,Eligible,,Selected - Official Verification Required
+country_tw,Taiwan,TW,https://ror.org/0314ahf24,TransWorld University,Douliu,1992,https://www.twu.edu.tw/,2024-12-11,2026-08-09,To Review,132,19,Exclude,University is closed.,Not Selected
+country_tw,Taiwan,TW,https://ror.org/03pfmgq50,Fooyin University,Kaohsiung,1958,http://english.fy.edu.tw/,2024-12-11,2026-08-09,To Review,133,19,Eligible,,Selected - Official Verification Required
+country_tw,Taiwan,TW,https://ror.org/02f2vsx71,Hungkuang University,Taichung,1967,http://www.hk.edu.tw/main.php,2024-12-11,2026-08-09,To Review,134,19,Eligible,,Selected - Official Verification Required
+country_tw,Taiwan,TW,https://ror.org/030m18266,Tatung University,Taipei,1956,http://www.en.ttu.edu.tw/,2024-12-11,2026-08-09,To Review,135,19,Eligible,,Selected - Official Verification Required
+country_tw,Taiwan,TW,https://ror.org/01fvf0d84,Tajen University,Pingtung City,1966,http://www.tajen.edu.tw/bin/index.php?Lang=en,2024-12-11,2026-08-09,To Review,136,19,Eligible,,Selected - Official Verification Required
+country_tw,Taiwan,TW,https://ror.org/02jb3jv25,Yuanpei University,Hsinchu,1964,http://www.ypu.edu.tw/bin/home.php,2024-12-11,2026-08-09,To Review,137,19,Eligible,,Not Selected
+country_tw,Taiwan,TW,https://ror.org/03c6e8r26,Dayeh University,Dacun,1990,http://www.dyu.edu.tw/english/,2024-12-11,2026-08-09,To Review,138,19,Eligible,,Not Selected
+country_tw,Taiwan,TW,https://ror.org/01nrk6j30,MingDao University,Bitou,2001,http://eng.mdu.edu.tw/,2024-12-11,2026-08-09,To Review,139,19,Eligible,,Not Selected
+country_tw,Taiwan,TW,https://ror.org/01tfbz441,Nanhua University,Chiayi City,1996,http://www.nhu.edu.tw/,2024-12-11,2026-08-09,To Review,140,19,Eligible,,Not Selected
+country_tw,Taiwan,TW,https://ror.org/05d293n36,WuFeng University,Minxiong,1965,http://www.wfu.edu.tw/,2024-12-11,2026-08-09,To Review,141,19,Eligible,,Not Selected
+country_tw,Taiwan,TW,https://ror.org/00ke8ye77,Aletheia University,Taipei,1872,https://www.au.edu.tw/,2024-12-11,2026-08-09,To Review,142,19,Eligible,,Not Selected
+country_tw,Taiwan,TW,https://ror.org/02x5hb316,Huafan University,Taipei,1990,http://www.hfu.edu.tw/,2024-12-11,2026-08-09,To Review,143,19,Eligible,,Not Selected
+country_tw,Taiwan,TW,https://ror.org/05kvm7n82,Soochow University,Taipei,1871,http://www-en.scu.edu.tw/index.php,2024-12-11,2026-08-09,To Review,144,19,Eligible,,Not Selected
+country_tw,Taiwan,TW,https://ror.org/05b7g7730,Tungnan University,Taipei,1970,http://www.tnu.edu.tw/,2024-12-11,2026-08-09,To Review,145,19,Eligible,,Not Selected
+country_tw,Taiwan,TW,https://ror.org/018p1hd91,Kainan University,Taoyuan,1917,http://www.knu.edu.tw/bin/home.php,2024-12-11,2026-08-09,To Review,146,19,Eligible,,Not Selected
+country_tw,Taiwan,TW,https://ror.org/04r3dny05,Vanung University,Taoyuan,1972,http://www.vnu.edu.tw/,2024-12-11,2026-08-09,To Review,147,19,Eligible,,Not Selected
+country_tw,Taiwan,TW,https://ror.org/04tft4718,Tamkang University,Taipei,1950,http://english.tku.edu.tw/,2024-12-11,2026-08-09,To Review,148,19,Eligible,,Not Selected
+country_tw,Taiwan,TW,https://ror.org/00zhvdn11,Tunghai University,Taichung,1955,http://www.thu.edu.tw/web/site/detail.php?scid=65&sid=97,2024-12-11,2026-08-09,To Review,149,19,Eligible,,Not Selected
+country_tw,Taiwan,TW,https://ror.org/038a1tp19,Asia University,Taichung,2001,https://asia.edu.tw,2024-12-11,2026-08-09,To Review,150,19,Eligible,,Not Selected
+country_tw,Taiwan,TW,https://ror.org/032hca325,Hsing Wu University,Taipei,1965,http://www.hwu.edu.tw/bin/home.php,2024-12-11,2026-08-09,To Review,151,19,Eligible,,Not Selected
+country_tw,Taiwan,TW,https://ror.org/03vcw8k58,Ling Tung University,Taichung,1964,http://web.ltu.edu.tw/,2024-12-11,2026-08-09,To Review,152,19,Eligible,,Not Selected
+country_tw,Taiwan,TW,https://ror.org/01j9jq089,Overseas Chinese University,Taichung,1964,http://epage.ocu.edu.tw/,2024-12-11,2026-08-09,To Review,153,19,Eligible,,Not Selected
+country_tw,Taiwan,TW,https://ror.org/04ahb7r80,Chienkuo Technology University,Changhua,1965,http://enwww.ctu.edu.tw/bin/home.php,2024-12-11,2026-08-09,To Review,154,19,Eligible,,Not Selected
+country_tw,Taiwan,TW,https://ror.org/04nk1k821,Kao Yuan University,Kaohsiung,1989,http://www.kyu.edu.tw/kyunew3/allkyu.html,2024-12-11,2026-08-09,To Review,155,19,Eligible,,Not Selected
+country_tw,Taiwan,TW,https://ror.org/00wyq5s37,St. John's University,Taipei,1879,https://www.sju.edu.tw/,2024-12-11,2026-08-09,To Review,156,19,Eligible,,Not Selected
+country_tw,Taiwan,TW,https://ror.org/055zdhj54,Taiwan Shoufu University,Tainan City,2000,http://web.tsu.edu.tw/,2024-12-11,2026-08-09,To Review,157,19,Eligible,,Not Selected
+country_tw,Taiwan,TW,https://ror.org/03bej0y93,Yu Da University,Miaoli,1999,http://www.ydu.edu.tw/,2024-12-11,2026-08-09,To Review,158,19,Eligible,,Not Selected
+country_tw,Taiwan,TW,https://ror.org/03a0cvz60,Hsuan Chuang University,Hsinchu,1997,http://www.hcu.edu.tw/hcu/zh-tw,2024-12-11,2026-08-09,To Review,159,19,Eligible,,Not Selected
+country_tw,Taiwan,TW,https://ror.org/046wjy580,Fo Guang University,Yilan,2000,http://website.fgu.edu.tw/,2024-12-11,2026-08-09,To Review,160,19,Eligible,,Not Selected
+country_tw,Taiwan,TW,https://ror.org/03pcb1m79,Shu-Te University,Kaohsiung,1986,https://www.stu.edu.tw/,2024-12-11,2026-08-09,To Review,161,19,Eligible,,Not Selected
+country_tw,Taiwan,TW,https://ror.org/01d81q939,National Open University,Taipei,1986,https://www.nou.edu.tw/,2024-12-11,2026-08-09,To Review,162,19,Eligible,,Not Selected
+country_tw,Taiwan,TW,https://ror.org/03z698x91,National Pingtung University,Pingtung City,2014,https://eng.nptu.edu.tw,2024-12-11,2026-08-09,To Review,163,19,Eligible,,Not Selected
+country_tw,Taiwan,TW,https://ror.org/03ms7mr17,Far East University,Tainan City,1968,https://www.feu.edu.tw/web/,2024-12-11,2026-08-09,To Review,164,19,Eligible,,Not Selected
+country_tw,Taiwan,TW,https://ror.org/04dmnxh66,CTBC Business School,Tainan City,2000,http://www.ctbc.edu.tw/,2024-12-11,2026-08-09,To Review,165,15,Needs Review,Name does not contain University/Universiti; may still be a valid higher-education institution,Not Selected
+country_hk,Hong Kong,HK,https://ror.org/023mp3m37,Hong Kong Virtual University,Hong Kong,2001,https://hkvu.hk/hkvu/,2024-12-11,2026-08-09,To Review,166,19,Exclude,Not a standalone university; it is an HKUST education program.,Not Selected
+country_hk,Hong Kong,HK,https://ror.org/0563pg902,Lingnan University,Tuen Mun,1888,https://www.ln.edu.hk,2024-12-11,2026-08-09,To Review,167,19,Eligible,,Selected - Official Verification Required
+country_hk,Hong Kong,HK,https://ror.org/01wcz2f33,Saint Francis University,Hong Kong,1985,https://www.sfu.edu.hk,2024-12-11,2026-08-09,To Review,168,19,Eligible,,Selected - Official Verification Required
+country_hk,Hong Kong,HK,https://ror.org/02zhqgq86,University of Hong Kong,Pok Fu Lam,1911,https://www.hku.hk,2026-07-20,2026-08-09,To Review,169,19,Eligible,,Selected - Official Verification Required
+country_hk,Hong Kong,HK,https://ror.org/0145fw131,Hong Kong Baptist University,Hong Kong,1956,https://www.hkbu.edu.hk,2025-10-28,2026-08-09,To Review,170,19,Eligible,,Selected - Official Verification Required
+country_hk,Hong Kong,HK,https://ror.org/0349bsm71,Hong Kong Metropolitan University,Hong Kong,1989,https://www.hkmu.edu.hk,2025-05-05,2026-08-09,To Review,171,19,Eligible,,Selected - Official Verification Required
+country_hk,Hong Kong,HK,https://ror.org/0030zas98,Hong Kong Polytechnic University,Hong Kong,1937,http://www.polyu.edu.hk/web/en/home/index.html,2026-07-20,2026-08-09,To Review,172,19,Eligible,,Not Selected
+country_hk,Hong Kong,HK,https://ror.org/023t8mt09,Hong Kong Shue Yan University,Hong Kong,1971,https://www.hksyu.edu,2024-12-11,2026-08-09,To Review,173,19,Eligible,,Not Selected
+country_hk,Hong Kong,HK,https://ror.org/021a2zz52,Hong Kong Chu Hai College,Tuen Mun,1947,https://www.chuhai.edu.hk,2024-12-11,2026-08-09,To Review,174,15,Needs Review,Name does not contain University/Universiti; may still be a valid higher-education institution,Not Selected
+country_hk,Hong Kong,HK,https://ror.org/00t33hh48,Chinese University of Hong Kong,Hong Kong,1963,http://www.cuhk.edu.hk/english/index.html,2026-07-20,2026-08-09,To Review,175,19,Eligible,,Not Selected
+country_hk,Hong Kong,HK,https://ror.org/000t0f062,Education University of Hong Kong,Tai Po,1994,https://www.eduhk.hk/main/,2026-07-20,2026-08-09,To Review,176,19,Eligible,,Not Selected
+country_hk,Hong Kong,HK,https://ror.org/03q8dnn23,City University of Hong Kong,Hong Kong,1984,https://www.cityu.edu.hk,2026-07-20,2026-08-09,To Review,177,19,Eligible,,Not Selected
+country_hk,Hong Kong,HK,https://ror.org/04fa64g55,Hang Seng University of Hong Kong,Shatin,1980,https://www.hsu.edu.hk,2026-07-20,2026-08-09,To Review,178,19,Eligible,,Not Selected
+country_hk,Hong Kong,HK,https://ror.org/00q4vv597,Hong Kong University of Science and Technology,Hong Kong,1991,https://hkust.edu.hk,2026-03-12,2026-08-09,To Review,179,19,Eligible,,Not Selected
+country_th,Thailand,TH,https://ror.org/03e2qe334,Naresuan University,Phitsanulok,1990,http://www.nu.ac.th/,2024-12-11,2026-08-09,To Review,180,19,Eligible,,Selected - Official Verification Required
+country_th,Thailand,TH,https://ror.org/01cqcrc47,Rangsit University,Pathum Thani,1990,http://www.rsu.ac.th/,2024-12-11,2026-08-09,To Review,181,19,Eligible,,Selected - Official Verification Required
+country_th,Thailand,TH,https://ror.org/002qeva03,Bangkok University,Bangkok,1962,http://www.bu.ac.th/eng/,2024-12-11,2026-08-09,To Review,182,19,Eligible,,Selected - Official Verification Required
+country_th,Thailand,TH,https://ror.org/04d8yqq70,Krirk University,Bangkok,1952,http://www.krirk.ac.th/,2024-12-11,2026-08-09,To Review,183,19,Eligible,,Selected - Official Verification Required
+country_th,Thailand,TH,https://ror.org/04hah6r58,Asian University,Bang Lamung,1993,http://www.asianu.ac.th/,2024-12-11,2026-08-09,To Review,184,19,Exclude,University is closed.,Not Selected
+country_th,Thailand,TH,https://ror.org/02g702008,Kalasin University,Kalasin,1997,https://www.ksu.ac.th/,2024-12-11,2026-08-09,To Review,185,19,Eligible,,Selected - Official Verification Required
+country_th,Thailand,TH,https://ror.org/01wacaj92,Nation University,Lampang,1988,http://nation.ac.th,2024-12-11,2026-08-09,To Review,186,19,Eligible,,Not Selected
+country_th,Thailand,TH,https://ror.org/00peyn760,Vongchavalitkul University,Nakhon Ratchasima,1984,http://www2.vu.ac.th/index.php,2024-12-11,2026-08-09,To Review,187,19,Eligible,,Not Selected
+country_th,Thailand,TH,https://ror.org/04gyfd783,Chaopraya University,Nakhon Sawan,1988,http://www.cpu.ac.th/,2024-12-11,2026-08-09,To Review,188,19,Eligible,,Not Selected
+country_th,Thailand,TH,https://ror.org/04vxqfe68,Pathumthani University,Pathum Thani,1999,http://www.ptu.ac.th/PTU/,2024-12-11,2026-08-09,To Review,189,19,Eligible,,Not Selected
+country_th,Thailand,TH,https://ror.org/01crwkz66,Fatoni University,Pattani,1998,http://www.ftu.ac.th/,2024-12-11,2026-08-09,To Review,190,19,Eligible,,Not Selected
+country_th,Thailand,TH,https://ror.org/008wkze26,Phitsanulok University,Phitsanulok,2002,https://www.pluniversity.com/,2024-12-11,2026-08-09,To Review,191,19,Eligible,,Not Selected
+country_th,Thailand,TH,https://ror.org/047vj8n35,Tapee University,Surat Thani,1999,http://www.tapee.ac.th/,2024-12-11,2026-08-09,To Review,192,19,Eligible,,Not Selected
+country_th,Thailand,TH,https://ror.org/02x2py139,Thonburi University,Bangkok,1998,https://www.thonburi-u.ac.th,2024-12-11,2026-08-09,To Review,193,19,Eligible,,Not Selected
+country_th,Thailand,TH,https://ror.org/017t2xn54,Chalermkarnchana University,Si Sa Ket,,,2024-12-11,2026-08-09,To Review,194,12,Needs Review,Missing or invalid official website,Not Selected
+country_th,Thailand,TH,https://ror.org/03zmqc707,Assumption University,Bangkok,1969,https://www.au.edu,2024-12-11,2026-08-09,To Review,195,19,Eligible,,Not Selected
+country_th,Thailand,TH,https://ror.org/05gzceg21,Kasetsart University,Bangkok,1943,http://www.ku.ac.th/web2012/index.php?c=adms&m=mainpage1,2026-07-20,2026-08-09,To Review,196,19,Eligible,,Not Selected
+country_th,Thailand,TH,https://ror.org/028wp3y58,Chulalongkorn University,Bangkok,1917,http://www.chula.ac.th/en/,2026-07-20,2026-08-09,To Review,197,19,Eligible,,Not Selected
+country_th,Thailand,TH,https://ror.org/04718hx42,Srinakharinwirot University,Bangkok,1949,http://www.swu.ac.th/en/,2026-06-23,2026-08-09,To Review,198,19,Eligible,,Not Selected
+country_th,Thailand,TH,https://ror.org/02sr8jt85,Shinawatra University,Bangkok,1999,https://siu.ac.th,2024-12-11,2026-08-09,To Review,199,19,Eligible,,Not Selected
+country_th,Thailand,TH,https://ror.org/02ev5wr74,Hatyai University,Songkhla,1997,https://www.hu.ac.th,2026-01-29,2026-08-09,To Review,200,19,Eligible,,Not Selected
+country_th,Thailand,TH,https://ror.org/02amxp214,Mahachulalongkornrajavidyalaya University,Bangkok,1887,https://mcu.ac.th,2026-01-29,2026-08-09,To Review,201,19,Eligible,,Not Selected
+country_th,Thailand,TH,https://ror.org/04b69g067,Walailak University,Nakhon Si Thammarat,1992,http://www.wu.ac.th/en,2024-12-11,2026-08-09,To Review,202,19,Eligible,,Not Selected
+country_th,Thailand,TH,https://ror.org/00t2prd39,Thaksin University,Songkhla,1968,https://www.tsu.ac.th,2024-12-11,2026-08-09,To Review,203,19,Eligible,,Not Selected
+country_th,Thailand,TH,https://ror.org/00j0kqj60,CMKL University,Bangkok,2017,https://www.cmkl.ac.th,2026-03-31,2026-08-09,To Review,204,19,Eligible,,Not Selected
+country_th,Thailand,TH,https://ror.org/0453j3c58,Mahasarakham University,Maha Sarakham,1994,https://inter.msu.ac.th,2025-02-26,2026-08-09,To Review,205,19,Eligible,,Not Selected
+country_th,Thailand,TH,https://ror.org/01nrcma38,Bangkokthonburi University,Bangkok,2002,https://bkkthon.ac.th,2024-12-11,2026-08-09,To Review,206,19,Eligible,,Not Selected
+country_th,Thailand,TH,https://ror.org/05d0b7d20,Sripatum University,Bangkok,1970,https://www.spu.ac.th/,2024-12-11,2026-08-09,To Review,207,19,Eligible,,Not Selected
+country_th,Thailand,TH,https://ror.org/01ff74m36,Burapha University,Chon Buri,1955,https://www.buu.ac.th,2024-12-11,2026-08-09,To Review,208,19,Eligible,,Not Selected
+country_th,Thailand,TH,https://ror.org/04j3saz95,Siam University,Bangkok,1965,https://www.siam.edu,2024-12-11,2026-08-09,To Review,209,19,Eligible,,Not Selected
+country_th,Thailand,TH,https://ror.org/05d8xgj52,Payap University,Chiang Mai,1974,https://www.payap.ac.th/site,2026-01-29,2026-08-09,To Review,210,19,Eligible,,Not Selected
+country_th,Thailand,TH,https://ror.org/03c7s1f64,Maejo University,Chiang Mai,1934,https://www.mju.ac.th,2026-07-20,2026-08-09,To Review,211,19,Eligible,,Not Selected
+country_th,Thailand,TH,https://ror.org/00mrw8k38,Ramkhamhaeng University,Bangkok,1971,http://www.ru.ac.th/th/,2026-07-20,2026-08-09,To Review,212,19,Eligible,,Not Selected
+country_th,Thailand,TH,https://ror.org/01znkr924,Mahidol University,Bangkok,1943,http://www.mahidol.ac.th/en/,2026-07-20,2026-08-09,To Review,213,19,Eligible,,Not Selected
+country_th,Thailand,TH,https://ror.org/01qkghv97,Navamindradhiraj University,Bangkok,2010,https://www.nmu.ac.th,2026-07-20,2026-08-09,To Review,214,19,Eligible,,Not Selected

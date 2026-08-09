@@ -1,0 +1,51 @@
+﻿university_id,university_name,country_id,city,university_type,official_website,establishment_year,global_ranking,ranking_source,ranking_year,degree_levels,scholarship_available,source_url,collected_at,last_verified_at,freshness_status
+uni_jp_001,The University of Tokyo,country_jp,Tokyo,,https://www.u-tokyo.ac.jp,1877,,,,,,https://www.u-tokyo.ac.jp,2026-08-09,,Pending Verification
+uni_jp_002,Kyoto University,country_jp,Kyoto,,http://www.kyoto-u.ac.jp/en,1897,,,,,,http://www.kyoto-u.ac.jp/en,2026-08-09,,Pending Verification
+uni_jp_003,Osaka University,country_jp,Osaka,,https://www.osaka-u.ac.jp,1724,,,,,,https://www.osaka-u.ac.jp,2026-08-09,,Pending Verification
+uni_jp_004,Tohoku University,country_jp,Sendai,,http://www.tohoku.ac.jp/en/,1907,,,,,,http://www.tohoku.ac.jp/en/,2026-08-09,,Pending Verification
+uni_jp_005,Nagoya University,country_jp,Nagoya,,http://en.nagoya-u.ac.jp/,1871,,,,,,http://en.nagoya-u.ac.jp/,2026-08-09,,Pending Verification
+uni_jp_006,Kyushu University,country_jp,Fukuoka,,http://www.kyushu-u.ac.jp/english/,1903,,,,,,http://www.kyushu-u.ac.jp/english/,2026-08-09,,Pending Verification
+uni_jp_007,Hokkaido University,country_jp,Sapporo,,https://www.global.hokudai.ac.jp/,1876,,,,,,https://www.global.hokudai.ac.jp/,2026-08-09,,Pending Verification
+uni_jp_008,Institute of Science Tokyo,country_jp,Tokyo,,https://www.isct.ac.jp,2024,,,,,,https://www.isct.ac.jp,2026-08-09,,Pending Verification
+uni_jp_009,University of Tsukuba,country_jp,Tsukuba,,https://www.tsukuba.ac.jp,1973,,,,,,https://www.tsukuba.ac.jp,2026-08-09,,Pending Verification
+uni_jp_010,Kobe University,country_jp,Kobe,,http://www.kobe-u.ac.jp/en/alumni/index.html,1949,,,,,,http://www.kobe-u.ac.jp/en/alumni/index.html,2026-08-09,,Pending Verification
+uni_jp_011,Waseda University,country_jp,Tokyo,,https://www.waseda.jp/top/,1882,,,,,,https://www.waseda.jp/top/,2026-08-09,,Pending Verification
+uni_jp_012,Keio University,country_jp,Tokyo,,https://www.keio.ac.jp,1858,,,,,,https://www.keio.ac.jp,2026-08-09,,Pending Verification
+uni_sg_001,National University of Singapore,country_sg,Singapore,,http://www.nus.edu.sg/,1905,,,,,,http://www.nus.edu.sg/,2026-08-09,,Pending Verification
+uni_sg_002,Nanyang Technological University,country_sg,Singapore,,https://www.ntu.edu.sg,1991,,,,,,https://www.ntu.edu.sg,2026-08-09,,Pending Verification
+uni_sg_003,Singapore Management University,country_sg,Singapore,,https://www.smu.edu.sg,2000,,,,,,https://www.smu.edu.sg,2026-08-09,,Pending Verification
+uni_sg_004,Singapore University of Technology and Design,country_sg,Singapore,,https://www.sutd.edu.sg,2009,,,,,,https://www.sutd.edu.sg,2026-08-09,,Pending Verification
+uni_sg_005,Singapore Institute of Technology,country_sg,Singapore,,https://www.singaporetech.edu.sg/,2009,,,,,,https://www.singaporetech.edu.sg/,2026-08-09,,Pending Verification
+uni_sg_006,Singapore University of Social Sciences,country_sg,Singapore,,https://www.suss.edu.sg,2005,,,,,,https://www.suss.edu.sg,2026-08-09,,Pending Verification
+uni_my_001,Universiti Malaya,country_my,Kuala Lumpur,,https://www.um.edu.my/,1949,,,,,,https://www.um.edu.my/,2026-08-09,,Pending Verification
+uni_my_002,Universiti Kebangsaan Malaysia,country_my,Bangi,,https://www.ukm.my,1970,,,,,,https://www.ukm.my,2026-08-09,,Pending Verification
+uni_my_003,Universiti Putra Malaysia,country_my,Seri Kembangan,,https://upm.edu.my,1931,,,,,,https://upm.edu.my,2026-08-09,,Pending Verification
+uni_my_004,Universiti Sains Malaysia,country_my,George Town,,https://www.usm.my,1969,,,,,,https://www.usm.my,2026-08-09,,Pending Verification
+uni_my_005,Universiti Teknologi Malaysia,country_my,Johor Bahru,,https://www.utm.my,1975,,,,,,https://www.utm.my,2026-08-09,,Pending Verification
+uni_my_006,International Islamic University Malaysia,country_my,Kuala Lumpur,,http://www.iium.edu.my/,1983,,,,,,http://www.iium.edu.my/,2026-08-09,,Pending Verification
+uni_my_007,Universiti Teknologi PETRONAS,country_my,Ipoh,,http://www.utp.edu.my/,1997,,,,,,http://www.utp.edu.my/,2026-08-09,,Pending Verification
+uni_my_008,Taylor's University,country_my,Subang Jaya,,http://university.taylors.edu.my/,1969,,,,,,http://university.taylors.edu.my/,2026-08-09,,Pending Verification
+uni_my_009,Sunway University,country_my,Petaling Jaya,,https://sunwayuniversity.edu.my,2004,,,,,,https://sunwayuniversity.edu.my,2026-08-09,,Pending Verification
+uni_kr_001,Seoul National University,country_kr,Seoul,,https://www.snu.ac.kr,1946,,,,,,https://www.snu.ac.kr,2026-08-09,,Pending Verification
+uni_kr_002,Korea Advanced Institute of Science and Technology,country_kr,Daejeon,,https://www.kaist.ac.kr,1971,,,,,,https://www.kaist.ac.kr,2026-08-09,,Pending Verification
+uni_kr_003,Yonsei University,country_kr,Seoul,,https://www.yonsei.ac.kr,1885,,,,,,https://www.yonsei.ac.kr,2026-08-09,,Pending Verification
+uni_kr_004,Korea University,country_kr,Seoul,,https://www.korea.ac.kr,1905,,,,,,https://www.korea.ac.kr,2026-08-09,,Pending Verification
+uni_kr_005,Sungkyunkwan University,country_kr,Suwon,,https://skku.edu,1398,,,,,,https://skku.edu,2026-08-09,,Pending Verification
+uni_kr_006,Pohang University of Science and Technology,country_kr,Pohang,,http://www.postech.ac.kr/,1986,,,,,,http://www.postech.ac.kr/,2026-08-09,,Pending Verification
+uni_kr_007,Hanyang University,country_kr,Seoul,,http://www.hanyang.ac.kr/english/,1939,,,,,,http://www.hanyang.ac.kr/english/,2026-08-09,,Pending Verification
+uni_kr_008,Kyung Hee University,country_kr,Seoul,,http://www.kyunghee.edu/,1949,,,,,,http://www.kyunghee.edu/,2026-08-09,,Pending Verification
+uni_tw_001,National Taiwan University,country_tw,Taipei,,http://www.ntu.edu.tw/english/,1928,,,,,,http://www.ntu.edu.tw/english/,2026-08-09,,Pending Verification
+uni_tw_002,National Tsing Hua University,country_tw,Hsinchu,,http://www.nthu.edu.tw/english/,1911,,,,,,http://www.nthu.edu.tw/english/,2026-08-09,,Pending Verification
+uni_tw_003,National Yang Ming Chiao Tung University,country_tw,Hsinchu,,https://www.nycu.edu.tw/,1896,,,,,,https://www.nycu.edu.tw/,2026-08-09,,Pending Verification
+uni_tw_004,National Cheng Kung University,country_tw,Tainan City,,http://web.ncku.edu.tw/bin/home.php,1931,,,,,,http://web.ncku.edu.tw/bin/home.php,2026-08-09,,Pending Verification
+uni_tw_005,National Taiwan University of Science and Technology,country_tw,Taipei,,http://www.ntust.edu.tw/home.php?Lang=en,1974,,,,,,http://www.ntust.edu.tw/home.php?Lang=en,2026-08-09,,Pending Verification
+uni_hk_001,The University of Hong Kong,country_hk,Pok Fu Lam,,https://www.hku.hk,1911,,,,,,https://www.hku.hk,2026-08-09,,Pending Verification
+uni_hk_002,The Chinese University of Hong Kong,country_hk,Hong Kong,,http://www.cuhk.edu.hk/english/index.html,1963,,,,,,http://www.cuhk.edu.hk/english/index.html,2026-08-09,,Pending Verification
+uni_hk_003,The Hong Kong University of Science and Technology,country_hk,Hong Kong,,https://hkust.edu.hk,1991,,,,,,https://hkust.edu.hk,2026-08-09,,Pending Verification
+uni_hk_004,The Hong Kong Polytechnic University,country_hk,Hong Kong,,http://www.polyu.edu.hk/web/en/home/index.html,1937,,,,,,http://www.polyu.edu.hk/web/en/home/index.html,2026-08-09,,Pending Verification
+uni_hk_005,City University of Hong Kong,country_hk,Hong Kong,,https://www.cityu.edu.hk,1984,,,,,,https://www.cityu.edu.hk,2026-08-09,,Pending Verification
+uni_th_001,Chulalongkorn University,country_th,Bangkok,,http://www.chula.ac.th/en/,1917,,,,,,http://www.chula.ac.th/en/,2026-08-09,,Pending Verification
+uni_th_002,Mahidol University,country_th,Bangkok,,http://www.mahidol.ac.th/en/,1943,,,,,,http://www.mahidol.ac.th/en/,2026-08-09,,Pending Verification
+uni_th_003,Chiang Mai University,country_th,Chiang Mai,,http://www.cmu.ac.th/,1964,,,,,,http://www.cmu.ac.th/,2026-08-09,,Pending Verification
+uni_th_004,Thammasat University,country_th,Bangkok,,https://tu.ac.th,1934,,,,,,https://tu.ac.th,2026-08-09,,Pending Verification
+uni_th_005,Kasetsart University,country_th,Bangkok,,http://www.ku.ac.th/web2012/index.php?c=adms&m=mainpage1,1943,,,,,,http://www.ku.ac.th/web2012/index.php?c=adms&m=mainpage1,2026-08-09,,Pending Verification

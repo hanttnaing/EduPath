@@ -1,0 +1,37 @@
+﻿university_id,university_name,country_id,program_slot,program_name,degree_level_hint,official_source_url,collection_status,verification_status
+uni_jp_001,The University of Tokyo,country_jp,1,Computer Science,Master,https://www.i.u-tokyo.ac.jp/index_e.shtml,Program Identity Collected,Official Source Identified
+uni_jp_001,The University of Tokyo,country_jp,2,Mathematical Informatics,Master,https://www.i.u-tokyo.ac.jp/index_e.shtml,Program Identity Collected,Official Source Identified
+uni_jp_001,The University of Tokyo,country_jp,3,Information Physics & Computing,Master,https://www.i.u-tokyo.ac.jp/index_e.shtml,Program Identity Collected,Official Source Identified
+uni_jp_002,Kyoto University,country_jp,1,Intelligence Science and Technology,Master,https://www.i.kyoto-u.ac.jp/en/course/,Program Identity Collected,Official Source Identified
+uni_jp_002,Kyoto University,country_jp,2,Communications and Computer Engineering,Master,https://www.i.kyoto-u.ac.jp/en/course/,Program Identity Collected,Official Source Identified
+uni_jp_002,Kyoto University,country_jp,3,Data Science,Master,https://www.i.kyoto-u.ac.jp/en/course/,Program Identity Collected,Official Source Identified
+uni_jp_003,Osaka University,country_jp,1,Computer Science,Master,https://www.ist.osaka-u.ac.jp/english/,Program Identity Collected,Official Source Identified
+uni_jp_003,Osaka University,country_jp,2,Information Networking,Master,https://www.ist.osaka-u.ac.jp/english/majors/nw.php,Program Identity Collected,Official Source Identified
+uni_jp_003,Osaka University,country_jp,3,Multimedia Engineering,Master,https://www.ist.osaka-u.ac.jp/english/majors/mm.php,Program Identity Collected,Official Source Identified
+uni_jp_004,Tohoku University,country_jp,1,Computer and Mathematical Sciences,Master,https://www.is.tohoku.ac.jp/en/,Program Identity Collected,Official Source Identified
+uni_jp_004,Tohoku University,country_jp,2,System Information Sciences,Master,https://www.is.tohoku.ac.jp/en/,Program Identity Collected,Official Source Identified
+uni_jp_004,Tohoku University,country_jp,3,Applied Information Sciences,Master,https://www.is.tohoku.ac.jp/en/,Program Identity Collected,Official Source Identified
+uni_jp_005,Nagoya University,country_jp,1,Mathematical Informatics,Master,https://www.i.nagoya-u.ac.jp/en/graduate-school-of-informatics/,Program Identity Collected,Official Source Identified
+uni_jp_005,Nagoya University,country_jp,2,Computing and Software Systems,Master,https://www.i.nagoya-u.ac.jp/en/graduate-school-of-informatics/,Program Identity Collected,Official Source Identified
+uni_jp_005,Nagoya University,country_jp,3,Intelligent Systems,Master,https://www.i.nagoya-u.ac.jp/en/graduate-school-of-informatics/,Program Identity Collected,Official Source Identified
+uni_jp_006,Kyushu University,country_jp,1,International Master's/Doctoral Program in Information Science and Technology,Master,https://www.isc.kyushu-u.ac.jp/graduate/,Program Identity Collected,Official Source Identified
+uni_jp_006,Kyushu University,country_jp,2,International Master's/Doctoral Program in Electrical and Electronic Engineering,Master,https://www.isc.kyushu-u.ac.jp/graduate/,Program Identity Collected,Official Source Identified
+uni_jp_006,Kyushu University,country_jp,3,Master's Program in the Department of Design (Acoustic Design Course),Master,https://www.isc.kyushu-u.ac.jp/graduate/,Program Identity Collected,Official Source Identified
+uni_jp_007,Hokkaido University,country_jp,1,Computer Science and Information Technology,Master,https://www.ist.hokudai.ac.jp/eng/divisions/,Program Identity Collected,Official Source Identified
+uni_jp_007,Hokkaido University,country_jp,2,Media and Network Technologies,Master,https://www.ist.hokudai.ac.jp/eng/divisions/,Program Identity Collected,Official Source Identified
+uni_jp_007,Hokkaido University,country_jp,3,Systems Science and Informatics,Master,https://www.ist.hokudai.ac.jp/eng/divisions/,Program Identity Collected,Official Source Identified
+uni_jp_008,Institute of Science Tokyo,country_jp,1,Graduate major in Computer Science,Master,https://www.isct.ac.jp/en/001/about/organizations/school-of-computing,Program Identity Collected,Official Source Identified
+uni_jp_008,Institute of Science Tokyo,country_jp,2,Graduate major in Mathematical and Computing Science,Master,https://www.isct.ac.jp/en/001/about/organizations/school-of-computing,Program Identity Collected,Official Source Identified
+uni_jp_008,Institute of Science Tokyo,country_jp,3,Graduate major in Artificial Intelligence,Master,https://www.isct.ac.jp/en/001/about/organizations/school-of-computing,Program Identity Collected,Official Source Identified
+uni_jp_009,University of Tsukuba,country_jp,1,Computer Science,Master,https://www.sie.tsukuba.ac.jp/eng/edu/course/cs/,Program Identity Collected,Official Source Identified
+uni_jp_009,University of Tsukuba,country_jp,2,Intelligent and Mechanical Interaction Systems,Master,https://www.sie.tsukuba.ac.jp/eng/,Program Identity Collected,Official Source Identified
+uni_jp_009,University of Tsukuba,country_jp,3,Empowerment Informatics,PhD,https://www.emp.tsukuba.ac.jp/english,Program Identity Collected,Official Source Identified
+uni_jp_010,Kobe University,country_jp,1,Computer Science and Systems Engineering,Bachelor,https://www.csi.kobe-u.ac.jp/english/,Program Identity Collected,Official Source Identified
+uni_jp_010,Kobe University,country_jp,2,System Informatics,Master,https://www.csi.kobe-u.ac.jp/english/,Program Identity Collected,Official Source Identified
+uni_jp_010,Kobe University,country_jp,3,System Informatics,PhD,https://www.csi.kobe-u.ac.jp/english/,Program Identity Collected,Official Source Identified
+uni_jp_011,Waseda University,country_jp,1,Pure and Applied Mathematics,Master,https://www.waseda.jp/fsci/en/about/departments,Program Identity Collected,Official Source Identified
+uni_jp_011,Waseda University,country_jp,2,Computer Science and Communications Engineering,Master,https://www.waseda.jp/fsci/en/about/departments,Program Identity Collected,Official Source Identified
+uni_jp_011,Waseda University,country_jp,3,Intermedia Studies,Master,https://www.waseda.jp/fsci/en/about/departments,Program Identity Collected,Official Source Identified
+uni_jp_012,Keio University,country_jp,1,International Graduate Program,Master,https://www.keio.ac.jp/en/st/admissions-en/masters_program/,Program Identity Collected,Official Source Identified
+uni_jp_012,Keio University,country_jp,2,International Graduate Program,PhD,https://www.keio.ac.jp/en/st/admissions-en/phd_program/,Program Identity Collected,Official Source Identified
+uni_jp_012,Keio University,country_jp,3,Double Degree Program,Master,https://www.keio.ac.jp/en/st/admissions-en/dd/,Program Identity Collected,Official Source Identified

@@ -1,0 +1,11 @@
+﻿field,old_value,proposed_value,verification_status,source_note
+program_id,prog_jp_001,prog_jp_001,Keep,Existing internal ID remains valid.
+program_name,English Program in Information Science and Technology,English Program in Information Science and Technology,Verified,Official UTokyo page confirms the English Program in IST remains a regular study program.
+university_id,uni_jp_001,uni_jp_001,Verified,Program belongs to UTokyo Graduate School of Information Science and Technology.
+degree_level,Master,Master,Partially Verified,English Program accepts students in regular master's or doctoral courses; this record currently represents the master's level.
+field_of_study,Information Science and Technology,Information Science and Technology,Verified,Program spans the six departments of the Graduate School of IST.
+language,English,English,Verified,Official page states studies can be carried out entirely in English.
+annual_tuition,535800,535800,Verified,"AY2027 master's tuition is JPY 535,800."
+currency,JPY,JPY,Verified,Official tuition is stated in JPY.
+intake,"April, October",Department-dependent: April or October according to the regular entrance examination cycle,Verified with condition,"AY2027 graduate guide links Summer Examination to April entry and Winter Examination to October entry, but availability depends on department."
+data_status,Current,Partially Verified,Update,Program identity and English delivery are verified; intake representation still requires review.

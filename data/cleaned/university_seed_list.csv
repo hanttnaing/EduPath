@@ -1,0 +1,51 @@
+﻿country_id,country_name,university_name,national_source_name,national_source_url,selection_status,verification_status
+country_jp,Japan,The University of Tokyo,Study in Japan Official Website,https://www.studyinjapan.go.jp/en/search-for-schools/school_search.php,Seed Selected,Official Verification Pending
+country_jp,Japan,Kyoto University,Study in Japan Official Website,https://www.studyinjapan.go.jp/en/search-for-schools/school_search.php,Seed Selected,Official Verification Pending
+country_jp,Japan,Osaka University,Study in Japan Official Website,https://www.studyinjapan.go.jp/en/search-for-schools/school_search.php,Seed Selected,Official Verification Pending
+country_jp,Japan,Tohoku University,Study in Japan Official Website,https://www.studyinjapan.go.jp/en/search-for-schools/school_search.php,Seed Selected,Official Verification Pending
+country_jp,Japan,Nagoya University,Study in Japan Official Website,https://www.studyinjapan.go.jp/en/search-for-schools/school_search.php,Seed Selected,Official Verification Pending
+country_jp,Japan,Kyushu University,Study in Japan Official Website,https://www.studyinjapan.go.jp/en/search-for-schools/school_search.php,Seed Selected,Official Verification Pending
+country_jp,Japan,Hokkaido University,Study in Japan Official Website,https://www.studyinjapan.go.jp/en/search-for-schools/school_search.php,Seed Selected,Official Verification Pending
+country_jp,Japan,Institute of Science Tokyo,Study in Japan Official Website,https://www.studyinjapan.go.jp/en/search-for-schools/school_search.php,Seed Selected,Official Verification Pending
+country_jp,Japan,University of Tsukuba,Study in Japan Official Website,https://www.studyinjapan.go.jp/en/search-for-schools/school_search.php,Seed Selected,Official Verification Pending
+country_jp,Japan,Kobe University,Study in Japan Official Website,https://www.studyinjapan.go.jp/en/search-for-schools/school_search.php,Seed Selected,Official Verification Pending
+country_jp,Japan,Waseda University,Study in Japan Official Website,https://www.studyinjapan.go.jp/en/search-for-schools/school_search.php,Seed Selected,Official Verification Pending
+country_jp,Japan,Keio University,Study in Japan Official Website,https://www.studyinjapan.go.jp/en/search-for-schools/school_search.php,Seed Selected,Official Verification Pending
+country_sg,Singapore,National University of Singapore,Singapore Ministry of Education,https://www.moe.gov.sg/post-secondary/overview/autonomous-universities,Seed Selected,Official Verification Pending
+country_sg,Singapore,Nanyang Technological University,Singapore Ministry of Education,https://www.moe.gov.sg/post-secondary/overview/autonomous-universities,Seed Selected,Official Verification Pending
+country_sg,Singapore,Singapore Management University,Singapore Ministry of Education,https://www.moe.gov.sg/post-secondary/overview/autonomous-universities,Seed Selected,Official Verification Pending
+country_sg,Singapore,Singapore University of Technology and Design,Singapore Ministry of Education,https://www.moe.gov.sg/post-secondary/overview/autonomous-universities,Seed Selected,Official Verification Pending
+country_sg,Singapore,Singapore Institute of Technology,Singapore Ministry of Education,https://www.moe.gov.sg/post-secondary/overview/autonomous-universities,Seed Selected,Official Verification Pending
+country_sg,Singapore,Singapore University of Social Sciences,Singapore Ministry of Education,https://www.moe.gov.sg/post-secondary/overview/autonomous-universities,Seed Selected,Official Verification Pending
+country_my,Malaysia,Universiti Malaya,Education Malaysia,https://educationmalaysia.gov.my/,Seed Selected,Official Verification Pending
+country_my,Malaysia,Universiti Kebangsaan Malaysia,Education Malaysia,https://educationmalaysia.gov.my/,Seed Selected,Official Verification Pending
+country_my,Malaysia,Universiti Putra Malaysia,Education Malaysia,https://educationmalaysia.gov.my/,Seed Selected,Official Verification Pending
+country_my,Malaysia,Universiti Sains Malaysia,Education Malaysia,https://educationmalaysia.gov.my/,Seed Selected,Official Verification Pending
+country_my,Malaysia,Universiti Teknologi Malaysia,Education Malaysia,https://educationmalaysia.gov.my/,Seed Selected,Official Verification Pending
+country_my,Malaysia,International Islamic University Malaysia,Education Malaysia,https://educationmalaysia.gov.my/,Seed Selected,Official Verification Pending
+country_my,Malaysia,Universiti Teknologi PETRONAS,Education Malaysia,https://educationmalaysia.gov.my/,Seed Selected,Official Verification Pending
+country_my,Malaysia,Taylor's University,Education Malaysia,https://educationmalaysia.gov.my/,Seed Selected,Official Verification Pending
+country_my,Malaysia,Sunway University,Education Malaysia,https://educationmalaysia.gov.my/,Seed Selected,Official Verification Pending
+country_kr,South Korea,Seoul National University,Study in Korea,https://www.studyinkorea.go.kr/,Seed Selected,Official Verification Pending
+country_kr,South Korea,Korea Advanced Institute of Science and Technology,Study in Korea,https://www.studyinkorea.go.kr/,Seed Selected,Official Verification Pending
+country_kr,South Korea,Yonsei University,Study in Korea,https://www.studyinkorea.go.kr/,Seed Selected,Official Verification Pending
+country_kr,South Korea,Korea University,Study in Korea,https://www.studyinkorea.go.kr/,Seed Selected,Official Verification Pending
+country_kr,South Korea,Sungkyunkwan University,Study in Korea,https://www.studyinkorea.go.kr/,Seed Selected,Official Verification Pending
+country_kr,South Korea,Pohang University of Science and Technology,Study in Korea,https://www.studyinkorea.go.kr/,Seed Selected,Official Verification Pending
+country_kr,South Korea,Hanyang University,Study in Korea,https://www.studyinkorea.go.kr/,Seed Selected,Official Verification Pending
+country_kr,South Korea,Kyung Hee University,Study in Korea,https://www.studyinkorea.go.kr/,Seed Selected,Official Verification Pending
+country_tw,Taiwan,National Taiwan University,Study in Taiwan,https://www.studyintaiwan.org/how-to-apply/school,Seed Selected,Official Verification Pending
+country_tw,Taiwan,National Tsing Hua University,Study in Taiwan,https://www.studyintaiwan.org/how-to-apply/school,Seed Selected,Official Verification Pending
+country_tw,Taiwan,National Yang Ming Chiao Tung University,Study in Taiwan,https://www.studyintaiwan.org/how-to-apply/school,Seed Selected,Official Verification Pending
+country_tw,Taiwan,National Cheng Kung University,Study in Taiwan,https://www.studyintaiwan.org/how-to-apply/school,Seed Selected,Official Verification Pending
+country_tw,Taiwan,National Taiwan University of Science and Technology,Study in Taiwan,https://www.studyintaiwan.org/how-to-apply/school,Seed Selected,Official Verification Pending
+country_hk,Hong Kong,The University of Hong Kong,Hong Kong University Grants Committee,https://www.ugc.edu.hk/eng/ugc/site/fund_inst.html,Seed Selected,Official Verification Pending
+country_hk,Hong Kong,The Chinese University of Hong Kong,Hong Kong University Grants Committee,https://www.ugc.edu.hk/eng/ugc/site/fund_inst.html,Seed Selected,Official Verification Pending
+country_hk,Hong Kong,The Hong Kong University of Science and Technology,Hong Kong University Grants Committee,https://www.ugc.edu.hk/eng/ugc/site/fund_inst.html,Seed Selected,Official Verification Pending
+country_hk,Hong Kong,The Hong Kong Polytechnic University,Hong Kong University Grants Committee,https://www.ugc.edu.hk/eng/ugc/site/fund_inst.html,Seed Selected,Official Verification Pending
+country_hk,Hong Kong,City University of Hong Kong,Hong Kong University Grants Committee,https://www.ugc.edu.hk/eng/ugc/site/fund_inst.html,Seed Selected,Official Verification Pending
+country_th,Thailand,Chulalongkorn University,Thailand MHESI / OPS,https://www.ops.go.th/,Seed Selected,Official Verification Pending
+country_th,Thailand,Mahidol University,Thailand MHESI / OPS,https://www.ops.go.th/,Seed Selected,Official Verification Pending
+country_th,Thailand,Chiang Mai University,Thailand MHESI / OPS,https://www.ops.go.th/,Seed Selected,Official Verification Pending
+country_th,Thailand,Thammasat University,Thailand MHESI / OPS,https://www.ops.go.th/,Seed Selected,Official Verification Pending
+country_th,Thailand,Kasetsart University,Thailand MHESI / OPS,https://www.ops.go.th/,Seed Selected,Official Verification Pending

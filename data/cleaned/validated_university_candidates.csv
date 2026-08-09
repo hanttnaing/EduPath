@@ -1,0 +1,51 @@
+﻿country_id,country_name,country_code,ror_id,university_name,city,establishment_year,official_website,ror_last_modified,collected_at,candidate_status,completeness_score,validation_status
+country_jp,Japan,JP,https://ror.org/053h75930,Bunkyo University,Tokyo,1927,http://www.bunkyo.ac.jp,2024-12-11,2026-08-09,To Review,9,Candidate Selected
+country_jp,Japan,JP,https://ror.org/02cntp233,Daido University,Nagoya,1939,http://www.daido-it.ac.jp/,2024-12-11,2026-08-09,To Review,9,Candidate Selected
+country_jp,Japan,JP,https://ror.org/022b6b871,Jobu University,Isesaki,1950,http://www.jobu.ac.jp/,2024-12-11,2026-08-09,To Review,9,Candidate Selected
+country_jp,Japan,JP,https://ror.org/03x1wer98,Kaetsu University,Tokyo,2001,http://www.kaetsu.ac.jp/english/,2024-12-11,2026-08-09,To Review,9,Candidate Selected
+country_jp,Japan,JP,https://ror.org/027dkjg03,Keisen University,Tokyo,1988,http://www.keisen.ac.jp/,2024-12-11,2026-08-09,To Review,9,Candidate Selected
+country_jp,Japan,JP,https://ror.org/05q041y44,Kokugakuin University,Tokyo,1882,https://www.kokugakuin.ac.jp/,2024-12-11,2026-08-09,To Review,9,Candidate Selected
+country_jp,Japan,JP,https://ror.org/05tjaf288,Komazawa University,Tokyo,1592,https://www.komazawa-u.ac.jp/,2024-12-11,2026-08-09,To Review,9,Candidate Selected
+country_jp,Japan,JP,https://ror.org/03wkbyb17,Morioka University,Takizawa,1981,http://www.morioka-u.ac.jp,2024-12-11,2026-08-09,To Review,9,Candidate Selected
+country_jp,Japan,JP,https://ror.org/03a42q045,Nara University,Nara,1969,http://www.nara-u.ac.jp/,2024-12-11,2026-08-09,To Review,9,Candidate Selected
+country_jp,Japan,JP,https://ror.org/0496p0503,Rissho University,Tokyo,1580,http://www.ris.ac.jp,2024-12-11,2026-08-09,To Review,9,Candidate Selected
+country_jp,Japan,JP,https://ror.org/04q5p4a74,Seisen University,Tokyo,1938,https://www.seisen-u.ac.jp,2024-12-11,2026-08-09,To Review,9,Candidate Selected
+country_jp,Japan,JP,https://ror.org/03jzxkg37,Senshu University,Tokyo,1880,http://www.senshu-u.ac.jp/,2024-12-11,2026-08-09,To Review,9,Candidate Selected
+country_sg,Singapore,SG,https://ror.org/01y5z8p89,James Cook University Singapore,Singapore,2003,https://www.jcu.edu.sg/,2024-12-11,2026-08-09,To Review,9,Candidate Selected
+country_sg,Singapore,SG,https://ror.org/02e7b5302,Nanyang Technological University,Singapore,1991,https://www.ntu.edu.sg,2025-11-24,2026-08-09,To Review,9,Candidate Selected
+country_sg,Singapore,SG,https://ror.org/025yypj46,"National University Cancer Institute, Singapore",Singapore,2008,https://www.ncis.com.sg,2024-12-11,2026-08-09,To Review,9,Candidate Selected
+country_sg,Singapore,SG,https://ror.org/05tjjsh18,National University Health System,Singapore,2008,http://www.nuhs.edu.sg/#,2024-12-11,2026-08-09,To Review,9,Candidate Selected
+country_sg,Singapore,SG,https://ror.org/01tgyzw49,National University of Singapore,Singapore,1905,http://www.nus.edu.sg/,2026-07-20,2026-08-09,To Review,9,Candidate Selected
+country_sg,Singapore,SG,https://ror.org/00mbfhq81,Newcastle University Singapore,Singapore,2007,http://www.ncl.ac.uk/singapore/,2024-12-11,2026-08-09,To Review,9,Candidate Selected
+country_sg,Singapore,SG,https://ror.org/050qmg959,Singapore Management University,Singapore,2000,https://www.smu.edu.sg,2026-06-02,2026-08-09,To Review,9,Candidate Selected
+country_sg,Singapore,SG,https://ror.org/01s57k749,Singapore University of Social Sciences,Singapore,2005,https://www.suss.edu.sg,2025-02-26,2026-08-09,To Review,9,Candidate Selected
+country_my,Malaysia,MY,https://ror.org/007gerq75,AIMST University,Bedong,2001,https://aimst.edu.my,2024-12-11,2026-08-09,To Review,9,Candidate Selected
+country_my,Malaysia,MY,https://ror.org/00kb5s826,GlobalNxt University,Kuala Lumpur,2001,https://www.globalnxt.edu.my,2026-01-29,2026-08-09,To Review,9,Candidate Selected
+country_my,Malaysia,MY,https://ror.org/02y2cxp25,HELP University,Kuala Lumpur,1986,https://help.edu.my/,2024-12-11,2026-08-09,To Review,9,Candidate Selected
+country_my,Malaysia,MY,https://ror.org/04d4wjw61,IMU University,Kuala Lumpur,1992,https://imu.edu.my,2026-02-24,2026-08-09,To Review,9,Candidate Selected
+country_my,Malaysia,MY,https://ror.org/00p43ne90,Mahsa University,Kuala Lumpur,2005,http://www.mahsa.edu.my/,2024-12-11,2026-08-09,To Review,9,Candidate Selected
+country_my,Malaysia,MY,https://ror.org/04zrbnc33,Multimedia University,Malacca,1996,https://www.mmu.edu.my/,2024-12-11,2026-08-09,To Review,9,Candidate Selected
+country_my,Malaysia,MY,https://ror.org/037zqsm37,Nilai University,Kampung Baharu Nilai,1997,https://www.nilai.edu.my/,2024-12-11,2026-08-09,To Review,9,Candidate Selected
+country_my,Malaysia,MY,https://ror.org/00wfd0g93,Perdana University,Kota Kinabalu,2011,https://www.perdanauniversity.edu.my,2026-07-20,2026-08-09,To Review,9,Candidate Selected
+country_kr,South Korea,KR,https://ror.org/05ba5yp12,Daeduk University,Daejeon,1981,http://english.ddu.ac.kr,2024-12-11,2026-08-09,To Review,9,Candidate Selected
+country_kr,South Korea,KR,https://ror.org/05r0sb604,Kyungbok University,Namyangju,1991,http://eng.kbu.ac.kr/,2024-12-11,2026-08-09,To Review,9,Candidate Selected
+country_kr,South Korea,KR,https://ror.org/03d3d5f32,Kyungmin University,Uijeongbu-si,1967,http://www.kyungmin.ac.kr/site/english/main.do,2024-12-11,2026-08-09,To Review,9,Candidate Selected
+country_kr,South Korea,KR,https://ror.org/011mzb617,Masan University,Changwon,1956,http://masan.ac.kr/eng/Main.do,2024-12-11,2026-08-09,To Review,9,Candidate Selected
+country_kr,South Korea,KR,https://ror.org/04dqc4x73,Osan University,Osan,1978,https://www.osan.ac.kr/?menuno=127,2024-12-11,2026-08-09,To Review,9,Candidate Selected
+country_kr,South Korea,KR,https://ror.org/01wf22864,Seoil University,Seoul,1974,http://hm.seoil.ac.kr/,2024-12-11,2026-08-09,To Review,9,Candidate Selected
+country_kr,South Korea,KR,https://ror.org/01hcawk58,Seoyeong University,Gwangju,1978,http://www.seoyeong.ac.kr,2024-12-11,2026-08-09,To Review,9,Candidate Selected
+country_tw,Taiwan,TW,https://ror.org/00ke8ye77,Aletheia University,Taipei,1872,https://www.au.edu.tw/,2024-12-11,2026-08-09,To Review,9,Candidate Selected
+country_tw,Taiwan,TW,https://ror.org/03c6e8r26,Dayeh University,Dacun,1990,http://www.dyu.edu.tw/english/,2024-12-11,2026-08-09,To Review,9,Candidate Selected
+country_tw,Taiwan,TW,https://ror.org/02x5hb316,Huafan University,Taipei,1990,http://www.hfu.edu.tw/,2024-12-11,2026-08-09,To Review,9,Candidate Selected
+country_tw,Taiwan,TW,https://ror.org/018p1hd91,Kainan University,Taoyuan,1917,http://www.knu.edu.tw/bin/home.php,2024-12-11,2026-08-09,To Review,9,Candidate Selected
+country_tw,Taiwan,TW,https://ror.org/01nrk6j30,MingDao University,Bitou,2001,http://eng.mdu.edu.tw/,2024-12-11,2026-08-09,To Review,9,Candidate Selected
+country_hk,Hong Kong,HK,https://ror.org/00t33hh48,Chinese University of Hong Kong,Hong Kong,1963,http://www.cuhk.edu.hk/english/index.html,2026-07-20,2026-08-09,To Review,9,Candidate Selected
+country_hk,Hong Kong,HK,https://ror.org/0145fw131,Hong Kong Baptist University,Hong Kong,1956,https://www.hkbu.edu.hk,2025-10-28,2026-08-09,To Review,9,Candidate Selected
+country_hk,Hong Kong,HK,https://ror.org/0349bsm71,Hong Kong Metropolitan University,Hong Kong,1989,https://www.hkmu.edu.hk,2025-05-05,2026-08-09,To Review,9,Candidate Selected
+country_hk,Hong Kong,HK,https://ror.org/0030zas98,Hong Kong Polytechnic University,Hong Kong,1937,http://www.polyu.edu.hk/web/en/home/index.html,2026-07-20,2026-08-09,To Review,9,Candidate Selected
+country_hk,Hong Kong,HK,https://ror.org/023t8mt09,Hong Kong Shue Yan University,Hong Kong,1971,https://www.hksyu.edu,2024-12-11,2026-08-09,To Review,9,Candidate Selected
+country_th,Thailand,TH,https://ror.org/04hah6r58,Asian University,Bang Lamung,1993,http://www.asianu.ac.th/,2024-12-11,2026-08-09,To Review,9,Candidate Selected
+country_th,Thailand,TH,https://ror.org/002qeva03,Bangkok University,Bangkok,1962,http://www.bu.ac.th/eng/,2024-12-11,2026-08-09,To Review,9,Candidate Selected
+country_th,Thailand,TH,https://ror.org/04gyfd783,Chaopraya University,Nakhon Sawan,1988,http://www.cpu.ac.th/,2024-12-11,2026-08-09,To Review,9,Candidate Selected
+country_th,Thailand,TH,https://ror.org/01crwkz66,Fatoni University,Pattani,1998,http://www.ftu.ac.th/,2024-12-11,2026-08-09,To Review,9,Candidate Selected
+country_th,Thailand,TH,https://ror.org/02g702008,Kalasin University,Kalasin,1997,https://www.ksu.ac.th/,2024-12-11,2026-08-09,To Review,9,Candidate Selected

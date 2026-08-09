@@ -1,0 +1,8 @@
+country_id,country_name,region,target_universities,target_programs,target_scholarships,priority,status
+country_jp,Japan,East Asia,12,40,20,High,In Progress
+country_sg,Singapore,Southeast Asia,8,25,12,High,Planned
+country_my,Malaysia,Southeast Asia,8,25,12,High,Planned
+country_kr,South Korea,East Asia,7,20,10,Medium,Planned
+country_tw,Taiwan,East Asia,5,15,8,Medium,Planned
+country_hk,Hong Kong,East Asia,5,15,8,Medium,Planned
+country_th,Thailand,Southeast Asia,5,10,5,Medium,Planned
