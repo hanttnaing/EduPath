@@ -19,7 +19,7 @@ INPUT_WORKBOOK = (
     PROJECT_ROOT
     / "data"
     / "sample"
-    / "05_prototype_dataset.xlsx"
+    / "06_full_dataset.xlsx"
 )
 
 UNIVERSITIES_JSON = (
@@ -473,10 +473,15 @@ def transform_program(
                 "minimum_gpa cannot be greater than gpa_scale."
             )
 
-        freshness_status = clean_required_text(
+        raw_freshness_status = clean_required_text(
             raw_record.get("freshness_status"),
             "freshness_status",
         ).lower()
+
+        if raw_freshness_status.startswith("partial"):
+            freshness_status = "unknown"
+        else:
+            freshness_status = raw_freshness_status
 
         if freshness_status not in ALLOWED_FRESHNESS_STATUSES:
             raise ValueError(

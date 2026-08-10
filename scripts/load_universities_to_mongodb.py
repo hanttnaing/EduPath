@@ -85,10 +85,17 @@ def prepare_document(
         "collected_at",
     )
 
-    document["last_verified_at"] = parse_iso_date(
-        document.get("last_verified_at"),
-        "last_verified_at",
+    last_verified_at = document.get(
+        "last_verified_at"
     )
+
+    if last_verified_at is None:
+        document["last_verified_at"] = None
+    else:
+        document["last_verified_at"] = parse_iso_date(
+            last_verified_at,
+            "last_verified_at",
+        )
 
     # Record when this loader last processed the document.
     document["database_updated_at"] = datetime.now(

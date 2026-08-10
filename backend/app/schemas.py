@@ -30,7 +30,7 @@ class UniversityResponse(BaseModel):
     university_name: str
     country_id: str
     city: str
-    university_type: str
+    university_type: str | None = None
     official_website: str
 
     establishment_year: int | None = None
@@ -39,13 +39,12 @@ class UniversityResponse(BaseModel):
     ranking_year: int | None = None
 
     degree_levels: list[str] = Field(default_factory=list)
-    scholarship_available: bool
+    scholarship_available: bool | None = None
 
     source_url: str
     collected_at: datetime
-    last_verified_at: datetime
+    last_verified_at: datetime | None = None
     freshness_status: str
-
 
 class UniversityListResponse(BaseModel):
     """Response returned for a university list request."""

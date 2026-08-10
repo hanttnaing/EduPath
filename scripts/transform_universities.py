@@ -18,7 +18,7 @@ INPUT_WORKBOOK = (
     PROJECT_ROOT
     / "data"
     / "sample"
-    / "05_prototype_dataset.xlsx"
+    / "06_full_dataset.xlsx"
 )
 
 OUTPUT_DIRECTORY = PROJECT_ROOT / "data" / "cleaned"
@@ -246,21 +246,33 @@ def transform_university(
     """Clean and validate one university record."""
 
     try:
-        university_type = clean_required_text(
-            raw_record.get("university_type"),
-            "university_type",
+        university_type = clean_optional_text(
+            raw_record.get("university_type")
         )
 
-        if university_type not in ALLOWED_UNIVERSITY_TYPES:
+        if (
+            university_type is not None
+            and university_type
+            not in ALLOWED_UNIVERSITY_TYPES
+        ):
             raise ValueError(
                 "Field 'university_type' must be one of: "
-                + ", ".join(sorted(ALLOWED_UNIVERSITY_TYPES))
+                + ", ".join(
+                    sorted(ALLOWED_UNIVERSITY_TYPES)
+                )
             )
 
-        degree_levels = clean_array(
-            raw_record.get("degree_levels"),
-            "degree_levels",
+        raw_degree_levels = raw_record.get(
+            "degree_levels"
         )
+
+        if is_missing(raw_degree_levels):
+            degree_levels = []
+        else:
+            degree_levels = clean_array(
+                raw_degree_levels,
+                "degree_levels",
+            )
 
         invalid_degree_levels = [
             level
@@ -274,15 +286,50 @@ def transform_university(
                 + ", ".join(invalid_degree_levels)
             )
 
-        freshness_status = clean_required_text(
+        raw_freshness_status = clean_required_text(
             raw_record.get("freshness_status"),
             "freshness_status",
         ).lower()
 
+        freshness_status_aliases = {
+            "pending verification": "unknown",
+        }
+
+        freshness_status = freshness_status_aliases.get(
+            raw_freshness_status,
+            raw_freshness_status,
+        )
+
         if freshness_status not in ALLOWED_FRESHNESS_STATUSES:
             raise ValueError(
                 "Field 'freshness_status' must be one of: "
-                + ", ".join(sorted(ALLOWED_FRESHNESS_STATUSES))
+                + ", ".join(
+                    sorted(ALLOWED_FRESHNESS_STATUSES)
+                )
+            )
+
+        raw_scholarship_available = raw_record.get(
+            "scholarship_available"
+        )
+
+        if is_missing(raw_scholarship_available):
+            scholarship_available = None
+        else:
+            scholarship_available = clean_boolean(
+                raw_scholarship_available,
+                "scholarship_available",
+            )
+
+        raw_last_verified_at = raw_record.get(
+            "last_verified_at"
+        )
+
+        if is_missing(raw_last_verified_at):
+            last_verified_at = None
+        else:
+            last_verified_at = clean_date(
+                raw_last_verified_at,
+                "last_verified_at",
             )
 
         cleaned_record = {
@@ -323,10 +370,7 @@ def transform_university(
                 "ranking_year",
             ),
             "degree_levels": degree_levels,
-            "scholarship_available": clean_boolean(
-                raw_record.get("scholarship_available"),
-                "scholarship_available",
-            ),
+            "scholarship_available": scholarship_available,
             "source_url": validate_url(
                 raw_record.get("source_url"),
                 "source_url",
@@ -335,10 +379,7 @@ def transform_university(
                 raw_record.get("collected_at"),
                 "collected_at",
             ),
-            "last_verified_at": clean_date(
-                raw_record.get("last_verified_at"),
-                "last_verified_at",
-            ),
+            "last_verified_at": last_verified_at,
             "freshness_status": freshness_status,
         }
 
