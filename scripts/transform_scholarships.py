@@ -19,7 +19,7 @@ INPUT_WORKBOOK = (
     PROJECT_ROOT
     / "data"
     / "sample"
-    / "05_prototype_dataset.xlsx"
+    / "06_full_dataset.xlsx"
 )
 
 COUNTRIES_JSON = (
