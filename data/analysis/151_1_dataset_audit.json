@@ -1,0 +1,590 @@
+{
+  "project": "EduPath Analytics",
+  "analysis_layer": true,
+  "analysis_step": "151.1",
+  "analysis_name": "Data Analysis Readiness and Quality Assessment",
+  "generated_at": "2026-08-12T12:18:06.406500+00:00",
+  "database": "edupath_db",
+  "database_modified": false,
+  "dataset_counts": {
+    "countries": 7,
+    "universities": 54,
+    "programs": 36,
+    "scholarships": 12
+  },
+  "field_completeness": {
+    "countries": {
+      "total_records": 7,
+      "average_field_completeness_percent": 100.0,
+      "fields": {
+        "country_id": {
+          "aliases": [
+            "country_id"
+          ],
+          "present": 7,
+          "missing": 0,
+          "completeness_percent": 100.0
+        },
+        "country_name": {
+          "aliases": [
+            "country_name",
+            "name"
+          ],
+          "present": 7,
+          "missing": 0,
+          "completeness_percent": 100.0
+        },
+        "region": {
+          "aliases": [
+            "region",
+            "subregion"
+          ],
+          "present": 7,
+          "missing": 0,
+          "completeness_percent": 100.0
+        }
+      }
+    },
+    "universities": {
+      "total_records": 54,
+      "average_field_completeness_percent": 62.5,
+      "fields": {
+        "university_id": {
+          "aliases": [
+            "university_id"
+          ],
+          "present": 54,
+          "missing": 0,
+          "completeness_percent": 100.0
+        },
+        "university_name": {
+          "aliases": [
+            "university_name",
+            "name"
+          ],
+          "present": 54,
+          "missing": 0,
+          "completeness_percent": 100.0
+        },
+        "country_id": {
+          "aliases": [
+            "country_id"
+          ],
+          "present": 54,
+          "missing": 0,
+          "completeness_percent": 100.0
+        },
+        "city": {
+          "aliases": [
+            "city",
+            "location_city"
+          ],
+          "present": 54,
+          "missing": 0,
+          "completeness_percent": 100.0
+        },
+        "institution_type": {
+          "aliases": [
+            "institution_type",
+            "university_type",
+            "type"
+          ],
+          "present": 0,
+          "missing": 54,
+          "completeness_percent": 0.0
+        },
+        "ranking": {
+          "aliases": [
+            "ranking",
+            "qs_rank",
+            "world_rank",
+            "global_rank"
+          ],
+          "present": 0,
+          "missing": 54,
+          "completeness_percent": 0.0
+        },
+        "official_website": {
+          "aliases": [
+            "official_website",
+            "website",
+            "university_url"
+          ],
+          "present": 54,
+          "missing": 0,
+          "completeness_percent": 100.0
+        },
+        "last_verified_at": {
+          "aliases": [
+            "last_verified_at"
+          ],
+          "present": 0,
+          "missing": 54,
+          "completeness_percent": 0.0
+        }
+      }
+    },
+    "programs": {
+      "total_records": 36,
+      "average_field_completeness_percent": 75.0,
+      "fields": {
+        "program_id": {
+          "aliases": [
+            "program_id"
+          ],
+          "present": 36,
+          "missing": 0,
+          "completeness_percent": 100.0
+        },
+        "university_id": {
+          "aliases": [
+            "university_id"
+          ],
+          "present": 36,
+          "missing": 0,
+          "completeness_percent": 100.0
+        },
+        "program_name": {
+          "aliases": [
+            "program_name",
+            "name"
+          ],
+          "present": 36,
+          "missing": 0,
+          "completeness_percent": 100.0
+        },
+        "field_of_study": {
+          "aliases": [
+            "field_of_study",
+            "field"
+          ],
+          "present": 36,
+          "missing": 0,
+          "completeness_percent": 100.0
+        },
+        "degree_level": {
+          "aliases": [
+            "degree_level",
+            "degree"
+          ],
+          "present": 36,
+          "missing": 0,
+          "completeness_percent": 100.0
+        },
+        "duration_years": {
+          "aliases": [
+            "duration_years",
+            "duration"
+          ],
+          "present": 36,
+          "missing": 0,
+          "completeness_percent": 100.0
+        },
+        "study_mode": {
+          "aliases": [
+            "study_mode"
+          ],
+          "present": 36,
+          "missing": 0,
+          "completeness_percent": 100.0
+        },
+        "language_of_instruction": {
+          "aliases": [
+            "language_of_instruction",
+            "language"
+          ],
+          "present": 36,
+          "missing": 0,
+          "completeness_percent": 100.0
+        },
+        "tuition_fee": {
+          "aliases": [
+            "tuition_fee",
+            "annual_tuition"
+          ],
+          "present": 36,
+          "missing": 0,
+          "completeness_percent": 100.0
+        },
+        "tuition_currency": {
+          "aliases": [
+            "tuition_currency",
+            "currency"
+          ],
+          "present": 36,
+          "missing": 0,
+          "completeness_percent": 100.0
+        },
+        "tuition_period": {
+          "aliases": [
+            "tuition_period"
+          ],
+          "present": 36,
+          "missing": 0,
+          "completeness_percent": 100.0
+        },
+        "tuition_academic_year": {
+          "aliases": [
+            "tuition_academic_year"
+          ],
+          "present": 36,
+          "missing": 0,
+          "completeness_percent": 100.0
+        },
+        "tuition_source_url": {
+          "aliases": [
+            "tuition_source_url"
+          ],
+          "present": 36,
+          "missing": 0,
+          "completeness_percent": 100.0
+        },
+        "minimum_gpa": {
+          "aliases": [
+            "minimum_gpa"
+          ],
+          "present": 0,
+          "missing": 36,
+          "completeness_percent": 0.0
+        },
+        "gpa_scale": {
+          "aliases": [
+            "gpa_scale"
+          ],
+          "present": 0,
+          "missing": 36,
+          "completeness_percent": 0.0
+        },
+        "ielts_requirement": {
+          "aliases": [
+            "ielts_requirement",
+            "minimum_ielts"
+          ],
+          "present": 0,
+          "missing": 36,
+          "completeness_percent": 0.0
+        },
+        "toefl_requirement": {
+          "aliases": [
+            "toefl_requirement",
+            "minimum_toefl"
+          ],
+          "present": 0,
+          "missing": 36,
+          "completeness_percent": 0.0
+        },
+        "intake": {
+          "aliases": [
+            "intake",
+            "intakes"
+          ],
+          "present": 9,
+          "missing": 27,
+          "completeness_percent": 25.0
+        },
+        "application_deadline": {
+          "aliases": [
+            "application_deadline"
+          ],
+          "present": 9,
+          "missing": 27,
+          "completeness_percent": 25.0
+        },
+        "program_url": {
+          "aliases": [
+            "program_url",
+            "official_website"
+          ],
+          "present": 36,
+          "missing": 0,
+          "completeness_percent": 100.0
+        },
+        "last_verified_at": {
+          "aliases": [
+            "last_verified_at"
+          ],
+          "present": 36,
+          "missing": 0,
+          "completeness_percent": 100.0
+        },
+        "freshness_status": {
+          "aliases": [
+            "freshness_status"
+          ],
+          "present": 36,
+          "missing": 0,
+          "completeness_percent": 100.0
+        }
+      }
+    },
+    "scholarships": {
+      "total_records": 12,
+      "average_field_completeness_percent": 58.33,
+      "fields": {
+        "scholarship_id": {
+          "aliases": [
+            "scholarship_id"
+          ],
+          "present": 12,
+          "missing": 0,
+          "completeness_percent": 100.0
+        },
+        "scholarship_name": {
+          "aliases": [
+            "scholarship_name",
+            "name"
+          ],
+          "present": 12,
+          "missing": 0,
+          "completeness_percent": 100.0
+        },
+        "country_id": {
+          "aliases": [
+            "country_id"
+          ],
+          "present": 12,
+          "missing": 0,
+          "completeness_percent": 100.0
+        },
+        "host_university_id": {
+          "aliases": [
+            "host_university_id"
+          ],
+          "present": 12,
+          "missing": 0,
+          "completeness_percent": 100.0
+        },
+        "provider_name": {
+          "aliases": [
+            "provider_name",
+            "provider"
+          ],
+          "present": 12,
+          "missing": 0,
+          "completeness_percent": 100.0
+        },
+        "degree_levels": {
+          "aliases": [
+            "degree_levels",
+            "degree_level"
+          ],
+          "present": 12,
+          "missing": 0,
+          "completeness_percent": 100.0
+        },
+        "funding_type": {
+          "aliases": [
+            "funding_type",
+            "funding"
+          ],
+          "present": 12,
+          "missing": 0,
+          "completeness_percent": 100.0
+        },
+        "scholarship_status": {
+          "aliases": [
+            "scholarship_status",
+            "status"
+          ],
+          "present": 12,
+          "missing": 0,
+          "completeness_percent": 100.0
+        },
+        "fields_of_study": {
+          "aliases": [
+            "fields_of_study",
+            "field_of_study"
+          ],
+          "present": 1,
+          "missing": 11,
+          "completeness_percent": 8.33
+        },
+        "eligible_nationalities": {
+          "aliases": [
+            "eligible_nationalities"
+          ],
+          "present": 0,
+          "missing": 12,
+          "completeness_percent": 0.0
+        },
+        "minimum_gpa": {
+          "aliases": [
+            "minimum_gpa"
+          ],
+          "present": 0,
+          "missing": 12,
+          "completeness_percent": 0.0
+        },
+        "gpa_scale": {
+          "aliases": [
+            "gpa_scale"
+          ],
+          "present": 0,
+          "missing": 12,
+          "completeness_percent": 0.0
+        },
+        "ielts_requirement": {
+          "aliases": [
+            "ielts_requirement",
+            "minimum_ielts"
+          ],
+          "present": 0,
+          "missing": 12,
+          "completeness_percent": 0.0
+        },
+        "toefl_requirement": {
+          "aliases": [
+            "toefl_requirement",
+            "minimum_toefl"
+          ],
+          "present": 0,
+          "missing": 12,
+          "completeness_percent": 0.0
+        },
+        "age_limit": {
+          "aliases": [
+            "age_limit"
+          ],
+          "present": 0,
+          "missing": 12,
+          "completeness_percent": 0.0
+        },
+        "application_cycle": {
+          "aliases": [
+            "application_cycle"
+          ],
+          "present": 12,
+          "missing": 0,
+          "completeness_percent": 100.0
+        },
+        "application_opening_date": {
+          "aliases": [
+            "application_opening_date"
+          ],
+          "present": 1,
+          "missing": 11,
+          "completeness_percent": 8.33
+        },
+        "application_deadline": {
+          "aliases": [
+            "application_deadline"
+          ],
+          "present": 1,
+          "missing": 11,
+          "completeness_percent": 8.33
+        },
+        "official_website": {
+          "aliases": [
+            "official_website",
+            "scholarship_url"
+          ],
+          "present": 12,
+          "missing": 0,
+          "completeness_percent": 100.0
+        },
+        "last_verified_at": {
+          "aliases": [
+            "last_verified_at"
+          ],
+          "present": 12,
+          "missing": 0,
+          "completeness_percent": 100.0
+        },
+        "freshness_status": {
+          "aliases": [
+            "freshness_status"
+          ],
+          "present": 12,
+          "missing": 0,
+          "completeness_percent": 100.0
+        }
+      }
+    }
+  },
+  "duplicate_id_analysis": {
+    "country_ids": [],
+    "university_ids": [],
+    "program_ids": [],
+    "scholarship_ids": []
+  },
+  "duplicate_id_count": 0,
+  "relationship_integrity": {
+    "status": "PASS",
+    "total_relationship_errors": 0,
+    "orphan_university_records": [],
+    "orphan_program_records": [],
+    "invalid_scholarship_country_records": [],
+    "invalid_scholarship_host_university_records": []
+  },
+  "foundation_distributions": {
+    "program_degree": {
+      "Master": 32,
+      "PhD": 3,
+      "Bachelor": 1
+    },
+    "program_field": {
+      "Information Science & Informatics": 7,
+      "Computer Science": 5,
+      "Mathematics & Mathematical Informatics": 5,
+      "Artificial Intelligence & Intelligent Systems": 4,
+      "Networks & Communications": 4,
+      "Interdisciplinary Science & Engineering": 3,
+      "Media & Design": 3,
+      "Software & Systems Engineering": 3,
+      "Data Science": 1,
+      "Electrical & Electronic Engineering": 1
+    },
+    "program_language": {
+      "English Available": 12,
+      "Unknown": 11,
+      "English": 6,
+      "Mixed": 4,
+      "Japanese": 3
+    },
+    "scholarship_degree": {
+      "PhD": 9,
+      "Master": 8,
+      "Bachelor": 2
+    },
+    "scholarship_funding": {
+      "Fully Funded": 12
+    },
+    "scholarship_status": {
+      "upcoming": 12
+    }
+  },
+  "tuition_foundation": {
+    "program_count": 36,
+    "tuition_available": 36,
+    "tuition_missing": 0,
+    "tuition_invalid": 0,
+    "tuition_availability_percent": 100.0,
+    "distinct_tuition_values": 6,
+    "tuition_value_distribution": {
+      "535800": 24,
+      "608800": 3,
+      "635400": 3,
+      "740000": 1,
+      "991000": 3,
+      "1160000": 2
+    }
+  },
+  "analysis_readiness": {
+    "status": "READY_FOR_ANALYSIS",
+    "positive_findings": [
+      "Program degree-level data is sufficiently complete for degree-distribution analysis.",
+      "Program tuition data is sufficiently complete for tuition analysis.",
+      "Dataset relationships passed integrity checks."
+    ],
+    "coverage_notes": [
+      "The current program analysis represents the programs currently included in EduPath and should not yet be generalised to every university program in Japan.",
+      "Scholarship findings are currently dataset-level findings because the scholarship collection is still targeted.",
+      "Structured scholarship fields-of-study coverage is still developing. Missing field information is therefore treated as uncertainty rather than as a confirmed mismatch.",
+      "GPA requirement coverage is not complete for every scholarship; eligibility confidence accounts for this uncertainty.",
+      "English requirement coverage is not complete for every scholarship; unavailable requirements remain UNKNOWN.",
+      "Nationality eligibility information is not available for every scholarship record."
+    ]
+  },
+  "scope_note": "Analytical results currently describe the curated EduPath dataset. The system architecture supports future expansion to additional universities, programs and scholarships.",
+  "methodology_note": "Missing data is measured explicitly instead of silently replacing unknown values. This supports transparent and confidence-aware analysis."
+}

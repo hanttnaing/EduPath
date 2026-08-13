@@ -1,0 +1,16 @@
+﻿comparison_type,name,program_count,mean_tuition_jpy,median_tuition_jpy,minimum_tuition_jpy,maximum_tuition_jpy
+degree_level,Bachelor,1,535800.0,535800.0,535800.0,535800.0
+degree_level,PhD,3,628200.0,608800.0,535800.0,740000.0
+degree_level,Master,32,631387.5,535800.0,535800.0,1160000.0
+university,The University of Tokyo,3,535800.0,535800.0,535800.0,535800.0
+university,Kyoto University,3,535800.0,535800.0,535800.0,535800.0
+university,Osaka University,3,535800.0,535800.0,535800.0,535800.0
+university,Tohoku University,3,535800.0,535800.0,535800.0,535800.0
+university,Nagoya University,3,535800.0,535800.0,535800.0,535800.0
+university,Kyushu University,3,535800.0,535800.0,535800.0,535800.0
+university,Hokkaido University,3,535800.0,535800.0,535800.0,535800.0
+university,Kobe University,3,535800.0,535800.0,535800.0,535800.0
+university,University of Tsukuba,3,608800.0,608800.0,608800.0,608800.0
+university,Institute of Science Tokyo,3,635400.0,635400.0,635400.0,635400.0
+university,Waseda University,3,991000.0,991000.0,991000.0,991000.0
+university,Keio University,3,1020000.0,1160000.0,740000.0,1160000.0

@@ -1,0 +1,556 @@
+{
+  "step": "151.5",
+  "title": "Comparative & Decision-Oriented Analysis",
+  "generated_at": "2026-08-12T13:46:19.595266+00:00",
+  "database": "edupath_db",
+  "analysis_scope": "Current EduPath dataset only",
+  "dataset_counts": {
+    "programs": 36,
+    "universities": 54,
+    "scholarships": 12,
+    "programs_with_tuition": 36
+  },
+  "overall_tuition_statistics": {
+    "count": 36,
+    "mean": 628466.67,
+    "median": 535800.0,
+    "minimum": 535800.0,
+    "maximum": 1160000.0,
+    "standard_deviation": 180983.54,
+    "q1": 535800.0,
+    "q3": 615450.0
+  },
+  "degree_comparison": [
+    {
+      "degree_level": "Bachelor",
+      "program_count": 1,
+      "mean_tuition_jpy": 535800.0,
+      "median_tuition_jpy": 535800.0,
+      "minimum_tuition_jpy": 535800.0,
+      "maximum_tuition_jpy": 535800.0
+    },
+    {
+      "degree_level": "PhD",
+      "program_count": 3,
+      "mean_tuition_jpy": 628200.0,
+      "median_tuition_jpy": 608800.0,
+      "minimum_tuition_jpy": 535800.0,
+      "maximum_tuition_jpy": 740000.0
+    },
+    {
+      "degree_level": "Master",
+      "program_count": 32,
+      "mean_tuition_jpy": 631387.5,
+      "median_tuition_jpy": 535800.0,
+      "minimum_tuition_jpy": 535800.0,
+      "maximum_tuition_jpy": 1160000.0
+    }
+  ],
+  "university_comparison": [
+    {
+      "university": "The University of Tokyo",
+      "program_count": 3,
+      "mean_tuition_jpy": 535800.0,
+      "median_tuition_jpy": 535800.0,
+      "minimum_tuition_jpy": 535800.0,
+      "maximum_tuition_jpy": 535800.0
+    },
+    {
+      "university": "Kyoto University",
+      "program_count": 3,
+      "mean_tuition_jpy": 535800.0,
+      "median_tuition_jpy": 535800.0,
+      "minimum_tuition_jpy": 535800.0,
+      "maximum_tuition_jpy": 535800.0
+    },
+    {
+      "university": "Osaka University",
+      "program_count": 3,
+      "mean_tuition_jpy": 535800.0,
+      "median_tuition_jpy": 535800.0,
+      "minimum_tuition_jpy": 535800.0,
+      "maximum_tuition_jpy": 535800.0
+    },
+    {
+      "university": "Tohoku University",
+      "program_count": 3,
+      "mean_tuition_jpy": 535800.0,
+      "median_tuition_jpy": 535800.0,
+      "minimum_tuition_jpy": 535800.0,
+      "maximum_tuition_jpy": 535800.0
+    },
+    {
+      "university": "Nagoya University",
+      "program_count": 3,
+      "mean_tuition_jpy": 535800.0,
+      "median_tuition_jpy": 535800.0,
+      "minimum_tuition_jpy": 535800.0,
+      "maximum_tuition_jpy": 535800.0
+    },
+    {
+      "university": "Kyushu University",
+      "program_count": 3,
+      "mean_tuition_jpy": 535800.0,
+      "median_tuition_jpy": 535800.0,
+      "minimum_tuition_jpy": 535800.0,
+      "maximum_tuition_jpy": 535800.0
+    },
+    {
+      "university": "Hokkaido University",
+      "program_count": 3,
+      "mean_tuition_jpy": 535800.0,
+      "median_tuition_jpy": 535800.0,
+      "minimum_tuition_jpy": 535800.0,
+      "maximum_tuition_jpy": 535800.0
+    },
+    {
+      "university": "Kobe University",
+      "program_count": 3,
+      "mean_tuition_jpy": 535800.0,
+      "median_tuition_jpy": 535800.0,
+      "minimum_tuition_jpy": 535800.0,
+      "maximum_tuition_jpy": 535800.0
+    },
+    {
+      "university": "University of Tsukuba",
+      "program_count": 3,
+      "mean_tuition_jpy": 608800.0,
+      "median_tuition_jpy": 608800.0,
+      "minimum_tuition_jpy": 608800.0,
+      "maximum_tuition_jpy": 608800.0
+    },
+    {
+      "university": "Institute of Science Tokyo",
+      "program_count": 3,
+      "mean_tuition_jpy": 635400.0,
+      "median_tuition_jpy": 635400.0,
+      "minimum_tuition_jpy": 635400.0,
+      "maximum_tuition_jpy": 635400.0
+    },
+    {
+      "university": "Waseda University",
+      "program_count": 3,
+      "mean_tuition_jpy": 991000.0,
+      "median_tuition_jpy": 991000.0,
+      "minimum_tuition_jpy": 991000.0,
+      "maximum_tuition_jpy": 991000.0
+    },
+    {
+      "university": "Keio University",
+      "program_count": 3,
+      "mean_tuition_jpy": 1020000.0,
+      "median_tuition_jpy": 1160000.0,
+      "minimum_tuition_jpy": 740000.0,
+      "maximum_tuition_jpy": 1160000.0
+    }
+  ],
+  "affordability_analysis": {
+    "q1_threshold_jpy": 535800.0,
+    "q3_threshold_jpy": 615450.0,
+    "bands": [
+      {
+        "band": "Lower-cost",
+        "count": 24,
+        "percentage": 66.67
+      },
+      {
+        "band": "Mid-range",
+        "count": 3,
+        "percentage": 8.33
+      },
+      {
+        "band": "Higher-cost",
+        "count": 9,
+        "percentage": 25.0
+      }
+    ],
+    "programs": [
+      {
+        "program_id": "prog_jp_012",
+        "program_name": "Applied Information Sciences",
+        "degree_level": "Master",
+        "university_id": "uni_jp_004",
+        "university_name": "Tohoku University",
+        "tuition_jpy": 535800.0,
+        "affordability_band": "Lower-cost"
+      },
+      {
+        "program_id": "prog_jp_005",
+        "program_name": "Communications and Computer Engineering",
+        "degree_level": "Master",
+        "university_id": "uni_jp_002",
+        "university_name": "Kyoto University",
+        "tuition_jpy": 535800.0,
+        "affordability_band": "Lower-cost"
+      },
+      {
+        "program_id": "prog_jp_001",
+        "program_name": "Computer Science",
+        "degree_level": "Master",
+        "university_id": "uni_jp_001",
+        "university_name": "The University of Tokyo",
+        "tuition_jpy": 535800.0,
+        "affordability_band": "Lower-cost"
+      },
+      {
+        "program_id": "prog_jp_007",
+        "program_name": "Computer Science",
+        "degree_level": "Master",
+        "university_id": "uni_jp_003",
+        "university_name": "Osaka University",
+        "tuition_jpy": 535800.0,
+        "affordability_band": "Lower-cost"
+      },
+      {
+        "program_id": "prog_jp_019",
+        "program_name": "Computer Science and Information Technology",
+        "degree_level": "Master",
+        "university_id": "uni_jp_007",
+        "university_name": "Hokkaido University",
+        "tuition_jpy": 535800.0,
+        "affordability_band": "Lower-cost"
+      },
+      {
+        "program_id": "prog_jp_028",
+        "program_name": "Computer Science and Systems Engineering",
+        "degree_level": "Bachelor",
+        "university_id": "uni_jp_010",
+        "university_name": "Kobe University",
+        "tuition_jpy": 535800.0,
+        "affordability_band": "Lower-cost"
+      },
+      {
+        "program_id": "prog_jp_010",
+        "program_name": "Computer and Mathematical Sciences",
+        "degree_level": "Master",
+        "university_id": "uni_jp_004",
+        "university_name": "Tohoku University",
+        "tuition_jpy": 535800.0,
+        "affordability_band": "Lower-cost"
+      },
+      {
+        "program_id": "prog_jp_014",
+        "program_name": "Computing and Software Systems",
+        "degree_level": "Master",
+        "university_id": "uni_jp_005",
+        "university_name": "Nagoya University",
+        "tuition_jpy": 535800.0,
+        "affordability_band": "Lower-cost"
+      },
+      {
+        "program_id": "prog_jp_006",
+        "program_name": "Data Science",
+        "degree_level": "Master",
+        "university_id": "uni_jp_002",
+        "university_name": "Kyoto University",
+        "tuition_jpy": 535800.0,
+        "affordability_band": "Lower-cost"
+      },
+      {
+        "program_id": "prog_jp_008",
+        "program_name": "Information Networking",
+        "degree_level": "Master",
+        "university_id": "uni_jp_003",
+        "university_name": "Osaka University",
+        "tuition_jpy": 535800.0,
+        "affordability_band": "Lower-cost"
+      },
+      {
+        "program_id": "prog_jp_003",
+        "program_name": "Information Physics & Computing",
+        "degree_level": "Master",
+        "university_id": "uni_jp_001",
+        "university_name": "The University of Tokyo",
+        "tuition_jpy": 535800.0,
+        "affordability_band": "Lower-cost"
+      },
+      {
+        "program_id": "prog_jp_004",
+        "program_name": "Intelligence Science and Technology",
+        "degree_level": "Master",
+        "university_id": "uni_jp_002",
+        "university_name": "Kyoto University",
+        "tuition_jpy": 535800.0,
+        "affordability_band": "Lower-cost"
+      },
+      {
+        "program_id": "prog_jp_015",
+        "program_name": "Intelligent Systems",
+        "degree_level": "Master",
+        "university_id": "uni_jp_005",
+        "university_name": "Nagoya University",
+        "tuition_jpy": 535800.0,
+        "affordability_band": "Lower-cost"
+      },
+      {
+        "program_id": "prog_jp_017",
+        "program_name": "International Master's/Doctoral Program in Electrical and Electronic Engineering",
+        "degree_level": "Master",
+        "university_id": "uni_jp_006",
+        "university_name": "Kyushu University",
+        "tuition_jpy": 535800.0,
+        "affordability_band": "Lower-cost"
+      },
+      {
+        "program_id": "prog_jp_016",
+        "program_name": "International Master's/Doctoral Program in Information Science and Technology",
+        "degree_level": "Master",
+        "university_id": "uni_jp_006",
+        "university_name": "Kyushu University",
+        "tuition_jpy": 535800.0,
+        "affordability_band": "Lower-cost"
+      },
+      {
+        "program_id": "prog_jp_018",
+        "program_name": "Master's Program in the Department of Design (Acoustic Design Course)",
+        "degree_level": "Master",
+        "university_id": "uni_jp_006",
+        "university_name": "Kyushu University",
+        "tuition_jpy": 535800.0,
+        "affordability_band": "Lower-cost"
+      },
+      {
+        "program_id": "prog_jp_002",
+        "program_name": "Mathematical Informatics",
+        "degree_level": "Master",
+        "university_id": "uni_jp_001",
+        "university_name": "The University of Tokyo",
+        "tuition_jpy": 535800.0,
+        "affordability_band": "Lower-cost"
+      },
+      {
+        "program_id": "prog_jp_013",
+        "program_name": "Mathematical Informatics",
+        "degree_level": "Master",
+        "university_id": "uni_jp_005",
+        "university_name": "Nagoya University",
+        "tuition_jpy": 535800.0,
+        "affordability_band": "Lower-cost"
+      },
+      {
+        "program_id": "prog_jp_020",
+        "program_name": "Media and Network Technologies",
+        "degree_level": "Master",
+        "university_id": "uni_jp_007",
+        "university_name": "Hokkaido University",
+        "tuition_jpy": 535800.0,
+        "affordability_band": "Lower-cost"
+      },
+      {
+        "program_id": "prog_jp_009",
+        "program_name": "Multimedia Engineering",
+        "degree_level": "Master",
+        "university_id": "uni_jp_003",
+        "university_name": "Osaka University",
+        "tuition_jpy": 535800.0,
+        "affordability_band": "Lower-cost"
+      },
+      {
+        "program_id": "prog_jp_029",
+        "program_name": "System Informatics",
+        "degree_level": "Master",
+        "university_id": "uni_jp_010",
+        "university_name": "Kobe University",
+        "tuition_jpy": 535800.0,
+        "affordability_band": "Lower-cost"
+      },
+      {
+        "program_id": "prog_jp_030",
+        "program_name": "System Informatics",
+        "degree_level": "PhD",
+        "university_id": "uni_jp_010",
+        "university_name": "Kobe University",
+        "tuition_jpy": 535800.0,
+        "affordability_band": "Lower-cost"
+      },
+      {
+        "program_id": "prog_jp_011",
+        "program_name": "System Information Sciences",
+        "degree_level": "Master",
+        "university_id": "uni_jp_004",
+        "university_name": "Tohoku University",
+        "tuition_jpy": 535800.0,
+        "affordability_band": "Lower-cost"
+      },
+      {
+        "program_id": "prog_jp_021",
+        "program_name": "Systems Science and Informatics",
+        "degree_level": "Master",
+        "university_id": "uni_jp_007",
+        "university_name": "Hokkaido University",
+        "tuition_jpy": 535800.0,
+        "affordability_band": "Lower-cost"
+      },
+      {
+        "program_id": "prog_jp_025",
+        "program_name": "Computer Science",
+        "degree_level": "Master",
+        "university_id": "uni_jp_009",
+        "university_name": "University of Tsukuba",
+        "tuition_jpy": 608800.0,
+        "affordability_band": "Mid-range"
+      },
+      {
+        "program_id": "prog_jp_027",
+        "program_name": "Empowerment Informatics",
+        "degree_level": "PhD",
+        "university_id": "uni_jp_009",
+        "university_name": "University of Tsukuba",
+        "tuition_jpy": 608800.0,
+        "affordability_band": "Mid-range"
+      },
+      {
+        "program_id": "prog_jp_026",
+        "program_name": "Intelligent and Mechanical Interaction Systems",
+        "degree_level": "Master",
+        "university_id": "uni_jp_009",
+        "university_name": "University of Tsukuba",
+        "tuition_jpy": 608800.0,
+        "affordability_band": "Mid-range"
+      },
+      {
+        "program_id": "prog_jp_024",
+        "program_name": "Graduate major in Artificial Intelligence",
+        "degree_level": "Master",
+        "university_id": "uni_jp_008",
+        "university_name": "Institute of Science Tokyo",
+        "tuition_jpy": 635400.0,
+        "affordability_band": "Higher-cost"
+      },
+      {
+        "program_id": "prog_jp_022",
+        "program_name": "Graduate major in Computer Science",
+        "degree_level": "Master",
+        "university_id": "uni_jp_008",
+        "university_name": "Institute of Science Tokyo",
+        "tuition_jpy": 635400.0,
+        "affordability_band": "Higher-cost"
+      },
+      {
+        "program_id": "prog_jp_023",
+        "program_name": "Graduate major in Mathematical and Computing Science",
+        "degree_level": "Master",
+        "university_id": "uni_jp_008",
+        "university_name": "Institute of Science Tokyo",
+        "tuition_jpy": 635400.0,
+        "affordability_band": "Higher-cost"
+      },
+      {
+        "program_id": "prog_jp_035",
+        "program_name": "International Graduate Program",
+        "degree_level": "PhD",
+        "university_id": "uni_jp_012",
+        "university_name": "Keio University",
+        "tuition_jpy": 740000.0,
+        "affordability_band": "Higher-cost"
+      },
+      {
+        "program_id": "prog_jp_032",
+        "program_name": "Computer Science and Communications Engineering",
+        "degree_level": "Master",
+        "university_id": "uni_jp_011",
+        "university_name": "Waseda University",
+        "tuition_jpy": 991000.0,
+        "affordability_band": "Higher-cost"
+      },
+      {
+        "program_id": "prog_jp_033",
+        "program_name": "Intermedia Studies",
+        "degree_level": "Master",
+        "university_id": "uni_jp_011",
+        "university_name": "Waseda University",
+        "tuition_jpy": 991000.0,
+        "affordability_band": "Higher-cost"
+      },
+      {
+        "program_id": "prog_jp_031",
+        "program_name": "Pure and Applied Mathematics",
+        "degree_level": "Master",
+        "university_id": "uni_jp_011",
+        "university_name": "Waseda University",
+        "tuition_jpy": 991000.0,
+        "affordability_band": "Higher-cost"
+      },
+      {
+        "program_id": "prog_jp_036",
+        "program_name": "Double Degree Program",
+        "degree_level": "Master",
+        "university_id": "uni_jp_012",
+        "university_name": "Keio University",
+        "tuition_jpy": 1160000.0,
+        "affordability_band": "Higher-cost"
+      },
+      {
+        "program_id": "prog_jp_034",
+        "program_name": "International Graduate Program",
+        "degree_level": "Master",
+        "university_id": "uni_jp_012",
+        "university_name": "Keio University",
+        "tuition_jpy": 1160000.0,
+        "affordability_band": "Higher-cost"
+      }
+    ]
+  },
+  "scholarship_overview": {
+    "total": 12,
+    "funding_distribution": [
+      {
+        "funding_type": "Fully Funded",
+        "count": 12,
+        "percentage": 100.0
+      }
+    ],
+    "status_distribution": [
+      {
+        "status": "upcoming",
+        "count": 12,
+        "percentage": 100.0
+      }
+    ]
+  },
+  "decision_findings": [
+    {
+      "finding_id": "DECISION_01",
+      "title": "Typical Annual Tuition Baseline",
+      "evidence": "Current median annual tuition is 535,800 JPY, while mean tuition is 628,467 JPY.",
+      "interpretation": "The median provides a useful baseline for describing the typical tuition in the current EduPath program dataset.",
+      "decision_use": "Students can compare an individual program's tuition against the dataset median to identify whether it is relatively lower-cost or higher-cost."
+    },
+    {
+      "finding_id": "DECISION_02",
+      "title": "Tuition Cost Range",
+      "evidence": "Annual tuition currently ranges from 535,800 JPY to 1,160,000 JPY.",
+      "interpretation": "Students may face substantially different tuition costs depending on institution and program.",
+      "decision_use": "Budget should therefore be included as a meaningful feature in future program recommendation scoring."
+    },
+    {
+      "finding_id": "DECISION_03",
+      "title": "Degree-Level Tuition Comparison",
+      "evidence": "The lowest current mean tuition by degree is Bachelor at 535,800 JPY. The highest is Master at 631,388 JPY.",
+      "interpretation": "Degree-level tuition differs within the current dataset, but sample sizes are uneven.",
+      "decision_use": "Degree-level averages can support exploration, but should not be treated as national-level averages until more programs are collected."
+    },
+    {
+      "finding_id": "DECISION_04",
+      "title": "University Tuition Comparison",
+      "evidence": "Among universities represented in the current program dataset, the lowest mean tuition is The University of Tokyo (535,800 JPY), while the highest mean is Keio University (1,020,000 JPY).",
+      "interpretation": "Institution choice can materially affect tuition cost.",
+      "decision_use": "University-level tuition comparison can be presented as one component of student affordability analysis."
+    },
+    {
+      "finding_id": "DECISION_05",
+      "title": "Affordability Segmentation",
+      "evidence": "Lower-cost: 24 program(s); Mid-range: 3 program(s); Higher-cost: 9 program(s).",
+      "interpretation": "Programs can be grouped into relative affordability bands using current tuition quartiles.",
+      "decision_use": "Later, users can choose a preferred budget range and EduPath can use this information as a recommendation feature rather than only showing raw tuition values."
+    },
+    {
+      "finding_id": "DECISION_06",
+      "title": "Scholarship Financial Opportunity",
+      "evidence": "12 of 12 current scholarship records are classified as Fully Funded.",
+      "interpretation": "Scholarship availability can significantly change the student's effective education cost.",
+      "decision_use": "Program tuition and scholarship matching should be combined later so users can evaluate both listed tuition and possible funding opportunities. A scholarship should not be assumed to apply to every program unless eligibility and host-program relationships are verified."
+    }
+  ],
+  "mongodb_records_modified": false
+}

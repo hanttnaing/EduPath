@@ -1,0 +1,144 @@
+{
+  "analysis_step": "151.2",
+  "analysis_name": "EduPath Descriptive Data Analysis",
+  "generated_at": "2026-08-12T19:00:54.964438",
+  "database_name": "edupath_db",
+  "dataset_counts": {
+    "countries": 7,
+    "universities": 54,
+    "programs": 36,
+    "scholarships": 12
+  },
+  "program_degree_distribution": [
+    {
+      "degree": "Master",
+      "count": 32,
+      "percentage": 88.89
+    },
+    {
+      "degree": "PhD",
+      "count": 3,
+      "percentage": 8.33
+    },
+    {
+      "degree": "Bachelor",
+      "count": 1,
+      "percentage": 2.78
+    }
+  ],
+  "program_tuition_statistics": {
+    "coverage_percentage": 100.0,
+    "available_count": 36,
+    "missing_count": 0,
+    "distinct_values": 6,
+    "mean": 628466.67,
+    "median": 535800.0,
+    "minimum": 535800.0,
+    "maximum": 1160000.0,
+    "standard_deviation": 183550.81
+  },
+  "tuition_distribution": [
+    {
+      "tuition_jpy": 535800.0,
+      "count": 24,
+      "percentage": 66.67
+    },
+    {
+      "tuition_jpy": 608800.0,
+      "count": 3,
+      "percentage": 8.33
+    },
+    {
+      "tuition_jpy": 635400.0,
+      "count": 3,
+      "percentage": 8.33
+    },
+    {
+      "tuition_jpy": 740000.0,
+      "count": 1,
+      "percentage": 2.78
+    },
+    {
+      "tuition_jpy": 991000.0,
+      "count": 3,
+      "percentage": 8.33
+    },
+    {
+      "tuition_jpy": 1160000.0,
+      "count": 2,
+      "percentage": 5.56
+    }
+  ],
+  "programs_by_university": [
+    {
+      "university": "The University of Tokyo",
+      "program_count": 3
+    },
+    {
+      "university": "Kyoto University",
+      "program_count": 3
+    },
+    {
+      "university": "Osaka University",
+      "program_count": 3
+    },
+    {
+      "university": "Tohoku University",
+      "program_count": 3
+    },
+    {
+      "university": "Nagoya University",
+      "program_count": 3
+    },
+    {
+      "university": "Kyushu University",
+      "program_count": 3
+    },
+    {
+      "university": "Hokkaido University",
+      "program_count": 3
+    },
+    {
+      "university": "Institute of Science Tokyo",
+      "program_count": 3
+    },
+    {
+      "university": "University of Tsukuba",
+      "program_count": 3
+    },
+    {
+      "university": "Kobe University",
+      "program_count": 3
+    },
+    {
+      "university": "Waseda University",
+      "program_count": 3
+    },
+    {
+      "university": "Keio University",
+      "program_count": 3
+    }
+  ],
+  "scholarship_funding_distribution": [
+    {
+      "funding_type": "Fully Funded",
+      "count": 12,
+      "percentage": 100.0
+    }
+  ],
+  "scholarship_status_distribution": [
+    {
+      "status": "upcoming",
+      "count": 12,
+      "percentage": 100.0
+    }
+  ],
+  "interpretation_notes": [
+    "Descriptive statistics were calculated from the current EduPath dataset.",
+    "Tuition analysis uses verified annual tuition values currently stored in MongoDB.",
+    "Degree distributions describe only the programs currently collected in EduPath.",
+    "Scholarship funding and status distributions describe the current targeted scholarship dataset.",
+    "The scholarship status analysis uses the `scholarship_status` field from the current EduPath scholarship schema.",
+    "These results should not yet be generalised to all universities, programs, or scholarships in Japan."
+  ]
+}

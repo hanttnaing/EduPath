@@ -1,0 +1,59 @@
+{
+  "project": "EduPath Analytics",
+  "component": "Scholarship Recommendation Algorithm",
+  "locked_version": "V2.2",
+  "lock_status": "LOCKED",
+  "locked_at": "2026-08-12T11:31:58.354227+00:00",
+  "source_file": "C:\\Users\\X1\\EduPath\\scripts\\recommend_scholarships_v22.py",
+  "final_snapshot_file": "C:\\Users\\X1\\EduPath\\scripts\\recommend_scholarships_final.py",
+  "source_sha256": "2e8eddf0e42bb485317ce7293416ce87f87ea9371cec3916e0ae5d014cfa2c7c",
+  "final_sha256": "2e8eddf0e42bb485317ce7293416ce87f87ea9371cec3916e0ae5d014cfa2c7c",
+  "algorithm_type": "Hybrid recommendation system",
+  "methods": [
+    "Rule-based filtering",
+    "TF-IDF vectorization",
+    "Cosine similarity",
+    "Weighted preference scoring",
+    "Missing-data uncertainty handling",
+    "Confidence-aware ranking",
+    "Eligibility confidence analysis"
+  ],
+  "fit_score_weights": {
+    "degree_level": 20,
+    "preferred_country": 15,
+    "field_similarity": 35,
+    "funding_type": 20,
+    "scholarship_status": 10
+  },
+  "fit_score_total": 100,
+  "ranking_formula": "RankingScore = FitScore * (0.70 + 0.30 * MatchDataConfidenceRatio)",
+  "missing_field_strategy": "Missing field data is treated as uncertainty rather than as a confirmed mismatch.",
+  "eligibility_dimensions": [
+    "nationality",
+    "gpa",
+    "english",
+    "age",
+    "deadline"
+  ],
+  "validation_evidence": {
+    "algorithm_version_comparison": "PASSED",
+    "multi_profile_test": "PASSED",
+    "profiles_tested": 6,
+    "profiles_passed": 6,
+    "profiles_failed": 0,
+    "negative_country_hard_rule_test": "PASSED"
+  },
+  "reference_run": {
+    "user_id": "user_test_001",
+    "total_candidates": 12,
+    "eligible_candidates": 8,
+    "rejected_by_hard_rules": 4,
+    "top_recommendation": "Japanese Government (MEXT) Scholarship - University Recommendation (General Selection), IST, October 2027",
+    "top_fit_score": 100.0,
+    "top_ranking_score": 100.0,
+    "top_match_data_confidence": 100.0,
+    "top_eligibility_confidence": 20.0
+  },
+  "important_note": "Weights are interpretable heuristic design weights, not machine-learned weights. They were validated using multi-scenario testing.",
+  "database_modified": false
+}

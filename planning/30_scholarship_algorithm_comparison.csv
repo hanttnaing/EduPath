@@ -1,0 +1,6 @@
+﻿scholarship_id,scholarship_name,provider_name,country_name,V1_rank,V1_fit_score,V1_ranking_score,V1_match_data_confidence,V1_eligibility_confidence,V2_rank,V2_fit_score,V2_ranking_score,V2_match_data_confidence,V2_eligibility_confidence,V2_1_rank,V2_1_fit_score,V2_1_ranking_score,V2_1_match_data_confidence,V2_1_eligibility_confidence,V2_2_rank,V2_2_fit_score,V2_2_ranking_score,V2_2_match_data_confidence,V2_2_eligibility_confidence
+sch_jp_001,"Japanese Government (MEXT) Scholarship - University Recommendation (General Selection), IST, October 2027","Ministry of Education, Culture, Sports, Science and Technology (MEXT)",Japan,1,85.0,85.0,,,1,100.0,100.0,,20.0,1,100.0,100.0,,20.0,1,100.0,100.0,100.0,20.0
+sch_jp_005,MEXT Scholarship for International Graduate Program for Advanced Science IGPAS,Japanese Government MEXT,Japan,2,66.68,66.68,,,2,67.94,57.75,,0.0,2,83.97,75.57,,0.0,2,83.97,75.15,65.0,0.0
+sch_jp_002,2027 University Recommended Japanese Government MEXT Scholarship,Japanese Government MEXT,Japan,3,65.0,65.0,,,3,65.0,55.25,,0.0,3,82.5,74.25,,0.0,3,82.5,73.84,65.0,0.0
+sch_jp_003,MEXT IGP Special Quota,Japanese Government MEXT,Japan,4,65.0,65.0,,,4,65.0,55.25,,0.0,4,82.5,74.25,,0.0,4,82.5,73.84,65.0,0.0
+sch_jp_004,2027 MEXT Scholarship Special Program,Japanese Government MEXT,Japan,5,65.0,65.0,,,5,65.0,55.25,,0.0,5,82.5,74.25,,0.0,5,82.5,73.84,65.0,0.0

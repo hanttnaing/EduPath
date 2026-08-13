@@ -1,0 +1,229 @@
+{
+  "project": "EduPath Analytics",
+  "analysis_step": "151.1B",
+  "analysis_name": "Relationship Integrity Diagnosis",
+  "generated_at": "2026-08-12T12:11:08.692986+00:00",
+  "database_modified": false,
+  "dataset_counts": {
+    "countries": 3,
+    "universities": 54,
+    "programs": 36,
+    "scholarships": 12
+  },
+  "relationship_summary": {
+    "university_country": 23,
+    "program_university": 0,
+    "scholarship_country": 0,
+    "scholarship_host_university": 0
+  },
+  "total_relationship_issues": 23,
+  "problem_records": [
+    {
+      "relationship_type": "University -> Country",
+      "record_type": "university",
+      "record_id": "uni_kr_001",
+      "record_name": "Seoul National University",
+      "reference_field": "country_id",
+      "reference_value": "country_kr",
+      "issue": "country_id does not match any countries record"
+    },
+    {
+      "relationship_type": "University -> Country",
+      "record_type": "university",
+      "record_id": "uni_kr_002",
+      "record_name": "Korea Advanced Institute of Science and Technology",
+      "reference_field": "country_id",
+      "reference_value": "country_kr",
+      "issue": "country_id does not match any countries record"
+    },
+    {
+      "relationship_type": "University -> Country",
+      "record_type": "university",
+      "record_id": "uni_kr_003",
+      "record_name": "Yonsei University",
+      "reference_field": "country_id",
+      "reference_value": "country_kr",
+      "issue": "country_id does not match any countries record"
+    },
+    {
+      "relationship_type": "University -> Country",
+      "record_type": "university",
+      "record_id": "uni_kr_004",
+      "record_name": "Korea University",
+      "reference_field": "country_id",
+      "reference_value": "country_kr",
+      "issue": "country_id does not match any countries record"
+    },
+    {
+      "relationship_type": "University -> Country",
+      "record_type": "university",
+      "record_id": "uni_kr_005",
+      "record_name": "Sungkyunkwan University",
+      "reference_field": "country_id",
+      "reference_value": "country_kr",
+      "issue": "country_id does not match any countries record"
+    },
+    {
+      "relationship_type": "University -> Country",
+      "record_type": "university",
+      "record_id": "uni_kr_006",
+      "record_name": "Pohang University of Science and Technology",
+      "reference_field": "country_id",
+      "reference_value": "country_kr",
+      "issue": "country_id does not match any countries record"
+    },
+    {
+      "relationship_type": "University -> Country",
+      "record_type": "university",
+      "record_id": "uni_kr_007",
+      "record_name": "Hanyang University",
+      "reference_field": "country_id",
+      "reference_value": "country_kr",
+      "issue": "country_id does not match any countries record"
+    },
+    {
+      "relationship_type": "University -> Country",
+      "record_type": "university",
+      "record_id": "uni_kr_008",
+      "record_name": "Kyung Hee University",
+      "reference_field": "country_id",
+      "reference_value": "country_kr",
+      "issue": "country_id does not match any countries record"
+    },
+    {
+      "relationship_type": "University -> Country",
+      "record_type": "university",
+      "record_id": "uni_tw_001",
+      "record_name": "National Taiwan University",
+      "reference_field": "country_id",
+      "reference_value": "country_tw",
+      "issue": "country_id does not match any countries record"
+    },
+    {
+      "relationship_type": "University -> Country",
+      "record_type": "university",
+      "record_id": "uni_tw_002",
+      "record_name": "National Tsing Hua University",
+      "reference_field": "country_id",
+      "reference_value": "country_tw",
+      "issue": "country_id does not match any countries record"
+    },
+    {
+      "relationship_type": "University -> Country",
+      "record_type": "university",
+      "record_id": "uni_tw_003",
+      "record_name": "National Yang Ming Chiao Tung University",
+      "reference_field": "country_id",
+      "reference_value": "country_tw",
+      "issue": "country_id does not match any countries record"
+    },
+    {
+      "relationship_type": "University -> Country",
+      "record_type": "university",
+      "record_id": "uni_tw_004",
+      "record_name": "National Cheng Kung University",
+      "reference_field": "country_id",
+      "reference_value": "country_tw",
+      "issue": "country_id does not match any countries record"
+    },
+    {
+      "relationship_type": "University -> Country",
+      "record_type": "university",
+      "record_id": "uni_tw_005",
+      "record_name": "National Taiwan University of Science and Technology",
+      "reference_field": "country_id",
+      "reference_value": "country_tw",
+      "issue": "country_id does not match any countries record"
+    },
+    {
+      "relationship_type": "University -> Country",
+      "record_type": "university",
+      "record_id": "uni_hk_001",
+      "record_name": "The University of Hong Kong",
+      "reference_field": "country_id",
+      "reference_value": "country_hk",
+      "issue": "country_id does not match any countries record"
+    },
+    {
+      "relationship_type": "University -> Country",
+      "record_type": "university",
+      "record_id": "uni_hk_002",
+      "record_name": "The Chinese University of Hong Kong",
+      "reference_field": "country_id",
+      "reference_value": "country_hk",
+      "issue": "country_id does not match any countries record"
+    },
+    {
+      "relationship_type": "University -> Country",
+      "record_type": "university",
+      "record_id": "uni_hk_003",
+      "record_name": "The Hong Kong University of Science and Technology",
+      "reference_field": "country_id",
+      "reference_value": "country_hk",
+      "issue": "country_id does not match any countries record"
+    },
+    {
+      "relationship_type": "University -> Country",
+      "record_type": "university",
+      "record_id": "uni_hk_004",
+      "record_name": "The Hong Kong Polytechnic University",
+      "reference_field": "country_id",
+      "reference_value": "country_hk",
+      "issue": "country_id does not match any countries record"
+    },
+    {
+      "relationship_type": "University -> Country",
+      "record_type": "university",
+      "record_id": "uni_hk_005",
+      "record_name": "City University of Hong Kong",
+      "reference_field": "country_id",
+      "reference_value": "country_hk",
+      "issue": "country_id does not match any countries record"
+    },
+    {
+      "relationship_type": "University -> Country",
+      "record_type": "university",
+      "record_id": "uni_th_001",
+      "record_name": "Chulalongkorn University",
+      "reference_field": "country_id",
+      "reference_value": "country_th",
+      "issue": "country_id does not match any countries record"
+    },
+    {
+      "relationship_type": "University -> Country",
+      "record_type": "university",
+      "record_id": "uni_th_002",
+      "record_name": "Mahidol University",
+      "reference_field": "country_id",
+      "reference_value": "country_th",
+      "issue": "country_id does not match any countries record"
+    },
+    {
+      "relationship_type": "University -> Country",
+      "record_type": "university",
+      "record_id": "uni_th_003",
+      "record_name": "Chiang Mai University",
+      "reference_field": "country_id",
+      "reference_value": "country_th",
+      "issue": "country_id does not match any countries record"
+    },
+    {
+      "relationship_type": "University -> Country",
+      "record_type": "university",
+      "record_id": "uni_th_004",
+      "record_name": "Thammasat University",
+      "reference_field": "country_id",
+      "reference_value": "country_th",
+      "issue": "country_id does not match any countries record"
+    },
+    {
+      "relationship_type": "University -> Country",
+      "record_type": "university",
+      "record_id": "uni_th_005",
+      "record_name": "Kasetsart University",
+      "reference_field": "country_id",
+      "reference_value": "country_th",
+      "issue": "country_id does not match any countries record"
+    }
+  ]
+}

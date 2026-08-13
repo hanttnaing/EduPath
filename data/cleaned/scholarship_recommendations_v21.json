@@ -1,0 +1,457 @@
+{
+  "user_id": "user_test_001",
+  "generated_at": "2026-08-12T06:32:34.435929+00:00",
+  "algorithm": {
+    "name": "EduPath Hybrid Scholarship Recommendation v2.1",
+    "match_score_weights": {
+      "degree_level": 20,
+      "preferred_country": 15,
+      "field_similarity": 35,
+      "funding_type": 20,
+      "scholarship_status": 10
+    },
+    "maximum_match_score": 100,
+    "structured_field_method": "TF-IDF cosine similarity",
+    "missing_field_strategy": "50% neutral field credit + limited scholarship-name similarity evidence",
+    "unknown_field_base_credit": 0.5,
+    "unknown_field_multiplier": 0.9,
+    "eligibility_model": "PASS / FAIL / UNKNOWN with separate confidence",
+    "field_relevance_adjustment": true
+  },
+  "user_profile_summary": {
+    "nationality": "Myanmar",
+    "age": null,
+    "target_degree_level": "Master",
+    "preferred_major": "Computer Science",
+    "gpa": 3.5,
+    "gpa_scale": 4,
+    "ielts_score": 6.5,
+    "toefl_score": null,
+    "preferred_countries": [
+      "Japan"
+    ],
+    "scholarship_required": true,
+    "preferred_funding_type": "Fully Funded"
+  },
+  "total_scholarship_candidates": 12,
+  "eligible_candidates": 8,
+  "rejected_by_hard_rules": 4,
+  "skipped_missing_relationship": 0,
+  "returned_recommendations": 5,
+  "recommendations": [
+    {
+      "scholarship_id": "sch_jp_001",
+      "scholarship_name": "Japanese Government (MEXT) Scholarship - University Recommendation (General Selection), IST, October 2027",
+      "provider_name": "Ministry of Education, Culture, Sports, Science and Technology (MEXT)",
+      "provider_type": "Government",
+      "country_id": "country_jp",
+      "country_name": "Japan",
+      "host_university_id": "uni_jp_001",
+      "host_university_name": "The University of Tokyo",
+      "degree_levels": [
+        "Master",
+        "PhD"
+      ],
+      "fields_of_study": [
+        "Computer Science",
+        "Mathematical Informatics",
+        "Information Physics and Computing",
+        "Information and Communication Engineering",
+        "Mechano-Informatics",
+        "Creative Informatics"
+      ],
+      "funding_type": "Fully Funded",
+      "tuition_coverage": "Exam fee, entrance fee, and tuition exempted",
+      "monthly_allowance": 143000,
+      "allowance_currency": "JPY",
+      "application_opening_date": "2026-10-19",
+      "application_deadline": "2026-10-30",
+      "scholarship_status": "upcoming",
+      "application_cycle": "2027",
+      "official_website": "https://www.i.u-tokyo.ac.jp/edu/inter_ex/oir/scholarship_e.shtml",
+      "source_url": "https://www.i.u-tokyo.ac.jp/edu/MEXT_General_Guidelines_E_Oct2027.pdf",
+      "match_score": 100.0,
+      "base_match_score": 100.0,
+      "maximum_score": 100,
+      "score_breakdown": {
+        "degree_level": 20,
+        "preferred_country": 15,
+        "field_similarity": 35.0,
+        "funding_type": 20,
+        "scholarship_status": 10
+      },
+      "field_similarity": 1.0,
+      "name_similarity": 0.0,
+      "field_relevance": "strong_match",
+      "field_relevance_multiplier": 1.0,
+      "field_score_method": "structured_field_similarity",
+      "structured_field_data_available": true,
+      "eligibility_status": "eligible_under_known_rules_with_gaps",
+      "eligibility_confidence": 20.0,
+      "eligibility_checks": {
+        "nationality": {
+          "status": "UNKNOWN",
+          "message": "Eligible-nationality information is unavailable."
+        },
+        "gpa": {
+          "status": "UNKNOWN",
+          "message": "Minimum GPA requirement is unavailable."
+        },
+        "english": {
+          "status": "UNKNOWN",
+          "message": "English-score requirement is unavailable."
+        },
+        "age": {
+          "status": "UNKNOWN",
+          "message": "Age-limit information is unavailable."
+        },
+        "deadline": {
+          "status": "PASS",
+          "message": "Application deadline is 2026-10-30."
+        }
+      },
+      "match_reasons": [
+        "Target degree level is supported by the scholarship.",
+        "Scholarship is available in preferred country: Japan.",
+        "Scholarship status is 'upcoming'.",
+        "Structured scholarship field data is available.",
+        "Preferred-major and structured scholarship-field similarity is 100.00%.",
+        "Scholarship funding type matches the user's preference.",
+        "Application deadline is 2026-10-30."
+      ],
+      "requirement_gaps": [
+        "Eligible-nationality information is unavailable.",
+        "Minimum GPA requirement is unavailable.",
+        "English-score requirement is unavailable.",
+        "Age-limit information is unavailable."
+      ]
+    },
+    {
+      "scholarship_id": "sch_jp_005",
+      "scholarship_name": "MEXT Scholarship for International Graduate Program for Advanced Science IGPAS",
+      "provider_name": "Japanese Government MEXT",
+      "provider_type": "Government",
+      "country_id": "country_jp",
+      "country_name": "Japan",
+      "host_university_id": "uni_jp_004",
+      "host_university_name": "Tohoku University",
+      "degree_levels": [
+        "Master"
+      ],
+      "fields_of_study": [],
+      "funding_type": "Fully Funded",
+      "tuition_coverage": null,
+      "monthly_allowance": null,
+      "allowance_currency": null,
+      "application_opening_date": null,
+      "application_deadline": null,
+      "scholarship_status": "upcoming",
+      "application_cycle": "2027",
+      "official_website": "https://www.sci.tohoku.ac.jp/english/prospective/",
+      "source_url": "https://www.sci.tohoku.ac.jp/english/prospective/",
+      "match_score": 75.57,
+      "base_match_score": 83.97,
+      "maximum_score": 100,
+      "score_breakdown": {
+        "degree_level": 20,
+        "preferred_country": 15,
+        "field_similarity": 18.97,
+        "funding_type": 20,
+        "scholarship_status": 10
+      },
+      "field_similarity": 0.0,
+      "name_similarity": 0.084,
+      "field_relevance": "field_information_unavailable",
+      "field_relevance_multiplier": 0.9,
+      "field_score_method": "neutral_credit_with_name_evidence",
+      "structured_field_data_available": false,
+      "eligibility_status": "eligible_under_known_rules_with_gaps",
+      "eligibility_confidence": 0.0,
+      "eligibility_checks": {
+        "nationality": {
+          "status": "UNKNOWN",
+          "message": "Eligible-nationality information is unavailable."
+        },
+        "gpa": {
+          "status": "UNKNOWN",
+          "message": "Minimum GPA requirement is unavailable."
+        },
+        "english": {
+          "status": "UNKNOWN",
+          "message": "English-score requirement is unavailable."
+        },
+        "age": {
+          "status": "UNKNOWN",
+          "message": "Age-limit information is unavailable."
+        },
+        "deadline": {
+          "status": "UNKNOWN",
+          "message": "Application deadline is unavailable."
+        }
+      },
+      "match_reasons": [
+        "Target degree level is supported by the scholarship.",
+        "Scholarship is available in preferred country: Japan.",
+        "Scholarship status is 'upcoming'.",
+        "Missing field information was treated as uncertainty rather than as a confirmed field mismatch.",
+        "Scholarship-name similarity provides 8.40% supporting field evidence.",
+        "Scholarship funding type matches the user's preference."
+      ],
+      "requirement_gaps": [
+        "Structured fields-of-study information is unavailable.",
+        "Field relevance cannot be fully confirmed because structured field information is unavailable.",
+        "Eligible-nationality information is unavailable.",
+        "Minimum GPA requirement is unavailable.",
+        "English-score requirement is unavailable.",
+        "Age-limit information is unavailable.",
+        "Application deadline is unavailable."
+      ]
+    },
+    {
+      "scholarship_id": "sch_jp_002",
+      "scholarship_name": "2027 University Recommended Japanese Government MEXT Scholarship",
+      "provider_name": "Japanese Government MEXT",
+      "provider_type": "Government",
+      "country_id": "country_jp",
+      "country_name": "Japan",
+      "host_university_id": "uni_jp_001",
+      "host_university_name": "The University of Tokyo",
+      "degree_levels": [
+        "Master",
+        "PhD"
+      ],
+      "fields_of_study": [],
+      "funding_type": "Fully Funded",
+      "tuition_coverage": null,
+      "monthly_allowance": null,
+      "allowance_currency": null,
+      "application_opening_date": null,
+      "application_deadline": null,
+      "scholarship_status": "upcoming",
+      "application_cycle": "2027",
+      "official_website": "https://www.s.u-tokyo.ac.jp/en/admission/scholarship.html",
+      "source_url": "https://www.s.u-tokyo.ac.jp/en/admission/scholarship.html",
+      "match_score": 74.25,
+      "base_match_score": 82.5,
+      "maximum_score": 100,
+      "score_breakdown": {
+        "degree_level": 20,
+        "preferred_country": 15,
+        "field_similarity": 17.5,
+        "funding_type": 20,
+        "scholarship_status": 10
+      },
+      "field_similarity": 0.0,
+      "name_similarity": 0.0,
+      "field_relevance": "field_information_unavailable",
+      "field_relevance_multiplier": 0.9,
+      "field_score_method": "neutral_credit_with_name_evidence",
+      "structured_field_data_available": false,
+      "eligibility_status": "eligible_under_known_rules_with_gaps",
+      "eligibility_confidence": 0.0,
+      "eligibility_checks": {
+        "nationality": {
+          "status": "UNKNOWN",
+          "message": "Eligible-nationality information is unavailable."
+        },
+        "gpa": {
+          "status": "UNKNOWN",
+          "message": "Minimum GPA requirement is unavailable."
+        },
+        "english": {
+          "status": "UNKNOWN",
+          "message": "English-score requirement is unavailable."
+        },
+        "age": {
+          "status": "UNKNOWN",
+          "message": "Age-limit information is unavailable."
+        },
+        "deadline": {
+          "status": "UNKNOWN",
+          "message": "Application deadline is unavailable."
+        }
+      },
+      "match_reasons": [
+        "Target degree level is supported by the scholarship.",
+        "Scholarship is available in preferred country: Japan.",
+        "Scholarship status is 'upcoming'.",
+        "Missing field information was treated as uncertainty rather than as a confirmed field mismatch.",
+        "Scholarship-name similarity provides 0.00% supporting field evidence.",
+        "Scholarship funding type matches the user's preference."
+      ],
+      "requirement_gaps": [
+        "Structured fields-of-study information is unavailable.",
+        "Field relevance cannot be fully confirmed because structured field information is unavailable.",
+        "Eligible-nationality information is unavailable.",
+        "Minimum GPA requirement is unavailable.",
+        "English-score requirement is unavailable.",
+        "Age-limit information is unavailable.",
+        "Application deadline is unavailable."
+      ]
+    },
+    {
+      "scholarship_id": "sch_jp_003",
+      "scholarship_name": "MEXT IGP Special Quota",
+      "provider_name": "Japanese Government MEXT",
+      "provider_type": "Government",
+      "country_id": "country_jp",
+      "country_name": "Japan",
+      "host_university_id": "uni_jp_007",
+      "host_university_name": "Hokkaido University",
+      "degree_levels": [
+        "Master",
+        "PhD"
+      ],
+      "fields_of_study": [],
+      "funding_type": "Fully Funded",
+      "tuition_coverage": null,
+      "monthly_allowance": null,
+      "allowance_currency": null,
+      "application_opening_date": null,
+      "application_deadline": null,
+      "scholarship_status": "upcoming",
+      "application_cycle": "2027",
+      "official_website": "https://www.global.hokudai.ac.jp/news/26039/",
+      "source_url": "https://www.global.hokudai.ac.jp/news/26039/",
+      "match_score": 74.25,
+      "base_match_score": 82.5,
+      "maximum_score": 100,
+      "score_breakdown": {
+        "degree_level": 20,
+        "preferred_country": 15,
+        "field_similarity": 17.5,
+        "funding_type": 20,
+        "scholarship_status": 10
+      },
+      "field_similarity": 0.0,
+      "name_similarity": 0.0,
+      "field_relevance": "field_information_unavailable",
+      "field_relevance_multiplier": 0.9,
+      "field_score_method": "neutral_credit_with_name_evidence",
+      "structured_field_data_available": false,
+      "eligibility_status": "eligible_under_known_rules_with_gaps",
+      "eligibility_confidence": 0.0,
+      "eligibility_checks": {
+        "nationality": {
+          "status": "UNKNOWN",
+          "message": "Eligible-nationality information is unavailable."
+        },
+        "gpa": {
+          "status": "UNKNOWN",
+          "message": "Minimum GPA requirement is unavailable."
+        },
+        "english": {
+          "status": "UNKNOWN",
+          "message": "English-score requirement is unavailable."
+        },
+        "age": {
+          "status": "UNKNOWN",
+          "message": "Age-limit information is unavailable."
+        },
+        "deadline": {
+          "status": "UNKNOWN",
+          "message": "Application deadline is unavailable."
+        }
+      },
+      "match_reasons": [
+        "Target degree level is supported by the scholarship.",
+        "Scholarship is available in preferred country: Japan.",
+        "Scholarship status is 'upcoming'.",
+        "Missing field information was treated as uncertainty rather than as a confirmed field mismatch.",
+        "Scholarship-name similarity provides 0.00% supporting field evidence.",
+        "Scholarship funding type matches the user's preference."
+      ],
+      "requirement_gaps": [
+        "Structured fields-of-study information is unavailable.",
+        "Field relevance cannot be fully confirmed because structured field information is unavailable.",
+        "Eligible-nationality information is unavailable.",
+        "Minimum GPA requirement is unavailable.",
+        "English-score requirement is unavailable.",
+        "Age-limit information is unavailable.",
+        "Application deadline is unavailable."
+      ]
+    },
+    {
+      "scholarship_id": "sch_jp_004",
+      "scholarship_name": "2027 MEXT Scholarship Special Program",
+      "provider_name": "Japanese Government MEXT",
+      "provider_type": "Government",
+      "country_id": "country_jp",
+      "country_name": "Japan",
+      "host_university_id": "uni_jp_007",
+      "host_university_name": "Hokkaido University",
+      "degree_levels": [
+        "Master",
+        "PhD"
+      ],
+      "fields_of_study": [],
+      "funding_type": "Fully Funded",
+      "tuition_coverage": null,
+      "monthly_allowance": null,
+      "allowance_currency": null,
+      "application_opening_date": null,
+      "application_deadline": null,
+      "scholarship_status": "upcoming",
+      "application_cycle": "2027",
+      "official_website": "https://www2.sci.hokudai.ac.jp/gs/en/news/5419",
+      "source_url": "https://www2.sci.hokudai.ac.jp/gs/en/news/5419",
+      "match_score": 74.25,
+      "base_match_score": 82.5,
+      "maximum_score": 100,
+      "score_breakdown": {
+        "degree_level": 20,
+        "preferred_country": 15,
+        "field_similarity": 17.5,
+        "funding_type": 20,
+        "scholarship_status": 10
+      },
+      "field_similarity": 0.0,
+      "name_similarity": 0.0,
+      "field_relevance": "field_information_unavailable",
+      "field_relevance_multiplier": 0.9,
+      "field_score_method": "neutral_credit_with_name_evidence",
+      "structured_field_data_available": false,
+      "eligibility_status": "eligible_under_known_rules_with_gaps",
+      "eligibility_confidence": 0.0,
+      "eligibility_checks": {
+        "nationality": {
+          "status": "UNKNOWN",
+          "message": "Eligible-nationality information is unavailable."
+        },
+        "gpa": {
+          "status": "UNKNOWN",
+          "message": "Minimum GPA requirement is unavailable."
+        },
+        "english": {
+          "status": "UNKNOWN",
+          "message": "English-score requirement is unavailable."
+        },
+        "age": {
+          "status": "UNKNOWN",
+          "message": "Age-limit information is unavailable."
+        },
+        "deadline": {
+          "status": "UNKNOWN",
+          "message": "Application deadline is unavailable."
+        }
+      },
+      "match_reasons": [
+        "Target degree level is supported by the scholarship.",
+        "Scholarship is available in preferred country: Japan.",
+        "Scholarship status is 'upcoming'.",
+        "Missing field information was treated as uncertainty rather than as a confirmed field mismatch.",
+        "Scholarship-name similarity provides 0.00% supporting field evidence.",
+        "Scholarship funding type matches the user's preference."
+      ],
+      "requirement_gaps": [
+        "Structured fields-of-study information is unavailable.",
+        "Field relevance cannot be fully confirmed because structured field information is unavailable.",
+        "Eligible-nationality information is unavailable.",
+        "Minimum GPA requirement is unavailable.",
+        "English-score requirement is unavailable.",
+        "Age-limit information is unavailable.",
+        "Application deadline is unavailable."
+      ]
+    }
+  ]
+}

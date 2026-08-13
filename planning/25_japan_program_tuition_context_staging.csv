@@ -1,0 +1,37 @@
+﻿program_id,university_id,university_name,program_name,degree_level,current_tuition_fee,current_tuition_currency,current_tuition_period,tuition_academic_year,tuition_student_scope,tuition_source_url,tuition_last_verified_at,tuition_note,current_program_url,current_last_verified_at
+prog_jp_019,uni_jp_007,Hokkaido University,Computer Science and Information Technology,Master,535800,JPY,Annual,,,,,,https://www.ist.hokudai.ac.jp/eng/divisions/,2026-08-09T00:00:00
+prog_jp_020,uni_jp_007,Hokkaido University,Media and Network Technologies,Master,535800,JPY,Annual,,,,,,https://www.ist.hokudai.ac.jp/eng/divisions/,2026-08-09T00:00:00
+prog_jp_021,uni_jp_007,Hokkaido University,Systems Science and Informatics,Master,535800,JPY,Annual,,,,,,https://www.ist.hokudai.ac.jp/eng/divisions/,2026-08-09T00:00:00
+prog_jp_024,uni_jp_008,Institute of Science Tokyo,Graduate major in Artificial Intelligence,Master,635400,JPY,Annual,,,,,,https://www.isct.ac.jp/en/001/about/organizations/school-of-computing,2026-08-09T00:00:00
+prog_jp_022,uni_jp_008,Institute of Science Tokyo,Graduate major in Computer Science,Master,635400,JPY,Annual,,,,,,https://www.isct.ac.jp/en/001/about/organizations/school-of-computing,2026-08-09T00:00:00
+prog_jp_023,uni_jp_008,Institute of Science Tokyo,Graduate major in Mathematical and Computing Science,Master,635400,JPY,Annual,,,,,,https://www.isct.ac.jp/en/001/about/organizations/school-of-computing,2026-08-09T00:00:00
+prog_jp_036,uni_jp_012,Keio University,Double Degree Program,Master,1160000,JPY,Annual,,,,,,https://www.keio.ac.jp/en/st/admissions-en/dd/,2026-08-09T00:00:00
+prog_jp_034,uni_jp_012,Keio University,International Graduate Program,Master,1160000,JPY,Annual,,,,,,https://www.keio.ac.jp/en/st/admissions-en/masters_program/,2026-08-09T00:00:00
+prog_jp_035,uni_jp_012,Keio University,International Graduate Program,PhD,740000,JPY,Annual,,,,,,https://www.keio.ac.jp/en/st/admissions-en/phd_program/,2026-08-09T00:00:00
+prog_jp_028,uni_jp_010,Kobe University,Computer Science and Systems Engineering,Bachelor,535800,JPY,Annual,,,,,,https://www.csi.kobe-u.ac.jp/english/,2026-08-09T00:00:00
+prog_jp_029,uni_jp_010,Kobe University,System Informatics,Master,535800,JPY,Annual,,,,,,https://www.csi.kobe-u.ac.jp/english/,2026-08-09T00:00:00
+prog_jp_030,uni_jp_010,Kobe University,System Informatics,PhD,535800,JPY,Annual,,,,,,https://www.csi.kobe-u.ac.jp/english/,2026-08-09T00:00:00
+prog_jp_005,uni_jp_002,Kyoto University,Communications and Computer Engineering,Master,535800,JPY,Annual,,,,,,https://www.i.kyoto-u.ac.jp/en/course/,2026-08-09T00:00:00
+prog_jp_006,uni_jp_002,Kyoto University,Data Science,Master,535800,JPY,Annual,,,,,,https://www.i.kyoto-u.ac.jp/en/course/,2026-08-09T00:00:00
+prog_jp_004,uni_jp_002,Kyoto University,Intelligence Science and Technology,Master,535800,JPY,Annual,,,,,,https://www.i.kyoto-u.ac.jp/en/course/,2026-08-09T00:00:00
+prog_jp_017,uni_jp_006,Kyushu University,International Master's/Doctoral Program in Electrical and Electronic Engineering,Master,535800,JPY,Annual,,,,,,https://www.isc.kyushu-u.ac.jp/graduate/,2026-08-09T00:00:00
+prog_jp_016,uni_jp_006,Kyushu University,International Master's/Doctoral Program in Information Science and Technology,Master,535800,JPY,Annual,,,,,,https://www.isc.kyushu-u.ac.jp/graduate/,2026-08-09T00:00:00
+prog_jp_018,uni_jp_006,Kyushu University,Master's Program in the Department of Design (Acoustic Design Course),Master,535800,JPY,Annual,,,,,,https://www.isc.kyushu-u.ac.jp/graduate/,2026-08-09T00:00:00
+prog_jp_014,uni_jp_005,Nagoya University,Computing and Software Systems,Master,535800,JPY,Annual,,,,,,https://www.i.nagoya-u.ac.jp/en/graduate-school-of-informatics/,2026-08-09T00:00:00
+prog_jp_015,uni_jp_005,Nagoya University,Intelligent Systems,Master,535800,JPY,Annual,,,,,,https://www.i.nagoya-u.ac.jp/en/graduate-school-of-informatics/,2026-08-09T00:00:00
+prog_jp_013,uni_jp_005,Nagoya University,Mathematical Informatics,Master,535800,JPY,Annual,,,,,,https://www.i.nagoya-u.ac.jp/en/graduate-school-of-informatics/,2026-08-09T00:00:00
+prog_jp_007,uni_jp_003,Osaka University,Computer Science,Master,535800,JPY,Annual,,,,,,https://www.ist.osaka-u.ac.jp/english/,2026-08-09T00:00:00
+prog_jp_008,uni_jp_003,Osaka University,Information Networking,Master,535800,JPY,Annual,,,,,,https://www.ist.osaka-u.ac.jp/english/majors/nw.php,2026-08-09T00:00:00
+prog_jp_009,uni_jp_003,Osaka University,Multimedia Engineering,Master,535800,JPY,Annual,,,,,,https://www.ist.osaka-u.ac.jp/english/majors/mm.php,2026-08-09T00:00:00
+prog_jp_001,uni_jp_001,The University of Tokyo,Computer Science,Master,535800,JPY,Annual,,,,,,https://www.i.u-tokyo.ac.jp/index_e.shtml,2026-08-09T00:00:00
+prog_jp_003,uni_jp_001,The University of Tokyo,Information Physics & Computing,Master,535800,JPY,Annual,,,,,,https://www.i.u-tokyo.ac.jp/index_e.shtml,2026-08-09T00:00:00
+prog_jp_002,uni_jp_001,The University of Tokyo,Mathematical Informatics,Master,535800,JPY,Annual,,,,,,https://www.i.u-tokyo.ac.jp/index_e.shtml,2026-08-09T00:00:00
+prog_jp_012,uni_jp_004,Tohoku University,Applied Information Sciences,Master,535800,JPY,Annual,,,,,,https://www.is.tohoku.ac.jp/en/,2026-08-09T00:00:00
+prog_jp_010,uni_jp_004,Tohoku University,Computer and Mathematical Sciences,Master,535800,JPY,Annual,,,,,,https://www.is.tohoku.ac.jp/en/,2026-08-09T00:00:00
+prog_jp_011,uni_jp_004,Tohoku University,System Information Sciences,Master,535800,JPY,Annual,,,,,,https://www.is.tohoku.ac.jp/en/,2026-08-09T00:00:00
+prog_jp_025,uni_jp_009,University of Tsukuba,Computer Science,Master,535800,JPY,Annual,,,,,,https://www.sie.tsukuba.ac.jp/eng/edu/course/cs/,2026-08-09T00:00:00
+prog_jp_026,uni_jp_009,University of Tsukuba,Intelligent and Mechanical Interaction Systems,Master,535800,JPY,Annual,,,,,,https://www.sie.tsukuba.ac.jp/eng/,2026-08-09T00:00:00
+prog_jp_027,uni_jp_009,University of Tsukuba,Empowerment Informatics,PhD,535800,JPY,Annual,,,,,,https://www.emp.tsukuba.ac.jp/english,2026-08-09T00:00:00
+prog_jp_032,uni_jp_011,Waseda University,Computer Science and Communications Engineering,Master,991000,JPY,Annual,,,,,,https://www.waseda.jp/fsci/en/about/departments,2026-08-09T00:00:00
+prog_jp_033,uni_jp_011,Waseda University,Intermedia Studies,Master,991000,JPY,Annual,,,,,,https://www.waseda.jp/fsci/en/about/departments,2026-08-09T00:00:00
+prog_jp_031,uni_jp_011,Waseda University,Pure and Applied Mathematics,Master,991000,JPY,Annual,,,,,,https://www.waseda.jp/fsci/en/about/departments,2026-08-09T00:00:00

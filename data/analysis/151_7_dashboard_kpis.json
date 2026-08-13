@@ -1,0 +1,256 @@
+{
+  "step": "151.7",
+  "title": "EduPath Data Analysis Dashboard",
+  "generated_at": "2026-08-12T14:41:19.126016+00:00",
+  "dataset_scope": {
+    "description": "Current validated EduPath dataset. Program and scholarship analysis currently focuses primarily on the collected Japan dataset.",
+    "generalisation_warning": "Results describe the current collected dataset and should not yet be generalised to all universities or scholarships in Japan or East and Southeast Asia."
+  },
+  "source_status": {
+    "151_1_dataset_audit": true,
+    "151_2_descriptive_analysis": true,
+    "151_3_visualization_summary": true,
+    "151_4_analytical_insights": true,
+    "151_5_comparative_analysis": true,
+    "151_6_algorithm_performance": true
+  },
+  "headline_kpis": [
+    {
+      "key": "countries",
+      "label": "Countries",
+      "value": 7,
+      "unit": "records"
+    },
+    {
+      "key": "universities",
+      "label": "Universities",
+      "value": 54,
+      "unit": "records"
+    },
+    {
+      "key": "programs",
+      "label": "Programs",
+      "value": 36,
+      "unit": "records"
+    },
+    {
+      "key": "scholarships",
+      "label": "Scholarships",
+      "value": 12,
+      "unit": "records"
+    },
+    {
+      "key": "tuition_coverage",
+      "label": "Tuition Coverage",
+      "value": 100.0,
+      "unit": "%"
+    },
+    {
+      "key": "mean_tuition",
+      "label": "Mean Annual Tuition",
+      "value": 628466.67,
+      "unit": "JPY"
+    },
+    {
+      "key": "median_tuition",
+      "label": "Median Annual Tuition",
+      "value": 535800.0,
+      "unit": "JPY"
+    },
+    {
+      "key": "algorithm_validation",
+      "label": "Functional Validation",
+      "value": 100.0,
+      "unit": "%"
+    }
+  ],
+  "dataset_overview": {
+    "countries": 7,
+    "universities": 54,
+    "programs": 36,
+    "scholarships": 12
+  },
+  "data_quality": {
+    "analysis_status": "READY_FOR_ANALYSIS",
+    "duplicate_ids": 0,
+    "relationship_errors": 0,
+    "program_tuition_coverage": 100.0
+  },
+  "program_analysis": {
+    "degree_distribution": [
+      {
+        "degree_level": "Master",
+        "program_count": 32,
+        "percentage": 88.89
+      },
+      {
+        "degree_level": "PhD",
+        "program_count": 3,
+        "percentage": 8.33
+      },
+      {
+        "degree_level": "Bachelor",
+        "program_count": 1,
+        "percentage": 2.78
+      }
+    ],
+    "programs_by_university": []
+  },
+  "tuition_analysis": {
+    "statistics": {
+      "mean_jpy": 628466.67,
+      "median_jpy": 535800.0,
+      "minimum_jpy": 535800.0,
+      "maximum_jpy": 1160000.0,
+      "standard_deviation_jpy": 183550.81,
+      "currency": "JPY",
+      "period": "Annual"
+    },
+    "distribution": [
+      {
+        "annual_tuition_jpy": 535800,
+        "program_count": 24,
+        "percentage": 66.67
+      },
+      {
+        "annual_tuition_jpy": 608800,
+        "program_count": 3,
+        "percentage": 8.33
+      },
+      {
+        "annual_tuition_jpy": 635400,
+        "program_count": 3,
+        "percentage": 8.33
+      },
+      {
+        "annual_tuition_jpy": 740000,
+        "program_count": 1,
+        "percentage": 2.78
+      },
+      {
+        "annual_tuition_jpy": 991000,
+        "program_count": 3,
+        "percentage": 8.33
+      },
+      {
+        "annual_tuition_jpy": 1160000,
+        "program_count": 2,
+        "percentage": 5.56
+      }
+    ],
+    "affordability_segments": {
+      "lower_cost": 24,
+      "mid_range": 3,
+      "higher_cost": 9
+    }
+  },
+  "scholarship_analysis": {
+    "current_records": 12,
+    "current_funding_observation": "Fully Funded",
+    "current_status_observation": "Upcoming",
+    "scope_note": "Scholarship statistics describe the current targeted scholarship dataset only."
+  },
+  "algorithm_performance": {
+    "algorithm_version": "V2.2",
+    "profiles_tested": 23,
+    "profiles_passed": 23,
+    "profiles_failed": 0,
+    "functional_validation_rate": 100.0,
+    "average_eligible_candidates": 7.13,
+    "average_returned_recommendations": null,
+    "average_top_score": 72.23,
+    "v1_v22_spearman_rank_correlation": 1.0,
+    "evaluation_type": "Functional scenario validation and ranking-behaviour analysis",
+    "supervised_accuracy_claim": false
+  },
+  "analytical_insights": [
+    {
+      "id": "INSIGHT_01",
+      "title": "Master is the dominant degree level in the current EduPath program dataset.",
+      "priority": "HIGH",
+      "evidence": "32 of 36 programs (88.89%) are Master programs.",
+      "interpretation": "The current program dataset is strongly concentrated at the Master level. This means the current EduPath program coverage is more representative of Master-level opportunities than of other degree levels.",
+      "recommendation": "During future data expansion, prioritise underrepresented degree levels so that recommendation results can support a broader range of students."
+    },
+    {
+      "id": "INSIGHT_02",
+      "title": "Most current program tuition values are concentrated around a common annual tuition level, while some programs have substantially higher tuition.",
+      "priority": "HIGH",
+      "evidence": "Mean tuition = 628,466.67 JPY; median = 535,800.00 JPY; maximum = 1,160,000.00 JPY; most common tuition = 535,800.00 JPY (66.67% of current programs).",
+      "interpretation": "The mean tuition is noticeably higher than the median. This indicates that a smaller number of higher-fee programs are pulling the average upward.",
+      "recommendation": "For affordability analysis, EduPath should display both median and mean tuition. Median tuition is useful for describing the typical program, while the mean still shows the effect of more expensive programs."
+    },
+    {
+      "id": "INSIGHT_03",
+      "title": "Program coverage across currently represented universities was assessed for balance.",
+      "priority": "MEDIUM",
+      "evidence": "12 universities are represented in the program collection. Program counts range from 3 to 3 per represented university.",
+      "interpretation": "Within the universities currently represented in the program collection, program counts are evenly distributed. This reduces the risk that one included university dominates the current program dataset.",
+      "recommendation": "Future expansion should focus more on adding additional universities and additional degree/program categories rather than repeatedly adding many records from the same universities."
+    },
+    {
+      "id": "INSIGHT_04",
+      "title": "Fully Funded is the dominant funding category in the current scholarship dataset.",
+      "priority": "MEDIUM",
+      "evidence": "12 of 12 scholarships (100.00%) are classified as Fully Funded.",
+      "interpretation": "The current scholarship collection is highly concentrated in the 'Fully Funded' funding category. This is useful for fully funded scholarship discovery, but it does not yet represent the full variety of funding models available.",
+      "recommendation": "During later scholarship-data expansion, add other funding categories such as partial funding, tuition waivers, university grants and other relevant scholarship types."
+    },
+    {
+      "id": "INSIGHT_05",
+      "title": "The dominant scholarship status is 'upcoming'.",
+      "priority": "MEDIUM",
+      "evidence": "12 of 12 scholarships (100.00%) have status 'upcoming'.",
+      "interpretation": "The current scholarship collection is concentrated in a single lifecycle status: 'upcoming'. This reflects the current collection focus rather than the complete scholarship market.",
+      "recommendation": "When the dataset is expanded, retain status history and include open, upcoming and closed/archived records where appropriate. This will support future trend and application cycle analysis."
+    },
+    {
+      "id": "INSIGHT_06",
+      "title": "Eligibility-data completeness was analysed.",
+      "priority": "HIGH",
+      "evidence": "Average coverage across selected scholarship requirement fields is 2.78%. Low-coverage fields: eligible_nationalities (0.00%), minimum_gpa (0.00%), english_requirement (0.00%), age_limit (0.00%), fields_of_study (8.33%), application_deadline (8.33%).",
+      "interpretation": "Several scholarship eligibility fields are incomplete. The recommendation engine can still treat missing values as uncertainty, but confidence in eligibility decisions will improve when these fields are verified.",
+      "recommendation": "Prioritise verification of low-coverage scholarship fields, especially nationality eligibility, GPA requirements, English-language requirements, age limits and deadlines."
+    },
+    {
+      "id": "INSIGHT_07",
+      "title": "The geographic scope of current program and scholarship data was assessed.",
+      "priority": "HIGH",
+      "evidence": "Program countries represented: 1 (Japan). Scholarship countries represented: 1 (Japan).",
+      "interpretation": "The current program and scholarship analysis is intentionally country-focused. Therefore, the current findings are suitable for analysing the collected EduPath dataset but should not yet be generalised to all universities or scholarships across East and Southeast Asia.",
+      "recommendation": "Keep the current Japan dataset as the validated baseline. Later, expand programs and scholarships country-by-country using the same verification, relationship-integrity and analysis pipeline."
+    }
+  ],
+  "charts": [
+    {
+      "chart_id": "151_3_01_program_degree_distribution",
+      "title": "01 Program Degree Distribution",
+      "file_name": "151_3_01_program_degree_distribution.png",
+      "relative_path": "data/analysis/charts/151_3_01_program_degree_distribution.png"
+    },
+    {
+      "chart_id": "151_3_02_annual_tuition_distribution",
+      "title": "02 Annual Tuition Distribution",
+      "file_name": "151_3_02_annual_tuition_distribution.png",
+      "relative_path": "data/analysis/charts/151_3_02_annual_tuition_distribution.png"
+    },
+    {
+      "chart_id": "151_3_03_programs_by_university",
+      "title": "03 Programs By University",
+      "file_name": "151_3_03_programs_by_university.png",
+      "relative_path": "data/analysis/charts/151_3_03_programs_by_university.png"
+    },
+    {
+      "chart_id": "151_3_04_dataset_composition",
+      "title": "04 Dataset Composition",
+      "file_name": "151_3_04_dataset_composition.png",
+      "relative_path": "data/analysis/charts/151_3_04_dataset_composition.png"
+    }
+  ],
+  "dashboard_metadata": {
+    "ready_for_backend_api": true,
+    "ready_for_frontend": true,
+    "mongodb_modified": false,
+    "data_analysis_layer_status": "ACTIVE"
+  }
+}

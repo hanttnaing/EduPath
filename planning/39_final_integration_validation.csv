@@ -1,0 +1,12 @@
+﻿step,check_name,status,message
+151.10,Frontend required files,PASS,All required EduPath frontend integration files exist.
+151.10,Frontend API base URL,PASS,Frontend and backend are using the same API base URL.
+151.10,Python compile validation,PASS,Backend and analysis-layer Python files compiled successfully.
+151.10,Countries API,PASS,Endpoint returned 7 records. Japan record detected.
+151.10,Japan Universities API,PASS,Endpoint returned 16 records.
+151.10,Programs API,PASS,Endpoint returned 36 records.
+151.10,Japan Scholarships API,PASS,Endpoint returned 12 records.
+151.10,Analysis Dashboard API,PASS,Dashboard API returned a non-empty analytical dataset.
+151.10,CORS configuration,PASS,Backend CORS configuration responded successfully.
+151.10,Dashboard step label,WARNING,Dashboard still displays Step 151.9. Change it to Step 151.10 after final validation passes.
+151.10,Frontend production build,PASS,Vite production build completed successfully.

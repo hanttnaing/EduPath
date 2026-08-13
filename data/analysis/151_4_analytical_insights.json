@@ -1,0 +1,279 @@
+{
+  "step": "151.4",
+  "title": "Analytical Insights & Recommendation Findings",
+  "generated_at": "2026-08-12T13:31:15.870643+00:00",
+  "database": "edupath_db",
+  "analysis_scope": "Current EduPath dataset only",
+  "program_metrics": {
+    "total_programs": 36,
+    "degree_distribution": [
+      {
+        "degree_level": "Master",
+        "count": 32,
+        "percentage": 88.89
+      },
+      {
+        "degree_level": "PhD",
+        "count": 3,
+        "percentage": 8.33
+      },
+      {
+        "degree_level": "Bachelor",
+        "count": 1,
+        "percentage": 2.78
+      }
+    ],
+    "tuition": {
+      "available_count": 36,
+      "coverage_percentage": 100.0,
+      "distinct_values": 6,
+      "mean_jpy": 628466.67,
+      "median_jpy": 535800.0,
+      "minimum_jpy": 535800.0,
+      "maximum_jpy": 1160000.0,
+      "standard_deviation_jpy": 180983.54,
+      "mode_jpy": 535800,
+      "mode_count": 24,
+      "mode_percentage": 66.67,
+      "distribution": [
+        {
+          "tuition_jpy": 535800,
+          "count": 24,
+          "percentage": 66.67
+        },
+        {
+          "tuition_jpy": 608800,
+          "count": 3,
+          "percentage": 8.33
+        },
+        {
+          "tuition_jpy": 635400,
+          "count": 3,
+          "percentage": 8.33
+        },
+        {
+          "tuition_jpy": 740000,
+          "count": 1,
+          "percentage": 2.78
+        },
+        {
+          "tuition_jpy": 991000,
+          "count": 3,
+          "percentage": 8.33
+        },
+        {
+          "tuition_jpy": 1160000,
+          "count": 2,
+          "percentage": 5.56
+        }
+      ]
+    },
+    "programs_by_university": [
+      {
+        "university": "The University of Tokyo",
+        "count": 3,
+        "percentage": 8.33
+      },
+      {
+        "university": "Kyoto University",
+        "count": 3,
+        "percentage": 8.33
+      },
+      {
+        "university": "Osaka University",
+        "count": 3,
+        "percentage": 8.33
+      },
+      {
+        "university": "Tohoku University",
+        "count": 3,
+        "percentage": 8.33
+      },
+      {
+        "university": "Nagoya University",
+        "count": 3,
+        "percentage": 8.33
+      },
+      {
+        "university": "Kyushu University",
+        "count": 3,
+        "percentage": 8.33
+      },
+      {
+        "university": "Hokkaido University",
+        "count": 3,
+        "percentage": 8.33
+      },
+      {
+        "university": "Institute of Science Tokyo",
+        "count": 3,
+        "percentage": 8.33
+      },
+      {
+        "university": "University of Tsukuba",
+        "count": 3,
+        "percentage": 8.33
+      },
+      {
+        "university": "Kobe University",
+        "count": 3,
+        "percentage": 8.33
+      },
+      {
+        "university": "Waseda University",
+        "count": 3,
+        "percentage": 8.33
+      },
+      {
+        "university": "Keio University",
+        "count": 3,
+        "percentage": 8.33
+      }
+    ],
+    "programs_by_country": [
+      {
+        "country": "Japan",
+        "count": 36,
+        "percentage": 100.0
+      }
+    ],
+    "represented_universities": 12,
+    "represented_countries": 1
+  },
+  "scholarship_metrics": {
+    "total_scholarships": 12,
+    "funding_distribution": [
+      {
+        "funding_type": "Fully Funded",
+        "count": 12,
+        "percentage": 100.0
+      }
+    ],
+    "status_distribution": [
+      {
+        "status": "upcoming",
+        "count": 12,
+        "percentage": 100.0
+      }
+    ],
+    "scholarships_by_country": [
+      {
+        "country": "Japan",
+        "count": 12,
+        "percentage": 100.0
+      }
+    ],
+    "requirement_completeness": {
+      "fields_of_study": {
+        "available": 1,
+        "missing": 11,
+        "coverage_percentage": 8.33
+      },
+      "eligible_nationalities": {
+        "available": 0,
+        "missing": 12,
+        "coverage_percentage": 0.0
+      },
+      "minimum_gpa": {
+        "available": 0,
+        "missing": 12,
+        "coverage_percentage": 0.0
+      },
+      "english_requirement": {
+        "available": 0,
+        "missing": 12,
+        "coverage_percentage": 0.0
+      },
+      "age_limit": {
+        "available": 0,
+        "missing": 12,
+        "coverage_percentage": 0.0
+      },
+      "application_deadline": {
+        "available": 1,
+        "missing": 11,
+        "coverage_percentage": 8.33
+      }
+    },
+    "average_requirement_coverage_percentage": 2.78,
+    "represented_countries": 1
+  },
+  "insights": [
+    {
+      "insight_id": "INSIGHT_01",
+      "category": "Program Degree Distribution",
+      "finding": "Master is the dominant degree level in the current EduPath program dataset.",
+      "evidence": "32 of 36 programs (88.89%) are Master programs.",
+      "interpretation": "The current program dataset is strongly concentrated at the Master level. This means the current EduPath program coverage is more representative of Master-level opportunities than of other degree levels.",
+      "recommendation": "During future data expansion, prioritise underrepresented degree levels so that recommendation results can support a broader range of students.",
+      "priority": "HIGH"
+    },
+    {
+      "insight_id": "INSIGHT_02",
+      "category": "Program Tuition Analysis",
+      "finding": "Most current program tuition values are concentrated around a common annual tuition level, while some programs have substantially higher tuition.",
+      "evidence": "Mean tuition = 628,466.67 JPY; median = 535,800.00 JPY; maximum = 1,160,000.00 JPY; most common tuition = 535,800.00 JPY (66.67% of current programs).",
+      "interpretation": "The mean tuition is noticeably higher than the median. This indicates that a smaller number of higher-fee programs are pulling the average upward.",
+      "recommendation": "For affordability analysis, EduPath should display both median and mean tuition. Median tuition is useful for describing the typical program, while the mean still shows the effect of more expensive programs.",
+      "priority": "HIGH"
+    },
+    {
+      "insight_id": "INSIGHT_03",
+      "category": "University Representation",
+      "finding": "Program coverage across currently represented universities was assessed for balance.",
+      "evidence": "12 universities are represented in the program collection. Program counts range from 3 to 3 per represented university.",
+      "interpretation": "Within the universities currently represented in the program collection, program counts are evenly distributed. This reduces the risk that one included university dominates the current program dataset.",
+      "recommendation": "Future expansion should focus more on adding additional universities and additional degree/program categories rather than repeatedly adding many records from the same universities.",
+      "priority": "MEDIUM"
+    },
+    {
+      "insight_id": "INSIGHT_04",
+      "category": "Scholarship Funding Distribution",
+      "finding": "Fully Funded is the dominant funding category in the current scholarship dataset.",
+      "evidence": "12 of 12 scholarships (100.00%) are classified as Fully Funded.",
+      "interpretation": "The current scholarship collection is highly concentrated in the 'Fully Funded' funding category. This is useful for fully funded scholarship discovery, but it does not yet represent the full variety of funding models available.",
+      "recommendation": "During later scholarship-data expansion, add other funding categories such as partial funding, tuition waivers, university grants and other relevant scholarship types.",
+      "priority": "MEDIUM"
+    },
+    {
+      "insight_id": "INSIGHT_05",
+      "category": "Scholarship Status Distribution",
+      "finding": "The dominant scholarship status is 'upcoming'.",
+      "evidence": "12 of 12 scholarships (100.00%) have status 'upcoming'.",
+      "interpretation": "The current scholarship collection is concentrated in a single lifecycle status: 'upcoming'. This reflects the current collection focus rather than the complete scholarship market.",
+      "recommendation": "When the dataset is expanded, retain status history and include open, upcoming and closed/archived records where appropriate. This will support future trend and application cycle analysis.",
+      "priority": "MEDIUM"
+    },
+    {
+      "insight_id": "INSIGHT_06",
+      "category": "Scholarship Requirement Data Quality",
+      "finding": "Eligibility-data completeness was analysed.",
+      "evidence": "Average coverage across selected scholarship requirement fields is 2.78%. Low-coverage fields: eligible_nationalities (0.00%), minimum_gpa (0.00%), english_requirement (0.00%), age_limit (0.00%), fields_of_study (8.33%), application_deadline (8.33%).",
+      "interpretation": "Several scholarship eligibility fields are incomplete. The recommendation engine can still treat missing values as uncertainty, but confidence in eligibility decisions will improve when these fields are verified.",
+      "recommendation": "Prioritise verification of low-coverage scholarship fields, especially nationality eligibility, GPA requirements, English-language requirements, age limits and deadlines.",
+      "priority": "HIGH"
+    },
+    {
+      "insight_id": "INSIGHT_07",
+      "category": "Geographic Coverage",
+      "finding": "The geographic scope of current program and scholarship data was assessed.",
+      "evidence": "Program countries represented: 1 (Japan). Scholarship countries represented: 1 (Japan).",
+      "interpretation": "The current program and scholarship analysis is intentionally country-focused. Therefore, the current findings are suitable for analysing the collected EduPath dataset but should not yet be generalised to all universities or scholarships across East and Southeast Asia.",
+      "recommendation": "Keep the current Japan dataset as the validated baseline. Later, expand programs and scholarships country-by-country using the same verification, relationship-integrity and analysis pipeline.",
+      "priority": "HIGH"
+    }
+  ],
+  "overall_conclusion": {
+    "analysis_scope": "Current EduPath dataset only. Results must not yet be generalised to all universities, programs or scholarships in Japan or other countries.",
+    "current_dataset": {
+      "programs": 36,
+      "scholarships": 12,
+      "program_countries": 1,
+      "scholarship_countries": 1
+    },
+    "high_priority_findings": 4,
+    "medium_priority_findings": 3,
+    "conclusion": "EduPath now has an analytical layer that goes beyond descriptive charts. The system identifies dataset patterns, interprets their meaning and converts them into actionable recommendations for data expansion and recommendation-system improvement."
+  },
+  "mongodb_records_modified": false
+}

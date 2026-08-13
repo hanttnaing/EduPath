@@ -1,0 +1,24 @@
+﻿relationship_type,record_type,record_id,record_name,reference_field,reference_value,issue
+University -> Country,university,uni_kr_001,Seoul National University,country_id,country_kr,country_id does not match any countries record
+University -> Country,university,uni_kr_002,Korea Advanced Institute of Science and Technology,country_id,country_kr,country_id does not match any countries record
+University -> Country,university,uni_kr_003,Yonsei University,country_id,country_kr,country_id does not match any countries record
+University -> Country,university,uni_kr_004,Korea University,country_id,country_kr,country_id does not match any countries record
+University -> Country,university,uni_kr_005,Sungkyunkwan University,country_id,country_kr,country_id does not match any countries record
+University -> Country,university,uni_kr_006,Pohang University of Science and Technology,country_id,country_kr,country_id does not match any countries record
+University -> Country,university,uni_kr_007,Hanyang University,country_id,country_kr,country_id does not match any countries record
+University -> Country,university,uni_kr_008,Kyung Hee University,country_id,country_kr,country_id does not match any countries record
+University -> Country,university,uni_tw_001,National Taiwan University,country_id,country_tw,country_id does not match any countries record
+University -> Country,university,uni_tw_002,National Tsing Hua University,country_id,country_tw,country_id does not match any countries record
+University -> Country,university,uni_tw_003,National Yang Ming Chiao Tung University,country_id,country_tw,country_id does not match any countries record
+University -> Country,university,uni_tw_004,National Cheng Kung University,country_id,country_tw,country_id does not match any countries record
+University -> Country,university,uni_tw_005,National Taiwan University of Science and Technology,country_id,country_tw,country_id does not match any countries record
+University -> Country,university,uni_hk_001,The University of Hong Kong,country_id,country_hk,country_id does not match any countries record
+University -> Country,university,uni_hk_002,The Chinese University of Hong Kong,country_id,country_hk,country_id does not match any countries record
+University -> Country,university,uni_hk_003,The Hong Kong University of Science and Technology,country_id,country_hk,country_id does not match any countries record
+University -> Country,university,uni_hk_004,The Hong Kong Polytechnic University,country_id,country_hk,country_id does not match any countries record
+University -> Country,university,uni_hk_005,City University of Hong Kong,country_id,country_hk,country_id does not match any countries record
+University -> Country,university,uni_th_001,Chulalongkorn University,country_id,country_th,country_id does not match any countries record
+University -> Country,university,uni_th_002,Mahidol University,country_id,country_th,country_id does not match any countries record
+University -> Country,university,uni_th_003,Chiang Mai University,country_id,country_th,country_id does not match any countries record
+University -> Country,university,uni_th_004,Thammasat University,country_id,country_th,country_id does not match any countries record
+University -> Country,university,uni_th_005,Kasetsart University,country_id,country_th,country_id does not match any countries record

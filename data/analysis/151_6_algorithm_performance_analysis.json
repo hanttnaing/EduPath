@@ -1,0 +1,442 @@
+{
+  "step": "151.6",
+  "title": "Recommendation Algorithm Performance Analysis",
+  "generated_at": "2026-08-12T14:31:14.328759+00:00",
+  "evaluation_type": "Functional scenario validation and ranking-behaviour analysis",
+  "accuracy_claim": false,
+  "accuracy_note": "No labelled human relevance ground-truth dataset is currently available; therefore the project does not claim supervised recommendation accuracy.",
+  "source_reports": {
+    "algorithm_comparison_csv": {
+      "path": "C:\\Users\\X1\\EduPath\\planning\\30_scholarship_algorithm_comparison.csv",
+      "exists": true
+    },
+    "algorithm_comparison_json": {
+      "path": "C:\\Users\\X1\\EduPath\\data\\cleaned\\scholarship_algorithm_comparison.json",
+      "exists": true
+    },
+    "profile_test_csv": {
+      "path": "C:\\Users\\X1\\EduPath\\planning\\31_scholarship_v22_profile_tests.csv",
+      "exists": true
+    },
+    "profile_test_json": {
+      "path": "C:\\Users\\X1\\EduPath\\data\\cleaned\\scholarship_v22_profile_tests.json",
+      "exists": true
+    },
+    "algorithm_lock_json": {
+      "path": "C:\\Users\\X1\\EduPath\\planning\\32_scholarship_algorithm_lock_v22.json",
+      "exists": true
+    }
+  },
+  "profile_test_analysis": {
+    "profiles_detected": 23,
+    "profiles_passed": 23,
+    "profiles_failed": 0,
+    "profiles_validation_unknown": 0,
+    "functional_validation_rate": 100.0,
+    "average_eligible_candidates": 7.13,
+    "average_returned_recommendations": null,
+    "average_top_score": 72.23,
+    "minimum_top_score": 55.94,
+    "maximum_top_score": 100.0,
+    "profiles": [
+      {
+        "profile_id": "profile_row_001",
+        "validation_passed": true,
+        "eligible_candidates": 8,
+        "returned_recommendations": null,
+        "top_score": 100.0
+      },
+      {
+        "profile_id": "profile_row_002",
+        "validation_passed": true,
+        "eligible_candidates": 8,
+        "returned_recommendations": null,
+        "top_score": 75.15
+      },
+      {
+        "profile_id": "profile_row_003",
+        "validation_passed": true,
+        "eligible_candidates": 8,
+        "returned_recommendations": null,
+        "top_score": 73.84
+      },
+      {
+        "profile_id": "profile_row_004",
+        "validation_passed": true,
+        "eligible_candidates": 8,
+        "returned_recommendations": null,
+        "top_score": 73.84
+      },
+      {
+        "profile_id": "profile_row_005",
+        "validation_passed": true,
+        "eligible_candidates": 8,
+        "returned_recommendations": null,
+        "top_score": 73.84
+      },
+      {
+        "profile_id": "profile_row_006",
+        "validation_passed": true,
+        "eligible_candidates": 2,
+        "returned_recommendations": null,
+        "top_score": 73.84
+      },
+      {
+        "profile_id": "profile_row_007",
+        "validation_passed": true,
+        "eligible_candidates": 2,
+        "returned_recommendations": null,
+        "top_score": 73.84
+      },
+      {
+        "profile_id": "profile_row_008",
+        "validation_passed": true,
+        "eligible_candidates": 8,
+        "returned_recommendations": null,
+        "top_score": 73.84
+      },
+      {
+        "profile_id": "profile_row_009",
+        "validation_passed": true,
+        "eligible_candidates": 8,
+        "returned_recommendations": null,
+        "top_score": 73.84
+      },
+      {
+        "profile_id": "profile_row_010",
+        "validation_passed": true,
+        "eligible_candidates": 8,
+        "returned_recommendations": null,
+        "top_score": 73.84
+      },
+      {
+        "profile_id": "profile_row_011",
+        "validation_passed": true,
+        "eligible_candidates": 8,
+        "returned_recommendations": null,
+        "top_score": 73.84
+      },
+      {
+        "profile_id": "profile_row_012",
+        "validation_passed": true,
+        "eligible_candidates": 8,
+        "returned_recommendations": null,
+        "top_score": 73.84
+      },
+      {
+        "profile_id": "profile_row_013",
+        "validation_passed": true,
+        "eligible_candidates": 8,
+        "returned_recommendations": null,
+        "top_score": 80.0
+      },
+      {
+        "profile_id": "profile_row_014",
+        "validation_passed": true,
+        "eligible_candidates": 8,
+        "returned_recommendations": null,
+        "top_score": 57.25
+      },
+      {
+        "profile_id": "profile_row_015",
+        "validation_passed": true,
+        "eligible_candidates": 8,
+        "returned_recommendations": null,
+        "top_score": 55.94
+      },
+      {
+        "profile_id": "profile_row_016",
+        "validation_passed": true,
+        "eligible_candidates": 8,
+        "returned_recommendations": null,
+        "top_score": 55.94
+      },
+      {
+        "profile_id": "profile_row_017",
+        "validation_passed": true,
+        "eligible_candidates": 8,
+        "returned_recommendations": null,
+        "top_score": 55.94
+      },
+      {
+        "profile_id": "profile_row_018",
+        "validation_passed": true,
+        "eligible_candidates": 8,
+        "returned_recommendations": null,
+        "top_score": 75.15
+      },
+      {
+        "profile_id": "profile_row_019",
+        "validation_passed": true,
+        "eligible_candidates": 8,
+        "returned_recommendations": null,
+        "top_score": 73.84
+      },
+      {
+        "profile_id": "profile_row_020",
+        "validation_passed": true,
+        "eligible_candidates": 8,
+        "returned_recommendations": null,
+        "top_score": 73.84
+      },
+      {
+        "profile_id": "profile_row_021",
+        "validation_passed": true,
+        "eligible_candidates": 8,
+        "returned_recommendations": null,
+        "top_score": 73.84
+      },
+      {
+        "profile_id": "profile_row_022",
+        "validation_passed": true,
+        "eligible_candidates": 8,
+        "returned_recommendations": null,
+        "top_score": 73.84
+      },
+      {
+        "profile_id": "profile_row_023",
+        "validation_passed": true,
+        "eligible_candidates": 0,
+        "returned_recommendations": null,
+        "top_score": null
+      }
+    ]
+  },
+  "algorithm_comparison_analysis": {
+    "comparison_rows": 5,
+    "detected_columns": {
+      "V1": {
+        "rank": "V1_rank",
+        "fit_score": "V1_fit_score",
+        "ranking_score": "V1_ranking_score",
+        "data_confidence": "V1_match_data_confidence",
+        "eligibility_confidence": "V1_eligibility_confidence"
+      },
+      "V2": {
+        "rank": "V2_rank",
+        "fit_score": "V2_fit_score",
+        "ranking_score": "V2_ranking_score",
+        "data_confidence": "V2_match_data_confidence",
+        "eligibility_confidence": "V2_eligibility_confidence"
+      },
+      "V2.1": {
+        "rank": "V2_1_rank",
+        "fit_score": "V2_1_fit_score",
+        "ranking_score": "V2_1_ranking_score",
+        "data_confidence": "V2_1_match_data_confidence",
+        "eligibility_confidence": "V2_1_eligibility_confidence"
+      },
+      "V2.2": {
+        "rank": "V2_2_rank",
+        "fit_score": "V2_2_fit_score",
+        "ranking_score": "V2_2_ranking_score",
+        "data_confidence": "V2_2_match_data_confidence",
+        "eligibility_confidence": "V2_2_eligibility_confidence"
+      }
+    },
+    "version_statistics": {
+      "V1": {
+        "rank": {
+          "column": "V1_rank",
+          "count": 5,
+          "mean": 3.0,
+          "minimum": 1.0,
+          "maximum": 5.0
+        },
+        "fit_score": {
+          "column": "V1_fit_score",
+          "count": 5,
+          "mean": 69.34,
+          "minimum": 65.0,
+          "maximum": 85.0
+        },
+        "ranking_score": {
+          "column": "V1_ranking_score",
+          "count": 5,
+          "mean": 69.34,
+          "minimum": 65.0,
+          "maximum": 85.0
+        },
+        "data_confidence": {
+          "column": "V1_match_data_confidence",
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "eligibility_confidence": {
+          "column": "V1_eligibility_confidence",
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        }
+      },
+      "V2": {
+        "rank": {
+          "column": "V2_rank",
+          "count": 5,
+          "mean": 3.0,
+          "minimum": 1.0,
+          "maximum": 5.0
+        },
+        "fit_score": {
+          "column": "V2_fit_score",
+          "count": 5,
+          "mean": 72.59,
+          "minimum": 65.0,
+          "maximum": 100.0
+        },
+        "ranking_score": {
+          "column": "V2_ranking_score",
+          "count": 5,
+          "mean": 64.7,
+          "minimum": 55.25,
+          "maximum": 100.0
+        },
+        "data_confidence": {
+          "column": "V2_match_data_confidence",
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "eligibility_confidence": {
+          "column": "V2_eligibility_confidence",
+          "count": 5,
+          "mean": 4.0,
+          "minimum": 0.0,
+          "maximum": 20.0
+        }
+      },
+      "V2.1": {
+        "rank": {
+          "column": "V2_1_rank",
+          "count": 5,
+          "mean": 3.0,
+          "minimum": 1.0,
+          "maximum": 5.0
+        },
+        "fit_score": {
+          "column": "V2_1_fit_score",
+          "count": 5,
+          "mean": 86.29,
+          "minimum": 82.5,
+          "maximum": 100.0
+        },
+        "ranking_score": {
+          "column": "V2_1_ranking_score",
+          "count": 5,
+          "mean": 79.66,
+          "minimum": 74.25,
+          "maximum": 100.0
+        },
+        "data_confidence": {
+          "column": "V2_1_match_data_confidence",
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "eligibility_confidence": {
+          "column": "V2_1_eligibility_confidence",
+          "count": 5,
+          "mean": 4.0,
+          "minimum": 0.0,
+          "maximum": 20.0
+        }
+      },
+      "V2.2": {
+        "rank": {
+          "column": "V2_2_rank",
+          "count": 5,
+          "mean": 3.0,
+          "minimum": 1.0,
+          "maximum": 5.0
+        },
+        "fit_score": {
+          "column": "V2_2_fit_score",
+          "count": 5,
+          "mean": 86.29,
+          "minimum": 82.5,
+          "maximum": 100.0
+        },
+        "ranking_score": {
+          "column": "V2_2_ranking_score",
+          "count": 5,
+          "mean": 79.33,
+          "minimum": 73.84,
+          "maximum": 100.0
+        },
+        "data_confidence": {
+          "column": "V2_2_match_data_confidence",
+          "count": 5,
+          "mean": 72.0,
+          "minimum": 65.0,
+          "maximum": 100.0
+        },
+        "eligibility_confidence": {
+          "column": "V2_2_eligibility_confidence",
+          "count": 5,
+          "mean": 4.0,
+          "minimum": 0.0,
+          "maximum": 20.0
+        }
+      }
+    },
+    "v1_to_v22_rank_comparison": {
+      "rows_compared": 5,
+      "spearman_rank_correlation": 1.0
+    }
+  },
+  "algorithm_lock": {
+    "available": true,
+    "locked_version": "V2.2",
+    "sha256": "2e8eddf0e42bb485317ce7293416ce87f87ea9371cec3916e0ae5d014cfa2c7c"
+  },
+  "findings": [
+    {
+      "finding_id": "ALG_01",
+      "title": "Multi-Profile Functional Robustness",
+      "evidence": "23 of 23 profiles with explicit validation results passed (100.00% functional scenario validation rate).",
+      "interpretation": "The recommendation engine has been tested across multiple user-profile scenarios rather than only one manually selected profile.",
+      "decision": "Use V2.2 as the current validated recommendation baseline while continuing to add more test profiles as the dataset grows."
+    },
+    {
+      "finding_id": "ALG_02",
+      "title": "Hard-Rule Rejection Behaviour",
+      "evidence": "0 detected test profile(s) returned zero recommendations.",
+      "interpretation": "Returning zero recommendations can be correct when a profile fails hard eligibility or country rules. The system is therefore not designed to force a recommendation for every user.",
+      "decision": "Keep hard eligibility checks separate from soft ranking scores so ineligible scholarships cannot rank highly simply because of field similarity."
+    },
+    {
+      "finding_id": "ALG_03",
+      "title": "Ranking Evolution Across Algorithm Versions",
+      "evidence": "V1 and V2.2 ranking positions were compared across 5 scholarship record(s). Spearman rank correlation = 1.0000.",
+      "interpretation": "Rank correlation describes how much the ordering changed after confidence-aware and structured-field improvements. It does not by itself measure whether one version is objectively more accurate.",
+      "decision": "Retain the comparison report as evidence of algorithm evolution and continue validating ranking quality using realistic student profiles."
+    },
+    {
+      "finding_id": "ALG_04",
+      "title": "Confidence-Aware Recommendation Scoring",
+      "evidence": "Mean V2.2 match-data confidence in the comparison report is 72.00%.",
+      "interpretation": "V2.2 distinguishes recommendation fit from the completeness of the evidence used to calculate that fit.",
+      "decision": "Continue displaying fit and data confidence separately. A high match score with incomplete eligibility evidence should not be presented as guaranteed eligibility."
+    },
+    {
+      "finding_id": "ALG_05",
+      "title": "Reproducible Algorithm Baseline",
+      "evidence": "Algorithm lock manifest available: True. Locked version: V2.2.",
+      "interpretation": "Locking the validated algorithm version prevents uncontrolled scoring changes while the analysis and frontend layers are being developed.",
+      "decision": "Use the locked V2.2 implementation as the project's current baseline until a future version is intentionally tested, compared and approved."
+    },
+    {
+      "finding_id": "ALG_06",
+      "title": "Evaluation Scope and Accuracy Limitation",
+      "evidence": "Current validation is based on rule checks, scenario testing, score inspection and version comparison. A labelled dataset containing human-rated relevant / irrelevant scholarship outcomes is not currently available.",
+      "interpretation": "Therefore, the project should not report the profile test pass rate as machine-learning prediction accuracy.",
+      "decision": "Present the current metric as functional scenario validation. In a future expansion, collect user feedback or expert relevance labels and then calculate ranking metrics such as Precision@K, Recall@K or NDCG."
+    }
+  ],
+  "mongodb_records_modified": false
+}

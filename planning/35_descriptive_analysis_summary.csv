@@ -1,0 +1,24 @@
+﻿analysis_category,metric,value,percentage,unit
+program_degree_distribution,Master,32,88.89,programs
+program_degree_distribution,PhD,3,8.33,programs
+program_degree_distribution,Bachelor,1,2.78,programs
+tuition_distribution,"535,800",24,66.67,JPY annual tuition
+tuition_distribution,"608,800",3,8.33,JPY annual tuition
+tuition_distribution,"635,400",3,8.33,JPY annual tuition
+tuition_distribution,"740,000",1,2.78,JPY annual tuition
+tuition_distribution,"991,000",3,8.33,JPY annual tuition
+tuition_distribution,"1,160,000",2,5.56,JPY annual tuition
+programs_by_university,The University of Tokyo,3,,programs
+programs_by_university,Kyoto University,3,,programs
+programs_by_university,Osaka University,3,,programs
+programs_by_university,Tohoku University,3,,programs
+programs_by_university,Nagoya University,3,,programs
+programs_by_university,Kyushu University,3,,programs
+programs_by_university,Hokkaido University,3,,programs
+programs_by_university,Institute of Science Tokyo,3,,programs
+programs_by_university,University of Tsukuba,3,,programs
+programs_by_university,Kobe University,3,,programs
+programs_by_university,Waseda University,3,,programs
+programs_by_university,Keio University,3,,programs
+scholarship_funding_distribution,Fully Funded,12,100.0,scholarships
+scholarship_status_distribution,upcoming,12,100.0,scholarships

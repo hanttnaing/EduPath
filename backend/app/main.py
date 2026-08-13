@@ -1,5 +1,7 @@
 from __future__ import annotations
+from .analysis_routes import router as analysis_router
 from uuid import uuid4
+from fastapi.middleware.cors import CORSMiddleware
 
 from contextlib import asynccontextmanager
 from typing import Any
@@ -83,6 +85,27 @@ app = FastAPI(
     lifespan=lifespan,
 )
 
+app.include_router(analysis_router)
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "http://localhost:5173",
+        "http://127.0.0.1:5173",
+
+        "http://localhost:5174",
+        "http://127.0.0.1:5174",
+
+        "http://localhost:5175",
+        "http://127.0.0.1:5175",
+
+        "http://localhost:5176",
+        "http://127.0.0.1:5176",
+    ],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # ---------------------------------------------------------
 # Root endpoint

@@ -1,0 +1,64 @@
+{
+  "created_at": "2026-08-12T12:17:36.584006+00:00",
+  "purpose": "Backup countries collection before Step 151.1C relationship repair",
+  "record_count": 3,
+  "records": [
+    {
+      "country_id": "country_jp",
+      "capital_city": "Tokyo",
+      "collected_at": "2026-08-02 00:00:00",
+      "content_hash": "8bfb4064be6586cd64803ce517215b11e09d7aea339846e2874898f5676e6da1",
+      "cost_currency": null,
+      "country_name": "Japan",
+      "created_at": "2026-08-02 12:08:09.589000",
+      "currency_code": "JPY",
+      "database_updated_at": "2026-08-02 12:08:09.589000",
+      "estimated_living_cost": null,
+      "last_verified_at": "2026-08-02 00:00:00",
+      "main_language": [
+        "Japanese"
+      ],
+      "region": "East Asia",
+      "source_url": "https://www.studyinjapan.go.jp/en/"
+    },
+    {
+      "country_id": "country_sg",
+      "capital_city": "Singapore",
+      "collected_at": "2026-08-02 00:00:00",
+      "content_hash": "9469583c6428404e51363d7e2505efb9abf9fff256a88bb8a270a1032726e44d",
+      "cost_currency": null,
+      "country_name": "Singapore",
+      "created_at": "2026-08-02 12:08:09.653000",
+      "currency_code": "SGD",
+      "database_updated_at": "2026-08-02 12:08:09.653000",
+      "estimated_living_cost": null,
+      "last_verified_at": "2026-08-02 00:00:00",
+      "main_language": [
+        "English",
+        "Malay",
+        "Mandarin",
+        "Tamil"
+      ],
+      "region": "Southeast Asia",
+      "source_url": "https://www.moe.gov.sg/"
+    },
+    {
+      "country_id": "country_my",
+      "capital_city": "Kuala Lumpur",
+      "collected_at": "2026-08-02 00:00:00",
+      "content_hash": "4b515cbb9def1fada34a26c440ce4eb6186d1e148a08b8b1bdc6d378764dfff5",
+      "cost_currency": null,
+      "country_name": "Malaysia",
+      "created_at": "2026-08-02 12:08:09.721000",
+      "currency_code": "MYR",
+      "database_updated_at": "2026-08-02 12:08:09.721000",
+      "estimated_living_cost": null,
+      "last_verified_at": "2026-08-02 00:00:00",
+      "main_language": [
+        "Malay"
+      ],
+      "region": "Southeast Asia",
+      "source_url": "https://www.mqa.gov.my/"
+    }
+  ]
+}

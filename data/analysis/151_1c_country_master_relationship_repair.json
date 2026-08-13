@@ -1,0 +1,29 @@
+{
+  "project": "EduPath Analytics",
+  "step": "151.1C",
+  "generated_at": "2026-08-12T12:17:53.427811+00:00",
+  "mode": "apply",
+  "status": "APPLY_PASSED",
+  "database": "edupath_db",
+  "referenced_country_ids": [
+    "country_hk",
+    "country_jp",
+    "country_kr",
+    "country_my",
+    "country_sg",
+    "country_th",
+    "country_tw"
+  ],
+  "existing_country_ids_before": [
+    "country_hk",
+    "country_jp",
+    "country_kr",
+    "country_my",
+    "country_sg",
+    "country_th",
+    "country_tw"
+  ],
+  "missing_country_ids": [],
+  "inserted_country_ids": [],
+  "mongodb_modified": false
+}

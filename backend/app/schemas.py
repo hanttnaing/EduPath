@@ -6,6 +6,11 @@ from pydantic import BaseModel, ConfigDict, Field
 
 from pydantic import BaseModel, Field
 
+from pydantic import BaseModel, ConfigDict
+
+from typing import List, Optional
+
+
 class RootResponse(BaseModel):
     """Response shown at the API root URL."""
 
@@ -72,6 +77,12 @@ class ProgramResponse(BaseModel):
     tuition_currency: str | None = None
     tuition_period: str | None = None
 
+    tuition_academic_year: int | None = None
+    tuition_student_scope: str | None = None
+    tuition_source_url: str | None = None
+    tuition_last_verified_at: datetime | None = None
+    tuition_note: str | None = None
+    
     minimum_gpa: int | float | None = None
     gpa_scale: int | float | None = None
     ielts_requirement: int | float | None = None
@@ -94,31 +105,37 @@ class ProgramListResponse(BaseModel):
     items: list[ProgramResponse]
 
 class CountryResponse(BaseModel):
-    """Public country data returned by the API."""
-
-    model_config = ConfigDict(extra="ignore")
-
     country_id: str
     country_name: str
-    region: str
-    capital_city: str
-    currency_code: str
-    main_language: list[str]
 
-    estimated_living_cost: int | float | None = None
-    cost_currency: str | None = None
+    region: Optional[str] = None
+    capital_city: Optional[str] = None
+    currency_code: Optional[str] = None
 
-    source_url: str
-    collected_at: datetime
-    last_verified_at: datetime
+    # IMPORTANT:
+    # MongoDB stores language values as arrays:
+    # ["Japanese"]
+    # ["Malay"]
+    # ["English", "Malay", "Mandarin", "Tamil"]
+    main_language: Optional[List[str]] = None
+
+    source_url: Optional[str] = None
+    collected_at: Optional[datetime] = None
+    last_verified_at: Optional[datetime] = None
+
+    model_config = ConfigDict(
+        extra="ignore"
+    )
 
 
 class CountryListResponse(BaseModel):
-    """Response returned for a country list request."""
-
+    items: List[CountryResponse]
     total: int
-    count: int
-    items: list[CountryResponse]
+    limit: Optional[int] = None
+
+    model_config = ConfigDict(
+        extra="ignore"
+    )
 
 class ScholarshipResponse(BaseModel):
     """Public scholarship data returned by the API."""

@@ -1,0 +1,1393 @@
+import { useEffect, useState } from 'react'
+import API_BASE_URL from './api'
+import UniversityCard from './UniversityCard'
+import ProgramCard from './ProgramCard'
+import ScholarshipCard from './ScholarshipCard'
+import AnalysisDashboardModal from './AnalysisDashboardModal'
+import './App.css'
+
+// =========================
+// COUNTRY NORMALIZATION HELPERS
+// =========================
+function getCountryId(country) {
+  if (!country) return ''
+
+  const rawValue =
+    country.country_id ??
+    country.id ??
+    country.country_code ??
+    country.code ??
+    country.iso2 ??
+    country.iso_code ??
+    ''
+
+  const value = String(rawValue).trim()
+
+  if (!value) return ''
+
+  if (value.toLowerCase().startsWith('country_')) {
+    return value.toLowerCase()
+  }
+
+  if (/^[a-zA-Z]{2}$/.test(value)) {
+    return `country_${value.toLowerCase()}`
+  }
+
+  return value
+}
+
+function getCountryLabel(country) {
+  if (!country) return ''
+
+  return (
+    country.country_name ??
+    country.name ??
+    country.country ??
+    country.display_name ??
+    country.label ??
+    getCountryId(country)
+  )
+}
+
+function extractCountryItems(data) {
+  if (Array.isArray(data)) {
+    return data
+  }
+
+  if (Array.isArray(data?.items)) {
+    return data.items
+  }
+
+  if (Array.isArray(data?.countries)) {
+    return data.countries
+  }
+
+  if (Array.isArray(data?.results)) {
+    return data.results
+  }
+
+  return []
+}
+
+function App() {
+  // =========================
+  // ANALYSIS DASHBOARD STATE
+  // =========================
+  const [
+    showAnalysisDashboard,
+    setShowAnalysisDashboard,
+  ] = useState(false)
+
+  // =========================
+  // UNIVERSITY STATES
+  // =========================
+  const [universities, setUniversities] =
+    useState([])
+
+  const [loading, setLoading] =
+    useState(true)
+
+  const [error, setError] =
+    useState('')
+
+  const [
+    totalUniversities,
+    setTotalUniversities,
+  ] = useState(0)
+
+  const [
+    searchTerm,
+    setSearchTerm,
+  ] = useState('')
+
+  // =========================
+  // COUNTRY STATES
+  // =========================
+  const [
+    countries,
+    setCountries,
+  ] = useState([])
+
+  const [
+    selectedCountry,
+    setSelectedCountry,
+  ] = useState('country_jp')
+
+  // =========================
+  // PROGRAM STATES
+  // =========================
+  const [
+    programs,
+    setPrograms,
+  ] = useState([])
+
+  const [
+    programLoading,
+    setProgramLoading,
+  ] = useState(true)
+
+  const [
+    programError,
+    setProgramError,
+  ] = useState('')
+
+  const [
+    programSearchTerm,
+    setProgramSearchTerm,
+  ] = useState('')
+
+  // =========================
+  // SCHOLARSHIP STATES
+  // =========================
+  const [
+    scholarships,
+    setScholarships,
+  ] = useState([])
+
+  const [
+    totalScholarships,
+    setTotalScholarships,
+  ] = useState(0)
+
+  const [
+    scholarshipLoading,
+    setScholarshipLoading,
+  ] = useState(true)
+
+  const [
+    scholarshipError,
+    setScholarshipError,
+  ] = useState('')
+
+  const [
+    scholarshipSearchTerm,
+    setScholarshipSearchTerm,
+  ] = useState('')
+
+  const [
+    selectedDegree,
+    setSelectedDegree,
+  ] = useState('all')
+
+  const [
+    selectedFunding,
+    setSelectedFunding,
+  ] = useState('all')
+
+  const [
+    selectedStatus,
+    setSelectedStatus,
+  ] = useState('all')
+
+  const [
+    selectedField,
+    setSelectedField,
+  ] = useState('all')
+
+  // =========================
+  // LOAD COUNTRIES
+  // =========================
+  useEffect(() => {
+    fetch(
+      `${API_BASE_URL}/api/countries?limit=100`
+    )
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(
+            'Failed to load countries'
+          )
+        }
+
+        return response.json()
+      })
+
+      .then((data) => {
+        const countryItems = extractCountryItems(data)
+
+        setCountries(countryItems)
+
+        setSelectedCountry((currentCountry) => {
+          const currentSelectionExists =
+            countryItems.some(
+              (country) =>
+                getCountryId(country) === currentCountry
+            )
+
+          if (currentSelectionExists) {
+            return currentCountry
+          }
+
+          const japanCountry =
+            countryItems.find(
+              (country) =>
+                getCountryId(country) === 'country_jp' ||
+                String(getCountryLabel(country))
+                  .trim()
+                  .toLowerCase() === 'japan'
+            )
+
+          if (japanCountry) {
+            return getCountryId(japanCountry)
+          }
+
+          if (countryItems.length > 0) {
+            return getCountryId(countryItems[0])
+          }
+
+          return currentCountry
+        })
+      })
+
+      .catch((error) => {
+        console.error(
+          'Countries error:',
+          error
+        )
+
+        setCountries([])
+      })
+  }, [])
+
+  // =========================
+  // LOAD UNIVERSITIES
+  // WHEN COUNTRY CHANGES
+  // =========================
+  useEffect(() => {
+    if (!selectedCountry) {
+      setUniversities([])
+      setTotalUniversities(0)
+      setLoading(false)
+      setError('')
+      return
+    }
+
+    setLoading(true)
+    setError('')
+
+    fetch(
+      `${API_BASE_URL}/api/universities?country_id=${selectedCountry}&limit=100`
+    )
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(
+            'Failed to load universities'
+          )
+        }
+
+        return response.json()
+      })
+
+      .then((data) => {
+        const items =
+          data.items || []
+
+        setUniversities(
+          items
+        )
+
+        setTotalUniversities(
+          typeof data.total === 'number'
+            ? data.total
+            : items.length
+        )
+
+        setLoading(false)
+      })
+
+      .catch((error) => {
+        console.error(
+          'Universities error:',
+          error
+        )
+
+        setUniversities([])
+        setTotalUniversities(0)
+
+        setError(
+          error.message
+        )
+
+        setLoading(false)
+      })
+  }, [selectedCountry])
+
+  // =========================
+  // LOAD ALL PROGRAMS
+  // =========================
+  useEffect(() => {
+    setProgramLoading(true)
+    setProgramError('')
+
+    fetch(
+      `${API_BASE_URL}/api/programs?limit=100`
+    )
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(
+            'Failed to load programs'
+          )
+        }
+
+        return response.json()
+      })
+
+      .then((data) => {
+        setPrograms(
+          data.items || []
+        )
+
+        setProgramLoading(false)
+      })
+
+      .catch((error) => {
+        console.error(
+          'Programs error:',
+          error
+        )
+
+        setPrograms([])
+
+        setProgramError(
+          error.message
+        )
+
+        setProgramLoading(false)
+      })
+  }, [])
+
+  // =========================
+  // LOAD SCHOLARSHIPS
+  // WHEN COUNTRY CHANGES
+  // =========================
+  useEffect(() => {
+    if (!selectedCountry) {
+      setScholarships([])
+      setTotalScholarships(0)
+      setScholarshipLoading(false)
+      setScholarshipError('')
+      return
+    }
+
+    setScholarshipLoading(true)
+    setScholarshipError('')
+
+    setScholarships([])
+    setTotalScholarships(0)
+
+    fetch(
+      `${API_BASE_URL}/api/scholarships?country_id=${selectedCountry}&limit=100`
+    )
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(
+            'Failed to load scholarships'
+          )
+        }
+
+        return response.json()
+      })
+
+      .then((data) => {
+        const scholarshipItems =
+          data.items || []
+
+        setScholarships(
+          scholarshipItems
+        )
+
+        setTotalScholarships(
+          typeof data.total === 'number'
+            ? data.total
+            : scholarshipItems.length
+        )
+
+        setScholarshipLoading(false)
+      })
+
+      .catch((error) => {
+        console.error(
+          'Scholarships error:',
+          error
+        )
+
+        setScholarships([])
+        setTotalScholarships(0)
+
+        setScholarshipError(
+          error.message
+        )
+
+        setScholarshipLoading(false)
+      })
+  }, [selectedCountry])
+
+  // =========================
+  // UNIVERSITY SEARCH
+  // =========================
+  const filteredUniversities =
+    universities.filter(
+      (university) => {
+        const searchValue =
+          searchTerm
+            .trim()
+            .toLowerCase()
+
+        const universityName =
+          university
+            .university_name
+            ?.toLowerCase() || ''
+
+        const city =
+          university
+            .city
+            ?.toLowerCase() || ''
+
+        return (
+          universityName.includes(
+            searchValue
+          ) ||
+          city.includes(
+            searchValue
+          )
+        )
+      }
+    )
+
+  // =========================
+  // SELECTED COUNTRY NAME
+  // =========================
+  const selectedCountryRecord =
+    countries.find(
+      (country) =>
+        getCountryId(country) ===
+        selectedCountry
+    )
+
+  const selectedCountryName =
+    selectedCountryRecord
+      ? getCountryLabel(
+          selectedCountryRecord
+        )
+      : selectedCountry
+        ? selectedCountry
+            .replace(/^country_/i, '')
+            .toUpperCase()
+        : 'Country'
+
+  // =========================
+  // UNIVERSITY IDS FOR
+  // SELECTED COUNTRY
+  // =========================
+  const selectedUniversityIds =
+    new Set(
+      universities.map(
+        (university) =>
+          university.university_id
+      )
+    )
+
+  // =========================
+  // PROGRAMS FOR
+  // SELECTED COUNTRY
+  // =========================
+  const selectedCountryPrograms =
+    programs.filter(
+      (program) =>
+        selectedUniversityIds.has(
+          program.university_id
+        )
+    )
+
+  // =========================
+  // PROGRAM SEARCH
+  // =========================
+  const filteredPrograms =
+    selectedCountryPrograms.filter(
+      (program) => {
+        const searchValue =
+          programSearchTerm
+            .trim()
+            .toLowerCase()
+
+        const university =
+          universities.find(
+            (university) =>
+              university.university_id ===
+              program.university_id
+          )
+
+        const programName =
+          program
+            .program_name
+            ?.toLowerCase() || ''
+
+        const fieldOfStudy =
+          program
+            .field_of_study
+            ?.toLowerCase() || ''
+
+        const universityName =
+          university
+            ?.university_name
+            ?.toLowerCase() || ''
+
+        return (
+          programName.includes(
+            searchValue
+          ) ||
+          fieldOfStudy.includes(
+            searchValue
+          ) ||
+          universityName.includes(
+            searchValue
+          )
+        )
+      }
+    )
+
+  // =========================
+  // SCHOLARSHIP FILTER OPTIONS
+  // =========================
+  const scholarshipDegrees = [
+    ...new Set(
+      scholarships.flatMap(
+        (scholarship) => {
+          if (
+            Array.isArray(
+              scholarship.degree_levels
+            )
+          ) {
+            return scholarship.degree_levels
+          }
+
+          if (
+            scholarship.degree_levels
+          ) {
+            return [
+              scholarship.degree_levels,
+            ]
+          }
+
+          return []
+        }
+      )
+    ),
+  ].filter(Boolean)
+
+  const scholarshipFundings = [
+    ...new Set(
+      scholarships
+        .map(
+          (scholarship) =>
+            scholarship.funding ||
+            scholarship.funding_type ||
+            scholarship.funding_status ||
+            ''
+        )
+        .filter(Boolean)
+    ),
+  ]
+
+  const scholarshipStatuses = [
+    ...new Set(
+      scholarships
+        .map(
+          (scholarship) =>
+            scholarship.status ||
+            scholarship.scholarship_status ||
+            scholarship.application_status ||
+            ''
+        )
+        .filter(Boolean)
+    ),
+  ]
+
+  const scholarshipFields = [
+    ...new Set(
+      scholarships.flatMap(
+        (scholarship) => {
+          const fields =
+            scholarship.fields_of_study
+
+          if (
+            Array.isArray(fields)
+          ) {
+            return fields
+          }
+
+          if (fields) {
+            return [fields]
+          }
+
+          return []
+        }
+      )
+    ),
+  ].filter(Boolean)
+
+  // =========================
+  // UNIVERSITY LOOKUP MAP
+  // =========================
+  const universityNameById =
+    new Map(
+      universities.map(
+        (university) => [
+          university.university_id,
+          university.university_name,
+        ]
+      )
+    )
+
+  // =========================
+  // SCHOLARSHIP SEARCH
+  // + FILTERS
+  // =========================
+  const filteredScholarships =
+    scholarships.filter(
+      (scholarship) => {
+        const searchValue =
+          scholarshipSearchTerm
+            .trim()
+            .toLowerCase()
+
+        // -------------------------
+        // Degree
+        // -------------------------
+        const degreeLevels =
+          Array.isArray(
+            scholarship.degree_levels
+          )
+            ? scholarship.degree_levels
+            : scholarship.degree_levels
+              ? [
+                  scholarship.degree_levels,
+                ]
+              : []
+
+        const degreeText =
+          degreeLevels
+            .join(' ')
+            .toLowerCase()
+
+        // -------------------------
+        // Field of Study
+        // -------------------------
+        const fieldLevels =
+          Array.isArray(
+            scholarship.fields_of_study
+          )
+            ? scholarship.fields_of_study
+            : scholarship.fields_of_study
+              ? [
+                  scholarship.fields_of_study,
+                ]
+              : []
+
+        const fieldText =
+          fieldLevels
+            .join(' ')
+            .toLowerCase()
+
+        // -------------------------
+        // Scholarship Name
+        // -------------------------
+        const scholarshipName =
+          (
+            scholarship.scholarship_name ||
+            scholarship.name ||
+            ''
+          ).toLowerCase()
+
+        // -------------------------
+        // Provider
+        // -------------------------
+        const provider =
+          (
+            scholarship.provider ||
+            scholarship.provider_name ||
+            scholarship.scholarship_provider ||
+            scholarship.scholarship_provider_name ||
+            ''
+          ).toLowerCase()
+
+        // -------------------------
+        // Funding
+        // -------------------------
+        const funding =
+          (
+            scholarship.funding ||
+            scholarship.funding_type ||
+            scholarship.funding_status ||
+            ''
+          ).toLowerCase()
+
+        // -------------------------
+        // Status
+        // -------------------------
+        const status =
+          (
+            scholarship.status ||
+            scholarship.scholarship_status ||
+            scholarship.application_status ||
+            ''
+          ).toLowerCase()
+
+        // -------------------------
+        // Host University
+        // -------------------------
+        const hostUniversitySearchText =
+          (
+            universityNameById.get(
+              scholarship.host_university_id
+            ) ||
+            scholarship.host_university_name ||
+            scholarship.university_name ||
+            ''
+          ).toLowerCase()
+
+        // =========================
+        // SEARCH CONDITION
+        // =========================
+        const matchesSearch =
+          scholarshipName.includes(
+            searchValue
+          ) ||
+          provider.includes(
+            searchValue
+          ) ||
+          degreeText.includes(
+            searchValue
+          ) ||
+          fieldText.includes(
+            searchValue
+          ) ||
+          funding.includes(
+            searchValue
+          ) ||
+          status.includes(
+            searchValue
+          ) ||
+          hostUniversitySearchText.includes(
+            searchValue
+          )
+
+        // =========================
+        // DEGREE CONDITION
+        // =========================
+        const matchesDegree =
+          selectedDegree === 'all' ||
+          degreeLevels.some(
+            (degree) =>
+              String(degree)
+                .toLowerCase()
+                .trim() ===
+              selectedDegree
+                .toLowerCase()
+                .trim()
+          )
+
+        // =========================
+        // FUNDING CONDITION
+        // =========================
+        const matchesFunding =
+          selectedFunding === 'all' ||
+          funding ===
+            selectedFunding
+              .toLowerCase()
+
+        // =========================
+        // STATUS CONDITION
+        // =========================
+        const matchesStatus =
+          selectedStatus === 'all' ||
+          status ===
+            selectedStatus
+              .toLowerCase()
+
+        // =========================
+        // FIELD CONDITION
+        // =========================
+        const matchesField =
+          selectedField === 'all' ||
+          fieldLevels.some(
+            (field) =>
+              String(field)
+                .toLowerCase()
+                .trim() ===
+              selectedField
+                .toLowerCase()
+                .trim()
+          )
+
+        return (
+          matchesSearch &&
+          matchesDegree &&
+          matchesFunding &&
+          matchesStatus &&
+          matchesField
+        )
+      }
+    )
+
+  // =========================
+  // RESET COUNTRY-DEPENDENT
+  // SEARCH/FILTER STATE
+  // =========================
+  const handleCountryChange = (
+    event
+  ) => {
+    setSelectedCountry(
+      event.target.value
+    )
+
+    setSearchTerm('')
+    setProgramSearchTerm('')
+    setScholarshipSearchTerm('')
+
+    setSelectedDegree('all')
+    setSelectedFunding('all')
+    setSelectedStatus('all')
+    setSelectedField('all')
+  }
+
+  // =========================
+  // RESET SCHOLARSHIP FILTERS
+  // =========================
+  const resetScholarshipFilters =
+    () => {
+      setScholarshipSearchTerm('')
+      setSelectedDegree('all')
+      setSelectedFunding('all')
+      setSelectedStatus('all')
+      setSelectedField('all')
+    }
+
+  // =========================
+  // UI
+  // =========================
+  return (
+    <>
+      <main>
+        {/* =========================
+            PAGE HEADER
+        ========================== */}
+
+        <section className="edupath-page-header">
+          <div className="edupath-page-header-text">
+            <h1>
+              EduPath Analytics
+            </h1>
+
+            <p>
+              University and Scholarship
+              Recommendation Platform
+            </p>
+          </div>
+
+          <button
+            className="analysis-dashboard-button"
+            type="button"
+            onClick={() =>
+              setShowAnalysisDashboard(
+                true
+              )
+            }
+          >
+            <span className="analysis-dashboard-button-icon">
+              📊
+            </span>
+
+            <span>
+              Analysis Dashboard
+            </span>
+          </button>
+        </section>
+
+        {/* =========================
+            UNIVERSITY SECTION
+        ========================== */}
+
+        <section className="university-section">
+          <h2>
+            Universities in{' '}
+            {selectedCountryName}{' '}
+            ({totalUniversities})
+          </h2>
+
+          {/* Country Selection */}
+
+          <select
+            className="country-select"
+            value={selectedCountry}
+            onChange={handleCountryChange}
+          >
+            <option value="">
+              Select a country
+            </option>
+
+            {countries.map(
+              (country, index) => {
+                const countryValue =
+                  getCountryId(country)
+
+                const countryLabel =
+                  getCountryLabel(country)
+
+                if (!countryValue) {
+                  return null
+                }
+
+                return (
+                  <option
+                    key={
+                      countryValue ||
+                      index
+                    }
+                    value={
+                      countryValue
+                    }
+                  >
+                    {countryLabel}
+                  </option>
+                )
+              }
+            )}
+          </select>
+
+          {/* University Search */}
+
+          <input
+            className="university-search"
+            type="text"
+            placeholder="Search by university or city..."
+            value={searchTerm}
+            onChange={(event) =>
+              setSearchTerm(
+                event.target.value
+              )
+            }
+          />
+
+          {!loading &&
+            !error && (
+              <p className="search-result-count">
+                Showing{' '}
+                {
+                  filteredUniversities.length
+                }{' '}
+                of{' '}
+                {
+                  totalUniversities
+                }{' '}
+                universities
+              </p>
+            )}
+
+          {loading && (
+            <p className="status-message">
+              Loading universities...
+            </p>
+          )}
+
+          {error && (
+            <p className="no-results">
+              {error}
+            </p>
+          )}
+
+          {!loading &&
+            !error &&
+            filteredUniversities.length ===
+              0 && (
+              <p className="no-results">
+                No universities found.
+              </p>
+            )}
+
+          {!loading &&
+            !error &&
+            filteredUniversities.length >
+              0 && (
+              <div className="university-grid">
+                {filteredUniversities.map(
+                  (university) => (
+                    <UniversityCard
+                      key={
+                        university.university_id
+                      }
+                      university={
+                        university
+                      }
+                    />
+                  )
+                )}
+              </div>
+            )}
+        </section>
+
+        {/* =========================
+            PROGRAM SECTION
+        ========================== */}
+
+        <section className="program-section">
+          <h2>
+            Programs in{' '}
+            {selectedCountryName}{' '}
+            (
+            {
+              selectedCountryPrograms.length
+            }
+            )
+          </h2>
+
+          <input
+            className="program-search"
+            type="text"
+            placeholder="Search programs, fields, or universities..."
+            value={
+              programSearchTerm
+            }
+            onChange={(event) =>
+              setProgramSearchTerm(
+                event.target.value
+              )
+            }
+          />
+
+          {!programLoading &&
+            !programError && (
+              <p className="program-result-count">
+                Showing{' '}
+                {
+                  filteredPrograms.length
+                }{' '}
+                of{' '}
+                {
+                  selectedCountryPrograms.length
+                }{' '}
+                programs
+              </p>
+            )}
+
+          {programLoading && (
+            <p className="status-message">
+              Loading programs...
+            </p>
+          )}
+
+          {programError && (
+            <p className="no-results">
+              {programError}
+            </p>
+          )}
+
+          {!programLoading &&
+            !programError &&
+            filteredPrograms.length ===
+              0 && (
+              <p className="no-results">
+                No programs available
+                for this country yet.
+              </p>
+            )}
+
+          {!programLoading &&
+            !programError &&
+            filteredPrograms.length >
+              0 && (
+              <div className="program-grid">
+                {filteredPrograms.map(
+                  (program) => {
+                    const university =
+                      universities.find(
+                        (
+                          university
+                        ) =>
+                          university.university_id ===
+                          program.university_id
+                      )
+
+                    return (
+                      <ProgramCard
+                        key={
+                          program.program_id
+                        }
+                        program={
+                          program
+                        }
+                        universityName={
+                          university
+                            ?.university_name ||
+                          ''
+                        }
+                      />
+                    )
+                  }
+                )}
+              </div>
+            )}
+        </section>
+
+        {/* =========================
+            SCHOLARSHIP SECTION
+        ========================== */}
+
+        <section className="scholarship-section">
+          <h2>
+            Scholarships in{' '}
+            {selectedCountryName}{' '}
+            ({totalScholarships})
+          </h2>
+
+          {/* Scholarship Search */}
+
+          <input
+            className="scholarship-search"
+            type="text"
+            placeholder="Search scholarships, providers, degrees, funding, or universities..."
+            value={
+              scholarshipSearchTerm
+            }
+            onChange={(event) =>
+              setScholarshipSearchTerm(
+                event.target.value
+              )
+            }
+          />
+
+          {/* =========================
+              SCHOLARSHIP FILTERS
+          ========================== */}
+
+          <div className="scholarship-filters">
+            {/* Degree Filter */}
+
+            <select
+              value={
+                selectedDegree
+              }
+              onChange={(event) =>
+                setSelectedDegree(
+                  event.target.value
+                )
+              }
+            >
+              <option value="all">
+                All Degrees
+              </option>
+
+              {scholarshipDegrees.map(
+                (degree) => (
+                  <option
+                    key={degree}
+                    value={degree}
+                  >
+                    {degree}
+                  </option>
+                )
+              )}
+            </select>
+
+            {/* Funding Filter */}
+
+            <select
+              value={
+                selectedFunding
+              }
+              onChange={(event) =>
+                setSelectedFunding(
+                  event.target.value
+                )
+              }
+            >
+              <option value="all">
+                All Funding
+              </option>
+
+              {scholarshipFundings.map(
+                (funding) => (
+                  <option
+                    key={funding}
+                    value={funding}
+                  >
+                    {funding}
+                  </option>
+                )
+              )}
+            </select>
+
+            {/* Status Filter */}
+
+            <select
+              value={
+                selectedStatus
+              }
+              onChange={(event) =>
+                setSelectedStatus(
+                  event.target.value
+                )
+              }
+            >
+              <option value="all">
+                All Status
+              </option>
+
+              {scholarshipStatuses.map(
+                (status) => (
+                  <option
+                    key={status}
+                    value={status}
+                  >
+                    {status}
+                  </option>
+                )
+              )}
+            </select>
+
+            {/* Field Filter */}
+
+            <select
+              value={
+                selectedField
+              }
+              onChange={(event) =>
+                setSelectedField(
+                  event.target.value
+                )
+              }
+            >
+              <option value="all">
+                All Fields
+              </option>
+
+              {scholarshipFields.map(
+                (field) => (
+                  <option
+                    key={field}
+                    value={field}
+                  >
+                    {field}
+                  </option>
+                )
+              )}
+            </select>
+          </div>
+
+          {/* Reset Scholarship Filters */}
+
+          <button
+            className="reset-scholarship-filters"
+            type="button"
+            onClick={
+              resetScholarshipFilters
+            }
+          >
+            Reset Filters
+          </button>
+
+          {/* Scholarship Result Count */}
+
+          {!scholarshipLoading &&
+            !scholarshipError && (
+              <p className="scholarship-result-count">
+                Showing{' '}
+                {
+                  filteredScholarships.length
+                }{' '}
+                of{' '}
+                {
+                  totalScholarships
+                }{' '}
+                scholarships
+              </p>
+            )}
+
+          {/* Scholarship Loading */}
+
+          {scholarshipLoading && (
+            <p className="status-message">
+              Loading scholarships...
+            </p>
+          )}
+
+          {/* Scholarship Error */}
+
+          {scholarshipError && (
+            <p className="no-results">
+              {scholarshipError}
+            </p>
+          )}
+
+          {/* No Scholarship Results */}
+
+          {!scholarshipLoading &&
+            !scholarshipError &&
+            filteredScholarships.length ===
+              0 && (
+              <p className="status-message">
+                No scholarships found
+                for this country.
+              </p>
+            )}
+
+          {/* Scholarship Cards */}
+
+          {!scholarshipLoading &&
+            !scholarshipError &&
+            filteredScholarships.length >
+              0 && (
+              <div className="scholarship-grid">
+                {filteredScholarships.map(
+                  (
+                    scholarship,
+                    index
+                  ) => {
+                    const hostUniversityName =
+                      universityNameById.get(
+                        scholarship.host_university_id
+                      ) ||
+                      scholarship.host_university_name ||
+                      scholarship.university_name ||
+                      ''
+
+                    return (
+                      <ScholarshipCard
+                        key={
+                          scholarship.scholarship_id ||
+                          scholarship._id ||
+                          `${scholarship.scholarship_name}-${index}`
+                        }
+                        scholarship={
+                          scholarship
+                        }
+                        hostUniversityName={
+                          hostUniversityName
+                        }
+                      />
+                    )
+                  }
+                )}
+              </div>
+            )}
+        </section>
+      </main>
+
+      {/* =========================
+          ANALYSIS DASHBOARD
+          FULL-SCREEN MODAL
+      ========================== */}
+
+      {showAnalysisDashboard && (
+        <AnalysisDashboardModal
+          onClose={() =>
+            setShowAnalysisDashboard(
+              false
+            )
+          }
+        />
+      )}
+    </>
+  )
+}
+
+export default App
