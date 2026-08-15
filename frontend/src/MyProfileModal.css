@@ -320,3 +320,216 @@
     display: none;
   }
 }
+
+
+
+
+/* =========================================================
+   PROFILE FULL PAGE MODE
+   ========================================================= */
+
+.my-profile-page-container {
+  position: static !important;
+  inset: auto !important;
+
+  width: 100% !important;
+  min-height: 0 !important;
+
+  display: block !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  background: transparent !important;
+
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+
+  overflow: visible !important;
+}
+
+.my-profile-modal.my-profile-page {
+  position: static !important;
+
+  width: 100% !important;
+  max-width: none !important;
+
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+
+  margin: 0 !important;
+
+  overflow: visible !important;
+
+  transform: none !important;
+
+  border: 1px solid #e4e7f0;
+  border-radius: 24px;
+
+  background: #ffffff;
+
+  box-shadow: none !important;
+
+  box-sizing: border-box;
+}
+
+
+/* Header */
+
+.my-profile-page
+.my-profile-header {
+  position: static !important;
+
+  padding-top: 36px;
+}
+
+
+/* No modal close button */
+
+.my-profile-page
+.my-profile-close {
+  display: none !important;
+}
+
+
+/* Account information */
+
+.my-profile-page
+.my-profile-account {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* Academic profile content */
+
+.my-profile-page
+.my-profile-grid {
+  width: 100%;
+
+  align-items: start;
+}
+
+
+/* Form controls */
+
+.my-profile-page
+input,
+.my-profile-page
+select {
+  width: 100%;
+
+  box-sizing: border-box;
+}
+
+
+/* Disabled fields remain readable */
+
+.my-profile-page
+input:disabled,
+.my-profile-page
+select:disabled {
+  opacity: 1;
+
+  cursor: default;
+}
+
+
+/* Save button */
+
+.my-profile-page
+.my-profile-save-button {
+  min-height: 50px;
+}
+
+
+/* ---------------------------------------------------------
+   Responsive
+   --------------------------------------------------------- */
+
+@media (max-width: 760px) {
+
+  .my-profile-modal.my-profile-page {
+    border-radius: 18px;
+  }
+
+  .my-profile-page
+  .my-profile-header {
+    padding-top: 28px;
+  }
+
+  .my-profile-page
+  .my-profile-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+
+/* =========================================================
+   PROFILE PAGE MODE FINAL OVERRIDE
+   ========================================================= */
+
+.my-profile-page-container {
+  position: static !important;
+  inset: auto !important;
+
+  width: 100% !important;
+  min-height: 0 !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  display: block !important;
+
+  background: transparent !important;
+
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+
+  overflow: visible !important;
+}
+
+.my-profile-modal.my-profile-page {
+  position: static !important;
+  inset: auto !important;
+
+  width: 100% !important;
+  max-width: none !important;
+
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+
+  margin: 0 !important;
+
+  transform: none !important;
+
+  overflow: visible !important;
+
+  border: 1px solid #e4e7f0;
+  border-radius: 24px;
+
+  background: #ffffff !important;
+
+  box-shadow: none !important;
+}
+
+.my-profile-page
+.my-profile-close {
+  display: none !important;
+}
+
+.my-profile-page
+.my-profile-header {
+  position: static !important;
+}
+
+@media (max-width: 760px) {
+
+  .my-profile-modal.my-profile-page {
+    border-radius: 18px;
+  }
+}

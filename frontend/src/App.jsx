@@ -1778,10 +1778,15 @@ function App() {
 
             <button
               type="button"
-              className="edupath-nav-link"
-              onClick={() =>
-                setShowSavedPage(true)
-              }
+              className={`edupath-nav-link ${
+                activePage === 'saved'
+                  ? 'active'
+                  : ''
+              }`}
+              onClick={() => {
+                setActivePage('saved')
+                setShowExploreMenu(false)
+              }}
             >
               Saved
             </button>
@@ -1791,10 +1796,15 @@ function App() {
 
             <button
               type="button"
-              className="edupath-profile-nav"
-              onClick={() =>
-                setShowUserProfile(true)
-              }
+              className={`edupath-profile-nav ${
+                activePage === 'profile'
+                  ? 'active'
+                  : ''
+              }`}
+              onClick={() => {
+                setActivePage('profile')
+                setShowExploreMenu(false)
+              }}
             >
               <span
                 className="edupath-profile-avatar"
@@ -2985,6 +2995,35 @@ function App() {
           </section>
         )}
 
+
+
+        {/* =========================
+            SAVED FULL PAGE
+        ========================== */}
+
+        {activePage === 'saved' && (
+          <section className="saved-main-page-section">
+            <SavedPage
+              displayMode="page"
+            />
+          </section>
+        )}
+
+
+
+        {/* =========================
+            PROFILE FULL PAGE
+        ========================== */}
+
+        {activePage === 'profile' && (
+          <section className="profile-main-page-section">
+            <MyProfileModal
+              account={currentAccount}
+              displayMode="page"
+            />
+          </section>
+        )}
+
 </main>
 
       {/* =========================
@@ -2997,27 +3036,10 @@ function App() {
           SAVED OPPORTUNITIES
       ========================== */}
 
-      {showSavedPage && (
-        <SavedPage
-          onClose={() =>
-            setShowSavedPage(false)
-          }
-        />
-      )}
-
       {/* =========================
           ANALYSIS DASHBOARD
           FULL-SCREEN MODAL
       ========================== */}
-
-      {showUserProfile && (
-        <MyProfileModal
-          account={currentAccount}
-          onClose={() =>
-            setShowUserProfile(false)
-          }
-        />
-      )}
 
     </>
   )

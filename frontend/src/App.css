@@ -4171,3 +4171,58 @@ main {
   background: #eef2ff;
   color: #4f46e5;
 }
+
+
+
+
+/* =========================================================
+   SAVED MAIN PAGE
+   ========================================================= */
+
+.saved-main-page-section {
+  width: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+
+
+
+/* =========================================================
+   PROFILE MAIN PAGE
+   ========================================================= */
+
+.profile-main-page-section {
+  width: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+
+/* Profile navbar active state */
+
+.edupath-profile-nav.active {
+  border-color: #c7d2fe;
+
+  background: #eef2ff;
+
+  box-shadow:
+    0 4px 14px
+    rgba(79, 70, 229, 0.08);
+}
+
+.edupath-profile-nav.active
+strong {
+  color: #4338ca;
+}
+
+.edupath-profile-nav.active
+small {
+  color: #6366f1;
+}

@@ -129,7 +129,10 @@ function optionalNumber(value) {
 function MyProfileModal({
   account,
   onClose,
+  displayMode = 'modal',
 }) {
+  const isPageMode =
+    displayMode === 'page'
   const [profile, setProfile] =
     useState(EMPTY_PROFILE)
 
@@ -311,11 +314,29 @@ function MyProfileModal({
 
   return (
     <div
-      className="my-profile-overlay"
-      role="dialog"
-      aria-modal="true"
+      className={
+        isPageMode
+          ? 'my-profile-page-container'
+          : 'my-profile-overlay'
+      }
+      role={
+        isPageMode
+          ? undefined
+          : 'dialog'
+      }
+      aria-modal={
+        isPageMode
+          ? undefined
+          : 'true'
+      }
     >
-      <div className="my-profile-modal">
+      <div
+        className={
+          isPageMode
+            ? 'my-profile-modal my-profile-page'
+            : 'my-profile-modal'
+        }
+      >
 
         <header className="my-profile-header">
           <div>
@@ -330,6 +351,7 @@ function MyProfileModal({
               information and preferences.
             </p>
           </div>
+          {!isPageMode && (
 
           <button
             type="button"
@@ -339,6 +361,7 @@ function MyProfileModal({
           >
             ×
           </button>
+          )}
         </header>
 
         <section className="my-profile-account">

@@ -141,7 +141,10 @@ function getCardMeta(
 
 function SavedPage({
   onClose,
+  displayMode = 'modal',
 }) {
+  const isPageMode =
+    displayMode === 'page' 
   const [activeTab, setActiveTab] =
     useState('programs')
 
@@ -369,18 +372,32 @@ function SavedPage({
 
   return (
     <>
-      <div className="saved-page-backdrop">
-        <div className="saved-page">
+      <div
+        className={
+          isPageMode
+            ? 'saved-page-container'
+            : 'saved-page-backdrop'
+        }
+      >
+        <div
+          className={
+            isPageMode
+              ? 'saved-page saved-page-inline'
+              : 'saved-page'
+          }
+        >
 
-          <div className="saved-sticky-close">
-            <button
-              type="button"
-              onClick={onClose}
-              aria-label="Close saved opportunities"
-            >
-              &times;
-            </button>
-          </div>
+          {!isPageMode && (
+            <div className="saved-sticky-close">
+              <button
+                type="button"
+                onClick={onClose}
+                aria-label="Close saved opportunities"
+              >
+                &times;
+              </button>
+            </div>
+          )}
 
           <header className="saved-page-header">
             <p className="saved-eyebrow">
