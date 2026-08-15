@@ -5,6 +5,77 @@ import {
 } from './api'
 import './MyProfileModal.css'
 
+const TARGET_DEGREE_OPTIONS = [
+  {
+    value: 'Bachelor',
+    label: "Bachelor's",
+  },
+  {
+    value: 'Master',
+    label: "Master's",
+  },
+  {
+    value: 'PhD',
+    label: 'PhD / Doctoral',
+  },
+]
+
+const EAST_SOUTHEAST_ASIA_DESTINATIONS = [
+  'Brunei',
+  'Cambodia',
+  'China',
+  'Hong Kong',
+  'Indonesia',
+  'Japan',
+  'Laos',
+  'Macau',
+  'Malaysia',
+  'Mongolia',
+  'Myanmar',
+  'Philippines',
+  'Singapore',
+  'South Korea',
+  'Taiwan',
+  'Thailand',
+  'Timor-Leste',
+  'Vietnam',
+]
+
+function normalizeTargetDegree(value) {
+  const clean = String(
+    value || ''
+  )
+    .trim()
+    .toLowerCase()
+
+  if (
+    clean === 'bachelor' ||
+    clean === "bachelor's" ||
+    clean === 'bachelors'
+  ) {
+    return 'Bachelor'
+  }
+
+  if (
+    clean === 'master' ||
+    clean === "master's" ||
+    clean === 'masters'
+  ) {
+    return 'Master'
+  }
+
+  if (
+    clean === 'phd' ||
+    clean === 'doctoral' ||
+    clean === 'doctorate'
+  ) {
+    return 'PhD'
+  }
+
+  return value || ''
+}
+
+
 const EMPTY_PROFILE = {
   nationality: '',
   current_education_level: '',
@@ -26,6 +97,10 @@ function toFormProfile(profile) {
   return {
     ...EMPTY_PROFILE,
     ...profile,
+    target_degree_level:
+      normalizeTargetDegree(
+        profile?.target_degree_level
+      ),
     gpa: profile?.gpa ?? '',
     gpa_scale: profile?.gpa_scale ?? '',
     ielts_score: profile?.ielts_score ?? '',
@@ -378,7 +453,8 @@ function MyProfileModal({
 
               <label>
                 <span>Target degree</span>
-                <input
+
+                <select
                   value={
                     profile.target_degree_level
                   }
@@ -389,7 +465,22 @@ function MyProfileModal({
                       event.target.value
                     )
                   }
-                />
+                >
+                  <option value="">
+                    Select target degree
+                  </option>
+
+                  {TARGET_DEGREE_OPTIONS.map(
+                    (option) => (
+                      <option
+                        key={option.value}
+                        value={option.value}
+                      >
+                        {option.label}
+                      </option>
+                    )
+                  )}
+                </select>
               </label>
 
               <label>
@@ -524,26 +615,38 @@ function MyProfileModal({
                 <span>
                   Preferred country
                 </span>
-                <input
+
+                <select
                   value={
                     profile
-                      .preferred_countries
-                      .join(', ')
+                      .preferred_countries?.[0]
+                    || ''
                   }
                   disabled={!editing}
                   onChange={(event) =>
                     updateField(
                       'preferred_countries',
                       event.target.value
-                        .split(',')
-                        .map(
-                          (item) =>
-                            item.trim()
-                        )
-                        .filter(Boolean)
+                        ? [event.target.value]
+                        : []
                     )
                   }
-                />
+                >
+                  <option value="">
+                    Select preferred country
+                  </option>
+
+                  {EAST_SOUTHEAST_ASIA_DESTINATIONS.map(
+                    (country) => (
+                      <option
+                        key={country}
+                        value={country}
+                      >
+                        {country}
+                      </option>
+                    )
+                  )}
+                </select>
               </label>
 
               <label>

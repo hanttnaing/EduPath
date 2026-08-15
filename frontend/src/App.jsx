@@ -406,6 +406,32 @@ function App() {
   }
 
   useEffect(() => {
+    const handleAuthExpired = () => {
+      clearAccessToken()
+
+      setCurrentAccount(null)
+      setAuthMode('login')
+      setAuthStatus('guest')
+
+      setShowUserProfile(false)
+      setShowRecommendationModal(false)
+      setShowAnalysisDashboard(false)
+    }
+
+    window.addEventListener(
+      'edupath-auth-expired',
+      handleAuthExpired
+    )
+
+    return () => {
+      window.removeEventListener(
+        'edupath-auth-expired',
+        handleAuthExpired
+      )
+    }
+  }, [])
+
+  useEffect(() => {
     fetch(
       `${API_BASE_URL}/api/countries?limit=100`
     )

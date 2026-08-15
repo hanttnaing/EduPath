@@ -8,6 +8,11 @@ function RecommendationModal({
   const [activeTab, setActiveTab] =
     useState('programs')
 
+  const [
+    recommendationsRequested,
+    setRecommendationsRequested,
+  ] = useState(false)
+
   const [programData, setProgramData] =
     useState(null)
 
@@ -17,7 +22,7 @@ function RecommendationModal({
   ] = useState(null)
 
   const [loading, setLoading] =
-    useState(true)
+    useState(false)
 
   const [error, setError] =
     useState('')
@@ -88,6 +93,10 @@ function RecommendationModal({
   // LOAD RECOMMENDATIONS
   // =========================
   useEffect(() => {
+    if (!recommendationsRequested) {
+      return
+    }
+
     const loadRecommendations =
       async () => {
         try {
@@ -158,7 +167,7 @@ function RecommendationModal({
       }
 
     loadRecommendations()
-  }, [])
+  }, [recommendationsRequested])
 
   // =========================
   // SCORE HELPERS
@@ -422,6 +431,7 @@ function RecommendationModal({
           <ul className="recommendation-reasons">
             {(
               recommendation.match_reasons ||
+              recommendation.why_recommended ||
               []
             ).map((reason) => (
               <li key={reason}>
@@ -722,10 +732,22 @@ function RecommendationModal({
   return (
     <div className="recommendation-modal-backdrop">
       <div className="recommendation-modal">
+        <div className="recommendation-sticky-close-row">
+          <button
+            type="button"
+            className="recommendation-close-button"
+            onClick={onClose}
+            aria-label="Close recommendations"
+          >
+            &times;
+          </button>
+        </div>
         <header className="recommendation-modal-header">
           <div>
             <p className="recommendation-eyebrow">
-              PERSONALIZED RESULTS
+              {recommendationsRequested
+                ? 'PERSONALIZED RESULTS'
+                : 'PERSONALIZED RECOMMENDATIONS'}
             </p>
 
             <h2>
@@ -733,22 +755,114 @@ function RecommendationModal({
             </h2>
 
             <p>
-              Recommendations generated for
-              your academic profile
+              {recommendationsRequested
+                ? 'Recommendations generated from your academic profile'
+                : 'Discover programmes and scholarships matched to your goals'}
             </p>
           </div>
-
-          <button
-            type="button"
-            className="recommendation-close-button"
-            onClick={onClose}
-            aria-label="Close recommendations"
-          >
-            ×
-          </button>
         </header>
 
-        {loading && (
+        {!recommendationsRequested && (
+          <section className="recommendation-start">
+            <div className="recommendation-start-icon">
+              EP
+            </div>
+
+            <p className="recommendation-start-label">
+              PERSONALIZED FOR YOU
+            </p>
+
+            <h3>
+              Find opportunities that
+              match your goals.
+            </h3>
+
+            <p className="recommendation-start-description">
+              EduPath analyses your academic
+              profile and compares it with
+              available programmes and
+              scholarships to identify your
+              strongest matches.
+            </p>
+
+            <div className="recommendation-start-features">
+              <div>
+                <span>&#10003;</span>
+                <p>
+                  <strong>
+                    Degree and country
+                  </strong>
+                  <small>
+                    Based on your study
+                    destination and target level.
+                  </small>
+                </p>
+              </div>
+
+              <div>
+                <span>&#10003;</span>
+                <p>
+                  <strong>
+                    Major similarity
+                  </strong>
+                  <small>
+                    Compares your preferred
+                    field using content similarity.
+                  </small>
+                </p>
+              </div>
+
+              <div>
+                <span>&#10003;</span>
+                <p>
+                  <strong>
+                    Budget and intake
+                  </strong>
+                  <small>
+                    Considers affordability
+                    and preferred study intake.
+                  </small>
+                </p>
+              </div>
+
+              <div>
+                <span>&#10003;</span>
+                <p>
+                  <strong>
+                    Scholarship eligibility
+                  </strong>
+                  <small>
+                    Checks funding, GPA and
+                    English requirements.
+                  </small>
+                </p>
+              </div>
+            </div>
+
+            <button
+              type="button"
+              className="recommendation-start-button"
+              onClick={() => {
+                setError('')
+                setProgramData(null)
+                setScholarshipData(null)
+                setRecommendationsRequested(
+                  true
+                )
+              }}
+            >
+              Get Personalized Recommendations
+            </button>
+
+            <p className="recommendation-start-note">
+              Recommendations are generated
+              from your current academic profile.
+            </p>
+          </section>
+        )}
+
+        {recommendationsRequested &&
+          loading && (
           <div className="recommendation-loading">
             <div className="recommendation-spinner" />
 

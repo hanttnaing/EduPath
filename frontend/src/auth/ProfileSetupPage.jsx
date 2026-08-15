@@ -344,16 +344,16 @@ function ProfileSetupPage({
                       Select degree
                     </option>
 
-                    <option value="Bachelor's">
+                    <option value="Bachelor">
                       Bachelor's
                     </option>
 
-                    <option value="Master's">
+                    <option value="Master">
                       Master's
                     </option>
 
-                    <option value="Doctoral">
-                      Doctoral
+                    <option value="PhD">
+                      PhD / Doctoral
                     </option>
                   </select>
                 </label>
@@ -531,26 +531,79 @@ function ProfileSetupPage({
                     }
                     required
                   >
+                    <option value="Brunei">
+                      Brunei
+                    </option>
+
+                    <option value="Cambodia">
+                      Cambodia
+                    </option>
+
+                    <option value="China">
+                      China
+                    </option>
+
+                    <option value="Hong Kong">
+                      Hong Kong
+                    </option>
+
+                    <option value="Indonesia">
+                      Indonesia
+                    </option>
+
                     <option value="Japan">
                       Japan
                     </option>
 
-                    <option value="South Korea">
-                      South Korea
+                    <option value="Laos">
+                      Laos
                     </option>
 
-                    <option value="Singapore">
-                      Singapore
+                    <option value="Macau">
+                      Macau
                     </option>
 
                     <option value="Malaysia">
                       Malaysia
                     </option>
 
+                    <option value="Mongolia">
+                      Mongolia
+                    </option>
+
+                    <option value="Myanmar">
+                      Myanmar
+                    </option>
+
+                    <option value="Philippines">
+                      Philippines
+                    </option>
+
+                    <option value="Singapore">
+                      Singapore
+                    </option>
+
+                    <option value="South Korea">
+                      South Korea
+                    </option>
+
+                    <option value="Taiwan">
+                      Taiwan
+                    </option>
+
                     <option value="Thailand">
                       Thailand
                     </option>
-                  </select>
+
+                    <option value="Timor-Leste">
+                      Timor-Leste
+                    </option>
+
+                    <option value="Vietnam">
+                      Vietnam
+                    </option>
+
+                    </select>
                 </label>
 
                 <label>

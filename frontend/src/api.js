@@ -39,13 +39,28 @@ export async function authFetch(
       `Bearer ${token}`;
   }
 
-  return fetch(
+  const response = await fetch(
     `${API_BASE_URL}${path}`,
     {
       ...options,
       headers,
     }
   );
+
+  if (
+    response.status === 401 &&
+    token
+  ) {
+    clearAccessToken();
+
+    window.dispatchEvent(
+      new Event(
+        "edupath-auth-expired"
+      )
+    );
+  }
+
+  return response;
 }
 
 export async function readApiError(
