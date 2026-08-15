@@ -2178,3 +2178,675 @@ h2 {
 
   border-radius: 9px;
 }
+
+/* =========================================================
+   EDUPATH MAIN NAVIGATION
+   ========================================================= */
+
+.edupath-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1200;
+
+  width: 100%;
+
+  border-bottom: 1px solid #e8eaf2;
+
+  background:
+    rgba(255, 255, 255, 0.96);
+
+  backdrop-filter: blur(14px);
+}
+
+.edupath-navbar-inner {
+  width: min(100% - 40px, 1320px);
+
+  min-height: 72px;
+
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 28px;
+}
+
+.edupath-brand {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 10px;
+
+  flex-shrink: 0;
+
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  color: #1d1e35;
+
+  cursor: pointer;
+}
+
+.edupath-brand-mark {
+  width: 38px;
+  height: 38px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 11px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #4338ca,
+      #6366f1
+    );
+
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  box-shadow:
+    0 7px 18px
+    rgba(79, 70, 229, 0.18);
+}
+
+.edupath-brand-name {
+  font-size: 19px;
+  font-weight: 800;
+
+  letter-spacing: -0.3px;
+}
+
+.edupath-nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 4px;
+}
+
+.edupath-nav-link {
+  min-height: 42px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 6px;
+
+  padding: 0 14px;
+
+  border: none;
+  border-radius: 9px;
+
+  background: transparent;
+  color: #5e6273;
+
+  font-size: 13px;
+  font-weight: 650;
+
+  cursor: pointer;
+
+  transition:
+    background 0.18s ease,
+    color 0.18s ease;
+}
+
+.edupath-nav-link:hover {
+  background: #f3f4f9;
+  color: #35364c;
+}
+
+.edupath-nav-link.active {
+  background: #eef2ff;
+  color: #4f46e5;
+}
+
+.edupath-nav-chevron {
+  font-size: 8px;
+}
+
+.edupath-explore-wrapper {
+  position: relative;
+}
+
+.edupath-explore-menu {
+  position: absolute;
+
+  top: calc(100% + 8px);
+  left: 0;
+
+  width: 190px;
+
+  padding: 7px;
+
+  border: 1px solid #e5e7ef;
+  border-radius: 12px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 18px 42px
+    rgba(15, 23, 42, 0.12);
+}
+
+.edupath-explore-menu button {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  padding: 11px 12px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: transparent;
+  color: #44475a;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  text-align: left;
+
+  cursor: pointer;
+}
+
+.edupath-explore-menu button:hover {
+  background: #f4f5fa;
+  color: #4f46e5;
+}
+
+.edupath-profile-nav {
+  min-height: 42px;
+
+  display: inline-flex;
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 6px 12px 6px 7px;
+
+  border: 1px solid #e3e5ec;
+  border-radius: 11px;
+
+  background: #ffffff;
+  color: #33354a;
+
+  font-size: 13px;
+  font-weight: 650;
+
+  cursor: pointer;
+}
+
+.edupath-profile-nav:hover {
+  border-color: #c7d2fe;
+  background: #f8f9ff;
+}
+
+.edupath-profile-avatar {
+  width: 30px;
+  height: 30px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 8px;
+
+  background: #eef2ff;
+
+  font-size: 15px;
+}
+
+@media (max-width: 850px) {
+  .edupath-navbar-inner {
+    flex-wrap: wrap;
+
+    padding: 12px 0;
+  }
+
+  .edupath-nav-links {
+    order: 3;
+
+    width: 100%;
+
+    justify-content: flex-start;
+
+    overflow-x: auto;
+  }
+}
+
+
+/* =========================================================
+   EXPLORE MENU CSS CHEVRON
+   ========================================================= */
+
+.edupath-nav-chevron {
+  width: 7px;
+  height: 7px;
+
+  display: inline-block;
+
+  margin-left: 3px;
+
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+
+  transform:
+    rotate(45deg)
+    translateY(-2px);
+
+  transition:
+    transform 0.18s ease;
+}
+
+.edupath-nav-chevron.open {
+  transform:
+    rotate(225deg)
+    translate(-1px, -1px);
+}
+
+
+/* =========================================================
+   FULL WIDTH APPLICATION FRAME
+   ========================================================= */
+
+/* Remove the old 1320px desktop width restriction */
+
+main {
+  width: 100%;
+  max-width: none;
+
+  margin: 0;
+
+  padding:
+    42px
+    28px
+    80px;
+
+  box-sizing: border-box;
+}
+
+
+/* Let navbar content use the same full-width frame */
+
+.edupath-navbar-inner {
+  width: 100%;
+  max-width: none;
+
+  margin: 0;
+
+  padding:
+    0
+    28px;
+
+  box-sizing: border-box;
+}
+
+
+/* Keep a little breathing space on smaller screens */
+
+@media (max-width: 700px) {
+  main {
+    padding:
+      28px
+      16px
+      60px;
+  }
+
+  .edupath-navbar-inner {
+    padding:
+      10px
+      16px;
+  }
+}
+
+
+/* =========================================================
+   FINAL SCHOLARSHIP CARD LAYOUT
+   ========================================================= */
+
+/*
+  Explore cards show concise scholarship information only.
+  Detailed eligibility remains available through detail /
+  official scholarship information.
+*/
+
+.scholarships-grid,
+.scholarship-grid {
+  align-items: stretch;
+}
+
+.scholarship-card {
+  display: flex;
+  flex-direction: column;
+
+  height: 100%;
+  min-height: 0;
+
+  box-sizing: border-box;
+}
+
+.scholarship-details {
+  flex: 0 0 auto;
+}
+
+.scholarship-data-quality {
+  margin-top: 18px;
+}
+
+.scholarship-card-actions {
+  margin-top: auto !important;
+  padding-top: 20px;
+}
+
+
+/* ---------------------------------------------------------
+   Save / View buttons
+   --------------------------------------------------------- */
+
+.scholarship-card-actions {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 12px;
+
+  width: 100%;
+}
+
+.scholarship-save-button,
+.scholarship-card-actions .scholarship-link,
+.scholarship-card-actions
+.scholarship-link-disabled {
+  width: 100%;
+  min-height: 52px;
+
+  margin: 0;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  padding: 10px 12px;
+
+  text-align: center;
+  line-height: 1.25;
+}
+
+
+/* ---------------------------------------------------------
+   Saved Scholarship checkmark
+   --------------------------------------------------------- */
+
+.scholarship-save-button.saved {
+  border-color: #86efac;
+
+  background: #ecfdf3;
+  color: #15803d;
+}
+
+.scholarship-save-button.saved::after {
+  content: "\2713";
+
+  display: inline-block;
+
+  margin-left: 7px;
+
+  font-weight: 800;
+}
+
+
+/* ---------------------------------------------------------
+   Saved Programme checkmark
+   --------------------------------------------------------- */
+
+.recommendation-save-button.saved::after {
+  content: "\2713";
+
+  display: inline-block;
+
+  margin-left: 7px;
+
+  font-weight: 800;
+}
+
+
+/* ---------------------------------------------------------
+   Scholarship icon
+   --------------------------------------------------------- */
+
+.scholarship-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 22px;
+  line-height: 1;
+}
+
+
+/* ---------------------------------------------------------
+   Mobile
+   --------------------------------------------------------- */
+
+@media (max-width: 560px) {
+  .scholarship-card-actions {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+
+/* =========================================================
+   SCHOLARSHIP CARD ALIGNMENT V4
+   ========================================================= */
+
+.scholarships-grid,
+.scholarship-grid {
+  align-items: stretch !important;
+}
+
+.scholarship-card {
+  display: flex;
+  flex-direction: column;
+
+  height: 100% !important;
+  min-height: 0;
+
+  box-sizing: border-box;
+}
+
+
+/* ---------------------------------------------------------
+   Title area
+   Keep every card title area the same height
+   --------------------------------------------------------- */
+
+.scholarship-card-title {
+  display: -webkit-box;
+
+  height: 4.15em;
+  min-height: 4.15em;
+
+  margin-bottom: 8px;
+
+  overflow: hidden;
+
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+
+  line-height: 1.38;
+
+  text-overflow: ellipsis;
+}
+
+
+/* ---------------------------------------------------------
+   Provider area
+   --------------------------------------------------------- */
+
+.scholarship-provider {
+  display: -webkit-box;
+
+  height: 3em;
+  min-height: 3em;
+
+  overflow: hidden;
+
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+
+  line-height: 1.5;
+
+  text-overflow: ellipsis;
+}
+
+
+/* ---------------------------------------------------------
+   Detail rows
+   --------------------------------------------------------- */
+
+.scholarship-details {
+  width: 100%;
+
+  margin-top: 18px;
+}
+
+.scholarship-detail {
+  min-height: 50px;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(105px, 0.85fr)
+    minmax(0, 1.15fr);
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+.scholarship-detail-label {
+  text-align: left;
+}
+
+.scholarship-detail-value {
+  min-width: 0;
+
+  text-align: right;
+
+  line-height: 1.4;
+
+  overflow-wrap: anywhere;
+}
+
+.scholarship-funding-badge {
+  justify-self: end;
+}
+
+
+/* ---------------------------------------------------------
+   Quality box
+   Always sit at the same lower position
+   --------------------------------------------------------- */
+
+.scholarship-data-quality {
+  margin-top: auto !important;
+  padding-top: 20px;
+}
+
+.scholarship-data-quality > * {
+  box-sizing: border-box;
+}
+
+
+/* ---------------------------------------------------------
+   Buttons
+   --------------------------------------------------------- */
+
+.scholarship-card-actions {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 12px;
+
+  width: 100%;
+
+  margin-top: 16px !important;
+  padding-top: 0 !important;
+}
+
+.scholarship-save-button,
+.scholarship-card-actions .scholarship-link,
+.scholarship-card-actions .scholarship-link-disabled {
+  width: 100%;
+  min-height: 52px;
+
+  box-sizing: border-box;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0;
+
+  padding: 10px 12px;
+
+  line-height: 1.25;
+  text-align: center;
+}
+
+
+/* ---------------------------------------------------------
+   Responsive
+   --------------------------------------------------------- */
+
+@media (max-width: 700px) {
+  .scholarship-card-title {
+    height: auto;
+    min-height: 0;
+
+    -webkit-line-clamp: unset;
+  }
+
+  .scholarship-provider {
+    height: auto;
+    min-height: 0;
+
+    -webkit-line-clamp: unset;
+  }
+
+  .scholarship-detail {
+    grid-template-columns: 1fr;
+
+    gap: 4px;
+
+    padding: 10px 0;
+  }
+
+  .scholarship-detail-value,
+  .scholarship-funding-badge {
+    justify-self: start;
+    text-align: left;
+  }
+
+  .scholarship-card-actions {
+    grid-template-columns: 1fr;
+  }
+}

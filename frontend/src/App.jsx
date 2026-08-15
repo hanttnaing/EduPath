@@ -159,6 +159,19 @@ function App() {
   ] = useState(false)
 
   // =========================
+  // MAIN NAVIGATION STATE
+  // =========================
+  const [
+    activePage,
+    setActivePage,
+  ] = useState('home')
+
+  const [
+    showExploreMenu,
+    setShowExploreMenu,
+  ] = useState(false)
+
+  // =========================
   // UNIVERSITY STATES
   // =========================
   const [universities, setUniversities] =
@@ -1407,6 +1420,159 @@ function App() {
   // =========================
   return (
     <>
+      {/* =========================
+          MAIN NAVIGATION
+      ========================== */}
+
+      <nav className="edupath-navbar">
+        <div className="edupath-navbar-inner">
+
+          <button
+            type="button"
+            className="edupath-brand"
+            onClick={() => {
+              setActivePage('home')
+              setShowExploreMenu(false)
+            }}
+          >
+            <span className="edupath-brand-mark">
+              EP
+            </span>
+
+            <span className="edupath-brand-name">
+              EduPath
+            </span>
+          </button>
+
+          <div className="edupath-nav-links">
+            <button
+              type="button"
+              className={
+                activePage === 'home'
+                  ? 'edupath-nav-link active'
+                  : 'edupath-nav-link'
+              }
+              onClick={() => {
+                setActivePage('home')
+                setShowExploreMenu(false)
+              }}
+            >
+              Home
+            </button>
+
+            <div className="edupath-explore-wrapper">
+              <button
+                type="button"
+                className={
+                  [
+                    'universities',
+                    'programs',
+                    'scholarships',
+                  ].includes(activePage)
+                    ? 'edupath-nav-link active'
+                    : 'edupath-nav-link'
+                }
+                onClick={() =>
+                  setShowExploreMenu(
+                    (current) => !current
+                  )
+                }
+              >
+                Explore
+                <span
+                  className={`edupath-nav-chevron ${
+                    showExploreMenu
+                      ? 'open'
+                      : ''
+                  }`}
+                  aria-hidden="true"
+                />
+              </button>
+
+              {showExploreMenu && (
+                <div className="edupath-explore-menu">
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setActivePage(
+                        'universities'
+                      )
+                      setShowExploreMenu(false)
+                    }}
+                  >
+                    Universities
+                  </button>
+
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setActivePage(
+                        'programs'
+                      )
+                      setShowExploreMenu(false)
+                    }}
+                  >
+                    Programmes
+                  </button>
+
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setActivePage(
+                        'scholarships'
+                      )
+                      setShowExploreMenu(false)
+                    }}
+                  >
+                    Scholarships
+                  </button>
+                </div>
+              )}
+            </div>
+
+            <button
+              type="button"
+              className="edupath-nav-link"
+              onClick={() =>
+                setShowRecommendationModal(true)
+              }
+            >
+              Recommendations
+            </button>
+
+            <button
+              type="button"
+              className="edupath-nav-link"
+              onClick={() =>
+                setShowSavedPage(true)
+              }
+            >
+              Saved
+            </button>
+          </div>
+
+          <button
+            type="button"
+            className="edupath-profile-nav"
+            onClick={() =>
+              setShowUserProfile(true)
+            }
+          >
+            <span
+              className="edupath-profile-avatar"
+              aria-hidden="true"
+            >
+              {'\u{1F464}'}
+            </span>
+
+            <span>
+              Profile
+            </span>
+          </button>
+
+        </div>
+      </nav>
+
       <div className="auth-session-bar">
         <span>
           Signed in as{' '}

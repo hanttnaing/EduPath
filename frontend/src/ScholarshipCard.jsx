@@ -4,7 +4,9 @@ function ScholarshipCard({
   isSaved = false,
   saving = false,
   onToggleSave,
-}) {  // =========================
+}) {
+
+  // =========================
   // DATE FORMATTER
   // =========================
   const formatDate = (dateValue) => {
@@ -143,59 +145,79 @@ function ScholarshipCard({
     )
 
     // =========================
-    // ELIGIBILITY INFORMATION
-    // =========================
+  // ELIGIBILITY INFORMATION
+  // =========================
 
-    const ageLimit =
+  const fieldsArray = Array.isArray(
+    scholarship.fields_of_study
+  )
+    ? scholarship.fields_of_study.filter(
+        Boolean
+      )
+    : []
+
+  const nationalitiesArray = Array.isArray(
+    scholarship.eligible_nationalities
+  )
+    ? scholarship.eligible_nationalities.filter(
+        Boolean
+      )
+    : []
+
+  const ageLimit =
     scholarship.age_limit || ''
 
-    const minimumGpa =
+  const minimumGpa =
     scholarship.minimum_gpa
 
-    const gpaScale =
+  const gpaScale =
     scholarship.gpa_scale
 
-    const ieltsRequirement =
+  const ieltsRequirement =
     scholarship.ielts_requirement || ''
 
-    const eligibleNationalitiesRaw =
-    scholarship.eligible_nationalities
-
-    const eligibleNationalities = Array.isArray(
-    eligibleNationalitiesRaw
-    )
-    ? eligibleNationalitiesRaw.join(', ')
-    : eligibleNationalitiesRaw || ''
-
-    const fieldsOfStudyRaw =
-    scholarship.fields_of_study
-
-    const fieldsOfStudy = Array.isArray(
-    fieldsOfStudyRaw
-    )
-    ? fieldsOfStudyRaw.join(', ')
-    : fieldsOfStudyRaw || ''
-
-    const gpaDisplay =
+  const gpaDisplay =
     minimumGpa !== null &&
     minimumGpa !== undefined &&
     minimumGpa !== ''
-        ? gpaScale
+      ? gpaScale
         ? `${minimumGpa} / ${gpaScale}`
         : `${minimumGpa}`
-        : ''
+      : ''
 
-    const hasEligibilityInfo =
+  const fieldsSummary =
+    fieldsArray.length > 0
+      ? fieldsArray.length === 1
+        ? fieldsArray[0]
+        : `${fieldsArray[0]} +${
+            fieldsArray.length - 1
+          } more`
+      : ''
+
+  const nationalitiesSummary =
+    nationalitiesArray.length > 0
+      ? nationalitiesArray.length === 1
+        ? nationalitiesArray[0]
+        : `${nationalitiesArray[0]} +${
+            nationalitiesArray.length - 1
+          } more`
+      : ''
+
+  const hasEligibilityInfo =
+    Boolean(fieldsSummary) ||
+    Boolean(nationalitiesSummary) ||
     Boolean(ageLimit) ||
     Boolean(gpaDisplay) ||
-    Boolean(ieltsRequirement) ||
-    Boolean(eligibleNationalities) ||
-    Boolean(fieldsOfStudy)
+    Boolean(ieltsRequirement)
+
   return (
     <article className="scholarship-card">
       <div className="scholarship-card-top">
-        <div className="scholarship-icon">
-          🎓
+        <div
+          className="scholarship-icon"
+          aria-hidden="true"
+        >
+          {'\u{1F3C5}'}
         </div>
 
         <span
@@ -259,18 +281,6 @@ function ScholarshipCard({
           </div>
         )}
 
-        {openingDate && (
-          <div className="scholarship-detail">
-            <span className="scholarship-detail-label">
-              Opens
-            </span>
-
-            <span className="scholarship-detail-value">
-              {openingDate}
-            </span>
-          </div>
-        )}
-
         <div className="scholarship-detail">
           <span className="scholarship-detail-label">
             Deadline
@@ -281,51 +291,6 @@ function ScholarshipCard({
           </span>
         </div>
       </div>
-
-      {hasEligibilityInfo && (
-        <div className="scholarship-eligibility">
-            <h4 className="scholarship-eligibility-title">
-            Eligibility
-            </h4>
-
-            {ageLimit && (
-            <div className="eligibility-row">
-                <span>Age Limit</span>
-                <strong>{ageLimit}</strong>
-            </div>
-            )}
-
-            {gpaDisplay && (
-            <div className="eligibility-row">
-                <span>Minimum GPA</span>
-                <strong>{gpaDisplay}</strong>
-            </div>
-            )}
-
-            {ieltsRequirement && (
-            <div className="eligibility-row">
-                <span>IELTS</span>
-                <strong>{ieltsRequirement}</strong>
-            </div>
-            )}
-
-            {eligibleNationalities && (
-            <div className="eligibility-row">
-                <span>Eligible Nationalities</span>
-                <strong>
-                {eligibleNationalities}
-                </strong>
-            </div>
-            )}
-
-            {fieldsOfStudy && (
-            <div className="eligibility-row">
-                <span>Fields of Study</span>
-                <strong>{fieldsOfStudy}</strong>
-            </div>
-            )}
-        </div>
-        )}
 
         {(dataQualityStatus ||
             freshnessStatus ||
@@ -372,7 +337,7 @@ function ScholarshipCard({
               {saving
                 ? 'Updating...'
                 : isSaved
-                  ? 'Saved \u2713'
+                  ? 'Saved'
                   : 'Save Scholarship'}
             </button>
           )}

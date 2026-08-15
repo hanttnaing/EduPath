@@ -595,8 +595,8 @@ function RecommendationModal({
             : savedProgramIds.includes(
                 recommendation.program_id
               )
-              ? '? Saved Programme'
-              : '? Save Programme'}
+              ? 'Saved Programme'
+              : 'Save Programme'}
         </button>
 
         {recommendation.program_url && (
