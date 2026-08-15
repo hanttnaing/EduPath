@@ -8,10 +8,17 @@ from pymongo.errors import DuplicateKeyError, PyMongoError
 
 from backend.app.database import get_database
 from backend.app.schemas import (
+    AccountLogin,
     AccountRegister,
     AccountResponse,
+    TokenResponse,
 )
-from backend.app.security import hash_password
+from backend.app.security import (
+    create_access_token,
+    decode_access_token,
+    hash_password,
+    verify_password,
+)
 
 
 router = APIRouter(
@@ -19,6 +26,38 @@ router = APIRouter(
     tags=["Authentication"],
 )
 
+
+# ---------------------------------------------------------
+# Helper: calculate token lifetime
+# ---------------------------------------------------------
+
+def _get_token_expiry_minutes(
+    access_token: str,
+) -> int:
+    """
+    Read the JWT timestamps and return its lifetime
+    in whole minutes.
+    """
+
+    payload = decode_access_token(access_token)
+
+    issued_at = int(payload["iat"])
+    expires_at = int(payload["exp"])
+
+    seconds = max(
+        0,
+        expires_at - issued_at,
+    )
+
+    return max(
+        1,
+        (seconds + 59) // 60,
+    )
+
+
+# ---------------------------------------------------------
+# Register
+# ---------------------------------------------------------
 
 @router.post(
     "/register",
@@ -48,7 +87,10 @@ def register_account(
     if len(full_name) < 2:
         raise HTTPException(
             status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
-            detail="Full name must contain at least 2 characters.",
+            detail=(
+                "Full name must contain at least "
+                "2 characters."
+            ),
         )
 
     # -----------------------------------------------------
@@ -58,25 +100,28 @@ def register_account(
     try:
         existing_account = accounts.find_one(
             {"email": email},
-            {
-                "_id": 1,
-            },
+            {"_id": 1},
         )
 
     except PyMongoError as error:
         raise HTTPException(
-            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            status_code=(
+                status.HTTP_500_INTERNAL_SERVER_ERROR
+            ),
             detail="Unable to check account availability.",
         ) from error
 
     if existing_account is not None:
         raise HTTPException(
             status_code=status.HTTP_409_CONFLICT,
-            detail="An account with this email already exists.",
+            detail=(
+                "An account with this email "
+                "already exists."
+            ),
         )
 
     # -----------------------------------------------------
-    # Create secure account record
+    # Create account
     # -----------------------------------------------------
 
     current_time = datetime.now(timezone.utc)
@@ -87,7 +132,9 @@ def register_account(
         "user_id": user_id,
         "full_name": full_name,
         "email": email,
-        "password_hash": hash_password(payload.password),
+        "password_hash": hash_password(
+            payload.password
+        ),
         "role": "student",
         "is_active": True,
         "profile_completed": False,
@@ -96,7 +143,7 @@ def register_account(
     }
 
     # -----------------------------------------------------
-    # Save account to MongoDB
+    # Save account
     # -----------------------------------------------------
 
     try:
@@ -110,13 +157,11 @@ def register_account(
 
     except PyMongoError as error:
         raise HTTPException(
-            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            status_code=(
+                status.HTTP_500_INTERNAL_SERVER_ERROR
+            ),
             detail="Unable to create the account.",
         ) from error
-
-    # -----------------------------------------------------
-    # Never return password_hash to the frontend
-    # -----------------------------------------------------
 
     return AccountResponse(
         user_id=user_id,
@@ -125,4 +170,129 @@ def register_account(
         role="student",
         is_active=True,
         profile_completed=False,
+    )
+
+
+# ---------------------------------------------------------
+# Login
+# ---------------------------------------------------------
+
+@router.post(
+    "/login",
+    response_model=TokenResponse,
+)
+def login_account(
+    payload: AccountLogin,
+) -> TokenResponse:
+    """
+    Authenticate one EduPath account and return
+    a JWT access token.
+    """
+
+    database = get_database()
+    accounts = database["accounts"]
+
+    # -----------------------------------------------------
+    # Normalize email
+    # -----------------------------------------------------
+
+    email = payload.email.strip().lower()
+
+    # -----------------------------------------------------
+    # Find account
+    # -----------------------------------------------------
+
+    try:
+        account = accounts.find_one(
+            {"email": email}
+        )
+
+    except PyMongoError as error:
+        raise HTTPException(
+            status_code=(
+                status.HTTP_500_INTERNAL_SERVER_ERROR
+            ),
+            detail="Unable to authenticate the account.",
+        ) from error
+
+    # -----------------------------------------------------
+    # Verify credentials
+    # -----------------------------------------------------
+
+    password_valid = False
+
+    if account is not None:
+        password_hash = account.get(
+            "password_hash"
+        )
+
+        if isinstance(password_hash, str):
+            try:
+                password_valid = verify_password(
+                    payload.password,
+                    password_hash,
+                )
+            except (TypeError, ValueError):
+                password_valid = False
+
+    if account is None or not password_valid:
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Invalid email or password.",
+            headers={
+                "WWW-Authenticate": "Bearer",
+            },
+        )
+
+    # -----------------------------------------------------
+    # Reject inactive accounts
+    # -----------------------------------------------------
+
+    if not bool(account.get("is_active", False)):
+        raise HTTPException(
+            status_code=status.HTTP_403_FORBIDDEN,
+            detail="This account is inactive.",
+        )
+
+    # -----------------------------------------------------
+    # Create access token
+    # -----------------------------------------------------
+
+    access_token = create_access_token(
+        user_id=account["user_id"],
+        email=account["email"],
+        role=account["role"],
+    )
+
+    expires_in_minutes = (
+        _get_token_expiry_minutes(
+            access_token
+        )
+    )
+
+    # -----------------------------------------------------
+    # Return token + safe user information
+    # -----------------------------------------------------
+
+    return TokenResponse(
+        access_token=access_token,
+        token_type="bearer",
+        expires_in_minutes=(
+            expires_in_minutes
+        ),
+        user=AccountResponse(
+            user_id=account["user_id"],
+            full_name=account["full_name"],
+            email=account["email"],
+            role=account["role"],
+            is_active=bool(
+                account.get("is_active")
+            ),
+            profile_completed=bool(
+                account.get(
+                    "profile_completed",
+                    False,
+                )
+            ),
+        ),
     )
