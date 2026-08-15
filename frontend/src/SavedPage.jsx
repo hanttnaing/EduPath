@@ -6,13 +6,8 @@ import {
 import './SavedPage.css'
 
 const TAB_CONFIG = {
-  universities: {
-    label: 'Universities',
-    countKey: 'saved_university_count',
-    dataKey: 'saved_universities',
-  },
   programs: {
-    label: 'Programs',
+    label: 'Study Programmes',
     countKey: 'saved_program_count',
     dataKey: 'saved_programs',
   },
@@ -134,7 +129,7 @@ function SavedPage({
   onClose,
 }) {
   const [activeTab, setActiveTab] =
-    useState('universities')
+    useState('programs')
 
   const [savedData, setSavedData] =
     useState(null)
@@ -270,8 +265,8 @@ function SavedPage({
           </h2>
 
           <p>
-            Keep universities, programs and
-            scholarships you want to revisit.
+            Keep study programmes and scholarships
+            you want to revisit.
           </p>
         </header>
 
@@ -294,24 +289,12 @@ function SavedPage({
                 <div>
                   <strong>
                     {
-                      savedData.saved_university_count ??
-                      0
-                    }
-                  </strong>
-                  <span>
-                    Universities
-                  </span>
-                </div>
-
-                <div>
-                  <strong>
-                    {
                       savedData.saved_program_count ??
                       0
                     }
                   </strong>
                   <span>
-                    Programs
+                    Study Programmes
                   </span>
                 </div>
 

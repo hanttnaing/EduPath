@@ -569,34 +569,6 @@ function RecommendationModal({
       </section>
 
       <div className="recommendation-card-actions">
-        <button
-          type="button"
-          className={`recommendation-save-button ${
-            savedUniversityIds.includes(
-              recommendation.university_id
-            )
-              ? 'saved'
-              : ''
-          }`}
-          onClick={() =>
-            toggleUniversitySave(
-              recommendation.university_id
-            )
-          }
-          disabled={
-            savingItem ===
-            `university-${recommendation.university_id}`
-          }
-        >
-          {savingItem ===
-          `university-${recommendation.university_id}`
-            ? 'Saving...'
-            : savedUniversityIds.includes(
-                recommendation.university_id
-              )
-              ? '♥ Saved University'
-              : '♡ Save University'}
-        </button>
 
         <button
           type="button"
@@ -623,8 +595,8 @@ function RecommendationModal({
             : savedProgramIds.includes(
                 recommendation.program_id
               )
-              ? '? Saved Program'
-              : '? Save Program'}
+              ? '? Saved Programme'
+              : '? Save Programme'}
         </button>
 
         {recommendation.program_url && (
