@@ -15,6 +15,7 @@ import ScholarshipCard from './ScholarshipCard'
 import AnalysisDashboardModal from './AnalysisDashboardModal'
 import MyProfileModal from './MyProfileModal'
 import RecommendationModal from './RecommendationModal'
+import SavedPage from './SavedPage'
 import './App.css'
 
 // =========================
@@ -121,6 +122,14 @@ function App() {
   const [
     showRecommendationModal,
     setShowRecommendationModal,
+  ] = useState(false)
+
+  // =========================
+  // SAVED OPPORTUNITIES STATE
+  // =========================
+  const [
+    showSavedPage,
+    setShowSavedPage,
   ] = useState(false)
 
   // =========================
@@ -402,6 +411,7 @@ function App() {
 
     setShowUserProfile(false)
     setShowRecommendationModal(false)
+    setShowSavedPage(false)
     setShowAnalysisDashboard(false)
   }
 
@@ -1220,6 +1230,22 @@ function App() {
               className="profile-header-button"
               type="button"
               onClick={() =>
+                setShowSavedPage(true)
+              }
+            >
+              <span className="profile-header-button-icon">
+                S
+              </span>
+
+              <span>
+                Saved
+              </span>
+            </button>
+
+            <button
+              className="profile-header-button"
+              type="button"
+              onClick={() =>
                 setShowUserProfile(true)
               }
             >
@@ -1735,6 +1761,18 @@ function App() {
             }
           />
         )}
+
+      {/* =========================
+          SAVED OPPORTUNITIES
+      ========================== */}
+
+      {showSavedPage && (
+        <SavedPage
+          onClose={() =>
+            setShowSavedPage(false)
+          }
+        />
+      )}
 
       {/* =========================
           ANALYSIS DASHBOARD

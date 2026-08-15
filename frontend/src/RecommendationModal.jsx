@@ -36,6 +36,12 @@ function RecommendationModal({
   ] = useState([])
 
   const [
+    savedProgramIds,
+    setSavedProgramIds,
+  ] = useState([])
+
+
+  const [
     savedScholarshipIds,
     setSavedScholarshipIds,
   ] = useState([])
@@ -70,6 +76,19 @@ function RecommendationModal({
               .map(
                 (item) =>
                   item.university_id
+              )
+              .filter(Boolean)
+          : []
+      )
+
+      setSavedProgramIds(
+        Array.isArray(
+          data.saved_programs
+        )
+          ? data.saved_programs
+              .map(
+                (item) =>
+                  item.program_id
               )
               .filter(Boolean)
           : []
@@ -330,6 +349,73 @@ function RecommendationModal({
     }
 
   // =========================
+  // SAVE / UNSAVE PROGRAM
+  // =========================
+  const toggleProgramSave =
+    async (programId) => {
+      if (!programId) {
+        return
+      }
+
+      const isSaved =
+        savedProgramIds.includes(
+          programId
+        )
+
+      const actionKey =
+        `program-${programId}`
+
+      try {
+        setSavingItem(actionKey)
+        setError('')
+
+        const response = await authFetch(
+          `/api/me/saved/programs/${encodeURIComponent(
+            programId
+          )}`,
+          {
+            method:
+              isSaved
+                ? 'DELETE'
+                : 'POST',
+          }
+        )
+
+        if (!response.ok) {
+          let message =
+            isSaved
+              ? 'Unable to remove program.'
+              : 'Unable to save program.'
+
+          try {
+            const data =
+              await response.json()
+
+            if (
+              typeof data.detail ===
+              'string'
+            ) {
+              message = data.detail
+            }
+          } catch {
+            // Keep default message.
+          }
+
+          throw new Error(message)
+        }
+
+        await loadSavedOpportunities()
+      } catch (err) {
+        setError(
+          err.message ||
+            'Unable to update saved program.'
+        )
+      } finally {
+        setSavingItem('')
+      }
+    }
+
+  // =========================
   // PROGRAM CARD
   // =========================
   const renderProgram = (
@@ -510,6 +596,35 @@ function RecommendationModal({
               )
               ? '♥ Saved University'
               : '♡ Save University'}
+        </button>
+
+        <button
+          type="button"
+          className={`recommendation-save-button ${
+            savedProgramIds.includes(
+              recommendation.program_id
+            )
+              ? 'saved'
+              : ''
+          }`}
+          onClick={() =>
+            toggleProgramSave(
+              recommendation.program_id
+            )
+          }
+          disabled={
+            savingItem ===
+            `program-${recommendation.program_id}`
+          }
+        >
+          {savingItem ===
+          `program-${recommendation.program_id}`
+            ? 'Updating...'
+            : savedProgramIds.includes(
+                recommendation.program_id
+              )
+              ? '? Saved Program'
+              : '? Save Program'}
         </button>
 
         {recommendation.program_url && (
