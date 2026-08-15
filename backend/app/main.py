@@ -969,6 +969,61 @@ def get_scholarship_recommendations(
             ),
         ) from error
 
+
+# ---------------------------------------------------------
+# Recommendations for current authenticated student
+# ---------------------------------------------------------
+
+@app.get(
+    "/api/me/recommendations/programs",
+    tags=["My Recommendations"],
+)
+def get_current_user_program_recommendations(
+    top_k: int = Query(
+        default=5,
+        ge=1,
+        le=20,
+    ),
+    current_account: dict[str, Any] = Depends(
+        get_current_account
+    ),
+) -> dict[str, Any]:
+    """
+    Return ranked program recommendations for the
+    currently authenticated student.
+    """
+
+    return get_program_recommendations(
+        user_id=current_account["user_id"],
+        top_k=top_k,
+    )
+
+
+@app.get(
+    "/api/me/recommendations/scholarships",
+    tags=["My Recommendations"],
+)
+def get_current_user_scholarship_recommendations(
+    top_k: int = Query(
+        default=5,
+        ge=1,
+        le=20,
+    ),
+    current_account: dict[str, Any] = Depends(
+        get_current_account
+    ),
+) -> dict[str, Any]:
+    """
+    Return ranked scholarship recommendations for the
+    currently authenticated student.
+    """
+
+    return get_scholarship_recommendations(
+        user_id=current_account["user_id"],
+        top_k=top_k,
+    )
+
+
 # ---------------------------------------------------------
 # User profiles
 # ---------------------------------------------------------
@@ -1344,6 +1399,7 @@ def create_user_profile(
         current_time = datetime.now(timezone.utc)
 
         profile["saved_universities"] = []
+        profile["saved_programs"] = []
         profile["saved_scholarships"] = []
         profile["recommendation_history"] = []
         profile["created_at"] = current_time
@@ -2282,6 +2338,242 @@ def unsave_university_for_user(
         ),
     }
 
+
+# ---------------------------------------------------------
+# Save program
+# ---------------------------------------------------------
+
+@app.post(
+    (
+        "/api/user-profiles/{user_id}"
+        "/saved-programs/{program_id}"
+    ),
+    tags=["Saved Opportunities"],
+)
+def save_program_for_user(
+    user_id: str,
+    program_id: str,
+) -> dict[str, Any]:
+    """Save one academic program to a user's profile."""
+
+    database = get_database()
+
+    try:
+        profile = database["user_profiles"].find_one(
+            {"user_id": user_id},
+            {
+                "_id": 0,
+                "user_id": 1,
+                "saved_programs": 1,
+            },
+        )
+
+        if profile is None:
+            raise HTTPException(
+                status_code=status.HTTP_404_NOT_FOUND,
+                detail=(
+                    f"User profile '{user_id}' "
+                    "was not found."
+                ),
+            )
+
+        program = database["programs"].find_one(
+            {"program_id": program_id},
+            {
+                "_id": 0,
+                "content_hash": 0,
+                "created_at": 0,
+                "database_updated_at": 0,
+            },
+        )
+
+        if program is None:
+            raise HTTPException(
+                status_code=status.HTTP_404_NOT_FOUND,
+                detail=(
+                    f"Program '{program_id}' "
+                    "was not found."
+                ),
+            )
+
+        database["user_profiles"].update_one(
+            {"user_id": user_id},
+            {
+                "$addToSet": {
+                    "saved_programs": program_id,
+                },
+                "$set": {
+                    "database_updated_at": (
+                        datetime.now(timezone.utc)
+                    ),
+                },
+            },
+        )
+
+        updated_profile = database[
+            "user_profiles"
+        ].find_one(
+            {"user_id": user_id},
+            {
+                "_id": 0,
+                "saved_programs": 1,
+            },
+        )
+
+    except HTTPException:
+        raise
+
+    except PyMongoError as error:
+        raise HTTPException(
+            status_code=(
+                status.HTTP_500_INTERNAL_SERVER_ERROR
+            ),
+            detail="Unable to save the program.",
+        ) from error
+
+    if updated_profile is None:
+        raise HTTPException(
+            status_code=(
+                status.HTTP_500_INTERNAL_SERVER_ERROR
+            ),
+            detail=(
+                "The updated user profile "
+                "could not be retrieved."
+            ),
+        )
+
+    return {
+        "message": "Program saved successfully.",
+        "program": program,
+        "saved_programs": (
+            updated_profile.get(
+                "saved_programs",
+                [],
+            )
+        ),
+    }
+
+
+# ---------------------------------------------------------
+# Unsave program
+# ---------------------------------------------------------
+
+@app.delete(
+    (
+        "/api/user-profiles/{user_id}"
+        "/saved-programs/{program_id}"
+    ),
+    tags=["Saved Opportunities"],
+)
+def unsave_program_for_user(
+    user_id: str,
+    program_id: str,
+) -> dict[str, Any]:
+    """Remove one academic program from a saved list."""
+
+    database = get_database()
+
+    try:
+        profile = database["user_profiles"].find_one(
+            {"user_id": user_id},
+            {
+                "_id": 0,
+                "user_id": 1,
+                "saved_programs": 1,
+            },
+        )
+
+        if profile is None:
+            raise HTTPException(
+                status_code=status.HTTP_404_NOT_FOUND,
+                detail=(
+                    f"User profile '{user_id}' "
+                    "was not found."
+                ),
+            )
+
+        program = database["programs"].find_one(
+            {"program_id": program_id},
+            {
+                "_id": 0,
+                "content_hash": 0,
+                "created_at": 0,
+                "database_updated_at": 0,
+            },
+        )
+
+        if program is None:
+            raise HTTPException(
+                status_code=status.HTTP_404_NOT_FOUND,
+                detail=(
+                    f"Program '{program_id}' "
+                    "was not found."
+                ),
+            )
+
+        database["user_profiles"].update_one(
+            {"user_id": user_id},
+            {
+                "$pull": {
+                    "saved_programs": program_id,
+                },
+                "$set": {
+                    "database_updated_at": (
+                        datetime.now(timezone.utc)
+                    ),
+                },
+            },
+        )
+
+        updated_profile = database[
+            "user_profiles"
+        ].find_one(
+            {"user_id": user_id},
+            {
+                "_id": 0,
+                "saved_programs": 1,
+            },
+        )
+
+    except HTTPException:
+        raise
+
+    except PyMongoError as error:
+        raise HTTPException(
+            status_code=(
+                status.HTTP_500_INTERNAL_SERVER_ERROR
+            ),
+            detail=(
+                "Unable to remove the saved program."
+            ),
+        ) from error
+
+    if updated_profile is None:
+        raise HTTPException(
+            status_code=(
+                status.HTTP_500_INTERNAL_SERVER_ERROR
+            ),
+            detail=(
+                "The updated user profile "
+                "could not be retrieved."
+            ),
+        )
+
+    return {
+        "message": (
+            "Program removed from saved list "
+            "successfully."
+        ),
+        "program": program,
+        "saved_programs": (
+            updated_profile.get(
+                "saved_programs",
+                [],
+            )
+        ),
+    }
+
+
 # ---------------------------------------------------------
 # Save scholarship
 # ---------------------------------------------------------
@@ -2604,23 +2896,20 @@ def get_saved_opportunities(
     user_id: str,
 ) -> dict[str, Any]:
     """
-    Return the university and scholarship details saved
-    by one user.
+    Return universities, programs, and scholarships
+    saved by one user.
     """
 
     database = get_database()
 
     try:
-        # -------------------------------------------------
-        # Find the user profile
-        # -------------------------------------------------
-
         profile = database["user_profiles"].find_one(
             {"user_id": user_id},
             {
                 "_id": 0,
                 "user_id": 1,
                 "saved_universities": 1,
+                "saved_programs": 1,
                 "saved_scholarships": 1,
             },
         )
@@ -2634,17 +2923,20 @@ def get_saved_opportunities(
                 ),
             )
 
-        saved_university_ids = (
-            profile.get("saved_universities") or []
+        saved_university_ids = profile.get(
+            "saved_universities",
+            [],
         )
 
-        saved_scholarship_ids = (
-            profile.get("saved_scholarships") or []
+        saved_program_ids = profile.get(
+            "saved_programs",
+            [],
         )
 
-        # -------------------------------------------------
-        # Retrieve saved university documents
-        # -------------------------------------------------
+        saved_scholarship_ids = profile.get(
+            "saved_scholarships",
+            [],
+        )
 
         university_documents = list(
             database["universities"].find(
@@ -2655,33 +2947,28 @@ def get_saved_opportunities(
                 },
                 {
                     "_id": 0,
-                    "university_id": 1,
-                    "university_name": 1,
-                    "country_id": 1,
-                    "city": 1,
-                    "university_type": 1,
-                    "establishment_year": 1,
-                    "degree_levels": 1,
-                    "scholarship_available": 1,
+                    "content_hash": 0,
+                    "created_at": 0,
+                    "database_updated_at": 0,
                 },
             )
         )
 
-        university_by_id = {
-            university["university_id"]: university
-            for university in university_documents
-        }
-
-        saved_universities = [
-            university_by_id[university_id]
-            for university_id in saved_university_ids
-            if university_id in university_by_id
-        ]
-    
-
-        # -------------------------------------------------
-        # Retrieve saved scholarship documents
-        # -------------------------------------------------
+        program_documents = list(
+            database["programs"].find(
+                {
+                    "program_id": {
+                        "$in": saved_program_ids
+                    }
+                },
+                {
+                    "_id": 0,
+                    "content_hash": 0,
+                    "created_at": 0,
+                    "database_updated_at": 0,
+                },
+            )
+        )
 
         scholarship_documents = list(
             database["scholarships"].find(
@@ -2692,32 +2979,12 @@ def get_saved_opportunities(
                 },
                 {
                     "_id": 0,
-                    "scholarship_id": 1,
-                    "scholarship_name": 1,
-                    "provider_name": 1,
-                    "provider_type": 1,
-                    "country_id": 1,
-                    "host_university_id": 1,
-                    "degree_levels": 1,
-                    "funding_type": 1,
-                    "scholarship_status": 1,
-                    "application_opening_date": 1,
-                    "application_deadline": 1,
-                }
+                    "content_hash": 0,
+                    "created_at": 0,
+                    "database_updated_at": 0,
+                },
             )
         )
-
-        scholarship_by_id = {
-            scholarship["scholarship_id"]: scholarship
-            for scholarship in scholarship_documents
-        }
-
-        # Preserve the order in the user's saved list.
-        saved_scholarships = [
-            scholarship_by_id[scholarship_id]
-            for scholarship_id in saved_scholarship_ids
-            if scholarship_id in scholarship_by_id
-        ]
 
     except HTTPException:
         raise
@@ -2732,17 +2999,188 @@ def get_saved_opportunities(
             ),
         ) from error
 
+    university_by_id = {
+        item["university_id"]: item
+        for item in university_documents
+        if item.get("university_id")
+    }
+
+    program_by_id = {
+        item["program_id"]: item
+        for item in program_documents
+        if item.get("program_id")
+    }
+
+    scholarship_by_id = {
+        item["scholarship_id"]: item
+        for item in scholarship_documents
+        if item.get("scholarship_id")
+    }
+
+    # Preserve the order of each saved-ID list.
+    saved_universities = [
+        university_by_id[university_id]
+        for university_id in saved_university_ids
+        if university_id in university_by_id
+    ]
+
+    saved_programs = [
+        program_by_id[program_id]
+        for program_id in saved_program_ids
+        if program_id in program_by_id
+    ]
+
+    saved_scholarships = [
+        scholarship_by_id[scholarship_id]
+        for scholarship_id in saved_scholarship_ids
+        if scholarship_id in scholarship_by_id
+    ]
+
     return {
         "user_id": user_id,
         "saved_university_count": len(
             saved_universities
         ),
+        "saved_program_count": len(
+            saved_programs
+        ),
         "saved_scholarship_count": len(
             saved_scholarships
         ),
         "saved_universities": saved_universities,
+        "saved_programs": saved_programs,
         "saved_scholarships": saved_scholarships,
     }
+
+
+
+# ---------------------------------------------------------
+# Saved opportunities for current authenticated student
+# ---------------------------------------------------------
+
+@app.get(
+    "/api/me/saved",
+    tags=["My Saved Opportunities"],
+)
+def get_current_user_saved_opportunities(
+    current_account: dict[str, Any] = Depends(
+        get_current_account
+    ),
+) -> dict[str, Any]:
+    """Return all opportunities saved by the current user."""
+
+    return get_saved_opportunities(
+        current_account["user_id"]
+    )
+
+
+@app.post(
+    "/api/me/saved/universities/{university_id}",
+    tags=["My Saved Opportunities"],
+)
+def save_university_for_current_user(
+    university_id: str,
+    current_account: dict[str, Any] = Depends(
+        get_current_account
+    ),
+) -> dict[str, Any]:
+    """Save one university for the current user."""
+
+    return save_university_for_user(
+        user_id=current_account["user_id"],
+        university_id=university_id,
+    )
+
+
+@app.delete(
+    "/api/me/saved/universities/{university_id}",
+    tags=["My Saved Opportunities"],
+)
+def unsave_university_for_current_user(
+    university_id: str,
+    current_account: dict[str, Any] = Depends(
+        get_current_account
+    ),
+) -> dict[str, Any]:
+    """Unsave one university for the current user."""
+
+    return unsave_university_for_user(
+        user_id=current_account["user_id"],
+        university_id=university_id,
+    )
+
+
+@app.post(
+    "/api/me/saved/programs/{program_id}",
+    tags=["My Saved Opportunities"],
+)
+def save_program_for_current_user(
+    program_id: str,
+    current_account: dict[str, Any] = Depends(
+        get_current_account
+    ),
+) -> dict[str, Any]:
+    """Save one program for the current user."""
+
+    return save_program_for_user(
+        user_id=current_account["user_id"],
+        program_id=program_id,
+    )
+
+
+@app.delete(
+    "/api/me/saved/programs/{program_id}",
+    tags=["My Saved Opportunities"],
+)
+def unsave_program_for_current_user(
+    program_id: str,
+    current_account: dict[str, Any] = Depends(
+        get_current_account
+    ),
+) -> dict[str, Any]:
+    """Unsave one program for the current user."""
+
+    return unsave_program_for_user(
+        user_id=current_account["user_id"],
+        program_id=program_id,
+    )
+
+
+@app.post(
+    "/api/me/saved/scholarships/{scholarship_id}",
+    tags=["My Saved Opportunities"],
+)
+def save_scholarship_for_current_user(
+    scholarship_id: str,
+    current_account: dict[str, Any] = Depends(
+        get_current_account
+    ),
+) -> dict[str, Any]:
+    """Save one scholarship for the current user."""
+
+    return save_scholarship_for_user(
+        user_id=current_account["user_id"],
+        scholarship_id=scholarship_id,
+    )
+
+
+@app.delete(
+    "/api/me/saved/scholarships/{scholarship_id}",
+    tags=["My Saved Opportunities"],
+)
+def unsave_scholarship_for_current_user(
+    scholarship_id: str,
+    current_account: dict[str, Any] = Depends(
+        get_current_account
+    ),
+) -> dict[str, Any]:
+    """Unsave one scholarship for the current user."""
+
+    return unsave_scholarship_for_user(
+        user_id=current_account["user_id"],
+        scholarship_id=scholarship_id,
+    )
+
 
 # ---------------------------------------------------------
 # Get recommendation history
