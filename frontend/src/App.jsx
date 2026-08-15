@@ -883,9 +883,12 @@ function App() {
     setSavedProgramIds([])
     setSavedScholarshipIds([])
 
-    setShowUserProfile(false)
-    setShowRecommendationModal(false)
-    setShowSavedPage(false)
+    setActivePage('home')
+    setShowExploreMenu(false)
+
+    setActivePage('home')
+    setShowExploreMenu(false)
+
     setShowAnalysisDashboard(false)
   }
 
@@ -899,9 +902,10 @@ function App() {
       setSavedProgramIds([])
       setSavedScholarshipIds([])
 
-      setShowUserProfile(false)
-      setShowRecommendationModal(false)
-      setShowAnalysisDashboard(false)
+      setActivePage('home')
+      setShowExploreMenu(false)
+
+          setShowAnalysisDashboard(false)
     }
 
     window.addEventListener(

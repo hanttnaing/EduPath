@@ -533,3 +533,82 @@ select:disabled {
     border-radius: 18px;
   }
 }
+
+
+
+
+/* =========================================================
+   SCHOLARSHIP REQUIRED ALIGNMENT FIX
+   ========================================================= */
+
+.my-profile-scholarship {
+  width: fit-content !important;
+
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+
+  gap: 10px !important;
+
+  margin-top: 18px !important;
+  margin-bottom: 22px !important;
+
+  padding: 0 !important;
+}
+
+
+/* Checkbox */
+
+.my-profile-scholarship input[type="checkbox"] {
+  width: 18px !important;
+  height: 18px !important;
+
+  min-width: 18px !important;
+
+  margin: 0 !important;
+
+  flex: 0 0 auto !important;
+
+  cursor: pointer;
+}
+
+
+/* Label text */
+
+.my-profile-scholarship span {
+  margin: 0 !important;
+
+  display: inline !important;
+
+  color: #25283b;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  line-height: 1.3;
+
+  white-space: nowrap;
+}
+
+
+/* Page mode */
+
+.my-profile-page
+.my-profile-scholarship {
+  display: inline-flex !important;
+  align-items: center !important;
+
+  gap: 10px !important;
+
+  width: auto !important;
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+  .my-profile-scholarship span {
+    white-space: normal;
+  }
+}
