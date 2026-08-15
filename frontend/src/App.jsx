@@ -1,5 +1,13 @@
 import { useEffect, useState } from 'react'
-import API_BASE_URL from './api'
+import API_BASE_URL, {
+  authFetch,
+  clearAccessToken,
+  getAccessToken,
+  readApiError,
+  setAccessToken,
+} from './api'
+import LoginPage from './auth/LoginPage'
+import RegisterPage from './auth/RegisterPage'
 import UniversityCard from './UniversityCard'
 import ProgramCard from './ProgramCard'
 import ScholarshipCard from './ScholarshipCard'
@@ -72,6 +80,24 @@ function extractCountryItems(data) {
 }
 
 function App() {
+  // =========================
+  // AUTHENTICATION STATE
+  // =========================
+  const [
+    authStatus,
+    setAuthStatus,
+  ] = useState('checking')
+
+  const [
+    authMode,
+    setAuthMode,
+  ] = useState('login')
+
+  const [
+    currentAccount,
+    setCurrentAccount,
+  ] = useState(null)
+
   // =========================
   // ANALYSIS DASHBOARD STATE
   // =========================
@@ -210,6 +236,159 @@ function App() {
   // =========================
   // LOAD COUNTRIES
   // =========================
+  // =========================
+  // AUTHENTICATION
+  // =========================
+  useEffect(() => {
+    let cancelled = false
+
+    const restoreSession = async () => {
+      const token = getAccessToken()
+
+      if (!token) {
+        if (!cancelled) {
+          setCurrentAccount(null)
+          setAuthStatus('guest')
+        }
+
+        return
+      }
+
+      try {
+        const response = await authFetch(
+          '/api/auth/me'
+        )
+
+        if (!response.ok) {
+          clearAccessToken()
+
+          if (!cancelled) {
+            setCurrentAccount(null)
+            setAuthStatus('guest')
+          }
+
+          return
+        }
+
+        const account =
+          await response.json()
+
+        if (!cancelled) {
+          setCurrentAccount(account)
+          setAuthStatus(
+            'authenticated'
+          )
+        }
+      } catch {
+        if (!cancelled) {
+          setCurrentAccount(null)
+          setAuthStatus('guest')
+        }
+      }
+    }
+
+    restoreSession()
+
+    return () => {
+      cancelled = true
+    }
+  }, [])
+
+  const handleLogin = async ({
+    email,
+    password,
+  }) => {
+    const response = await fetch(
+      `${API_BASE_URL}/api/auth/login`,
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type':
+            'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify({
+          email,
+          password,
+        }),
+      }
+    )
+
+    if (!response.ok) {
+      throw new Error(
+        await readApiError(
+          response,
+          'Unable to sign in.'
+        )
+      )
+    }
+
+    const result = await response.json()
+
+    setAccessToken(
+      result.access_token
+    )
+
+    setCurrentAccount(
+      result.user
+    )
+
+    setAuthStatus(
+      'authenticated'
+    )
+  }
+
+  const handleRegister = async ({
+    full_name,
+    email,
+    password,
+  }) => {
+    const response = await fetch(
+      `${API_BASE_URL}/api/auth/register`,
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type':
+            'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify({
+          full_name,
+          email,
+          password,
+        }),
+      }
+    )
+
+    if (!response.ok) {
+      throw new Error(
+        await readApiError(
+          response,
+          'Unable to create account.'
+        )
+      )
+    }
+
+    // Registration creates the account.
+    // Immediately sign the student in.
+    await handleLogin({
+      email,
+      password,
+    })
+  }
+
+  const handleLogout = () => {
+    clearAccessToken()
+
+    setCurrentAccount(null)
+    setAuthMode('login')
+    setAuthStatus('guest')
+
+    setShowUserProfile(false)
+    setShowRecommendationModal(false)
+    setShowAnalysisDashboard(false)
+  }
+
   useEffect(() => {
     fetch(
       `${API_BASE_URL}/api/countries?limit=100`
@@ -886,10 +1065,61 @@ function App() {
     }
 
   // =========================
-  // UI
+  // AUTHENTICATION UI
+  // =========================
+  if (authStatus === 'checking') {
+    return (
+      <div className="auth-session-loading">
+        Checking your EduPath session...
+      </div>
+    )
+  }
+
+  if (authStatus !== 'authenticated') {
+    if (authMode === 'register') {
+      return (
+        <RegisterPage
+          onRegister={handleRegister}
+          onShowLogin={() =>
+            setAuthMode('login')
+          }
+        />
+      )
+    }
+
+    return (
+      <LoginPage
+        onLogin={handleLogin}
+        onShowRegister={() =>
+          setAuthMode('register')
+        }
+      />
+    )
+  }
+
+  // =========================
+  // MAIN APPLICATION UI
   // =========================
   return (
     <>
+      <div className="auth-session-bar">
+        <span>
+          Signed in as{' '}
+          <span className="auth-session-user">
+            {currentAccount?.full_name ||
+              currentAccount?.email}
+          </span>
+        </span>
+
+        <button
+          type="button"
+          className="auth-logout-button"
+          onClick={handleLogout}
+        >
+          Log out
+        </button>
+      </div>
+
       <main>
         {/* =========================
             PAGE HEADER
