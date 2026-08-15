@@ -12,7 +12,6 @@ import ProfileSetupPage from './auth/ProfileSetupPage'
 import UniversityCard from './UniversityCard'
 import ProgramCard from './ProgramCard'
 import ScholarshipCard from './ScholarshipCard'
-import AnalysisDashboardModal from './AnalysisDashboardModal'
 import MyProfileModal from './MyProfileModal'
 import RecommendationModal from './RecommendationModal'
 import SavedPage from './SavedPage'
@@ -889,7 +888,6 @@ function App() {
     setActivePage('home')
     setShowExploreMenu(false)
 
-    setShowAnalysisDashboard(false)
   }
 
   useEffect(() => {
@@ -905,7 +903,6 @@ function App() {
       setActivePage('home')
       setShowExploreMenu(false)
 
-          setShowAnalysisDashboard(false)
     }
 
     window.addEventListener(
