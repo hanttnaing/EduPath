@@ -1,3 +1,4 @@
+import EduPathLogoMark from '../assets/edupath-logo-mark.png'
 import { useState } from 'react'
 import { authFetch, readApiError } from '../api'
 import './ProfileSetupPage.css'
@@ -159,9 +160,11 @@ function ProfileSetupPage({
 
         <header className="profile-setup-header">
           <div>
-            <span className="profile-setup-logo">
-              EP
-            </span>
+            <img
+        className="edupath-auth-logo-image"
+        src={EduPathLogoMark}
+        alt="EduPath logo"
+      />
 
             <div>
               <strong>EduPath</strong>

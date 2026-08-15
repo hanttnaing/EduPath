@@ -1,3 +1,4 @@
+import EduPathLogoMark from '../assets/edupath-logo-mark.png'
 import { useState } from 'react'
 import './Auth.css'
 
@@ -44,9 +45,11 @@ function LoginPage({
     <div className="auth-page">
       <div className="auth-layout">
         <section className="auth-brand-panel">
-          <div className="auth-brand-mark">
-            EP
-          </div>
+          <img
+        className="edupath-auth-logo-image"
+        src={EduPathLogoMark}
+        alt="EduPath logo"
+      />
 
           <p className="auth-eyebrow">
             EDUPATH

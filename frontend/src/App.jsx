@@ -15,6 +15,7 @@ import ScholarshipCard from './ScholarshipCard'
 import MyProfileModal from './MyProfileModal'
 import RecommendationModal from './RecommendationModal'
 import SavedPage from './SavedPage'
+import EduPathLogoMark from './assets/edupath-logo-mark.png'
 import './App.css'
 
 // =========================
@@ -1721,9 +1722,12 @@ function App() {
               setShowExploreMenu(false)
             }}
           >
-            <span className="edupath-brand-mark">
-              EP
-            </span>
+            <img
+              className="edupath-brand-mark"
+              src={EduPathLogoMark}
+              alt=""
+              aria-hidden="true"
+            />
 
             <span className="edupath-brand-name">
               EduPath
