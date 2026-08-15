@@ -464,6 +464,19 @@ class UserProfileUpdate(BaseModel):
         max_length=100,
     )
 
+
+
+class AuthenticatedUserProfileUpdate(UserProfileUpdate):
+    """
+    Academic-profile changes submitted by the
+    currently authenticated student.
+
+    Unknown fields such as user_id are rejected.
+    """
+
+    model_config = ConfigDict(extra="forbid")
+
+
 # ---------------------------------------------------------
 # Authentication schemas
 # ---------------------------------------------------------

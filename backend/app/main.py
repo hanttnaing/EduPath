@@ -17,6 +17,7 @@ from datetime import datetime, timezone
 
 from backend.app.schemas import (
     AuthenticatedUserProfileCreate,
+    AuthenticatedUserProfileUpdate,
     UserProfileCreate,
     UserProfileUpdate,
 )
@@ -1930,6 +1931,55 @@ def update_user_profile(
         ),
         "profile": updated_profile,
     }
+
+
+# ---------------------------------------------------------
+# Get profile for current authenticated student
+# ---------------------------------------------------------
+
+@app.get(
+    "/api/me/profile",
+    tags=["My Profile"],
+)
+def get_current_user_profile(
+    current_account: dict[str, Any] = Depends(
+        get_current_account
+    ),
+) -> dict[str, Any]:
+    """
+    Return the academic profile belonging to the
+    currently authenticated student.
+    """
+
+    return get_user_profile(
+        current_account["user_id"]
+    )
+
+
+# ---------------------------------------------------------
+# Update profile for current authenticated student
+# ---------------------------------------------------------
+
+@app.patch(
+    "/api/me/profile",
+    tags=["My Profile"],
+)
+def update_current_user_profile(
+    payload: AuthenticatedUserProfileUpdate,
+    current_account: dict[str, Any] = Depends(
+        get_current_account
+    ),
+) -> dict[str, Any]:
+    """
+    Update the academic profile belonging to the
+    currently authenticated student.
+    """
+
+    return update_user_profile(
+        user_id=current_account["user_id"],
+        payload=payload,
+    )
+
 
 # ---------------------------------------------------------
 # Save university
