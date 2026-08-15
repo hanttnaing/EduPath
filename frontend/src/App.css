@@ -2850,3 +2850,554 @@ main {
     grid-template-columns: 1fr;
   }
 }
+
+
+
+
+/* =========================================================
+   EDUPATH HOME PAGE
+   ========================================================= */
+
+.edupath-home {
+  width: 100%;
+}
+
+.edupath-home-hero {
+  max-width: 980px;
+
+  margin: 20px auto 34px;
+
+  padding: 64px 36px;
+
+  border: 1px solid #e5e7ef;
+  border-radius: 28px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffffff 0%,
+      #f8f9ff 100%
+    );
+
+  text-align: center;
+
+  box-shadow:
+    0 18px 50px
+    rgba(27, 31, 59, 0.06);
+}
+
+.edupath-home-eyebrow {
+  margin: 0 0 14px;
+
+  color: #4f46e5;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  letter-spacing: 1.6px;
+}
+
+.edupath-home-hero h1 {
+  max-width: 760px;
+
+  margin:
+    0
+    auto
+    20px;
+
+  color: #17182d;
+
+  font-size:
+    clamp(
+      38px,
+      5vw,
+      62px
+    );
+
+  font-weight: 850;
+  line-height: 1.05;
+
+  letter-spacing: -2px;
+}
+
+.edupath-home-description {
+  max-width: 700px;
+
+  margin:
+    0
+    auto;
+
+  color: #74788c;
+
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.edupath-home-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 12px;
+
+  margin-top: 30px;
+}
+
+.edupath-home-primary,
+.edupath-home-secondary {
+  min-height: 52px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding:
+    0
+    22px;
+
+  border-radius: 11px;
+
+  font-size: 13px;
+  font-weight: 750;
+
+  cursor: pointer;
+}
+
+.edupath-home-primary {
+  border:
+    1px solid
+    #4f46e5;
+
+  background: #4f46e5;
+  color: #ffffff;
+
+  box-shadow:
+    0 10px 28px
+    rgba(79, 70, 229, 0.2);
+}
+
+.edupath-home-secondary {
+  border:
+    1px solid
+    #d9ddea;
+
+  background: #ffffff;
+  color: #414459;
+}
+
+.edupath-home-stats {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      3,
+      minmax(0, 1fr)
+    );
+
+  gap: 20px;
+
+  margin-bottom: 34px;
+}
+
+.edupath-home-stat-card {
+  min-height: 210px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  padding: 28px;
+
+  border:
+    1px solid
+    #e4e7ef;
+
+  border-radius: 22px;
+
+  background: #ffffff;
+
+  color: #24263a;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.edupath-home-stat-card:hover {
+  transform:
+    translateY(-3px);
+
+  border-color:
+    #c7d2fe;
+
+  box-shadow:
+    0 16px 36px
+    rgba(35, 38, 65, 0.08);
+}
+
+.home-stat-icon {
+  width: 48px;
+  height: 48px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 4px;
+
+  border-radius: 14px;
+
+  background: #eef2ff;
+
+  font-size: 23px;
+}
+
+.edupath-home-stat-card strong {
+  color: #17182d;
+
+  font-size: 32px;
+  font-weight: 850;
+
+  line-height: 1;
+}
+
+.edupath-home-stat-card > span:not(
+  .home-stat-icon
+) {
+  font-size: 15px;
+  font-weight: 750;
+}
+
+.edupath-home-stat-card small {
+  color: #8a8d9e;
+
+  font-size: 12px;
+}
+
+.edupath-home-guide {
+  width: 100%;
+
+  padding: 42px;
+
+  border:
+    1px solid
+    #e5e7ef;
+
+  border-radius: 24px;
+
+  background: #ffffff;
+
+  text-align: left;
+}
+
+.edupath-home-guide > div:first-child {
+  max-width: 620px;
+
+  margin-bottom: 28px;
+}
+
+.edupath-home-guide h2 {
+  margin: 0;
+
+  color: #1c1e33;
+
+  font-size: 30px;
+  font-weight: 800;
+
+  line-height: 1.2;
+}
+
+.home-guide-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      3,
+      minmax(0, 1fr)
+    );
+
+  gap: 18px;
+}
+
+.home-guide-grid article {
+  padding: 24px;
+
+  border:
+    1px solid
+    #e8eaf1;
+
+  border-radius: 17px;
+
+  background: #fafbfe;
+}
+
+.home-guide-grid article > span {
+  color: #4f46e5;
+
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.home-guide-grid h3 {
+  margin:
+    12px
+    0
+    8px;
+
+  color: #25273b;
+
+  font-size: 17px;
+  font-weight: 750;
+}
+
+.home-guide-grid p {
+  color: #777b8d;
+
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+
+/* ---------------------------------------------------------
+   Explore page spacing
+   --------------------------------------------------------- */
+
+.university-section,
+.program-section,
+.scholarship-section {
+  margin-top: 10px;
+}
+
+
+/* ---------------------------------------------------------
+   Responsive
+   --------------------------------------------------------- */
+
+@media (max-width: 900px) {
+  .edupath-home-stats,
+  .home-guide-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .edupath-home-hero {
+    padding:
+      48px
+      24px;
+  }
+
+  .edupath-home-guide {
+    padding: 28px;
+  }
+}
+
+@media (max-width: 560px) {
+  .edupath-home-hero h1 {
+    font-size: 36px;
+
+    letter-spacing: -1px;
+  }
+
+  .edupath-home-actions {
+    flex-direction: column;
+  }
+
+  .edupath-home-primary,
+  .edupath-home-secondary {
+    width: 100%;
+  }
+}
+
+
+
+
+/* =========================================================
+   NAVBAR ACCOUNT AREA FINAL
+   ========================================================= */
+
+.edupath-account-nav {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  flex-shrink: 0;
+}
+
+.edupath-profile-nav {
+  min-height: 46px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  padding:
+    6px
+    12px
+    6px
+    7px;
+
+  border:
+    1px solid
+    #e4e7ef;
+
+  border-radius: 12px;
+
+  background: #ffffff;
+  color: #2c2e42;
+
+  cursor: pointer;
+
+  transition:
+    border-color 0.18s ease,
+    background 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+.edupath-profile-nav:hover {
+  border-color: #c7d2fe;
+
+  background: #f8f9ff;
+
+  box-shadow:
+    0 5px 16px
+    rgba(79, 70, 229, 0.08);
+}
+
+.edupath-profile-avatar {
+  width: 34px;
+  height: 34px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 9px;
+
+  background: #eef2ff;
+
+  font-size: 16px;
+}
+
+.edupath-profile-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  min-width: 0;
+
+  line-height: 1.15;
+}
+
+.edupath-profile-copy strong {
+  max-width: 170px;
+
+  overflow: hidden;
+
+  color: #25273b;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.edupath-profile-copy small {
+  margin-top: 3px;
+
+  color: #8a8e9e;
+
+  font-size: 10px;
+  font-weight: 550;
+}
+
+.edupath-navbar-logout {
+  min-height: 42px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding:
+    0
+    14px;
+
+  border:
+    1px solid
+    #fecaca;
+
+  border-radius: 10px;
+
+  background: #fffafa;
+  color: #dc2626;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.18s ease,
+    border-color 0.18s ease;
+}
+
+.edupath-navbar-logout:hover {
+  border-color: #fca5a5;
+
+  background: #fef2f2;
+}
+
+
+/* Remove unnecessary space left by old session bar */
+
+main {
+  padding-top: 30px;
+}
+
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .edupath-profile-copy {
+    display: none;
+  }
+
+  .edupath-profile-nav {
+    padding: 6px;
+  }
+
+  .edupath-navbar-logout {
+    padding:
+      0
+      10px;
+  }
+}
+
+@media (max-width: 650px) {
+  .edupath-navbar-logout {
+    font-size: 0;
+
+    width: 40px;
+    padding: 0;
+  }
+
+  .edupath-navbar-logout::after {
+    content: "\2192";
+
+    font-size: 18px;
+    font-weight: 800;
+  }
+}

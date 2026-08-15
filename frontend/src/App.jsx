@@ -1551,139 +1551,250 @@ function App() {
             </button>
           </div>
 
-          <button
-            type="button"
-            className="edupath-profile-nav"
-            onClick={() =>
-              setShowUserProfile(true)
-            }
-          >
-            <span
-              className="edupath-profile-avatar"
-              aria-hidden="true"
-            >
-              {'\u{1F464}'}
-            </span>
-
-            <span>
-              Profile
-            </span>
-          </button>
-
-        </div>
-      </nav>
-
-      <div className="auth-session-bar">
-        <span>
-          Signed in as{' '}
-          <span className="auth-session-user">
-            {currentAccount?.full_name ||
-              currentAccount?.email}
-          </span>
-        </span>
-
-        <button
-          type="button"
-          className="auth-logout-button"
-          onClick={handleLogout}
-        >
-          Log out
-        </button>
-      </div>
-
-      <main>
-        {/* =========================
-            PAGE HEADER
-        ========================== */}
-
-        <section className="edupath-page-header">
-          <div className="edupath-page-header-text">
-            <h1>
-              EduPath Analytics
-            </h1>
-
-            <p>
-              University and Scholarship
-              Recommendation Platform
-            </p>
-          </div>
-
-          <div className="edupath-header-actions">
-            <button
-              className="profile-header-button"
-              type="button"
-              onClick={() =>
-                setShowRecommendationModal(
-                  true
-                )
-              }
-            >
-              <span className="profile-header-button-icon">
-                R
-              </span>
-
-              <span>
-                Recommendations
-              </span>
-            </button>
+          <div className="edupath-account-nav">
 
             <button
-              className="profile-header-button"
               type="button"
-              onClick={() =>
-                setShowSavedPage(true)
-              }
-            >
-              <span className="profile-header-button-icon">
-                S
-              </span>
-
-              <span>
-                Saved
-              </span>
-            </button>
-
-            <button
-              className="profile-header-button"
-              type="button"
+              className="edupath-profile-nav"
               onClick={() =>
                 setShowUserProfile(true)
               }
             >
-              <span className="profile-header-button-icon">
-                👤
+              <span
+                className="edupath-profile-avatar"
+                aria-hidden="true"
+              >
+                {'\u{1F464}'}
               </span>
 
-              <span>
-                My Profile
+              <span className="edupath-profile-copy">
+                <strong>
+                  {currentAccount?.full_name ||
+                    'My Profile'}
+                </strong>
+
+                <small>
+                  Profile
+                </small>
               </span>
             </button>
 
             <button
-              className="analysis-dashboard-button"
               type="button"
-              onClick={() =>
-                setShowAnalysisDashboard(
-                  true
-                )
-              }
+              className="edupath-navbar-logout"
+              onClick={handleLogout}
             >
-              <span className="analysis-dashboard-button-icon">
-                📊
-              </span>
-
-              <span>
-                Analysis Dashboard
-              </span>
+              Log out
             </button>
+
           </div>
 
-        </section>
+        </div>
+      </nav>
+
+      <main>
+        {/* =========================
+            HOME PAGE
+        ========================== */}
+
+        {activePage === 'home' && (
+          <section className="edupath-home">
+
+            <div className="edupath-home-hero">
+              <p className="edupath-home-eyebrow">
+                YOUR STUDY PATH STARTS HERE
+              </p>
+
+              <h1>
+                Find the right study
+                opportunity for you.
+              </h1>
+
+              <p className="edupath-home-description">
+                Explore universities,
+                programmes and scholarships,
+                or generate personalised
+                recommendations based on your
+                academic profile.
+              </p>
+
+              <div className="edupath-home-actions">
+                <button
+                  type="button"
+                  className="edupath-home-primary"
+                  onClick={() =>
+                    setShowRecommendationModal(
+                      true
+                    )
+                  }
+                >
+                  Get Personalized Recommendations
+                </button>
+
+                <button
+                  type="button"
+                  className="edupath-home-secondary"
+                  onClick={() =>
+                    setActivePage(
+                      'universities'
+                    )
+                  }
+                >
+                  Explore Opportunities
+                </button>
+              </div>
+            </div>
+
+            <div className="edupath-home-stats">
+              <button
+                type="button"
+                className="edupath-home-stat-card"
+                onClick={() =>
+                  setActivePage(
+                    'universities'
+                  )
+                }
+              >
+                <span className="home-stat-icon">
+                  {'\u{1F393}'}
+                </span>
+
+                <strong>
+                  {totalUniversities}
+                </strong>
+
+                <span>
+                  Universities
+                </span>
+
+                <small>
+                  Browse universities
+                </small>
+              </button>
+
+              <button
+                type="button"
+                className="edupath-home-stat-card"
+                onClick={() =>
+                  setActivePage(
+                    'programs'
+                  )
+                }
+              >
+                <span className="home-stat-icon">
+                  {'\u{1F4D8}'}
+                </span>
+
+                <strong>
+                  {
+                    selectedCountryPrograms
+                      .length
+                  }
+                </strong>
+
+                <span>
+                  Study Programmes
+                </span>
+
+                <small>
+                  Compare study options
+                </small>
+              </button>
+
+              <button
+                type="button"
+                className="edupath-home-stat-card"
+                onClick={() =>
+                  setActivePage(
+                    'scholarships'
+                  )
+                }
+              >
+                <span className="home-stat-icon">
+                  {'\u{1F3C5}'}
+                </span>
+
+                <strong>
+                  {totalScholarships}
+                </strong>
+
+                <span>
+                  Scholarships
+                </span>
+
+                <small>
+                  Find funding opportunities
+                </small>
+              </button>
+            </div>
+
+            <section className="edupath-home-guide">
+              <div>
+                <p className="edupath-home-eyebrow">
+                  HOW EDUPATH WORKS
+                </p>
+
+                <h2>
+                  Three simple ways to
+                  explore your options
+                </h2>
+              </div>
+
+              <div className="home-guide-grid">
+                <article>
+                  <span>01</span>
+
+                  <h3>
+                    Complete your profile
+                  </h3>
+
+                  <p>
+                    Tell EduPath about your
+                    academic background,
+                    study goals and budget.
+                  </p>
+                </article>
+
+                <article>
+                  <span>02</span>
+
+                  <h3>
+                    Explore opportunities
+                  </h3>
+
+                  <p>
+                    Search universities,
+                    programmes and
+                    scholarships using
+                    structured filters.
+                  </p>
+                </article>
+
+                <article>
+                  <span>03</span>
+
+                  <h3>
+                    Get matched
+                  </h3>
+
+                  <p>
+                    Generate personalised
+                    recommendations and
+                    save opportunities you
+                    want to revisit.
+                  </p>
+                </article>
+              </div>
+            </section>
+
+          </section>
+        )}
 
         {/* =========================
             UNIVERSITY SECTION
         ========================== */}
 
+        {activePage === 'universities' && (
         <section className="university-section">
           <h2>
             Universities in{' '}
@@ -1801,11 +1912,15 @@ function App() {
               </div>
             )}
         </section>
+        )}
+
+
 
         {/* =========================
             PROGRAM SECTION
         ========================== */}
 
+        {activePage === 'programs' && (
         <section className="program-section">
           <h2>
             Programs in{' '}
@@ -1916,11 +2031,15 @@ function App() {
               </div>
             )}
         </section>
+        )}
+
+
 
         {/* =========================
             SCHOLARSHIP SECTION
         ========================== */}
 
+        {activePage === 'scholarships' && (
         <section className="scholarship-section">
           <h2>
             Scholarships in{' '}
@@ -2171,6 +2290,8 @@ function App() {
               </div>
             )}
         </section>
+        )}
+
       </main>
 
       {/* =========================
