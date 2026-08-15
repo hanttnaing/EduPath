@@ -8,6 +8,7 @@ import API_BASE_URL, {
 } from './api'
 import LoginPage from './auth/LoginPage'
 import RegisterPage from './auth/RegisterPage'
+import ProfileSetupPage from './auth/ProfileSetupPage'
 import UniversityCard from './UniversityCard'
 import ProgramCard from './ProgramCard'
 import ScholarshipCard from './ScholarshipCard'
@@ -375,6 +376,26 @@ function App() {
       email,
       password,
     })
+  }
+
+  const handleProfileCompleted = async () => {
+    const response = await authFetch(
+      '/api/auth/me'
+    )
+
+    if (!response.ok) {
+      throw new Error(
+        await readApiError(
+          response,
+          'Unable to refresh your account.'
+        )
+      )
+    }
+
+    const account = await response.json()
+
+    setCurrentAccount(account)
+    setAuthStatus('authenticated')
   }
 
   const handleLogout = () => {
@@ -1093,6 +1114,24 @@ function App() {
         onShowRegister={() =>
           setAuthMode('register')
         }
+      />
+    )
+  }
+
+  // =========================
+  // PROFILE COMPLETION GATE
+  // =========================
+  if (
+    currentAccount &&
+    currentAccount.profile_completed !== true
+  ) {
+    return (
+      <ProfileSetupPage
+        account={currentAccount}
+        onCompleted={
+          handleProfileCompleted
+        }
+        onLogout={handleLogout}
       />
     )
   }
