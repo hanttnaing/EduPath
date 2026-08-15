@@ -1,5 +1,6 @@
 from __future__ import annotations
 from .analysis_routes import router as analysis_router
+from .auth_routes import router as auth_router
 from uuid import uuid4
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -86,6 +87,7 @@ app = FastAPI(
 )
 
 app.include_router(analysis_router)
+app.include_router(auth_router)
 
 app.add_middleware(
     CORSMiddleware,
