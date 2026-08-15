@@ -348,6 +348,60 @@ function App() {
     setShowExploreMenu,
   ] = useState(false)
 
+  const isExploreActive =
+    [
+      'universities',
+      'programs',
+      'scholarships',
+    ].includes(activePage)
+
+
+
+
+  // =========================
+  // EXPLORE MENU KEYBOARD UX
+  // =========================
+
+  useEffect(() => {
+    const handleExploreEscape =
+      (event) => {
+        if (
+          event.key === 'Escape'
+        ) {
+          setShowExploreMenu(
+            false
+          )
+        }
+      }
+
+    window.addEventListener(
+      'keydown',
+      handleExploreEscape
+    )
+
+    return () => {
+      window.removeEventListener(
+        'keydown',
+        handleExploreEscape
+      )
+    }
+  }, [])
+
+  // =========================
+  // NAVIGATION PAGE CHANGE UX
+  // =========================
+
+  useEffect(() => {
+    setShowExploreMenu(false)
+
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth',
+    })
+  }, [activePage])
+
+
   // =========================
   // EXPLORE PAGINATION
   // =========================
@@ -1659,7 +1713,9 @@ function App() {
 
           <button
             type="button"
-            className="edupath-brand"
+              aria-haspopup="menu"
+              aria-expanded={showExploreMenu}
+            className={`edupath-brand ${isExploreActive ? 'active' : ''}`}
             onClick={() => {
               setActivePage('home')
               setShowExploreMenu(false)
