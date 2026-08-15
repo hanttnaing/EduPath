@@ -13,7 +13,7 @@ import UniversityCard from './UniversityCard'
 import ProgramCard from './ProgramCard'
 import ScholarshipCard from './ScholarshipCard'
 import AnalysisDashboardModal from './AnalysisDashboardModal'
-import UserProfileModal from './UserProfileModal'
+import MyProfileModal from './MyProfileModal'
 import RecommendationModal from './RecommendationModal'
 import './App.css'
 
@@ -1705,23 +1705,11 @@ function App() {
       ========================== */}
 
       {showUserProfile && (
-        <UserProfileModal
+        <MyProfileModal
+          account={currentAccount}
           onClose={() =>
             setShowUserProfile(false)
           }
-          onGetRecommendations={(
-            userId
-          ) => {
-            setRecommendationUserId(
-              userId
-            )
-
-            setShowUserProfile(false)
-
-            setShowRecommendationModal(
-              true
-            )
-          }}
         />
       )}
 
