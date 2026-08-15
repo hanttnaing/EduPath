@@ -1728,6 +1728,297 @@ function App() {
               </button>
             </div>
 
+            {/* =========================
+                HOME OPPORTUNITY PREVIEWS
+            ========================== */}
+
+            <section className="home-preview-section">
+              <div className="home-preview-heading">
+                <div>
+                  <p className="edupath-home-eyebrow">
+                    EXPLORE UNIVERSITIES
+                  </p>
+
+                  <h2>
+                    Universities in{' '}
+                    {selectedCountryName}
+                  </h2>
+
+                  <p>
+                    Start by exploring universities
+                    available in your selected study
+                    destination.
+                  </p>
+                </div>
+
+                <button
+                  type="button"
+                  className="home-view-all"
+                  onClick={() =>
+                    setActivePage('universities')
+                  }
+                >
+                  View All
+                </button>
+              </div>
+
+              <div className="home-preview-grid">
+                {universities
+                  .slice(0, 3)
+                  .map((university) => (
+                    <article
+                      className="home-opportunity-card"
+                      key={
+                        university.university_id
+                      }
+                    >
+                      <div className="home-preview-icon">
+                        {'\u{1F393}'}
+                      </div>
+
+                      <div>
+                        <span className="home-preview-type">
+                          UNIVERSITY
+                        </span>
+
+                        <h3>
+                          {
+                            university.university_name
+                          }
+                        </h3>
+
+                        <p>
+                          {[
+                            university.city,
+                            selectedCountryName,
+                          ]
+                            .filter(Boolean)
+                            .join(' ? ')}
+                        </p>
+                      </div>
+
+                      <button
+                        type="button"
+                        className="home-preview-action"
+                        onClick={() =>
+                          setActivePage(
+                            'universities'
+                          )
+                        }
+                      >
+                        Explore University
+                      </button>
+                    </article>
+                  ))}
+              </div>
+            </section>
+
+
+            <section className="home-preview-section">
+              <div className="home-preview-heading">
+                <div>
+                  <p className="edupath-home-eyebrow">
+                    STUDY OPTIONS
+                  </p>
+
+                  <h2>
+                    Featured Programmes
+                  </h2>
+
+                  <p>
+                    Compare degree levels,
+                    study fields and tuition
+                    information.
+                  </p>
+                </div>
+
+                <button
+                  type="button"
+                  className="home-view-all"
+                  onClick={() =>
+                    setActivePage('programs')
+                  }
+                >
+                  View All
+                </button>
+              </div>
+
+              <div className="home-preview-grid">
+                {selectedCountryPrograms
+                  .slice(0, 3)
+                  .map((program) => {
+                    const university =
+                      universities.find(
+                        (item) =>
+                          item.university_id ===
+                          program.university_id
+                      )
+
+                    return (
+                      <article
+                        className="home-opportunity-card"
+                        key={program.program_id}
+                      >
+                        <div className="home-preview-icon">
+                          {'\u{1F4D8}'}
+                        </div>
+
+                        <div>
+                          <span className="home-preview-type">
+                            PROGRAMME
+                          </span>
+
+                          <h3>
+                            {program.program_name}
+                          </h3>
+
+                          <p className="home-preview-subtitle">
+                            {
+                              university
+                                ?.university_name ||
+                              'University information unavailable'
+                            }
+                          </p>
+
+                          <div className="home-preview-meta">
+                            {program.degree_level && (
+                              <span>
+                                {program.degree_level}
+                              </span>
+                            )}
+
+                            {program.field_of_study && (
+                              <span>
+                                {
+                                  program.field_of_study
+                                }
+                              </span>
+                            )}
+                          </div>
+                        </div>
+
+                        <button
+                          type="button"
+                          className="home-preview-action"
+                          onClick={() =>
+                            setActivePage(
+                              'programs'
+                            )
+                          }
+                        >
+                          Explore Programme
+                        </button>
+                      </article>
+                    )
+                  })}
+              </div>
+            </section>
+
+
+            <section className="home-preview-section">
+              <div className="home-preview-heading">
+                <div>
+                  <p className="edupath-home-eyebrow">
+                    FUNDING OPPORTUNITIES
+                  </p>
+
+                  <h2>
+                    Featured Scholarships
+                  </h2>
+
+                  <p>
+                    Explore funding opportunities
+                    for your study goals.
+                  </p>
+                </div>
+
+                <button
+                  type="button"
+                  className="home-view-all"
+                  onClick={() =>
+                    setActivePage(
+                      'scholarships'
+                    )
+                  }
+                >
+                  View All
+                </button>
+              </div>
+
+              <div className="home-preview-grid">
+                {scholarships
+                  .slice(0, 3)
+                  .map((scholarship) => (
+                    <article
+                      className="home-opportunity-card"
+                      key={
+                        scholarship.scholarship_id
+                      }
+                    >
+                      <div className="home-preview-icon">
+                        {'\u{1F3C5}'}
+                      </div>
+
+                      <div>
+                        <span className="home-preview-type">
+                          SCHOLARSHIP
+                        </span>
+
+                        <h3>
+                          {
+                            scholarship.scholarship_name
+                          }
+                        </h3>
+
+                        <p className="home-preview-subtitle">
+                          {
+                            scholarship.provider_name ||
+                            'Scholarship provider'
+                          }
+                        </p>
+
+                        <div className="home-preview-meta">
+                          {scholarship.funding_type && (
+                            <span>
+                              {
+                                scholarship.funding_type
+                              }
+                            </span>
+                          )}
+
+                          {Array.isArray(
+                            scholarship.degree_levels
+                          ) &&
+                            scholarship
+                              .degree_levels
+                              .length > 0 && (
+                              <span>
+                                {scholarship
+                                  .degree_levels
+                                  .slice(0, 2)
+                                  .join(', ')}
+                              </span>
+                            )}
+                        </div>
+                      </div>
+
+                      <button
+                        type="button"
+                        className="home-preview-action"
+                        onClick={() =>
+                          setActivePage(
+                            'scholarships'
+                          )
+                        }
+                      >
+                        Explore Scholarship
+                      </button>
+                    </article>
+                  ))}
+              </div>
+            </section>
+
+
             <section className="edupath-home-guide">
               <div>
                 <p className="edupath-home-eyebrow">
@@ -1791,6 +2082,84 @@ function App() {
         )}
 
         {/* =========================
+            SHARED EXPLORE HEADER
+        ========================== */}
+
+        {[
+          'universities',
+          'programs',
+          'scholarships',
+        ].includes(activePage) && (
+          <section className="explore-page-header">
+
+            <div className="explore-page-heading">
+              <p className="explore-page-eyebrow">
+                EXPLORE OPPORTUNITIES
+              </p>
+
+              <h1>
+                {activePage === 'universities'
+                  ? 'Universities'
+                  : activePage === 'programs'
+                    ? 'Study Programmes'
+                    : 'Scholarships'}
+              </h1>
+
+              <p>
+                {activePage === 'universities'
+                  ? 'Discover universities and explore your study destinations.'
+                  : activePage === 'programs'
+                    ? 'Compare study programmes, fields, tuition and study options.'
+                    : 'Find scholarship opportunities that match your study goals.'}
+              </p>
+            </div>
+
+            <div className="explore-country-filter">
+              <label htmlFor="explore-country">
+                Country
+              </label>
+
+              <select
+                id="explore-country"
+                value={selectedCountry}
+                onChange={handleCountryChange}
+              >
+                <option value="">
+                  Select a country
+                </option>
+
+                {countries.map(
+                  (country, index) => {
+                    const countryValue =
+                      getCountryId(country)
+
+                    const countryLabel =
+                      getCountryLabel(country)
+
+                    if (!countryValue) {
+                      return null
+                    }
+
+                    return (
+                      <option
+                        key={
+                          countryValue ||
+                          index
+                        }
+                        value={countryValue}
+                      >
+                        {countryLabel}
+                      </option>
+                    )
+                  }
+                )}
+              </select>
+            </div>
+
+          </section>
+        )}
+
+        {/* =========================
             UNIVERSITY SECTION
         ========================== */}
 
@@ -1801,46 +2170,6 @@ function App() {
             {selectedCountryName}{' '}
             ({totalUniversities})
           </h2>
-
-          {/* Country Selection */}
-
-          <select
-            className="country-select"
-            value={selectedCountry}
-            onChange={handleCountryChange}
-          >
-            <option value="">
-              Select a country
-            </option>
-
-            {countries.map(
-              (country, index) => {
-                const countryValue =
-                  getCountryId(country)
-
-                const countryLabel =
-                  getCountryLabel(country)
-
-                if (!countryValue) {
-                  return null
-                }
-
-                return (
-                  <option
-                    key={
-                      countryValue ||
-                      index
-                    }
-                    value={
-                      countryValue
-                    }
-                  >
-                    {countryLabel}
-                  </option>
-                )
-              }
-            )}
-          </select>
 
           {/* University Search */}
 

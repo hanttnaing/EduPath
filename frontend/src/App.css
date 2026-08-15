@@ -3401,3 +3401,443 @@ main {
     font-weight: 800;
   }
 }
+
+
+
+
+/* =========================================================
+   SHARED EXPLORE PAGE HEADER
+   ========================================================= */
+
+.explore-page-header {
+  width: 100%;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  margin-bottom: 24px;
+
+  padding: 30px 34px;
+
+  border: 1px solid #e5e7ef;
+  border-radius: 22px;
+
+  background: #ffffff;
+
+  box-sizing: border-box;
+
+  text-align: left;
+}
+
+.explore-page-heading {
+  max-width: 680px;
+}
+
+.explore-page-eyebrow {
+  margin: 0 0 8px;
+
+  color: #4f46e5;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 1.4px;
+}
+
+.explore-page-heading h1 {
+  margin: 0 0 9px;
+
+  color: #1c1e33;
+
+  font-size: 34px;
+  font-weight: 830;
+
+  line-height: 1.15;
+
+  letter-spacing: -0.7px;
+}
+
+.explore-page-heading > p:last-child {
+  margin: 0;
+
+  color: #777b8d;
+
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.explore-country-filter {
+  width: min(100%, 270px);
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 7px;
+
+  flex-shrink: 0;
+}
+
+.explore-country-filter label {
+  color: #565a70;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+.explore-country-filter select {
+  width: 100%;
+  min-height: 48px;
+
+  padding: 0 14px;
+
+  border: 1px solid #dfe3ec;
+  border-radius: 10px;
+
+  background: #ffffff;
+  color: #303246;
+
+  font: inherit;
+  font-size: 13px;
+}
+
+
+/* Remove redundant oversized section headings */
+
+.university-section > h2,
+.program-section > h2,
+.scholarship-section > h2 {
+  margin-top: 0;
+
+  font-size: 23px;
+  font-weight: 750;
+}
+
+
+/* Explore content cards */
+
+.university-section,
+.program-section,
+.scholarship-section {
+  width: 100%;
+
+  padding: 30px;
+
+  border: 1px solid #e5e7ef;
+  border-radius: 22px;
+
+  background: #ffffff;
+
+  box-sizing: border-box;
+}
+
+
+@media (max-width: 760px) {
+  .explore-page-header {
+    flex-direction: column;
+    align-items: stretch;
+
+    padding: 24px;
+  }
+
+  .explore-country-filter {
+    width: 100%;
+  }
+
+  .university-section,
+  .program-section,
+  .scholarship-section {
+    padding: 20px;
+  }
+}
+
+
+
+
+/* =========================================================
+   HOME OPPORTUNITY PREVIEWS
+   ========================================================= */
+
+.home-preview-section {
+  width: 100%;
+
+  margin-bottom: 34px;
+
+  padding: 34px;
+
+  border: 1px solid #e5e7ef;
+  border-radius: 24px;
+
+  background: #ffffff;
+
+  box-sizing: border-box;
+}
+
+.home-preview-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 24px;
+
+  margin-bottom: 24px;
+
+  text-align: left;
+}
+
+.home-preview-heading > div {
+  max-width: 680px;
+}
+
+.home-preview-heading h2 {
+  margin: 0 0 8px;
+
+  color: #1d1f35;
+
+  font-size: 28px;
+  font-weight: 820;
+
+  line-height: 1.2;
+
+  letter-spacing: -0.5px;
+}
+
+.home-preview-heading p:last-child {
+  margin: 0;
+
+  color: #7c8092;
+
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.home-view-all {
+  min-height: 42px;
+
+  flex-shrink: 0;
+
+  padding: 0 16px;
+
+  border: 1px solid #d7dcf0;
+  border-radius: 10px;
+
+  background: #ffffff;
+  color: #4f46e5;
+
+  font-size: 12px;
+  font-weight: 750;
+
+  cursor: pointer;
+}
+
+.home-view-all:hover {
+  border-color: #a5b4fc;
+
+  background: #f5f6ff;
+}
+
+
+.home-preview-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      3,
+      minmax(0, 1fr)
+    );
+
+  gap: 18px;
+}
+
+
+.home-opportunity-card {
+  min-width: 0;
+  min-height: 235px;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 22px;
+
+  border: 1px solid #e5e7ef;
+  border-radius: 18px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #ffffff 0%,
+      #fbfbfe 100%
+    );
+
+  text-align: left;
+
+  box-sizing: border-box;
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.home-opportunity-card:hover {
+  transform: translateY(-3px);
+
+  border-color: #c7d2fe;
+
+  box-shadow:
+    0 14px 32px
+    rgba(38, 42, 73, 0.08);
+}
+
+
+.home-preview-icon {
+  width: 42px;
+  height: 42px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 17px;
+
+  border-radius: 12px;
+
+  background: #eef2ff;
+
+  font-size: 20px;
+}
+
+
+.home-preview-type {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #4f46e5;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 0.9px;
+}
+
+
+.home-opportunity-card h3 {
+  margin: 0 0 8px;
+
+  color: #24263b;
+
+  font-size: 17px;
+  font-weight: 760;
+
+  line-height: 1.35;
+}
+
+
+.home-opportunity-card p {
+  margin: 0;
+
+  color: #7a7e90;
+
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+
+.home-preview-subtitle {
+  display: -webkit-box;
+
+  overflow: hidden;
+
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+
+.home-preview-meta {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 7px;
+
+  margin-top: 14px;
+}
+
+.home-preview-meta span {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 5px 8px;
+
+  border-radius: 999px;
+
+  background: #f0f2f8;
+  color: #5f6375;
+
+  font-size: 10px;
+  font-weight: 650;
+}
+
+
+.home-preview-action {
+  width: 100%;
+  min-height: 42px;
+
+  margin-top: auto;
+
+  padding: 8px 12px;
+
+  border: 1px solid #d8ddf5;
+  border-radius: 9px;
+
+  background: #ffffff;
+  color: #4f46e5;
+
+  font-size: 11px;
+  font-weight: 750;
+
+  cursor: pointer;
+}
+
+.home-preview-action:hover {
+  border-color: #4f46e5;
+
+  background: #4f46e5;
+  color: #ffffff;
+}
+
+
+@media (max-width: 950px) {
+  .home-preview-grid {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+  }
+}
+
+
+@media (max-width: 650px) {
+  .home-preview-section {
+    padding: 22px;
+  }
+
+  .home-preview-heading {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .home-view-all {
+    align-self: flex-start;
+  }
+
+  .home-preview-grid {
+    grid-template-columns: 1fr;
+  }
+}
