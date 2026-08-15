@@ -7,7 +7,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from contextlib import asynccontextmanager
 from typing import Any
 
-from fastapi import FastAPI, HTTPException, Query, status
+from fastapi import Depends, FastAPI, HTTPException, Query, status
 from pymongo import ASCENDING
 from pymongo.errors import (
     DuplicateKeyError,
@@ -16,8 +16,13 @@ from pymongo.errors import (
 from datetime import datetime, timezone
 
 from backend.app.schemas import (
+    AuthenticatedUserProfileCreate,
     UserProfileCreate,
     UserProfileUpdate,
+)
+
+from backend.app.auth_dependencies import (
+    get_current_account,
 )
 
 from backend.app.database import (
@@ -1388,6 +1393,146 @@ def create_user_profile(
         ),
         "profile": public_profile,
     }
+
+
+# ---------------------------------------------------------
+# Create profile for current authenticated student
+# ---------------------------------------------------------
+
+@app.post(
+    "/api/me/profile",
+    status_code=status.HTTP_201_CREATED,
+    tags=["My Profile"],
+)
+def create_current_user_profile(
+    payload: AuthenticatedUserProfileCreate,
+    current_account: dict[str, Any] = Depends(
+        get_current_account
+    ),
+) -> dict[str, Any]:
+    """
+    Create the academic profile belonging to the
+    currently authenticated student.
+    """
+
+    database = get_database()
+
+    user_id = current_account["user_id"]
+
+    # -----------------------------------------------------
+    # Prevent multiple academic profiles for one account
+    # -----------------------------------------------------
+
+    try:
+        existing_profile = database[
+            "user_profiles"
+        ].find_one(
+            {"user_id": user_id},
+            {
+                "_id": 1,
+            },
+        )
+
+    except PyMongoError as error:
+        raise HTTPException(
+            status_code=(
+                status.HTTP_500_INTERNAL_SERVER_ERROR
+            ),
+            detail=(
+                "Unable to check the academic profile."
+            ),
+        ) from error
+
+    if existing_profile is not None:
+        raise HTTPException(
+            status_code=status.HTTP_409_CONFLICT,
+            detail=(
+                "An academic profile already exists "
+                "for this account."
+            ),
+        )
+
+    # -----------------------------------------------------
+    # Inject trusted user_id from the JWT account
+    # -----------------------------------------------------
+
+    profile_payload = UserProfileCreate(
+        user_id=user_id,
+        **payload.model_dump(),
+    )
+
+    # -----------------------------------------------------
+    # Reuse the existing validated profile-creation logic
+    # -----------------------------------------------------
+
+    result = create_user_profile(
+        profile_payload
+    )
+
+    # -----------------------------------------------------
+    # Mark the linked account as profile-complete
+    # -----------------------------------------------------
+
+    try:
+        update_result = database["accounts"].update_one(
+            {"user_id": user_id},
+            {
+                "$set": {
+                    "profile_completed": True,
+                    "database_updated_at": (
+                        datetime.now(timezone.utc)
+                    ),
+                }
+            },
+        )
+
+        if update_result.matched_count != 1:
+            # Extremely defensive rollback.
+            database["user_profiles"].delete_one(
+                {"user_id": user_id}
+            )
+
+            raise HTTPException(
+                status_code=(
+                    status.HTTP_500_INTERNAL_SERVER_ERROR
+                ),
+                detail=(
+                    "Unable to link the academic "
+                    "profile to the account."
+                ),
+            )
+
+    except HTTPException:
+        raise
+
+    except PyMongoError as error:
+        # Keep account/profile state consistent when
+        # the account update fails.
+        try:
+            database["user_profiles"].delete_one(
+                {"user_id": user_id}
+            )
+        except PyMongoError:
+            pass
+
+        raise HTTPException(
+            status_code=(
+                status.HTTP_500_INTERNAL_SERVER_ERROR
+            ),
+            detail=(
+                "Unable to complete academic "
+                "profile setup."
+            ),
+        ) from error
+
+    return {
+        "message": (
+            "Academic profile created successfully."
+        ),
+        "profile_completed": True,
+        "profile": result["profile"],
+    }
+
 
 # ---------------------------------------------------------
 # Update user profile
