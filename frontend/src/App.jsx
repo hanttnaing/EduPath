@@ -123,11 +123,6 @@ function App() {
     setShowRecommendationModal,
   ] = useState(false)
 
-  const [
-    recommendationUserId,
-    setRecommendationUserId,
-  ] = useState('')
-
   // =========================
   // UNIVERSITY STATES
   // =========================
@@ -1181,6 +1176,24 @@ function App() {
               className="profile-header-button"
               type="button"
               onClick={() =>
+                setShowRecommendationModal(
+                  true
+                )
+              }
+            >
+              <span className="profile-header-button-icon">
+                R
+              </span>
+
+              <span>
+                Recommendations
+              </span>
+            </button>
+
+            <button
+              className="profile-header-button"
+              type="button"
+              onClick={() =>
                 setShowUserProfile(true)
               }
             >
@@ -1687,10 +1700,8 @@ function App() {
           RECOMMENDATION MODAL
       ========================== */}
 
-      {showRecommendationModal &&
-        recommendationUserId && (
+      {showRecommendationModal && (
           <RecommendationModal
-            userId={recommendationUserId}
             onClose={() =>
               setShowRecommendationModal(
                 false

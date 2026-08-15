@@ -1,9 +1,8 @@
 import { useEffect, useState } from 'react'
-import API_BASE_URL from './api'
+import { authFetch } from './api'
 import './RecommendationModal.css'
 
 function RecommendationModal({
-  userId,
   onClose,
 }) {
   const [activeTab, setActiveTab] =
@@ -46,14 +45,8 @@ function RecommendationModal({
   // =========================
   const loadSavedOpportunities =
     async () => {
-      if (!userId) {
-        return
-      }
-
-      const response = await fetch(
-        `${API_BASE_URL}/api/user-profiles/${encodeURIComponent(
-          userId
-        )}/saved-opportunities`
+      const response = await authFetch(
+        '/api/me/saved'
       )
 
       if (!response.ok) {
@@ -97,31 +90,20 @@ function RecommendationModal({
   useEffect(() => {
     const loadRecommendations =
       async () => {
-        if (!userId) {
-          setError(
-            'A User ID is required to generate recommendations.'
-          )
-          setLoading(false)
-          return
-        }
-
         try {
           setLoading(true)
           setError('')
-
-          const encodedUserId =
-            encodeURIComponent(userId)
 
           const [
             programResponse,
             scholarshipResponse,
           ] = await Promise.all([
-            fetch(
-              `${API_BASE_URL}/api/recommendations/programs/${encodedUserId}?top_k=5`
+            authFetch(
+              '/api/me/recommendations/programs?top_k=5'
             ),
 
-            fetch(
-              `${API_BASE_URL}/api/recommendations/scholarships/${encodedUserId}?top_k=5`
+            authFetch(
+              '/api/me/recommendations/scholarships?top_k=5'
             ),
           ])
 
@@ -176,7 +158,7 @@ function RecommendationModal({
       }
 
     loadRecommendations()
-  }, [userId])
+  }, [])
 
   // =========================
   // SCORE HELPERS
@@ -225,10 +207,8 @@ function RecommendationModal({
         setSavingItem(actionKey)
         setError('')
 
-        const response = await fetch(
-          `${API_BASE_URL}/api/user-profiles/${encodeURIComponent(
-            userId
-          )}/saved-universities/${encodeURIComponent(
+        const response = await authFetch(
+          `/api/me/saved/universities/${encodeURIComponent(
             universityId
           )}`,
           {
@@ -294,10 +274,8 @@ function RecommendationModal({
         setSavingItem(actionKey)
         setError('')
 
-        const response = await fetch(
-          `${API_BASE_URL}/api/user-profiles/${encodeURIComponent(
-            userId
-          )}/saved-scholarships/${encodeURIComponent(
+        const response = await authFetch(
+          `/api/me/saved/scholarships/${encodeURIComponent(
             scholarshipId
           )}`,
           {
@@ -755,8 +733,8 @@ function RecommendationModal({
             </h2>
 
             <p>
-              Recommendations generated for{' '}
-              <strong>{userId}</strong>
+              Recommendations generated for
+              your academic profile
             </p>
           </div>
 
