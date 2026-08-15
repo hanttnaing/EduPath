@@ -1,0 +1,81 @@
+{
+  "step": "152.7C-2",
+  "generated_at": "2026-08-13T21:25:56.053737",
+  "mode": "DRY_RUN",
+  "mongodb_modified": false,
+  "existing_scholarship_count": 12,
+  "verified_batch_count": 6,
+  "possible_duplicates": 0,
+  "safe_new_records": 6,
+  "projected_scholarship_count": 18,
+  "id_convention": {
+    "existing_ids": [
+      "sch_jp_001",
+      "sch_jp_002",
+      "sch_jp_003",
+      "sch_jp_004",
+      "sch_jp_005",
+      "sch_jp_008",
+      "sch_jp_010",
+      "sch_jp_012",
+      "sch_jp_013",
+      "sch_jp_017",
+      "sch_jp_019",
+      "sch_jp_020"
+    ],
+    "records_with_id": 12,
+    "numeric_suffix_detected": true,
+    "highest_numeric_suffix": 20
+  },
+  "records": [
+    {
+      "row": 1,
+      "scholarship_name": "Hong Kong PhD Fellowship Scheme (HKPFS)",
+      "country_id": "country_hk",
+      "source_url": "https://www.ugc.edu.hk/eng/rgc/funding_opport/hkpfs/",
+      "duplicate": false,
+      "duplicate_matches": []
+    },
+    {
+      "row": 2,
+      "scholarship_name": "Malaysia International Scholarship (MIS) 2026",
+      "country_id": "country_my",
+      "source_url": "https://biasiswa.mohe.gov.my/INTER/doc/MIS/Guidelines%20MIS%202026.pdf",
+      "duplicate": false,
+      "duplicate_matches": []
+    },
+    {
+      "row": 3,
+      "scholarship_name": "Singapore International Graduate Award (SINGA)",
+      "country_id": "country_sg",
+      "source_url": "https://www.a-star.edu.sg/Scholarships/for-graduate-studies/singapore-international-graduate-award-singa",
+      "duplicate": false,
+      "duplicate_matches": []
+    },
+    {
+      "row": 4,
+      "scholarship_name": "Global Korea Scholarship (GKS) - Graduate Degrees",
+      "country_id": "country_kr",
+      "source_url": "https://www.studyinkorea.go.kr/ko/plan/scholarship.do",
+      "duplicate": false,
+      "duplicate_matches": []
+    },
+    {
+      "row": 5,
+      "scholarship_name": "MOE Taiwan Scholarship 2026",
+      "country_id": "country_tw",
+      "source_url": "https://www.roc-taiwan.org/mm_mm/post/4310.html",
+      "duplicate": false,
+      "duplicate_matches": []
+    },
+    {
+      "row": 6,
+      "scholarship_name": "Thailand International Postgraduate Programme (TIPP) 2026",
+      "country_id": "country_th",
+      "source_url": "https://tica-thaigov.mfa.go.th/en/content/tipp-2027",
+      "duplicate": false,
+      "duplicate_matches": []
+    }
+  ],
+  "overall_status": "PASS"
+}

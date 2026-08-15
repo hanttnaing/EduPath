@@ -1,0 +1,290 @@
+{
+  "step": "152.7C-5C-1C-2",
+  "title": "Live Scholarship Compatibility Repair Preparation",
+  "generated_at": "2026-08-14T03:02:36.583144+00:00",
+  "status": "BLOCKED_BY_RESEARCH",
+  "read_only": true,
+  "summary": {
+    "mongodb_records_checked": 18,
+    "mongodb_records_passed": 14,
+    "mongodb_records_failed": 4,
+    "safe_restores": 2,
+    "safe_normalizations": 0,
+    "structured_migrations": 1,
+    "research_required": 1,
+    "records_simulated": 4,
+    "simulated_records_passed": 3,
+    "simulated_records_failed": 1
+  },
+  "live_validation": [
+    {
+      "scholarship_id": "sch_jp_001",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "scholarship_id": "sch_jp_002",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "scholarship_id": "sch_jp_003",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "scholarship_id": "sch_jp_004",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "scholarship_id": "sch_jp_005",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "scholarship_id": "sch_jp_008",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "scholarship_id": "sch_jp_010",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "scholarship_id": "sch_jp_012",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "scholarship_id": "sch_jp_013",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "scholarship_id": "sch_jp_017",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "scholarship_id": "sch_jp_019",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "scholarship_id": "sch_jp_020",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "scholarship_id": "sch_hk_001",
+      "status": "FAIL",
+      "errors": [
+        {
+          "field": "scholarship_status",
+          "root_field": "scholarship_status",
+          "message": "Field required",
+          "type": "missing"
+        }
+      ]
+    },
+    {
+      "scholarship_id": "sch_my_001",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "scholarship_id": "sch_sg_001",
+      "status": "FAIL",
+      "errors": [
+        {
+          "field": "scholarship_status",
+          "root_field": "scholarship_status",
+          "message": "Field required",
+          "type": "missing"
+        }
+      ]
+    },
+    {
+      "scholarship_id": "sch_kr_001",
+      "status": "FAIL",
+      "errors": [
+        {
+          "field": "scholarship_status",
+          "root_field": "scholarship_status",
+          "message": "Field required",
+          "type": "missing"
+        }
+      ]
+    },
+    {
+      "scholarship_id": "sch_tw_001",
+      "status": "FAIL",
+      "errors": [
+        {
+          "field": "monthly_allowance.int",
+          "root_field": "monthly_allowance",
+          "message": "Input should be a valid integer, unable to parse string as an integer",
+          "type": "int_parsing"
+        },
+        {
+          "field": "monthly_allowance.float",
+          "root_field": "monthly_allowance",
+          "message": "Input should be a valid number, unable to parse string as a number",
+          "type": "float_parsing"
+        }
+      ]
+    },
+    {
+      "scholarship_id": "sch_th_001",
+      "status": "PASS",
+      "errors": []
+    }
+  ],
+  "failed_fields": {
+    "sch_hk_001": [
+      "scholarship_status"
+    ],
+    "sch_sg_001": [
+      "scholarship_status"
+    ],
+    "sch_kr_001": [
+      "scholarship_status"
+    ],
+    "sch_tw_001": [
+      "monthly_allowance"
+    ]
+  },
+  "repair_candidates": [
+    {
+      "scholarship_id": "sch_hk_001",
+      "scholarship_name": "Hong Kong PhD Fellowship Scheme (HKPFS)",
+      "field": "scholarship_status",
+      "current_mongodb_value": null,
+      "verified_source_value": "CLOSED",
+      "proposed_value": "CLOSED",
+      "proposed_companion_field_value": null,
+      "repair_classification": "SAFE_RESTORE_FROM_VERIFIED_SOURCE",
+      "reason": "Official Hong Kong Research Grants Council information states that the HKPFS 2026/27 application window ran from 1 September 2025 to 1 December 2025. The integrated record represents that completed cycle.",
+      "source/provenance": "Step 152.7C-5C-1A; https://www.ugc.edu.hk/eng/rgc/funding_opport/hkpfs/",
+      "requires_research": false,
+      "safe_to_apply": true,
+      "simulation_status": "PASS",
+      "simulation_errors": []
+    },
+    {
+      "scholarship_id": "sch_kr_001",
+      "scholarship_name": "Global Korea Scholarship (GKS) - Graduate Degrees",
+      "field": "scholarship_status",
+      "current_mongodb_value": null,
+      "verified_source_value": "CLOSED",
+      "proposed_value": "CLOSED",
+      "proposed_companion_field_value": null,
+      "repair_classification": "SAFE_RESTORE_FROM_VERIFIED_SOURCE",
+      "reason": "Official Study in Korea/NIIED schedule information places 2026 graduate applications in February-March and selection through June; the 2026 GKS Graduate Degree final result announcement was published in July 2026.",
+      "source/provenance": "Step 152.7C-5C-1A; https://www.studyinkorea.go.kr/ko/plan/scholarship.do",
+      "requires_research": false,
+      "safe_to_apply": true,
+      "simulation_status": "PASS",
+      "simulation_errors": []
+    },
+    {
+      "scholarship_id": "sch_sg_001",
+      "scholarship_name": "Singapore International Graduate Award (SINGA)",
+      "field": "scholarship_status",
+      "current_mongodb_value": null,
+      "verified_source_value": null,
+      "proposed_value": null,
+      "proposed_companion_field_value": null,
+      "repair_classification": "RESEARCH_REQUIRED",
+      "reason": "Authoritative current application-cycle status remains unconfirmed; no value may be invented.",
+      "source/provenance": "Step 152.7C-5C-1A; https://www.a-star.edu.sg/Scholarships/for-graduate-studies/singapore-international-graduate-award-singa",
+      "requires_research": true,
+      "safe_to_apply": false,
+      "simulation_status": "FAIL",
+      "simulation_errors": [
+        {
+          "field": "scholarship_status",
+          "root_field": "scholarship_status",
+          "message": "Field required",
+          "type": "missing"
+        }
+      ]
+    },
+    {
+      "scholarship_id": "sch_tw_001",
+      "scholarship_name": "MOE Taiwan Scholarship 2026",
+      "field": "monthly_allowance",
+      "current_mongodb_value": "15000 undergraduate; 20000 Master's/Doctorate",
+      "verified_source_value": "15000 undergraduate; 20000 Master's/Doctorate",
+      "proposed_value": null,
+      "proposed_companion_field_value": {
+        "monthly_allowance_details": [
+          {
+            "degree_level": "Bachelor's",
+            "amount": 15000,
+            "currency": "TWD",
+            "description": "15000 undergraduate"
+          },
+          {
+            "degree_level": "Master's/Doctorate",
+            "amount": 20000,
+            "currency": "TWD",
+            "description": "20000 Master's/Doctorate"
+          }
+        ]
+      },
+      "repair_classification": "STRUCTURED_SCHEMA_MIGRATION",
+      "reason": "The verified stipend has two degree-dependent amounts; clearing the invalid scalar and storing both tiers preserves meaning without selecting a misleading number.",
+      "source/provenance": "Step 152.7C-5C-1B model conflict design and planning/44_scholarship_model_conflict_resolution.csv",
+      "requires_research": false,
+      "safe_to_apply": true,
+      "simulation_status": "PASS",
+      "simulation_errors": []
+    }
+  ],
+  "simulation_results": [
+    {
+      "scholarship_id": "sch_hk_001",
+      "status": "PASS",
+      "expected_outcome": "PASS",
+      "errors": []
+    },
+    {
+      "scholarship_id": "sch_sg_001",
+      "status": "FAIL",
+      "expected_outcome": "BLOCKED_BY_RESEARCH",
+      "errors": [
+        {
+          "field": "scholarship_status",
+          "root_field": "scholarship_status",
+          "message": "Field required",
+          "type": "missing"
+        }
+      ]
+    },
+    {
+      "scholarship_id": "sch_kr_001",
+      "status": "PASS",
+      "expected_outcome": "PASS",
+      "errors": []
+    },
+    {
+      "scholarship_id": "sch_tw_001",
+      "status": "PASS",
+      "expected_outcome": "PASS",
+      "errors": []
+    }
+  ],
+  "research_blockers": [
+    "sch_sg_001"
+  ],
+  "modifications": {
+    "mongodb": false,
+    "verified_csv": false,
+    "baseline": false,
+    "cleaned_datasets": false,
+    "schemas_py": false
+  }
+}

@@ -20,5 +20,66 @@
     "saved_universities": [],
     "saved_scholarships": [],
     "recommendation_history": []
+  },
+  {
+    "_id": "6a71f844d380b1a2a369052a",
+    "user_id": "user_test_002",
+    "nationality": "Myanmar",
+    "current_education_level": "Bachelor",
+    "target_degree_level": "Master",
+    "preferred_major": "Information Science and Technology",
+    "gpa": 3.3,
+    "gpa_scale": 4.0,
+    "ielts_score": 6.5,
+    "toefl_score": null,
+    "annual_budget": 750000.0,
+    "budget_currency": "JPY",
+    "preferred_countries": [
+      "Japan"
+    ],
+    "scholarship_required": true,
+    "preferred_funding_type": "Fully Funded",
+    "preferred_intake": "April",
+    "saved_universities": [
+      "uni_jp_001"
+    ],
+    "saved_scholarships": [
+      "sch_jp_001"
+    ],
+    "recommendation_history": [
+      {
+        "history_id": "history_36db10067fe54e0a986b3bbd452f7eec",
+        "recommendation_type": "program",
+        "created_at": "2026-08-06T14:53:10.202000",
+        "result_count": 1,
+        "recommended_ids": [
+          "prog_jp_001"
+        ]
+      },
+      {
+        "history_id": "history_888dd3d9c1984bb5b4c5640cbc1cc5ca",
+        "recommendation_type": "scholarship",
+        "created_at": "2026-08-08T13:44:12.272000",
+        "result_count": 1,
+        "recommended_ids": [
+          "sch_jp_001"
+        ]
+      },
+      {
+        "history_id": "history_c6935cdaf1f64cd2b5aebcbbf23d69b7",
+        "recommendation_type": "program",
+        "created_at": "2026-08-09T17:10:51.742000",
+        "result_count": 5,
+        "recommended_ids": [
+          "prog_jp_016",
+          "prog_jp_011",
+          "prog_jp_003",
+          "prog_jp_012",
+          "prog_jp_029"
+        ]
+      }
+    ],
+    "created_at": "2026-08-04T14:33:40.068000",
+    "database_updated_at": "2026-08-09T17:10:51.742000"
   }
 ]

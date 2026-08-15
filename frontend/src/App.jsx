@@ -4,6 +4,8 @@ import UniversityCard from './UniversityCard'
 import ProgramCard from './ProgramCard'
 import ScholarshipCard from './ScholarshipCard'
 import AnalysisDashboardModal from './AnalysisDashboardModal'
+import UserProfileModal from './UserProfileModal'
+import RecommendationModal from './RecommendationModal'
 import './App.css'
 
 // =========================
@@ -77,6 +79,27 @@ function App() {
     showAnalysisDashboard,
     setShowAnalysisDashboard,
   ] = useState(false)
+
+  // =========================
+  // USER PROFILE MODAL STATE
+  // =========================
+  const [
+    showUserProfile,
+    setShowUserProfile,
+  ] = useState(false)
+
+  // =========================
+  // RECOMMENDATION MODAL STATE
+  // =========================
+  const [
+    showRecommendationModal,
+    setShowRecommendationModal,
+  ] = useState(false)
+
+  const [
+    recommendationUserId,
+    setRecommendationUserId,
+  ] = useState('')
 
   // =========================
   // UNIVERSITY STATES
@@ -884,23 +907,42 @@ function App() {
             </p>
           </div>
 
-          <button
-            className="analysis-dashboard-button"
-            type="button"
-            onClick={() =>
-              setShowAnalysisDashboard(
-                true
-              )
-            }
-          >
-            <span className="analysis-dashboard-button-icon">
-              📊
-            </span>
+          <div className="edupath-header-actions">
+            <button
+              className="profile-header-button"
+              type="button"
+              onClick={() =>
+                setShowUserProfile(true)
+              }
+            >
+              <span className="profile-header-button-icon">
+                👤
+              </span>
 
-            <span>
-              Analysis Dashboard
-            </span>
-          </button>
+              <span>
+                My Profile
+              </span>
+            </button>
+
+            <button
+              className="analysis-dashboard-button"
+              type="button"
+              onClick={() =>
+                setShowAnalysisDashboard(
+                  true
+                )
+              }
+            >
+              <span className="analysis-dashboard-button-icon">
+                📊
+              </span>
+
+              <span>
+                Analysis Dashboard
+              </span>
+            </button>
+          </div>
+
         </section>
 
         {/* =========================
@@ -1373,19 +1415,47 @@ function App() {
       </main>
 
       {/* =========================
+          RECOMMENDATION MODAL
+      ========================== */}
+
+      {showRecommendationModal &&
+        recommendationUserId && (
+          <RecommendationModal
+            userId={recommendationUserId}
+            onClose={() =>
+              setShowRecommendationModal(
+                false
+              )
+            }
+          />
+        )}
+
+      {/* =========================
           ANALYSIS DASHBOARD
           FULL-SCREEN MODAL
       ========================== */}
 
-      {showAnalysisDashboard && (
-        <AnalysisDashboardModal
+      {showUserProfile && (
+        <UserProfileModal
           onClose={() =>
-            setShowAnalysisDashboard(
-              false
-            )
+            setShowUserProfile(false)
           }
+          onGetRecommendations={(
+            userId
+          ) => {
+            setRecommendationUserId(
+              userId
+            )
+
+            setShowUserProfile(false)
+
+            setShowRecommendationModal(
+              true
+            )
+          }}
         />
       )}
+
     </>
   )
 }

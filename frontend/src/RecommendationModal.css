@@ -1,0 +1,925 @@
+/* =========================================
+   EDUPATH RECOMMENDATION MODAL
+========================================= */
+
+.recommendation-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 10020;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 24px;
+
+  background: rgba(15, 23, 42, 0.68);
+
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+}
+
+
+/* =========================================
+   MAIN MODAL
+========================================= */
+
+.recommendation-modal {
+  width: min(1180px, 100%);
+  max-height: 94vh;
+
+  overflow-y: auto;
+
+  padding: 30px;
+
+  background: #f8fafc;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 24px;
+
+  box-shadow:
+    0 30px 90px
+    rgba(15, 23, 42, 0.35);
+}
+
+
+/* =========================================
+   SCROLLBAR
+========================================= */
+
+.recommendation-modal::-webkit-scrollbar {
+  width: 8px;
+}
+
+.recommendation-modal::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.recommendation-modal::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 999px;
+}
+
+.recommendation-modal::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.recommendation-modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 24px;
+
+  margin-bottom: 24px;
+}
+
+.recommendation-eyebrow {
+  margin: 0 0 7px;
+
+  color: #4f46e5;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  letter-spacing: 0.15em;
+}
+
+.recommendation-modal-header h2 {
+  margin: 0;
+
+  color: #0f172a;
+
+  font-size: 31px;
+  line-height: 1.2;
+
+  font-weight: 850;
+}
+
+.recommendation-modal-header p {
+  margin: 9px 0 0;
+
+  color: #64748b;
+
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   CLOSE BUTTON
+========================================= */
+
+.recommendation-close-button {
+  flex-shrink: 0;
+
+  width: 42px;
+  height: 42px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+
+  background: #ffffff;
+
+  color: #475569;
+
+  font-size: 27px;
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.recommendation-close-button:hover {
+  color: #dc2626;
+
+  background: #fef2f2;
+
+  border-color: #fecaca;
+
+  transform: rotate(3deg);
+}
+
+
+/* =========================================
+   LOADING
+========================================= */
+
+.recommendation-loading {
+  min-height: 350px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 18px;
+
+  color: #64748b;
+
+  text-align: center;
+}
+
+.recommendation-spinner {
+  width: 46px;
+  height: 46px;
+
+  border: 4px solid #e2e8f0;
+  border-top-color: #4f46e5;
+
+  border-radius: 50%;
+
+  animation:
+    recommendation-spin
+    0.8s linear infinite;
+}
+
+@keyframes recommendation-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* =========================================
+   ERROR
+========================================= */
+
+.recommendation-error {
+  padding: 18px;
+
+  color: #b91c1c;
+
+  background: #fef2f2;
+
+  border: 1px solid #fecaca;
+  border-radius: 13px;
+
+  font-size: 14px;
+  font-weight: 650;
+}
+
+
+/* =========================================
+   SUMMARY CARDS
+========================================= */
+
+.recommendation-summary {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 14px;
+
+  margin-bottom: 22px;
+}
+
+.recommendation-summary > div {
+  padding: 18px;
+
+  background: #ffffff;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+
+  box-shadow:
+    0 4px 14px
+    rgba(15, 23, 42, 0.04);
+}
+
+.recommendation-summary span {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #64748b;
+
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.recommendation-summary strong {
+  color: #0f172a;
+
+  font-size: 24px;
+  font-weight: 850;
+}
+
+
+/* =========================================
+   TABS
+========================================= */
+
+.recommendation-tabs {
+  display: flex;
+
+  gap: 9px;
+
+  padding: 6px;
+
+  margin-bottom: 16px;
+
+  background: #e9eef5;
+
+  border-radius: 13px;
+}
+
+.recommendation-tabs button {
+  flex: 1;
+
+  min-height: 44px;
+
+  padding: 10px 14px;
+
+  border: none;
+  border-radius: 9px;
+
+  background: transparent;
+
+  color: #64748b;
+
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 750;
+
+  cursor: pointer;
+
+  transition:
+    background 0.18s ease,
+    color 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+.recommendation-tabs button:hover {
+  color: #1e293b;
+}
+
+.recommendation-tabs button.active {
+  color: #4338ca;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 3px 10px
+    rgba(15, 23, 42, 0.08);
+}
+
+
+/* =========================================
+   ALGORITHM INFO
+========================================= */
+
+.recommendation-algorithm {
+  display: flex;
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 7px;
+
+  padding: 13px 16px;
+
+  margin-bottom: 20px;
+
+  color: #475569;
+
+  background: #eef2ff;
+
+  border: 1px solid #c7d2fe;
+  border-radius: 11px;
+
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.recommendation-algorithm strong {
+  color: #3730a3;
+}
+
+.recommendation-algorithm span {
+  color: #6366f1;
+
+  font-weight: 700;
+}
+
+
+/* =========================================
+   LIST
+========================================= */
+
+.recommendation-list {
+  display: flex;
+  flex-direction: column;
+
+  gap: 20px;
+}
+
+
+/* =========================================
+   RECOMMENDATION CARD
+========================================= */
+
+.recommendation-card {
+  padding: 24px;
+
+  background: #ffffff;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+
+  box-shadow:
+    0 8px 24px
+    rgba(15, 23, 42, 0.06);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.recommendation-card:hover {
+  transform: translateY(-2px);
+
+  border-color: #c7d2fe;
+
+  box-shadow:
+    0 13px 30px
+    rgba(15, 23, 42, 0.09);
+}
+
+
+/* =========================================
+   CARD TOP
+========================================= */
+
+.recommendation-card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 22px;
+
+  padding-bottom: 18px;
+
+  border-bottom: 1px solid #eef2f7;
+}
+
+.recommendation-rank {
+  margin: 0 0 7px;
+
+  color: #4f46e5;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+}
+
+.recommendation-card h3 {
+  margin: 0;
+
+  color: #0f172a;
+
+  font-size: 20px;
+  line-height: 1.35;
+
+  font-weight: 820;
+}
+
+.recommendation-university {
+  margin: 8px 0 0;
+
+  color: #334155;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.recommendation-location {
+  margin: 5px 0 0;
+
+  color: #64748b;
+
+  font-size: 13px;
+}
+
+
+/* =========================================
+   MATCH SCORE
+========================================= */
+
+.recommendation-score {
+  min-width: 94px;
+
+  padding: 13px 12px;
+
+  border-radius: 14px;
+
+  text-align: center;
+}
+
+.recommendation-score strong {
+  display: block;
+
+  font-size: 23px;
+  line-height: 1.1;
+
+  font-weight: 850;
+}
+
+.recommendation-score span {
+  display: block;
+
+  margin-top: 3px;
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.recommendation-score-high {
+  color: #166534;
+
+  background: #f0fdf4;
+
+  border: 1px solid #bbf7d0;
+}
+
+.recommendation-score-medium {
+  color: #92400e;
+
+  background: #fffbeb;
+
+  border: 1px solid #fde68a;
+}
+
+.recommendation-score-low {
+  color: #b91c1c;
+
+  background: #fef2f2;
+
+  border: 1px solid #fecaca;
+}
+
+
+/* =========================================
+   META GRID
+========================================= */
+
+.recommendation-meta-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 12px;
+
+  margin-top: 18px;
+}
+
+.recommendation-meta-grid > div {
+  padding: 13px;
+
+  background: #f8fafc;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+}
+
+.recommendation-meta-grid span {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #64748b;
+
+  font-size: 11px;
+  font-weight: 650;
+}
+
+.recommendation-meta-grid strong {
+  color: #1e293b;
+
+  font-size: 12px;
+  line-height: 1.45;
+
+  font-weight: 750;
+
+  overflow-wrap: anywhere;
+}
+
+
+/* =========================================
+   WHY + GAPS
+========================================= */
+
+.recommendation-details-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 14px;
+
+  margin-top: 18px;
+}
+
+.recommendation-detail-box {
+  padding: 17px;
+
+  border-radius: 12px;
+}
+
+.recommendation-detail-box:first-child {
+  background: #f0fdf4;
+
+  border: 1px solid #bbf7d0;
+}
+
+.recommendation-detail-box:last-child {
+  background: #fff7ed;
+
+  border: 1px solid #fed7aa;
+}
+
+.recommendation-detail-box h4 {
+  margin: 0 0 11px;
+
+  color: #1e293b;
+
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.recommendation-detail-box ul {
+  margin: 0;
+
+  padding-left: 18px;
+}
+
+.recommendation-detail-box li {
+  margin-bottom: 7px;
+
+  color: #475569;
+
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.recommendation-detail-box li:last-child {
+  margin-bottom: 0;
+}
+
+
+/* =========================================
+   MATCH BREAKDOWN
+========================================= */
+
+.recommendation-breakdown {
+  margin-top: 18px;
+
+  padding: 17px;
+
+  background: #f8fafc;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+}
+
+.recommendation-breakdown h4 {
+  margin: 0 0 13px;
+
+  color: #1e293b;
+
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.recommendation-breakdown-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(5, minmax(0, 1fr));
+
+  gap: 9px;
+}
+
+.recommendation-breakdown-grid > div {
+  padding: 10px;
+
+  background: #ffffff;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 9px;
+}
+
+.recommendation-breakdown-grid span {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: #64748b;
+
+  font-size: 10px;
+  line-height: 1.3;
+}
+
+.recommendation-breakdown-grid strong {
+  color: #4338ca;
+
+  font-size: 14px;
+  font-weight: 800;
+}
+
+
+/* =========================================
+   OFFICIAL LINK
+========================================= */
+
+.recommendation-link {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 18px;
+
+  padding: 10px 15px;
+
+  border-radius: 9px;
+
+  color: #ffffff;
+
+  background: #4f46e5;
+
+  text-decoration: none;
+
+  font-size: 12px;
+  font-weight: 750;
+
+  transition:
+    background 0.18s ease,
+    transform 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+.recommendation-link:hover {
+  background: #4338ca;
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 8px 18px
+    rgba(79, 70, 229, 0.2);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+  .recommendation-summary {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .recommendation-meta-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .recommendation-breakdown-grid {
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 640px) {
+  .recommendation-modal-backdrop {
+    padding: 0;
+
+    align-items: stretch;
+  }
+
+  .recommendation-modal {
+    width: 100%;
+    max-height: 100vh;
+
+    padding: 18px;
+
+    border: none;
+    border-radius: 0;
+  }
+
+  .recommendation-modal-header h2 {
+    font-size: 24px;
+  }
+
+  .recommendation-summary {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 9px;
+  }
+
+  .recommendation-summary > div {
+    padding: 14px;
+  }
+
+  .recommendation-summary strong {
+    font-size: 20px;
+  }
+
+  .recommendation-tabs {
+    flex-direction: column;
+  }
+
+  .recommendation-card {
+    padding: 17px;
+  }
+
+  .recommendation-card-top {
+    flex-direction: column;
+  }
+
+  .recommendation-score {
+    width: 100%;
+  }
+
+  .recommendation-meta-grid,
+  .recommendation-details-grid,
+  .recommendation-breakdown-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .recommendation-link {
+    width: 100%;
+  }
+}
+
+/* =========================================
+   RECOMMENDATION CARD ACTIONS
+========================================= */
+
+.recommendation-card-actions {
+  display: flex;
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
+
+  margin-top: 18px;
+}
+
+.recommendation-card-actions
+.recommendation-link {
+  margin-top: 0;
+}
+
+
+/* =========================================
+   SAVE BUTTON
+========================================= */
+
+.recommendation-save-button {
+  min-height: 40px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 9px 15px;
+
+  border: 1px solid #c7d2fe;
+  border-radius: 9px;
+
+  background: #ffffff;
+
+  color: #4338ca;
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition:
+    background 0.18s ease,
+    color 0.18s ease,
+    border-color 0.18s ease,
+    transform 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+.recommendation-save-button:hover:not(
+  :disabled
+) {
+  transform: translateY(-1px);
+
+  background: #eef2ff;
+
+  border-color: #a5b4fc;
+
+  box-shadow:
+    0 6px 14px
+    rgba(79, 70, 229, 0.12);
+}
+
+.recommendation-save-button.saved {
+  color: #ffffff;
+
+  background: #4f46e5;
+
+  border-color: #4f46e5;
+}
+
+.recommendation-save-button.saved:hover:not(
+  :disabled
+) {
+  background: #4338ca;
+
+  border-color: #4338ca;
+}
+
+.recommendation-save-button:disabled {
+  opacity: 0.6;
+
+  cursor: not-allowed;
+}
+
+@media (max-width: 640px) {
+  .recommendation-card-actions {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+  .recommendation-save-button,
+  .recommendation-card-actions
+  .recommendation-link {
+    width: 100%;
+  }
+}

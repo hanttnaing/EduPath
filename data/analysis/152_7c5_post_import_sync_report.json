@@ -1,0 +1,127 @@
+{
+  "step": "152.7C-5",
+  "title": "Post-Import Dataset Synchronisation & API Validation",
+  "status": "PASS",
+  "generated_at": "2026-08-13T15:38:28.783402+00:00",
+  "source_of_truth": "MongoDB",
+  "collection": "scholarships",
+  "cleaned_dataset": "C:\\Users\\X1\\EduPath\\data\\cleaned\\scholarships.json",
+  "immutable_baseline": "C:\\Users\\X1\\EduPath\\backups\\baseline_151_10\\scholarships.json",
+  "summary": {
+    "mongodb_scholarships": 18,
+    "cleaned_scholarships": 18,
+    "baseline_scholarships": 12,
+    "new_batch_01_records": 6,
+    "old_records_preserved": "PASS",
+    "new_ids_found": 6,
+    "duplicate_ids": 0,
+    "duplicate_names": 0,
+    "invalid_country_references": 0,
+    "dataset_synchronisation": "PASS"
+  },
+  "validation": {
+    "new_ids_expected": [
+      "sch_hk_001",
+      "sch_my_001",
+      "sch_sg_001",
+      "sch_kr_001",
+      "sch_tw_001",
+      "sch_th_001"
+    ],
+    "new_ids_found": [
+      "sch_hk_001",
+      "sch_kr_001",
+      "sch_my_001",
+      "sch_sg_001",
+      "sch_th_001",
+      "sch_tw_001"
+    ],
+    "missing_new_ids": [],
+    "duplicate_id_values": [],
+    "duplicate_name_values": [],
+    "valid_country_ids_count": 7,
+    "invalid_country_ids": [],
+    "baseline_ids_missing": [],
+    "baseline_ids_changed": [],
+    "cleaned_schema_fields": [
+      "scholarship_id",
+      "scholarship_name",
+      "provider_name",
+      "provider_type",
+      "country_id",
+      "host_university_id",
+      "eligible_nationalities",
+      "degree_levels",
+      "fields_of_study",
+      "minimum_gpa",
+      "gpa_scale",
+      "ielts_requirement",
+      "toefl_requirement",
+      "age_limit",
+      "funding_type",
+      "tuition_coverage",
+      "monthly_allowance",
+      "allowance_currency",
+      "travel_allowance",
+      "accommodation_support",
+      "health_insurance",
+      "required_documents",
+      "application_opening_date",
+      "application_deadline",
+      "scholarship_status",
+      "application_cycle",
+      "official_website",
+      "source_url",
+      "collected_at",
+      "last_verified_at",
+      "freshness_status",
+      "data_quality_status"
+    ]
+  },
+  "api_validation": {
+    "status": "SKIPPED",
+    "base_url": "http://127.0.0.1:8002",
+    "reason": "Backend API is not reachable; no server was started or stopped.",
+    "probe_error": "<urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>",
+    "endpoints": [
+      {
+        "endpoint": "/api/countries?limit=100",
+        "status": "SKIPPED"
+      },
+      {
+        "endpoint": "/api/scholarships?limit=100",
+        "status": "SKIPPED"
+      },
+      {
+        "endpoint": "/api/scholarships?country_id=country_hk&limit=100",
+        "status": "SKIPPED"
+      },
+      {
+        "endpoint": "/api/scholarships?country_id=country_my&limit=100",
+        "status": "SKIPPED"
+      },
+      {
+        "endpoint": "/api/scholarships?country_id=country_sg&limit=100",
+        "status": "SKIPPED"
+      },
+      {
+        "endpoint": "/api/scholarships?country_id=country_kr&limit=100",
+        "status": "SKIPPED"
+      },
+      {
+        "endpoint": "/api/scholarships?country_id=country_tw&limit=100",
+        "status": "SKIPPED"
+      },
+      {
+        "endpoint": "/api/scholarships?country_id=country_th&limit=100",
+        "status": "SKIPPED"
+      },
+      {
+        "endpoint": "/api/analysis/dashboard",
+        "status": "SKIPPED"
+      }
+    ]
+  },
+  "protected_files_modified": false,
+  "mongodb_modified": false
+}

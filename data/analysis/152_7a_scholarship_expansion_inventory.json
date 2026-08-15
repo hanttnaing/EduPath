@@ -1,0 +1,501 @@
+{
+  "project": "EduPath Analytics",
+  "step": "152.7A",
+  "generated_at": "2026-08-13T05:57:48.651403+00:00",
+  "database": "edupath_db",
+  "collection": "scholarships",
+  "current_count": 12,
+  "minimum_target": 30,
+  "recommended_target": 50,
+  "minimum_records_needed": 18,
+  "recommended_records_needed": 38,
+  "discovered_fields": [
+    "accommodation_support",
+    "age_limit",
+    "allowance_currency",
+    "application_cycle",
+    "application_deadline",
+    "application_opening_date",
+    "collected_at",
+    "content_hash",
+    "country_id",
+    "created_at",
+    "data_quality_status",
+    "database_updated_at",
+    "degree_levels",
+    "eligible_nationalities",
+    "fields_of_study",
+    "freshness_status",
+    "funding_type",
+    "gpa_scale",
+    "health_insurance",
+    "host_university_id",
+    "ielts_requirement",
+    "last_verified_at",
+    "minimum_gpa",
+    "monthly_allowance",
+    "official_website",
+    "provider_name",
+    "provider_type",
+    "required_documents",
+    "scholarship_id",
+    "scholarship_name",
+    "scholarship_status",
+    "source_url",
+    "toefl_requirement",
+    "travel_allowance",
+    "tuition_coverage"
+  ],
+  "field_inventory": [
+    {
+      "field": "accommodation_support",
+      "present_records": 12,
+      "populated_records": 0,
+      "total_records": 12,
+      "coverage_percent": 0.0,
+      "types_found": "null:12"
+    },
+    {
+      "field": "age_limit",
+      "present_records": 12,
+      "populated_records": 0,
+      "total_records": 12,
+      "coverage_percent": 0.0,
+      "types_found": "null:12"
+    },
+    {
+      "field": "allowance_currency",
+      "present_records": 12,
+      "populated_records": 1,
+      "total_records": 12,
+      "coverage_percent": 8.33,
+      "types_found": "null:11, str:1"
+    },
+    {
+      "field": "application_cycle",
+      "present_records": 12,
+      "populated_records": 12,
+      "total_records": 12,
+      "coverage_percent": 100.0,
+      "types_found": "str:12"
+    },
+    {
+      "field": "application_deadline",
+      "present_records": 12,
+      "populated_records": 1,
+      "total_records": 12,
+      "coverage_percent": 8.33,
+      "types_found": "null:11, datetime:1"
+    },
+    {
+      "field": "application_opening_date",
+      "present_records": 12,
+      "populated_records": 1,
+      "total_records": 12,
+      "coverage_percent": 8.33,
+      "types_found": "null:11, datetime:1"
+    },
+    {
+      "field": "collected_at",
+      "present_records": 12,
+      "populated_records": 12,
+      "total_records": 12,
+      "coverage_percent": 100.0,
+      "types_found": "datetime:12"
+    },
+    {
+      "field": "content_hash",
+      "present_records": 12,
+      "populated_records": 12,
+      "total_records": 12,
+      "coverage_percent": 100.0,
+      "types_found": "str:12"
+    },
+    {
+      "field": "country_id",
+      "present_records": 12,
+      "populated_records": 12,
+      "total_records": 12,
+      "coverage_percent": 100.0,
+      "types_found": "str:12"
+    },
+    {
+      "field": "created_at",
+      "present_records": 12,
+      "populated_records": 12,
+      "total_records": 12,
+      "coverage_percent": 100.0,
+      "types_found": "datetime:12"
+    },
+    {
+      "field": "data_quality_status",
+      "present_records": 12,
+      "populated_records": 12,
+      "total_records": 12,
+      "coverage_percent": 100.0,
+      "types_found": "str:12"
+    },
+    {
+      "field": "database_updated_at",
+      "present_records": 12,
+      "populated_records": 12,
+      "total_records": 12,
+      "coverage_percent": 100.0,
+      "types_found": "datetime:12"
+    },
+    {
+      "field": "degree_levels",
+      "present_records": 12,
+      "populated_records": 12,
+      "total_records": 12,
+      "coverage_percent": 100.0,
+      "types_found": "list:12"
+    },
+    {
+      "field": "eligible_nationalities",
+      "present_records": 12,
+      "populated_records": 0,
+      "total_records": 12,
+      "coverage_percent": 0.0,
+      "types_found": "null:12"
+    },
+    {
+      "field": "fields_of_study",
+      "present_records": 12,
+      "populated_records": 1,
+      "total_records": 12,
+      "coverage_percent": 8.33,
+      "types_found": "null:11, list:1"
+    },
+    {
+      "field": "freshness_status",
+      "present_records": 12,
+      "populated_records": 12,
+      "total_records": 12,
+      "coverage_percent": 100.0,
+      "types_found": "str:12"
+    },
+    {
+      "field": "funding_type",
+      "present_records": 12,
+      "populated_records": 12,
+      "total_records": 12,
+      "coverage_percent": 100.0,
+      "types_found": "str:12"
+    },
+    {
+      "field": "gpa_scale",
+      "present_records": 12,
+      "populated_records": 0,
+      "total_records": 12,
+      "coverage_percent": 0.0,
+      "types_found": "null:12"
+    },
+    {
+      "field": "health_insurance",
+      "present_records": 12,
+      "populated_records": 0,
+      "total_records": 12,
+      "coverage_percent": 0.0,
+      "types_found": "null:12"
+    },
+    {
+      "field": "host_university_id",
+      "present_records": 12,
+      "populated_records": 12,
+      "total_records": 12,
+      "coverage_percent": 100.0,
+      "types_found": "str:12"
+    },
+    {
+      "field": "ielts_requirement",
+      "present_records": 12,
+      "populated_records": 0,
+      "total_records": 12,
+      "coverage_percent": 0.0,
+      "types_found": "null:12"
+    },
+    {
+      "field": "last_verified_at",
+      "present_records": 12,
+      "populated_records": 12,
+      "total_records": 12,
+      "coverage_percent": 100.0,
+      "types_found": "datetime:12"
+    },
+    {
+      "field": "minimum_gpa",
+      "present_records": 12,
+      "populated_records": 0,
+      "total_records": 12,
+      "coverage_percent": 0.0,
+      "types_found": "null:12"
+    },
+    {
+      "field": "monthly_allowance",
+      "present_records": 12,
+      "populated_records": 1,
+      "total_records": 12,
+      "coverage_percent": 8.33,
+      "types_found": "null:11, int:1"
+    },
+    {
+      "field": "official_website",
+      "present_records": 12,
+      "populated_records": 12,
+      "total_records": 12,
+      "coverage_percent": 100.0,
+      "types_found": "str:12"
+    },
+    {
+      "field": "provider_name",
+      "present_records": 12,
+      "populated_records": 12,
+      "total_records": 12,
+      "coverage_percent": 100.0,
+      "types_found": "str:12"
+    },
+    {
+      "field": "provider_type",
+      "present_records": 12,
+      "populated_records": 12,
+      "total_records": 12,
+      "coverage_percent": 100.0,
+      "types_found": "str:12"
+    },
+    {
+      "field": "required_documents",
+      "present_records": 12,
+      "populated_records": 1,
+      "total_records": 12,
+      "coverage_percent": 8.33,
+      "types_found": "null:11, list:1"
+    },
+    {
+      "field": "scholarship_id",
+      "present_records": 12,
+      "populated_records": 12,
+      "total_records": 12,
+      "coverage_percent": 100.0,
+      "types_found": "str:12"
+    },
+    {
+      "field": "scholarship_name",
+      "present_records": 12,
+      "populated_records": 12,
+      "total_records": 12,
+      "coverage_percent": 100.0,
+      "types_found": "str:12"
+    },
+    {
+      "field": "scholarship_status",
+      "present_records": 12,
+      "populated_records": 12,
+      "total_records": 12,
+      "coverage_percent": 100.0,
+      "types_found": "str:12"
+    },
+    {
+      "field": "source_url",
+      "present_records": 12,
+      "populated_records": 12,
+      "total_records": 12,
+      "coverage_percent": 100.0,
+      "types_found": "str:12"
+    },
+    {
+      "field": "toefl_requirement",
+      "present_records": 12,
+      "populated_records": 0,
+      "total_records": 12,
+      "coverage_percent": 0.0,
+      "types_found": "null:12"
+    },
+    {
+      "field": "travel_allowance",
+      "present_records": 12,
+      "populated_records": 1,
+      "total_records": 12,
+      "coverage_percent": 8.33,
+      "types_found": "null:11, str:1"
+    },
+    {
+      "field": "tuition_coverage",
+      "present_records": 12,
+      "populated_records": 1,
+      "total_records": 12,
+      "coverage_percent": 8.33,
+      "types_found": "null:11, str:1"
+    }
+  ],
+  "recommendation_fields_found": [
+    "scholarship_id",
+    "country_id",
+    "funding_type",
+    "degree_levels",
+    "fields_of_study",
+    "minimum_gpa",
+    "eligible_nationalities",
+    "age_limit",
+    "application_opening_date",
+    "application_deadline",
+    "application_cycle",
+    "scholarship_status",
+    "source_url",
+    "last_verified_at",
+    "freshness_status",
+    "data_quality_status"
+  ],
+  "recommendation_fields_missing_exact_name": [
+    "name",
+    "university_id",
+    "english_requirement",
+    "official_source_url"
+  ],
+  "sample_records": [
+    {
+      "_id": "6a6f6e706a4933f6dadd01b9",
+      "scholarship_id": "sch_jp_001",
+      "accommodation_support": null,
+      "age_limit": null,
+      "allowance_currency": "JPY",
+      "application_cycle": "2027",
+      "application_deadline": "2026-10-30T00:00:00",
+      "application_opening_date": "2026-10-19T00:00:00",
+      "collected_at": "2026-08-02T00:00:00",
+      "content_hash": "1965661092f36390492b0fba8d3b6a1c85057fab6b71acb7709858ef2dcea000",
+      "country_id": "country_jp",
+      "created_at": "2026-08-02T16:21:04.753000",
+      "data_quality_status": "verified",
+      "database_updated_at": "2026-08-02T16:21:04.753000",
+      "degree_levels": [
+        "Master",
+        "PhD"
+      ],
+      "eligible_nationalities": null,
+      "fields_of_study": [
+        "Computer Science",
+        "Mathematical Informatics",
+        "Information Physics and Computing",
+        "Information and Communication Engineering",
+        "Mechano-Informatics",
+        "Creative Informatics"
+      ],
+      "freshness_status": "current",
+      "funding_type": "Fully Funded",
+      "gpa_scale": null,
+      "health_insurance": null,
+      "host_university_id": "uni_jp_001",
+      "ielts_requirement": null,
+      "last_verified_at": "2026-08-02T00:00:00",
+      "minimum_gpa": null,
+      "monthly_allowance": 143000,
+      "official_website": "https://www.i.u-tokyo.ac.jp/edu/inter_ex/oir/scholarship_e.shtml",
+      "provider_name": "Ministry of Education, Culture, Sports, Science and Technology (MEXT)",
+      "provider_type": "Government",
+      "required_documents": [
+        "Application form",
+        "academic transcripts",
+        "GPA calculation form",
+        "graduation or degree certificate",
+        "English proficiency certificate",
+        "research summary",
+        "research achievements if applicable",
+        "field of study and research plan",
+        "recommendation letter",
+        "passport copy",
+        "conditional acceptance of prospective supervisor",
+        "examination fee receipt"
+      ],
+      "scholarship_name": "Japanese Government (MEXT) Scholarship - University Recommendation (General Selection), IST, October 2027",
+      "scholarship_status": "upcoming",
+      "source_url": "https://www.i.u-tokyo.ac.jp/edu/MEXT_General_Guidelines_E_Oct2027.pdf",
+      "toefl_requirement": null,
+      "travel_allowance": "Round-trip travel expenses under specified conditions",
+      "tuition_coverage": "Exam fee, entrance fee, and tuition exempted"
+    },
+    {
+      "_id": "6a7adb675ed8c1490a860523",
+      "scholarship_id": "sch_jp_002",
+      "accommodation_support": null,
+      "age_limit": null,
+      "allowance_currency": null,
+      "application_cycle": "2027",
+      "application_deadline": null,
+      "application_opening_date": null,
+      "collected_at": "2026-08-11T00:00:00",
+      "content_hash": "a2a9d0f9dd523a29c369cd2f5fa27cc20001b3028c7f49fe5e064bd098ff6ba2",
+      "country_id": "country_jp",
+      "created_at": "2026-08-11T08:20:54.557000",
+      "data_quality_status": "verified",
+      "database_updated_at": "2026-08-11T08:20:54.557000",
+      "degree_levels": [
+        "Master",
+        "PhD"
+      ],
+      "eligible_nationalities": null,
+      "fields_of_study": null,
+      "freshness_status": "current",
+      "funding_type": "Fully Funded",
+      "gpa_scale": null,
+      "health_insurance": null,
+      "host_university_id": "uni_jp_001",
+      "ielts_requirement": null,
+      "last_verified_at": "2026-08-11T00:00:00",
+      "minimum_gpa": null,
+      "monthly_allowance": null,
+      "official_website": "https://www.s.u-tokyo.ac.jp/en/admission/scholarship.html",
+      "provider_name": "Japanese Government MEXT",
+      "provider_type": "Government",
+      "required_documents": null,
+      "scholarship_name": "2027 University Recommended Japanese Government MEXT Scholarship",
+      "scholarship_status": "upcoming",
+      "source_url": "https://www.s.u-tokyo.ac.jp/en/admission/scholarship.html",
+      "toefl_requirement": null,
+      "travel_allowance": null,
+      "tuition_coverage": null
+    },
+    {
+      "_id": "6a7adb675ed8c1490a860529",
+      "scholarship_id": "sch_jp_003",
+      "accommodation_support": null,
+      "age_limit": null,
+      "allowance_currency": null,
+      "application_cycle": "2027",
+      "application_deadline": null,
+      "application_opening_date": null,
+      "collected_at": "2026-08-11T00:00:00",
+      "content_hash": "f002992ce5721181ea0992a79ca785e4fd23157f79775f2e9b0310dce680e2c1",
+      "country_id": "country_jp",
+      "created_at": "2026-08-11T08:20:54.723000",
+      "data_quality_status": "verified",
+      "database_updated_at": "2026-08-11T08:20:54.723000",
+      "degree_levels": [
+        "Master",
+        "PhD"
+      ],
+      "eligible_nationalities": null,
+      "fields_of_study": null,
+      "freshness_status": "current",
+      "funding_type": "Fully Funded",
+      "gpa_scale": null,
+      "health_insurance": null,
+      "host_university_id": "uni_jp_007",
+      "ielts_requirement": null,
+      "last_verified_at": "2026-08-11T00:00:00",
+      "minimum_gpa": null,
+      "monthly_allowance": null,
+      "official_website": "https://www.global.hokudai.ac.jp/news/26039/",
+      "provider_name": "Japanese Government MEXT",
+      "provider_type": "Government",
+      "required_documents": null,
+      "scholarship_name": "MEXT IGP Special Quota",
+      "scholarship_status": "upcoming",
+      "source_url": "https://www.global.hokudai.ac.jp/news/26039/",
+      "toefl_requirement": null,
+      "travel_allowance": null,
+      "tuition_coverage": null
+    }
+  ],
+  "mongodb_records_modified": false
+}

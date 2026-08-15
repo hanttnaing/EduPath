@@ -32,3 +32,9 @@ data/cleaned/scholarship_recommendations.json
 data/sample/06_full_dataset_backup*.xlsx
 data/sample/06_full_dataset_before_*.xlsx
 
+
+# Local backup files
+backups/
+
+# Generated current dashboard snapshot
+analysis_dashboard_current.json

@@ -1,0 +1,20 @@
+{
+  "step": "152.7C-4",
+  "status": "PASS",
+  "timestamp": "2026-08-13T21:59:03.130508",
+  "mongodb_modified": true,
+  "collection": "scholarships",
+  "before_count": 12,
+  "inserted_count": 6,
+  "after_count": 18,
+  "inserted_ids": [
+    "sch_hk_001",
+    "sch_my_001",
+    "sch_sg_001",
+    "sch_kr_001",
+    "sch_tw_001",
+    "sch_th_001"
+  ],
+  "backup_file": "C:\\Users\\X1\\EduPath\\backups\\pre_152_7c4_20260813_215902\\scholarships_before_import.json",
+  "rollback_file": "C:\\Users\\X1\\EduPath\\backups\\pre_152_7c4_20260813_215902\\rollback_inserted_ids.json"
+}

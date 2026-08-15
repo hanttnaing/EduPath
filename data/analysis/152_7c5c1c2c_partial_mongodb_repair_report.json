@@ -1,0 +1,57 @@
+{
+  "step": "152.7C-5C-1C-2C",
+  "mode": "APPLY",
+  "backup_path": "C:\\Users\\X1\\EduPath\\backups\\pre_152_7c5c1c2c_20260814_132531\\scholarships_before_partial_repair.json",
+  "backup_record_count": 18,
+  "mongodb_count_before": 18,
+  "mongodb_count_after": 18,
+  "modified_ids": [
+    "sch_hk_001",
+    "sch_kr_001",
+    "sch_tw_001"
+  ],
+  "research_blocker": "sch_sg_001",
+  "research_blocker_unchanged": true,
+  "target_validation_passed": 3,
+  "target_validation_failed": 0,
+  "all_records_passed": 17,
+  "all_records_failed": 1,
+  "remaining_failures": [
+    {
+      "scholarship_id": "sch_sg_001",
+      "error": "1 validation error for ScholarshipResponse\nscholarship_status\n  Field required [type=missing, input_value={'scholarship_id': 'sch_s...l-graduate-award-singa'}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/missing"
+    }
+  ],
+  "baseline_compatibility": "PASS",
+  "mongodb_modified": "YES",
+  "verified_csv_modified": "NO",
+  "baseline_modified": "NO",
+  "targets": [
+    {
+      "scholarship_id": "sch_hk_001",
+      "status": "APPLIED",
+      "fields_changed": [
+        "scholarship_status"
+      ],
+      "validation": "PASS"
+    },
+    {
+      "scholarship_id": "sch_kr_001",
+      "status": "APPLIED",
+      "fields_changed": [
+        "scholarship_status"
+      ],
+      "validation": "PASS"
+    },
+    {
+      "scholarship_id": "sch_tw_001",
+      "status": "APPLIED",
+      "fields_changed": [
+        "monthly_allowance",
+        "monthly_allowance_details"
+      ],
+      "validation": "PASS"
+    }
+  ],
+  "status": "PARTIAL_REPAIR_APPLIED_PENDING_SINGA_RESOLUTION"
+}

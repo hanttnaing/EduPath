@@ -1,0 +1,264 @@
+{
+  "step": "152.7C-5C-1B",
+  "title": "Data Model Conflict Resolution Design and ID Provenance Review",
+  "generated_at": "2026-08-13T18:18:32.496046+00:00",
+  "status": "DESIGN_COMPLETE",
+  "design_only": true,
+  "modifications": {
+    "mongodb": false,
+    "verified_csv": false,
+    "baseline": false,
+    "schemas_py": false
+  },
+  "inputs": [
+    "C:\\Users\\X1\\EduPath\\data\\analysis\\152_7c5c0_targeted_repair_plan.json",
+    "C:\\Users\\X1\\EduPath\\data\\analysis\\152_7c5c1a_required_status_resolution.json",
+    "C:\\Users\\X1\\EduPath\\planning\\41_scholarship_targeted_repair_plan.csv",
+    "C:\\Users\\X1\\EduPath\\planning\\42_required_scholarship_status_resolution.csv",
+    "C:\\Users\\X1\\EduPath\\planning\\43_scholarship_manual_review_queue.csv",
+    "C:\\Users\\X1\\EduPath\\data\\staging\\152_7c_batch_01_verified.csv",
+    "C:\\Users\\X1\\EduPath\\data\\staging\\152_7c_batch_01_preimport.csv",
+    "C:\\Users\\X1\\EduPath\\data\\analysis\\152_7c_batch_01_preimport.json",
+    "C:\\Users\\X1\\EduPath\\backups\\baseline_151_10\\scholarships.json",
+    "C:\\Users\\X1\\EduPath\\backend\\app\\schemas.py",
+    "C:\\Users\\X1\\EduPath\\analysis_layer\\prepare_scholarship_batch_01_preimport.py"
+  ],
+  "status_resolution_context": {
+    "research_required_records": 3,
+    "resolved_safely": 2,
+    "still_research_required": 1,
+    "manual_review_queue": 6
+  },
+  "conflicts": [
+    {
+      "scholarship_id": "sch_my_001",
+      "field": "ielts_requirement",
+      "verified_value": "6.0 or higher, or accepted equivalent/English-medium prior degree evidence",
+      "current_api_type": "int | float | None",
+      "classification": "BACKWARD_COMPATIBLE_TEXT_EXTENSION",
+      "recommended_existing_field_value": 6.0,
+      "recommended_companion_field": "ielts_requirement_text",
+      "recommended_companion_value": "6.0 or higher, or accepted equivalent/English-medium prior degree evidence",
+      "meaning_preserved": true,
+      "backward_compatible": true,
+      "reason": "The numeric baseline is usable only while the alternative/equivalence condition remains available as text."
+    },
+    {
+      "scholarship_id": "sch_my_001",
+      "field": "toefl_requirement",
+      "verified_value": "550 PBT or equivalent",
+      "current_api_type": "int | None",
+      "classification": "BACKWARD_COMPATIBLE_TEXT_EXTENSION",
+      "recommended_existing_field_value": 550,
+      "recommended_companion_field": "toefl_requirement_text",
+      "recommended_companion_value": "550 PBT or equivalent",
+      "meaning_preserved": true,
+      "backward_compatible": true,
+      "reason": "The PBT score is usable only while test format and equivalence wording remain available as text."
+    },
+    {
+      "scholarship_id": "sch_my_001",
+      "field": "age_limit",
+      "verified_value": "Master's: <=40; PhD: <=45",
+      "current_api_type": "int | None",
+      "classification": "STRUCTURED_EXTENSION_RECOMMENDED",
+      "recommended_existing_field_value": null,
+      "recommended_companion_field": "age_requirement_details",
+      "recommended_companion_value": [
+        {
+          "degree_level": "Master",
+          "maximum_age": 40,
+          "operator": "<="
+        },
+        {
+          "degree_level": "PhD",
+          "maximum_age": 45,
+          "operator": "<="
+        }
+      ],
+      "meaning_preserved": true,
+      "backward_compatible": true,
+      "reason": "One scalar age limit cannot express two degree-specific maxima."
+    },
+    {
+      "scholarship_id": "sch_tw_001",
+      "field": "monthly_allowance",
+      "verified_value": "15000 undergraduate; 20000 Master's/Doctorate",
+      "current_api_type": "int | float | None",
+      "classification": "STRUCTURED_EXTENSION_RECOMMENDED",
+      "recommended_existing_field_value": null,
+      "recommended_companion_field": "monthly_allowance_details",
+      "recommended_companion_value": [
+        {
+          "degree_levels": [
+            "Bachelor"
+          ],
+          "amount": 15000,
+          "currency": "TWD"
+        },
+        {
+          "degree_levels": [
+            "Master",
+            "PhD"
+          ],
+          "amount": 20000,
+          "currency": "TWD"
+        }
+      ],
+      "meaning_preserved": true,
+      "backward_compatible": true,
+      "reason": "One scalar allowance would misrepresent the degree-dependent stipend."
+    },
+    {
+      "scholarship_id": "sch_th_001",
+      "field": "ielts_requirement",
+      "verified_value": "Good command of English; institution-specific English test requirements may apply",
+      "current_api_type": "int | float | None",
+      "classification": "BACKWARD_COMPATIBLE_TEXT_EXTENSION",
+      "recommended_existing_field_value": null,
+      "recommended_companion_field": "ielts_requirement_text",
+      "recommended_companion_value": "Good command of English; institution-specific English test requirements may apply",
+      "meaning_preserved": true,
+      "backward_compatible": true,
+      "reason": "No numeric IELTS threshold is verified; text preserves the non-numeric requirement without invention."
+    },
+    {
+      "scholarship_id": "sch_th_001",
+      "field": "age_limit",
+      "verified_value": "<=45",
+      "current_api_type": "int | None",
+      "classification": "SAFE_NUMERIC_NORMALIZATION",
+      "recommended_existing_field_value": 45,
+      "recommended_companion_field": null,
+      "recommended_companion_value": null,
+      "meaning_preserved": true,
+      "backward_compatible": true,
+      "reason": "Existing recommendation code treats age_limit as a maximum and rejects ages above it; <=45 is therefore losslessly represented by 45."
+    }
+  ],
+  "id_provenance_reviews": [
+    {
+      "scholarship_id": "sch_hk_001",
+      "verified_source_value": "",
+      "integrated_value": "sch_hk_001",
+      "provenance_source": "analysis_layer/prepare_scholarship_batch_01_preimport.py::make_new_scholarship_id; data/staging/152_7c_batch_01_preimport.csv",
+      "provenance_status": "PROVEN",
+      "uniqueness_status": "UNIQUE_IN_LIVE_COLLECTION",
+      "classification": "INTEGRATION_GENERATED_ID",
+      "recommended_action": "NO_REPAIR_REQUIRED",
+      "reason": "Step 152.7C-3 derived the country prefix, selected the next unused number against baseline/new IDs, and wrote the ID only to the integration/pre-import layer; the research artifact correctly remains blank."
+    },
+    {
+      "scholarship_id": "sch_my_001",
+      "verified_source_value": "",
+      "integrated_value": "sch_my_001",
+      "provenance_source": "analysis_layer/prepare_scholarship_batch_01_preimport.py::make_new_scholarship_id; data/staging/152_7c_batch_01_preimport.csv",
+      "provenance_status": "PROVEN",
+      "uniqueness_status": "UNIQUE_IN_LIVE_COLLECTION",
+      "classification": "INTEGRATION_GENERATED_ID",
+      "recommended_action": "NO_REPAIR_REQUIRED",
+      "reason": "Step 152.7C-3 derived the country prefix, selected the next unused number against baseline/new IDs, and wrote the ID only to the integration/pre-import layer; the research artifact correctly remains blank."
+    },
+    {
+      "scholarship_id": "sch_sg_001",
+      "verified_source_value": "",
+      "integrated_value": "sch_sg_001",
+      "provenance_source": "analysis_layer/prepare_scholarship_batch_01_preimport.py::make_new_scholarship_id; data/staging/152_7c_batch_01_preimport.csv",
+      "provenance_status": "PROVEN",
+      "uniqueness_status": "UNIQUE_IN_LIVE_COLLECTION",
+      "classification": "INTEGRATION_GENERATED_ID",
+      "recommended_action": "NO_REPAIR_REQUIRED",
+      "reason": "Step 152.7C-3 derived the country prefix, selected the next unused number against baseline/new IDs, and wrote the ID only to the integration/pre-import layer; the research artifact correctly remains blank."
+    },
+    {
+      "scholarship_id": "sch_kr_001",
+      "verified_source_value": "",
+      "integrated_value": "sch_kr_001",
+      "provenance_source": "analysis_layer/prepare_scholarship_batch_01_preimport.py::make_new_scholarship_id; data/staging/152_7c_batch_01_preimport.csv",
+      "provenance_status": "PROVEN",
+      "uniqueness_status": "UNIQUE_IN_LIVE_COLLECTION",
+      "classification": "INTEGRATION_GENERATED_ID",
+      "recommended_action": "NO_REPAIR_REQUIRED",
+      "reason": "Step 152.7C-3 derived the country prefix, selected the next unused number against baseline/new IDs, and wrote the ID only to the integration/pre-import layer; the research artifact correctly remains blank."
+    },
+    {
+      "scholarship_id": "sch_tw_001",
+      "verified_source_value": "",
+      "integrated_value": "sch_tw_001",
+      "provenance_source": "analysis_layer/prepare_scholarship_batch_01_preimport.py::make_new_scholarship_id; data/staging/152_7c_batch_01_preimport.csv",
+      "provenance_status": "PROVEN",
+      "uniqueness_status": "UNIQUE_IN_LIVE_COLLECTION",
+      "classification": "INTEGRATION_GENERATED_ID",
+      "recommended_action": "NO_REPAIR_REQUIRED",
+      "reason": "Step 152.7C-3 derived the country prefix, selected the next unused number against baseline/new IDs, and wrote the ID only to the integration/pre-import layer; the research artifact correctly remains blank."
+    },
+    {
+      "scholarship_id": "sch_th_001",
+      "verified_source_value": "",
+      "integrated_value": "sch_th_001",
+      "provenance_source": "analysis_layer/prepare_scholarship_batch_01_preimport.py::make_new_scholarship_id; data/staging/152_7c_batch_01_preimport.csv",
+      "provenance_status": "PROVEN",
+      "uniqueness_status": "UNIQUE_IN_LIVE_COLLECTION",
+      "classification": "INTEGRATION_GENERATED_ID",
+      "recommended_action": "NO_REPAIR_REQUIRED",
+      "reason": "Step 152.7C-3 derived the country prefix, selected the next unused number against baseline/new IDs, and wrote the ID only to the integration/pre-import layer; the research artifact correctly remains blank."
+    }
+  ],
+  "schema_design": {
+    "existing_fields_to_keep": [
+      "ielts_requirement",
+      "toefl_requirement",
+      "age_limit",
+      "monthly_allowance"
+    ],
+    "new_optional_fields_proposed": [
+      {
+        "field": "ielts_requirement_text",
+        "type": "str | None",
+        "default": null,
+        "reason": "Preserve IELTS alternatives, equivalences, exemptions, and non-numeric requirements."
+      },
+      {
+        "field": "toefl_requirement_text",
+        "type": "str | None",
+        "default": null,
+        "reason": "Preserve TOEFL format and equivalence qualifiers."
+      },
+      {
+        "field": "age_requirement_details",
+        "type": "list[AgeRequirement] | None",
+        "default": null,
+        "reason": "Represent degree-specific maximum ages and comparison operators."
+      },
+      {
+        "field": "monthly_allowance_details",
+        "type": "list[AllowanceTier] | None",
+        "default": null,
+        "reason": "Represent degree-specific stipend amounts and currency without selecting one misleading scalar."
+      }
+    ],
+    "fields_requiring_no_change": [
+      "sch_th_001.age_limit -> 45"
+    ],
+    "normalization_rules": [
+      "Preserve qualifiers in companion fields",
+      "Do not invent numeric English thresholds",
+      "Do not collapse degree-specific rules or tiers",
+      "Keep optional absence as None"
+    ],
+    "algorithm_impact": {
+      "numeric_plus_text": "Use scalar screening while honoring documented alternatives/exemptions through review logic.",
+      "degree_specific_age": "Match degree-specific structured rule before age comparison.",
+      "degree_specific_allowance": "Select matching tier for ranking/display; absent scalar is not zero.",
+      "non_numeric_english": "Do not numeric-hard-reject; require institution/document verification."
+    },
+    "api_compatibility_impact": "Additive optional fields with default None preserve existing clients and scalar fields; structured models require compatibility tests."
+  },
+  "summary": {
+    "data_model_conflicts_reviewed": 6,
+    "integration_generated_ids_confirmed": 6,
+    "unresolved_id_provenance": 0,
+    "all_conflicts_have_safe_representation": true
+  },
+  "next_step_recommended": "Step 152.7C-5C-1C — Schema Extension Implementation and Compatibility Validation"
+}

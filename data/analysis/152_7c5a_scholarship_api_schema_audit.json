@@ -1,0 +1,360 @@
+{
+  "step": "152.7C-5A",
+  "title": "Scholarship API Schema Diagnostic",
+  "generated_at": "2026-08-13T15:47:14.991065+00:00",
+  "status": "FAIL",
+  "diagnostic_only": true,
+  "mongodb_modified": false,
+  "database_source": "backend.app.database",
+  "collection": "scholarships",
+  "api_response_model": "backend.app.schemas.ScholarshipResponse",
+  "api_projection_excluded_fields": [
+    "_id",
+    "content_hash",
+    "created_at",
+    "database_updated_at"
+  ],
+  "summary": {
+    "total_mongodb_scholarships": 18,
+    "records_passed": 14,
+    "records_failed": 4,
+    "original_records_tested": 12,
+    "new_batch_01_records_tested": 6,
+    "failure_source": "newly imported records"
+  },
+  "explicit_new_ids": {
+    "expected": [
+      "sch_hk_001",
+      "sch_my_001",
+      "sch_sg_001",
+      "sch_kr_001",
+      "sch_tw_001",
+      "sch_th_001"
+    ],
+    "found": [
+      "sch_hk_001",
+      "sch_kr_001",
+      "sch_my_001",
+      "sch_sg_001",
+      "sch_th_001",
+      "sch_tw_001"
+    ],
+    "missing": []
+  },
+  "infrastructure_issues": [],
+  "records": [
+    {
+      "scholarship_id": "sch_hk_001",
+      "scholarship_name": "Hong Kong PhD Fellowship Scheme (HKPFS)",
+      "country_id": "country_hk",
+      "record_group": "new_batch_01",
+      "status": "FAIL",
+      "issues": [
+        {
+          "failing_field": "scholarship_status",
+          "mongodb_value": "<MISSING>",
+          "actual_python_type": "missing",
+          "response_schema_expected_type": "str",
+          "pydantic_error_type": "missing",
+          "pydantic_validation_message": "Field required",
+          "location": [
+            "scholarship_status"
+          ]
+        }
+      ],
+      "object_id_handling": {
+        "raw_id_present": true,
+        "raw_id_python_type": "bson.objectid.ObjectId",
+        "excluded_by_api_projection": true,
+        "schema_extra_policy": "ignore"
+      }
+    },
+    {
+      "scholarship_id": "sch_jp_001",
+      "scholarship_name": "Japanese Government (MEXT) Scholarship - University Recommendation (General Selection), IST, October 2027",
+      "country_id": "country_jp",
+      "record_group": "step_151_10_baseline",
+      "status": "PASS",
+      "issues": [],
+      "object_id_handling": {
+        "raw_id_present": true,
+        "raw_id_python_type": "bson.objectid.ObjectId",
+        "excluded_by_api_projection": true,
+        "schema_extra_policy": "ignore"
+      }
+    },
+    {
+      "scholarship_id": "sch_jp_002",
+      "scholarship_name": "2027 University Recommended Japanese Government MEXT Scholarship",
+      "country_id": "country_jp",
+      "record_group": "step_151_10_baseline",
+      "status": "PASS",
+      "issues": [],
+      "object_id_handling": {
+        "raw_id_present": true,
+        "raw_id_python_type": "bson.objectid.ObjectId",
+        "excluded_by_api_projection": true,
+        "schema_extra_policy": "ignore"
+      }
+    },
+    {
+      "scholarship_id": "sch_jp_003",
+      "scholarship_name": "MEXT IGP Special Quota",
+      "country_id": "country_jp",
+      "record_group": "step_151_10_baseline",
+      "status": "PASS",
+      "issues": [],
+      "object_id_handling": {
+        "raw_id_present": true,
+        "raw_id_python_type": "bson.objectid.ObjectId",
+        "excluded_by_api_projection": true,
+        "schema_extra_policy": "ignore"
+      }
+    },
+    {
+      "scholarship_id": "sch_jp_004",
+      "scholarship_name": "2027 MEXT Scholarship Special Program",
+      "country_id": "country_jp",
+      "record_group": "step_151_10_baseline",
+      "status": "PASS",
+      "issues": [],
+      "object_id_handling": {
+        "raw_id_present": true,
+        "raw_id_python_type": "bson.objectid.ObjectId",
+        "excluded_by_api_projection": true,
+        "schema_extra_policy": "ignore"
+      }
+    },
+    {
+      "scholarship_id": "sch_jp_005",
+      "scholarship_name": "MEXT Scholarship for International Graduate Program for Advanced Science IGPAS",
+      "country_id": "country_jp",
+      "record_group": "step_151_10_baseline",
+      "status": "PASS",
+      "issues": [],
+      "object_id_handling": {
+        "raw_id_present": true,
+        "raw_id_python_type": "bson.objectid.ObjectId",
+        "excluded_by_api_projection": true,
+        "schema_extra_policy": "ignore"
+      }
+    },
+    {
+      "scholarship_id": "sch_jp_008",
+      "scholarship_name": "MEXT University Recommendation Special Selection AISIP",
+      "country_id": "country_jp",
+      "record_group": "step_151_10_baseline",
+      "status": "PASS",
+      "issues": [],
+      "object_id_handling": {
+        "raw_id_present": true,
+        "raw_id_python_type": "bson.objectid.ObjectId",
+        "excluded_by_api_projection": true,
+        "schema_extra_policy": "ignore"
+      }
+    },
+    {
+      "scholarship_id": "sch_jp_010",
+      "scholarship_name": "MEXT University Recommendation UR Scholarship",
+      "country_id": "country_jp",
+      "record_group": "step_151_10_baseline",
+      "status": "PASS",
+      "issues": [],
+      "object_id_handling": {
+        "raw_id_present": true,
+        "raw_id_python_type": "bson.objectid.ObjectId",
+        "excluded_by_api_projection": true,
+        "schema_extra_policy": "ignore"
+      }
+    },
+    {
+      "scholarship_id": "sch_jp_012",
+      "scholarship_name": "MEXT Foreign Student Priority Placement Special Program",
+      "country_id": "country_jp",
+      "record_group": "step_151_10_baseline",
+      "status": "PASS",
+      "issues": [],
+      "object_id_handling": {
+        "raw_id_present": true,
+        "raw_id_python_type": "bson.objectid.ObjectId",
+        "excluded_by_api_projection": true,
+        "schema_extra_policy": "ignore"
+      }
+    },
+    {
+      "scholarship_id": "sch_jp_013",
+      "scholarship_name": "Japanese Government MEXT Scholarship Undergraduate Program",
+      "country_id": "country_jp",
+      "record_group": "step_151_10_baseline",
+      "status": "PASS",
+      "issues": [],
+      "object_id_handling": {
+        "raw_id_present": true,
+        "raw_id_python_type": "bson.objectid.ObjectId",
+        "excluded_by_api_projection": true,
+        "schema_extra_policy": "ignore"
+      }
+    },
+    {
+      "scholarship_id": "sch_jp_017",
+      "scholarship_name": "MEXT Scholarship International Multidisciplinary Engineering Graduate Program IME",
+      "country_id": "country_jp",
+      "record_group": "step_151_10_baseline",
+      "status": "PASS",
+      "issues": [],
+      "object_id_handling": {
+        "raw_id_present": true,
+        "raw_id_python_type": "bson.objectid.ObjectId",
+        "excluded_by_api_projection": true,
+        "schema_extra_policy": "ignore"
+      }
+    },
+    {
+      "scholarship_id": "sch_jp_019",
+      "scholarship_name": "MEXT Scholarship Student SOKENDAI Recommendation PGP AI and Data Science",
+      "country_id": "country_jp",
+      "record_group": "step_151_10_baseline",
+      "status": "PASS",
+      "issues": [],
+      "object_id_handling": {
+        "raw_id_present": true,
+        "raw_id_python_type": "bson.objectid.ObjectId",
+        "excluded_by_api_projection": true,
+        "schema_extra_policy": "ignore"
+      }
+    },
+    {
+      "scholarship_id": "sch_jp_020",
+      "scholarship_name": "MEXT Scholarship Student SOKENDAI Recommendation Statistical Science Program",
+      "country_id": "country_jp",
+      "record_group": "step_151_10_baseline",
+      "status": "PASS",
+      "issues": [],
+      "object_id_handling": {
+        "raw_id_present": true,
+        "raw_id_python_type": "bson.objectid.ObjectId",
+        "excluded_by_api_projection": true,
+        "schema_extra_policy": "ignore"
+      }
+    },
+    {
+      "scholarship_id": "sch_kr_001",
+      "scholarship_name": "Global Korea Scholarship (GKS) - Graduate Degrees",
+      "country_id": "country_kr",
+      "record_group": "new_batch_01",
+      "status": "FAIL",
+      "issues": [
+        {
+          "failing_field": "scholarship_status",
+          "mongodb_value": "<MISSING>",
+          "actual_python_type": "missing",
+          "response_schema_expected_type": "str",
+          "pydantic_error_type": "missing",
+          "pydantic_validation_message": "Field required",
+          "location": [
+            "scholarship_status"
+          ]
+        }
+      ],
+      "object_id_handling": {
+        "raw_id_present": true,
+        "raw_id_python_type": "bson.objectid.ObjectId",
+        "excluded_by_api_projection": true,
+        "schema_extra_policy": "ignore"
+      }
+    },
+    {
+      "scholarship_id": "sch_my_001",
+      "scholarship_name": "Malaysia International Scholarship (MIS) 2026",
+      "country_id": "country_my",
+      "record_group": "new_batch_01",
+      "status": "PASS",
+      "issues": [],
+      "object_id_handling": {
+        "raw_id_present": true,
+        "raw_id_python_type": "bson.objectid.ObjectId",
+        "excluded_by_api_projection": true,
+        "schema_extra_policy": "ignore"
+      }
+    },
+    {
+      "scholarship_id": "sch_sg_001",
+      "scholarship_name": "Singapore International Graduate Award (SINGA)",
+      "country_id": "country_sg",
+      "record_group": "new_batch_01",
+      "status": "FAIL",
+      "issues": [
+        {
+          "failing_field": "scholarship_status",
+          "mongodb_value": "<MISSING>",
+          "actual_python_type": "missing",
+          "response_schema_expected_type": "str",
+          "pydantic_error_type": "missing",
+          "pydantic_validation_message": "Field required",
+          "location": [
+            "scholarship_status"
+          ]
+        }
+      ],
+      "object_id_handling": {
+        "raw_id_present": true,
+        "raw_id_python_type": "bson.objectid.ObjectId",
+        "excluded_by_api_projection": true,
+        "schema_extra_policy": "ignore"
+      }
+    },
+    {
+      "scholarship_id": "sch_th_001",
+      "scholarship_name": "Thailand International Postgraduate Programme (TIPP) 2026",
+      "country_id": "country_th",
+      "record_group": "new_batch_01",
+      "status": "PASS",
+      "issues": [],
+      "object_id_handling": {
+        "raw_id_present": true,
+        "raw_id_python_type": "bson.objectid.ObjectId",
+        "excluded_by_api_projection": true,
+        "schema_extra_policy": "ignore"
+      }
+    },
+    {
+      "scholarship_id": "sch_tw_001",
+      "scholarship_name": "MOE Taiwan Scholarship 2026",
+      "country_id": "country_tw",
+      "record_group": "new_batch_01",
+      "status": "FAIL",
+      "issues": [
+        {
+          "failing_field": "monthly_allowance.int",
+          "mongodb_value": "<MISSING>",
+          "actual_python_type": "missing",
+          "response_schema_expected_type": "int | float | None (value at monthly_allowance.int)",
+          "pydantic_error_type": "int_parsing",
+          "pydantic_validation_message": "Input should be a valid integer, unable to parse string as an integer",
+          "location": [
+            "monthly_allowance",
+            "int"
+          ]
+        },
+        {
+          "failing_field": "monthly_allowance.float",
+          "mongodb_value": "<MISSING>",
+          "actual_python_type": "missing",
+          "response_schema_expected_type": "int | float | None (value at monthly_allowance.float)",
+          "pydantic_error_type": "float_parsing",
+          "pydantic_validation_message": "Input should be a valid number, unable to parse string as a number",
+          "location": [
+            "monthly_allowance",
+            "float"
+          ]
+        }
+      ],
+      "object_id_handling": {
+        "raw_id_present": true,
+        "raw_id_python_type": "bson.objectid.ObjectId",
+        "excluded_by_api_projection": true,
+        "schema_extra_policy": "ignore"
+      }
+    }
+  ]
+}

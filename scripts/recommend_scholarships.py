@@ -13,6 +13,8 @@ from pymongo.server_api import ServerApi
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
+from scripts.recommend_programs import normalise_degree_level
+
 
 # ---------------------------------------------------------
 # Project configuration
@@ -345,16 +347,17 @@ def evaluate_scholarship(
     # Hard rule: Degree level
     # -----------------------------------------------------
 
-    target_degree = normalise_text(
+    target_degree = normalise_degree_level(
         profile.get("target_degree_level")
     )
 
     scholarship_degrees = {
-        normalise_text(degree)
-        for degree in scholarship.get(
+        normalise_degree_level(value)
+        for value in scholarship.get(
             "degree_levels",
-            [],
+            []
         )
+        if value
     }
 
     if target_degree not in scholarship_degrees:

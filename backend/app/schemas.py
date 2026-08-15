@@ -137,6 +137,29 @@ class CountryListResponse(BaseModel):
         extra="ignore"
     )
 
+
+class AgeRequirement(BaseModel):
+    """Optional structured age rule for one scholarship degree level."""
+
+    model_config = ConfigDict(extra="ignore")
+
+    degree_level: str | None = None
+    operator: str | None = None
+    age: int | None = None
+    description: str | None = None
+
+
+class AllowanceTier(BaseModel):
+    """Optional structured scholarship allowance for one degree level."""
+
+    model_config = ConfigDict(extra="ignore")
+
+    degree_level: str | None = None
+    amount: float | None = None
+    currency: str | None = None
+    description: str | None = None
+
+
 class ScholarshipResponse(BaseModel):
     """Public scholarship data returned by the API."""
 
@@ -162,11 +185,16 @@ class ScholarshipResponse(BaseModel):
     toefl_requirement: int | None = None
     age_limit: int | None = None
 
+    ielts_requirement_text: str | None = None
+    toefl_requirement_text: str | None = None
+    age_requirement_details: list[AgeRequirement] | None = None
+
     funding_type: str
     tuition_coverage: str | None = None
 
     monthly_allowance: int | float | None = None
     allowance_currency: str | None = None
+    monthly_allowance_details: list[AllowanceTier] | None = None
 
     travel_allowance: str | None = None
     accommodation_support: str | None = None
@@ -355,3 +383,59 @@ class UserProfileUpdate(BaseModel):
         max_length=100,
     )
 
+# ---------------------------------------------------------
+# Authentication schemas
+# ---------------------------------------------------------
+
+class AccountRegister(BaseModel):
+    """Data required to register a student account."""
+
+    full_name: str = Field(
+        min_length=2,
+        max_length=100,
+    )
+
+    email: str = Field(
+        min_length=5,
+        max_length=254,
+        pattern=r"^[^@\s]+@[^@\s]+\.[^@\s]+$",
+    )
+
+    password: str = Field(
+        min_length=8,
+        max_length=128,
+    )
+
+
+class AccountLogin(BaseModel):
+    """Credentials required to log in."""
+
+    email: str = Field(
+        min_length=5,
+        max_length=254,
+    )
+
+    password: str = Field(
+        min_length=1,
+        max_length=128,
+    )
+
+
+class AccountResponse(BaseModel):
+    """Public account information."""
+
+    user_id: str
+    full_name: str
+    email: str
+    role: str
+    is_active: bool
+    profile_completed: bool
+
+
+class TokenResponse(BaseModel):
+    """Successful authentication response."""
+
+    access_token: str
+    token_type: str = "bearer"
+    expires_in_minutes: int
+    user: AccountResponse

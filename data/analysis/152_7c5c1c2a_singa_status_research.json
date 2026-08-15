@@ -1,0 +1,31 @@
+{
+  "step": "152.7C-5C-1C-2A",
+  "title": "SINGA Status Research Blocker Record",
+  "status": "BLOCKED_BY_RESEARCH",
+  "generated_at": "2026-08-14T03:26:23.086950+00:00",
+  "source_of_truth_chain": {
+    "status_resolution": "C:\\Users\\X1\\EduPath\\data\\analysis\\152_7c5c1a_required_status_resolution.json",
+    "live_compatibility_repair_plan": "C:\\Users\\X1\\EduPath\\data\\analysis\\152_7c5c1c2_live_compatibility_repair_plan.json",
+    "verified_research_artifact": "C:\\Users\\X1\\EduPath\\data\\staging\\152_7c_batch_01_verified.csv",
+    "live_record_evidence": "C:\\Users\\X1\\EduPath\\data\\analysis\\152_7c5c1c2_live_compatibility_repair_plan.json"
+  },
+  "research_record": {
+    "scholarship_id": "sch_sg_001",
+    "scholarship_name": "Singapore International Graduate Award (SINGA)",
+    "field": "scholarship_status",
+    "current_status_resolution": "RESEARCH_REQUIRED",
+    "old_official_url": "https://www.a-star.edu.sg/talent/for-graduate-studies/singapore-international-graduate-award-singa",
+    "old_url_state": "PAGE_NOT_FOUND",
+    "programme_still_listed": true,
+    "evidence_classification": "PROGRAM_CONFIRMED_STATUS_UNRESOLVED",
+    "current_official_listing_url": "https://www.a-star.edu.sg/Scholarships/for-graduate-studies/singapore-international-graduate-award-singa",
+    "research_blocker_reason": "The previous official SINGA detail URL currently returns Page Not Found. That URL state does not prove that SINGA is closed or discontinued. Current official A*STAR material still lists SINGA as an international graduate/PhD award, but authoritative current application-cycle status or deadline evidence has not been confirmed. OPEN or CLOSED must not be inferred.",
+    "recommended_next_action": "FIND_CURRENT_APPLICATION_SOURCE_OR_OFFICIAL_STATUS_EVIDENCE",
+    "verified_at": "2026-08-14T03:26:23.086950+00:00"
+  },
+  "modifications": {
+    "mongodb": false,
+    "verified_csv": false,
+    "baseline": false
+  }
+}

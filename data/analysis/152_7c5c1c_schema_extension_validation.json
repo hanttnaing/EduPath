@@ -1,0 +1,344 @@
+{
+  "step": "152.7C-5C-1C",
+  "title": "Schema Extension Implementation & Compatibility Validation",
+  "generated_at": "2026-08-14T01:05:07.319241+00:00",
+  "status": "FAIL",
+  "schema_extensions": [
+    "ielts_requirement_text",
+    "toefl_requirement_text",
+    "age_requirement_details",
+    "monthly_allowance_details"
+  ],
+  "nested_models": [
+    "AgeRequirement",
+    "AllowanceTier"
+  ],
+  "summary": {
+    "conflict_tests_executed": 8,
+    "conflict_tests_passed": 8,
+    "conflict_tests_failed": 0,
+    "baseline_records_checked": 12,
+    "baseline_records_passed": 12,
+    "baseline_records_failed": 0,
+    "mongodb_records_checked": 18,
+    "mongodb_records_passed": 14,
+    "mongodb_records_failed": 4
+  },
+  "api_compatibility": {
+    "status": "PASS",
+    "route": "GET /api/scholarships",
+    "response_model": "ScholarshipListResponse",
+    "old_documents_without_companions_valid": true
+  },
+  "results": [
+    {
+      "scope": "CONFLICT_TEST",
+      "record_id": "sch_jp_001",
+      "test_name": "legacy_japan_old_fields",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "scope": "CONFLICT_TEST",
+      "record_id": "test_my_ielts",
+      "test_name": "malaysia_ielts_numeric_plus_text",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "scope": "CONFLICT_TEST",
+      "record_id": "test_my_toefl",
+      "test_name": "malaysia_toefl_numeric_plus_text",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "scope": "CONFLICT_TEST",
+      "record_id": "test_my_age",
+      "test_name": "malaysia_degree_specific_age",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "scope": "CONFLICT_TEST",
+      "record_id": "test_tw_allowance",
+      "test_name": "taiwan_degree_specific_allowance",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "scope": "CONFLICT_TEST",
+      "record_id": "test_th_english",
+      "test_name": "thailand_non_numeric_english",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "scope": "CONFLICT_TEST",
+      "record_id": "test_th_age",
+      "test_name": "thailand_age_maximum_45",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "scope": "CONFLICT_TEST",
+      "record_id": "sch_jp_001",
+      "test_name": "old_document_without_companion_fields",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "scope": "BASELINE",
+      "record_id": "sch_jp_001",
+      "test_name": "extended_schema_validation",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "scope": "BASELINE",
+      "record_id": "sch_jp_002",
+      "test_name": "extended_schema_validation",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "scope": "BASELINE",
+      "record_id": "sch_jp_003",
+      "test_name": "extended_schema_validation",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "scope": "BASELINE",
+      "record_id": "sch_jp_004",
+      "test_name": "extended_schema_validation",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "scope": "BASELINE",
+      "record_id": "sch_jp_005",
+      "test_name": "extended_schema_validation",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "scope": "BASELINE",
+      "record_id": "sch_jp_008",
+      "test_name": "extended_schema_validation",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "scope": "BASELINE",
+      "record_id": "sch_jp_010",
+      "test_name": "extended_schema_validation",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "scope": "BASELINE",
+      "record_id": "sch_jp_012",
+      "test_name": "extended_schema_validation",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "scope": "BASELINE",
+      "record_id": "sch_jp_013",
+      "test_name": "extended_schema_validation",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "scope": "BASELINE",
+      "record_id": "sch_jp_017",
+      "test_name": "extended_schema_validation",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "scope": "BASELINE",
+      "record_id": "sch_jp_019",
+      "test_name": "extended_schema_validation",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "scope": "BASELINE",
+      "record_id": "sch_jp_020",
+      "test_name": "extended_schema_validation",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "scope": "MONGODB",
+      "record_id": "sch_jp_001",
+      "test_name": "extended_schema_validation",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "scope": "MONGODB",
+      "record_id": "sch_jp_002",
+      "test_name": "extended_schema_validation",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "scope": "MONGODB",
+      "record_id": "sch_jp_003",
+      "test_name": "extended_schema_validation",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "scope": "MONGODB",
+      "record_id": "sch_jp_004",
+      "test_name": "extended_schema_validation",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "scope": "MONGODB",
+      "record_id": "sch_jp_005",
+      "test_name": "extended_schema_validation",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "scope": "MONGODB",
+      "record_id": "sch_jp_008",
+      "test_name": "extended_schema_validation",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "scope": "MONGODB",
+      "record_id": "sch_jp_010",
+      "test_name": "extended_schema_validation",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "scope": "MONGODB",
+      "record_id": "sch_jp_012",
+      "test_name": "extended_schema_validation",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "scope": "MONGODB",
+      "record_id": "sch_jp_013",
+      "test_name": "extended_schema_validation",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "scope": "MONGODB",
+      "record_id": "sch_jp_017",
+      "test_name": "extended_schema_validation",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "scope": "MONGODB",
+      "record_id": "sch_jp_019",
+      "test_name": "extended_schema_validation",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "scope": "MONGODB",
+      "record_id": "sch_jp_020",
+      "test_name": "extended_schema_validation",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "scope": "MONGODB",
+      "record_id": "sch_hk_001",
+      "test_name": "extended_schema_validation",
+      "status": "FAIL",
+      "errors": [
+        {
+          "field": "scholarship_status",
+          "message": "Field required",
+          "type": "missing"
+        }
+      ]
+    },
+    {
+      "scope": "MONGODB",
+      "record_id": "sch_my_001",
+      "test_name": "extended_schema_validation",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "scope": "MONGODB",
+      "record_id": "sch_sg_001",
+      "test_name": "extended_schema_validation",
+      "status": "FAIL",
+      "errors": [
+        {
+          "field": "scholarship_status",
+          "message": "Field required",
+          "type": "missing"
+        }
+      ]
+    },
+    {
+      "scope": "MONGODB",
+      "record_id": "sch_kr_001",
+      "test_name": "extended_schema_validation",
+      "status": "FAIL",
+      "errors": [
+        {
+          "field": "scholarship_status",
+          "message": "Field required",
+          "type": "missing"
+        }
+      ]
+    },
+    {
+      "scope": "MONGODB",
+      "record_id": "sch_tw_001",
+      "test_name": "extended_schema_validation",
+      "status": "FAIL",
+      "errors": [
+        {
+          "field": "monthly_allowance.int",
+          "message": "Input should be a valid integer, unable to parse string as an integer",
+          "type": "int_parsing"
+        },
+        {
+          "field": "monthly_allowance.float",
+          "message": "Input should be a valid number, unable to parse string as a number",
+          "type": "float_parsing"
+        }
+      ]
+    },
+    {
+      "scope": "MONGODB",
+      "record_id": "sch_th_001",
+      "test_name": "extended_schema_validation",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "scope": "API",
+      "record_id": "/api/scholarships",
+      "test_name": "old_document_response_compatibility",
+      "status": "PASS",
+      "errors": []
+    }
+  ],
+  "modifications": {
+    "mongodb": false,
+    "verified_csv": false,
+    "baseline": false,
+    "schemas_py": true
+  },
+  "backup": "C:\\Users\\X1\\EduPath\\backups\\pre_152_7c5c1c\\schemas.py"
+}

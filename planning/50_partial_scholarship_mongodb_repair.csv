@@ -1,0 +1,4 @@
+﻿scholarship_id,status,fields_changed,validation
+sch_hk_001,APPLIED,scholarship_status,PASS
+sch_kr_001,APPLIED,scholarship_status,PASS
+sch_tw_001,APPLIED,"monthly_allowance, monthly_allowance_details",PASS

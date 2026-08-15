@@ -75,6 +75,73 @@ def normalise_text(value: Any) -> str:
         str(value).strip().lower().split()
     )
 
+def normalise_degree_level(value: object) -> str:
+    """
+    Convert different degree-level labels into one canonical value.
+
+    Examples:
+    Master's / Master / Masters -> master
+    Bachelor's / Bachelor -> bachelor
+    PhD / Doctoral / Doctorate -> doctorate
+    """
+
+    text = normalise_text(value)
+
+    if not text:
+        return ""
+
+    master_aliases = {
+        "master",
+        "masters",
+        "master's",
+        "master degree",
+        "masters degree",
+        "master's degree",
+    }
+
+    bachelor_aliases = {
+        "bachelor",
+        "bachelors",
+        "bachelor's",
+        "undergraduate",
+        "bachelor degree",
+        "bachelor's degree",
+    }
+
+    doctorate_aliases = {
+        "phd",
+        "ph.d",
+        "ph.d.",
+        "doctoral",
+        "doctorate",
+        "doctoral degree",
+        "doctorate degree",
+    }
+
+    if text in master_aliases:
+        return "master"
+
+    if text in bachelor_aliases:
+        return "bachelor"
+
+    if text in doctorate_aliases:
+        return "doctorate"
+
+    if "master" in text:
+        return "master"
+
+    if "bachelor" in text:
+        return "bachelor"
+
+    if (
+        "phd" in text
+        or "doctoral" in text
+        or "doctorate" in text
+    ):
+        return "doctorate"
+
+    return text
+
 
 def calculate_text_similarity(
     user_major: str,
@@ -146,11 +213,11 @@ def evaluate_program(
     # Hard rule 1: Degree-level eligibility
     # -----------------------------------------------------
 
-    target_degree = normalise_text(
+    target_degree = normalise_degree_level(
         profile.get("target_degree_level")
     )
 
-    program_degree = normalise_text(
+    program_degree = normalise_degree_level(
         program.get("degree_level")
     )
 

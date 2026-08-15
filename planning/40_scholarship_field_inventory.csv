@@ -1,0 +1,36 @@
+﻿field,present_records,populated_records,total_records,coverage_percent,types_found
+accommodation_support,12,0,12,0.0,null:12
+age_limit,12,0,12,0.0,null:12
+allowance_currency,12,1,12,8.33,"null:11, str:1"
+application_cycle,12,12,12,100.0,str:12
+application_deadline,12,1,12,8.33,"null:11, datetime:1"
+application_opening_date,12,1,12,8.33,"null:11, datetime:1"
+collected_at,12,12,12,100.0,datetime:12
+content_hash,12,12,12,100.0,str:12
+country_id,12,12,12,100.0,str:12
+created_at,12,12,12,100.0,datetime:12
+data_quality_status,12,12,12,100.0,str:12
+database_updated_at,12,12,12,100.0,datetime:12
+degree_levels,12,12,12,100.0,list:12
+eligible_nationalities,12,0,12,0.0,null:12
+fields_of_study,12,1,12,8.33,"null:11, list:1"
+freshness_status,12,12,12,100.0,str:12
+funding_type,12,12,12,100.0,str:12
+gpa_scale,12,0,12,0.0,null:12
+health_insurance,12,0,12,0.0,null:12
+host_university_id,12,12,12,100.0,str:12
+ielts_requirement,12,0,12,0.0,null:12
+last_verified_at,12,12,12,100.0,datetime:12
+minimum_gpa,12,0,12,0.0,null:12
+monthly_allowance,12,1,12,8.33,"null:11, int:1"
+official_website,12,12,12,100.0,str:12
+provider_name,12,12,12,100.0,str:12
+provider_type,12,12,12,100.0,str:12
+required_documents,12,1,12,8.33,"null:11, list:1"
+scholarship_id,12,12,12,100.0,str:12
+scholarship_name,12,12,12,100.0,str:12
+scholarship_status,12,12,12,100.0,str:12
+source_url,12,12,12,100.0,str:12
+toefl_requirement,12,0,12,0.0,null:12
+travel_allowance,12,1,12,8.33,"null:11, str:1"
+tuition_coverage,12,1,12,8.33,"null:11, str:1"

@@ -1,0 +1,135 @@
+{
+  "project": "EduPath Analytics",
+  "step": "152.7C-0B",
+  "generated_at": "2026-08-13T14:23:15.184427+00:00",
+  "mode": "APPLY",
+  "mongodb_modified": false,
+  "baseline_source": "C:\\Users\\X1\\EduPath\\backups\\baseline_151_10",
+  "master_source_plan": "C:\\Users\\X1\\EduPath\\data\\staging\\152_7b_scholarship_source_collection.csv",
+  "backup_directory": "C:\\Users\\X1\\EduPath\\backups\\pre_152_7c0b_20260813_205315",
+  "dataset_reconciliation": [
+    {
+      "dataset": "countries",
+      "count_before": 7,
+      "count_after": 7,
+      "restored_ids": []
+    },
+    {
+      "dataset": "user_profiles",
+      "count_before": 2,
+      "count_after": 2,
+      "restored_ids": []
+    }
+  ],
+  "scholarship_batch_strategy": {
+    "master_slots": 18,
+    "batch_count": 3,
+    "records_per_batch": 6,
+    "batch_01": {
+      "record_count": 6,
+      "slots": [
+        "SCH_EXP_01",
+        "SCH_EXP_04",
+        "SCH_EXP_07",
+        "SCH_EXP_10",
+        "SCH_EXP_13",
+        "SCH_EXP_16"
+      ],
+      "countries": [
+        "Hong Kong",
+        "Malaysia",
+        "Singapore",
+        "South Korea",
+        "Taiwan",
+        "Thailand"
+      ],
+      "collection_statuses": [
+        "NOT_COLLECTED",
+        "NOT_COLLECTED",
+        "NOT_COLLECTED",
+        "NOT_COLLECTED",
+        "NOT_COLLECTED",
+        "NOT_COLLECTED"
+      ],
+      "verification_statuses": [
+        "NOT_VERIFIED",
+        "NOT_VERIFIED",
+        "NOT_VERIFIED",
+        "NOT_VERIFIED",
+        "NOT_VERIFIED",
+        "NOT_VERIFIED"
+      ]
+    },
+    "batch_02": {
+      "record_count": 6,
+      "slots": [
+        "SCH_EXP_02",
+        "SCH_EXP_05",
+        "SCH_EXP_08",
+        "SCH_EXP_11",
+        "SCH_EXP_14",
+        "SCH_EXP_17"
+      ],
+      "countries": [
+        "Hong Kong",
+        "Malaysia",
+        "Singapore",
+        "South Korea",
+        "Taiwan",
+        "Thailand"
+      ],
+      "collection_statuses": [
+        "NOT_COLLECTED",
+        "NOT_COLLECTED",
+        "NOT_COLLECTED",
+        "NOT_COLLECTED",
+        "NOT_COLLECTED",
+        "NOT_COLLECTED"
+      ],
+      "verification_statuses": [
+        "NOT_VERIFIED",
+        "NOT_VERIFIED",
+        "NOT_VERIFIED",
+        "NOT_VERIFIED",
+        "NOT_VERIFIED",
+        "NOT_VERIFIED"
+      ]
+    },
+    "batch_03": {
+      "record_count": 6,
+      "slots": [
+        "SCH_EXP_03",
+        "SCH_EXP_06",
+        "SCH_EXP_09",
+        "SCH_EXP_12",
+        "SCH_EXP_15",
+        "SCH_EXP_18"
+      ],
+      "countries": [
+        "Hong Kong",
+        "Malaysia",
+        "Singapore",
+        "South Korea",
+        "Taiwan",
+        "Thailand"
+      ],
+      "collection_statuses": [
+        "NOT_COLLECTED",
+        "NOT_COLLECTED",
+        "NOT_COLLECTED",
+        "NOT_COLLECTED",
+        "NOT_COLLECTED",
+        "NOT_COLLECTED"
+      ],
+      "verification_statuses": [
+        "NOT_VERIFIED",
+        "NOT_VERIFIED",
+        "NOT_VERIFIED",
+        "NOT_VERIFIED",
+        "NOT_VERIFIED",
+        "NOT_VERIFIED"
+      ]
+    }
+  },
+  "next_step": "Step 152.7C-1 Research-Assisted Scholarship Batch 01 Collection"
+}

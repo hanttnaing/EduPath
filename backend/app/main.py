@@ -677,8 +677,6 @@ def list_scholarships(
     collection = database["scholarships"]
 
     try:
-        total = collection.count_documents(query)
-
         cursor = (
             collection
             .find(
@@ -686,7 +684,6 @@ def list_scholarships(
                 {
                     "_id": 0,
                     "content_hash": 0,
-                    "created_at": 0,
                     "database_updated_at": 0,
                 },
             )
@@ -696,11 +693,33 @@ def list_scholarships(
                     ("scholarship_name", ASCENDING),
                 ]
             )
-            .skip(skip)
-            .limit(limit)
         )
 
-        scholarships = list(cursor)
+        raw_scholarships = list(cursor)
+
+        valid_scholarships: list[dict[str, Any]] = []
+
+        for scholarship in raw_scholarships:
+            try:
+                validated = ScholarshipResponse.model_validate(
+                    scholarship
+                )
+
+                valid_scholarships.append(
+                    validated.model_dump()
+                )
+
+            except Exception:
+                # Research-blocked or schema-invalid scholarship records
+                # remain stored in MongoDB but are not exposed through the
+                # normal public candidate pool.
+                continue
+
+        total = len(valid_scholarships)
+
+        scholarships = valid_scholarships[
+            skip : skip + limit
+        ]
 
     except PyMongoError as error:
         raise HTTPException(
@@ -761,6 +780,19 @@ def get_scholarship(
             detail="Scholarship not found.",
         )
 
+    try:
+        ScholarshipResponse.model_validate(
+            scholarship
+        )
+
+    except Exception:
+        raise HTTPException(
+            status_code=status.HTTP_409_CONFLICT,
+            detail=(
+                "Scholarship record is currently unavailable "
+                "because its verification is incomplete."
+            ),
+        )
     return scholarship
 
 # ---------------------------------------------------------

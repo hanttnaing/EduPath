@@ -1,0 +1,67 @@
+{
+  "step": "152.7C-5C-1C-2D",
+  "mode": "APPLY",
+  "cleaned_count": 18,
+  "mongodb_count": 18,
+  "records_synchronized": 3,
+  "changes": [
+    {
+      "scholarship_id": "sch_hk_001",
+      "field": "scholarship_status",
+      "old_value": null,
+      "new_value": "CLOSED"
+    },
+    {
+      "scholarship_id": "sch_kr_001",
+      "field": "scholarship_status",
+      "old_value": null,
+      "new_value": "CLOSED"
+    },
+    {
+      "scholarship_id": "sch_tw_001",
+      "field": "monthly_allowance",
+      "old_value": "15000 undergraduate; 20000 Master's/Doctorate",
+      "new_value": null
+    },
+    {
+      "scholarship_id": "sch_tw_001",
+      "field": "monthly_allowance_details",
+      "old_value": null,
+      "new_value": [
+        {
+          "degree_level": "Bachelor's",
+          "amount": 15000,
+          "currency": "TWD",
+          "description": "Monthly living allowance for undergraduate recipients"
+        },
+        {
+          "degree_level": "Master's",
+          "amount": 20000,
+          "currency": "TWD",
+          "description": "Monthly living allowance for master's recipients"
+        },
+        {
+          "degree_level": "Doctorate",
+          "amount": 20000,
+          "currency": "TWD",
+          "description": "Monthly living allowance for doctoral recipients"
+        }
+      ]
+    }
+  ],
+  "schema_passed": 17,
+  "schema_failed": 1,
+  "schema_failures": [
+    {
+      "scholarship_id": "sch_sg_001",
+      "error": "1 validation error for ScholarshipResponse\nscholarship_status\n  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.13/v/string_type"
+    }
+  ],
+  "remaining_blocker": "sch_sg_001",
+  "blocker_unchanged": true,
+  "baseline_compatibility": "PASS",
+  "backup_path": "C:\\Users\\X1\\EduPath\\backups\\pre_152_7c5c1c2d_20260814_133435\\scholarships_cleaned_before_sync.json",
+  "cleaned_modified": "YES",
+  "mongodb_modified": "NO",
+  "status": "SYNC_APPLIED_API_VALIDATION_REQUIRED"
+}

@@ -1,0 +1,96 @@
+{
+  "step": "152.7C-5C-1C-2B",
+  "title": "Partial Scholarship Compatibility Repair Simulation",
+  "generated_at": "2026-08-14T04:48:53.338387+00:00",
+  "status": "READY_FOR_PARTIAL_REPAIR",
+  "read_only_simulation": true,
+  "validation_source": "LIVE_MONGODB",
+  "live_database_recheck_required": false,
+  "live_connection_error": null,
+  "summary": {
+    "safe_repair_candidates": 3,
+    "research_blockers_excluded": 1,
+    "excluded_scholarship": "sch_sg_001",
+    "records_simulated": 3,
+    "records_passed_after_simulated_repair": 3,
+    "records_failed_after_simulated_repair": 0,
+    "baseline_records_checked": 12,
+    "baseline_records_passed": 12,
+    "baseline_records_failed": 0,
+    "baseline_compatibility": "PASS",
+    "validation_source": "LIVE_MONGODB",
+    "live_database_recheck_required": false
+  },
+  "research_blocker": {
+    "scholarship_id": "sch_sg_001",
+    "field": "scholarship_status",
+    "classification": "RESEARCH_BLOCKER_EXCLUDED_FROM_PARTIAL_REPAIR",
+    "resolution": "RESEARCH_REQUIRED",
+    "modified_in_simulation": false
+  },
+  "repair_simulations": [
+    {
+      "scholarship_id": "sch_hk_001",
+      "scholarship_name": "Hong Kong PhD Fellowship Scheme (HKPFS)",
+      "field": "scholarship_status",
+      "current_mongodb_value": null,
+      "proposed_value": "CLOSED",
+      "proposed_monthly_allowance_details": null,
+      "classification": "SAFE_RESTORE_FROM_VERIFIED_SOURCE",
+      "source_provenance": "Step 152.7C-5C-1A official-cycle status resolution",
+      "simulation_status": "PASS",
+      "simulation_errors": []
+    },
+    {
+      "scholarship_id": "sch_kr_001",
+      "scholarship_name": "Global Korea Scholarship (GKS) - Graduate Degrees",
+      "field": "scholarship_status",
+      "current_mongodb_value": null,
+      "proposed_value": "CLOSED",
+      "proposed_monthly_allowance_details": null,
+      "classification": "SAFE_RESTORE_FROM_VERIFIED_SOURCE",
+      "source_provenance": "Step 152.7C-5C-1A official-cycle status resolution",
+      "simulation_status": "PASS",
+      "simulation_errors": []
+    },
+    {
+      "scholarship_id": "sch_tw_001",
+      "scholarship_name": "MOE Taiwan Scholarship 2026",
+      "field": "monthly_allowance",
+      "current_mongodb_value": "15000 undergraduate; 20000 Master's/Doctorate",
+      "proposed_value": null,
+      "proposed_monthly_allowance_details": [
+        {
+          "degree_level": "Undergraduate",
+          "amount": 15000,
+          "currency": "TWD",
+          "description": "15000 TWD per month for Undergraduate"
+        },
+        {
+          "degree_level": "Master's",
+          "amount": 20000,
+          "currency": "TWD",
+          "description": "20000 TWD per month for Master's"
+        },
+        {
+          "degree_level": "Doctorate",
+          "amount": 20000,
+          "currency": "TWD",
+          "description": "20000 TWD per month for Doctorate"
+        }
+      ],
+      "classification": "STRUCTURED_SCHEMA_MIGRATION",
+      "source_provenance": "Steps 152.7C-5C-1B and 1C-2 verified tiered allowance design",
+      "simulation_status": "PASS",
+      "simulation_errors": []
+    }
+  ],
+  "fallback_evidence": null,
+  "modifications": {
+    "mongodb": false,
+    "verified_csv": false,
+    "baseline": false,
+    "cleaned_datasets": false,
+    "source_plan_files": false
+  }
+}

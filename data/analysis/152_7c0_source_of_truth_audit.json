@@ -1,0 +1,117 @@
+{
+  "project": "EduPath Analytics",
+  "step": "152.7C-0A",
+  "generated_at": "2026-08-13T14:24:27.495249+00:00",
+  "mode": "READ_ONLY",
+  "mongodb_modified": false,
+  "dataset_comparison": [
+    {
+      "dataset": "countries",
+      "id_field": "country_id",
+      "cleaned_count": 7,
+      "baseline_count": 7,
+      "same_count": true,
+      "same_ids": true,
+      "missing_from_cleaned": [],
+      "extra_in_cleaned": [],
+      "status": "MATCH"
+    },
+    {
+      "dataset": "universities",
+      "id_field": "university_id",
+      "cleaned_count": 54,
+      "baseline_count": 54,
+      "same_count": true,
+      "same_ids": true,
+      "missing_from_cleaned": [],
+      "extra_in_cleaned": [],
+      "status": "MATCH"
+    },
+    {
+      "dataset": "programs",
+      "id_field": "program_id",
+      "cleaned_count": 36,
+      "baseline_count": 36,
+      "same_count": true,
+      "same_ids": true,
+      "missing_from_cleaned": [],
+      "extra_in_cleaned": [],
+      "status": "MATCH"
+    },
+    {
+      "dataset": "scholarships",
+      "id_field": "scholarship_id",
+      "cleaned_count": 12,
+      "baseline_count": 12,
+      "same_count": true,
+      "same_ids": true,
+      "missing_from_cleaned": [],
+      "extra_in_cleaned": [],
+      "status": "MATCH"
+    },
+    {
+      "dataset": "user_profiles",
+      "id_field": "user_id",
+      "cleaned_count": 2,
+      "baseline_count": 2,
+      "same_count": true,
+      "same_ids": true,
+      "missing_from_cleaned": [],
+      "extra_in_cleaned": [],
+      "status": "MATCH"
+    }
+  ],
+  "scholarship_source_plan": {
+    "file": "C:\\Users\\X1\\EduPath\\data\\staging\\152_7b_scholarship_source_collection.csv",
+    "column_count": 47,
+    "record_count": 18,
+    "country_distribution": {
+      "Hong Kong": 3,
+      "Malaysia": 3,
+      "Singapore": 3,
+      "South Korea": 3,
+      "Taiwan": 3,
+      "Thailand": 3
+    },
+    "collection_status_distribution": {
+      "NOT_COLLECTED": 18
+    },
+    "verification_status_distribution": {
+      "NOT_VERIFIED": 18
+    },
+    "duplicate_slots": []
+  },
+  "scholarship_batch_01": {
+    "file": "C:\\Users\\X1\\EduPath\\data\\staging\\152_7c_batch_01_verified.csv",
+    "column_count": 47,
+    "record_count": 6,
+    "country_distribution": {
+      "Hong Kong": 1,
+      "Malaysia": 1,
+      "Singapore": 1,
+      "South Korea": 1,
+      "Taiwan": 1,
+      "Thailand": 1
+    },
+    "collection_status_distribution": {
+      "NOT_COLLECTED": 6
+    },
+    "verification_status_distribution": {
+      "NOT_VERIFIED": 6
+    },
+    "scholarship_names_present": 0,
+    "official_source_urls_present": 0,
+    "appears_to_be_placeholder_file": true
+  },
+  "validator": {
+    "file": "C:\\Users\\X1\\EduPath\\analysis_layer\\validate_scholarship_batch_01.py",
+    "expected_records": 6,
+    "current_batch_records": 6,
+    "status": "MATCH"
+  },
+  "recommendations": [
+    "152_7c_batch_01_verified.csv is not yet a genuinely verified scholarship dataset. It still needs official-source research before validation/import.",
+    "Keep the 18-row Step 152.7B source plan as the master expansion inventory. Create verified batches from these slots rather than replacing the plan.",
+    "No MongoDB write should occur during Step 152.7C-0A."
+  ]
+}

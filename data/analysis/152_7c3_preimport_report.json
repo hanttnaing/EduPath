@@ -1,0 +1,36 @@
+{
+  "step": "152.7C-3",
+  "title": "Scholarship ID Mapping & Pre-Import Package",
+  "generated_at": "2026-08-13T21:40:15.954471",
+  "mongodb_modified": false,
+  "baseline_scholarships": 12,
+  "verified_batch_records": 6,
+  "projected_scholarship_count": 18,
+  "existing_ids": [
+    "sch_jp_001",
+    "sch_jp_002",
+    "sch_jp_003",
+    "sch_jp_004",
+    "sch_jp_005",
+    "sch_jp_008",
+    "sch_jp_010",
+    "sch_jp_012",
+    "sch_jp_013",
+    "sch_jp_017",
+    "sch_jp_019",
+    "sch_jp_020"
+  ],
+  "new_ids": [
+    "sch_hk_001",
+    "sch_kr_001",
+    "sch_my_001",
+    "sch_sg_001",
+    "sch_th_001",
+    "sch_tw_001"
+  ],
+  "country_validation": "PASS",
+  "duplicate_name_check": "PASS",
+  "duplicate_id_check": "PASS",
+  "output_csv": "C:\\Users\\X1\\EduPath\\data\\staging\\152_7c_batch_01_preimport.csv",
+  "output_json": "C:\\Users\\X1\\EduPath\\data\\analysis\\152_7c_batch_01_preimport.json"
+}
