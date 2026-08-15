@@ -138,6 +138,19 @@ function App() {
   ] = useState('')
 
   // =========================
+  // SAVED SCHOLARSHIP STATE
+  // =========================
+  const [
+    savedScholarshipIds,
+    setSavedScholarshipIds,
+  ] = useState([])
+
+  const [
+    savingScholarshipId,
+    setSavingScholarshipId,
+  ] = useState('')
+
+  // =========================
   // SAVED OPPORTUNITIES STATE
   // =========================
   const [
@@ -265,6 +278,7 @@ function App() {
         ) {
           if (!cancelled) {
             setSavedProgramIds([])
+            setSavedScholarshipIds([])
           }
 
           return
@@ -296,10 +310,24 @@ function App() {
                     .filter(Boolean)
                 : []
             )
+
+            setSavedScholarshipIds(
+              Array.isArray(
+                result.saved_scholarships
+              )
+                ? result.saved_scholarships
+                    .map(
+                      (item) =>
+                        item.scholarship_id
+                    )
+                    .filter(Boolean)
+                : []
+            )
           }
         } catch {
           if (!cancelled) {
             setSavedProgramIds([])
+            setSavedScholarshipIds([])
           }
         }
       }
@@ -373,6 +401,71 @@ function App() {
         )
       } finally {
         setSavingProgramId('')
+      }
+    }
+
+  // =========================
+  // SAVE / UNSAVE SCHOLARSHIP
+  // =========================
+  const handleToggleScholarshipSave =
+    async (scholarshipId) => {
+      if (!scholarshipId) {
+        return
+      }
+
+      const isSaved =
+        savedScholarshipIds.includes(
+          scholarshipId
+        )
+
+      try {
+        setSavingScholarshipId(
+          scholarshipId
+        )
+
+        const response =
+          await authFetch(
+            `/api/me/saved/scholarships/${encodeURIComponent(
+              scholarshipId
+            )}`,
+            {
+              method:
+                isSaved
+                  ? 'DELETE'
+                  : 'POST',
+            }
+          )
+
+        if (!response.ok) {
+          throw new Error(
+            await readApiError(
+              response,
+              isSaved
+                ? 'Unable to remove scholarship.'
+                : 'Unable to save scholarship.'
+            )
+          )
+        }
+
+        setSavedScholarshipIds(
+          (currentIds) =>
+            isSaved
+              ? currentIds.filter(
+                  (id) =>
+                    id !==
+                    scholarshipId
+                )
+              : currentIds.includes(
+                    scholarshipId
+                  )
+                ? currentIds
+                : [
+                    ...currentIds,
+                    scholarshipId,
+                  ]
+        )
+      } finally {
+        setSavingScholarshipId('')
       }
     }
 
@@ -547,6 +640,7 @@ function App() {
     setAuthMode('login')
     setAuthStatus('guest')
     setSavedProgramIds([])
+    setSavedScholarshipIds([])
 
     setShowUserProfile(false)
     setShowRecommendationModal(false)
@@ -561,6 +655,8 @@ function App() {
       setCurrentAccount(null)
       setAuthMode('login')
       setAuthStatus('guest')
+      setSavedProgramIds([])
+      setSavedScholarshipIds([])
 
       setShowUserProfile(false)
       setShowRecommendationModal(false)
@@ -1889,6 +1985,18 @@ function App() {
                         }
                         hostUniversityName={
                           hostUniversityName
+                        }
+                        isSaved={
+                          savedScholarshipIds.includes(
+                            scholarship.scholarship_id
+                          )
+                        }
+                        saving={
+                          savingScholarshipId ===
+                          scholarship.scholarship_id
+                        }
+                        onToggleSave={
+                          handleToggleScholarshipSave
                         }
                       />
                     )

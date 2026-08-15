@@ -429,28 +429,15 @@ h2 {
    ========================================================= */
 
 .university-card {
+  background: #ffffff;
+  border: 1px solid #e7eaf4;
+  border-radius: 24px;
+  padding: 28px;
   display: flex;
   flex-direction: column;
-
-  min-width: 0;
-
-  padding: 22px;
-
-  border: 1px solid #e3e5ec;
-  border-radius: 15px;
-
-  background: #ffffff;
-
-  text-align: left;
-
-  box-shadow:
-    0 4px 16px
-    rgba(15, 23, 42, 0.045);
-
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease,
-    border-color 0.2s ease;
+  height: 100%;
+  min-height: 240px;
+  box-sizing: border-box;
 }
 
 .university-card:hover {
@@ -466,9 +453,10 @@ h2 {
 .university-card-header {
   display: flex;
   align-items: flex-start;
-
   gap: 14px;
+  margin-bottom: 12px;
 }
+
 
 .university-icon {
   flex-shrink: 0;
@@ -477,58 +465,34 @@ h2 {
   line-height: 1;
 }
 
-.university-card h3 {
+.university-card-header h3 {
   margin: 0 0 8px;
-
-  color: #29293d;
-
-  font-size: 19px;
-  font-weight: 750;
-
-  line-height: 1.4;
+  line-height: 1.3;
 }
 
 .university-location {
   margin: 0;
-
-  color: #747787;
-
-  font-size: 14px;
-
-  line-height: 1.5;
 }
 
+
 .website-button {
+  margin-top: auto;
+  align-self: flex-start;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
-  align-self: flex-start;
-
-  margin-top: 20px;
-
-  padding: 10px 15px;
-
-  border-radius: 8px;
-
-  background: #5146e5;
-
-  color: #ffffff;
-
-  font-size: 14px;
-  font-weight: 650;
-
-  text-decoration: none;
-
-  transition:
-    background 0.18s ease,
-    transform 0.18s ease;
+  min-width: 210px;
 }
 
 .website-button:hover {
   background: #4338ca;
 
   transform: translateY(-1px);
+}
+
+.university-card p {
+  margin-top: 0;
+  margin-bottom: 10px;
 }
 
 
@@ -1549,6 +1513,7 @@ h2 {
   .program-grid,
   .scholarship-grid {
     grid-template-columns: 1fr;
+    align-items: stretch;
 
     gap: 16px;
   }
@@ -1962,4 +1927,254 @@ h2 {
   .program-card-actions {
     grid-template-columns: 1fr;
   }
+}
+
+
+/* =========================================================
+   FINAL SCHOLARSHIP CARD ACTIONS
+   ========================================================= */
+
+.scholarship-card {
+  display: flex;
+  flex-direction: column;
+
+  height: 100%;
+}
+
+.scholarship-card-actions {
+  display: grid;
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 12px;
+
+  width: 100%;
+
+  margin-top: auto;
+  padding-top: 20px;
+}
+
+.scholarship-save-button,
+.scholarship-card-actions .scholarship-link,
+.scholarship-card-actions
+.scholarship-link-disabled {
+  width: 100%;
+  min-height: 50px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0;
+  padding: 10px 12px;
+
+  border-radius: 10px;
+
+  font-size: 12px;
+  font-weight: 750;
+
+  line-height: 1.25;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Not saved */
+
+.scholarship-save-button {
+  border: 1px solid #c7d2fe;
+
+  background: #ffffff;
+  color: #4f46e5;
+
+  cursor: pointer;
+}
+
+.scholarship-save-button:hover:not(:disabled) {
+  border-color: #4f46e5;
+
+  background: #eef2ff;
+}
+
+/* Saved */
+
+.scholarship-save-button.saved {
+  border-color: #86efac;
+
+  background: #ecfdf3;
+  color: #15803d;
+}
+
+.scholarship-save-button.saved:hover:not(:disabled) {
+  border-color: #4ade80;
+
+  background: #dcfce7;
+  color: #166534;
+}
+
+.scholarship-save-button:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+/* Official page */
+
+.scholarship-card-actions .scholarship-link {
+  border: 1px solid #4f46e5;
+
+  background: #4f46e5;
+  color: #ffffff;
+}
+
+/* Missing official page */
+
+.scholarship-card-actions
+.scholarship-link-disabled {
+  border: 1px solid #e5e7eb;
+
+  background: #f8fafc;
+  color: #94a3b8;
+}
+
+@media (max-width: 560px) {
+  .scholarship-card-actions {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* =========================================================
+   FINAL UNIVERSITY CARD RESTORE
+   Restore original appearance while keeping buttons aligned.
+   ========================================================= */
+
+.university-card {
+  display: flex;
+  flex-direction: column;
+
+  height: 100%;
+
+  text-align: left;
+}
+
+.university-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  gap: 14px;
+
+  text-align: left;
+}
+
+.university-card-header > div {
+  flex: 1;
+  min-width: 0;
+
+  text-align: left;
+}
+
+.university-card h3 {
+  margin: 0 0 8px;
+
+  text-align: left;
+  line-height: 1.3;
+}
+
+.university-location {
+  margin: 0;
+
+  text-align: left;
+}
+
+/* Keep the website button at the bottom of every card */
+
+.university-card .website-button {
+  margin-top: auto;
+
+  align-self: flex-start;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 0;
+  width: auto;
+
+  padding: 13px 18px;
+
+  border: 1px solid #4f46e5;
+  border-radius: 10px;
+
+  background: #4f46e5;
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+
+  box-shadow:
+    0 8px 20px
+    rgba(79, 70, 229, 0.16);
+}
+
+.university-card .website-button:hover {
+  background: #4338ca;
+  border-color: #4338ca;
+  color: #ffffff;
+
+  text-decoration: none;
+
+  transform: translateY(-1px);
+}
+
+/* Let cards in the same grid row stretch equally */
+
+.university-grid,
+.universities-grid {
+  align-items: stretch;
+}
+
+/* =========================================================
+   UNIVERSITY CARD TYPOGRAPHY POLISH
+   ========================================================= */
+
+.university-card h3 {
+  margin: 0 0 7px;
+
+  font-size: 19px;
+  font-weight: 750;
+  line-height: 1.3;
+
+  letter-spacing: -0.2px;
+
+  color: #202038;
+}
+
+.university-location {
+  margin: 0;
+
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.5;
+
+  color: #6f7282;
+}
+
+.university-icon {
+  font-size: 26px;
+  line-height: 1;
+}
+
+.university-card .website-button {
+  padding: 12px 17px;
+
+  font-size: 13px;
+  font-weight: 650;
+
+  letter-spacing: 0;
+
+  border-radius: 9px;
 }

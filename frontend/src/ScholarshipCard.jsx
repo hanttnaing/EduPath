@@ -1,6 +1,9 @@
 function ScholarshipCard({
   scholarship,
   hostUniversityName,
+  isSaved = false,
+  saving = false,
+  onToggleSave,
 }) {  // =========================
   // DATE FORMATTER
   // =========================
@@ -350,20 +353,45 @@ function ScholarshipCard({
             </div>
         )}
 
-        {scholarshipUrl ? (
-            <a
-            className="scholarship-link"
-            href={scholarshipUrl}
-            target="_blank"
-            rel="noreferrer"
+        <div className="scholarship-card-actions">
+          {onToggleSave && (
+            <button
+              type="button"
+              className={`scholarship-save-button ${
+                isSaved
+                  ? 'saved'
+                  : ''
+              }`}
+              disabled={saving}
+              onClick={() =>
+                onToggleSave(
+                  scholarship.scholarship_id
+                )
+              }
             >
-            View Scholarship
+              {saving
+                ? 'Updating...'
+                : isSaved
+                  ? 'Saved \u2713'
+                  : 'Save Scholarship'}
+            </button>
+          )}
+
+          {scholarshipUrl ? (
+            <a
+              className="scholarship-link"
+              href={scholarshipUrl}
+              target="_blank"
+              rel="noreferrer"
+            >
+              View Scholarship
             </a>
-        ) : (
+          ) : (
             <span className="scholarship-link-disabled">
-            Official link unavailable
+              Official link unavailable
             </span>
-        )}
+          )}
+        </div>
     </article>
   )
 }
