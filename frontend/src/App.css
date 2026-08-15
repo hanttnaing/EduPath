@@ -1773,3 +1773,193 @@ h2 {
     width: 100%;
   }
 }
+
+/* =========================================================
+   PROGRAM CARD SAVE ACTIONS
+   ========================================================= */
+
+.program-card-actions {
+  display: grid;
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 10px;
+
+  margin-top: 18px;
+}
+
+.program-save-button,
+.program-card-actions .program-link {
+  width: 100%;
+  min-height: 42px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0;
+  padding: 9px 12px;
+
+  border-radius: 9px;
+
+  font-size: 12px;
+  font-weight: 750;
+
+  text-align: center;
+  text-decoration: none;
+}
+
+.program-save-button {
+  border: 1px solid #c7d2fe;
+
+  background: #ffffff;
+  color: #4f46e5;
+}
+
+.program-save-button:hover:not(:disabled) {
+  background: #eef2ff;
+}
+
+.program-save-button.saved {
+  border-color: #4f46e5;
+
+  background: #4f46e5;
+  color: #ffffff;
+}
+
+.program-save-button:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+@media (max-width: 560px) {
+  .program-card-actions {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* =========================================================
+   PROGRAM CARD FINAL SAVE STYLE
+   ========================================================= */
+
+/* Programme icon */
+
+.program-icon {
+  width: 42px;
+  height: 42px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 12px;
+
+  background: #eef2ff;
+
+  font-size: 22px;
+  line-height: 1;
+}
+
+
+/* Normal unsaved button */
+
+.program-save-button {
+  border: 1px solid #c7d2fe;
+
+  background: #ffffff;
+  color: #4f46e5;
+
+  box-shadow: none;
+}
+
+.program-save-button:hover:not(:disabled) {
+  border-color: #4f46e5;
+
+  background: #eef2ff;
+  color: #4338ca;
+}
+
+
+/* Saved state */
+
+.program-save-button.saved {
+  border-color: #86efac;
+
+  background: #ecfdf3;
+  color: #15803d;
+
+  box-shadow: none;
+}
+
+.program-save-button.saved:hover:not(:disabled) {
+  border-color: #4ade80;
+
+  background: #dcfce7;
+  color: #166534;
+}
+
+
+/* =========================================================
+   FINAL PROGRAM CARD ALIGNMENT
+   Keep all programme action buttons on the same bottom line.
+   ========================================================= */
+
+.program-card {
+  display: flex;
+  flex-direction: column;
+
+  height: 100%;
+}
+
+.program-card-header {
+  align-items: flex-start;
+}
+
+.program-details {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 20px;
+}
+
+.program-card-actions {
+  margin-top: auto;
+
+  display: grid;
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 12px;
+
+  width: 100%;
+}
+
+.program-save-button,
+.program-card-actions .program-link {
+  width: 100%;
+  min-height: 52px;
+
+  margin: 0;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px 12px;
+
+  text-align: center;
+  line-height: 1.25;
+
+  white-space: normal;
+}
+
+@media (max-width: 560px) {
+  .program-card-actions {
+    grid-template-columns: 1fr;
+  }
+}

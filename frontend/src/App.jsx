@@ -125,6 +125,19 @@ function App() {
   ] = useState(false)
 
   // =========================
+  // SAVED PROGRAMME STATE
+  // =========================
+  const [
+    savedProgramIds,
+    setSavedProgramIds,
+  ] = useState([])
+
+  const [
+    savingProgramId,
+    setSavingProgramId,
+  ] = useState('')
+
+  // =========================
   // SAVED OPPORTUNITIES STATE
   // =========================
   const [
@@ -237,6 +250,131 @@ function App() {
     selectedField,
     setSelectedField,
   ] = useState('all')
+
+  // =========================
+  // LOAD SAVED PROGRAMMES
+  // =========================
+  useEffect(() => {
+    let cancelled = false
+
+    const loadSavedProgrammes =
+      async () => {
+        if (
+          authStatus !==
+          'authenticated'
+        ) {
+          if (!cancelled) {
+            setSavedProgramIds([])
+          }
+
+          return
+        }
+
+        try {
+          const response =
+            await authFetch(
+              '/api/me/saved'
+            )
+
+          if (!response.ok) {
+            return
+          }
+
+          const result =
+            await response.json()
+
+          if (!cancelled) {
+            setSavedProgramIds(
+              Array.isArray(
+                result.saved_programs
+              )
+                ? result.saved_programs
+                    .map(
+                      (item) =>
+                        item.program_id
+                    )
+                    .filter(Boolean)
+                : []
+            )
+          }
+        } catch {
+          if (!cancelled) {
+            setSavedProgramIds([])
+          }
+        }
+      }
+
+    loadSavedProgrammes()
+
+    return () => {
+      cancelled = true
+    }
+  }, [authStatus])
+
+  // =========================
+  // SAVE / UNSAVE PROGRAMME
+  // =========================
+  const handleToggleProgramSave =
+    async (programId) => {
+      if (!programId) {
+        return
+      }
+
+      const isSaved =
+        savedProgramIds.includes(
+          programId
+        )
+
+      try {
+        setSavingProgramId(
+          programId
+        )
+
+        const response =
+          await authFetch(
+            `/api/me/saved/programs/${encodeURIComponent(
+              programId
+            )}`,
+            {
+              method:
+                isSaved
+                  ? 'DELETE'
+                  : 'POST',
+            }
+          )
+
+        if (!response.ok) {
+          throw new Error(
+            await readApiError(
+              response,
+              isSaved
+                ? 'Unable to remove programme.'
+                : 'Unable to save programme.'
+            )
+          )
+        }
+
+        setSavedProgramIds(
+          (currentIds) =>
+            isSaved
+              ? currentIds.filter(
+                  (id) =>
+                    id !==
+                    programId
+                )
+              : currentIds.includes(
+                    programId
+                  )
+                ? currentIds
+                : [
+                    ...currentIds,
+                    programId,
+                  ]
+        )
+      } finally {
+        setSavingProgramId('')
+      }
+    }
 
   // =========================
   // LOAD COUNTRIES
@@ -408,6 +546,7 @@ function App() {
     setCurrentAccount(null)
     setAuthMode('login')
     setAuthStatus('guest')
+    setSavedProgramIds([])
 
     setShowUserProfile(false)
     setShowRecommendationModal(false)
@@ -1495,6 +1634,18 @@ function App() {
                           university
                             ?.university_name ||
                           ''
+                        }
+                        isSaved={
+                          savedProgramIds.includes(
+                            program.program_id
+                          )
+                        }
+                        saving={
+                          savingProgramId ===
+                          program.program_id
+                        }
+                        onToggleSave={
+                          handleToggleProgramSave
                         }
                       />
                     )
