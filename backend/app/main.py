@@ -2,7 +2,9 @@ from __future__ import annotations
 from .analysis_routes import router as analysis_router
 from .auth_routes import router as auth_router
 from uuid import uuid4
+import os
 from fastapi.middleware.cors import CORSMiddleware
+from dotenv import load_dotenv
 
 from contextlib import asynccontextmanager
 from typing import Any
@@ -95,25 +97,36 @@ app = FastAPI(
 app.include_router(analysis_router)
 app.include_router(auth_router)
 
+# ---------------------------------------------------------
+# Environment + CORS configuration
+# ---------------------------------------------------------
+
+load_dotenv()
+
+DEFAULT_CORS_ORIGINS = [
+    "http://localhost:5173",
+    "http://127.0.0.1:5173",
+    "http://localhost:5174",
+    "http://127.0.0.1:5174",
+]
+
+CORS_ORIGINS = [
+    origin.strip().rstrip("/")
+    for origin in os.getenv(
+        "CORS_ORIGINS",
+        ",".join(DEFAULT_CORS_ORIGINS),
+    ).split(",")
+    if origin.strip()
+]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:5173",
-        "http://127.0.0.1:5173",
-
-        "http://localhost:5174",
-        "http://127.0.0.1:5174",
-
-        "http://localhost:5175",
-        "http://127.0.0.1:5175",
-
-        "http://localhost:5176",
-        "http://127.0.0.1:5176",
-    ],
+    allow_origins=CORS_ORIGINS,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
 
 # ---------------------------------------------------------
 # Root endpoint

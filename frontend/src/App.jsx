@@ -2385,6 +2385,153 @@ function App() {
               </div>
             </section>
 
+
+
+            {/* =========================
+                HOME FOOTER
+            ========================== */}
+
+            <footer className="edupath-home-footer">
+
+              <div className="edupath-footer-main">
+
+                {/* Brand */}
+                <div className="edupath-footer-brand">
+
+                  <div className="edupath-footer-brand-row">
+
+                    <img
+                      src={EduPathLogoMark}
+                      alt="EduPath"
+                      className="edupath-footer-logo"
+                    />
+
+                    <div>
+                      <strong>
+                        EduPath
+                      </strong>
+
+                      <span>
+                        Analytics
+                      </span>
+                    </div>
+
+                  </div>
+
+                  <p>
+                    Discover universities,
+                    programmes and scholarships
+                    that match your academic goals,
+                    preferences and budget.
+                  </p>
+
+                </div>
+
+
+                {/* Explore */}
+                <div className="edupath-footer-column">
+
+                  <h4>
+                    Explore
+                  </h4>
+
+                  <button
+                    type="button"
+                    onClick={() =>
+                      setActivePage(
+                        'universities'
+                      )
+                    }
+                  >
+                    Universities
+                  </button>
+
+                  <button
+                    type="button"
+                    onClick={() =>
+                      setActivePage(
+                        'programs'
+                      )
+                    }
+                  >
+                    Study Programmes
+                  </button>
+
+                  <button
+                    type="button"
+                    onClick={() =>
+                      setActivePage(
+                        'scholarships'
+                      )
+                    }
+                  >
+                    Scholarships
+                  </button>
+
+                </div>
+
+
+                {/* Student tools */}
+                <div className="edupath-footer-column">
+
+                  <h4>
+                    Student Tools
+                  </h4>
+
+                  <button
+                    type="button"
+                    onClick={() =>
+                      setActivePage(
+                        'recommendations'
+                      )
+                    }
+                  >
+                    Recommendations
+                  </button>
+
+                  <button
+                    type="button"
+                    onClick={() =>
+                      setActivePage(
+                        'saved'
+                      )
+                    }
+                  >
+                    Saved Opportunities
+                  </button>
+
+                  <button
+                    type="button"
+                    onClick={() =>
+                      setActivePage(
+                        'profile'
+                      )
+                    }
+                  >
+                    My Profile
+                  </button>
+
+                </div>
+
+              </div>
+
+
+              <div className="edupath-footer-bottom">
+
+                <p>
+                  {'\u00A9'} 2026 EduPath.
+                  University & Scholarship
+                  Recommendation Platform.
+                </p>
+
+                <p>
+                  Discover {'\u2022'} Compare {'\u2022'} Get Matched
+                </p>
+
+              </div>
+
+            </footer>
+
           </section>
         )}
 

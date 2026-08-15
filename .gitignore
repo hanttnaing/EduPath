@@ -38,3 +38,17 @@ backups/
 
 # Generated current dashboard snapshot
 analysis_dashboard_current.json
+
+# Environment files
+.env
+.env.local
+.env.production
+.env.development
+frontend/.env
+frontend/.env.local
+frontend/.env.production
+backend/.env
+
+# Keep example configuration files
+!.env.example
+!frontend/.env.example

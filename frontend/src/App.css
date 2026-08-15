@@ -4339,3 +4339,273 @@ img.edupath-brand-mark {
     margin-bottom: 20px !important;
   }
 }
+
+
+
+
+/* =========================================================
+   EDUPATH HOME FOOTER
+   ========================================================= */
+
+.edupath-home-footer {
+  width: 100%;
+
+  margin-top: 56px;
+
+  overflow: hidden;
+
+  border-radius: 24px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #11162f 0%,
+      #171a3b 55%,
+      #22205a 100%
+    );
+
+  color: #ffffff;
+}
+
+
+/* Main footer */
+
+.edupath-footer-main {
+  display: grid;
+
+  grid-template-columns:
+    minmax(280px, 1.6fr)
+    minmax(150px, 0.7fr)
+    minmax(170px, 0.7fr);
+
+  gap: 70px;
+
+  padding: 54px 58px 48px;
+
+  text-align: left;
+}
+
+
+/* Brand */
+
+.edupath-footer-brand {
+  max-width: 470px;
+}
+
+.edupath-footer-brand-row {
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+
+  margin-bottom: 20px;
+}
+
+.edupath-footer-logo {
+  width: 58px;
+  height: 58px;
+
+  display: block;
+
+  object-fit: contain;
+}
+
+.edupath-footer-brand-row div {
+  display: flex;
+  flex-direction: column;
+
+  gap: 1px;
+}
+
+.edupath-footer-brand-row strong {
+  color: #ffffff;
+
+  font-size: 23px;
+  font-weight: 800;
+
+  letter-spacing: -0.5px;
+}
+
+.edupath-footer-brand-row span {
+  color: #9da6ff;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  text-transform: uppercase;
+  letter-spacing: 1.8px;
+}
+
+.edupath-footer-brand > p {
+  margin: 0;
+
+  max-width: 450px;
+
+  color: #b9bfd8;
+
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+
+/* Footer columns */
+
+.edupath-footer-column {
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  gap: 13px;
+}
+
+.edupath-footer-column h4 {
+  margin:
+    6px
+    0
+    10px;
+
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 800;
+
+  letter-spacing: 0.2px;
+}
+
+.edupath-footer-column button {
+  appearance: none;
+
+  padding: 0;
+
+  border: 0;
+
+  background: transparent;
+
+  color: #b9bfd8;
+
+  font: inherit;
+  font-size: 13px;
+  font-weight: 500;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    color 0.18s ease,
+    transform 0.18s ease;
+}
+
+.edupath-footer-column button:hover {
+  color: #ffffff;
+
+  transform: translateX(3px);
+}
+
+
+/* Bottom */
+
+.edupath-footer-bottom {
+  min-height: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 24px;
+
+  padding:
+    20px
+    58px;
+
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.09);
+}
+
+.edupath-footer-bottom p {
+  margin: 0;
+
+  color: #9299b8;
+
+  font-size: 11px;
+  font-weight: 500;
+
+  line-height: 1.5;
+}
+
+.edupath-footer-bottom p:last-child {
+  color: #aeb4ff;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   FOOTER RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .edupath-footer-main {
+    grid-template-columns:
+      1fr
+      1fr;
+
+    gap: 38px;
+
+    padding:
+      44px
+      36px;
+  }
+
+  .edupath-footer-brand {
+    grid-column: 1 / -1;
+  }
+
+  .edupath-footer-bottom {
+    padding:
+      20px
+      36px;
+  }
+}
+
+
+@media (max-width: 600px) {
+
+  .edupath-home-footer {
+    margin-top: 36px;
+
+    border-radius: 18px;
+  }
+
+  .edupath-footer-main {
+    grid-template-columns: 1fr;
+
+    gap: 32px;
+
+    padding:
+      38px
+      26px;
+  }
+
+  .edupath-footer-brand {
+    grid-column: auto;
+  }
+
+  .edupath-footer-logo {
+    width: 52px;
+    height: 52px;
+  }
+
+  .edupath-footer-bottom {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    padding:
+      20px
+      26px;
+  }
+}
