@@ -81,6 +81,184 @@ function extractCountryItems(data) {
   return []
 }
 
+
+const EXPLORE_PAGE_SIZE = 12
+
+function getExploreTotalPages(items) {
+  return Math.max(
+    1,
+    Math.ceil(
+      items.length / EXPLORE_PAGE_SIZE
+    )
+  )
+}
+
+function getExploreSafePage(
+  items,
+  page
+) {
+  return Math.min(
+    Math.max(page, 1),
+    getExploreTotalPages(items)
+  )
+}
+
+function getExplorePageItems(
+  items,
+  page
+) {
+  const safePage =
+    getExploreSafePage(
+      items,
+      page
+    )
+
+  const start =
+    (safePage - 1) *
+    EXPLORE_PAGE_SIZE
+
+  return items.slice(
+    start,
+    start + EXPLORE_PAGE_SIZE
+  )
+}
+
+function getExplorePageStart(
+  items,
+  page
+) {
+  if (!items.length) {
+    return 0
+  }
+
+  const safePage =
+    getExploreSafePage(
+      items,
+      page
+    )
+
+  return (
+    (safePage - 1) *
+      EXPLORE_PAGE_SIZE +
+    1
+  )
+}
+
+function getExplorePageEnd(
+  items,
+  page
+) {
+  if (!items.length) {
+    return 0
+  }
+
+  const safePage =
+    getExploreSafePage(
+      items,
+      page
+    )
+
+  return Math.min(
+    safePage *
+      EXPLORE_PAGE_SIZE,
+    items.length
+  )
+}
+
+function ExplorePagination({
+  items,
+  page,
+  onPageChange,
+}) {
+  const totalPages =
+    getExploreTotalPages(items)
+
+  const safePage =
+    getExploreSafePage(
+      items,
+      page
+    )
+
+  if (
+    items.length <=
+    EXPLORE_PAGE_SIZE
+  ) {
+    return null
+  }
+
+  return (
+    <nav
+      className="explore-pagination"
+      aria-label="Explore results pages"
+    >
+      <button
+        type="button"
+        className="explore-page-button explore-page-nav-button"
+        disabled={safePage === 1}
+        onClick={() =>
+          onPageChange(
+            safePage - 1
+          )
+        }
+      >
+        Previous
+      </button>
+
+      <div className="explore-page-numbers">
+        {Array.from(
+          {
+            length: totalPages,
+          },
+          (_, index) =>
+            index + 1
+        ).map(
+          (pageNumber) => (
+            <button
+              type="button"
+              key={pageNumber}
+              className={
+                safePage ===
+                pageNumber
+                  ? 'explore-page-button active'
+                  : 'explore-page-button'
+              }
+              aria-current={
+                safePage ===
+                pageNumber
+                  ? 'page'
+                  : undefined
+              }
+              onClick={() =>
+                onPageChange(
+                  pageNumber
+                )
+              }
+            >
+              {pageNumber}
+            </button>
+          )
+        )}
+      </div>
+
+      <button
+        type="button"
+        className="explore-page-button explore-page-nav-button"
+        disabled={
+          safePage ===
+          totalPages
+        }
+        onClick={() =>
+          onPageChange(
+            safePage + 1
+          )
+        }
+      >
+        Next
+      </button>
+    </nav>
+  )
+}
+
 function App() {
   // =========================
   // AUTHENTICATION STATE
@@ -170,6 +348,26 @@ function App() {
     showExploreMenu,
     setShowExploreMenu,
   ] = useState(false)
+
+  // =========================
+  // EXPLORE PAGINATION
+  // =========================
+
+  const [
+    universityPage,
+    setUniversityPage,
+  ] = useState(1)
+
+  const [
+    programPage,
+    setProgramPage,
+  ] = useState(1)
+
+  const [
+    scholarshipPage,
+    setScholarshipPage,
+  ] = useState(1)
+
 
   // =========================
   // UNIVERSITY STATES
@@ -1814,7 +2012,7 @@ function App() {
             </section>
 
 
-            <section className="home-preview-section">
+            <section className="home-preview-section home-program-preview-section">
               <div className="home-preview-heading">
                 <div>
                   <p className="edupath-home-eyebrow">
@@ -1915,7 +2113,7 @@ function App() {
             </section>
 
 
-            <section className="home-preview-section">
+            <section className="home-preview-section home-scholarship-preview-section">
               <div className="home-preview-heading">
                 <div>
                   <p className="edupath-home-eyebrow">
@@ -2190,11 +2388,21 @@ function App() {
               <p className="search-result-count">
                 Showing{' '}
                 {
-                  filteredUniversities.length
-                }{' '}
-                of{' '}
+                  getExplorePageStart(
+                    filteredUniversities,
+                    universityPage
+                  )
+                }
+                {' - '}
                 {
-                  totalUniversities
+                  getExplorePageEnd(
+                    filteredUniversities,
+                    universityPage
+                  )
+                }
+                {' of '}
+                {
+                  filteredUniversities.length
                 }{' '}
                 universities
               </p>
@@ -2226,7 +2434,10 @@ function App() {
             filteredUniversities.length >
               0 && (
               <div className="university-grid">
-                {filteredUniversities.map(
+                {getExplorePageItems(
+                  filteredUniversities,
+                  universityPage
+                ).map(
                   (university) => (
                     <UniversityCard
                       key={
@@ -2238,6 +2449,12 @@ function App() {
                     />
                   )
                 )}
+
+                <ExplorePagination
+                  items={filteredUniversities}
+                  page={universityPage}
+                  onPageChange={setUniversityPage}
+                />
               </div>
             )}
         </section>
@@ -2280,11 +2497,21 @@ function App() {
               <p className="program-result-count">
                 Showing{' '}
                 {
-                  filteredPrograms.length
-                }{' '}
-                of{' '}
+                  getExplorePageStart(
+                    filteredPrograms,
+                    programPage
+                  )
+                }
+                {' - '}
                 {
-                  selectedCountryPrograms.length
+                  getExplorePageEnd(
+                    filteredPrograms,
+                    programPage
+                  )
+                }
+                {' of '}
+                {
+                  filteredPrograms.length
                 }{' '}
                 programs
               </p>
@@ -2317,7 +2544,10 @@ function App() {
             filteredPrograms.length >
               0 && (
               <div className="program-grid">
-                {filteredPrograms.map(
+                {getExplorePageItems(
+                  filteredPrograms,
+                  programPage
+                ).map(
                   (program) => {
                     const university =
                       universities.find(
@@ -2357,6 +2587,12 @@ function App() {
                     )
                   }
                 )}
+
+                <ExplorePagination
+                  items={filteredPrograms}
+                  page={programPage}
+                  onPageChange={setProgramPage}
+                />
               </div>
             )}
         </section>
@@ -2529,11 +2765,21 @@ function App() {
               <p className="scholarship-result-count">
                 Showing{' '}
                 {
-                  filteredScholarships.length
-                }{' '}
-                of{' '}
+                  getExplorePageStart(
+                    filteredScholarships,
+                    scholarshipPage
+                  )
+                }
+                {' - '}
                 {
-                  totalScholarships
+                  getExplorePageEnd(
+                    filteredScholarships,
+                    scholarshipPage
+                  )
+                }
+                {' of '}
+                {
+                  filteredScholarships.length
                 }{' '}
                 scholarships
               </p>
@@ -2574,7 +2820,10 @@ function App() {
             filteredScholarships.length >
               0 && (
               <div className="scholarship-grid">
-                {filteredScholarships.map(
+                {getExplorePageItems(
+                  filteredScholarships,
+                  scholarshipPage
+                ).map(
                   (
                     scholarship,
                     index
@@ -2616,6 +2865,12 @@ function App() {
                     )
                   }
                 )}
+
+                <ExplorePagination
+                  items={filteredScholarships}
+                  page={scholarshipPage}
+                  onPageChange={setScholarshipPage}
+                />
               </div>
             )}
         </section>

@@ -3841,3 +3841,296 @@ main {
     grid-template-columns: 1fr;
   }
 }
+
+
+
+
+/* =========================================================
+   EXPLORE PAGINATION
+   ========================================================= */
+
+.explore-pagination {
+  grid-column: 1 / -1;
+
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  margin-top: 18px;
+  padding-top: 24px;
+
+  border-top: 1px solid #eef0f5;
+}
+
+.explore-page-numbers {
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+}
+
+.explore-page-button {
+  min-width: 40px;
+  height: 40px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 11px;
+
+  border: 1px solid #dfe3ef;
+  border-radius: 9px;
+
+  background: #ffffff;
+  color: #55596c;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.18s ease,
+    color 0.18s ease,
+    border-color 0.18s ease,
+    transform 0.18s ease;
+}
+
+.explore-page-button:hover:not(
+  :disabled
+) {
+  transform: translateY(-1px);
+
+  border-color: #a5b4fc;
+
+  background: #f4f5ff;
+  color: #4f46e5;
+}
+
+.explore-page-button.active {
+  border-color: #4f46e5;
+
+  background: #4f46e5;
+  color: #ffffff;
+
+  box-shadow:
+    0 6px 16px
+    rgba(79, 70, 229, 0.18);
+}
+
+.explore-page-button:disabled {
+  opacity: 0.4;
+
+  cursor: not-allowed;
+}
+
+.explore-page-nav-button {
+  min-width: 88px;
+}
+
+
+/* Result counter */
+
+.search-result-count,
+.program-result-count,
+.scholarship-result-count {
+  margin:
+    16px
+    0
+    22px;
+
+  color: #777b8e;
+
+  font-size: 13px;
+  font-weight: 500;
+
+  text-align: center;
+}
+
+
+@media (max-width: 560px) {
+  .explore-pagination {
+    gap: 6px;
+  }
+
+  .explore-page-numbers {
+    gap: 4px;
+  }
+
+  .explore-page-button {
+    min-width: 36px;
+    height: 36px;
+
+    padding:
+      0
+      8px;
+  }
+
+  .explore-page-nav-button {
+    min-width: 70px;
+
+    font-size: 10px;
+  }
+}
+
+/* =========================================================
+   HOME PREVIEW CHIP ALIGNMENT FINAL
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   PROGRAMME PREVIEW
+   --------------------------------------------------------- */
+
+.home-program-preview-section
+.home-opportunity-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.home-program-preview-section
+.home-opportunity-card
+> div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+
+  flex: 1;
+}
+
+.home-program-preview-section
+.home-opportunity-card h3 {
+  min-height: 50px;
+
+  margin-bottom: 8px;
+
+  display: flex;
+  align-items: flex-start;
+
+  line-height: 1.35;
+}
+
+.home-program-preview-section
+.home-preview-subtitle {
+  min-height: 40px;
+
+  display: flex;
+  align-items: flex-start;
+
+  line-height: 1.5;
+}
+
+.home-program-preview-section
+.home-preview-meta {
+  min-height: 46px;
+
+  margin-top: 14px;
+
+  display: flex;
+  align-items: flex-start;
+  align-content: flex-start;
+
+  flex-wrap: wrap;
+
+  gap: 7px;
+}
+
+
+/* ---------------------------------------------------------
+   SCHOLARSHIP PREVIEW
+   --------------------------------------------------------- */
+
+.home-scholarship-preview-section
+.home-opportunity-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.home-scholarship-preview-section
+.home-opportunity-card
+> div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+
+  flex: 1;
+}
+
+.home-scholarship-preview-section
+.home-opportunity-card h3 {
+  min-height: 76px;
+
+  margin-bottom: 8px;
+
+  display: flex;
+  align-items: flex-start;
+
+  line-height: 1.35;
+}
+
+.home-scholarship-preview-section
+.home-preview-subtitle {
+  min-height: 40px;
+
+  display: flex;
+  align-items: flex-start;
+
+  line-height: 1.5;
+}
+
+.home-scholarship-preview-section
+.home-preview-meta {
+  min-height: 46px;
+
+  margin-top: 14px;
+
+  display: flex;
+  align-items: flex-start;
+  align-content: flex-start;
+
+  flex-wrap: wrap;
+
+  gap: 7px;
+}
+
+
+/* ---------------------------------------------------------
+   Keep action buttons aligned at the bottom
+   --------------------------------------------------------- */
+
+.home-program-preview-section
+.home-preview-action,
+.home-scholarship-preview-section
+.home-preview-action {
+  margin-top: auto;
+}
+
+
+/* ---------------------------------------------------------
+   Mobile: natural height
+   --------------------------------------------------------- */
+
+@media (max-width: 650px) {
+
+  .home-program-preview-section
+  .home-opportunity-card h3,
+
+  .home-scholarship-preview-section
+  .home-opportunity-card h3,
+
+  .home-program-preview-section
+  .home-preview-subtitle,
+
+  .home-scholarship-preview-section
+  .home-preview-subtitle,
+
+  .home-program-preview-section
+  .home-preview-meta,
+
+  .home-scholarship-preview-section
+  .home-preview-meta {
+    min-height: 0;
+  }
+}
