@@ -1761,10 +1761,17 @@ function App() {
 
             <button
               type="button"
-              className="edupath-nav-link"
-              onClick={() =>
-                setShowRecommendationModal(true)
-              }
+              className={`edupath-nav-link ${
+                activePage === 'recommendations'
+                  ? 'active'
+                  : ''
+              }`}
+              onClick={() => {
+                setActivePage(
+                  'recommendations'
+                )
+                setShowExploreMenu(false)
+              }}
             >
               Recommendations
             </button>
@@ -1852,8 +1859,8 @@ function App() {
                   type="button"
                   className="edupath-home-primary"
                   onClick={() =>
-                    setShowRecommendationModal(
-                      true
+                    setActivePage(
+                      'recommendations'
                     )
                   }
                 >
@@ -2964,21 +2971,27 @@ function App() {
         </section>
         )}
 
-      </main>
+      
+
+        {/* =========================
+            RECOMMENDATIONS PAGE
+        ========================== */}
+
+        {activePage === 'recommendations' && (
+          <section className="recommendations-page-section">
+            <RecommendationModal
+              displayMode="page"
+            />
+          </section>
+        )}
+
+</main>
 
       {/* =========================
           RECOMMENDATION MODAL
       ========================== */}
 
-      {showRecommendationModal && (
-          <RecommendationModal
-            onClose={() =>
-              setShowRecommendationModal(
-                false
-              )
-            }
-          />
-        )}
+
 
       {/* =========================
           SAVED OPPORTUNITIES

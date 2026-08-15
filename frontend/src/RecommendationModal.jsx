@@ -4,7 +4,10 @@ import './RecommendationModal.css'
 
 function RecommendationModal({
   onClose,
+  displayMode = 'modal',
 }) {
+  const isPageMode =
+    displayMode === 'page'
   const [activeTab, setActiveTab] =
     useState('programs')
 
@@ -817,18 +820,32 @@ function RecommendationModal({
   )
 
   return (
-    <div className="recommendation-modal-backdrop">
-      <div className="recommendation-modal">
-        <div className="recommendation-sticky-close-row">
-          <button
-            type="button"
-            className="recommendation-close-button"
-            onClick={onClose}
-            aria-label="Close recommendations"
-          >
-            &times;
-          </button>
-        </div>
+    <div
+      className={
+        isPageMode
+          ? 'recommendation-page'
+          : 'recommendation-modal-backdrop'
+      }
+    >
+      <div
+        className={`recommendation-modal ${
+          isPageMode
+            ? 'recommendation-modal-page'
+            : ''
+        }`}
+      >
+        {!isPageMode && (
+          <div className="recommendation-sticky-close-row">
+            <button
+              type="button"
+              className="recommendation-close-button"
+              onClick={onClose}
+              aria-label="Close recommendations"
+            >
+              &times;
+            </button>
+          </div>
+        )}
         <header className="recommendation-modal-header">
           <div>
             <p className="recommendation-eyebrow">

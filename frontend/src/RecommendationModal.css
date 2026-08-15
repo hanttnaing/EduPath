@@ -2690,3 +2690,63 @@
     font-size: 23px;
   }
 }
+
+
+
+
+/* =========================================================
+   RECOMMENDATIONS FULL PAGE MODE
+   ========================================================= */
+
+.recommendation-page {
+  width: 100%;
+
+  position: static;
+
+  display: block;
+
+  padding: 0;
+
+  background: transparent;
+
+  overflow: visible;
+}
+
+.recommendation-modal.recommendation-modal-page {
+  position: static;
+
+  width: 100%;
+  max-width: none;
+
+  height: auto;
+  max-height: none;
+
+  margin: 0;
+
+  overflow: visible;
+
+  border: 1px solid #e5e7ef;
+  border-radius: 24px;
+
+  background: #ffffff;
+
+  box-shadow: none;
+
+  box-sizing: border-box;
+}
+
+.recommendation-modal-page
+.recommendation-modal-header {
+  padding-top: 10px;
+}
+
+.recommendation-modal-page
+.recommendation-sticky-close-row {
+  display: none;
+}
+
+@media (max-width: 760px) {
+  .recommendation-modal.recommendation-modal-page {
+    border-radius: 18px;
+  }
+}
