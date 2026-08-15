@@ -1793,7 +1793,7 @@ function App() {
                             selectedCountryName,
                           ]
                             .filter(Boolean)
-                            .join(' ? ')}
+                            .join(' \u2022 ')}
                         </p>
                       </div>
 
