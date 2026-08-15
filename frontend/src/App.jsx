@@ -476,6 +476,36 @@ function App() {
   ] = useState('all')
 
   // =========================
+  // EXPLORE PAGINATION RESET
+  // =========================
+
+  useEffect(() => {
+    setUniversityPage(1)
+  }, [
+    searchTerm,
+    selectedCountry,
+  ])
+
+  useEffect(() => {
+    setProgramPage(1)
+  }, [
+    programSearchTerm,
+    selectedCountry,
+  ])
+
+  useEffect(() => {
+    setScholarshipPage(1)
+  }, [
+    scholarshipSearchTerm,
+    selectedDegree,
+    selectedFunding,
+    selectedStatus,
+    selectedField,
+    selectedCountry,
+  ])
+
+
+  // =========================
   // LOAD SAVED PROGRAMMES
   // =========================
   useEffect(() => {
@@ -1560,6 +1590,7 @@ function App() {
       setSelectedFunding('all')
       setSelectedStatus('all')
       setSelectedField('all')
+      setScholarshipPage(1)
     }
 
   // =========================
@@ -2453,7 +2484,26 @@ function App() {
                 <ExplorePagination
                   items={filteredUniversities}
                   page={universityPage}
-                  onPageChange={setUniversityPage}
+                  onPageChange={(nextPage) => {
+                    setUniversityPage(
+                      nextPage
+                    )
+
+                    window.requestAnimationFrame(
+                      () => {
+                        document
+                          .querySelector(
+                            '.university-section'
+                          )
+                          ?.scrollIntoView({
+                            behavior:
+                              'smooth',
+                            block:
+                              'start',
+                          })
+                      }
+                    )
+                  }}
                 />
               </div>
             )}
@@ -2591,7 +2641,26 @@ function App() {
                 <ExplorePagination
                   items={filteredPrograms}
                   page={programPage}
-                  onPageChange={setProgramPage}
+                  onPageChange={(nextPage) => {
+                    setProgramPage(
+                      nextPage
+                    )
+
+                    window.requestAnimationFrame(
+                      () => {
+                        document
+                          .querySelector(
+                            '.program-section'
+                          )
+                          ?.scrollIntoView({
+                            behavior:
+                              'smooth',
+                            block:
+                              'start',
+                          })
+                      }
+                    )
+                  }}
                 />
               </div>
             )}
@@ -2869,7 +2938,26 @@ function App() {
                 <ExplorePagination
                   items={filteredScholarships}
                   page={scholarshipPage}
-                  onPageChange={setScholarshipPage}
+                  onPageChange={(nextPage) => {
+                    setScholarshipPage(
+                      nextPage
+                    )
+
+                    window.requestAnimationFrame(
+                      () => {
+                        document
+                          .querySelector(
+                            '.scholarship-section'
+                          )
+                          ?.scrollIntoView({
+                            behavior:
+                              'smooth',
+                            block:
+                              'start',
+                          })
+                      }
+                    )
+                  }}
                 />
               </div>
             )}
