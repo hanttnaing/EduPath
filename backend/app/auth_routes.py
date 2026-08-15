@@ -2,10 +2,12 @@ from __future__ import annotations
 
 from datetime import datetime, timezone
 from uuid import uuid4
+from typing import Any
 
-from fastapi import APIRouter, HTTPException, status
+from fastapi import APIRouter, Depends, HTTPException, status
 from pymongo.errors import DuplicateKeyError, PyMongoError
 
+from backend.app.auth_dependencies import get_current_account
 from backend.app.database import get_database
 from backend.app.schemas import (
     AccountLogin,
@@ -294,5 +296,39 @@ def login_account(
                     False,
                 )
             ),
+        ),
+    )
+
+
+# ---------------------------------------------------------
+# Current authenticated account
+# ---------------------------------------------------------
+
+@router.get(
+    "/me",
+    response_model=AccountResponse,
+)
+def read_current_account(
+    current_account: dict[str, Any] = Depends(
+        get_current_account
+    ),
+) -> AccountResponse:
+    """
+    Return the currently authenticated EduPath account.
+    """
+
+    return AccountResponse(
+        user_id=current_account["user_id"],
+        full_name=current_account["full_name"],
+        email=current_account["email"],
+        role=current_account["role"],
+        is_active=bool(
+            current_account.get("is_active")
+        ),
+        profile_completed=bool(
+            current_account.get(
+                "profile_completed",
+                False,
+            )
         ),
     )
