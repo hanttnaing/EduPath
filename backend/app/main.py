@@ -314,6 +314,11 @@ def list_programs(
         description="Filter programmes by university ID.",
         examples=["uni_jp_001"],
     ),
+    country_id: str | None = Query(
+        default=None,
+        description="Filter programmes by country ID.",
+        examples=["country_sg"],
+    ),
     degree_level: str | None = Query(
         default=None,
         description="Filter programmes by degree level.",
@@ -357,10 +362,47 @@ def list_programs(
 ) -> dict[str, Any]:
     """Return academic programmes using optional filters."""
 
+    database = get_database()
+
     query: dict[str, Any] = {}
 
     if university_id is not None:
         query["university_id"] = university_id
+
+    if country_id is not None:
+        country_university_ids = [
+            university["university_id"]
+            for university in database[
+                "universities"
+            ].find(
+                {
+                    "country_id": country_id,
+                },
+                {
+                    "_id": 0,
+                    "university_id": 1,
+                },
+            )
+        ]
+
+        if not country_university_ids:
+            query["university_id"] = {
+                "$in": [],
+            }
+
+        elif university_id is not None:
+            if (
+                university_id
+                not in country_university_ids
+            ):
+                query["university_id"] = {
+                    "$in": [],
+                }
+
+        else:
+            query["university_id"] = {
+                "$in": country_university_ids,
+            }
 
     if degree_level is not None:
         query["degree_level"] = degree_level
@@ -380,7 +422,6 @@ def list_programs(
             "$lte": max_tuition_fee,
         }
 
-    database = get_database()
     collection = database["programs"]
 
     try:

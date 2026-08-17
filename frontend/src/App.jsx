@@ -84,6 +84,79 @@ function extractCountryItems(data) {
 
 const EXPLORE_PAGE_SIZE = 12
 
+
+async function fetchAllApiItems(
+  baseUrl,
+  pageSize = 100
+) {
+  const collectedItems = []
+
+  let skip = 0
+  let expectedTotal = null
+
+  while (true) {
+    const separator =
+      baseUrl.includes('?')
+        ? '&'
+        : '?'
+
+    const response = await fetch(
+      `${baseUrl}${separator}skip=${skip}&limit=${pageSize}`
+    )
+
+    if (!response.ok) {
+      throw new Error(
+        `Request failed with status ${response.status}`
+      )
+    }
+
+    const data = await response.json()
+
+    const pageItems =
+      Array.isArray(data.items)
+        ? data.items
+        : []
+
+    collectedItems.push(
+      ...pageItems
+    )
+
+    if (
+      typeof data.total === 'number'
+    ) {
+      expectedTotal = data.total
+    }
+
+    if (pageItems.length === 0) {
+      break
+    }
+
+    if (
+      expectedTotal !== null &&
+      collectedItems.length >= expectedTotal
+    ) {
+      break
+    }
+
+    if (
+      expectedTotal === null &&
+      pageItems.length < pageSize
+    ) {
+      break
+    }
+
+    skip += pageSize
+  }
+
+  return {
+    items: collectedItems,
+    total:
+      expectedTotal !== null
+        ? expectedTotal
+        : collectedItems.length,
+  }
+}
+
 function getExploreTotalPages(items) {
   return Math.max(
     1,
@@ -1043,50 +1116,49 @@ function App() {
   // =========================
   // LOAD UNIVERSITIES
   // WHEN COUNTRY CHANGES
+  // MASS-DATA PAGINATED
   // =========================
   useEffect(() => {
+    let cancelled = false
+
     if (!selectedCountry) {
       setUniversities([])
       setTotalUniversities(0)
       setLoading(false)
       setError('')
-      return
+      return () => {
+        cancelled = true
+      }
     }
 
-    setLoading(true)
-    setError('')
+    const loadUniversities = async () => {
+      setLoading(true)
+      setError('')
 
-    fetch(
-      `${API_BASE_URL}/api/universities?country_id=${selectedCountry}&limit=100`
-    )
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error(
-            'Failed to load universities'
+      try {
+        const data =
+          await fetchAllApiItems(
+            `${API_BASE_URL}/api/universities?country_id=${encodeURIComponent(
+              selectedCountry
+            )}`
           )
+
+        if (cancelled) {
+          return
         }
 
-        return response.json()
-      })
-
-      .then((data) => {
-        const items =
-          data.items || []
-
         setUniversities(
-          items
+          data.items
         )
 
         setTotalUniversities(
-          typeof data.total === 'number'
-            ? data.total
-            : items.length
+          data.total
         )
+      } catch (error) {
+        if (cancelled) {
+          return
+        }
 
-        setLoading(false)
-      })
-
-      .catch((error) => {
         console.error(
           'Universities error:',
           error
@@ -1098,40 +1170,62 @@ function App() {
         setError(
           error.message
         )
+      } finally {
+        if (!cancelled) {
+          setLoading(false)
+        }
+      }
+    }
 
-        setLoading(false)
-      })
+    loadUniversities()
+
+    return () => {
+      cancelled = true
+    }
   }, [selectedCountry])
 
   // =========================
-  // LOAD ALL PROGRAMS
+  // LOAD PROGRAMS
+  // WHEN COUNTRY CHANGES
+  // MASS-DATA PAGINATED
   // =========================
   useEffect(() => {
-    setProgramLoading(true)
-    setProgramError('')
+    let cancelled = false
 
-    fetch(
-      `${API_BASE_URL}/api/programs?limit=100`
-    )
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error(
-            'Failed to load programs'
+    if (!selectedCountry) {
+      setPrograms([])
+      setProgramLoading(false)
+      setProgramError('')
+
+      return () => {
+        cancelled = true
+      }
+    }
+
+    const loadPrograms = async () => {
+      setProgramLoading(true)
+      setProgramError('')
+
+      try {
+        const data =
+          await fetchAllApiItems(
+            `${API_BASE_URL}/api/programs?country_id=${encodeURIComponent(
+              selectedCountry
+            )}`
           )
+
+        if (cancelled) {
+          return
         }
 
-        return response.json()
-      })
-
-      .then((data) => {
         setPrograms(
-          data.items || []
+          data.items
         )
+      } catch (error) {
+        if (cancelled) {
+          return
+        }
 
-        setProgramLoading(false)
-      })
-
-      .catch((error) => {
         console.error(
           'Programs error:',
           error
@@ -1142,61 +1236,70 @@ function App() {
         setProgramError(
           error.message
         )
+      } finally {
+        if (!cancelled) {
+          setProgramLoading(false)
+        }
+      }
+    }
 
-        setProgramLoading(false)
-      })
-  }, [])
+    loadPrograms()
+
+    return () => {
+      cancelled = true
+    }
+  }, [selectedCountry])
 
   // =========================
   // LOAD SCHOLARSHIPS
   // WHEN COUNTRY CHANGES
+  // MASS-DATA PAGINATED
   // =========================
   useEffect(() => {
+    let cancelled = false
+
     if (!selectedCountry) {
       setScholarships([])
       setTotalScholarships(0)
       setScholarshipLoading(false)
       setScholarshipError('')
-      return
+
+      return () => {
+        cancelled = true
+      }
     }
 
-    setScholarshipLoading(true)
-    setScholarshipError('')
+    const loadScholarships = async () => {
+      setScholarshipLoading(true)
+      setScholarshipError('')
 
-    setScholarships([])
-    setTotalScholarships(0)
+      setScholarships([])
+      setTotalScholarships(0)
 
-    fetch(
-      `${API_BASE_URL}/api/scholarships?country_id=${selectedCountry}&limit=100`
-    )
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error(
-            'Failed to load scholarships'
+      try {
+        const data =
+          await fetchAllApiItems(
+            `${API_BASE_URL}/api/scholarships?country_id=${encodeURIComponent(
+              selectedCountry
+            )}`
           )
+
+        if (cancelled) {
+          return
         }
 
-        return response.json()
-      })
-
-      .then((data) => {
-        const scholarshipItems =
-          data.items || []
-
         setScholarships(
-          scholarshipItems
+          data.items
         )
 
         setTotalScholarships(
-          typeof data.total === 'number'
-            ? data.total
-            : scholarshipItems.length
+          data.total
         )
+      } catch (error) {
+        if (cancelled) {
+          return
+        }
 
-        setScholarshipLoading(false)
-      })
-
-      .catch((error) => {
         console.error(
           'Scholarships error:',
           error
@@ -1208,9 +1311,18 @@ function App() {
         setScholarshipError(
           error.message
         )
+      } finally {
+        if (!cancelled) {
+          setScholarshipLoading(false)
+        }
+      }
+    }
 
-        setScholarshipLoading(false)
-      })
+    loadScholarships()
+
+    return () => {
+      cancelled = true
+    }
   }, [selectedCountry])
 
   // =========================
