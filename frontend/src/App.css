@@ -4681,3 +4681,402 @@ img.edupath-brand-mark {
   }
 }
 
+
+/* =========================================================
+   MOBILE HAMBURGER NAVIGATION FINAL
+   ========================================================= */
+
+.edupath-mobile-menu-button,
+.edupath-mobile-panel {
+  display: none;
+}
+
+.edupath-mobile-menu-button {
+  width: 46px;
+  height: 46px;
+
+  padding: 0;
+
+  align-items: center;
+  justify-content: center;
+
+  flex: 0 0 46px;
+
+  border: 1px solid #e4e7ef;
+  border-radius: 13px;
+
+  background: #ffffff;
+
+  color: #26283c;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 4px 14px
+    rgba(15, 23, 42, 0.06);
+}
+
+.edupath-mobile-menu-icon {
+  width: 20px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+.edupath-mobile-menu-icon span {
+  width: 100%;
+  height: 2px;
+
+  display: block;
+
+  border-radius: 999px;
+
+  background: currentColor;
+}
+
+
+@media (max-width: 850px) {
+
+  .edupath-navbar {
+    overflow: visible !important;
+  }
+
+  .edupath-navbar-inner {
+    min-height: 72px;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    flex-wrap: nowrap !important;
+
+    padding:
+      10px
+      18px !important;
+  }
+
+
+  /* Hide desktop navigation on mobile */
+
+  .edupath-nav-links,
+  .edupath-account-nav {
+    display: none !important;
+  }
+
+
+  .edupath-brand {
+    margin-right: auto !important;
+  }
+
+
+  /* Hamburger */
+
+  .edupath-mobile-menu-button {
+    display: inline-flex !important;
+  }
+
+
+  /* Mobile menu container */
+
+  .edupath-mobile-panel {
+    position: absolute;
+
+    top: 100%;
+    left: 0;
+    right: 0;
+
+    z-index: 3000;
+
+    display: flex !important;
+    flex-direction: column;
+
+    gap: 4px;
+
+    max-height:
+      calc(100dvh - 72px);
+
+    padding:
+      14px
+      18px
+      20px;
+
+    overflow-y: auto;
+
+    border-top:
+      1px solid #eceef4;
+
+    border-bottom:
+      1px solid #e3e6ef;
+
+    background:
+      rgba(255, 255, 255, 0.99);
+
+    box-shadow:
+      0 22px 46px
+      rgba(15, 23, 42, 0.15);
+
+    backdrop-filter:
+      blur(16px);
+  }
+
+
+  /* Account */
+
+  .edupath-mobile-account {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 12px;
+
+    border:
+      1px solid #e5e7ef;
+
+    border-radius: 14px;
+
+    background: #f8f9ff;
+
+    text-align: left;
+
+    cursor: pointer;
+  }
+
+  .edupath-mobile-account-avatar {
+    width: 42px;
+    height: 42px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    flex: 0 0 42px;
+
+    border-radius: 11px;
+
+    background: #edf1ff;
+
+    font-size: 20px;
+  }
+
+  .edupath-mobile-account-copy {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 2px;
+  }
+
+  .edupath-mobile-account-copy strong {
+    overflow: hidden;
+
+    color: #202238;
+
+    font-size: 14px;
+    font-weight: 800;
+
+    white-space: nowrap;
+
+    text-overflow: ellipsis;
+  }
+
+  .edupath-mobile-account-copy small {
+    color: #85899a;
+
+    font-size: 11px;
+  }
+
+
+  /* Navigation items */
+
+  .edupath-mobile-nav-item {
+    width: 100%;
+    min-height: 46px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    padding:
+      0
+      13px;
+
+    border: 0;
+
+    border-radius: 10px;
+
+    background: transparent;
+
+    color: #414458;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    text-align: left;
+
+    cursor: pointer;
+  }
+
+  .edupath-mobile-nav-item:hover {
+    background: #f5f6fa;
+  }
+
+  .edupath-mobile-nav-item.active {
+    background: #eef1ff;
+
+    color: #4f46e5;
+  }
+
+
+  /* Explore */
+
+  .edupath-mobile-explore {
+    width: 100%;
+  }
+
+  .edupath-mobile-explore-toggle {
+    justify-content: space-between;
+  }
+
+  .edupath-mobile-explore-submenu {
+    display: flex;
+    flex-direction: column;
+
+    gap: 3px;
+
+    margin:
+      3px
+      0
+      7px
+      14px;
+
+    padding-left: 10px;
+
+    border-left:
+      2px solid #dfe4ff;
+  }
+
+  .edupath-mobile-explore-submenu button {
+    width: 100%;
+    min-height: 42px;
+
+    padding:
+      0
+      13px;
+
+    border: 0;
+    border-radius: 9px;
+
+    background: transparent;
+
+    color: #676b7d;
+
+    font-size: 13px;
+    font-weight: 650;
+
+    text-align: left;
+
+    cursor: pointer;
+  }
+
+  .edupath-mobile-explore-submenu button.active {
+    background: #f0f2ff;
+
+    color: #4f46e5;
+  }
+
+
+  /* Separator */
+
+  .edupath-mobile-menu-divider {
+    width: 100%;
+    height: 1px;
+
+    margin:
+      7px
+      0;
+
+    background: #ebeef4;
+  }
+
+
+  /* Logout */
+
+  .edupath-mobile-logout {
+    width: 100%;
+    min-height: 48px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+
+    padding:
+      0
+      13px;
+
+    border:
+      1px solid #fecaca;
+
+    border-radius: 10px;
+
+    background: #fff7f7;
+
+    color: #dc2626;
+
+    font-size: 14px;
+    font-weight: 800;
+
+    text-align: left;
+
+    cursor: pointer;
+  }
+
+  .edupath-mobile-logout:hover {
+    background: #fef2f2;
+  }
+
+}
+
+
+@media (max-width: 520px) {
+
+  .edupath-navbar-inner {
+    padding:
+      9px
+      14px !important;
+  }
+
+  img.edupath-brand-mark {
+    width: 44px !important;
+    height: 44px !important;
+
+    flex-basis: 44px !important;
+  }
+
+  .edupath-brand-name {
+    font-size: 20px;
+  }
+
+  .edupath-mobile-menu-button {
+    width: 44px;
+    height: 44px;
+
+    flex-basis: 44px;
+  }
+
+  .edupath-mobile-panel {
+    padding:
+      12px
+      14px
+      18px;
+  }
+
+}
+

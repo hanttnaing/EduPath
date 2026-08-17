@@ -349,6 +349,11 @@ function App() {
     setShowExploreMenu,
   ] = useState(false)
 
+  const [
+    showMobileMenu,
+    setShowMobileMenu,
+  ] = useState(false)
+
   const isExploreActive =
     [
       'universities',
@@ -394,6 +399,7 @@ function App() {
 
   useEffect(() => {
     setShowExploreMenu(false)
+    setShowMobileMenu(false)
 
     window.scrollTo({
       top: 0,
@@ -1734,6 +1740,32 @@ function App() {
             </span>
           </button>
 
+          <button
+            type="button"
+            className="edupath-mobile-menu-button"
+            aria-label={
+              showMobileMenu
+                ? 'Close navigation menu'
+                : 'Open navigation menu'
+            }
+            aria-expanded={showMobileMenu}
+            onClick={() => {
+              setShowExploreMenu(false)
+              setShowMobileMenu(
+                (current) => !current
+              )
+            }}
+          >
+            <span
+              className="edupath-mobile-menu-icon"
+              aria-hidden="true"
+            >
+              <span />
+              <span />
+              <span />
+            </span>
+          </button>
+
           <div className="edupath-nav-links">
             <button
               type="button"
@@ -1897,6 +1929,231 @@ function App() {
           </div>
 
         </div>
+
+        {showMobileMenu && (
+          <div className="edupath-mobile-panel">
+
+            <button
+              type="button"
+              className="edupath-mobile-account"
+              onClick={() => {
+                setActivePage('profile')
+                setShowExploreMenu(false)
+                setShowMobileMenu(false)
+              }}
+            >
+              <span
+                className="edupath-mobile-account-avatar"
+                aria-hidden="true"
+              >
+                {'\u{1F464}'}
+              </span>
+
+              <span className="edupath-mobile-account-copy">
+                <strong>
+                  {currentAccount?.full_name ||
+                    'EduPath Student'}
+                </strong>
+
+                <small>
+                  View profile
+                </small>
+              </span>
+            </button>
+
+            <div className="edupath-mobile-menu-divider" />
+
+            <button
+              type="button"
+              className={`edupath-mobile-nav-item ${
+                activePage === 'home'
+                  ? 'active'
+                  : ''
+              }`}
+              onClick={() => {
+                setActivePage('home')
+                setShowExploreMenu(false)
+                setShowMobileMenu(false)
+              }}
+            >
+              Home
+            </button>
+
+
+            <div className="edupath-mobile-explore">
+
+              <button
+                type="button"
+                className={`edupath-mobile-nav-item edupath-mobile-explore-toggle ${
+                  [
+                    'universities',
+                    'programs',
+                    'scholarships',
+                  ].includes(activePage)
+                    ? 'active'
+                    : ''
+                }`}
+                aria-expanded={showExploreMenu}
+                onClick={() => {
+                  setShowExploreMenu(
+                    (current) => !current
+                  )
+                }}
+              >
+                <span>
+                  Explore
+                </span>
+
+                <span
+                  className={`edupath-nav-chevron ${
+                    showExploreMenu
+                      ? 'open'
+                      : ''
+                  }`}
+                  aria-hidden="true"
+                />
+              </button>
+
+
+              {showExploreMenu && (
+                <div className="edupath-mobile-explore-submenu">
+
+                  <button
+                    type="button"
+                    className={
+                      activePage === 'universities'
+                        ? 'active'
+                        : ''
+                    }
+                    onClick={() => {
+                      setActivePage('universities')
+                      setShowExploreMenu(false)
+                      setShowMobileMenu(false)
+                    }}
+                  >
+                    Universities
+                  </button>
+
+                  <button
+                    type="button"
+                    className={
+                      activePage === 'programs'
+                        ? 'active'
+                        : ''
+                    }
+                    onClick={() => {
+                      setActivePage('programs')
+                      setShowExploreMenu(false)
+                      setShowMobileMenu(false)
+                    }}
+                  >
+                    Study Programmes
+                  </button>
+
+                  <button
+                    type="button"
+                    className={
+                      activePage === 'scholarships'
+                        ? 'active'
+                        : ''
+                    }
+                    onClick={() => {
+                      setActivePage('scholarships')
+                      setShowExploreMenu(false)
+                      setShowMobileMenu(false)
+                    }}
+                  >
+                    Scholarships
+                  </button>
+
+                </div>
+              )}
+
+            </div>
+
+
+            <button
+              type="button"
+              className={`edupath-mobile-nav-item ${
+                activePage === 'recommendations'
+                  ? 'active'
+                  : ''
+              }`}
+              onClick={() => {
+                setActivePage('recommendations')
+                setShowExploreMenu(false)
+                setShowMobileMenu(false)
+              }}
+            >
+              Recommendations
+            </button>
+
+
+            <button
+              type="button"
+              className={`edupath-mobile-nav-item ${
+                activePage === 'saved'
+                  ? 'active'
+                  : ''
+              }`}
+              onClick={() => {
+                setActivePage('saved')
+                setShowExploreMenu(false)
+                setShowMobileMenu(false)
+              }}
+            >
+              Saved Opportunities
+            </button>
+
+
+            <button
+              type="button"
+              className={`edupath-mobile-nav-item ${
+                activePage === 'profile'
+                  ? 'active'
+                  : ''
+              }`}
+              onClick={() => {
+                setActivePage('profile')
+                setShowExploreMenu(false)
+                setShowMobileMenu(false)
+              }}
+            >
+              My Profile
+            </button>
+
+
+            <div className="edupath-mobile-menu-divider" />
+
+
+            <button
+              type="button"
+              className="edupath-mobile-logout"
+              onClick={() => {
+                const confirmed =
+                  window.confirm(
+                    'Log out of EduPath?'
+                  )
+
+                if (confirmed) {
+                  setShowExploreMenu(false)
+                  setShowMobileMenu(false)
+                  handleLogout()
+                }
+              }}
+            >
+              <span aria-hidden="true">
+                {'\u2192'}
+              </span>
+
+              <span>
+                Log out
+              </span>
+            </button>
+
+          </div>
+        )}
+
       </nav>
 
       <main>
