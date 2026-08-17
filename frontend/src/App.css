@@ -4609,3 +4609,75 @@ img.edupath-brand-mark {
       26px;
   }
 }
+
+
+/* =========================================================
+   MOBILE EXPLORE DROPDOWN FIX
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+  /*
+    Do not turn the navigation row into an overflow
+    scroll container because it clips the absolute
+    Explore dropdown on mobile browsers.
+  */
+  .edupath-nav-links {
+    overflow-x: visible !important;
+    overflow-y: visible !important;
+
+    flex-wrap: wrap;
+
+    row-gap: 4px;
+
+    position: relative;
+
+    z-index: 1300;
+  }
+
+  .edupath-explore-wrapper {
+    position: relative;
+
+    overflow: visible;
+
+    z-index: 1350;
+  }
+
+  .edupath-explore-menu {
+    position: absolute;
+
+    top: calc(100% + 8px);
+    left: 0;
+
+    z-index: 1500;
+
+    width: 210px;
+    max-width: calc(100vw - 32px);
+
+    overflow: visible;
+
+    background: #ffffff;
+
+    box-shadow:
+      0 18px 42px
+      rgba(15, 23, 42, 0.18);
+  }
+}
+
+@media (max-width: 520px) {
+
+  .edupath-explore-menu {
+    width: 205px;
+  }
+
+  .edupath-explore-menu button {
+    min-height: 44px;
+
+    padding:
+      12px
+      14px;
+
+    touch-action: manipulation;
+  }
+}
+
