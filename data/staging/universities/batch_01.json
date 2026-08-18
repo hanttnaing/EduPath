@@ -1,0 +1,101 @@
+﻿[
+  {
+    "university_id": "uni_bn_001",
+    "university_name": "Universiti Brunei Darussalam",
+    "country_id": "country_bn",
+    "city": "Bandar Seri Begawan",
+    "official_website": "https://ubd.edu.bn/",
+    "source_url": "https://ubd.edu.bn/"
+  },
+  {
+    "university_id": "uni_bn_002",
+    "university_name": "Universiti Teknologi Brunei",
+    "country_id": "country_bn",
+    "city": "Gadong",
+    "official_website": "https://www.utb.edu.bn/",
+    "source_url": "https://www.utb.edu.bn/the-university/contact-us/"
+  },
+
+  {
+    "university_id": "uni_kh_001",
+    "university_name": "Royal University of Phnom Penh",
+    "country_id": "country_kh",
+    "city": "Phnom Penh",
+    "official_website": "https://www.rupp.edu.kh/",
+    "source_url": "https://www.rupp.edu.kh/contact"
+  },
+  {
+    "university_id": "uni_kh_002",
+    "university_name": "Institute of Technology of Cambodia",
+    "country_id": "country_kh",
+    "city": "Phnom Penh",
+    "official_website": "https://itc.edu.kh/",
+    "source_url": "https://itc.edu.kh/about-institute-of-technology-of-cambodia-en/"
+  },
+
+  {
+    "university_id": "uni_cn_001",
+    "university_name": "Tsinghua University",
+    "country_id": "country_cn",
+    "city": "Beijing",
+    "official_website": "https://www.tsinghua.edu.cn/en/",
+    "source_url": "https://www.tsinghua.edu.cn/en/Contact.htm"
+  },
+  {
+    "university_id": "uni_cn_002",
+    "university_name": "Peking University",
+    "country_id": "country_cn",
+    "city": "Beijing",
+    "official_website": "https://english.pku.edu.cn/",
+    "source_url": "https://isd.pku.edu.cn/en/"
+  },
+  {
+    "university_id": "uni_cn_003",
+    "university_name": "Zhejiang University",
+    "country_id": "country_cn",
+    "city": "Hangzhou",
+    "official_website": "https://www.zju.edu.cn/english/",
+    "source_url": "https://www.zju.edu.cn/english/"
+  },
+  {
+    "university_id": "uni_cn_004",
+    "university_name": "Shanghai Jiao Tong University",
+    "country_id": "country_cn",
+    "city": "Shanghai",
+    "official_website": "https://en.sjtu.edu.cn/",
+    "source_url": "https://en.sjtu.edu.cn/study-sjtu/prospective/scholarships"
+  },
+
+  {
+    "university_id": "uni_id_001",
+    "university_name": "Universitas Indonesia",
+    "country_id": "country_id",
+    "city": "Depok",
+    "official_website": "https://www.ui.ac.id/",
+    "source_url": "https://international.ui.ac.id/"
+  },
+  {
+    "university_id": "uni_id_002",
+    "university_name": "Institut Teknologi Bandung",
+    "country_id": "country_id",
+    "city": "Bandung",
+    "official_website": "https://itb.ac.id/en/",
+    "source_url": "https://itb.ac.id/en/"
+  },
+  {
+    "university_id": "uni_id_003",
+    "university_name": "Universitas Gadjah Mada",
+    "country_id": "country_id",
+    "city": "Yogyakarta",
+    "official_website": "https://ugm.ac.id/en/",
+    "source_url": "https://admissions.ugm.ac.id/v26/"
+  },
+  {
+    "university_id": "uni_id_004",
+    "university_name": "IPB University",
+    "country_id": "country_id",
+    "city": "Bogor",
+    "official_website": "https://www.ipb.ac.id/en/",
+    "source_url": "https://www.ipb.ac.id/en/"
+  }
+]

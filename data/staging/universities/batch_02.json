@@ -1,0 +1,101 @@
+﻿[
+  {
+    "university_id": "uni_la_001",
+    "university_name": "National University of Laos",
+    "country_id": "country_la",
+    "city": "Vientiane",
+    "official_website": "https://www.nuol.edu.la/index.php/en/",
+    "source_url": "https://www.nuol.edu.la/index.php/en/"
+  },
+  {
+    "university_id": "uni_la_002",
+    "university_name": "Souphanouvong University",
+    "country_id": "country_la",
+    "city": "Luang Prabang",
+    "official_website": "https://su.edu.la/",
+    "source_url": "https://su.edu.la/"
+  },
+
+  {
+    "university_id": "uni_mo_001",
+    "university_name": "University of Macau",
+    "country_id": "country_mo",
+    "city": "Macau",
+    "official_website": "https://www.um.edu.mo/",
+    "source_url": "https://www.um.edu.mo/about-um/"
+  },
+  {
+    "university_id": "uni_mo_002",
+    "university_name": "Macao Polytechnic University",
+    "country_id": "country_mo",
+    "city": "Macau",
+    "official_website": "https://www.mpu.edu.mo/",
+    "source_url": "https://www.mpu.edu.mo/en/contact_us"
+  },
+  {
+    "university_id": "uni_mo_003",
+    "university_name": "Macau University of Science and Technology",
+    "country_id": "country_mo",
+    "city": "Macau",
+    "official_website": "https://www.must.edu.mo/",
+    "source_url": "https://www.must.edu.mo/page/intro.html?locale=en_US"
+  },
+  {
+    "university_id": "uni_mo_004",
+    "university_name": "City University of Macau",
+    "country_id": "country_mo",
+    "city": "Macau",
+    "official_website": "https://www.cityu.edu.mo/",
+    "source_url": "https://www.cityu.edu.mo/en/about-cityu-2/"
+  },
+
+  {
+    "university_id": "uni_mn_001",
+    "university_name": "National University of Mongolia",
+    "country_id": "country_mn",
+    "city": "Ulaanbaatar",
+    "official_website": "https://portal.num.edu.mn/en",
+    "source_url": "https://portal.num.edu.mn/en/Home/About"
+  },
+  {
+    "university_id": "uni_mn_002",
+    "university_name": "Mongolian University of Science and Technology",
+    "country_id": "country_mn",
+    "city": "Ulaanbaatar",
+    "official_website": "https://must.edu.mn/en/",
+    "source_url": "https://must.edu.mn/en/page/971"
+  },
+  {
+    "university_id": "uni_mn_003",
+    "university_name": "Mongolian National University of Medical Sciences",
+    "country_id": "country_mn",
+    "city": "Ulaanbaatar",
+    "official_website": "https://mnums.edu.mn/en/home-en/",
+    "source_url": "https://mnums.edu.mn/en/mnums/"
+  },
+
+  {
+    "university_id": "uni_mm_001",
+    "university_name": "University of Yangon",
+    "country_id": "country_mm",
+    "city": "Yangon",
+    "official_website": "https://www.uy.edu.mm/",
+    "source_url": "https://www.uy.edu.mm/contact/"
+  },
+  {
+    "university_id": "uni_mm_002",
+    "university_name": "University of Computer Studies, Yangon",
+    "country_id": "country_mm",
+    "city": "Yangon",
+    "official_website": "https://www.ucsy.edu.mm/",
+    "source_url": "https://www.ucsy.edu.mm/"
+  },
+  {
+    "university_id": "uni_mm_003",
+    "university_name": "Yangon University of Economics",
+    "country_id": "country_mm",
+    "city": "Yangon",
+    "official_website": "https://yueco.edu.mm/",
+    "source_url": "https://yueco.edu.mm/?page_id=81"
+  }
+]

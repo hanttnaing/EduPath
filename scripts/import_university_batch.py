@@ -2,16 +2,20 @@
 
 import argparse
 import json
+import sys
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
 from pymongo import UpdateOne
 
-from backend.app.database import get_database
-
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
+
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
+
+from backend.app.database import get_database
 
 REQUIRED_FIELDS = [
     "university_id",
@@ -374,7 +378,7 @@ def main() -> None:
 
     with path.open(
         "r",
-        encoding="utf-8",
+        encoding="utf-8-sig",
     ) as file:
         records = json.load(file)
 

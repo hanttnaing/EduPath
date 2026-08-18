@@ -1,0 +1,100 @@
+﻿[
+  {
+    "university_id": "uni_ph_001",
+    "university_name": "University of the Philippines Diliman",
+    "country_id": "country_ph",
+    "city": "Quezon City",
+    "official_website": "https://upd.edu.ph/",
+    "source_url": "https://upd.edu.ph/"
+  },
+  {
+    "university_id": "uni_ph_002",
+    "university_name": "Ateneo de Manila University",
+    "country_id": "country_ph",
+    "city": "Quezon City",
+    "official_website": "https://www.ateneo.edu/",
+    "source_url": "https://www.ateneo.edu/contact"
+  },
+  {
+    "university_id": "uni_ph_003",
+    "university_name": "De La Salle University",
+    "country_id": "country_ph",
+    "city": "Manila",
+    "official_website": "https://www.dlsu.edu.ph/",
+    "source_url": "https://www.dlsu.edu.ph/"
+  },
+  {
+    "university_id": "uni_ph_004",
+    "university_name": "University of Santo Tomas",
+    "country_id": "country_ph",
+    "city": "Manila",
+    "official_website": "https://www.ust.edu.ph/",
+    "source_url": "https://www.ust.edu.ph/"
+  },
+
+  {
+    "university_id": "uni_tl_001",
+    "university_name": "Universidade Nacional Timor Lorosa'e",
+    "country_id": "country_tl",
+    "city": "Dili",
+    "official_website": "https://untl.edu.tl/",
+    "source_url": "https://untl.edu.tl/"
+  },
+  {
+    "university_id": "uni_tl_002",
+    "university_name": "Dili Institute of Technology",
+    "country_id": "country_tl",
+    "city": "Dili",
+    "official_website": "https://dit.edu.tl/",
+    "source_url": "https://dit.edu.tl/Page-welcome-to-dit.html"
+  },
+  {
+    "university_id": "uni_tl_003",
+    "university_name": "Universidade da Paz",
+    "country_id": "country_tl",
+    "city": "Dili",
+    "official_website": "https://unpaz.tl/",
+    "source_url": "https://unpaz.tl/"
+  },
+
+  {
+    "university_id": "uni_vn_001",
+    "university_name": "Vietnam National University, Hanoi",
+    "country_id": "country_vn",
+    "city": "Hanoi",
+    "official_website": "https://en.vnu.edu.vn/",
+    "source_url": "https://en.vnu.edu.vn/a-brief-introduction-post36705.html"
+  },
+  {
+    "university_id": "uni_vn_002",
+    "university_name": "Vietnam National University Ho Chi Minh City",
+    "country_id": "country_vn",
+    "city": "Ho Chi Minh City",
+    "official_website": "https://vnuhcm.edu.vn/en/",
+    "source_url": "https://vnuhcm.edu.vn/en/"
+  },
+  {
+    "university_id": "uni_vn_003",
+    "university_name": "Hanoi University of Science and Technology",
+    "country_id": "country_vn",
+    "city": "Hanoi",
+    "official_website": "https://hust.edu.vn/",
+    "source_url": "https://ts.hust.edu.vn/en/tin-tuc/ve-dai-hoc-bach-khoa-ha-noi"
+  },
+  {
+    "university_id": "uni_vn_004",
+    "university_name": "Ton Duc Thang University",
+    "country_id": "country_vn",
+    "city": "Ho Chi Minh City",
+    "official_website": "https://tdtu.edu.vn/en",
+    "source_url": "https://tdtu.edu.vn/en"
+  },
+  {
+    "university_id": "uni_vn_005",
+    "university_name": "University of Economics Ho Chi Minh City",
+    "country_id": "country_vn",
+    "city": "Ho Chi Minh City",
+    "official_website": "https://ueh.edu.vn/en/",
+    "source_url": "https://ueh.edu.vn/en/about-us/overview/history/"
+  }
+]
