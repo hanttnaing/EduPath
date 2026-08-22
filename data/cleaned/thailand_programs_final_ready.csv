@@ -1,0 +1,121 @@
+﻿program_id,university_id,program_name,field_of_study,degree_level,duration_years,study_mode,language_of_instruction,tuition_fee,tuition_currency,tuition_period,minimum_gpa,gpa_scale,ielts_requirement,toefl_requirement,intake,application_deadline,program_url,collected_at,last_verified_at,freshness_status
+prog_th_001,uni_th_001,Information and Communication Engineering,Information and Communication Engineering,Bachelor,4,,Unknown,,,,,,,,,,https://www.chula.ac.th/en/programs/25490011105451/,2026-08-22,2026-08-22,current
+prog_th_002,uni_th_001,Nano Engineering,Nano Engineering,Bachelor,,,Unknown,,,,,,,,,,https://www.eng.chula.ac.th/en/academics/bachelor,2026-08-22,2026-08-22,current
+prog_th_003,uni_th_001,Aerospace Engineering,Aerospace Engineering,Bachelor,,,Unknown,,,,,,,,,,https://www.eng.chula.ac.th/en/academics/bachelor,2026-08-22,2026-08-22,current
+prog_th_004,uni_th_002,Computer Science,Computer Science,Bachelor,4,Full-time,Unknown,,,,,,6,69,,,https://muic.mahidol.ac.th/en/programs/science/major/major-in-computer-science/,2026-08-22,2026-08-22,current
+prog_th_005,uni_th_002,Biological Sciences,Biological Sciences,Bachelor,4,Full-time,Unknown,,,,,,6,69,,,https://muic.mahidol.ac.th/en/programs/science/major/major-in-biological-science,2026-08-22,2026-08-22,current
+prog_th_006,uni_th_002,International Business,International Business,Bachelor,4,Full-time,Unknown,,,,,,6,69,,,https://muic.mahidol.ac.th/en/programs/business-administration/major/major-in-international-business,2026-08-22,2026-08-22,current
+prog_th_007,uni_th_003,Economics,Economics,Bachelor,,,Unknown,,,,,,,,,,https://admission.reg.cmu.ac.th/ipas/main/,2026-08-22,2026-08-22,current
+prog_th_008,uni_th_003,Software Engineering,Software Engineering,Bachelor,,,Unknown,,,,,,,,,,https://admission.reg.cmu.ac.th/ipas/main/,2026-08-22,2026-08-22,current
+prog_th_009,uni_th_003,Civil Engineering,Civil Engineering,Bachelor,,,Unknown,,,,,,,,,,https://admission.reg.cmu.ac.th/ipas/main/,2026-08-22,2026-08-22,current
+prog_th_010,uni_th_004,Chemical Engineering,Chemical Engineering,Bachelor,,,English,,,,,,,,,,https://admissions.siit.tu.ac.th/undergraduate/,2026-08-22,2026-08-22,current
+prog_th_011,uni_th_004,Civil Engineering,Civil Engineering,Bachelor,,,English,,,,,,,,,,https://admissions.siit.tu.ac.th/undergraduate/,2026-08-22,2026-08-22,current
+prog_th_012,uni_th_004,Electrical Engineering,Electrical Engineering,Bachelor,,,English,,,,,,,,,,https://admissions.siit.tu.ac.th/undergraduate/,2026-08-22,2026-08-22,current
+prog_th_013,uni_th_005,Software and Knowledge Engineering,Software and Knowledge Engineering,Bachelor,,,English,,,,,,,,,,https://iad.intaff.ku.ac.th/portal/webinter/programs.php,2026-08-22,2026-08-22,current
+prog_th_014,uni_th_005,Digital Manufacturing and Robotics Integration Engineering,Digital Manufacturing and Robotics Integration Engineering,Bachelor,,,English,,,,,,,,,,https://iad.intaff.ku.ac.th/portal/webinter/programs.php,2026-08-22,2026-08-22,current
+prog_th_015,uni_th_005,Marketing (KUBIM),Marketing,Bachelor,,,English,,,,,,,,,,https://iad.intaff.ku.ac.th/portal/webinter/programs.php,2026-08-22,2026-08-22,current
+prog_th_016,uni_th_006,Global Business Management,Global Business Management,Bachelor,,,Unknown,,,,,,,,,,https://www.ic.kku.ac.th/,2026-08-22,2026-08-22,current
+prog_th_017,uni_th_006,International Entrepreneurship,International Entrepreneurship,Bachelor,,,Unknown,,,,,,,,,,https://www.ic.kku.ac.th/,2026-08-22,2026-08-22,current
+prog_th_018,uni_th_006,International Marketing,International Marketing,Bachelor,,,Unknown,,,,,,,,,,https://www.ic.kku.ac.th/,2026-08-22,2026-08-22,current
+prog_th_019,uni_th_007,Islamic Business Innovation,Islamic Business Innovation,Bachelor,,,Unknown,,,,,,,,,,https://fais.psu.ac.th/en/news/view/314,2026-08-22,2026-08-22,current
+prog_th_020,uni_th_007,Islamic Studies and Islamic Law,Islamic Studies and Islamic Law,Bachelor,,,Unknown,,,,,,,,,,https://fais.psu.ac.th/en/news/view/314,2026-08-22,2026-08-22,current
+prog_th_021,uni_th_007,Islamic Studies (International Program),Islamic Studies,Bachelor,,,Unknown,,,,,,,,,,https://fais.psu.ac.th/en/news/view/314,2026-08-22,2026-08-22,current
+prog_th_022,uni_th_008,Computer Engineering,Computer Engineering,Bachelor,4,,English,,,,,,,,,,https://iadmission.kmutt.ac.th/programs/bachelor,2026-08-22,2026-08-22,current
+prog_th_023,uni_th_008,Chemical Engineering,Chemical Engineering,Bachelor,4,,English,,,,,,,,,,https://iadmission.kmutt.ac.th/programs/bachelor,2026-08-22,2026-08-22,current
+prog_th_024,uni_th_008,Civil Engineering,Civil Engineering,Bachelor,4,,English,,,,,,,,,,https://iadmission.kmutt.ac.th/programs/bachelor,2026-08-22,2026-08-22,current
+prog_th_025,uni_th_009,Biomedical Engineering,Biomedical Engineering,Bachelor,4,,Unknown,,,,,,,,,,https://www.eng.kmitl.ac.th/siie-international-programs/,2026-08-22,2026-08-22,current
+prog_th_026,uni_th_009,Civil Engineering,Civil Engineering,Bachelor,4,,Unknown,,,,,,,,,,https://www.eng.kmitl.ac.th/siie-international-programs/,2026-08-22,2026-08-22,current
+prog_th_027,uni_th_009,Robotics and AI Engineering,Robotics and Artificial Intelligence Engineering,Bachelor,4,,Unknown,,,,,,,,,,https://www.eng.kmitl.ac.th/siie-international-programs/,2026-08-22,2026-08-22,current
+prog_th_028,uni_th_010,Data Science and Artificial Intelligence,Data Science and Artificial Intelligence,Master,2,,English,,,,,,6,80,,,https://ait.ac.th/program/data-science-and-ai/,2026-08-22,2026-08-22,current
+prog_th_029,uni_th_010,Business Analytics and Digital Transformation,Business Analytics and Digital Transformation,Master,,,English,,,,,,6,80,,,https://ait.ac.th/study/masters-degree-programs/,2026-08-22,2026-08-22,current
+prog_th_030,uni_th_010,International Finance,International Finance,Master,,,English,,,,,,6,80,,,https://ait.ac.th/study/masters-degree-programs/,2026-08-22,2026-08-22,current
+prog_th_031,uni_th_011,English,English,Bachelor,,,Unknown,,,,,,,,,,https://en.mfu.ac.th/en-news/en-news-detail/detail/News/40441.html,2026-08-22,2026-08-22,current
+prog_th_032,uni_th_011,Business Administration,Business Administration,Bachelor,,,Unknown,,,,,,,,,,https://en.mfu.ac.th/en-news/en-news-detail/detail/News/40441.html,2026-08-22,2026-08-22,current
+prog_th_033,uni_th_011,Software Engineering,Software Engineering,Bachelor,,,Unknown,,,,,,,,,,https://en.mfu.ac.th/en-news/en-news-detail/detail/News/40441.html,2026-08-22,2026-08-22,current
+prog_th_034,uni_th_012,Business Administration,Business Administration,Bachelor,,,English,,,,,,,,,,https://www.buu.ac.th/en/bachelors-degree/,2026-08-22,2026-08-22,current
+prog_th_035,uni_th_012,Logistics and Supply Chain Management,Logistics and Supply Chain Management,Bachelor,,,English,,,,,,,,,,https://www.buu.ac.th/en/bachelors-degree/,2026-08-22,2026-08-22,current
+prog_th_036,uni_th_012,"Global Hospitality, Airline and Event Management","Hospitality, Tourism and Event Management",Bachelor,,,English,,,,,,,,,,https://www.buu.ac.th/en/bachelors-degree/,2026-08-22,2026-08-22,current
+prog_th_037,uni_th_013,Language for Careers,Language for Careers,Bachelor,4,,Unknown,,,,,,,,,,https://cis.hu.swu.ac.th/Curriculum-Structure-LCI,2026-08-22,2026-08-22,current
+prog_th_038,uni_th_013,Language for Communication,Language for Communication,Bachelor,,,Unknown,,,,,,,,,,https://cg.hu.swu.ac.th/Curriculum-Structure-LCC,2026-08-22,2026-08-22,current
+prog_th_039,uni_th_013,Global Business Management,Global Business Management,Bachelor,,,Unknown,,,,,,5.5,65,,,https://en.bas.swu.ac.th/academics/international_students,2026-08-22,2026-08-22,current
+prog_th_040,uni_th_014,International Hospitality Management,International Hospitality Management,Bachelor,,,Unknown,,,,,,,,,,https://suic.su.ac.th/th/news/suic-intake-6-2026,2026-08-22,2026-08-22,current
+prog_th_041,uni_th_014,Business and Technology,Business and Technology,Bachelor,,,Unknown,,,,,,,,,,https://suic.su.ac.th/th/news/suic-intake-6-2026,2026-08-22,2026-08-22,current
+prog_th_042,uni_th_014,Digital Communication Design,Digital Communication Design,Bachelor,,,Unknown,,,,,,,,,,https://suic.su.ac.th/th/news/suic-intake-6-2026,2026-08-22,2026-08-22,current
+prog_th_043,uni_th_015,International Business Management,International Business Management,Bachelor,,,English,,,,,,,,,,https://www.nuic.nu.ac.th/wp-content/uploads/2025/03/ibmc2023.pdf,2026-08-22,2026-08-22,current
+prog_th_044,uni_th_015,International Human Resource Management and Development,Human Resource Management and Development,Bachelor,,,Unknown,,,,,,,,,,https://www.nuic.nu.ac.th/wp-content/uploads/2025/03/hrmc2023.pdf,2026-08-22,2026-08-22,current
+prog_th_045,uni_th_015,English for Business Communication,English for Business Communication,Bachelor,,,English,,,,,,,,,,https://www.nuic.nu.ac.th/wp-content/uploads/2025/06/EBC-Revised-Curriculum-2025.pdf,2026-08-22,2026-08-22,current
+prog_th_046,uni_th_016,Architecture,Architecture,Bachelor,5,,Thai,21000,THB,Semester,2.5,4,4.5,,,,https://safa.up.ac.th/en/admissions/prospectus,2026-08-22,2026-08-22,current
+prog_th_047,uni_th_016,Interior Architecture,Interior Architecture,Bachelor,5,,Thai,21000,THB,Semester,2.5,4,4.5,,,,https://safa.up.ac.th/en/admissions/prospectus,2026-08-22,2026-08-22,current
+prog_th_048,uni_th_016,Art and Design,Art and Design,Bachelor,4,,Thai,21000,THB,Semester,2.5,4,4.5,,,,https://safa.up.ac.th/en/admissions/prospectus,2026-08-22,2026-08-22,current
+prog_th_049,uni_th_017,Doctor of Veterinary Medicine,Veterinary Medicine,Bachelor,,,Unknown,,,,,,,,,,https://entry.wu.ac.th/apply/download/q/Q8038ENG.pdf,2026-08-22,2026-08-22,current
+prog_th_050,uni_th_017,Doctor of Dental Surgery,Dentistry,Bachelor,,,Unknown,,,,,,,,,,https://entry.wu.ac.th/apply/download/q/Q8037ENG.pdf,2026-08-22,2026-08-22,current
+prog_th_051,uni_th_017,Medical Technology,Medical Technology,Bachelor,4,,English,89000,THB,Semester,,,,,,,https://entry.wu.ac.th/apply/download/q/Q8063ENG-R2.pdf,2026-08-22,2026-08-22,current
+prog_th_052,uni_th_018,Civil Engineering,Civil Engineering,Bachelor,4,,Unknown,,,,,,,,,,https://cia.sut.ac.th/Doc-PDF/SUTProspectus.pdf,2026-08-22,2026-08-22,current
+prog_th_053,uni_th_018,Mechanical and Aeronautical Engineering,Mechanical and Aeronautical Engineering,Bachelor,4,,Unknown,,,,,,,,,,https://cia.sut.ac.th/Doc-PDF/SUTProspectus.pdf,2026-08-22,2026-08-22,current
+prog_th_054,uni_th_018,Petrochemical and Polymer Engineering,Petrochemical and Polymer Engineering,Bachelor,4,,Unknown,,,,,,,,,,https://cia.sut.ac.th/Doc-PDF/SUTProspectus.pdf,2026-08-22,2026-08-22,current
+prog_th_055,uni_th_019,Tourism Management,Tourism Management,Master,,,Unknown,150000,THB,Total,,,,,,,https://mju-ic.mju.ac.th/,2026-08-22,2026-08-22,current
+prog_th_056,uni_th_019,Organic Agriculture Management and Innovative Agricultural Products,Organic Agriculture Management,Master,,,Unknown,150000,THB,Total,,,,,,,https://mju-ic.mju.ac.th/,2026-08-22,2026-08-22,current
+prog_th_057,uni_th_019,Digital Economics and Management Innovation,Digital Economics and Management Innovation,Master,,,Unknown,150000,THB,Total,,,,,,,https://mju-ic.mju.ac.th/,2026-08-22,2026-08-22,current
+prog_th_058,uni_th_020,English,English,Bachelor,,,Unknown,,,,,,,,,,https://flas.npu.ac.th/web/index.php?page=course_english,2026-08-22,2026-08-22,current
+prog_th_059,uni_th_020,Chinese,Chinese,Bachelor,,,Unknown,,,,,,,,,,https://flas.npu.ac.th/web/index.php?page=course_chinese,2026-08-22,2026-08-22,current
+prog_th_060,uni_th_020,Public Administration,Public Administration,Bachelor,,,Unknown,,,,,,,,,,https://www.npu.ac.th/?content_id=1696949610&page=content,2026-08-22,2026-08-22,current
+prog_th_061,uni_th_021,Civil Engineering,Civil Engineering,Master,2,,Thai/English,38500,THB,Semester,,,,,,,https://www.ubu.ac.th/web/ubuenglish/content/Masters%20Programs%3A%20Academic%20Year%202026/,2026-08-22,2026-08-22,current
+prog_th_062,uni_th_021,Social Science and Development,Social Science and Development,Master,2,,Thai/English,28500,THB,Semester,,,,,,,https://www.ubu.ac.th/web/ubuenglish/content/Masters%20Programs%3A%20Academic%20Year%202026/,2026-08-22,2026-08-22,current
+prog_th_063,uni_th_021,Tourism Hospitality and Contemporary Thai Culture Innovation Management,Tourism and Hospitality Management,Master,2,,Thai/English,28500,THB,Semester,,,,,,,https://www.ubu.ac.th/web/ubuenglish/content/Masters%20Programs%3A%20Academic%20Year%202026/,2026-08-22,2026-08-22,current
+prog_th_064,uni_th_022,Marketing,Marketing,Bachelor,,,Thai,,,,,,,,,,https://www.stou.ac.th/eng/courses/Bachelor_65/PROGRAM/BUS/market.pdf,2026-08-22,2026-08-22,current
+prog_th_065,uni_th_022,International Relations and Comparative Governments and Politics,International Relations and Political Science,Bachelor,,,Thai,,,,,,,,,,https://www.stou.ac.th/Courses/sps/,2026-08-22,2026-08-22,current
+prog_th_066,uni_th_022,Information and Communication Technology,Information and Communication Technology,Bachelor,,,Thai,,,,,,,,,,https://www.stou.ac.th/eng/courses/Bachelor_56/PROGRAM/SCIENCE/information.pdf,2026-08-22,2026-08-22,current
+prog_th_067,uni_th_023,English,English,Bachelor,,,Unknown,,,,,,,,,,https://iis.ru.ac.th/images/doc/Download/B.A.%20English%20Grade%20Checklist%2065%20-%2069.pdf,2026-08-22,2026-08-22,current
+prog_th_068,uni_th_023,Media and Global Innovative Communication,Media and Communication,Bachelor,,,Unknown,,,,,,,,,,https://iis.ru.ac.th/images/doc/Download/B.A.%20MAGIC%20Grade%20Checklist%2066%20-%2070.pdf,2026-08-22,2026-08-22,current
+prog_th_069,uni_th_023,Global Business and Digital Age Entrepreneurship,Global Business and Entrepreneurship,Bachelor,,,Unknown,,,,,,,,,,https://iis.ru.ac.th/images/doc/Download/B.B.A.%20Grade%20Checklist%2067%20-%2071.pdf,2026-08-22,2026-08-22,current
+prog_th_070,uni_th_024,Public Administration,Public Administration,Master,2,,English,,,,,,5.5,,,,https://gspa.nida.ac.th/en/mpa-en/,2026-08-22,2026-08-22,current
+prog_th_071,uni_th_024,Integrated Tourism and Hospitality Management,Tourism and Hospitality Management,Master,,,English,,,,,,5.5,,,,https://nida.ac.th/admissions-calendar/,2026-08-22,2026-08-22,current
+prog_th_072,uni_th_024,English Language Studies and Teaching,English Language Studies and Teaching,Master,,,English,,,,,,,,,,https://nida.ac.th/admissions-calendar/,2026-08-22,2026-08-22,current
+prog_th_073,uni_th_025,Aerospace Engineering,Aerospace Engineering,Bachelor,,,Unknown,,,,,,4.5,45,,,https://www.eng.kmutnb.ac.th/ciep/aerospace-engineering/,2026-08-22,2026-08-22,current
+prog_th_074,uni_th_025,Mechanical Engineering for Design and Innovation,Mechanical Engineering,Bachelor,,,Unknown,,,,,,4.5,45,,,https://www.eng.kmutnb.ac.th/ciep/department-of-mechanical-and-aerospace-engineering/,2026-08-22,2026-08-22,current
+prog_th_075,uni_th_025,Materials Engineering and Design,Materials Engineering,Bachelor,,,Unknown,,,,,,4.5,45,,,https://www.eng.kmutnb.ac.th/ciep/admission/,2026-08-22,2026-08-22,current
+prog_th_076,uni_th_026,International Business Administration,International Business Administration,Bachelor,,,Unknown,,,,,,,,,,https://bus.rmutt.ac.th/download/documentInter/International_Program.pdf,2026-08-22,2026-08-22,current
+prog_th_077,uni_th_026,Logistics and Supply Chain Management,Logistics and Supply Chain Management,Bachelor,,,Unknown,,,,,,,,,,https://bus.rmutt.ac.th/download/documentInter/International_Program.pdf,2026-08-22,2026-08-22,current
+prog_th_078,uni_th_026,Marketing,Marketing,Bachelor,,,Unknown,,,,,,,,,,https://bus.rmutt.ac.th/download/documentInter/International_Program.pdf,2026-08-22,2026-08-22,current
+prog_th_079,uni_th_027,Computer Science,Computer Science,Bachelor,,,Unknown,,,,,,,,,,https://sci.rmutsb.ac.th/%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%81%E0%B8%AA%E0%B8%B9%E0%B8%95%E0%B8%A3-%E0%B8%A3%E0%B8%B0%E0%B8%94%E0%B8%B1%E0%B8%9A%E0%B8%9B%E0%B8%A3%E0%B8%B4%E0%B8%8D%E0%B8%8D%E0%B8%B2%E0%B8%95%E0%B8%A3-5/,2026-08-22,2026-08-22,current
+prog_th_080,uni_th_027,Multimedia Technology,Multimedia Technology,Bachelor,,,Unknown,,,,,,,,,,https://sci.rmutsb.ac.th/multimedia/,2026-08-22,2026-08-22,current
+prog_th_081,uni_th_027,Digital Media Technology,Digital Media Technology,Bachelor,,,Unknown,,,,,,,,,,https://sci.rmutsb.ac.th/%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%81%E0%B8%AA%E0%B8%B9%E0%B8%95%E0%B8%A3-%E0%B8%A3%E0%B8%B0%E0%B8%94%E0%B8%B1%E0%B8%9A%E0%B8%9B%E0%B8%A3%E0%B8%B4%E0%B8%8D%E0%B8%8D%E0%B8%B2%E0%B8%95%E0%B8%A3-10/,2026-08-22,2026-08-22,current
+prog_th_082,uni_th_028,International Creative Industry Entrepreneurship,Creative Industry Entrepreneurship,Bachelor,4,,Unknown,,,,,,4.5,49,,,https://rice.rmutr.ac.th/programs/undergraduate/66ecf50beecfb331b31f2c8b,2026-08-22,2026-08-22,current
+prog_th_083,uni_th_028,Teaching English to Speakers of Other Languages,Teaching English to Speakers of Other Languages,Bachelor,4,,Unknown,,,,,,,,,,https://rice.rmutr.ac.th/programs/undergraduate/670f3f90c5668488a3b05ff9,2026-08-22,2026-08-22,current
+prog_th_084,uni_th_028,Computer Science and Digital Technology,Computer Science and Digital Technology,Bachelor,4,,Unknown,,,,,,4.5,49,,,https://rice.rmutr.ac.th/programs/undergraduate/695b2568369c113bc2f67348,2026-08-22,2026-08-22,current
+prog_th_085,uni_th_029,Hotel and Hospitality,Hotel and Hospitality,Bachelor,4,,Unknown,,,,,,,,,,https://larts.rmutp.ac.th/en/,2026-08-22,2026-08-22,current
+prog_th_086,uni_th_029,Tourism and Hospitality,Tourism and Hospitality,Bachelor,4,,Unknown,,,,,,,,,,https://larts.rmutp.ac.th/en/,2026-08-22,2026-08-22,current
+prog_th_087,uni_th_029,English for International Communication,English for International Communication,Bachelor,4,,Unknown,,,,,,,,,,https://larts.rmutp.ac.th/en/,2026-08-22,2026-08-22,current
+prog_th_088,uni_th_030,International Business Management,International Business Management,Bachelor,4,,English,,,,,,,,,,https://ic.rmutk.ac.th/?lang=en&page_id=3980,2026-08-22,2026-08-22,current
+prog_th_089,uni_th_030,International Tourism and Hospitality Management,Tourism and Hospitality Management,Bachelor,3,,Unknown,,,,,,,,,,https://ic.rmutk.ac.th/?lang=en&page_id=4835,2026-08-22,2026-08-22,current
+prog_th_090,uni_th_030,Accounting and Information Technology,Accounting and Information Technology,Bachelor,,,Unknown,,,,,,,,,,https://ic.rmutk.ac.th/?lang=en&page_id=4855,2026-08-22,2026-08-22,current
+prog_th_091,uni_th_031,Artificial Intelligence Engineering and Digital Innovation,Artificial Intelligence Engineering and Digital Innovation,Bachelor,4,,Thai/English,,,,,,,,,,https://eng.rmutsv.ac.th/ruts/en/bachelor-of-engineering-program-in-artificial-intelligence-engineering-and-digital-innovation-2/,2026-08-22,2026-08-22,current
+prog_th_092,uni_th_031,Computer Engineering,Computer Engineering,Bachelor,4,,Thai/English,,,,,,,,,,https://coe.eng.rmutsv.ac.th/coe/,2026-08-22,2026-08-22,current
+prog_th_093,uni_th_031,Electronics Engineering,Electronics Engineering,Bachelor,4,,Thai/English,,,,,,,,,,https://eng.rmutsv.ac.th/ruts/en/electronic-engineering-program-electrical-engineering/,2026-08-22,2026-08-22,current
+prog_th_094,uni_th_032,Business Innovation Management,Business Innovation Management,Bachelor,4,,Unknown,,,,,,,,,,https://ades.rmuti.ac.th/coursedetail?course=452,2026-08-22,2026-08-22,current
+prog_th_095,uni_th_032,Tourism and Hospitality,Tourism and Hospitality,Bachelor,4,,Unknown,,,,,,,,,,https://ades.rmuti.ac.th/coursedetail?course=435,2026-08-22,2026-08-22,current
+prog_th_096,uni_th_032,Modern Management,Modern Management,Bachelor,4,,Unknown,,,,,,,,,,https://ades.rmuti.ac.th/coursedetail?course=513,2026-08-22,2026-08-22,current
+prog_th_097,uni_th_033,International Business Management,International Business Management,Bachelor,4,,Unknown,,,,,,,,,,https://academic.rmutl.ac.th/curriculum?lang=en,2026-08-22,2026-08-22,current
+prog_th_098,uni_th_033,Business Information System,Business Information System,Bachelor,,,Unknown,,,,,,,,,,https://academic.rmutl.ac.th/curriculum?lang=en,2026-08-22,2026-08-22,current
+prog_th_099,uni_th_033,Logistics and Supply Chain Management,Logistics and Supply Chain Management,Bachelor,,,Unknown,,,,,,,,,,https://academic.rmutl.ac.th/curriculum?lang=en,2026-08-22,2026-08-22,current
+prog_th_100,uni_th_034,Management,Management,Master,,,Unknown,,,,,,,,,,https://grad.rmutto.ac.th/join-program/,2026-08-22,2026-08-22,current
+prog_th_101,uni_th_034,Management,Management,PhD,,,Unknown,,,,,,,,,,https://grad.rmutto.ac.th/join-program/,2026-08-22,2026-08-22,current
+prog_th_102,uni_th_034,Fine Arts,Fine Arts,PhD,,,Unknown,,,,,,,,,,https://cbis.rmutto.ac.th/?page_id=4430,2026-08-22,2026-08-22,current
+prog_th_103,uni_th_035,Airline Business,Airline Business,Bachelor,,,English,,,,,,,,,,https://ssruic.ssru.ac.th/en/home,2026-08-22,2026-08-22,current
+prog_th_104,uni_th_035,Hotel and Tourism Innovation Management,Hotel and Tourism Innovation Management,Bachelor,,,English,,,,,,,,,,https://ssruic.ssru.ac.th/en/page/infor-htm,2026-08-22,2026-08-22,current
+prog_th_105,uni_th_035,Digital International Business,Digital International Business,Bachelor,,,English,,,,,,,,,,https://ssruic.ssru.ac.th/en/page/infor-dib,2026-08-22,2026-08-22,current
+prog_th_106,uni_th_036,English,English,Bachelor,,,Unknown,,,,,,,,,,https://aic.pnru.ac.th/files/4441.pdf,2026-08-22,2026-08-22,current
+prog_th_107,uni_th_036,Business English for International Communication,Business English for International Communication,Bachelor,4,,Unknown,,,,,,,,,,https://aic.pnru.ac.th/files/4441.pdf,2026-08-22,2026-08-22,current
+prog_th_108,uni_th_036,Tourism,Tourism,Bachelor,,,Unknown,,,,,,,,,,https://aic.pnru.ac.th/files/4441.pdf,2026-08-22,2026-08-22,current
+prog_th_109,uni_th_037,Aviation Business Management,Aviation Business Management,Bachelor,,,Unknown,,,,,,,,,,https://www.inter.cmru.ac.th/admission/,2026-08-22,2026-08-22,current
+prog_th_110,uni_th_037,International Business Management,International Business Management,Bachelor,,,Unknown,,,,,,,,,,https://www.inter.cmru.ac.th/admission/,2026-08-22,2026-08-22,current
+prog_th_111,uni_th_037,English for International Communication,English for International Communication,Bachelor,,,Unknown,,,,,,,,,,https://www.inter.cmru.ac.th/admission/,2026-08-22,2026-08-22,current
+prog_th_112,uni_th_038,Communicative Thai for Foreigners,Thai Language,Bachelor,4,,Thai,,,,,,,,,,https://apro.nrru.ac.th/apro/show_pages.php?pages=2a38a4a9316c49e5a833517c45d31070,2026-08-22,2026-08-22,current
+prog_th_113,uni_th_038,Chinese,Chinese,Bachelor,4,,Thai,,,,,,,,,,https://apro.nrru.ac.th/apro/show_pages.php?pages=2a38a4a9316c49e5a833517c45d31070,2026-08-22,2026-08-22,current
+prog_th_114,uni_th_038,Law,Law,Bachelor,4,,Thai,,,,,,,,,,https://apro.nrru.ac.th/apro/show_pages.php?pages=2a38a4a9316c49e5a833517c45d31070,2026-08-22,2026-08-22,current
+prog_th_115,uni_th_039,English Language,English Education,Bachelor,4,,Unknown,,,,,,,,,,https://pkru.ac.th/en/register/course/bachelor,2026-08-22,2026-08-22,current
+prog_th_116,uni_th_039,General Science,General Science Education,Bachelor,4,,Unknown,,,,,,,,,,https://pkru.ac.th/en/register/course/bachelor,2026-08-22,2026-08-22,current
+prog_th_117,uni_th_039,Entrepreneurship,Entrepreneurship,Bachelor,4,,Unknown,,,,,,,,,,https://pkru.ac.th/en/register/course/bachelor,2026-08-22,2026-08-22,current
+prog_th_118,uni_th_040,Tourism and Hospitality Management (Thai Program),Tourism and Hospitality Management,Bachelor,3.5,,Thai,,,,,,,,,,https://ist.sru.ac.th/program/23/en/,2026-08-22,2026-08-22,current
+prog_th_119,uni_th_040,Tourism and Hospitality Management (Bilingual Program),Tourism and Hospitality Management,Bachelor,3.5,,Thai/English,,,,,,,,,,https://ist.sru.ac.th/program/23/en/,2026-08-22,2026-08-22,current
+prog_th_120,uni_th_040,Aviation Business,Aviation Business,Bachelor,,,Unknown,,,,,,,,,,https://ist.sru.ac.th/program/22/en/,2026-08-22,2026-08-22,current

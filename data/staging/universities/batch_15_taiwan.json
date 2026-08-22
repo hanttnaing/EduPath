@@ -1,0 +1,173 @@
+[
+  {
+    "university_id": "uni_tw_012",
+    "university_name": "National Sun Yat-sen University",
+    "country_id": "country_tw",
+    "city": "Kaohsiung",
+    "university_type": "Public",
+    "official_website": "https://www.nsysu.edu.tw/?Lang=en",
+    "source_url": "https://www.studyintaiwan.org/how-to-apply/school"
+  },
+  {
+    "university_id": "uni_tw_013",
+    "university_name": "National Chung Cheng University",
+    "country_id": "country_tw",
+    "city": "Chiayi",
+    "university_type": "Public",
+    "official_website": "https://www.ccu.edu.tw/",
+    "source_url": "https://www.studyintaiwan.org/how-to-apply/school"
+  },
+  {
+    "university_id": "uni_tw_014",
+    "university_name": "National Taiwan Ocean University",
+    "country_id": "country_tw",
+    "city": "Keelung",
+    "university_type": "Public",
+    "official_website": "https://www.ntou.edu.tw/",
+    "source_url": "https://www.studyintaiwan.org/how-to-apply/school"
+  },
+  {
+    "university_id": "uni_tw_015",
+    "university_name": "National Dong Hwa University",
+    "country_id": "country_tw",
+    "city": "Hualien",
+    "university_type": "Public",
+    "official_website": "https://www.ndhu.edu.tw/",
+    "source_url": "https://www.studyintaiwan.org/how-to-apply/school"
+  },
+  {
+    "university_id": "uni_tw_016",
+    "university_name": "National University of Kaohsiung",
+    "country_id": "country_tw",
+    "city": "Kaohsiung",
+    "university_type": "Public",
+    "official_website": "https://www.nuk.edu.tw/?Lang=en",
+    "source_url": "https://www.studyintaiwan.org/how-to-apply/school"
+  },
+  {
+    "university_id": "uni_tw_017",
+    "university_name": "National Kaohsiung University of Science and Technology",
+    "country_id": "country_tw",
+    "city": "Kaohsiung",
+    "university_type": "Public",
+    "official_website": "https://eng.nkust.edu.tw/",
+    "source_url": "https://www.studyintaiwan.org/how-to-apply/school"
+  },
+  {
+    "university_id": "uni_tw_018",
+    "university_name": "National Yunlin University of Science and Technology",
+    "country_id": "country_tw",
+    "city": "Douliu",
+    "university_type": "Public",
+    "official_website": "https://www.yuntech.edu.tw/",
+    "source_url": "https://www.studyintaiwan.org/how-to-apply/school"
+  },
+  {
+    "university_id": "uni_tw_019",
+    "university_name": "National Pingtung University of Science and Technology",
+    "country_id": "country_tw",
+    "city": "Pingtung",
+    "university_type": "Public",
+    "official_website": "https://wp.npust.edu.tw/en/",
+    "source_url": "https://www.studyintaiwan.org/how-to-apply/school"
+  },
+  {
+    "university_id": "uni_tw_020",
+    "university_name": "National United University",
+    "country_id": "country_tw",
+    "city": "Miaoli",
+    "university_type": "Public",
+    "official_website": "https://www.nuu.edu.tw/index.php?Lang=en",
+    "source_url": "https://www.studyintaiwan.org/how-to-apply/school"
+  },
+  {
+    "university_id": "uni_tw_021",
+    "university_name": "National Taipei University",
+    "country_id": "country_tw",
+    "city": "New Taipei City",
+    "university_type": "Public",
+    "official_website": "https://new.ntpu.edu.tw/",
+    "source_url": "https://www.studyintaiwan.org/how-to-apply/school"
+  },
+  {
+    "university_id": "uni_tw_022",
+    "university_name": "Fu Jen Catholic University",
+    "country_id": "country_tw",
+    "city": "New Taipei City",
+    "university_type": "Private",
+    "official_website": "https://www.fju.edu.tw/",
+    "source_url": "https://www.studyintaiwan.org/how-to-apply/school"
+  },
+  {
+    "university_id": "uni_tw_023",
+    "university_name": "Feng Chia University",
+    "country_id": "country_tw",
+    "city": "Taichung",
+    "university_type": "Private",
+    "official_website": "https://www.fcu.edu.tw/en/",
+    "source_url": "https://www.studyintaiwan.org/how-to-apply/school"
+  },
+  {
+    "university_id": "uni_tw_024",
+    "university_name": "Tunghai University",
+    "country_id": "country_tw",
+    "city": "Taichung",
+    "university_type": "Private",
+    "official_website": "https://eng.thu.edu.tw/",
+    "source_url": "https://www.studyintaiwan.org/how-to-apply/school"
+  },
+  {
+    "university_id": "uni_tw_025",
+    "university_name": "Soochow University",
+    "country_id": "country_tw",
+    "city": "Taipei",
+    "university_type": "Private",
+    "official_website": "https://www-en.scu.edu.tw/",
+    "source_url": "https://www.studyintaiwan.org/how-to-apply/school"
+  },
+  {
+    "university_id": "uni_tw_026",
+    "university_name": "Taipei Medical University",
+    "country_id": "country_tw",
+    "city": "Taipei",
+    "university_type": "Private",
+    "official_website": "https://www.tmu.edu.tw/",
+    "source_url": "https://www.studyintaiwan.org/how-to-apply/school"
+  },
+  {
+    "university_id": "uni_tw_027",
+    "university_name": "China Medical University",
+    "country_id": "country_tw",
+    "city": "Taichung",
+    "university_type": "Private",
+    "official_website": "https://www.cmu.edu.tw/",
+    "source_url": "https://www.studyintaiwan.org/how-to-apply/school"
+  },
+  {
+    "university_id": "uni_tw_028",
+    "university_name": "Chang Gung University",
+    "country_id": "country_tw",
+    "city": "Taoyuan",
+    "university_type": "Private",
+    "official_website": "https://www.cgu.edu.tw/",
+    "source_url": "https://www.studyintaiwan.org/how-to-apply/school"
+  },
+  {
+    "university_id": "uni_tw_029",
+    "university_name": "Yuan Ze University",
+    "country_id": "country_tw",
+    "city": "Taoyuan",
+    "university_type": "Private",
+    "official_website": "https://www.yzu.edu.tw/index.php/en-us/",
+    "source_url": "https://www.studyintaiwan.org/how-to-apply/school"
+  },
+  {
+    "university_id": "uni_tw_030",
+    "university_name": "Chung Yuan Christian University",
+    "country_id": "country_tw",
+    "city": "Taoyuan",
+    "university_type": "Private",
+    "official_website": "https://www.cycu.edu.tw/eng/",
+    "source_url": "https://www.studyintaiwan.org/how-to-apply/school"
+  }
+]

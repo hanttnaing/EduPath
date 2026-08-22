@@ -1,0 +1,517 @@
+﻿country_id,university_id,university_name,city,current_programmes,target_programmes,programmes_to_add,official_website,source_url,expansion_status
+country_bn,uni_bn_001,Universiti Brunei Darussalam,Bandar Seri Begawan,0,3,3,https://ubd.edu.bn/,https://ubd.edu.bn/,PENDING
+country_bn,uni_bn_002,Universiti Teknologi Brunei,Gadong,0,3,3,https://www.utb.edu.bn/,https://www.utb.edu.bn/the-university/contact-us/,PENDING
+country_bn,uni_bn_003,Universiti Islam Sultan Sharif Ali,Bandar Seri Begawan,0,3,3,https://unissa.edu.bn/,https://unissa.edu.bn/,PENDING
+country_bn,uni_bn_004,Kolej Universiti Perguruan Ugama Seri Begawan,Bandar Seri Begawan,0,3,3,https://www.kupu-sb.edu.bn/,https://www.kupu-sb.edu.bn/tawaran-kursus-program/,PENDING
+country_cn,uni_cn_001,Tsinghua University,Beijing,0,3,3,https://www.tsinghua.edu.cn/en/,https://www.tsinghua.edu.cn/en/Contact.htm,PENDING
+country_cn,uni_cn_002,Peking University,Beijing,0,3,3,https://english.pku.edu.cn/,https://isd.pku.edu.cn/en/,PENDING
+country_cn,uni_cn_003,Zhejiang University,Hangzhou,0,3,3,https://www.zju.edu.cn/english/,https://www.zju.edu.cn/english/,PENDING
+country_cn,uni_cn_004,Shanghai Jiao Tong University,Shanghai,0,3,3,https://en.sjtu.edu.cn/,https://en.sjtu.edu.cn/study-sjtu/prospective/scholarships,PENDING
+country_cn,uni_cn_005,Fudan University,Shanghai,0,3,3,https://www.fudan.edu.cn/en/,https://www.fudan.edu.cn/en/Admission/list.htm,PENDING
+country_cn,uni_cn_006,University of Science and Technology of China,Hefei,0,3,3,https://www.ustc.edu.cn/,https://ic.ustc.edu.cn/en/,PENDING
+country_cn,uni_cn_007,Harbin Institute of Technology,Harbin,0,3,3,https://en.hit.edu.cn/,https://en.hit.edu.cn/11958/list.htm,PENDING
+country_cn,uni_cn_008,Xi'an Jiaotong University,Xi'an,0,3,3,https://en.xjtu.edu.cn/,https://en.xjtu.edu.cn/,PENDING
+country_cn,uni_cn_009,Sun Yat-sen University,Guangzhou,0,3,3,https://www.sysu.edu.cn/sysuen/,https://iso.sysu.edu.cn/en/application/index.htm,PENDING
+country_cn,uni_cn_010,Tongji University,Shanghai,0,3,3,https://en.tongji.edu.cn/,https://study.tongji.edu.cn/en/,PENDING
+country_cn,uni_cn_011,Renmin University of China,Beijing,0,3,3,https://en.ruc.edu.cn/,https://en.moe.gov.cn/subordinate_universities/,PENDING
+country_cn,uni_cn_012,Beijing Normal University,Beijing,0,3,3,https://english.bnu.edu.cn/,https://en.moe.gov.cn/subordinate_universities/,PENDING
+country_cn,uni_cn_013,China Agricultural University,Beijing,0,3,3,https://en.cau.edu.cn/,https://en.moe.gov.cn/subordinate_universities/,PENDING
+country_cn,uni_cn_014,Beijing Foreign Studies University,Beijing,0,3,3,https://global.bfsu.edu.cn/,https://en.moe.gov.cn/subordinate_universities/,PENDING
+country_cn,uni_cn_015,University of Science and Technology Beijing,Beijing,0,3,3,https://en.ustb.edu.cn/,https://en.moe.gov.cn/subordinate_universities/,PENDING
+country_cn,uni_cn_016,Beijing Language and Culture University,Beijing,0,3,3,https://english.blcu.edu.cn/,https://en.moe.gov.cn/subordinate_universities/,PENDING
+country_cn,uni_cn_017,Beijing University of Chemical Technology,Beijing,0,3,3,https://english.buct.edu.cn/,https://en.moe.gov.cn/subordinate_universities/,PENDING
+country_cn,uni_cn_018,Beijing Jiaotong University,Beijing,0,3,3,https://en.bjtu.edu.cn/,https://en.moe.gov.cn/subordinate_universities/,PENDING
+country_cn,uni_cn_019,China University of Geosciences (Beijing),Beijing,0,3,3,https://en.cugb.edu.cn/,https://en.moe.gov.cn/subordinate_universities/,PENDING
+country_cn,uni_cn_020,Beijing University of Posts and Telecommunications,Beijing,0,3,3,https://english.bupt.edu.cn/,https://en.moe.gov.cn/subordinate_universities/,PENDING
+country_cn,uni_cn_021,China University of Mining and Technology-Beijing,Beijing,0,3,3,https://english.cumtb.edu.cn/,https://en.moe.gov.cn/subordinate_universities/,PENDING
+country_cn,uni_cn_022,China University of Petroleum-Beijing,Beijing,0,3,3,https://www.cup.edu.cn/english/,https://en.moe.gov.cn/subordinate_universities/,PENDING
+country_cn,uni_cn_023,Beijing Forestry University,Beijing,0,3,3,https://english.bjfu.edu.cn/,https://en.moe.gov.cn/subordinate_universities/,PENDING
+country_cn,uni_cn_024,Communication University of China,Beijing,0,3,3,https://en.cuc.edu.cn/,https://en.moe.gov.cn/subordinate_universities/,PENDING
+country_cn,uni_cn_025,Central University of Finance and Economics,Beijing,0,3,3,https://en.cufe.edu.cn/,https://en.moe.gov.cn/subordinate_universities/,PENDING
+country_cn,uni_cn_026,China University of Political Science and Law,Beijing,0,3,3,https://en.cupl.edu.cn/,https://en.moe.gov.cn/subordinate_universities/,PENDING
+country_cn,uni_cn_027,Beijing University of Chinese Medicine,Beijing,0,3,3,https://english.bucm.edu.cn/,https://en.moe.gov.cn/subordinate_universities/,PENDING
+country_cn,uni_cn_028,University of International Business and Economics,Beijing,0,3,3,https://english.uibe.edu.cn/,https://en.moe.gov.cn/subordinate_universities/,PENDING
+country_cn,uni_cn_029,North China Electric Power University,Beijing,0,3,3,https://english.ncepu.edu.cn/,https://en.moe.gov.cn/subordinate_universities/,PENDING
+country_cn,uni_cn_030,Tianjin University,Tianjin,0,3,3,https://www.tju.edu.cn/english/,https://en.moe.gov.cn/subordinate_universities/,PENDING
+country_cn,uni_cn_031,Nankai University,Tianjin,0,3,3,https://en.nankai.edu.cn/,https://en.moe.gov.cn/subordinate_universities/,PENDING
+country_cn,uni_cn_032,Dalian University of Technology,Dalian,0,3,3,https://en.dlut.edu.cn/,https://en.moe.gov.cn/subordinate_universities/,PENDING
+country_cn,uni_cn_033,Northeastern University,Shenyang,0,3,3,https://english.neu.edu.cn/,https://en.moe.gov.cn/subordinate_universities/,PENDING
+country_cn,uni_cn_034,Jilin University,Changchun,0,3,3,https://global.jlu.edu.cn/,https://en.moe.gov.cn/subordinate_universities/,PENDING
+country_cn,uni_cn_035,Northeast Normal University,Changchun,0,3,3,https://en.nenu.edu.cn/,https://en.moe.gov.cn/subordinate_universities/,PENDING
+country_cn,uni_cn_036,Northeast Forestry University,Harbin,0,3,3,https://en.nefu.edu.cn/,https://en.moe.gov.cn/subordinate_universities/,PENDING
+country_cn,uni_cn_037,East China University of Science and Technology,Shanghai,0,3,3,https://english.ecust.edu.cn/,https://en.moe.gov.cn/subordinate_universities/,PENDING
+country_cn,uni_cn_038,Donghua University,Shanghai,0,3,3,https://english.dhu.edu.cn/,https://en.moe.gov.cn/subordinate_universities/,PENDING
+country_cn,uni_cn_039,East China Normal University,Shanghai,0,3,3,https://english.ecnu.edu.cn/,https://en.moe.gov.cn/subordinate_universities/,PENDING
+country_cn,uni_cn_040,Shanghai University of Finance and Economics,Shanghai,0,3,3,https://english.sufe.edu.cn/,https://en.moe.gov.cn/subordinate_universities/,PENDING
+country_cn,uni_cn_041,Shanghai International Studies University,Shanghai,0,3,3,https://en.shisu.edu.cn/,https://en.moe.gov.cn/subordinate_universities/,PENDING
+country_cn,uni_cn_042,Nanjing University,Nanjing,0,3,3,https://www.nju.edu.cn/en/,https://en.moe.gov.cn/subordinate_universities/,PENDING
+country_cn,uni_cn_043,Southeast University,Nanjing,0,3,3,https://www.seu.edu.cn/english/,https://en.moe.gov.cn/subordinate_universities/,PENDING
+country_cn,uni_cn_044,Hohai University,Nanjing,0,3,3,https://en.hhu.edu.cn/,https://en.moe.gov.cn/subordinate_universities/,PENDING
+country_cn,uni_cn_045,China University of Mining and Technology,Xuzhou,0,3,3,https://en.cumt.edu.cn/,https://en.moe.gov.cn/subordinate_universities/,PENDING
+country_cn,uni_cn_046,Jiangnan University,Wuxi,0,3,3,https://english.jiangnan.edu.cn/,https://en.moe.gov.cn/subordinate_universities/,PENDING
+country_cn,uni_cn_047,Nanjing Agricultural University,Nanjing,0,3,3,https://english.njau.edu.cn/,https://en.moe.gov.cn/subordinate_universities/,PENDING
+country_cn,uni_cn_048,China Pharmaceutical University,Nanjing,0,3,3,https://en.cpu.edu.cn/,https://en.moe.gov.cn/subordinate_universities/,PENDING
+country_cn,uni_cn_049,Hefei University of Technology,Hefei,0,3,3,https://en.hfut.edu.cn/,https://en.moe.gov.cn/subordinate_universities/,PENDING
+country_cn,uni_cn_050,Xiamen University,Xiamen,0,3,3,https://en.xmu.edu.cn/,https://en.moe.gov.cn/subordinate_universities/,PENDING
+country_cn,uni_cn_051,Wuhan University,Wuhan,0,3,3,https://www.whu.edu.cn/,https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/t20260618_1441074.html,PENDING
+country_cn,uni_cn_052,Huazhong University of Science and Technology,Wuhan,0,3,3,https://www.hust.edu.cn/,https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/t20260618_1441074.html,PENDING
+country_cn,uni_cn_053,Shandong University,Jinan,0,3,3,https://www.sdu.edu.cn/,https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/t20260618_1441074.html,PENDING
+country_cn,uni_cn_054,Sichuan University,Chengdu,0,3,3,https://www.scu.edu.cn/,https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/t20260618_1441074.html,PENDING
+country_cn,uni_cn_055,Central South University,Changsha,0,3,3,https://www.csu.edu.cn/,https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/t20260618_1441074.html,PENDING
+country_cn,uni_cn_056,Chongqing University,Chongqing,0,3,3,https://www.cqu.edu.cn/,https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/t20260618_1441074.html,PENDING
+country_cn,uni_cn_057,Xidian University,Xi'an,0,3,3,https://www.xidian.edu.cn/,https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/t20260618_1441074.html,PENDING
+country_cn,uni_cn_058,Lanzhou University,Lanzhou,0,3,3,https://www.lzu.edu.cn/,https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/t20260618_1441074.html,PENDING
+country_hk,uni_hk_001,The University of Hong Kong,Pok Fu Lam,0,3,3,https://www.hku.hk,https://www.hku.hk,PENDING
+country_hk,uni_hk_002,The Chinese University of Hong Kong,Hong Kong,0,3,3,http://www.cuhk.edu.hk/english/index.html,http://www.cuhk.edu.hk/english/index.html,PENDING
+country_hk,uni_hk_003,The Hong Kong University of Science and Technology,Hong Kong,0,3,3,https://hkust.edu.hk,https://hkust.edu.hk,PENDING
+country_hk,uni_hk_004,The Hong Kong Polytechnic University,Hong Kong,0,3,3,http://www.polyu.edu.hk/web/en/home/index.html,http://www.polyu.edu.hk/web/en/home/index.html,PENDING
+country_hk,uni_hk_005,City University of Hong Kong,Hong Kong,0,3,3,https://www.cityu.edu.hk,https://www.cityu.edu.hk,PENDING
+country_hk,uni_hk_006,Hong Kong Baptist University,Hong Kong,0,3,3,https://www.hkbu.edu.hk/,https://www.hkbu.edu.hk/,PENDING
+country_hk,uni_hk_007,Lingnan University,Hong Kong,0,3,3,https://www.ln.edu.hk/,https://www.ln.edu.hk/,PENDING
+country_hk,uni_hk_008,The Education University of Hong Kong,Hong Kong,0,3,3,https://www.eduhk.hk/en/,https://www.eduhk.hk/en/,PENDING
+country_hk,uni_hk_009,Hong Kong Metropolitan University,Hong Kong,0,3,3,https://www.hkmu.edu.hk/,https://www.edb.gov.hk/en/edu-system/postsecondary/local-higher-edu/institutions/index.html,PENDING
+country_hk,uni_hk_010,Hong Kong Shue Yan University,Hong Kong,0,3,3,https://www.hksyu.edu/,https://www.edb.gov.hk/en/edu-system/postsecondary/local-higher-edu/institutions/index.html,PENDING
+country_hk,uni_hk_011,The Hang Seng University of Hong Kong,Hong Kong,0,3,3,https://www.hsu.edu.hk/en/,https://www.edb.gov.hk/en/edu-system/postsecondary/local-higher-edu/institutions/index.html,PENDING
+country_hk,uni_hk_012,Hong Kong Chu Hai College,Hong Kong,0,3,3,https://www.chuhai.edu.hk/,https://www.edb.gov.hk/en/edu-system/postsecondary/local-higher-edu/institutions/index.html,PENDING
+country_hk,uni_hk_013,Saint Francis University,Hong Kong,0,3,3,https://www.sfu.edu.hk/en/,https://www.edb.gov.hk/en/edu-system/postsecondary/local-higher-edu/institutions/index.html,PENDING
+country_hk,uni_hk_014,Technological and Higher Education Institute of Hong Kong,Hong Kong,0,3,3,https://www.thei.edu.hk/,https://www.edb.gov.hk/en/edu-system/postsecondary/local-higher-edu/institutions/index.html,PENDING
+country_hk,uni_hk_015,Tung Wah College,Hong Kong,0,3,3,https://www.twc.edu.hk/en/,https://www.edb.gov.hk/en/edu-system/postsecondary/local-higher-edu/institutions/index.html,PENDING
+country_id,uni_id_001,Universitas Indonesia,Depok,0,3,3,https://www.ui.ac.id/,https://international.ui.ac.id/,PENDING
+country_id,uni_id_002,Institut Teknologi Bandung,Bandung,0,3,3,https://itb.ac.id/en/,https://itb.ac.id/en/,PENDING
+country_id,uni_id_003,Universitas Gadjah Mada,Yogyakarta,0,3,3,https://ugm.ac.id/en/,https://admissions.ugm.ac.id/v26/,PENDING
+country_id,uni_id_004,IPB University,Bogor,0,3,3,https://www.ipb.ac.id/en/,https://www.ipb.ac.id/en/,PENDING
+country_id,uni_id_005,Universitas Airlangga,Surabaya,0,3,3,https://unair.ac.id/en/,https://unair.ac.id/en/,PENDING
+country_id,uni_id_006,Diponegoro University,Semarang,0,3,3,https://www.undip.ac.id/language/en,https://www.undip.ac.id/language/en,PENDING
+country_id,uni_id_007,Universitas Brawijaya,Malang,0,3,3,https://ub.ac.id/,https://ub.ac.id/,PENDING
+country_id,uni_id_008,Institut Teknologi Sepuluh Nopember,Surabaya,0,3,3,https://www.its.ac.id/,https://www.its.ac.id/,PENDING
+country_id,uni_id_009,Hasanuddin University,Makassar,0,3,3,https://www.unhas.ac.id/,https://www.unhas.ac.id/,PENDING
+country_id,uni_id_010,Universitas Sebelas Maret,Surakarta,0,3,3,https://uns.ac.id/en/,https://uns.ac.id/en/about-uns/university-profile/,PENDING
+country_id,uni_id_011,Universitas Padjadjaran,Bandung,0,3,3,https://www.unpad.ac.id/,https://www.unpad.ac.id/,PENDING
+country_id,uni_id_012,Universitas Pendidikan Indonesia,Bandung,0,3,3,https://www.upi.edu/,https://www.upi.edu/,PENDING
+country_id,uni_id_013,Universitas Negeri Yogyakarta,Yogyakarta,0,3,3,https://www.uny.ac.id/,https://www.uny.ac.id/,PENDING
+country_id,uni_id_014,Universitas Negeri Malang,Malang,0,3,3,https://um.ac.id/,https://um.ac.id/,PENDING
+country_id,uni_id_015,Universitas Negeri Semarang,Semarang,0,3,3,https://unnes.ac.id/,https://unnes.ac.id/,PENDING
+country_id,uni_id_016,Universitas Negeri Surabaya,Surabaya,0,3,3,https://www.unesa.ac.id/,https://www.unesa.ac.id/,PENDING
+country_id,uni_id_017,Universitas Negeri Padang,Padang,0,3,3,https://unp.ac.id/,https://unp.ac.id/,PENDING
+country_id,uni_id_018,Universitas Negeri Makassar,Makassar,0,3,3,https://unm.ac.id/,https://unm.ac.id/,PENDING
+country_id,uni_id_019,Universitas Negeri Jakarta,Jakarta,0,3,3,https://unj.ac.id/,https://unj.ac.id/,PENDING
+country_id,uni_id_020,Universitas Sumatera Utara,Medan,0,3,3,https://www.usu.ac.id/,https://www.usu.ac.id/,PENDING
+country_id,uni_id_021,Universitas Andalas,Padang,0,3,3,https://www.unand.ac.id/,https://www.unand.ac.id/,PENDING
+country_id,uni_id_022,Universitas Sriwijaya,Palembang,0,3,3,https://unsri.ac.id/,https://unsri.ac.id/,PENDING
+country_id,uni_id_023,Universitas Lampung,Bandar Lampung,0,3,3,https://www.unila.ac.id/,https://www.unila.ac.id/,PENDING
+country_id,uni_id_024,Universitas Riau,Pekanbaru,0,3,3,https://www.unri.ac.id/,https://www.unri.ac.id/,PENDING
+country_id,uni_id_025,Universitas Jember,Jember,0,3,3,https://unej.ac.id/,https://unej.ac.id/,PENDING
+country_id,uni_id_026,Universitas Udayana,Denpasar,0,3,3,https://www.unud.ac.id/,https://www.unud.ac.id/,PENDING
+country_id,uni_id_027,Universitas Mataram,Mataram,0,3,3,https://unram.ac.id/,https://unram.ac.id/,PENDING
+country_id,uni_id_028,Universitas Sam Ratulangi,Manado,0,3,3,https://www.unsrat.ac.id/,https://www.unsrat.ac.id/,PENDING
+country_id,uni_id_029,Universitas Mulawarman,Samarinda,0,3,3,https://unmul.ac.id/,https://unmul.ac.id/,PENDING
+country_id,uni_id_030,Universitas Syiah Kuala,Banda Aceh,0,3,3,https://usk.ac.id/,https://usk.ac.id/,PENDING
+country_id,uni_id_031,Universitas Bengkulu,Bengkulu,0,3,3,https://www.unib.ac.id/,https://www.unib.ac.id/,PENDING
+country_id,uni_id_032,Universitas Halu Oleo,Kendari,0,3,3,https://uho.ac.id/,https://uho.ac.id/,PENDING
+country_id,uni_id_033,Universitas Tadulako,Palu,0,3,3,https://untad.ac.id/,https://untad.ac.id/,PENDING
+country_id,uni_id_034,Universitas Cenderawasih,Jayapura,0,3,3,https://www.uncen.ac.id/,https://www.uncen.ac.id/,PENDING
+country_id,uni_id_035,Universitas Negeri Gorontalo,Gorontalo,0,3,3,https://ung.ac.id/,https://ung.ac.id/,PENDING
+country_id,uni_id_036,Universitas Pendidikan Ganesha,Singaraja,0,3,3,https://undiksha.ac.id/,https://undiksha.ac.id/,PENDING
+country_id,uni_id_037,Universitas Sultan Ageng Tirtayasa,Serang,0,3,3,https://untirta.ac.id/,https://untirta.ac.id/,PENDING
+country_id,uni_id_038,Universitas Jenderal Soedirman,Purwokerto,0,3,3,https://unsoed.ac.id/,https://unsoed.ac.id/,PENDING
+country_id,uni_id_039,UPN Veteran Yogyakarta,Yogyakarta,0,3,3,https://www.upnyk.ac.id/,https://www.upnyk.ac.id/,PENDING
+country_id,uni_id_040,UPN Veteran Jawa Timur,Surabaya,0,3,3,https://www.upnjatim.ac.id/,https://www.upnjatim.ac.id/,PENDING
+country_id,uni_id_041,UPN Veteran Jakarta,Jakarta,0,3,3,https://www.upnvj.ac.id/,https://www.upnvj.ac.id/,PENDING
+country_id,uni_id_042,Universitas Bangka Belitung,Bangka,0,3,3,https://www.ubb.ac.id/,https://www.ubb.ac.id/,PENDING
+country_id,uni_id_043,Universitas Tanjungpura,Pontianak,0,3,3,https://www.untan.ac.id/,https://www.untan.ac.id/,PENDING
+country_id,uni_id_044,Universitas Palangka Raya,Palangka Raya,0,3,3,https://www.upr.ac.id/,https://www.upr.ac.id/,PENDING
+country_id,uni_id_045,Universitas Pattimura,Ambon,0,3,3,https://www.unpatti.ac.id/,https://www.unpatti.ac.id/,PENDING
+country_id,uni_id_046,Universitas Khairun,Ternate,0,3,3,https://unkhair.ac.id/,https://unkhair.ac.id/,PENDING
+country_id,uni_id_047,Universitas Nusa Cendana,Kupang,0,3,3,https://undana.ac.id/,https://undana.ac.id/,PENDING
+country_id,uni_id_048,Universitas Negeri Medan,Medan,0,3,3,https://www.unimed.ac.id/,https://www.unimed.ac.id/,PENDING
+country_id,uni_id_049,Universitas Lambung Mangkurat,Banjarmasin,0,3,3,https://ulm.ac.id/,https://ulm.ac.id/,PENDING
+country_id,uni_id_050,Universitas Maritim Raja Ali Haji,Tanjungpinang,0,3,3,https://umrah.ac.id/,https://umrah.ac.id/,PENDING
+country_jp,uni_jp_001,The University of Tokyo,Tokyo,3,3,0,https://www.u-tokyo.ac.jp,https://www.u-tokyo.ac.jp,COMPLETE
+country_jp,uni_jp_002,Kyoto University,Kyoto,3,3,0,http://www.kyoto-u.ac.jp/en,http://www.kyoto-u.ac.jp/en,COMPLETE
+country_jp,uni_jp_003,Osaka University,Osaka,3,3,0,https://www.osaka-u.ac.jp,https://www.osaka-u.ac.jp,COMPLETE
+country_jp,uni_jp_004,Tohoku University,Sendai,3,3,0,http://www.tohoku.ac.jp/en/,http://www.tohoku.ac.jp/en/,COMPLETE
+country_jp,uni_jp_005,Nagoya University,Nagoya,3,3,0,http://en.nagoya-u.ac.jp/,http://en.nagoya-u.ac.jp/,COMPLETE
+country_jp,uni_jp_006,Kyushu University,Fukuoka,3,3,0,http://www.kyushu-u.ac.jp/english/,http://www.kyushu-u.ac.jp/english/,COMPLETE
+country_jp,uni_jp_007,Hokkaido University,Sapporo,3,3,0,https://www.global.hokudai.ac.jp/,https://www.global.hokudai.ac.jp/,COMPLETE
+country_jp,uni_jp_008,Institute of Science Tokyo,Tokyo,3,3,0,https://www.isct.ac.jp,https://www.isct.ac.jp,COMPLETE
+country_jp,uni_jp_009,University of Tsukuba,Tsukuba,3,3,0,https://www.tsukuba.ac.jp,https://www.tsukuba.ac.jp,COMPLETE
+country_jp,uni_jp_010,Kobe University,Kobe,3,3,0,http://www.kobe-u.ac.jp/en/alumni/index.html,http://www.kobe-u.ac.jp/en/alumni/index.html,COMPLETE
+country_jp,uni_jp_011,Waseda University,Tokyo,3,3,0,https://www.waseda.jp/top/,https://www.waseda.jp/top/,COMPLETE
+country_jp,uni_jp_012,Keio University,Tokyo,3,3,0,https://www.keio.ac.jp,https://www.keio.ac.jp,COMPLETE
+country_jp,uni_jp_013,Ritsumeikan Asia Pacific University,Beppu,0,3,3,https://en.apu.ac.jp/home/,https://en.apu.ac.jp/home/,PENDING
+country_jp,uni_jp_014,Soka University,Hachioji,0,3,3,https://www.soka.ac.jp/en/,https://www.soka.ac.jp/en/,PENDING
+country_jp,uni_jp_015,Akita University,Akita,0,3,3,https://www.akita-u.ac.jp/eng/,https://www.akita-u.ac.jp/eng/,PENDING
+country_jp,uni_jp_016,"The Graduate University for Advanced Studies, SOKENDAI",Hayama,0,3,3,https://www.soken.ac.jp/en/,https://www.soken.ac.jp/en/,PENDING
+country_jp,uni_jp_017,Hiroshima University,Higashihiroshima,0,3,3,https://www.hiroshima-u.ac.jp/en,https://www.hiroshima-u.ac.jp/en,PENDING
+country_jp,uni_jp_018,Ritsumeikan University,Kyoto,0,3,3,https://en.ritsumei.ac.jp/,https://en.ritsumei.ac.jp/,PENDING
+country_jp,uni_jp_019,Sophia University,Tokyo,0,3,3,https://www.sophia.ac.jp/eng/,https://www.sophia.ac.jp/eng/,PENDING
+country_jp,uni_jp_020,Tokyo University of Science,Tokyo,0,3,3,https://www.tus.ac.jp/en/,https://www.tus.ac.jp/en/,PENDING
+country_jp,uni_jp_021,Tokyo Metropolitan University,Tokyo,0,3,3,https://www.tmu.ac.jp/english/,https://www.tmu.ac.jp/english/,PENDING
+country_jp,uni_jp_022,Chiba University,Chiba,0,3,3,https://www.chiba-u.jp/,https://jpcup.niad.ac.jp/what-jpcup/lists.html,PENDING
+country_jp,uni_jp_023,Yokohama National University,Yokohama,0,3,3,https://www.ynu.ac.jp/,https://jpcup.niad.ac.jp/what-jpcup/lists.html,PENDING
+country_jp,uni_jp_024,Tokyo University of Foreign Studies,Fuchu,0,3,3,https://www.tufs.ac.jp/,https://jpcup.niad.ac.jp/what-jpcup/lists.html,PENDING
+country_jp,uni_jp_025,Ochanomizu University,Tokyo,0,3,3,https://www.ocha.ac.jp/,https://jpcup.niad.ac.jp/what-jpcup/lists.html,PENDING
+country_jp,uni_jp_026,Hitotsubashi University,Tokyo,0,3,3,https://www.hit-u.ac.jp/,https://jpcup.niad.ac.jp/what-jpcup/lists.html,PENDING
+country_jp,uni_jp_027,Tokyo University of Agriculture and Technology,Fuchu,0,3,3,https://www.tuat.ac.jp/,https://jpcup.niad.ac.jp/what-jpcup/lists.html,PENDING
+country_jp,uni_jp_028,The University of Electro-Communications,Chofu,0,3,3,https://www.uec.ac.jp/,https://jpcup.niad.ac.jp/what-jpcup/lists.html,PENDING
+country_jp,uni_jp_029,Saitama University,Saitama,0,3,3,https://www.saitama-u.ac.jp/,https://jpcup.niad.ac.jp/what-jpcup/lists.html,PENDING
+country_jp,uni_jp_030,Niigata University,Niigata,0,3,3,https://www.niigata-u.ac.jp/,https://jpcup.niad.ac.jp/what-jpcup/lists.html,PENDING
+country_jp,uni_jp_031,Kanazawa University,Kanazawa,0,3,3,https://www.kanazawa-u.ac.jp/,https://jpcup.niad.ac.jp/what-jpcup/lists.html,PENDING
+country_jp,uni_jp_032,Shinshu University,Matsumoto,0,3,3,https://www.shinshu-u.ac.jp/,https://jpcup.niad.ac.jp/what-jpcup/lists.html,PENDING
+country_jp,uni_jp_033,Gifu University,Gifu,0,3,3,https://www.gifu-u.ac.jp/,https://jpcup.niad.ac.jp/what-jpcup/lists.html,PENDING
+country_jp,uni_jp_034,Shizuoka University,Shizuoka,0,3,3,https://www.shizuoka.ac.jp/,https://jpcup.niad.ac.jp/what-jpcup/lists.html,PENDING
+country_jp,uni_jp_035,Mie University,Tsu,0,3,3,https://www.mie-u.ac.jp/,https://jpcup.niad.ac.jp/what-jpcup/lists.html,PENDING
+country_jp,uni_jp_036,Nagoya Institute of Technology,Nagoya,0,3,3,https://www.nitech.ac.jp/,https://jpcup.niad.ac.jp/what-jpcup/lists.html,PENDING
+country_jp,uni_jp_037,Nara Institute of Science and Technology,Ikoma,0,3,3,https://www.naist.jp/,https://jpcup.niad.ac.jp/what-jpcup/lists.html,PENDING
+country_jp,uni_jp_038,Okayama University,Okayama,0,3,3,https://www.okayama-u.ac.jp/,https://jpcup.niad.ac.jp/what-jpcup/lists.html,PENDING
+country_jp,uni_jp_039,Yamaguchi University,Yamaguchi,0,3,3,https://www.yamaguchi-u.ac.jp/,https://jpcup.niad.ac.jp/what-jpcup/lists.html,PENDING
+country_jp,uni_jp_040,Tokushima University,Tokushima,0,3,3,https://www.tokushima-u.ac.jp/,https://jpcup.niad.ac.jp/what-jpcup/lists.html,PENDING
+country_jp,uni_jp_041,Kagawa University,Takamatsu,0,3,3,https://www.kagawa-u.ac.jp/,https://jpcup.niad.ac.jp/what-jpcup/lists.html,PENDING
+country_jp,uni_jp_042,Ehime University,Matsuyama,0,3,3,https://www.ehime-u.ac.jp/,https://jpcup.niad.ac.jp/what-jpcup/lists.html,PENDING
+country_jp,uni_jp_043,Kochi University,Kochi,0,3,3,https://www.kochi-u.ac.jp/,https://jpcup.niad.ac.jp/what-jpcup/lists.html,PENDING
+country_jp,uni_jp_044,Saga University,Saga,0,3,3,https://www.saga-u.ac.jp/,https://jpcup.niad.ac.jp/what-jpcup/lists.html,PENDING
+country_jp,uni_jp_045,Nagasaki University,Nagasaki,0,3,3,https://www.nagasaki-u.ac.jp/,https://jpcup.niad.ac.jp/what-jpcup/lists.html,PENDING
+country_jp,uni_jp_046,Kumamoto University,Kumamoto,0,3,3,https://www.kumamoto-u.ac.jp/,https://jpcup.niad.ac.jp/what-jpcup/lists.html,PENDING
+country_jp,uni_jp_047,Oita University,Oita,0,3,3,https://www.oita-u.ac.jp/,https://jpcup.niad.ac.jp/what-jpcup/lists.html,PENDING
+country_jp,uni_jp_048,University of Miyazaki,Miyazaki,0,3,3,https://www.miyazaki-u.ac.jp/,https://jpcup.niad.ac.jp/what-jpcup/lists.html,PENDING
+country_jp,uni_jp_049,Kagoshima University,Kagoshima,0,3,3,https://www.kagoshima-u.ac.jp/,https://jpcup.niad.ac.jp/what-jpcup/lists.html,PENDING
+country_jp,uni_jp_050,University of the Ryukyus,Nishihara,0,3,3,https://www.u-ryukyu.ac.jp/,https://jpcup.niad.ac.jp/what-jpcup/lists.html,PENDING
+country_jp,uni_jp_051,Ibaraki University,Mito,0,3,3,https://www.ibaraki.ac.jp/,https://jpcup.niad.ac.jp/what-jpcup/lists.html,PENDING
+country_jp,uni_jp_052,Utsunomiya University,Utsunomiya,0,3,3,https://www.utsunomiya-u.ac.jp/,https://jpcup.niad.ac.jp/what-jpcup/lists.html,PENDING
+country_jp,uni_jp_053,Gunma University,Maebashi,0,3,3,https://www.gunma-u.ac.jp/,https://jpcup.niad.ac.jp/what-jpcup/lists.html,PENDING
+country_jp,uni_jp_054,University of Yamanashi,Kofu,0,3,3,https://www.yamanashi.ac.jp/,https://jpcup.niad.ac.jp/what-jpcup/lists.html,PENDING
+country_jp,uni_jp_055,University of Toyama,Toyama,0,3,3,https://www.u-toyama.ac.jp/,https://jpcup.niad.ac.jp/what-jpcup/lists.html,PENDING
+country_kh,uni_kh_001,Royal University of Phnom Penh,Phnom Penh,0,3,3,https://www.rupp.edu.kh/,https://www.rupp.edu.kh/contact,PENDING
+country_kh,uni_kh_002,Institute of Technology of Cambodia,Phnom Penh,0,3,3,https://itc.edu.kh/,https://itc.edu.kh/about-institute-of-technology-of-cambodia-en/,PENDING
+country_kh,uni_kh_003,Royal University of Agriculture,Phnom Penh,0,3,3,https://www.rua.edu.kh/,https://www.rua.edu.kh/,PENDING
+country_kh,uni_kh_004,University of Health Sciences Cambodia,Phnom Penh,0,3,3,https://uhs.edu.kh/,https://uhs.edu.kh/,PENDING
+country_kh,uni_kh_005,National University of Management,Phnom Penh,0,3,3,https://numuniversity.com/,https://numuniversity.com/,PENDING
+country_kh,uni_kh_006,Royal University of Law and Economics,Phnom Penh,0,3,3,https://www.rule.edu.kh/,https://www.rule.edu.kh/,PENDING
+country_kh,uni_kh_007,National University of Battambang,Battambang,0,3,3,https://nubb.edu.kh/en/,https://nubb.edu.kh/en/,PENDING
+country_kh,uni_kh_008,Svay Rieng University,Svay Rieng,0,3,3,https://sru.edu.kh/,https://sru.edu.kh/,PENDING
+country_kh,uni_kh_009,Chea Sim University of Kamchay Mear,Prey Veng,0,3,3,http://www.csuk.edu.kh/,http://www.csuk.edu.kh/,PENDING
+country_kh,uni_kh_010,Mean Chey University,Serei Saophoan,0,3,3,http://www.mcu.edu.kh/,http://www.mcu.edu.kh/,PENDING
+country_kh,uni_kh_011,Royal University of Fine Arts,Phnom Penh,0,3,3,https://www.rufa.edu.kh/,https://www.rufa.edu.kh/,PENDING
+country_kh,uni_kh_012,American University of Phnom Penh,Phnom Penh,0,3,3,https://www.aupp.edu.kh/,https://www.aupp.edu.kh/,PENDING
+country_kh,uni_kh_013,Pannasastra University of Cambodia,Phnom Penh,0,3,3,https://www.puc.edu.kh/,https://www.puc.edu.kh/,PENDING
+country_kh,uni_kh_014,The University of Cambodia,Phnom Penh,0,3,3,https://uc.edu.kh/,https://uc.edu.kh/,PENDING
+country_kh,uni_kh_015,Build Bright University,Phnom Penh,0,3,3,https://www.bbu.edu.kh/,https://www.bbu.edu.kh/,PENDING
+country_kr,uni_kr_001,Seoul National University,Seoul,0,3,3,https://www.snu.ac.kr,https://www.snu.ac.kr,PENDING
+country_kr,uni_kr_002,Korea Advanced Institute of Science and Technology,Daejeon,0,3,3,https://www.kaist.ac.kr,https://www.kaist.ac.kr,PENDING
+country_kr,uni_kr_003,Yonsei University,Seoul,0,3,3,https://www.yonsei.ac.kr,https://www.yonsei.ac.kr,PENDING
+country_kr,uni_kr_004,Korea University,Seoul,0,3,3,https://www.korea.ac.kr,https://www.korea.ac.kr,PENDING
+country_kr,uni_kr_005,Sungkyunkwan University,Suwon,0,3,3,https://skku.edu,https://skku.edu,PENDING
+country_kr,uni_kr_006,Pohang University of Science and Technology,Pohang,0,3,3,http://www.postech.ac.kr/,http://www.postech.ac.kr/,PENDING
+country_kr,uni_kr_007,Hanyang University,Seoul,0,3,3,http://www.hanyang.ac.kr/english/,http://www.hanyang.ac.kr/english/,PENDING
+country_kr,uni_kr_008,Kyung Hee University,Seoul,0,3,3,http://www.kyunghee.edu/,http://www.kyunghee.edu/,PENDING
+country_kr,uni_kr_009,Ewha Womans University,Seoul,0,3,3,https://www.ewha.ac.kr/ewhaen/index.do,https://www.ewha.ac.kr/ewhaen/admission/admission.do,PENDING
+country_kr,uni_kr_010,Sogang University,Seoul,0,3,3,https://www.sogang.ac.kr/en,https://www.sogang.ac.kr/en/international-students,PENDING
+country_kr,uni_kr_011,Pusan National University,Busan,0,3,3,https://www.pusan.ac.kr/eng/,https://www.pusan.ac.kr/eng/CMS/Contents/Contents.do?mCode=MN013,PENDING
+country_kr,uni_kr_012,Kyungpook National University,Daegu,0,3,3,https://en.knu.ac.kr/,https://en.knu.ac.kr/admission/foreign01.htm,PENDING
+country_kr,uni_kr_013,Ulsan National Institute of Science and Technology,Ulsan,0,3,3,https://www.unist.ac.kr/,https://admu-intl.unist.ac.kr/admission-eng/index.do,PENDING
+country_kr,uni_kr_014,Gwangju Institute of Science and Technology,Gwangju,0,3,3,https://www.gist.ac.kr/en/,https://www.gist.ac.kr/iadm/,PENDING
+country_kr,uni_kr_015,Ajou University,Suwon,0,3,3,https://www.ajou.ac.kr/en/,https://www.studyinkorea.go.kr/ko/plan/certifiedUniversity.do,PENDING
+country_kr,uni_kr_016,Chung-Ang University,Seoul,0,3,3,https://neweng.cau.ac.kr/,https://www.studyinkorea.go.kr/ko/plan/certifiedUniversity.do,PENDING
+country_kr,uni_kr_017,Chungnam National University,Daejeon,0,3,3,https://plus.cnu.ac.kr/html/en/,https://www.studyinkorea.go.kr/ko/plan/certifiedUniversity.do,PENDING
+country_kr,uni_kr_018,Chungbuk National University,Cheongju,0,3,3,https://www.chungbuk.ac.kr/site/english/main.do,https://www.studyinkorea.go.kr/ko/plan/certifiedUniversity.do,PENDING
+country_kr,uni_kr_019,Chonnam National University,Gwangju,0,3,3,https://global.jnu.ac.kr/,https://www.studyinkorea.go.kr/ko/plan/certifiedUniversity.do,PENDING
+country_kr,uni_kr_020,Jeonbuk National University,Jeonju,0,3,3,https://www.jbnu.ac.kr/en/,https://www.studyinkorea.go.kr/ko/plan/certifiedUniversity.do,PENDING
+country_kr,uni_kr_021,Gyeongsang National University,Jinju,0,3,3,https://www.gnu.ac.kr/eng/main.do,https://www.studyinkorea.go.kr/ko/plan/certifiedUniversity.do,PENDING
+country_kr,uni_kr_022,Kangwon National University,Chuncheon,0,3,3,https://www.kangwon.ac.kr/english/,https://www.studyinkorea.go.kr/ko/plan/certifiedUniversity.do,PENDING
+country_kr,uni_kr_023,Incheon National University,Incheon,0,3,3,https://www.inu.ac.kr/inuengl/index.do,https://www.studyinkorea.go.kr/ko/plan/certifiedUniversity.do,PENDING
+country_kr,uni_kr_024,Jeju National University,Jeju,0,3,3,https://www.jejunu.ac.kr/eng/,https://www.studyinkorea.go.kr/ko/plan/certifiedUniversity.do,PENDING
+country_kr,uni_kr_025,Pukyong National University,Busan,0,3,3,https://www.pknu.ac.kr/eng,https://www.studyinkorea.go.kr/ko/plan/certifiedUniversity.do,PENDING
+country_kr,uni_kr_026,Seoul National University of Science and Technology,Seoul,0,3,3,https://en.seoultech.ac.kr/,https://www.studyinkorea.go.kr/ko/plan/certifiedUniversity.do,PENDING
+country_kr,uni_kr_027,University of Seoul,Seoul,0,3,3,https://www.uos.ac.kr/en/,https://www.studyinkorea.go.kr/ko/plan/certifiedUniversity.do,PENDING
+country_kr,uni_kr_028,Dongguk University,Seoul,0,3,3,https://www.dongguk.edu/eng/main,https://www.studyinkorea.go.kr/ko/plan/certifiedUniversity.do,PENDING
+country_kr,uni_kr_029,Konkuk University,Seoul,0,3,3,https://www.konkuk.ac.kr/en,https://www.studyinkorea.go.kr/ko/plan/certifiedUniversity.do,PENDING
+country_kr,uni_kr_030,Kookmin University,Seoul,0,3,3,https://english.kookmin.ac.kr/,https://www.studyinkorea.go.kr/ko/plan/certifiedUniversity.do,PENDING
+country_kr,uni_kr_031,Hongik University,Seoul,0,3,3,https://www.hongik.ac.kr/en/,https://www.studyinkorea.go.kr/ko/plan/certifiedUniversity.do,PENDING
+country_kr,uni_kr_032,Hankuk University of Foreign Studies,Seoul,0,3,3,https://www.hufs.ac.kr/,https://www.studyinkorea.go.kr/ko/plan/certifiedUniversity.do,PENDING
+country_kr,uni_kr_033,Inha University,Incheon,0,3,3,https://www.inha.ac.kr/eng/,https://www.studyinkorea.go.kr/ko/plan/certifiedUniversity.do,PENDING
+country_kr,uni_kr_034,Sejong University,Seoul,0,3,3,https://en.sejong.ac.kr/,https://www.studyinkorea.go.kr/ko/plan/certifiedUniversity.do,PENDING
+country_kr,uni_kr_035,Soongsil University,Seoul,0,3,3,https://ssu.ac.kr/eng/,https://www.studyinkorea.go.kr/ko/plan/certifiedUniversity.do,PENDING
+country_kr,uni_kr_036,Sookmyung Women's University,Seoul,0,3,3,https://www.sookmyung.ac.kr/en,https://www.studyinkorea.go.kr/ko/plan/certifiedUniversity.do,PENDING
+country_kr,uni_kr_037,Sungshin Women's University,Seoul,0,3,3,https://www.sungshin.ac.kr/sites/main_eng/main.jsp,https://www.studyinkorea.go.kr/ko/plan/certifiedUniversity.do,PENDING
+country_kr,uni_kr_038,Seoul Women's University,Seoul,0,3,3,https://www.swu.ac.kr/english/,https://www.studyinkorea.go.kr/ko/plan/certifiedUniversity.do,PENDING
+country_kr,uni_kr_039,Dankook University,Yongin,0,3,3,https://www.dankook.ac.kr/en,https://www.studyinkorea.go.kr/ko/plan/certifiedUniversity.do,PENDING
+country_kr,uni_kr_040,Myongji University,Seoul,0,3,3,https://www.mju.ac.kr/us/index.do,https://www.studyinkorea.go.kr/ko/plan/certifiedUniversity.do,PENDING
+country_kr,uni_kr_041,Gachon University,Seongnam,0,3,3,https://www.gachon.ac.kr/eng/index.do,https://www.studyinkorea.go.kr/ko/plan/certifiedUniversity.do,PENDING
+country_kr,uni_kr_042,Hallym University,Chuncheon,0,3,3,https://www.hallym.ac.kr/hallym_en/,https://www.studyinkorea.go.kr/ko/plan/certifiedUniversity.do,PENDING
+country_kr,uni_kr_043,Keimyung University,Daegu,0,3,3,https://www.kmu.ac.kr/uni/eng/,https://www.studyinkorea.go.kr/ko/plan/certifiedUniversity.do,PENDING
+country_kr,uni_kr_044,Yeungnam University,Gyeongsan,0,3,3,https://www.yu.ac.kr/english/,https://www.studyinkorea.go.kr/ko/plan/certifiedUniversity.do,PENDING
+country_kr,uni_kr_045,University of Ulsan,Ulsan,0,3,3,https://www.ulsan.ac.kr/en/,https://www.studyinkorea.go.kr/ko/plan/certifiedUniversity.do,PENDING
+country_kr,uni_kr_046,Dong-A University,Busan,0,3,3,https://english.donga.ac.kr/english/,https://www.studyinkorea.go.kr/ko/plan/certifiedUniversity.do,PENDING
+country_kr,uni_kr_047,Korea Maritime & Ocean University,Busan,0,3,3,https://www.kmou.ac.kr/english/,https://www.studyinkorea.go.kr/ko/plan/certifiedUniversity.do,PENDING
+country_kr,uni_kr_048,Korea University of Technology and Education,Cheonan,0,3,3,https://www.koreatech.ac.kr/eng/,https://www.studyinkorea.go.kr/ko/plan/certifiedUniversity.do,PENDING
+country_kr,uni_kr_049,Kumoh National Institute of Technology,Gumi,0,3,3,https://eng.kumoh.ac.kr/,https://www.studyinkorea.go.kr/ko/plan/certifiedUniversity.do,PENDING
+country_kr,uni_kr_050,Handong Global University,Pohang,0,3,3,https://www.handong.edu/eng/,https://www.studyinkorea.go.kr/ko/plan/certifiedUniversity.do,PENDING
+country_la,uni_la_001,National University of Laos,Vientiane,0,3,3,https://www.nuol.edu.la/index.php/en/,https://www.nuol.edu.la/index.php/en/,PENDING
+country_la,uni_la_002,Souphanouvong University,Luang Prabang,0,3,3,https://su.edu.la/,https://su.edu.la/,PENDING
+country_la,uni_la_003,University of Health Sciences Laos,Vientiane,0,3,3,https://uhs.edu.la/,https://uhs.edu.la/,PENDING
+country_la,uni_la_004,Savannakhet University,Kaysone Phomvihane,0,3,3,http://sku.edu.la/,https://usco2.umap.org/Institution/InstitutionDetails/583,PENDING
+country_la,uni_la_005,Champasak University,Pakse,0,3,3,http://www.cu.edu.la/,https://www.nuol.edu.la/index.php/en/news-events,PENDING
+country_mm,uni_mm_001,University of Yangon,Yangon,0,3,3,https://www.uy.edu.mm/,https://www.uy.edu.mm/contact/,PENDING
+country_mm,uni_mm_002,"University of Computer Studies, Yangon",Yangon,0,3,3,https://www.ucsy.edu.mm/,https://www.ucsy.edu.mm/,PENDING
+country_mm,uni_mm_003,Yangon University of Economics,Yangon,0,3,3,https://yueco.edu.mm/,https://yueco.edu.mm/?page_id=81,PENDING
+country_mm,uni_mm_004,Dagon University,Yangon,0,3,3,https://www.dagonuniversity.edu.mm/,https://www.dagonuniversity.edu.mm/,PENDING
+country_mm,uni_mm_005,University of Mandalay,Mandalay,0,3,3,http://www.mu.edu.mm/,https://www.moe.gov.mm/en/department-category-higher-education,PENDING
+country_mm,uni_mm_006,Yangon University of Foreign Languages,Yangon,0,3,3,https://www.yufl.edu.mm/,https://www.moe.gov.mm/en/department-category-higher-education,PENDING
+country_mm,uni_mm_007,Mandalay University of Foreign Languages,Mandalay,0,3,3,https://www.mufl.edu.mm/,https://www.moe.gov.mm/en/department-category-higher-education,PENDING
+country_mm,uni_mm_008,Yangon University of Education,Yangon,0,3,3,https://www.yuoe.edu.mm/,https://www.moe.gov.mm/en/department-category-higher-education,PENDING
+country_mm,uni_mm_009,Pathein University,Pathein,0,3,3,https://www.pathein-u.edu.mm/,https://www.moe.gov.mm/en/department-category-higher-education,PENDING
+country_mm,uni_mm_010,Monywa University of Economics,Monywa,0,3,3,https://mue.edu.mm/,https://www.moe.gov.mm/en/department-category-higher-education,PENDING
+country_mm,uni_mm_011,Myeik University,Myeik,0,3,3,https://www.myeikuniversity.edu.mm/,https://www.moe.gov.mm/en/department-category-higher-education,PENDING
+country_mm,uni_mm_012,Keng Tung University,Kengtung,0,3,3,https://www.moe.gov.mm/en/departmentcategoryhighereducation/keng-tung-university,https://www.moe.gov.mm/en/department-category-higher-education,PENDING
+country_mm,uni_mm_013,Yangon University of Distance Education,Yangon,0,3,3,https://www.yude.edu.mm/,https://www.moe.gov.mm/en/department-category-higher-education,PENDING
+country_mm,uni_mm_014,Sittway University,Sittwe,0,3,3,https://www.moe.gov.mm/en/departmentcategoryhighereducation/sittway-university,https://www.moe.gov.mm/en/department-category-higher-education,PENDING
+country_mm,uni_mm_015,Yadanabon University,Amarapura,0,3,3,https://ydnbu.edu.mm/,https://www.moe.gov.mm/en/department-category-higher-education,PENDING
+country_mm,uni_mm_016,Meiktila University of Economics,Meiktila,0,3,3,https://mtlaeco.edu.mm/,https://www.moe.gov.mm/en/department-category-higher-education,PENDING
+country_mm,uni_mm_017,University of East Yangon,Yangon,0,3,3,https://www.eyu.edu.mm/,https://www.moe.gov.mm/en/department-category-higher-education,PENDING
+country_mm,uni_mm_018,University of West Yangon,Htantabin,0,3,3,https://www.moe.gov.mm/en/department-category-higher-education,https://www.moe.gov.mm/en/department-category-higher-education,PENDING
+country_mm,uni_mm_019,Bago University,Bago,0,3,3,https://www.moe.gov.mm/en/department-category-higher-education,https://www.moe.gov.mm/en/department-category-higher-education,PENDING
+country_mm,uni_mm_020,Dawei University,Dawei,0,3,3,https://www.moe.gov.mm/en/department-category-higher-education?page=2,https://www.moe.gov.mm/en/department-category-higher-education,PENDING
+country_mn,uni_mn_001,National University of Mongolia,Ulaanbaatar,0,3,3,https://portal.num.edu.mn/en,https://portal.num.edu.mn/en/Home/About,PENDING
+country_mn,uni_mn_002,Mongolian University of Science and Technology,Ulaanbaatar,0,3,3,https://must.edu.mn/en/,https://must.edu.mn/en/page/971,PENDING
+country_mn,uni_mn_003,Mongolian National University of Medical Sciences,Ulaanbaatar,0,3,3,https://mnums.edu.mn/en/home-en/,https://mnums.edu.mn/en/mnums/,PENDING
+country_mn,uni_mn_004,Mongolian National University of Education,Ulaanbaatar,0,3,3,https://msue.edu.mn/,https://msue.edu.mn/,PENDING
+country_mn,uni_mn_005,University of Finance and Economics,Ulaanbaatar,0,3,3,https://www.ufe.edu.mn/,https://www.ufe.edu.mn/en/c/28,PENDING
+country_mn,uni_mn_006,Mongolian University of Life Sciences,Ulaanbaatar,0,3,3,https://muls.edu.mn/,https://muls.edu.mn/,PENDING
+country_mn,uni_mn_007,German-Mongolian Institute for Resources and Technology,Ulaanbaatar,0,3,3,https://www.gmit.edu.mn/eng/,https://www.gmit.edu.mn/eng/,PENDING
+country_mn,uni_mn_008,University of the Humanities,Ulaanbaatar,0,3,3,https://humanities.mn/,https://humanities.mn/,PENDING
+country_mn,uni_mn_009,Otgontenger University,Ulaanbaatar,0,3,3,https://otgontenger.edu.mn/en/home,https://otgontenger.edu.mn/en/home,PENDING
+country_mn,uni_mn_010,Etugen University,Ulaanbaatar,0,3,3,https://www.etugen.edu.mn/,https://www.etugen.edu.mn/,PENDING
+country_mn,uni_mn_011,International University of Ulaanbaatar,Ulaanbaatar,0,3,3,https://www.iuu.edu.mn/,https://www.iuu.edu.mn/,PENDING
+country_mn,uni_mn_012,Mandakh University,Ulaanbaatar,0,3,3,https://en.mandakh.edu.mn/,https://en.mandakh.edu.mn/,PENDING
+country_mo,uni_mo_001,University of Macau,Macau,0,3,3,https://www.um.edu.mo/,https://www.um.edu.mo/about-um/,PENDING
+country_mo,uni_mo_002,Macao Polytechnic University,Macau,0,3,3,https://www.mpu.edu.mo/,https://www.mpu.edu.mo/en/contact_us,PENDING
+country_mo,uni_mo_003,Macau University of Science and Technology,Macau,0,3,3,https://www.must.edu.mo/,https://www.must.edu.mo/page/intro.html?locale=en_US,PENDING
+country_mo,uni_mo_004,City University of Macau,Macau,0,3,3,https://www.cityu.edu.mo/,https://www.cityu.edu.mo/en/about-cityu-2/,PENDING
+country_mo,uni_mo_005,University of Saint Joseph,Macau,0,3,3,https://www.usj.edu.mo/en/,https://www.usj.edu.mo/en/,PENDING
+country_mo,uni_mo_006,Macao University of Tourism,Macau,0,3,3,https://www.utm.edu.mo/EN/,https://www.utm.edu.mo/EN/,PENDING
+country_mo,uni_mo_007,Academy of Public Security Forces of Macao,Macau,0,3,3,https://www.fsm.gov.mo/esfsm/,https://es.dsedj.gov.mo/esdbonline/_site/category_en.asp?group=1,PENDING
+country_mo,uni_mo_008,Kiang Wu Nursing College of Macau,Macau,0,3,3,https://www2.kwnc.edu.mo/en/standard/index.html,https://es.dsedj.gov.mo/esdbonline/_site/category_en.asp?group=1,PENDING
+country_mo,uni_mo_009,Macau Institute of Management,Macau,0,3,3,https://mim.edu.mo/,https://es.dsedj.gov.mo/esdbonline/_site/category_en.asp?group=1,PENDING
+country_mo,uni_mo_010,Macau Millennium College,Macau,0,3,3,https://mmc.edu.mo/en/,https://es.dsedj.gov.mo/esdbonline/_site/category_en.asp?group=1,PENDING
+country_my,uni_my_001,Universiti Malaya,Kuala Lumpur,0,3,3,https://www.um.edu.my/,https://www.um.edu.my/,PENDING
+country_my,uni_my_002,Universiti Kebangsaan Malaysia,Bangi,0,3,3,https://www.ukm.my,https://www.ukm.my,PENDING
+country_my,uni_my_003,Universiti Putra Malaysia,Seri Kembangan,0,3,3,https://upm.edu.my,https://upm.edu.my,PENDING
+country_my,uni_my_004,Universiti Sains Malaysia,George Town,0,3,3,https://www.usm.my,https://www.usm.my,PENDING
+country_my,uni_my_005,Universiti Teknologi Malaysia,Johor Bahru,0,3,3,https://www.utm.my,https://www.utm.my,PENDING
+country_my,uni_my_006,International Islamic University Malaysia,Kuala Lumpur,0,3,3,http://www.iium.edu.my/,http://www.iium.edu.my/,PENDING
+country_my,uni_my_007,Universiti Teknologi PETRONAS,Ipoh,0,3,3,http://www.utp.edu.my/,http://www.utp.edu.my/,PENDING
+country_my,uni_my_008,Taylor's University,Subang Jaya,0,3,3,http://university.taylors.edu.my/,http://university.taylors.edu.my/,PENDING
+country_my,uni_my_009,Sunway University,Petaling Jaya,0,3,3,https://sunwayuniversity.edu.my,https://sunwayuniversity.edu.my,PENDING
+country_my,uni_my_010,Universiti Utara Malaysia,Sintok,0,3,3,https://www.uum.edu.my/,https://www.uum.edu.my/admissions/application-guidelines/undergraduate-international,PENDING
+country_my,uni_my_011,Universiti Teknologi MARA,Shah Alam,0,3,3,https://www.uitm.edu.my/,https://uitm.edu.my/en/discover-uitm/about-uitm,PENDING
+country_my,uni_my_012,Universiti Malaysia Sabah,Kota Kinabalu,0,3,3,https://www.ums.edu.my/,https://www.ums.edu.my/v6/index.php/academic/admission-ums,PENDING
+country_my,uni_my_013,Universiti Malaysia Sarawak,Kota Samarahan,0,3,3,https://www.unimas.my/,https://www.unimas.my/admission,PENDING
+country_my,uni_my_014,Multimedia University,Cyberjaya,0,3,3,https://www.mmu.edu.my/,https://www.mmu.edu.my/programmes/,PENDING
+country_my,uni_my_015,UCSI University,Kuala Lumpur,0,3,3,https://www.ucsiuniversity.edu.my/,https://www.ucsiuniversity.edu.my/undergraduate,PENDING
+country_my,uni_my_016,Universiti Tun Hussein Onn Malaysia,Batu Pahat,0,3,3,https://www.uthm.edu.my/en/,https://jpt.mohe.gov.my/index.php/en/hei/public-hei/public-universities,PENDING
+country_my,uni_my_017,Universiti Teknikal Malaysia Melaka,Durian Tunggal,0,3,3,https://www.utem.edu.my/en/,https://jpt.mohe.gov.my/index.php/en/hei/public-hei/public-universities,PENDING
+country_my,uni_my_018,Universiti Sains Islam Malaysia,Nilai,0,3,3,https://www.usim.edu.my/,https://jpt.mohe.gov.my/index.php/en/hei/public-hei/public-universities,PENDING
+country_my,uni_my_019,Universiti Pendidikan Sultan Idris,Tanjung Malim,0,3,3,https://www.upsi.edu.my/,https://jpt.mohe.gov.my/index.php/en/hei/public-hei/public-universities,PENDING
+country_my,uni_my_020,Universiti Malaysia Terengganu,Kuala Terengganu,0,3,3,https://www.umt.edu.my/,https://jpt.mohe.gov.my/index.php/en/hei/public-hei/public-universities,PENDING
+country_my,uni_my_021,Universiti Malaysia Pahang Al-Sultan Abdullah,Pekan,0,3,3,https://umpsa.edu.my/,https://jpt.mohe.gov.my/index.php/en/hei/public-hei/public-universities,PENDING
+country_my,uni_my_022,Universiti Malaysia Perlis,Arau,0,3,3,https://www.unimap.edu.my/,https://jpt.mohe.gov.my/index.php/en/hei/public-hei/public-universities,PENDING
+country_my,uni_my_023,Universiti Sultan Zainal Abidin,Kuala Terengganu,0,3,3,https://www.unisza.edu.my/,https://jpt.mohe.gov.my/index.php/en/hei/public-hei/public-universities,PENDING
+country_my,uni_my_024,Universiti Pertahanan Nasional Malaysia,Kuala Lumpur,0,3,3,https://www.upnm.edu.my/,https://jpt.mohe.gov.my/index.php/en/hei/public-hei/public-universities,PENDING
+country_my,uni_my_025,Universiti Malaysia Kelantan,Bachok,0,3,3,https://www.umk.edu.my/,https://jpt.mohe.gov.my/index.php/en/hei/public-hei/public-universities,PENDING
+country_my,uni_my_026,Universiti Tenaga Nasional,Kajang,0,3,3,https://www.uniten.edu.my/,https://discover.educationmalaysia.gov.my/institutions/,PENDING
+country_my,uni_my_027,INCEIF University,Kuala Lumpur,0,3,3,https://inceif.edu.my/,https://discover.educationmalaysia.gov.my/institutions/,PENDING
+country_my,uni_my_028,Universiti Tunku Abdul Rahman,Kampar,0,3,3,https://www.utar.edu.my/,https://discover.educationmalaysia.gov.my/institutions/,PENDING
+country_my,uni_my_029,Monash University Malaysia,Subang Jaya,0,3,3,https://www.monash.edu.my/,https://discover.educationmalaysia.gov.my/institutions/,PENDING
+country_my,uni_my_030,University of Nottingham Malaysia,Semenyih,0,3,3,https://www.nottingham.edu.my/,https://discover.educationmalaysia.gov.my/institutions/,PENDING
+country_my,uni_my_031,Asia Pacific University of Technology and Innovation,Kuala Lumpur,0,3,3,https://www.apu.edu.my/,https://discover.educationmalaysia.gov.my/institutions/,PENDING
+country_my,uni_my_032,Management and Science University,Shah Alam,0,3,3,https://www.msu.edu.my/,https://discover.educationmalaysia.gov.my/institutions/,PENDING
+country_my,uni_my_033,Universiti Kuala Lumpur,Kuala Lumpur,0,3,3,https://www.unikl.edu.my/,https://discover.educationmalaysia.gov.my/institutions/,PENDING
+country_my,uni_my_034,HELP University,Shah Alam,0,3,3,https://help.edu.my/,https://discover.educationmalaysia.gov.my/institutions/,PENDING
+country_my,uni_my_035,SEGi University,Petaling Jaya,0,3,3,https://www.segi.edu.my/,https://discover.educationmalaysia.gov.my/institutions/,PENDING
+country_my,uni_my_036,INTI International University,Nilai,0,3,3,https://newinti.edu.my/,https://discover.educationmalaysia.gov.my/institutions/,PENDING
+country_my,uni_my_037,AIMST University,Bedong,0,3,3,https://aimst.edu.my/,https://discover.educationmalaysia.gov.my/institutions/,PENDING
+country_my,uni_my_038,Open University Malaysia,Kuala Lumpur,0,3,3,https://www.oum.edu.my/,https://discover.educationmalaysia.gov.my/institutions/,PENDING
+country_my,uni_my_039,MAHSA University,Jenjarom,0,3,3,https://mahsa.edu.my/,https://discover.educationmalaysia.gov.my/institutions/,PENDING
+country_my,uni_my_040,IMU University,Kuala Lumpur,0,3,3,https://imu.edu.my/,https://discover.educationmalaysia.gov.my/institutions/,PENDING
+country_ph,uni_ph_001,University of the Philippines Diliman,Quezon City,0,3,3,https://upd.edu.ph/,https://upd.edu.ph/,PENDING
+country_ph,uni_ph_002,Ateneo de Manila University,Quezon City,0,3,3,https://www.ateneo.edu/,https://www.ateneo.edu/contact,PENDING
+country_ph,uni_ph_003,De La Salle University,Manila,0,3,3,https://www.dlsu.edu.ph/,https://www.dlsu.edu.ph/,PENDING
+country_ph,uni_ph_004,University of Santo Tomas,Manila,0,3,3,https://www.ust.edu.ph/,https://www.ust.edu.ph/,PENDING
+country_ph,uni_ph_005,University of the Philippines Los Banos,Los Banos,0,3,3,https://uplb.edu.ph/,https://up.edu.ph/constituent-universities/,PENDING
+country_ph,uni_ph_006,University of the Philippines Manila,Manila,0,3,3,https://www.upm.edu.ph/,https://up.edu.ph/constituent-universities/,PENDING
+country_ph,uni_ph_007,University of San Carlos,Cebu City,0,3,3,https://www.usc.edu.ph/,https://www.usc.edu.ph/,PENDING
+country_ph,uni_ph_008,Silliman University,Dumaguete,0,3,3,https://su.edu.ph/,https://su.edu.ph/,PENDING
+country_ph,uni_ph_009,Mapua University,Manila,0,3,3,https://www.mapua.edu.ph/,https://www.mapua.edu.ph/,PENDING
+country_ph,uni_ph_010,Ateneo de Davao University,Davao City,0,3,3,https://www.addu.edu.ph/,https://www.addu.edu.ph/,PENDING
+country_ph,uni_ph_011,Polytechnic University of the Philippines,Manila,0,3,3,https://www.pup.edu.ph/,https://www.dbm.gov.ph/index.php/2026/general-appropriations-act-gaa-fy-2026,PENDING
+country_ph,uni_ph_012,Batangas State University,Batangas City,0,3,3,https://batstate-u.edu.ph/,https://www.dbm.gov.ph/index.php/2026/general-appropriations-act-gaa-fy-2026,PENDING
+country_ph,uni_ph_013,Bulacan State University,Malolos,0,3,3,https://www.bulsu.edu.ph/,https://www.dbm.gov.ph/index.php/2026/general-appropriations-act-gaa-fy-2026,PENDING
+country_ph,uni_ph_014,Cavite State University,Indang,0,3,3,https://cvsu.edu.ph/,https://www.dbm.gov.ph/index.php/2026/general-appropriations-act-gaa-fy-2026,PENDING
+country_ph,uni_ph_015,Cebu Technological University,Cebu City,0,3,3,https://www.ctu.edu.ph/,https://www.dbm.gov.ph/index.php/2026/general-appropriations-act-gaa-fy-2026,PENDING
+country_ph,uni_ph_016,Western Mindanao State University,Zamboanga City,0,3,3,https://wmsu.edu.ph/,https://www.dbm.gov.ph/index.php/2026/general-appropriations-act-gaa-fy-2026,PENDING
+country_ph,uni_ph_017,Mindanao State University,Marawi City,0,3,3,https://www.msumain.edu.ph/,https://www.dbm.gov.ph/index.php/2026/general-appropriations-act-gaa-fy-2026,PENDING
+country_ph,uni_ph_018,Cagayan State University,Tuguegarao City,0,3,3,https://www.csu.edu.ph/,https://www.dbm.gov.ph/index.php/2026/general-appropriations-act-gaa-fy-2026,PENDING
+country_ph,uni_ph_019,Bicol University,Legazpi City,0,3,3,https://bicol-u.edu.ph/,https://www.dbm.gov.ph/index.php/2026/general-appropriations-act-gaa-fy-2026,PENDING
+country_ph,uni_ph_020,Mariano Marcos State University,Batac,0,3,3,https://www.mmsu.edu.ph/,https://www.dbm.gov.ph/index.php/2026/general-appropriations-act-gaa-fy-2026,PENDING
+country_ph,uni_ph_021,Central Luzon State University,Science City of Munoz,0,3,3,https://clsu.edu.ph/,https://www.dbm.gov.ph/index.php/2026/general-appropriations-act-gaa-fy-2026,PENDING
+country_ph,uni_ph_022,Tarlac State University,Tarlac City,0,3,3,https://www.tsu.edu.ph/,https://www.dbm.gov.ph/index.php/2026/general-appropriations-act-gaa-fy-2026,PENDING
+country_ph,uni_ph_023,Visayas State University,Baybay City,0,3,3,https://www.vsu.edu.ph/,https://www.dbm.gov.ph/index.php/2026/general-appropriations-act-gaa-fy-2026,PENDING
+country_ph,uni_ph_024,Caraga State University,Butuan City,0,3,3,https://www.carsu.edu.ph/,https://www.dbm.gov.ph/index.php/2026/general-appropriations-act-gaa-fy-2026,PENDING
+country_ph,uni_ph_025,West Visayas State University,Iloilo City,0,3,3,https://wvsu.edu.ph/,https://www.dbm.gov.ph/index.php/2026/general-appropriations-act-gaa-fy-2026,PENDING
+country_ph,uni_ph_026,Aklan State University,Banga,0,3,3,https://asu.edu.ph/,https://www.dbm.gov.ph/index.php/2026/general-appropriations-act-gaa-fy-2026,PENDING
+country_ph,uni_ph_027,Capiz State University,Roxas City,0,3,3,https://capsu.edu.ph/,https://www.dbm.gov.ph/index.php/2026/general-appropriations-act-gaa-fy-2026,PENDING
+country_ph,uni_ph_028,Iloilo Science and Technology University,Iloilo City,0,3,3,https://www.isatu.edu.ph/,https://www.dbm.gov.ph/index.php/2026/general-appropriations-act-gaa-fy-2026,PENDING
+country_ph,uni_ph_029,Northern Iloilo State University,Estancia,0,3,3,https://nisu.edu.ph/,https://www.dbm.gov.ph/index.php/2026/general-appropriations-act-gaa-fy-2026,PENDING
+country_ph,uni_ph_030,Cebu Normal University,Cebu City,0,3,3,https://cnu.edu.ph/,https://www.dbm.gov.ph/index.php/2026/general-appropriations-act-gaa-fy-2026,PENDING
+country_ph,uni_ph_031,Philippine Normal University,Manila,0,3,3,https://www.pnu.edu.ph/,https://www.dbm.gov.ph/index.php/2026/general-appropriations-act-gaa-fy-2026,PENDING
+country_ph,uni_ph_032,Rizal Technological University,Mandaluyong,0,3,3,https://www.rtu.edu.ph/,https://www.dbm.gov.ph/index.php/2026/general-appropriations-act-gaa-fy-2026,PENDING
+country_ph,uni_ph_033,Technological University of the Philippines,Manila,0,3,3,https://www.tup.edu.ph/,https://www.dbm.gov.ph/index.php/2026/general-appropriations-act-gaa-fy-2026,PENDING
+country_ph,uni_ph_034,Eulogio Amang Rodriguez Institute of Science and Technology,Manila,0,3,3,https://earist.edu.ph/,https://www.dbm.gov.ph/index.php/2026/general-appropriations-act-gaa-fy-2026,PENDING
+country_ph,uni_ph_035,Laguna State Polytechnic University,Santa Cruz,0,3,3,https://lspu.edu.ph/,https://www.dbm.gov.ph/index.php/2026/general-appropriations-act-gaa-fy-2026,PENDING
+country_ph,uni_ph_036,Southern Luzon State University,Lucban,0,3,3,https://www.slsu.edu.ph/,https://www.dbm.gov.ph/index.php/2026/general-appropriations-act-gaa-fy-2026,PENDING
+country_ph,uni_ph_037,Benguet State University,La Trinidad,0,3,3,https://bsu.edu.ph/,https://www.dbm.gov.ph/index.php/2026/general-appropriations-act-gaa-fy-2026,PENDING
+country_ph,uni_ph_038,Kalinga State University,Tabuk City,0,3,3,https://ksu.edu.ph/,https://www.dbm.gov.ph/index.php/2026/general-appropriations-act-gaa-fy-2026,PENDING
+country_ph,uni_ph_039,Ifugao State University,Lamut,0,3,3,https://ifsu.edu.ph/,https://www.dbm.gov.ph/index.php/2026/general-appropriations-act-gaa-fy-2026,PENDING
+country_ph,uni_ph_040,Central Mindanao University,Maramag,0,3,3,https://www.cmu.edu.ph/,https://www.dbm.gov.ph/index.php/2026/general-appropriations-act-gaa-fy-2026,PENDING
+country_ph,uni_ph_041,University of Southern Mindanao,Kabacan,0,3,3,https://www.usm.edu.ph/,https://www.dbm.gov.ph/index.php/2026/general-appropriations-act-gaa-fy-2026,PENDING
+country_ph,uni_ph_042,Bukidnon State University,Malaybalay City,0,3,3,https://buksu.edu.ph/,https://www.dbm.gov.ph/index.php/2026/general-appropriations-act-gaa-fy-2026,PENDING
+country_ph,uni_ph_043,Mindanao State University - Iligan Institute of Technology,Iligan City,0,3,3,https://www.msuiit.edu.ph/,https://www.dbm.gov.ph/index.php/2026/general-appropriations-act-gaa-fy-2026,PENDING
+country_ph,uni_ph_044,University of Southeastern Philippines,Davao City,0,3,3,https://www.usep.edu.ph/,https://www.dbm.gov.ph/index.php/2026/general-appropriations-act-gaa-fy-2026,PENDING
+country_ph,uni_ph_045,Sultan Kudarat State University,Tacurong City,0,3,3,https://sksu.edu.ph/,https://www.dbm.gov.ph/index.php/2026/general-appropriations-act-gaa-fy-2026,PENDING
+country_ph,uni_ph_046,University of Science and Technology of Southern Philippines,Cagayan de Oro City,0,3,3,https://www.ustp.edu.ph/,https://www.dbm.gov.ph/index.php/2026/general-appropriations-act-gaa-fy-2026,PENDING
+country_ph,uni_ph_047,Davao Oriental State University,Mati City,0,3,3,https://dorsu.edu.ph/,https://www.dbm.gov.ph/index.php/2026/general-appropriations-act-gaa-fy-2026,PENDING
+country_ph,uni_ph_048,Sorsogon State University,Sorsogon City,0,3,3,https://sorsu.edu.ph/,https://www.dbm.gov.ph/index.php/2026/general-appropriations-act-gaa-fy-2026,PENDING
+country_ph,uni_ph_049,Partido State University,Goa,0,3,3,https://parsu.edu.ph/,https://www.dbm.gov.ph/index.php/2026/general-appropriations-act-gaa-fy-2026,PENDING
+country_ph,uni_ph_050,Eastern Visayas State University,Tacloban City,0,3,3,https://www.evsu.edu.ph/,https://www.dbm.gov.ph/index.php/2026/general-appropriations-act-gaa-fy-2026,PENDING
+country_sg,uni_sg_001,National University of Singapore,Singapore,0,3,3,http://www.nus.edu.sg/,http://www.nus.edu.sg/,PENDING
+country_sg,uni_sg_002,Nanyang Technological University,Singapore,0,3,3,https://www.ntu.edu.sg,https://www.ntu.edu.sg,PENDING
+country_sg,uni_sg_003,Singapore Management University,Singapore,0,3,3,https://www.smu.edu.sg,https://www.smu.edu.sg,PENDING
+country_sg,uni_sg_004,Singapore University of Technology and Design,Singapore,0,3,3,https://www.sutd.edu.sg,https://www.sutd.edu.sg,PENDING
+country_sg,uni_sg_005,Singapore Institute of Technology,Singapore,0,3,3,https://www.singaporetech.edu.sg/,https://www.singaporetech.edu.sg/,PENDING
+country_sg,uni_sg_006,Singapore University of Social Sciences,Singapore,0,3,3,https://www.suss.edu.sg,https://www.suss.edu.sg,PENDING
+country_th,uni_th_001,Chulalongkorn University,Bangkok,0,3,3,http://www.chula.ac.th/en/,http://www.chula.ac.th/en/,PENDING
+country_th,uni_th_002,Mahidol University,Bangkok,0,3,3,http://www.mahidol.ac.th/en/,http://www.mahidol.ac.th/en/,PENDING
+country_th,uni_th_003,Chiang Mai University,Chiang Mai,0,3,3,http://www.cmu.ac.th/,http://www.cmu.ac.th/,PENDING
+country_th,uni_th_004,Thammasat University,Bangkok,0,3,3,https://tu.ac.th,https://tu.ac.th,PENDING
+country_th,uni_th_005,Kasetsart University,Bangkok,0,3,3,http://www.ku.ac.th/web2012/index.php?c=adms&m=mainpage1,http://www.ku.ac.th/web2012/index.php?c=adms&m=mainpage1,PENDING
+country_th,uni_th_006,Khon Kaen University,Khon Kaen,0,3,3,https://www.kku.ac.th/en/,https://eng.kku.ac.th/admission,PENDING
+country_th,uni_th_007,Prince of Songkla University,Hat Yai,0,3,3,https://www.psu.ac.th/en/,https://gao.psu.ac.th/interprograms,PENDING
+country_th,uni_th_008,King Mongkut's University of Technology Thonburi,Bangkok,0,3,3,https://www.kmutt.ac.th/en/,https://iadmission.kmutt.ac.th/,PENDING
+country_th,uni_th_009,King Mongkut's Institute of Technology Ladkrabang,Bangkok,0,3,3,https://www.kmitl.ac.th/,https://oia.kmitl.ac.th/,PENDING
+country_th,uni_th_010,Asian Institute of Technology,Pathum Thani,0,3,3,https://ait.ac.th/,https://ait.ac.th/study/masters-degree-programs/,PENDING
+country_th,uni_th_011,Mae Fah Luang University,Chiang Rai,0,3,3,https://en.mfu.ac.th/,https://en.mfu.ac.th/admission/admission-guide.html,PENDING
+country_th,uni_th_012,Burapha University,Chon Buri,0,3,3,https://www.buu.ac.th/,https://www.ops.go.th/en/inter-about-ops-mhesi/higher-education/download/5271/5708/16,PENDING
+country_th,uni_th_013,Srinakharinwirot University,Bangkok,0,3,3,https://www.swu.ac.th/,https://www.ops.go.th/en/inter-about-ops-mhesi/higher-education/download/5271/5708/16,PENDING
+country_th,uni_th_014,Silpakorn University,Nakhon Pathom,0,3,3,https://www.su.ac.th/,https://www.ops.go.th/en/inter-about-ops-mhesi/higher-education/download/5271/5708/16,PENDING
+country_th,uni_th_015,Naresuan University,Phitsanulok,0,3,3,https://www.nu.ac.th/,https://www.ops.go.th/en/inter-about-ops-mhesi/higher-education/download/5271/5708/16,PENDING
+country_th,uni_th_016,University of Phayao,Phayao,0,3,3,https://www.up.ac.th/,https://www.ops.go.th/en/inter-about-ops-mhesi/higher-education/download/5271/5708/16,PENDING
+country_th,uni_th_017,Walailak University,Nakhon Si Thammarat,0,3,3,https://www.wu.ac.th/,https://www.ops.go.th/en/inter-about-ops-mhesi/higher-education/download/5271/5708/16,PENDING
+country_th,uni_th_018,Suranaree University of Technology,Nakhon Ratchasima,0,3,3,https://www.sut.ac.th/,https://www.ops.go.th/en/inter-about-ops-mhesi/higher-education/download/5271/5708/16,PENDING
+country_th,uni_th_019,Maejo University,Chiang Mai,0,3,3,https://www.mju.ac.th/,https://www.ops.go.th/en/inter-about-ops-mhesi/higher-education/download/5271/5708/16,PENDING
+country_th,uni_th_020,Nakhon Phanom University,Nakhon Phanom,0,3,3,https://www.npu.ac.th/,https://www.ops.go.th/en/inter-about-ops-mhesi/higher-education/download/5271/5708/16,PENDING
+country_th,uni_th_021,Ubon Ratchathani University,Ubon Ratchathani,0,3,3,https://www.ubu.ac.th/,https://www.ops.go.th/en/inter-about-ops-mhesi/higher-education/download/5271/5708/16,PENDING
+country_th,uni_th_022,Sukhothai Thammathirat Open University,Nonthaburi,0,3,3,https://www.stou.ac.th/,https://www.ops.go.th/en/inter-about-ops-mhesi/higher-education/download/5271/5708/16,PENDING
+country_th,uni_th_023,Ramkhamhaeng University,Bangkok,0,3,3,https://www.ru.ac.th/,https://www.ops.go.th/en/inter-about-ops-mhesi/higher-education/download/5271/5708/16,PENDING
+country_th,uni_th_024,National Institute of Development Administration,Bangkok,0,3,3,https://www.nida.ac.th/,https://www.ops.go.th/en/inter-about-ops-mhesi/higher-education/download/5271/5708/16,PENDING
+country_th,uni_th_025,King Mongkut's University of Technology North Bangkok,Bangkok,0,3,3,https://www.kmutnb.ac.th/,https://www.ops.go.th/en/inter-about-ops-mhesi/higher-education/download/5271/5708/16,PENDING
+country_th,uni_th_026,Rajamangala University of Technology Thanyaburi,Pathum Thani,0,3,3,https://www.rmutt.ac.th/,https://www.ops.go.th/en/inter-about-ops-mhesi/higher-education/download/5271/5708/16,PENDING
+country_th,uni_th_027,Rajamangala University of Technology Suvarnabhumi,Ayutthaya,0,3,3,https://www.rmutsb.ac.th/,https://www.ops.go.th/en/inter-about-ops-mhesi/higher-education/download/5271/5708/16,PENDING
+country_th,uni_th_028,Rajamangala University of Technology Rattanakosin,Nakhon Pathom,0,3,3,https://www.rmutr.ac.th/,https://www.ops.go.th/en/inter-about-ops-mhesi/higher-education/download/5271/5708/16,PENDING
+country_th,uni_th_029,Rajamangala University of Technology Phra Nakhon,Bangkok,0,3,3,https://www.rmutp.ac.th/,https://www.ops.go.th/en/inter-about-ops-mhesi/higher-education/download/5271/5708/16,PENDING
+country_th,uni_th_030,Rajamangala University of Technology Krungthep,Bangkok,0,3,3,https://www.rmutk.ac.th/,https://www.ops.go.th/en/inter-about-ops-mhesi/higher-education/download/5271/5708/16,PENDING
+country_th,uni_th_031,Rajamangala University of Technology Srivijaya,Songkhla,0,3,3,https://www.rmutsv.ac.th/,https://www.ops.go.th/en/inter-about-ops-mhesi/higher-education/download/5271/5708/16,PENDING
+country_th,uni_th_032,Rajamangala University of Technology Isan,Nakhon Ratchasima,0,3,3,https://www.rmuti.ac.th/,https://www.ops.go.th/en/inter-about-ops-mhesi/higher-education/download/5271/5708/16,PENDING
+country_th,uni_th_033,Rajamangala University of Technology Lanna,Chiang Mai,0,3,3,https://www.rmutl.ac.th/,https://www.ops.go.th/en/inter-about-ops-mhesi/higher-education/download/5271/5708/16,PENDING
+country_th,uni_th_034,Rajamangala University of Technology Tawan-ok,Chon Buri,0,3,3,https://www.rmutto.ac.th/,https://www.ops.go.th/en/inter-about-ops-mhesi/higher-education/download/5271/5708/16,PENDING
+country_th,uni_th_035,Suan Sunandha Rajabhat University,Bangkok,0,3,3,https://ssru.ac.th/,https://www.ops.go.th/en/inter-about-ops-mhesi/higher-education/download/5271/5708/16,PENDING
+country_th,uni_th_036,Phranakhon Rajabhat University,Bangkok,0,3,3,https://www.pnru.ac.th/,https://www.ops.go.th/en/inter-about-ops-mhesi/higher-education/download/5271/5708/16,PENDING
+country_th,uni_th_037,Chiang Mai Rajabhat University,Chiang Mai,0,3,3,https://www.cmru.ac.th/,https://www.ops.go.th/en/inter-about-ops-mhesi/higher-education/download/5271/5708/16,PENDING
+country_th,uni_th_038,Nakhon Ratchasima Rajabhat University,Nakhon Ratchasima,0,3,3,https://www.nrru.ac.th/,https://www.ops.go.th/en/inter-about-ops-mhesi/higher-education/download/5271/5708/16,PENDING
+country_th,uni_th_039,Phuket Rajabhat University,Phuket,0,3,3,https://www.pkru.ac.th/,https://www.ops.go.th/en/inter-about-ops-mhesi/higher-education/download/5271/5708/16,PENDING
+country_th,uni_th_040,Suratthani Rajabhat University,Surat Thani,0,3,3,https://www.sru.ac.th/,https://www.ops.go.th/en/inter-about-ops-mhesi/higher-education/download/5271/5708/16,PENDING
+country_tl,uni_tl_001,Universidade Nacional Timor Lorosa'e,Dili,0,3,3,https://untl.edu.tl/,https://untl.edu.tl/,PENDING
+country_tl,uni_tl_002,Dili Institute of Technology,Dili,0,3,3,https://dit.edu.tl/,https://dit.edu.tl/Page-welcome-to-dit.html,PENDING
+country_tl,uni_tl_003,Universidade da Paz,Dili,0,3,3,https://unpaz.tl/,https://unpaz.tl/,PENDING
+country_tl,uni_tl_004,Universidade Oriental Timor Lorosa'e,Dili,0,3,3,https://unital.edu.tl/,https://unital.edu.tl/,PENDING
+country_tl,uni_tl_005,Universidade de Dili,Dili,0,3,3,https://undil.tl/,https://undil.tl/,PENDING
+country_tl,uni_tl_006,Universidade Catolica Timorense,Dili,0,3,3,https://uct.edu.tl/,https://uct.edu.tl/,PENDING
+country_tw,uni_tw_001,National Taiwan University,Taipei,0,3,3,http://www.ntu.edu.tw/english/,http://www.ntu.edu.tw/english/,PENDING
+country_tw,uni_tw_002,National Tsing Hua University,Hsinchu,0,3,3,http://www.nthu.edu.tw/english/,http://www.nthu.edu.tw/english/,PENDING
+country_tw,uni_tw_003,National Yang Ming Chiao Tung University,Hsinchu,0,3,3,https://www.nycu.edu.tw/,https://www.nycu.edu.tw/,PENDING
+country_tw,uni_tw_004,National Cheng Kung University,Tainan City,0,3,3,http://web.ncku.edu.tw/bin/home.php,http://web.ncku.edu.tw/bin/home.php,PENDING
+country_tw,uni_tw_005,National Taiwan University of Science and Technology,Taipei,0,3,3,http://www.ntust.edu.tw/home.php?Lang=en,http://www.ntust.edu.tw/home.php?Lang=en,PENDING
+country_tw,uni_tw_006,National Chengchi University,Taipei,0,3,3,https://www.nccu.edu.tw/index.php?Lang=en,https://www.nccu.edu.tw/p/426-1000-80.php?Lang=en,PENDING
+country_tw,uni_tw_007,National Central University,Taoyuan,0,3,3,https://www.ncu.edu.tw/?Lang=en,https://cis.ncu.edu.tw/admissions/,PENDING
+country_tw,uni_tw_008,National Chung Hsing University,Taichung,0,3,3,https://www.nchu.edu.tw/en-index,https://www.nchu.edu.tw/en-index,PENDING
+country_tw,uni_tw_009,National Taiwan Normal University,Taipei,0,3,3,https://en.ntnu.edu.tw/,https://en.ntnu.edu.tw/admissions.php,PENDING
+country_tw,uni_tw_010,National Taipei University of Technology,Taipei,0,3,3,https://www-en.ntut.edu.tw/,https://oia.ntut.edu.tw/p/412-1032-13828.php?Lang=en,PENDING
+country_tw,uni_tw_011,Tamkang University,New Taipei City,0,3,3,https://english.tku.edu.tw/,https://english.tku.edu.tw/studyintku.asp,PENDING
+country_tw,uni_tw_012,National Sun Yat-sen University,Kaohsiung,0,3,3,https://www.nsysu.edu.tw/?Lang=en,https://www.studyintaiwan.org/how-to-apply/school,PENDING
+country_tw,uni_tw_013,National Chung Cheng University,Chiayi,0,3,3,https://www.ccu.edu.tw/,https://www.studyintaiwan.org/how-to-apply/school,PENDING
+country_tw,uni_tw_014,National Taiwan Ocean University,Keelung,0,3,3,https://www.ntou.edu.tw/,https://www.studyintaiwan.org/how-to-apply/school,PENDING
+country_tw,uni_tw_015,National Dong Hwa University,Hualien,0,3,3,https://www.ndhu.edu.tw/,https://www.studyintaiwan.org/how-to-apply/school,PENDING
+country_tw,uni_tw_016,National University of Kaohsiung,Kaohsiung,0,3,3,https://www.nuk.edu.tw/?Lang=en,https://www.studyintaiwan.org/how-to-apply/school,PENDING
+country_tw,uni_tw_017,National Kaohsiung University of Science and Technology,Kaohsiung,0,3,3,https://eng.nkust.edu.tw/,https://www.studyintaiwan.org/how-to-apply/school,PENDING
+country_tw,uni_tw_018,National Yunlin University of Science and Technology,Douliu,0,3,3,https://www.yuntech.edu.tw/,https://www.studyintaiwan.org/how-to-apply/school,PENDING
+country_tw,uni_tw_019,National Pingtung University of Science and Technology,Pingtung,0,3,3,https://wp.npust.edu.tw/en/,https://www.studyintaiwan.org/how-to-apply/school,PENDING
+country_tw,uni_tw_020,National United University,Miaoli,0,3,3,https://www.nuu.edu.tw/index.php?Lang=en,https://www.studyintaiwan.org/how-to-apply/school,PENDING
+country_tw,uni_tw_021,National Taipei University,New Taipei City,0,3,3,https://new.ntpu.edu.tw/,https://www.studyintaiwan.org/how-to-apply/school,PENDING
+country_tw,uni_tw_022,Fu Jen Catholic University,New Taipei City,0,3,3,https://www.fju.edu.tw/,https://www.studyintaiwan.org/how-to-apply/school,PENDING
+country_tw,uni_tw_023,Feng Chia University,Taichung,0,3,3,https://www.fcu.edu.tw/en/,https://www.studyintaiwan.org/how-to-apply/school,PENDING
+country_tw,uni_tw_024,Tunghai University,Taichung,0,3,3,https://eng.thu.edu.tw/,https://www.studyintaiwan.org/how-to-apply/school,PENDING
+country_tw,uni_tw_025,Soochow University,Taipei,0,3,3,https://www-en.scu.edu.tw/,https://www.studyintaiwan.org/how-to-apply/school,PENDING
+country_tw,uni_tw_026,Taipei Medical University,Taipei,0,3,3,https://www.tmu.edu.tw/,https://www.studyintaiwan.org/how-to-apply/school,PENDING
+country_tw,uni_tw_027,China Medical University,Taichung,0,3,3,https://www.cmu.edu.tw/,https://www.studyintaiwan.org/how-to-apply/school,PENDING
+country_tw,uni_tw_028,Chang Gung University,Taoyuan,0,3,3,https://www.cgu.edu.tw/,https://www.studyintaiwan.org/how-to-apply/school,PENDING
+country_tw,uni_tw_029,Yuan Ze University,Taoyuan,0,3,3,https://www.yzu.edu.tw/index.php/en-us/,https://www.studyintaiwan.org/how-to-apply/school,PENDING
+country_tw,uni_tw_030,Chung Yuan Christian University,Taoyuan,0,3,3,https://www.cycu.edu.tw/eng/,https://www.studyintaiwan.org/how-to-apply/school,PENDING
+country_vn,uni_vn_001,"Vietnam National University, Hanoi",Hanoi,0,3,3,https://en.vnu.edu.vn/,https://en.vnu.edu.vn/a-brief-introduction-post36705.html,PENDING
+country_vn,uni_vn_002,Vietnam National University Ho Chi Minh City,Ho Chi Minh City,0,3,3,https://vnuhcm.edu.vn/en/,https://vnuhcm.edu.vn/en/,PENDING
+country_vn,uni_vn_003,Hanoi University of Science and Technology,Hanoi,0,3,3,https://hust.edu.vn/,https://ts.hust.edu.vn/en/tin-tuc/ve-dai-hoc-bach-khoa-ha-noi,PENDING
+country_vn,uni_vn_004,Ton Duc Thang University,Ho Chi Minh City,0,3,3,https://tdtu.edu.vn/en,https://tdtu.edu.vn/en,PENDING
+country_vn,uni_vn_005,University of Economics Ho Chi Minh City,Ho Chi Minh City,0,3,3,https://ueh.edu.vn/en/,https://ueh.edu.vn/en/about-us/overview/history/,PENDING
+country_vn,uni_vn_006,Can Tho University,Can Tho,0,3,3,https://en.ctu.edu.vn/,https://en.ctu.edu.vn/,PENDING
+country_vn,uni_vn_007,The University of Danang,Da Nang,0,3,3,https://www.udn.vn/english,https://www.udn.vn/english,PENDING
+country_vn,uni_vn_008,Foreign Trade University,Hanoi,0,3,3,https://ftu.edu.vn/,https://ftu.edu.vn/,PENDING
+country_vn,uni_vn_009,Duy Tan University,Da Nang,0,3,3,https://duytan.edu.vn/,https://duytan.edu.vn/,PENDING
+country_vn,uni_vn_010,National Economics University,Hanoi,0,3,3,https://en.neu.edu.vn/,https://en.neu.edu.vn/,PENDING
+country_vn,uni_vn_011,Vietnam National University of Agriculture,Hanoi,0,3,3,https://vnua.edu.vn/,https://moet.gov.vn/co-so-giao-duc/danh-sach-cac-co-so-giao-duc,PENDING
+country_vn,uni_vn_012,Thuyloi University,Hanoi,0,3,3,https://www.tlu.edu.vn/,https://moet.gov.vn/co-so-giao-duc/danh-sach-cac-co-so-giao-duc,PENDING
+country_vn,uni_vn_013,University of Transport and Communications,Hanoi,0,3,3,https://www.utc.edu.vn/,https://moet.gov.vn/co-so-giao-duc/danh-sach-cac-co-so-giao-duc,PENDING
+country_vn,uni_vn_014,Hanoi University of Civil Engineering,Hanoi,0,3,3,https://huce.edu.vn/,https://moet.gov.vn/co-so-giao-duc/danh-sach-cac-co-so-giao-duc,PENDING
+country_vn,uni_vn_015,Hanoi University,Hanoi,0,3,3,https://www.hanu.vn/,https://moet.gov.vn/co-so-giao-duc/danh-sach-cac-co-so-giao-duc,PENDING
+country_vn,uni_vn_016,Hanoi National University of Education,Hanoi,0,3,3,https://hnue.edu.vn/,https://moet.gov.vn/co-so-giao-duc/danh-sach-cac-co-so-giao-duc,PENDING
+country_vn,uni_vn_017,Hanoi Medical University,Hanoi,0,3,3,https://hmu.edu.vn/,https://moet.gov.vn/co-so-giao-duc/danh-sach-cac-co-so-giao-duc,PENDING
+country_vn,uni_vn_018,Hanoi University of Pharmacy,Hanoi,0,3,3,https://www.hup.edu.vn/,https://moet.gov.vn/co-so-giao-duc/danh-sach-cac-co-so-giao-duc,PENDING
+country_vn,uni_vn_019,Posts and Telecommunications Institute of Technology,Hanoi,0,3,3,https://ptit.edu.vn/,https://moet.gov.vn/co-so-giao-duc/danh-sach-cac-co-so-giao-duc,PENDING
+country_vn,uni_vn_020,Electric Power University,Hanoi,0,3,3,https://epu.edu.vn/,https://moet.gov.vn/co-so-giao-duc/danh-sach-cac-co-so-giao-duc,PENDING
+country_vn,uni_vn_021,Hanoi University of Mining and Geology,Hanoi,0,3,3,https://humg.edu.vn/,https://moet.gov.vn/co-so-giao-duc/danh-sach-cac-co-so-giao-duc,PENDING
+country_vn,uni_vn_022,Thuongmai University,Hanoi,0,3,3,https://tmu.edu.vn/,https://moet.gov.vn/co-so-giao-duc/danh-sach-cac-co-so-giao-duc,PENDING
+country_vn,uni_vn_023,Banking Academy of Vietnam,Hanoi,0,3,3,https://hvnh.edu.vn/,https://moet.gov.vn/co-so-giao-duc/danh-sach-cac-co-so-giao-duc,PENDING
+country_vn,uni_vn_024,Academy of Finance,Hanoi,0,3,3,https://hvtc.edu.vn/,https://moet.gov.vn/co-so-giao-duc/danh-sach-cac-co-so-giao-duc,PENDING
+country_vn,uni_vn_025,Phenikaa University,Hanoi,0,3,3,https://phenikaa-uni.edu.vn/,https://moet.gov.vn/co-so-giao-duc/danh-sach-cac-co-so-giao-duc,PENDING
+country_vn,uni_vn_026,FPT University,Hanoi,0,3,3,https://daihoc.fpt.edu.vn/,https://moet.gov.vn/co-so-giao-duc/danh-sach-cac-co-so-giao-duc,PENDING
+country_vn,uni_vn_027,VinUniversity,Hanoi,0,3,3,https://vinuni.edu.vn/,https://moet.gov.vn/co-so-giao-duc/danh-sach-cac-co-so-giao-duc,PENDING
+country_vn,uni_vn_028,Thai Nguyen University,Thai Nguyen,0,3,3,https://tnu.edu.vn/,https://moet.gov.vn/co-so-giao-duc/danh-sach-cac-co-so-giao-duc,PENDING
+country_vn,uni_vn_029,Vinh University,Vinh,0,3,3,https://vinhuni.edu.vn/,https://moet.gov.vn/co-so-giao-duc/danh-sach-cac-co-so-giao-duc,PENDING
+country_vn,uni_vn_030,Hue University,Hue,0,3,3,https://hueuni.edu.vn/,https://moet.gov.vn/co-so-giao-duc/danh-sach-cac-co-so-giao-duc,PENDING
+country_vn,uni_vn_031,Quy Nhon University,Quy Nhon,0,3,3,https://www.qnu.edu.vn/,https://moet.gov.vn/co-so-giao-duc/danh-sach-cac-co-so-giao-duc,PENDING
+country_vn,uni_vn_032,Nha Trang University,Nha Trang,0,3,3,https://www.ntu.edu.vn/,https://moet.gov.vn/co-so-giao-duc/danh-sach-cac-co-so-giao-duc,PENDING
+country_vn,uni_vn_033,Dalat University,Da Lat,0,3,3,https://dlu.edu.vn/,https://moet.gov.vn/co-so-giao-duc/danh-sach-cac-co-so-giao-duc,PENDING
+country_vn,uni_vn_034,Ho Chi Minh City Open University,Ho Chi Minh City,0,3,3,https://ou.edu.vn/,https://moet.gov.vn/co-so-giao-duc/danh-sach-cac-co-so-giao-duc,PENDING
+country_vn,uni_vn_035,Ho Chi Minh City University of Technology and Education,Ho Chi Minh City,0,3,3,https://hcmute.edu.vn/,https://moet.gov.vn/co-so-giao-duc/danh-sach-cac-co-so-giao-duc,PENDING
+country_vn,uni_vn_036,Industrial University of Ho Chi Minh City,Ho Chi Minh City,0,3,3,https://iuh.edu.vn/,https://moet.gov.vn/co-so-giao-duc/danh-sach-cac-co-so-giao-duc,PENDING
+country_vn,uni_vn_037,University of Finance - Marketing,Ho Chi Minh City,0,3,3,https://ufm.edu.vn/,https://moet.gov.vn/co-so-giao-duc/danh-sach-cac-co-so-giao-duc,PENDING
+country_vn,uni_vn_038,Nong Lam University Ho Chi Minh City,Ho Chi Minh City,0,3,3,https://hcmuaf.edu.vn/,https://moet.gov.vn/co-so-giao-duc/danh-sach-cac-co-so-giao-duc,PENDING
+country_vn,uni_vn_039,Ho Chi Minh City University of Law,Ho Chi Minh City,0,3,3,https://www.hcmulaw.edu.vn/,https://moet.gov.vn/co-so-giao-duc/danh-sach-cac-co-so-giao-duc,PENDING
+country_vn,uni_vn_040,University of Medicine and Pharmacy at Ho Chi Minh City,Ho Chi Minh City,0,3,3,https://ump.edu.vn/,https://moet.gov.vn/co-so-giao-duc/danh-sach-cac-co-so-giao-duc,PENDING
+country_vn,uni_vn_041,Saigon University,Ho Chi Minh City,0,3,3,https://sgu.edu.vn/,https://moet.gov.vn/co-so-giao-duc/danh-sach-cac-co-so-giao-duc,PENDING
+country_vn,uni_vn_042,Van Lang University,Ho Chi Minh City,0,3,3,https://www.vlu.edu.vn/,https://moet.gov.vn/co-so-giao-duc/danh-sach-cac-co-so-giao-duc,PENDING
+country_vn,uni_vn_043,Hoa Sen University,Ho Chi Minh City,0,3,3,https://www.hoasen.edu.vn/,https://moet.gov.vn/co-so-giao-duc/danh-sach-cac-co-so-giao-duc,PENDING
+country_vn,uni_vn_044,Nguyen Tat Thanh University,Ho Chi Minh City,0,3,3,https://ntt.edu.vn/,https://moet.gov.vn/co-so-giao-duc/danh-sach-cac-co-so-giao-duc,PENDING
+country_vn,uni_vn_045,Ho Chi Minh City University of Technology,Ho Chi Minh City,0,3,3,https://www.hutech.edu.vn/,https://moet.gov.vn/co-so-giao-duc/danh-sach-cac-co-so-giao-duc,PENDING
+country_vn,uni_vn_046,Ho Chi Minh University of Banking,Ho Chi Minh City,0,3,3,https://hub.edu.vn/,https://moet.gov.vn/co-so-giao-duc/danh-sach-cac-co-so-giao-duc,PENDING
+country_vn,uni_vn_047,Ho Chi Minh City University of Foreign Languages and Information Technology,Ho Chi Minh City,0,3,3,https://huflit.edu.vn/,https://moet.gov.vn/co-so-giao-duc/danh-sach-cac-co-so-giao-duc,PENDING
+country_vn,uni_vn_048,Tra Vinh University,Tra Vinh,0,3,3,https://www.tvu.edu.vn/,https://moet.gov.vn/co-so-giao-duc/danh-sach-cac-co-so-giao-duc,PENDING
+country_vn,uni_vn_049,Dong Thap University,Cao Lanh,0,3,3,https://www.dthu.edu.vn/,https://moet.gov.vn/co-so-giao-duc/danh-sach-cac-co-so-giao-duc,PENDING
+country_vn,uni_vn_050,Can Tho University of Medicine and Pharmacy,Can Tho,0,3,3,https://www.ctump.edu.vn/,https://moet.gov.vn/co-so-giao-duc/danh-sach-cac-co-so-giao-duc,PENDING

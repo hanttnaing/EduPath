@@ -1,0 +1,148 @@
+[
+  {
+    "university_id": "uni_hk_009",
+    "university_name": "Hong Kong Metropolitan University",
+    "country_id": "country_hk",
+    "city": "Hong Kong",
+    "official_website": "https://www.hkmu.edu.hk/",
+    "source_url": "https://www.edb.gov.hk/en/edu-system/postsecondary/local-higher-edu/institutions/index.html"
+  },
+  {
+    "university_id": "uni_hk_010",
+    "university_name": "Hong Kong Shue Yan University",
+    "country_id": "country_hk",
+    "city": "Hong Kong",
+    "official_website": "https://www.hksyu.edu/",
+    "source_url": "https://www.edb.gov.hk/en/edu-system/postsecondary/local-higher-edu/institutions/index.html"
+  },
+  {
+    "university_id": "uni_hk_011",
+    "university_name": "The Hang Seng University of Hong Kong",
+    "country_id": "country_hk",
+    "city": "Hong Kong",
+    "official_website": "https://www.hsu.edu.hk/en/",
+    "source_url": "https://www.edb.gov.hk/en/edu-system/postsecondary/local-higher-edu/institutions/index.html"
+  },
+  {
+    "university_id": "uni_hk_012",
+    "university_name": "Hong Kong Chu Hai College",
+    "country_id": "country_hk",
+    "city": "Hong Kong",
+    "official_website": "https://www.chuhai.edu.hk/",
+    "source_url": "https://www.edb.gov.hk/en/edu-system/postsecondary/local-higher-edu/institutions/index.html"
+  },
+  {
+    "university_id": "uni_hk_013",
+    "university_name": "Saint Francis University",
+    "country_id": "country_hk",
+    "city": "Hong Kong",
+    "official_website": "https://www.sfu.edu.hk/en/",
+    "source_url": "https://www.edb.gov.hk/en/edu-system/postsecondary/local-higher-edu/institutions/index.html"
+  },
+  {
+    "university_id": "uni_hk_014",
+    "university_name": "Technological and Higher Education Institute of Hong Kong",
+    "country_id": "country_hk",
+    "city": "Hong Kong",
+    "official_website": "https://www.thei.edu.hk/",
+    "source_url": "https://www.edb.gov.hk/en/edu-system/postsecondary/local-higher-edu/institutions/index.html"
+  },
+  {
+    "university_id": "uni_hk_015",
+    "university_name": "Tung Wah College",
+    "country_id": "country_hk",
+    "city": "Hong Kong",
+    "official_website": "https://www.twc.edu.hk/en/",
+    "source_url": "https://www.edb.gov.hk/en/edu-system/postsecondary/local-higher-edu/institutions/index.html"
+  },
+  {
+    "university_id": "uni_mn_007",
+    "university_name": "German-Mongolian Institute for Resources and Technology",
+    "country_id": "country_mn",
+    "city": "Ulaanbaatar",
+    "university_type": "Public",
+    "official_website": "https://www.gmit.edu.mn/eng/",
+    "source_url": "https://www.gmit.edu.mn/eng/"
+  },
+  {
+    "university_id": "uni_mn_008",
+    "university_name": "University of the Humanities",
+    "country_id": "country_mn",
+    "city": "Ulaanbaatar",
+    "university_type": "Private",
+    "official_website": "https://humanities.mn/",
+    "source_url": "https://humanities.mn/"
+  },
+  {
+    "university_id": "uni_mn_009",
+    "university_name": "Otgontenger University",
+    "country_id": "country_mn",
+    "city": "Ulaanbaatar",
+    "university_type": "Private",
+    "official_website": "https://otgontenger.edu.mn/en/home",
+    "source_url": "https://otgontenger.edu.mn/en/home"
+  },
+  {
+    "university_id": "uni_mn_010",
+    "university_name": "Etugen University",
+    "country_id": "country_mn",
+    "city": "Ulaanbaatar",
+    "university_type": "Private",
+    "official_website": "https://www.etugen.edu.mn/",
+    "source_url": "https://www.etugen.edu.mn/"
+  },
+  {
+    "university_id": "uni_mn_011",
+    "university_name": "International University of Ulaanbaatar",
+    "country_id": "country_mn",
+    "city": "Ulaanbaatar",
+    "university_type": "Private",
+    "official_website": "https://www.iuu.edu.mn/",
+    "source_url": "https://www.iuu.edu.mn/"
+  },
+  {
+    "university_id": "uni_mn_012",
+    "university_name": "Mandakh University",
+    "country_id": "country_mn",
+    "city": "Ulaanbaatar",
+    "university_type": "Private",
+    "official_website": "https://en.mandakh.edu.mn/",
+    "source_url": "https://en.mandakh.edu.mn/"
+  },
+  {
+    "university_id": "uni_mo_007",
+    "university_name": "Academy of Public Security Forces of Macao",
+    "country_id": "country_mo",
+    "city": "Macau",
+    "university_type": "Public",
+    "official_website": "https://www.fsm.gov.mo/esfsm/",
+    "source_url": "https://es.dsedj.gov.mo/esdbonline/_site/category_en.asp?group=1"
+  },
+  {
+    "university_id": "uni_mo_008",
+    "university_name": "Kiang Wu Nursing College of Macau",
+    "country_id": "country_mo",
+    "city": "Macau",
+    "university_type": "Private",
+    "official_website": "https://www2.kwnc.edu.mo/en/standard/index.html",
+    "source_url": "https://es.dsedj.gov.mo/esdbonline/_site/category_en.asp?group=1"
+  },
+  {
+    "university_id": "uni_mo_009",
+    "university_name": "Macau Institute of Management",
+    "country_id": "country_mo",
+    "city": "Macau",
+    "university_type": "Private",
+    "official_website": "https://mim.edu.mo/",
+    "source_url": "https://es.dsedj.gov.mo/esdbonline/_site/category_en.asp?group=1"
+  },
+  {
+    "university_id": "uni_mo_010",
+    "university_name": "Macau Millennium College",
+    "country_id": "country_mo",
+    "city": "Macau",
+    "university_type": "Private",
+    "official_website": "https://mmc.edu.mo/en/",
+    "source_url": "https://es.dsedj.gov.mo/esdbonline/_site/category_en.asp?group=1"
+  }
+]

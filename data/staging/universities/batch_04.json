@@ -1,0 +1,246 @@
+﻿[
+  {
+    "university_id": "uni_cn_005",
+    "university_name": "Fudan University",
+    "country_id": "country_cn",
+    "city": "Shanghai",
+    "official_website": "https://www.fudan.edu.cn/en/",
+    "source_url": "https://www.fudan.edu.cn/en/Admission/list.htm"
+  },
+  {
+    "university_id": "uni_cn_006",
+    "university_name": "University of Science and Technology of China",
+    "country_id": "country_cn",
+    "city": "Hefei",
+    "official_website": "https://www.ustc.edu.cn/",
+    "source_url": "https://ic.ustc.edu.cn/en/"
+  },
+  {
+    "university_id": "uni_cn_007",
+    "university_name": "Harbin Institute of Technology",
+    "country_id": "country_cn",
+    "city": "Harbin",
+    "official_website": "https://en.hit.edu.cn/",
+    "source_url": "https://en.hit.edu.cn/11958/list.htm"
+  },
+  {
+    "university_id": "uni_cn_008",
+    "university_name": "Xi'an Jiaotong University",
+    "country_id": "country_cn",
+    "city": "Xi'an",
+    "official_website": "https://en.xjtu.edu.cn/",
+    "source_url": "https://en.xjtu.edu.cn/"
+  },
+  {
+    "university_id": "uni_cn_009",
+    "university_name": "Sun Yat-sen University",
+    "country_id": "country_cn",
+    "city": "Guangzhou",
+    "official_website": "https://www.sysu.edu.cn/sysuen/",
+    "source_url": "https://iso.sysu.edu.cn/en/application/index.htm"
+  },
+  {
+    "university_id": "uni_cn_010",
+    "university_name": "Tongji University",
+    "country_id": "country_cn",
+    "city": "Shanghai",
+    "official_website": "https://en.tongji.edu.cn/",
+    "source_url": "https://study.tongji.edu.cn/en/"
+  },
+
+  {
+    "university_id": "uni_kr_009",
+    "university_name": "Ewha Womans University",
+    "country_id": "country_kr",
+    "city": "Seoul",
+    "official_website": "https://www.ewha.ac.kr/ewhaen/index.do",
+    "source_url": "https://www.ewha.ac.kr/ewhaen/admission/admission.do"
+  },
+  {
+    "university_id": "uni_kr_010",
+    "university_name": "Sogang University",
+    "country_id": "country_kr",
+    "city": "Seoul",
+    "official_website": "https://www.sogang.ac.kr/en",
+    "source_url": "https://www.sogang.ac.kr/en/international-students"
+  },
+  {
+    "university_id": "uni_kr_011",
+    "university_name": "Pusan National University",
+    "country_id": "country_kr",
+    "city": "Busan",
+    "official_website": "https://www.pusan.ac.kr/eng/",
+    "source_url": "https://www.pusan.ac.kr/eng/CMS/Contents/Contents.do?mCode=MN013"
+  },
+  {
+    "university_id": "uni_kr_012",
+    "university_name": "Kyungpook National University",
+    "country_id": "country_kr",
+    "city": "Daegu",
+    "official_website": "https://en.knu.ac.kr/",
+    "source_url": "https://en.knu.ac.kr/admission/foreign01.htm"
+  },
+  {
+    "university_id": "uni_kr_013",
+    "university_name": "Ulsan National Institute of Science and Technology",
+    "country_id": "country_kr",
+    "city": "Ulsan",
+    "official_website": "https://www.unist.ac.kr/",
+    "source_url": "https://admu-intl.unist.ac.kr/admission-eng/index.do"
+  },
+  {
+    "university_id": "uni_kr_014",
+    "university_name": "Gwangju Institute of Science and Technology",
+    "country_id": "country_kr",
+    "city": "Gwangju",
+    "official_website": "https://www.gist.ac.kr/en/",
+    "source_url": "https://www.gist.ac.kr/iadm/"
+  },
+
+  {
+    "university_id": "uni_tw_006",
+    "university_name": "National Chengchi University",
+    "country_id": "country_tw",
+    "city": "Taipei",
+    "official_website": "https://www.nccu.edu.tw/index.php?Lang=en",
+    "source_url": "https://www.nccu.edu.tw/p/426-1000-80.php?Lang=en"
+  },
+  {
+    "university_id": "uni_tw_007",
+    "university_name": "National Central University",
+    "country_id": "country_tw",
+    "city": "Taoyuan",
+    "official_website": "https://www.ncu.edu.tw/?Lang=en",
+    "source_url": "https://cis.ncu.edu.tw/admissions/"
+  },
+  {
+    "university_id": "uni_tw_008",
+    "university_name": "National Chung Hsing University",
+    "country_id": "country_tw",
+    "city": "Taichung",
+    "official_website": "https://www.nchu.edu.tw/en-index",
+    "source_url": "https://www.nchu.edu.tw/en-index"
+  },
+  {
+    "university_id": "uni_tw_009",
+    "university_name": "National Taiwan Normal University",
+    "country_id": "country_tw",
+    "city": "Taipei",
+    "official_website": "https://en.ntnu.edu.tw/",
+    "source_url": "https://en.ntnu.edu.tw/admissions.php"
+  },
+  {
+    "university_id": "uni_tw_010",
+    "university_name": "National Taipei University of Technology",
+    "country_id": "country_tw",
+    "city": "Taipei",
+    "official_website": "https://www-en.ntut.edu.tw/",
+    "source_url": "https://oia.ntut.edu.tw/p/412-1032-13828.php?Lang=en"
+  },
+  {
+    "university_id": "uni_tw_011",
+    "university_name": "Tamkang University",
+    "country_id": "country_tw",
+    "city": "New Taipei City",
+    "official_website": "https://english.tku.edu.tw/",
+    "source_url": "https://english.tku.edu.tw/studyintku.asp"
+  },
+
+  {
+    "university_id": "uni_my_010",
+    "university_name": "Universiti Utara Malaysia",
+    "country_id": "country_my",
+    "city": "Sintok",
+    "official_website": "https://www.uum.edu.my/",
+    "source_url": "https://www.uum.edu.my/admissions/application-guidelines/undergraduate-international"
+  },
+  {
+    "university_id": "uni_my_011",
+    "university_name": "Universiti Teknologi MARA",
+    "country_id": "country_my",
+    "city": "Shah Alam",
+    "official_website": "https://www.uitm.edu.my/",
+    "source_url": "https://uitm.edu.my/en/discover-uitm/about-uitm"
+  },
+  {
+    "university_id": "uni_my_012",
+    "university_name": "Universiti Malaysia Sabah",
+    "country_id": "country_my",
+    "city": "Kota Kinabalu",
+    "official_website": "https://www.ums.edu.my/",
+    "source_url": "https://www.ums.edu.my/v6/index.php/academic/admission-ums"
+  },
+  {
+    "university_id": "uni_my_013",
+    "university_name": "Universiti Malaysia Sarawak",
+    "country_id": "country_my",
+    "city": "Kota Samarahan",
+    "official_website": "https://www.unimas.my/",
+    "source_url": "https://www.unimas.my/admission"
+  },
+  {
+    "university_id": "uni_my_014",
+    "university_name": "Multimedia University",
+    "country_id": "country_my",
+    "city": "Cyberjaya",
+    "official_website": "https://www.mmu.edu.my/",
+    "source_url": "https://www.mmu.edu.my/programmes/"
+  },
+  {
+    "university_id": "uni_my_015",
+    "university_name": "UCSI University",
+    "country_id": "country_my",
+    "city": "Kuala Lumpur",
+    "official_website": "https://www.ucsiuniversity.edu.my/",
+    "source_url": "https://www.ucsiuniversity.edu.my/undergraduate"
+  },
+
+  {
+    "university_id": "uni_th_006",
+    "university_name": "Khon Kaen University",
+    "country_id": "country_th",
+    "city": "Khon Kaen",
+    "official_website": "https://www.kku.ac.th/en/",
+    "source_url": "https://eng.kku.ac.th/admission"
+  },
+  {
+    "university_id": "uni_th_007",
+    "university_name": "Prince of Songkla University",
+    "country_id": "country_th",
+    "city": "Hat Yai",
+    "official_website": "https://www.psu.ac.th/en/",
+    "source_url": "https://gao.psu.ac.th/interprograms"
+  },
+  {
+    "university_id": "uni_th_008",
+    "university_name": "King Mongkut's University of Technology Thonburi",
+    "country_id": "country_th",
+    "city": "Bangkok",
+    "official_website": "https://www.kmutt.ac.th/en/",
+    "source_url": "https://iadmission.kmutt.ac.th/"
+  },
+  {
+    "university_id": "uni_th_009",
+    "university_name": "King Mongkut's Institute of Technology Ladkrabang",
+    "country_id": "country_th",
+    "city": "Bangkok",
+    "official_website": "https://www.kmitl.ac.th/",
+    "source_url": "https://oia.kmitl.ac.th/"
+  },
+  {
+    "university_id": "uni_th_010",
+    "university_name": "Asian Institute of Technology",
+    "country_id": "country_th",
+    "city": "Pathum Thani",
+    "official_website": "https://ait.ac.th/",
+    "source_url": "https://ait.ac.th/study/masters-degree-programs/"
+  },
+  {
+    "university_id": "uni_th_011",
+    "university_name": "Mae Fah Luang University",
+    "country_id": "country_th",
+    "city": "Chiang Rai",
+    "official_website": "https://en.mfu.ac.th/",
+    "source_url": "https://en.mfu.ac.th/admission/admission-guide.html"
+  }
+]

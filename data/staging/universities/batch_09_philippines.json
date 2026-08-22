@@ -1,0 +1,362 @@
+[
+  {
+    "university_id": "uni_ph_011",
+    "university_name": "Polytechnic University of the Philippines",
+    "country_id": "country_ph",
+    "city": "Manila",
+    "university_type": "Public",
+    "official_website": "https://www.pup.edu.ph/",
+    "source_url": "https://www.dbm.gov.ph/index.php/2026/general-appropriations-act-gaa-fy-2026"
+  },
+  {
+    "university_id": "uni_ph_012",
+    "university_name": "Batangas State University",
+    "country_id": "country_ph",
+    "city": "Batangas City",
+    "university_type": "Public",
+    "official_website": "https://batstate-u.edu.ph/",
+    "source_url": "https://www.dbm.gov.ph/index.php/2026/general-appropriations-act-gaa-fy-2026"
+  },
+  {
+    "university_id": "uni_ph_013",
+    "university_name": "Bulacan State University",
+    "country_id": "country_ph",
+    "city": "Malolos",
+    "university_type": "Public",
+    "official_website": "https://www.bulsu.edu.ph/",
+    "source_url": "https://www.dbm.gov.ph/index.php/2026/general-appropriations-act-gaa-fy-2026"
+  },
+  {
+    "university_id": "uni_ph_014",
+    "university_name": "Cavite State University",
+    "country_id": "country_ph",
+    "city": "Indang",
+    "university_type": "Public",
+    "official_website": "https://cvsu.edu.ph/",
+    "source_url": "https://www.dbm.gov.ph/index.php/2026/general-appropriations-act-gaa-fy-2026"
+  },
+  {
+    "university_id": "uni_ph_015",
+    "university_name": "Cebu Technological University",
+    "country_id": "country_ph",
+    "city": "Cebu City",
+    "university_type": "Public",
+    "official_website": "https://www.ctu.edu.ph/",
+    "source_url": "https://www.dbm.gov.ph/index.php/2026/general-appropriations-act-gaa-fy-2026"
+  },
+  {
+    "university_id": "uni_ph_016",
+    "university_name": "Western Mindanao State University",
+    "country_id": "country_ph",
+    "city": "Zamboanga City",
+    "university_type": "Public",
+    "official_website": "https://wmsu.edu.ph/",
+    "source_url": "https://www.dbm.gov.ph/index.php/2026/general-appropriations-act-gaa-fy-2026"
+  },
+  {
+    "university_id": "uni_ph_017",
+    "university_name": "Mindanao State University",
+    "country_id": "country_ph",
+    "city": "Marawi City",
+    "university_type": "Public",
+    "official_website": "https://www.msumain.edu.ph/",
+    "source_url": "https://www.dbm.gov.ph/index.php/2026/general-appropriations-act-gaa-fy-2026"
+  },
+  {
+    "university_id": "uni_ph_018",
+    "university_name": "Cagayan State University",
+    "country_id": "country_ph",
+    "city": "Tuguegarao City",
+    "university_type": "Public",
+    "official_website": "https://www.csu.edu.ph/",
+    "source_url": "https://www.dbm.gov.ph/index.php/2026/general-appropriations-act-gaa-fy-2026"
+  },
+  {
+    "university_id": "uni_ph_019",
+    "university_name": "Bicol University",
+    "country_id": "country_ph",
+    "city": "Legazpi City",
+    "university_type": "Public",
+    "official_website": "https://bicol-u.edu.ph/",
+    "source_url": "https://www.dbm.gov.ph/index.php/2026/general-appropriations-act-gaa-fy-2026"
+  },
+  {
+    "university_id": "uni_ph_020",
+    "university_name": "Mariano Marcos State University",
+    "country_id": "country_ph",
+    "city": "Batac",
+    "university_type": "Public",
+    "official_website": "https://www.mmsu.edu.ph/",
+    "source_url": "https://www.dbm.gov.ph/index.php/2026/general-appropriations-act-gaa-fy-2026"
+  },
+  {
+    "university_id": "uni_ph_021",
+    "university_name": "Central Luzon State University",
+    "country_id": "country_ph",
+    "city": "Science City of Munoz",
+    "university_type": "Public",
+    "official_website": "https://clsu.edu.ph/",
+    "source_url": "https://www.dbm.gov.ph/index.php/2026/general-appropriations-act-gaa-fy-2026"
+  },
+  {
+    "university_id": "uni_ph_022",
+    "university_name": "Tarlac State University",
+    "country_id": "country_ph",
+    "city": "Tarlac City",
+    "university_type": "Public",
+    "official_website": "https://www.tsu.edu.ph/",
+    "source_url": "https://www.dbm.gov.ph/index.php/2026/general-appropriations-act-gaa-fy-2026"
+  },
+  {
+    "university_id": "uni_ph_023",
+    "university_name": "Visayas State University",
+    "country_id": "country_ph",
+    "city": "Baybay City",
+    "university_type": "Public",
+    "official_website": "https://www.vsu.edu.ph/",
+    "source_url": "https://www.dbm.gov.ph/index.php/2026/general-appropriations-act-gaa-fy-2026"
+  },
+  {
+    "university_id": "uni_ph_024",
+    "university_name": "Caraga State University",
+    "country_id": "country_ph",
+    "city": "Butuan City",
+    "university_type": "Public",
+    "official_website": "https://www.carsu.edu.ph/",
+    "source_url": "https://www.dbm.gov.ph/index.php/2026/general-appropriations-act-gaa-fy-2026"
+  },
+  {
+    "university_id": "uni_ph_025",
+    "university_name": "West Visayas State University",
+    "country_id": "country_ph",
+    "city": "Iloilo City",
+    "university_type": "Public",
+    "official_website": "https://wvsu.edu.ph/",
+    "source_url": "https://www.dbm.gov.ph/index.php/2026/general-appropriations-act-gaa-fy-2026"
+  },
+  {
+    "university_id": "uni_ph_026",
+    "university_name": "Aklan State University",
+    "country_id": "country_ph",
+    "city": "Banga",
+    "university_type": "Public",
+    "official_website": "https://asu.edu.ph/",
+    "source_url": "https://www.dbm.gov.ph/index.php/2026/general-appropriations-act-gaa-fy-2026"
+  },
+  {
+    "university_id": "uni_ph_027",
+    "university_name": "Capiz State University",
+    "country_id": "country_ph",
+    "city": "Roxas City",
+    "university_type": "Public",
+    "official_website": "https://capsu.edu.ph/",
+    "source_url": "https://www.dbm.gov.ph/index.php/2026/general-appropriations-act-gaa-fy-2026"
+  },
+  {
+    "university_id": "uni_ph_028",
+    "university_name": "Iloilo Science and Technology University",
+    "country_id": "country_ph",
+    "city": "Iloilo City",
+    "university_type": "Public",
+    "official_website": "https://www.isatu.edu.ph/",
+    "source_url": "https://www.dbm.gov.ph/index.php/2026/general-appropriations-act-gaa-fy-2026"
+  },
+  {
+    "university_id": "uni_ph_029",
+    "university_name": "Northern Iloilo State University",
+    "country_id": "country_ph",
+    "city": "Estancia",
+    "university_type": "Public",
+    "official_website": "https://nisu.edu.ph/",
+    "source_url": "https://www.dbm.gov.ph/index.php/2026/general-appropriations-act-gaa-fy-2026"
+  },
+  {
+    "university_id": "uni_ph_030",
+    "university_name": "Cebu Normal University",
+    "country_id": "country_ph",
+    "city": "Cebu City",
+    "university_type": "Public",
+    "official_website": "https://cnu.edu.ph/",
+    "source_url": "https://www.dbm.gov.ph/index.php/2026/general-appropriations-act-gaa-fy-2026"
+  },
+  {
+    "university_id": "uni_ph_031",
+    "university_name": "Philippine Normal University",
+    "country_id": "country_ph",
+    "city": "Manila",
+    "university_type": "Public",
+    "official_website": "https://www.pnu.edu.ph/",
+    "source_url": "https://www.dbm.gov.ph/index.php/2026/general-appropriations-act-gaa-fy-2026"
+  },
+  {
+    "university_id": "uni_ph_032",
+    "university_name": "Rizal Technological University",
+    "country_id": "country_ph",
+    "city": "Mandaluyong",
+    "university_type": "Public",
+    "official_website": "https://www.rtu.edu.ph/",
+    "source_url": "https://www.dbm.gov.ph/index.php/2026/general-appropriations-act-gaa-fy-2026"
+  },
+  {
+    "university_id": "uni_ph_033",
+    "university_name": "Technological University of the Philippines",
+    "country_id": "country_ph",
+    "city": "Manila",
+    "university_type": "Public",
+    "official_website": "https://www.tup.edu.ph/",
+    "source_url": "https://www.dbm.gov.ph/index.php/2026/general-appropriations-act-gaa-fy-2026"
+  },
+  {
+    "university_id": "uni_ph_034",
+    "university_name": "Eulogio Amang Rodriguez Institute of Science and Technology",
+    "country_id": "country_ph",
+    "city": "Manila",
+    "university_type": "Public",
+    "official_website": "https://earist.edu.ph/",
+    "source_url": "https://www.dbm.gov.ph/index.php/2026/general-appropriations-act-gaa-fy-2026"
+  },
+  {
+    "university_id": "uni_ph_035",
+    "university_name": "Laguna State Polytechnic University",
+    "country_id": "country_ph",
+    "city": "Santa Cruz",
+    "university_type": "Public",
+    "official_website": "https://lspu.edu.ph/",
+    "source_url": "https://www.dbm.gov.ph/index.php/2026/general-appropriations-act-gaa-fy-2026"
+  },
+  {
+    "university_id": "uni_ph_036",
+    "university_name": "Southern Luzon State University",
+    "country_id": "country_ph",
+    "city": "Lucban",
+    "university_type": "Public",
+    "official_website": "https://www.slsu.edu.ph/",
+    "source_url": "https://www.dbm.gov.ph/index.php/2026/general-appropriations-act-gaa-fy-2026"
+  },
+  {
+    "university_id": "uni_ph_037",
+    "university_name": "Benguet State University",
+    "country_id": "country_ph",
+    "city": "La Trinidad",
+    "university_type": "Public",
+    "official_website": "https://bsu.edu.ph/",
+    "source_url": "https://www.dbm.gov.ph/index.php/2026/general-appropriations-act-gaa-fy-2026"
+  },
+  {
+    "university_id": "uni_ph_038",
+    "university_name": "Kalinga State University",
+    "country_id": "country_ph",
+    "city": "Tabuk City",
+    "university_type": "Public",
+    "official_website": "https://ksu.edu.ph/",
+    "source_url": "https://www.dbm.gov.ph/index.php/2026/general-appropriations-act-gaa-fy-2026"
+  },
+  {
+    "university_id": "uni_ph_039",
+    "university_name": "Ifugao State University",
+    "country_id": "country_ph",
+    "city": "Lamut",
+    "university_type": "Public",
+    "official_website": "https://ifsu.edu.ph/",
+    "source_url": "https://www.dbm.gov.ph/index.php/2026/general-appropriations-act-gaa-fy-2026"
+  },
+  {
+    "university_id": "uni_ph_040",
+    "university_name": "Central Mindanao University",
+    "country_id": "country_ph",
+    "city": "Maramag",
+    "university_type": "Public",
+    "official_website": "https://www.cmu.edu.ph/",
+    "source_url": "https://www.dbm.gov.ph/index.php/2026/general-appropriations-act-gaa-fy-2026"
+  },
+  {
+    "university_id": "uni_ph_041",
+    "university_name": "University of Southern Mindanao",
+    "country_id": "country_ph",
+    "city": "Kabacan",
+    "university_type": "Public",
+    "official_website": "https://www.usm.edu.ph/",
+    "source_url": "https://www.dbm.gov.ph/index.php/2026/general-appropriations-act-gaa-fy-2026"
+  },
+  {
+    "university_id": "uni_ph_042",
+    "university_name": "Bukidnon State University",
+    "country_id": "country_ph",
+    "city": "Malaybalay City",
+    "university_type": "Public",
+    "official_website": "https://buksu.edu.ph/",
+    "source_url": "https://www.dbm.gov.ph/index.php/2026/general-appropriations-act-gaa-fy-2026"
+  },
+  {
+    "university_id": "uni_ph_043",
+    "university_name": "Mindanao State University - Iligan Institute of Technology",
+    "country_id": "country_ph",
+    "city": "Iligan City",
+    "university_type": "Public",
+    "official_website": "https://www.msuiit.edu.ph/",
+    "source_url": "https://www.dbm.gov.ph/index.php/2026/general-appropriations-act-gaa-fy-2026"
+  },
+  {
+    "university_id": "uni_ph_044",
+    "university_name": "University of Southeastern Philippines",
+    "country_id": "country_ph",
+    "city": "Davao City",
+    "university_type": "Public",
+    "official_website": "https://www.usep.edu.ph/",
+    "source_url": "https://www.dbm.gov.ph/index.php/2026/general-appropriations-act-gaa-fy-2026"
+  },
+  {
+    "university_id": "uni_ph_045",
+    "university_name": "Sultan Kudarat State University",
+    "country_id": "country_ph",
+    "city": "Tacurong City",
+    "university_type": "Public",
+    "official_website": "https://sksu.edu.ph/",
+    "source_url": "https://www.dbm.gov.ph/index.php/2026/general-appropriations-act-gaa-fy-2026"
+  },
+  {
+    "university_id": "uni_ph_046",
+    "university_name": "University of Science and Technology of Southern Philippines",
+    "country_id": "country_ph",
+    "city": "Cagayan de Oro City",
+    "university_type": "Public",
+    "official_website": "https://www.ustp.edu.ph/",
+    "source_url": "https://www.dbm.gov.ph/index.php/2026/general-appropriations-act-gaa-fy-2026"
+  },
+  {
+    "university_id": "uni_ph_047",
+    "university_name": "Davao Oriental State University",
+    "country_id": "country_ph",
+    "city": "Mati City",
+    "university_type": "Public",
+    "official_website": "https://dorsu.edu.ph/",
+    "source_url": "https://www.dbm.gov.ph/index.php/2026/general-appropriations-act-gaa-fy-2026"
+  },
+  {
+    "university_id": "uni_ph_048",
+    "university_name": "Sorsogon State University",
+    "country_id": "country_ph",
+    "city": "Sorsogon City",
+    "university_type": "Public",
+    "official_website": "https://sorsu.edu.ph/",
+    "source_url": "https://www.dbm.gov.ph/index.php/2026/general-appropriations-act-gaa-fy-2026"
+  },
+  {
+    "university_id": "uni_ph_049",
+    "university_name": "Partido State University",
+    "country_id": "country_ph",
+    "city": "Goa",
+    "university_type": "Public",
+    "official_website": "https://parsu.edu.ph/",
+    "source_url": "https://www.dbm.gov.ph/index.php/2026/general-appropriations-act-gaa-fy-2026"
+  },
+  {
+    "university_id": "uni_ph_050",
+    "university_name": "Eastern Visayas State University",
+    "country_id": "country_ph",
+    "city": "Tacloban City",
+    "university_type": "Public",
+    "official_website": "https://www.evsu.edu.ph/",
+    "source_url": "https://www.dbm.gov.ph/index.php/2026/general-appropriations-act-gaa-fy-2026"
+  }
+]

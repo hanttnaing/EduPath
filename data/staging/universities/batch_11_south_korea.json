@@ -1,0 +1,326 @@
+[
+  {
+    "university_id": "uni_kr_015",
+    "university_name": "Ajou University",
+    "country_id": "country_kr",
+    "city": "Suwon",
+    "university_type": "Private",
+    "official_website": "https://www.ajou.ac.kr/en/",
+    "source_url": "https://www.studyinkorea.go.kr/ko/plan/certifiedUniversity.do"
+  },
+  {
+    "university_id": "uni_kr_016",
+    "university_name": "Chung-Ang University",
+    "country_id": "country_kr",
+    "city": "Seoul",
+    "university_type": "Private",
+    "official_website": "https://neweng.cau.ac.kr/",
+    "source_url": "https://www.studyinkorea.go.kr/ko/plan/certifiedUniversity.do"
+  },
+  {
+    "university_id": "uni_kr_017",
+    "university_name": "Chungnam National University",
+    "country_id": "country_kr",
+    "city": "Daejeon",
+    "university_type": "Public",
+    "official_website": "https://plus.cnu.ac.kr/html/en/",
+    "source_url": "https://www.studyinkorea.go.kr/ko/plan/certifiedUniversity.do"
+  },
+  {
+    "university_id": "uni_kr_018",
+    "university_name": "Chungbuk National University",
+    "country_id": "country_kr",
+    "city": "Cheongju",
+    "university_type": "Public",
+    "official_website": "https://www.chungbuk.ac.kr/site/english/main.do",
+    "source_url": "https://www.studyinkorea.go.kr/ko/plan/certifiedUniversity.do"
+  },
+  {
+    "university_id": "uni_kr_019",
+    "university_name": "Chonnam National University",
+    "country_id": "country_kr",
+    "city": "Gwangju",
+    "university_type": "Public",
+    "official_website": "https://global.jnu.ac.kr/",
+    "source_url": "https://www.studyinkorea.go.kr/ko/plan/certifiedUniversity.do"
+  },
+  {
+    "university_id": "uni_kr_020",
+    "university_name": "Jeonbuk National University",
+    "country_id": "country_kr",
+    "city": "Jeonju",
+    "university_type": "Public",
+    "official_website": "https://www.jbnu.ac.kr/en/",
+    "source_url": "https://www.studyinkorea.go.kr/ko/plan/certifiedUniversity.do"
+  },
+  {
+    "university_id": "uni_kr_021",
+    "university_name": "Gyeongsang National University",
+    "country_id": "country_kr",
+    "city": "Jinju",
+    "university_type": "Public",
+    "official_website": "https://www.gnu.ac.kr/eng/main.do",
+    "source_url": "https://www.studyinkorea.go.kr/ko/plan/certifiedUniversity.do"
+  },
+  {
+    "university_id": "uni_kr_022",
+    "university_name": "Kangwon National University",
+    "country_id": "country_kr",
+    "city": "Chuncheon",
+    "university_type": "Public",
+    "official_website": "https://www.kangwon.ac.kr/english/",
+    "source_url": "https://www.studyinkorea.go.kr/ko/plan/certifiedUniversity.do"
+  },
+  {
+    "university_id": "uni_kr_023",
+    "university_name": "Incheon National University",
+    "country_id": "country_kr",
+    "city": "Incheon",
+    "university_type": "Public",
+    "official_website": "https://www.inu.ac.kr/inuengl/index.do",
+    "source_url": "https://www.studyinkorea.go.kr/ko/plan/certifiedUniversity.do"
+  },
+  {
+    "university_id": "uni_kr_024",
+    "university_name": "Jeju National University",
+    "country_id": "country_kr",
+    "city": "Jeju",
+    "university_type": "Public",
+    "official_website": "https://www.jejunu.ac.kr/eng/",
+    "source_url": "https://www.studyinkorea.go.kr/ko/plan/certifiedUniversity.do"
+  },
+  {
+    "university_id": "uni_kr_025",
+    "university_name": "Pukyong National University",
+    "country_id": "country_kr",
+    "city": "Busan",
+    "university_type": "Public",
+    "official_website": "https://www.pknu.ac.kr/eng",
+    "source_url": "https://www.studyinkorea.go.kr/ko/plan/certifiedUniversity.do"
+  },
+  {
+    "university_id": "uni_kr_026",
+    "university_name": "Seoul National University of Science and Technology",
+    "country_id": "country_kr",
+    "city": "Seoul",
+    "university_type": "Public",
+    "official_website": "https://en.seoultech.ac.kr/",
+    "source_url": "https://www.studyinkorea.go.kr/ko/plan/certifiedUniversity.do"
+  },
+  {
+    "university_id": "uni_kr_027",
+    "university_name": "University of Seoul",
+    "country_id": "country_kr",
+    "city": "Seoul",
+    "university_type": "Public",
+    "official_website": "https://www.uos.ac.kr/en/",
+    "source_url": "https://www.studyinkorea.go.kr/ko/plan/certifiedUniversity.do"
+  },
+  {
+    "university_id": "uni_kr_028",
+    "university_name": "Dongguk University",
+    "country_id": "country_kr",
+    "city": "Seoul",
+    "university_type": "Private",
+    "official_website": "https://www.dongguk.edu/eng/main",
+    "source_url": "https://www.studyinkorea.go.kr/ko/plan/certifiedUniversity.do"
+  },
+  {
+    "university_id": "uni_kr_029",
+    "university_name": "Konkuk University",
+    "country_id": "country_kr",
+    "city": "Seoul",
+    "university_type": "Private",
+    "official_website": "https://www.konkuk.ac.kr/en",
+    "source_url": "https://www.studyinkorea.go.kr/ko/plan/certifiedUniversity.do"
+  },
+  {
+    "university_id": "uni_kr_030",
+    "university_name": "Kookmin University",
+    "country_id": "country_kr",
+    "city": "Seoul",
+    "university_type": "Private",
+    "official_website": "https://english.kookmin.ac.kr/",
+    "source_url": "https://www.studyinkorea.go.kr/ko/plan/certifiedUniversity.do"
+  },
+  {
+    "university_id": "uni_kr_031",
+    "university_name": "Hongik University",
+    "country_id": "country_kr",
+    "city": "Seoul",
+    "university_type": "Private",
+    "official_website": "https://www.hongik.ac.kr/en/",
+    "source_url": "https://www.studyinkorea.go.kr/ko/plan/certifiedUniversity.do"
+  },
+  {
+    "university_id": "uni_kr_032",
+    "university_name": "Hankuk University of Foreign Studies",
+    "country_id": "country_kr",
+    "city": "Seoul",
+    "university_type": "Private",
+    "official_website": "https://www.hufs.ac.kr/",
+    "source_url": "https://www.studyinkorea.go.kr/ko/plan/certifiedUniversity.do"
+  },
+  {
+    "university_id": "uni_kr_033",
+    "university_name": "Inha University",
+    "country_id": "country_kr",
+    "city": "Incheon",
+    "university_type": "Private",
+    "official_website": "https://www.inha.ac.kr/eng/",
+    "source_url": "https://www.studyinkorea.go.kr/ko/plan/certifiedUniversity.do"
+  },
+  {
+    "university_id": "uni_kr_034",
+    "university_name": "Sejong University",
+    "country_id": "country_kr",
+    "city": "Seoul",
+    "university_type": "Private",
+    "official_website": "https://en.sejong.ac.kr/",
+    "source_url": "https://www.studyinkorea.go.kr/ko/plan/certifiedUniversity.do"
+  },
+  {
+    "university_id": "uni_kr_035",
+    "university_name": "Soongsil University",
+    "country_id": "country_kr",
+    "city": "Seoul",
+    "university_type": "Private",
+    "official_website": "https://ssu.ac.kr/eng/",
+    "source_url": "https://www.studyinkorea.go.kr/ko/plan/certifiedUniversity.do"
+  },
+  {
+    "university_id": "uni_kr_036",
+    "university_name": "Sookmyung Women's University",
+    "country_id": "country_kr",
+    "city": "Seoul",
+    "university_type": "Private",
+    "official_website": "https://www.sookmyung.ac.kr/en",
+    "source_url": "https://www.studyinkorea.go.kr/ko/plan/certifiedUniversity.do"
+  },
+  {
+    "university_id": "uni_kr_037",
+    "university_name": "Sungshin Women's University",
+    "country_id": "country_kr",
+    "city": "Seoul",
+    "university_type": "Private",
+    "official_website": "https://www.sungshin.ac.kr/sites/main_eng/main.jsp",
+    "source_url": "https://www.studyinkorea.go.kr/ko/plan/certifiedUniversity.do"
+  },
+  {
+    "university_id": "uni_kr_038",
+    "university_name": "Seoul Women's University",
+    "country_id": "country_kr",
+    "city": "Seoul",
+    "university_type": "Private",
+    "official_website": "https://www.swu.ac.kr/english/",
+    "source_url": "https://www.studyinkorea.go.kr/ko/plan/certifiedUniversity.do"
+  },
+  {
+    "university_id": "uni_kr_039",
+    "university_name": "Dankook University",
+    "country_id": "country_kr",
+    "city": "Yongin",
+    "university_type": "Private",
+    "official_website": "https://www.dankook.ac.kr/en",
+    "source_url": "https://www.studyinkorea.go.kr/ko/plan/certifiedUniversity.do"
+  },
+  {
+    "university_id": "uni_kr_040",
+    "university_name": "Myongji University",
+    "country_id": "country_kr",
+    "city": "Seoul",
+    "university_type": "Private",
+    "official_website": "https://www.mju.ac.kr/us/index.do",
+    "source_url": "https://www.studyinkorea.go.kr/ko/plan/certifiedUniversity.do"
+  },
+  {
+    "university_id": "uni_kr_041",
+    "university_name": "Gachon University",
+    "country_id": "country_kr",
+    "city": "Seongnam",
+    "university_type": "Private",
+    "official_website": "https://www.gachon.ac.kr/eng/index.do",
+    "source_url": "https://www.studyinkorea.go.kr/ko/plan/certifiedUniversity.do"
+  },
+  {
+    "university_id": "uni_kr_042",
+    "university_name": "Hallym University",
+    "country_id": "country_kr",
+    "city": "Chuncheon",
+    "university_type": "Private",
+    "official_website": "https://www.hallym.ac.kr/hallym_en/",
+    "source_url": "https://www.studyinkorea.go.kr/ko/plan/certifiedUniversity.do"
+  },
+  {
+    "university_id": "uni_kr_043",
+    "university_name": "Keimyung University",
+    "country_id": "country_kr",
+    "city": "Daegu",
+    "university_type": "Private",
+    "official_website": "https://www.kmu.ac.kr/uni/eng/",
+    "source_url": "https://www.studyinkorea.go.kr/ko/plan/certifiedUniversity.do"
+  },
+  {
+    "university_id": "uni_kr_044",
+    "university_name": "Yeungnam University",
+    "country_id": "country_kr",
+    "city": "Gyeongsan",
+    "university_type": "Private",
+    "official_website": "https://www.yu.ac.kr/english/",
+    "source_url": "https://www.studyinkorea.go.kr/ko/plan/certifiedUniversity.do"
+  },
+  {
+    "university_id": "uni_kr_045",
+    "university_name": "University of Ulsan",
+    "country_id": "country_kr",
+    "city": "Ulsan",
+    "university_type": "Private",
+    "official_website": "https://www.ulsan.ac.kr/en/",
+    "source_url": "https://www.studyinkorea.go.kr/ko/plan/certifiedUniversity.do"
+  },
+  {
+    "university_id": "uni_kr_046",
+    "university_name": "Dong-A University",
+    "country_id": "country_kr",
+    "city": "Busan",
+    "university_type": "Private",
+    "official_website": "https://english.donga.ac.kr/english/",
+    "source_url": "https://www.studyinkorea.go.kr/ko/plan/certifiedUniversity.do"
+  },
+  {
+    "university_id": "uni_kr_047",
+    "university_name": "Korea Maritime & Ocean University",
+    "country_id": "country_kr",
+    "city": "Busan",
+    "university_type": "Public",
+    "official_website": "https://www.kmou.ac.kr/english/",
+    "source_url": "https://www.studyinkorea.go.kr/ko/plan/certifiedUniversity.do"
+  },
+  {
+    "university_id": "uni_kr_048",
+    "university_name": "Korea University of Technology and Education",
+    "country_id": "country_kr",
+    "city": "Cheonan",
+    "university_type": "Private",
+    "official_website": "https://www.koreatech.ac.kr/eng/",
+    "source_url": "https://www.studyinkorea.go.kr/ko/plan/certifiedUniversity.do"
+  },
+  {
+    "university_id": "uni_kr_049",
+    "university_name": "Kumoh National Institute of Technology",
+    "country_id": "country_kr",
+    "city": "Gumi",
+    "university_type": "Public",
+    "official_website": "https://eng.kumoh.ac.kr/",
+    "source_url": "https://www.studyinkorea.go.kr/ko/plan/certifiedUniversity.do"
+  },
+  {
+    "university_id": "uni_kr_050",
+    "university_name": "Handong Global University",
+    "country_id": "country_kr",
+    "city": "Pohang",
+    "university_type": "Private",
+    "official_website": "https://www.handong.edu/eng/",
+    "source_url": "https://www.studyinkorea.go.kr/ko/plan/certifiedUniversity.do"
+  }
+]

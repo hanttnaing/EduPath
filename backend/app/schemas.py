@@ -1,14 +1,16 @@
 from __future__ import annotations
 
 from datetime import datetime
+from typing import List, Literal, Optional
 
 from pydantic import BaseModel, ConfigDict, Field
 
-from pydantic import BaseModel, Field
 
-from pydantic import BaseModel, ConfigDict
-
-from typing import List, Optional
+InternationalEligibilityStatus = Literal[
+    "verified_yes",
+    "verified_no",
+    "unknown",
+]
 
 
 class RootResponse(BaseModel):
@@ -43,8 +45,21 @@ class UniversityResponse(BaseModel):
     ranking_source: str | None = None
     ranking_year: int | None = None
 
-    degree_levels: list[str] = Field(default_factory=list)
+    degree_levels: list[str] | None = None
     scholarship_available: bool | None = None
+
+    # International-student accessibility.
+    # Existing/unverified records default to "unknown".
+    international_students_status: (
+        InternationalEligibilityStatus
+    ) = "unknown"
+
+    international_admissions_url: str | None = None
+    international_admissions_note: str | None = None
+
+    international_students_last_verified_at: (
+        datetime | None
+    ) = None
 
     source_url: str
     collected_at: datetime
@@ -90,6 +105,19 @@ class ProgramResponse(BaseModel):
 
     intake: list[str] | None = None
     application_deadline: datetime | None = None
+
+    # Programme-level international applicant eligibility.
+    # This is separate from university-level accessibility.
+    international_applicants_status: (
+        InternationalEligibilityStatus
+    ) = "unknown"
+
+    international_application_url: str | None = None
+    international_requirements_note: str | None = None
+
+    international_applicants_last_verified_at: (
+        datetime | None
+    ) = None
 
     program_url: str
     collected_at: datetime

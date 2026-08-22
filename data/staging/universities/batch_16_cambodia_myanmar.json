@@ -1,0 +1,236 @@
+[
+  {
+    "university_id": "uni_kh_006",
+    "university_name": "Royal University of Law and Economics",
+    "country_id": "country_kh",
+    "city": "Phnom Penh",
+    "university_type": "Public",
+    "official_website": "https://www.rule.edu.kh/",
+    "source_url": "https://www.rule.edu.kh/"
+  },
+  {
+    "university_id": "uni_kh_007",
+    "university_name": "National University of Battambang",
+    "country_id": "country_kh",
+    "city": "Battambang",
+    "university_type": "Public",
+    "official_website": "https://nubb.edu.kh/en/",
+    "source_url": "https://nubb.edu.kh/en/"
+  },
+  {
+    "university_id": "uni_kh_008",
+    "university_name": "Svay Rieng University",
+    "country_id": "country_kh",
+    "city": "Svay Rieng",
+    "university_type": "Public",
+    "official_website": "https://sru.edu.kh/",
+    "source_url": "https://sru.edu.kh/"
+  },
+  {
+    "university_id": "uni_kh_009",
+    "university_name": "Chea Sim University of Kamchay Mear",
+    "country_id": "country_kh",
+    "city": "Prey Veng",
+    "university_type": "Public",
+    "official_website": "http://www.csuk.edu.kh/",
+    "source_url": "http://www.csuk.edu.kh/"
+  },
+  {
+    "university_id": "uni_kh_010",
+    "university_name": "Mean Chey University",
+    "country_id": "country_kh",
+    "city": "Serei Saophoan",
+    "university_type": "Public",
+    "official_website": "http://www.mcu.edu.kh/",
+    "source_url": "http://www.mcu.edu.kh/"
+  },
+  {
+    "university_id": "uni_kh_011",
+    "university_name": "Royal University of Fine Arts",
+    "country_id": "country_kh",
+    "city": "Phnom Penh",
+    "university_type": "Public",
+    "official_website": "https://www.rufa.edu.kh/",
+    "source_url": "https://www.rufa.edu.kh/"
+  },
+  {
+    "university_id": "uni_kh_012",
+    "university_name": "American University of Phnom Penh",
+    "country_id": "country_kh",
+    "city": "Phnom Penh",
+    "university_type": "Private",
+    "official_website": "https://www.aupp.edu.kh/",
+    "source_url": "https://www.aupp.edu.kh/"
+  },
+  {
+    "university_id": "uni_kh_013",
+    "university_name": "Pannasastra University of Cambodia",
+    "country_id": "country_kh",
+    "city": "Phnom Penh",
+    "university_type": "Private",
+    "official_website": "https://www.puc.edu.kh/",
+    "source_url": "https://www.puc.edu.kh/"
+  },
+  {
+    "university_id": "uni_kh_014",
+    "university_name": "The University of Cambodia",
+    "country_id": "country_kh",
+    "city": "Phnom Penh",
+    "university_type": "Private",
+    "official_website": "https://uc.edu.kh/",
+    "source_url": "https://uc.edu.kh/"
+  },
+  {
+    "university_id": "uni_kh_015",
+    "university_name": "Build Bright University",
+    "country_id": "country_kh",
+    "city": "Phnom Penh",
+    "university_type": "Private",
+    "official_website": "https://www.bbu.edu.kh/",
+    "source_url": "https://www.bbu.edu.kh/"
+  },
+  {
+    "university_id": "uni_mm_005",
+    "university_name": "University of Mandalay",
+    "country_id": "country_mm",
+    "city": "Mandalay",
+    "university_type": "Public",
+    "official_website": "http://www.mu.edu.mm/",
+    "source_url": "https://www.moe.gov.mm/en/department-category-higher-education"
+  },
+  {
+    "university_id": "uni_mm_006",
+    "university_name": "Yangon University of Foreign Languages",
+    "country_id": "country_mm",
+    "city": "Yangon",
+    "university_type": "Public",
+    "official_website": "https://www.yufl.edu.mm/",
+    "source_url": "https://www.moe.gov.mm/en/department-category-higher-education"
+  },
+  {
+    "university_id": "uni_mm_007",
+    "university_name": "Mandalay University of Foreign Languages",
+    "country_id": "country_mm",
+    "city": "Mandalay",
+    "university_type": "Public",
+    "official_website": "https://www.mufl.edu.mm/",
+    "source_url": "https://www.moe.gov.mm/en/department-category-higher-education"
+  },
+  {
+    "university_id": "uni_mm_008",
+    "university_name": "Yangon University of Education",
+    "country_id": "country_mm",
+    "city": "Yangon",
+    "university_type": "Public",
+    "official_website": "https://www.yuoe.edu.mm/",
+    "source_url": "https://www.moe.gov.mm/en/department-category-higher-education"
+  },
+  {
+    "university_id": "uni_mm_009",
+    "university_name": "Pathein University",
+    "country_id": "country_mm",
+    "city": "Pathein",
+    "university_type": "Public",
+    "official_website": "https://www.pathein-u.edu.mm/",
+    "source_url": "https://www.moe.gov.mm/en/department-category-higher-education"
+  },
+  {
+    "university_id": "uni_mm_010",
+    "university_name": "Monywa University of Economics",
+    "country_id": "country_mm",
+    "city": "Monywa",
+    "university_type": "Public",
+    "official_website": "https://mue.edu.mm/",
+    "source_url": "https://www.moe.gov.mm/en/department-category-higher-education"
+  },
+  {
+    "university_id": "uni_mm_011",
+    "university_name": "Myeik University",
+    "country_id": "country_mm",
+    "city": "Myeik",
+    "university_type": "Public",
+    "official_website": "https://www.myeikuniversity.edu.mm/",
+    "source_url": "https://www.moe.gov.mm/en/department-category-higher-education"
+  },
+  {
+    "university_id": "uni_mm_012",
+    "university_name": "Keng Tung University",
+    "country_id": "country_mm",
+    "city": "Kengtung",
+    "university_type": "Public",
+    "official_website": "https://www.moe.gov.mm/en/departmentcategoryhighereducation/keng-tung-university",
+    "source_url": "https://www.moe.gov.mm/en/department-category-higher-education"
+  },
+  {
+    "university_id": "uni_mm_013",
+    "university_name": "Yangon University of Distance Education",
+    "country_id": "country_mm",
+    "city": "Yangon",
+    "university_type": "Public",
+    "official_website": "https://www.yude.edu.mm/",
+    "source_url": "https://www.moe.gov.mm/en/department-category-higher-education"
+  },
+  {
+    "university_id": "uni_mm_014",
+    "university_name": "Sittway University",
+    "country_id": "country_mm",
+    "city": "Sittwe",
+    "university_type": "Public",
+    "official_website": "https://www.moe.gov.mm/en/departmentcategoryhighereducation/sittway-university",
+    "source_url": "https://www.moe.gov.mm/en/department-category-higher-education"
+  },
+  {
+    "university_id": "uni_mm_015",
+    "university_name": "Yadanabon University",
+    "country_id": "country_mm",
+    "city": "Amarapura",
+    "university_type": "Public",
+    "official_website": "https://ydnbu.edu.mm/",
+    "source_url": "https://www.moe.gov.mm/en/department-category-higher-education"
+  },
+  {
+    "university_id": "uni_mm_016",
+    "university_name": "Meiktila University of Economics",
+    "country_id": "country_mm",
+    "city": "Meiktila",
+    "university_type": "Public",
+    "official_website": "https://mtlaeco.edu.mm/",
+    "source_url": "https://www.moe.gov.mm/en/department-category-higher-education"
+  },
+  {
+    "university_id": "uni_mm_017",
+    "university_name": "University of East Yangon",
+    "country_id": "country_mm",
+    "city": "Yangon",
+    "university_type": "Public",
+    "official_website": "https://www.eyu.edu.mm/",
+    "source_url": "https://www.moe.gov.mm/en/department-category-higher-education"
+  },
+  {
+    "university_id": "uni_mm_018",
+    "university_name": "University of West Yangon",
+    "country_id": "country_mm",
+    "city": "Htantabin",
+    "university_type": "Public",
+    "official_website": "https://www.moe.gov.mm/en/department-category-higher-education",
+    "source_url": "https://www.moe.gov.mm/en/department-category-higher-education"
+  },
+  {
+    "university_id": "uni_mm_019",
+    "university_name": "Bago University",
+    "country_id": "country_mm",
+    "city": "Bago",
+    "university_type": "Public",
+    "official_website": "https://www.moe.gov.mm/en/department-category-higher-education",
+    "source_url": "https://www.moe.gov.mm/en/department-category-higher-education"
+  },
+  {
+    "university_id": "uni_mm_020",
+    "university_name": "Dawei University",
+    "country_id": "country_mm",
+    "city": "Dawei",
+    "university_type": "Public",
+    "official_website": "https://www.moe.gov.mm/en/department-category-higher-education?page=2",
+    "source_url": "https://www.moe.gov.mm/en/department-category-higher-education"
+  }
+]

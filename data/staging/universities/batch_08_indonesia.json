@@ -1,0 +1,362 @@
+[
+  {
+    "university_id": "uni_id_011",
+    "university_name": "Universitas Padjadjaran",
+    "country_id": "country_id",
+    "city": "Bandung",
+    "university_type": "Public",
+    "official_website": "https://www.unpad.ac.id/",
+    "source_url": "https://www.unpad.ac.id/"
+  },
+  {
+    "university_id": "uni_id_012",
+    "university_name": "Universitas Pendidikan Indonesia",
+    "country_id": "country_id",
+    "city": "Bandung",
+    "university_type": "Public",
+    "official_website": "https://www.upi.edu/",
+    "source_url": "https://www.upi.edu/"
+  },
+  {
+    "university_id": "uni_id_013",
+    "university_name": "Universitas Negeri Yogyakarta",
+    "country_id": "country_id",
+    "city": "Yogyakarta",
+    "university_type": "Public",
+    "official_website": "https://www.uny.ac.id/",
+    "source_url": "https://www.uny.ac.id/"
+  },
+  {
+    "university_id": "uni_id_014",
+    "university_name": "Universitas Negeri Malang",
+    "country_id": "country_id",
+    "city": "Malang",
+    "university_type": "Public",
+    "official_website": "https://um.ac.id/",
+    "source_url": "https://um.ac.id/"
+  },
+  {
+    "university_id": "uni_id_015",
+    "university_name": "Universitas Negeri Semarang",
+    "country_id": "country_id",
+    "city": "Semarang",
+    "university_type": "Public",
+    "official_website": "https://unnes.ac.id/",
+    "source_url": "https://unnes.ac.id/"
+  },
+  {
+    "university_id": "uni_id_016",
+    "university_name": "Universitas Negeri Surabaya",
+    "country_id": "country_id",
+    "city": "Surabaya",
+    "university_type": "Public",
+    "official_website": "https://www.unesa.ac.id/",
+    "source_url": "https://www.unesa.ac.id/"
+  },
+  {
+    "university_id": "uni_id_017",
+    "university_name": "Universitas Negeri Padang",
+    "country_id": "country_id",
+    "city": "Padang",
+    "university_type": "Public",
+    "official_website": "https://unp.ac.id/",
+    "source_url": "https://unp.ac.id/"
+  },
+  {
+    "university_id": "uni_id_018",
+    "university_name": "Universitas Negeri Makassar",
+    "country_id": "country_id",
+    "city": "Makassar",
+    "university_type": "Public",
+    "official_website": "https://unm.ac.id/",
+    "source_url": "https://unm.ac.id/"
+  },
+  {
+    "university_id": "uni_id_019",
+    "university_name": "Universitas Negeri Jakarta",
+    "country_id": "country_id",
+    "city": "Jakarta",
+    "university_type": "Public",
+    "official_website": "https://unj.ac.id/",
+    "source_url": "https://unj.ac.id/"
+  },
+  {
+    "university_id": "uni_id_020",
+    "university_name": "Universitas Sumatera Utara",
+    "country_id": "country_id",
+    "city": "Medan",
+    "university_type": "Public",
+    "official_website": "https://www.usu.ac.id/",
+    "source_url": "https://www.usu.ac.id/"
+  },
+  {
+    "university_id": "uni_id_021",
+    "university_name": "Universitas Andalas",
+    "country_id": "country_id",
+    "city": "Padang",
+    "university_type": "Public",
+    "official_website": "https://www.unand.ac.id/",
+    "source_url": "https://www.unand.ac.id/"
+  },
+  {
+    "university_id": "uni_id_022",
+    "university_name": "Universitas Sriwijaya",
+    "country_id": "country_id",
+    "city": "Palembang",
+    "university_type": "Public",
+    "official_website": "https://unsri.ac.id/",
+    "source_url": "https://unsri.ac.id/"
+  },
+  {
+    "university_id": "uni_id_023",
+    "university_name": "Universitas Lampung",
+    "country_id": "country_id",
+    "city": "Bandar Lampung",
+    "university_type": "Public",
+    "official_website": "https://www.unila.ac.id/",
+    "source_url": "https://www.unila.ac.id/"
+  },
+  {
+    "university_id": "uni_id_024",
+    "university_name": "Universitas Riau",
+    "country_id": "country_id",
+    "city": "Pekanbaru",
+    "university_type": "Public",
+    "official_website": "https://www.unri.ac.id/",
+    "source_url": "https://www.unri.ac.id/"
+  },
+  {
+    "university_id": "uni_id_025",
+    "university_name": "Universitas Jember",
+    "country_id": "country_id",
+    "city": "Jember",
+    "university_type": "Public",
+    "official_website": "https://unej.ac.id/",
+    "source_url": "https://unej.ac.id/"
+  },
+  {
+    "university_id": "uni_id_026",
+    "university_name": "Universitas Udayana",
+    "country_id": "country_id",
+    "city": "Denpasar",
+    "university_type": "Public",
+    "official_website": "https://www.unud.ac.id/",
+    "source_url": "https://www.unud.ac.id/"
+  },
+  {
+    "university_id": "uni_id_027",
+    "university_name": "Universitas Mataram",
+    "country_id": "country_id",
+    "city": "Mataram",
+    "university_type": "Public",
+    "official_website": "https://unram.ac.id/",
+    "source_url": "https://unram.ac.id/"
+  },
+  {
+    "university_id": "uni_id_028",
+    "university_name": "Universitas Sam Ratulangi",
+    "country_id": "country_id",
+    "city": "Manado",
+    "university_type": "Public",
+    "official_website": "https://www.unsrat.ac.id/",
+    "source_url": "https://www.unsrat.ac.id/"
+  },
+  {
+    "university_id": "uni_id_029",
+    "university_name": "Universitas Mulawarman",
+    "country_id": "country_id",
+    "city": "Samarinda",
+    "university_type": "Public",
+    "official_website": "https://unmul.ac.id/",
+    "source_url": "https://unmul.ac.id/"
+  },
+  {
+    "university_id": "uni_id_030",
+    "university_name": "Universitas Syiah Kuala",
+    "country_id": "country_id",
+    "city": "Banda Aceh",
+    "university_type": "Public",
+    "official_website": "https://usk.ac.id/",
+    "source_url": "https://usk.ac.id/"
+  },
+  {
+    "university_id": "uni_id_031",
+    "university_name": "Universitas Bengkulu",
+    "country_id": "country_id",
+    "city": "Bengkulu",
+    "university_type": "Public",
+    "official_website": "https://www.unib.ac.id/",
+    "source_url": "https://www.unib.ac.id/"
+  },
+  {
+    "university_id": "uni_id_032",
+    "university_name": "Universitas Halu Oleo",
+    "country_id": "country_id",
+    "city": "Kendari",
+    "university_type": "Public",
+    "official_website": "https://uho.ac.id/",
+    "source_url": "https://uho.ac.id/"
+  },
+  {
+    "university_id": "uni_id_033",
+    "university_name": "Universitas Tadulako",
+    "country_id": "country_id",
+    "city": "Palu",
+    "university_type": "Public",
+    "official_website": "https://untad.ac.id/",
+    "source_url": "https://untad.ac.id/"
+  },
+  {
+    "university_id": "uni_id_034",
+    "university_name": "Universitas Cenderawasih",
+    "country_id": "country_id",
+    "city": "Jayapura",
+    "university_type": "Public",
+    "official_website": "https://www.uncen.ac.id/",
+    "source_url": "https://www.uncen.ac.id/"
+  },
+  {
+    "university_id": "uni_id_035",
+    "university_name": "Universitas Negeri Gorontalo",
+    "country_id": "country_id",
+    "city": "Gorontalo",
+    "university_type": "Public",
+    "official_website": "https://ung.ac.id/",
+    "source_url": "https://ung.ac.id/"
+  },
+  {
+    "university_id": "uni_id_036",
+    "university_name": "Universitas Pendidikan Ganesha",
+    "country_id": "country_id",
+    "city": "Singaraja",
+    "university_type": "Public",
+    "official_website": "https://undiksha.ac.id/",
+    "source_url": "https://undiksha.ac.id/"
+  },
+  {
+    "university_id": "uni_id_037",
+    "university_name": "Universitas Sultan Ageng Tirtayasa",
+    "country_id": "country_id",
+    "city": "Serang",
+    "university_type": "Public",
+    "official_website": "https://untirta.ac.id/",
+    "source_url": "https://untirta.ac.id/"
+  },
+  {
+    "university_id": "uni_id_038",
+    "university_name": "Universitas Jenderal Soedirman",
+    "country_id": "country_id",
+    "city": "Purwokerto",
+    "university_type": "Public",
+    "official_website": "https://unsoed.ac.id/",
+    "source_url": "https://unsoed.ac.id/"
+  },
+  {
+    "university_id": "uni_id_039",
+    "university_name": "UPN Veteran Yogyakarta",
+    "country_id": "country_id",
+    "city": "Yogyakarta",
+    "university_type": "Public",
+    "official_website": "https://www.upnyk.ac.id/",
+    "source_url": "https://www.upnyk.ac.id/"
+  },
+  {
+    "university_id": "uni_id_040",
+    "university_name": "UPN Veteran Jawa Timur",
+    "country_id": "country_id",
+    "city": "Surabaya",
+    "university_type": "Public",
+    "official_website": "https://www.upnjatim.ac.id/",
+    "source_url": "https://www.upnjatim.ac.id/"
+  },
+  {
+    "university_id": "uni_id_041",
+    "university_name": "UPN Veteran Jakarta",
+    "country_id": "country_id",
+    "city": "Jakarta",
+    "university_type": "Public",
+    "official_website": "https://www.upnvj.ac.id/",
+    "source_url": "https://www.upnvj.ac.id/"
+  },
+  {
+    "university_id": "uni_id_042",
+    "university_name": "Universitas Bangka Belitung",
+    "country_id": "country_id",
+    "city": "Bangka",
+    "university_type": "Public",
+    "official_website": "https://www.ubb.ac.id/",
+    "source_url": "https://www.ubb.ac.id/"
+  },
+  {
+    "university_id": "uni_id_043",
+    "university_name": "Universitas Tanjungpura",
+    "country_id": "country_id",
+    "city": "Pontianak",
+    "university_type": "Public",
+    "official_website": "https://www.untan.ac.id/",
+    "source_url": "https://www.untan.ac.id/"
+  },
+  {
+    "university_id": "uni_id_044",
+    "university_name": "Universitas Palangka Raya",
+    "country_id": "country_id",
+    "city": "Palangka Raya",
+    "university_type": "Public",
+    "official_website": "https://www.upr.ac.id/",
+    "source_url": "https://www.upr.ac.id/"
+  },
+  {
+    "university_id": "uni_id_045",
+    "university_name": "Universitas Pattimura",
+    "country_id": "country_id",
+    "city": "Ambon",
+    "university_type": "Public",
+    "official_website": "https://www.unpatti.ac.id/",
+    "source_url": "https://www.unpatti.ac.id/"
+  },
+  {
+    "university_id": "uni_id_046",
+    "university_name": "Universitas Khairun",
+    "country_id": "country_id",
+    "city": "Ternate",
+    "university_type": "Public",
+    "official_website": "https://unkhair.ac.id/",
+    "source_url": "https://unkhair.ac.id/"
+  },
+  {
+    "university_id": "uni_id_047",
+    "university_name": "Universitas Nusa Cendana",
+    "country_id": "country_id",
+    "city": "Kupang",
+    "university_type": "Public",
+    "official_website": "https://undana.ac.id/",
+    "source_url": "https://undana.ac.id/"
+  },
+  {
+    "university_id": "uni_id_048",
+    "university_name": "Universitas Negeri Medan",
+    "country_id": "country_id",
+    "city": "Medan",
+    "university_type": "Public",
+    "official_website": "https://www.unimed.ac.id/",
+    "source_url": "https://www.unimed.ac.id/"
+  },
+  {
+    "university_id": "uni_id_049",
+    "university_name": "Universitas Lambung Mangkurat",
+    "country_id": "country_id",
+    "city": "Banjarmasin",
+    "university_type": "Public",
+    "official_website": "https://ulm.ac.id/",
+    "source_url": "https://ulm.ac.id/"
+  },
+  {
+    "university_id": "uni_id_050",
+    "university_name": "Universitas Maritim Raja Ali Haji",
+    "country_id": "country_id",
+    "city": "Tanjungpinang",
+    "university_type": "Public",
+    "official_website": "https://umrah.ac.id/",
+    "source_url": "https://umrah.ac.id/"
+  }
+]

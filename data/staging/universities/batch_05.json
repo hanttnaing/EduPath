@@ -1,0 +1,206 @@
+﻿[
+  {
+    "university_id": "uni_jp_017",
+    "university_name": "Hiroshima University",
+    "country_id": "country_jp",
+    "city": "Higashihiroshima",
+    "official_website": "https://www.hiroshima-u.ac.jp/en",
+    "source_url": "https://www.hiroshima-u.ac.jp/en"
+  },
+  {
+    "university_id": "uni_jp_018",
+    "university_name": "Ritsumeikan University",
+    "country_id": "country_jp",
+    "city": "Kyoto",
+    "official_website": "https://en.ritsumei.ac.jp/",
+    "source_url": "https://en.ritsumei.ac.jp/"
+  },
+  {
+    "university_id": "uni_jp_019",
+    "university_name": "Sophia University",
+    "country_id": "country_jp",
+    "city": "Tokyo",
+    "official_website": "https://www.sophia.ac.jp/eng/",
+    "source_url": "https://www.sophia.ac.jp/eng/"
+  },
+  {
+    "university_id": "uni_jp_020",
+    "university_name": "Tokyo University of Science",
+    "country_id": "country_jp",
+    "city": "Tokyo",
+    "official_website": "https://www.tus.ac.jp/en/",
+    "source_url": "https://www.tus.ac.jp/en/"
+  },
+  {
+    "university_id": "uni_jp_021",
+    "university_name": "Tokyo Metropolitan University",
+    "country_id": "country_jp",
+    "city": "Tokyo",
+    "official_website": "https://www.tmu.ac.jp/english/",
+    "source_url": "https://www.tmu.ac.jp/english/"
+  },
+
+  {
+    "university_id": "uni_id_005",
+    "university_name": "Universitas Airlangga",
+    "country_id": "country_id",
+    "city": "Surabaya",
+    "official_website": "https://unair.ac.id/en/",
+    "source_url": "https://unair.ac.id/en/"
+  },
+  {
+    "university_id": "uni_id_006",
+    "university_name": "Diponegoro University",
+    "country_id": "country_id",
+    "city": "Semarang",
+    "official_website": "https://www.undip.ac.id/language/en",
+    "source_url": "https://www.undip.ac.id/language/en"
+  },
+  {
+    "university_id": "uni_id_007",
+    "university_name": "Universitas Brawijaya",
+    "country_id": "country_id",
+    "city": "Malang",
+    "official_website": "https://ub.ac.id/",
+    "source_url": "https://ub.ac.id/"
+  },
+  {
+    "university_id": "uni_id_008",
+    "university_name": "Institut Teknologi Sepuluh Nopember",
+    "country_id": "country_id",
+    "city": "Surabaya",
+    "official_website": "https://www.its.ac.id/",
+    "source_url": "https://www.its.ac.id/"
+  },
+  {
+    "university_id": "uni_id_009",
+    "university_name": "Hasanuddin University",
+    "country_id": "country_id",
+    "city": "Makassar",
+    "official_website": "https://www.unhas.ac.id/",
+    "source_url": "https://www.unhas.ac.id/"
+  },
+  {
+    "university_id": "uni_id_010",
+    "university_name": "Universitas Sebelas Maret",
+    "country_id": "country_id",
+    "city": "Surakarta",
+    "official_website": "https://uns.ac.id/en/",
+    "source_url": "https://uns.ac.id/en/about-uns/university-profile/"
+  },
+
+  {
+    "university_id": "uni_vn_006",
+    "university_name": "Can Tho University",
+    "country_id": "country_vn",
+    "city": "Can Tho",
+    "official_website": "https://en.ctu.edu.vn/",
+    "source_url": "https://en.ctu.edu.vn/"
+  },
+  {
+    "university_id": "uni_vn_007",
+    "university_name": "The University of Danang",
+    "country_id": "country_vn",
+    "city": "Da Nang",
+    "official_website": "https://www.udn.vn/english",
+    "source_url": "https://www.udn.vn/english"
+  },
+  {
+    "university_id": "uni_vn_008",
+    "university_name": "Foreign Trade University",
+    "country_id": "country_vn",
+    "city": "Hanoi",
+    "official_website": "https://ftu.edu.vn/",
+    "source_url": "https://ftu.edu.vn/"
+  },
+  {
+    "university_id": "uni_vn_009",
+    "university_name": "Duy Tan University",
+    "country_id": "country_vn",
+    "city": "Da Nang",
+    "official_website": "https://duytan.edu.vn/",
+    "source_url": "https://duytan.edu.vn/"
+  },
+  {
+    "university_id": "uni_vn_010",
+    "university_name": "National Economics University",
+    "country_id": "country_vn",
+    "city": "Hanoi",
+    "official_website": "https://en.neu.edu.vn/",
+    "source_url": "https://en.neu.edu.vn/"
+  },
+
+  {
+    "university_id": "uni_ph_005",
+    "university_name": "University of the Philippines Los Banos",
+    "country_id": "country_ph",
+    "city": "Los Banos",
+    "official_website": "https://uplb.edu.ph/",
+    "source_url": "https://up.edu.ph/constituent-universities/"
+  },
+  {
+    "university_id": "uni_ph_006",
+    "university_name": "University of the Philippines Manila",
+    "country_id": "country_ph",
+    "city": "Manila",
+    "official_website": "https://www.upm.edu.ph/",
+    "source_url": "https://up.edu.ph/constituent-universities/"
+  },
+  {
+    "university_id": "uni_ph_007",
+    "university_name": "University of San Carlos",
+    "country_id": "country_ph",
+    "city": "Cebu City",
+    "official_website": "https://www.usc.edu.ph/",
+    "source_url": "https://www.usc.edu.ph/"
+  },
+  {
+    "university_id": "uni_ph_008",
+    "university_name": "Silliman University",
+    "country_id": "country_ph",
+    "city": "Dumaguete",
+    "official_website": "https://su.edu.ph/",
+    "source_url": "https://su.edu.ph/"
+  },
+  {
+    "university_id": "uni_ph_009",
+    "university_name": "Mapua University",
+    "country_id": "country_ph",
+    "city": "Manila",
+    "official_website": "https://www.mapua.edu.ph/",
+    "source_url": "https://www.mapua.edu.ph/"
+  },
+  {
+    "university_id": "uni_ph_010",
+    "university_name": "Ateneo de Davao University",
+    "country_id": "country_ph",
+    "city": "Davao City",
+    "official_website": "https://www.addu.edu.ph/",
+    "source_url": "https://www.addu.edu.ph/"
+  },
+
+  {
+    "university_id": "uni_hk_006",
+    "university_name": "Hong Kong Baptist University",
+    "country_id": "country_hk",
+    "city": "Hong Kong",
+    "official_website": "https://www.hkbu.edu.hk/",
+    "source_url": "https://www.hkbu.edu.hk/"
+  },
+  {
+    "university_id": "uni_hk_007",
+    "university_name": "Lingnan University",
+    "country_id": "country_hk",
+    "city": "Hong Kong",
+    "official_website": "https://www.ln.edu.hk/",
+    "source_url": "https://www.ln.edu.hk/"
+  },
+  {
+    "university_id": "uni_hk_008",
+    "university_name": "The Education University of Hong Kong",
+    "country_id": "country_hk",
+    "city": "Hong Kong",
+    "official_website": "https://www.eduhk.hk/en/",
+    "source_url": "https://www.eduhk.hk/en/"
+  }
+]

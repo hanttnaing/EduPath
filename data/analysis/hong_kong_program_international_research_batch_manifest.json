@@ -1,0 +1,20 @@
+{
+  "batch": "Hong Kong",
+  "country_id": "country_hk",
+  "programme_baseline_before_batch": 291,
+  "universities": 15,
+  "programme_research_ceiling": 45,
+  "programme_id_range": "prog_hk_001 - prog_hk_045",
+  "methodology": "Phase 1 maximum three source-verified programmes per university. The maximum is a research ceiling, not a quota. Do not fabricate or force a third programme when official evidence is insufficient.",
+  "international_eligibility_methodology": {
+    "university_level": "Verify international-student accessibility using official university sources.",
+    "programme_level": "Verify whether the specific programme is accessible to international applicants when official evidence supports a programme-level conclusion.",
+    "allowed_statuses": [
+      "verified_yes",
+      "verified_no",
+      "unknown"
+    ],
+    "unknown_rule": "Use unknown when official evidence is insufficient. Never infer eligibility from an English-language webpage alone."
+  },
+  "research_queue": "data\\raw\\hong_kong_program_international_research_queue.csv"
+}

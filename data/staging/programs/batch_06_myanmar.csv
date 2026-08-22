@@ -1,0 +1,34 @@
+﻿program_id,university_id,program_name,field_of_study,degree_level,duration_years,study_mode,language_of_instruction,tuition_fee,tuition_currency,tuition_period,tuition_academic_year,tuition_student_scope,tuition_source_url,tuition_last_verified_at,tuition_note,minimum_gpa,gpa_scale,ielts_requirement,toefl_requirement,intake,application_deadline,program_url,collected_at,last_verified_at,freshness_status
+prog_mm_001,uni_mm_001,Bachelor of Arts in Geography,Geography,Bachelor,4,,Unknown,,,,,,,,,,,,,,,https://www.uy.edu.mm/geography/,2026-08-20,2026-08-20,current
+prog_mm_002,uni_mm_001,Bachelor of Science in Botany,Botany,Bachelor,4,,Unknown,,,,,,,,,,,,,,,https://www.uy.edu.mm/botany/,2026-08-20,2026-08-20,current
+prog_mm_003,uni_mm_001,Bachelor of Laws (LLB),Law,Bachelor,5,,Unknown,,,,,,,,,,,,,,,https://www.uy.edu.mm/law/,2026-08-20,2026-08-20,current
+prog_mm_004,uni_mm_002,B.C.Sc (Software Engineering),Software Engineering,Bachelor,,Full-time,Unknown,,,,,,,,,,,,,,,https://www.ucsy.edu.mm/Courses.do,2026-08-20,2026-08-20,current
+prog_mm_005,uni_mm_002,B.C.Sc (Cyber Security and Forensics),Cyber Security and Forensics,Bachelor,,Full-time,Unknown,,,,,,,,,,,,,,,https://www.ucsy.edu.mm/Courses.do,2026-08-20,2026-08-20,current
+prog_mm_006,uni_mm_002,B.C.Sc (Business Information Systems),Business Information Systems,Bachelor,,Full-time,Unknown,,,,,,,,,,,,,,,https://www.ucsy.edu.mm/Courses.do,2026-08-20,2026-08-20,current
+prog_mm_007,uni_mm_003,Bachelor of Economics majoring in Economics,Economics,Bachelor,,,Unknown,,,,,,,,,,,,,,,https://yueco.edu.mm/?page_id=85,2026-08-20,2026-08-20,current
+prog_mm_008,uni_mm_003,Bachelor of Accounting,Accounting,Bachelor,,,Unknown,,,,,,,,,,,,,,,https://yueco.edu.mm/?page_id=85,2026-08-20,2026-08-20,current
+prog_mm_009,uni_mm_003,Bachelor of Business Administration,Business Administration,Bachelor,,,Unknown,,,,,,,,,,,,,,,https://yueco.edu.mm/?page_id=85,2026-08-20,2026-08-20,current
+prog_mm_010,uni_mm_004,B.Sc. in Computer Science,Computer Science,Bachelor,4,,Unknown,,,,,,,,,,,,,,,https://www.dagonuniversity.edu.mm/degree-offered/,2026-08-20,2026-08-20,current
+prog_mm_011,uni_mm_004,B.A. in International Relations,International Relations,Bachelor,4,,Unknown,,,,,,,,,,,,,,,https://www.dagonuniversity.edu.mm/degree-offered/,2026-08-20,2026-08-20,current
+prog_mm_012,uni_mm_004,Bachelor of Laws (L.L.B.),Law,Bachelor,5,,Unknown,,,,,,,,,,,,,,,https://www.dagonuniversity.edu.mm/degree-offered/,2026-08-20,2026-08-20,current
+prog_mm_016,uni_mm_006,Bachelor of Arts in English,English,Bachelor,4,,Unknown,,,,,,,,,,,,,,,https://www.yufl.edu.mm/ad-undergraduate/,2026-08-20,2026-08-20,current
+prog_mm_017,uni_mm_006,Bachelor of Arts in Chinese,Chinese,Bachelor,4,Full-time,Unknown,,,,,,,,,,,,,,,https://www.yufl.edu.mm/ad-undergraduate/,2026-08-20,2026-08-20,current
+prog_mm_018,uni_mm_006,Master of Arts in English as a Foreign Language,English as a Foreign Language,Master,,,Unknown,,,,,,,,,,,,,,,https://www.yufl.edu.mm/english-department/,2026-08-20,2026-08-20,unknown
+prog_mm_019,uni_mm_007,Bachelor of Arts in English,English,Bachelor,4,,Unknown,,,,,,,,,,,,,,,https://www.mufl.edu.mm/academic/programmes/regular-programmes.html,2026-08-20,2026-08-20,unknown
+prog_mm_020,uni_mm_007,Bachelor of Arts in Japanese,Japanese,Bachelor,4,,Unknown,,,,,,,,,,,,,,,https://www.mufl.edu.mm/academic/programmes/regular-programmes.html,2026-08-20,2026-08-20,unknown
+prog_mm_021,uni_mm_007,Master of Arts in English,English,Master,2,,Unknown,,,,,,,,,,,,,,,https://www.mufl.edu.mm/academic/programmes/regular-programmes.html,2026-08-20,2026-08-20,unknown
+prog_mm_022,uni_mm_008,Bachelor of Education (Five-year Course),Education,Bachelor,5,,Unknown,,,,,,,,,,,,,,,https://www.yuoe.edu.mm/academic/,2026-08-20,2026-08-20,current
+prog_mm_023,uni_mm_008,Master of Education (Two-year Course),Education,Master,2,,Unknown,,,,,,,,,,,,,,,https://www.yuoe.edu.mm/academic/,2026-08-20,2026-08-20,current
+prog_mm_024,uni_mm_008,Diploma in Early Childhood Care and Development,Early Childhood Care and Development,Diploma,0.75,Part-time,Unknown,,,,,,,,,,,,,,,https://www.yuoe.edu.mm/academic/,2026-08-20,2026-08-20,current
+prog_mm_025,uni_mm_009,Bachelor of Arts in English,English,Bachelor,,,Unknown,,,,,,,,,,,,,,,https://www.pathein-u.edu.mm/department-of-english/,2026-08-20,2026-08-20,unknown
+prog_mm_026,uni_mm_009,Bachelor of Arts in Geography,Geography,Bachelor,,,Unknown,,,,,,,,,,,,,,,https://www.pathein-u.edu.mm/department-of-geography/,2026-08-20,2026-08-20,unknown
+prog_mm_027,uni_mm_009,Bachelor of Laws (LLB),Law,Bachelor,,,Unknown,,,,,,,,,,,,,,,https://www.pathein-u.edu.mm/department-of-law/,2026-08-20,2026-08-20,unknown
+prog_mm_028,uni_mm_010,Bachelor of Economics in Economics,Economics,Bachelor,4,Full-time,Unknown,,,,,,,,,,,,,,,https://mue.edu.mm/academic-department/main/economics,2026-08-20,2026-08-20,current
+prog_mm_029,uni_mm_010,Master of Economics in Economics,Economics,Master,2,Full-time,Unknown,,,,,,,,,,,,,,,https://mue.edu.mm/academic-department/main/economics,2026-08-20,2026-08-20,current
+prog_mm_030,uni_mm_010,Master of Public Administration,Public Administration,Master,3,,Unknown,,,,,,,,,,,,,,,https://mue.edu.mm/academic-department/main/economics,2026-08-20,2026-08-20,current
+prog_mm_037,uni_mm_013,Bachelor of Arts in English,English,Bachelor,4,,Unknown,,,,,,,,,,,,,,,https://www.yude.edu.mm/english-department/,2026-08-20,2026-08-20,current
+prog_mm_038,uni_mm_013,Online Bachelor of Laws (LLB),Law,Bachelor,5,Online,Unknown,,,,,,,,,,,,,,,https://www.yude.edu.mm/law-department/,2026-08-20,2026-08-20,current
+prog_mm_039,uni_mm_013,Online Master of Laws (LLM),Law,Master,2,Online,Unknown,,,,,,,,,,,,,,,https://www.yude.edu.mm/law-department/,2026-08-20,2026-08-20,current
+prog_mm_049,uni_mm_017,Bachelor of Arts in Geography,Geography,Bachelor,,,Unknown,,,,,,,,,,,,,,,https://www.eyu.edu.mm/department-of-geography/,2026-08-20,2026-08-20,current
+prog_mm_050,uni_mm_017,Bachelor of Science in Chemistry,Chemistry,Bachelor,4,,Unknown,,,,,,,,,,,,,,,https://www.eyu.edu.mm/my/department-of-chemistry/,2026-08-20,2026-08-20,current
+prog_mm_051,uni_mm_017,Bachelor of Laws (LLB),Law,Bachelor,5,,Unknown,,,,,,,,,,,,,,,https://www.eyu.edu.mm/my/department-of-law/,2026-08-20,2026-08-20,current

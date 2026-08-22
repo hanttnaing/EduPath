@@ -131,9 +131,24 @@ def prepare_document(
         "application_deadline",
     )
 
+    document["tuition_last_verified_at"] = parse_optional_date(
+        document.get("tuition_last_verified_at"),
+        "tuition_last_verified_at",
+    )
+
     document["content_hash"] = calculate_content_hash(
         raw_record
     )
+
+    if "international_applicants_last_verified_at" in raw_record:
+        document[
+            "international_applicants_last_verified_at"
+        ] = parse_optional_date(
+            raw_record.get(
+                "international_applicants_last_verified_at"
+            ),
+            "international_applicants_last_verified_at",
+        )
 
     return document
 

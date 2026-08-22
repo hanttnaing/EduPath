@@ -1,0 +1,119 @@
+[
+  {
+    "university_id": "uni_cn_051",
+    "university_name": "Wuhan University",
+    "country_id": "country_cn",
+    "city": "Wuhan",
+    "university_type": "Public",
+    "official_website": "https://www.whu.edu.cn/",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/t20260618_1441074.html"
+  },
+  {
+    "university_id": "uni_cn_052",
+    "university_name": "Huazhong University of Science and Technology",
+    "country_id": "country_cn",
+    "city": "Wuhan",
+    "university_type": "Public",
+    "official_website": "https://www.hust.edu.cn/",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/t20260618_1441074.html"
+  },
+  {
+    "university_id": "uni_cn_053",
+    "university_name": "Shandong University",
+    "country_id": "country_cn",
+    "city": "Jinan",
+    "university_type": "Public",
+    "official_website": "https://www.sdu.edu.cn/",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/t20260618_1441074.html"
+  },
+  {
+    "university_id": "uni_cn_054",
+    "university_name": "Sichuan University",
+    "country_id": "country_cn",
+    "city": "Chengdu",
+    "university_type": "Public",
+    "official_website": "https://www.scu.edu.cn/",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/t20260618_1441074.html"
+  },
+  {
+    "university_id": "uni_cn_055",
+    "university_name": "Central South University",
+    "country_id": "country_cn",
+    "city": "Changsha",
+    "university_type": "Public",
+    "official_website": "https://www.csu.edu.cn/",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/t20260618_1441074.html"
+  },
+  {
+    "university_id": "uni_cn_056",
+    "university_name": "Chongqing University",
+    "country_id": "country_cn",
+    "city": "Chongqing",
+    "university_type": "Public",
+    "official_website": "https://www.cqu.edu.cn/",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/t20260618_1441074.html"
+  },
+  {
+    "university_id": "uni_cn_057",
+    "university_name": "Xidian University",
+    "country_id": "country_cn",
+    "city": "Xi'an",
+    "university_type": "Public",
+    "official_website": "https://www.xidian.edu.cn/",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/t20260618_1441074.html"
+  },
+  {
+    "university_id": "uni_cn_058",
+    "university_name": "Lanzhou University",
+    "country_id": "country_cn",
+    "city": "Lanzhou",
+    "university_type": "Public",
+    "official_website": "https://www.lzu.edu.cn/",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/t20260618_1441074.html"
+  },
+  {
+    "university_id": "uni_jp_051",
+    "university_name": "Ibaraki University",
+    "country_id": "country_jp",
+    "city": "Mito",
+    "university_type": "Public",
+    "official_website": "https://www.ibaraki.ac.jp/",
+    "source_url": "https://jpcup.niad.ac.jp/what-jpcup/lists.html"
+  },
+  {
+    "university_id": "uni_jp_052",
+    "university_name": "Utsunomiya University",
+    "country_id": "country_jp",
+    "city": "Utsunomiya",
+    "university_type": "Public",
+    "official_website": "https://www.utsunomiya-u.ac.jp/",
+    "source_url": "https://jpcup.niad.ac.jp/what-jpcup/lists.html"
+  },
+  {
+    "university_id": "uni_jp_053",
+    "university_name": "Gunma University",
+    "country_id": "country_jp",
+    "city": "Maebashi",
+    "university_type": "Public",
+    "official_website": "https://www.gunma-u.ac.jp/",
+    "source_url": "https://jpcup.niad.ac.jp/what-jpcup/lists.html"
+  },
+  {
+    "university_id": "uni_jp_054",
+    "university_name": "University of Yamanashi",
+    "country_id": "country_jp",
+    "city": "Kofu",
+    "university_type": "Public",
+    "official_website": "https://www.yamanashi.ac.jp/",
+    "source_url": "https://jpcup.niad.ac.jp/what-jpcup/lists.html"
+  },
+  {
+    "university_id": "uni_jp_055",
+    "university_name": "University of Toyama",
+    "country_id": "country_jp",
+    "city": "Toyama",
+    "university_type": "Public",
+    "official_website": "https://www.u-toyama.ac.jp/",
+    "source_url": "https://jpcup.niad.ac.jp/what-jpcup/lists.html"
+  }
+]

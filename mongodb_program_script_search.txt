@@ -1,0 +1,1501 @@
+﻿
+scripts\apply_hong_kong_language_batch_l1.py:9:    "15_hong_kong_program_language_research_queue.csv"
+scripts\apply_hong_kong_language_batch_l1.py:13:BACKUP_DIR = Path(
+scripts\apply_hong_kong_language_batch_l1.py:14:    "data/backups/"
+scripts\apply_hong_kong_language_batch_l1.py:34:        "reason": "HKU provides English-medium undergraduate education. Programme-specific language pathway requires official 
+programme confirmation."
+scripts\apply_hong_kong_language_batch_l1.py:41:        "reason": "HKU undergraduate programmes use English as the main teaching language."
+scripts\apply_hong_kong_language_batch_l1.py:48:        "reason": "HKU undergraduate programmes use English as the main teaching language."
+scripts\apply_hong_kong_language_batch_l1.py:55:        "reason": "CUHK engineering programmes provide English-medium instruction."
+scripts\apply_hong_kong_language_batch_l1.py:62:        "reason": "CUHK undergraduate business programmes use English as a major teaching language."
+scripts\apply_hong_kong_language_batch_l1.py:69:        "reason": "CUHK data science related undergraduate programmes use English-supported instruction."
+scripts\apply_hong_kong_language_batch_l1.py:76:        "reason": "HKUST official undergraduate programmes are taught in English."
+scripts\apply_hong_kong_language_batch_l1.py:83:        "reason": "HKUST official undergraduate programmes are taught in English."
+scripts\apply_hong_kong_language_batch_l1.py:90:        "reason": "HKUST business undergraduate programmes are taught in English."
+scripts\apply_hong_kong_language_batch_l1.py:97:        "reason": "PolyU international undergraduate programmes provide English-medium education."
+scripts\apply_hong_kong_language_batch_l1.py:104:        "reason": "PolyU international undergraduate programmes provide English-medium education."
+scripts\apply_hong_kong_language_batch_l1.py:111:        "reason": "English is used extensively in PolyU undergraduate teaching, but programme-specific English-only 
+confirmation is not claimed."
+scripts\apply_hong_kong_language_batch_l1.py:118:        "reason": "CityU undergraduate programmes are delivered mainly in English."
+scripts\apply_hong_kong_language_batch_l1.py:125:        "reason": "CityU undergraduate programmes are delivered mainly in English."
+scripts\apply_hong_kong_language_batch_l1.py:132:        "reason": "CityU business undergraduate programmes are delivered mainly in English."
+scripts\apply_hong_kong_language_batch_l1.py:147:    BACKUP_DIR.mkdir(
+scripts\apply_hong_kong_language_batch_l1.py:153:    backup_path = (
+scripts\apply_hong_kong_language_batch_l1.py:154:        BACKUP_DIR /
+scripts\apply_hong_kong_language_batch_l1.py:156:            "hong_kong_program_language_queue_"
+scripts\apply_hong_kong_language_batch_l1.py:164:        backup_path
+scripts\apply_hong_kong_language_batch_l1.py:170:        f"Backup created: {backup_path}"
+scripts\apply_hong_kong_language_batch_l1.py:189:        program_id = row["program_id"].strip()
+scripts\apply_hong_kong_language_batch_l1.py:192:        if program_id in L1_IDS:
+scripts\apply_hong_kong_language_batch_l1.py:195:                program_id
+scripts\apply_hong_kong_language_batch_l1.py:249:        f"L1 programme rows          : 15"
+scripts\apply_hong_kong_language_batch_l1.py:266:        "15 / 15 L1 PROGRAMMES UPDATED"
+scripts\apply_hong_kong_language_batch_l1.py:277:        "MONGODB WERE NOT MODIFIED"
+scripts\apply_hong_kong_language_batch_l2.py:7:    "planning/15_hong_kong_program_language_research_queue.csv"
+scripts\apply_hong_kong_language_batch_l2.py:10:BACKUP_DIR = Path(
+scripts\apply_hong_kong_language_batch_l2.py:11:    "data/backups/step_169_2ai"
+scripts\apply_hong_kong_language_batch_l2.py:29:        "reason": "HKBU undergraduate programmes use English as the main medium of instruction according to official 
+university information."
+scripts\apply_hong_kong_language_batch_l2.py:36:        "reason": "HKBU business undergraduate programmes are delivered in an English-medium environment."
+scripts\apply_hong_kong_language_batch_l2.py:43:        "reason": "HKBU communication programmes are offered within the university English-medium teaching environment."
+scripts\apply_hong_kong_language_batch_l2.py:50:        "reason": "Lingnan undergraduate education provides English-medium learning, but programme-specific English-only 
+confirmation is not claimed."
+scripts\apply_hong_kong_language_batch_l2.py:57:        "reason": "Official university information supports English availability for undergraduate programmes."
+scripts\apply_hong_kong_language_batch_l2.py:64:        "reason": "Social Data Science belongs to Lingnan undergraduate programmes with English learning availability."
+scripts\apply_hong_kong_language_batch_l2.py:71:        "reason": "EdUHK provides English-medium undergraduate programmes; programme-specific English-only confirmation is not 
+claimed."
+scripts\apply_hong_kong_language_batch_l2.py:85:        "reason": "Psychology undergraduate programme exists within EdUHK English-medium environment."
+scripts\apply_hong_kong_language_batch_l2.py:92:        "reason": "HKMU provides English learning pathways, but programme-specific full English confirmation is not claimed."
+scripts\apply_hong_kong_language_batch_l2.py:99:        "reason": "Business Management programme has English instruction availability."
+scripts\apply_hong_kong_language_batch_l2.py:106:        "reason": "Finance and Financial Technology programme provides English learning availability."
+scripts\apply_hong_kong_language_batch_l2.py:120:        "reason": "Financial Technology programme has English learning availability."
+scripts\apply_hong_kong_language_batch_l2.py:127:        "reason": "Psychology programme has English instruction availability."
+scripts\apply_hong_kong_language_batch_l2.py:141:    BACKUP_DIR.mkdir(
+scripts\apply_hong_kong_language_batch_l2.py:147:    backup = (
+scripts\apply_hong_kong_language_batch_l2.py:148:        BACKUP_DIR /
+scripts\apply_hong_kong_language_batch_l2.py:149:        "hong_kong_program_language_queue_before_l2_20260821.csv"
+scripts\apply_hong_kong_language_batch_l2.py:155:        backup
+scripts\apply_hong_kong_language_batch_l2.py:160:    print(f"Backup created: {backup}")
+scripts\apply_hong_kong_language_batch_l2.py:178:        program_id = row["program_id"].strip()
+scripts\apply_hong_kong_language_batch_l2.py:180:        if program_id in L2_IDS:
+scripts\apply_hong_kong_language_batch_l2.py:182:            data = LANGUAGE_MAPPING[program_id]
+scripts\apply_hong_kong_language_batch_l2.py:212:    print(f"L2 programme rows          : {updated}")
+scripts\apply_hong_kong_language_batch_l2.py:222:        "15 / 15 L2 PROGRAMMES UPDATED"
+scripts\apply_hong_kong_language_batch_l2_wrong_backup.py:9:    "15_hong_kong_program_language_research_queue.csv"
+scripts\apply_hong_kong_language_batch_l2_wrong_backup.py:13:BACKUP_DIR = Path(
+scripts\apply_hong_kong_language_batch_l2_wrong_backup.py:14:    "data/backups/"
+scripts\apply_hong_kong_language_batch_l2_wrong_backup.py:34:        "reason": "HKBU undergraduate programmes use English as the main medium of instruction according to 
+official university language policy."
+scripts\apply_hong_kong_language_batch_l2_wrong_backup.py:41:        "reason": "HKBU undergraduate business programmes are delivered with English as the main teaching 
+language."
+scripts\apply_hong_kong_language_batch_l2_wrong_backup.py:48:        "reason": "HKBU Communication undergraduate programmes follow the university English-medium teaching 
+environment."
+scripts\apply_hong_kong_language_batch_l2_wrong_backup.py:55:        "reason": "Lingnan University undergraduate programmes are primarily taught in English."
+scripts\apply_hong_kong_language_batch_l2_wrong_backup.py:62:        "reason": "Official information confirms English-medium undergraduate education, but programme-specific 
+pathway confirmation is not claimed."
+scripts\apply_hong_kong_language_batch_l2_wrong_backup.py:69:        "reason": "Social Data Science programme belongs to Lingnan undergraduate English-medium environment."
+scripts\apply_hong_kong_language_batch_l2_wrong_backup.py:76:        "reason": "EdUHK provides English-medium undergraduate programmes; programme-specific English-only 
+confirmation is not claimed."
+scripts\apply_hong_kong_language_batch_l2_wrong_backup.py:83:        "reason": "Official undergraduate information indicates English is used, but programme-specific language 
+pathway requires further confirmation."
+scripts\apply_hong_kong_language_batch_l2_wrong_backup.py:90:        "reason": "EdUHK undergraduate programmes are taught mainly in English with possible programme 
+variations."
+scripts\apply_hong_kong_language_batch_l2_wrong_backup.py:97:        "reason": "HKMU undergraduate programmes provide English learning pathways, but programme-specific full 
+English confirmation is not claimed."
+scripts\apply_hong_kong_language_batch_l2_wrong_backup.py:104:        "reason": "Business undergraduate information indicates English availability within the programme 
+environment."
+scripts\apply_hong_kong_language_batch_l2_wrong_backup.py:111:        "reason": "Finance and Financial Technology programme has English instruction availability."
+scripts\apply_hong_kong_language_batch_l2_wrong_backup.py:118:        "reason": "Official university information indicates English instruction availability; 
+programme-specific English-only status is not claimed."
+scripts\apply_hong_kong_language_batch_l2_wrong_backup.py:125:        "reason": "Financial Technology programme operates within an English-supported undergraduate 
+environment."
+scripts\apply_hong_kong_language_batch_l2_wrong_backup.py:132:        "reason": "Psychology undergraduate programme has English instruction availability."
+scripts\apply_hong_kong_language_batch_l2_wrong_backup.py:147:    BACKUP_DIR.mkdir(
+scripts\apply_hong_kong_language_batch_l2_wrong_backup.py:153:    backup_path = (
+scripts\apply_hong_kong_language_batch_l2_wrong_backup.py:154:        BACKUP_DIR /
+scripts\apply_hong_kong_language_batch_l2_wrong_backup.py:156:            "hong_kong_program_language_queue_"
+scripts\apply_hong_kong_language_batch_l2_wrong_backup.py:164:        backup_path
+scripts\apply_hong_kong_language_batch_l2_wrong_backup.py:170:        f"Backup created: {backup_path}"
+scripts\apply_hong_kong_language_batch_l2_wrong_backup.py:189:        program_id = row["program_id"].strip()
+scripts\apply_hong_kong_language_batch_l2_wrong_backup.py:192:        if program_id in L2_IDS:
+scripts\apply_hong_kong_language_batch_l2_wrong_backup.py:195:                program_id
+scripts\apply_hong_kong_language_batch_l2_wrong_backup.py:249:        f"L1 programme rows          : 15"
+scripts\apply_hong_kong_language_batch_l2_wrong_backup.py:266:        "15 / 15 L1 PROGRAMMES UPDATED"
+scripts\apply_hong_kong_language_batch_l2_wrong_backup.py:277:        "MONGODB WERE NOT MODIFIED"
+scripts\apply_hong_kong_language_batch_l3.py:8:    "15_hong_kong_program_language_research_queue.csv"
+scripts\apply_hong_kong_language_batch_l3.py:12:BACKUP_DIR = Path(
+scripts\apply_hong_kong_language_batch_l3.py:13:    "data/backups/"
+scripts\apply_hong_kong_language_batch_l3.py:33:        "reason": "Official undergraduate information indicates English availability, but programme-specific English-only 
+confirmation is not claimed."
+scripts\apply_hong_kong_language_batch_l3.py:47:        "reason": "Business analytics programme has English instruction availability."
+scripts\apply_hong_kong_language_batch_l3.py:61:        "reason": "Business programme information indicates English learning availability."
+scripts\apply_hong_kong_language_batch_l3.py:68:        "reason": "Communication programme operates within an English-supported academic environment."
+scripts\apply_hong_kong_language_batch_l3.py:75:        "reason": "Official programme information indicates English availability."
+scripts\apply_hong_kong_language_batch_l3.py:82:        "reason": "Translation Technology programme includes English-related academic content."
+scripts\apply_hong_kong_language_batch_l3.py:89:        "reason": "Artificial Intelligence programme information indicates English instruction availability."
+scripts\apply_hong_kong_language_batch_l3.py:96:        "reason": "THEi technology programmes provide English learning environment."
+scripts\apply_hong_kong_language_batch_l3.py:103:        "reason": "ICT programme information indicates English availability."
+scripts\apply_hong_kong_language_batch_l3.py:110:        "reason": "Fashion Design programme operates under English-supported higher education environment."
+scripts\apply_hong_kong_language_batch_l3.py:124:        "reason": "Management programme information indicates English instruction availability."
+scripts\apply_hong_kong_language_batch_l3.py:131:        "reason": "Biomedical Science programme information indicates English availability."
+scripts\apply_hong_kong_language_batch_l3.py:145:    BACKUP_DIR.mkdir(
+scripts\apply_hong_kong_language_batch_l3.py:151:    backup = (
+scripts\apply_hong_kong_language_batch_l3.py:152:        BACKUP_DIR /
+scripts\apply_hong_kong_language_batch_l3.py:153:        "hong_kong_program_language_queue_before_l3_20260821.csv"
+scripts\apply_hong_kong_language_batch_l3.py:159:        backup
+scripts\apply_hong_kong_language_batch_l3.py:164:    print(f"Backup created: {backup}")
+scripts\apply_hong_kong_language_batch_l3.py:180:        program_id = row["program_id"].strip()
+scripts\apply_hong_kong_language_batch_l3.py:182:        if program_id in L3_IDS:
+scripts\apply_hong_kong_language_batch_l3.py:184:            data = LANGUAGE_MAPPING[program_id]
+scripts\apply_hong_kong_language_batch_l3.py:214:    print(f"L3 programme rows          : {updated}")
+scripts\apply_hong_kong_language_batch_l3.py:224:        "15 / 15 L3 PROGRAMMES UPDATED"
+scripts\apply_program_tuition_mongodb_update.py:42:COLLECTION_NAME = "programs"
+scripts\apply_program_tuition_mongodb_update.py:44:EXPECTED_PROGRAM_COUNT = 36
+scripts\apply_program_tuition_mongodb_update.py:148:            "Apply verified Japan program "
+scripts\apply_program_tuition_mongodb_update.py:149:            "tuition updates to MongoDB."
+scripts\apply_program_tuition_mongodb_update.py:157:            "Actually modify MongoDB. "
+scripts\apply_program_tuition_mongodb_update.py:167:        "EduPath - Controlled Program "
+scripts\apply_program_tuition_mongodb_update.py:168:        "Tuition MongoDB Update"
+scripts\apply_program_tuition_mongodb_update.py:191:            "apply_program_tuition_mongodb_update.py "
+scripts\apply_program_tuition_mongodb_update.py:197:            "No MongoDB records were modified."
+scripts\apply_program_tuition_mongodb_update.py:209:        / "29_japan_program_tuition_context_all_verified.csv"
+scripts\apply_program_tuition_mongodb_update.py:231:    if len(rows) != EXPECTED_PROGRAM_COUNT:
+scripts\apply_program_tuition_mongodb_update.py:233:            f"Expected {EXPECTED_PROGRAM_COUNT} "
+scripts\apply_program_tuition_mongodb_update.py:237:    program_ids = [
+scripts\apply_program_tuition_mongodb_update.py:239:            row.get("program_id")
+scripts\apply_program_tuition_mongodb_update.py:245:        set(program_ids)
+scripts\apply_program_tuition_mongodb_update.py:246:    ) != EXPECTED_PROGRAM_COUNT:
+scripts\apply_program_tuition_mongodb_update.py:248:            "Program IDs are not unique."
+scripts\apply_program_tuition_mongodb_update.py:257:        "Connecting to MongoDB..."
+scripts\apply_program_tuition_mongodb_update.py:265:        "MongoDB connection: OK"
+scripts\apply_program_tuition_mongodb_update.py:303:        program_id = clean_text(
+scripts\apply_program_tuition_mongodb_update.py:305:                "program_id"
+scripts\apply_program_tuition_mongodb_update.py:311:                "program_id":
+scripts\apply_program_tuition_mongodb_update.py:312:                    program_id
+scripts\apply_program_tuition_mongodb_update.py:318:                f"{program_id} not found "
+scripts\apply_program_tuition_mongodb_update.py:319:                "in MongoDB."
+scripts\apply_program_tuition_mongodb_update.py:336:                f"{program_id}: MongoDB "
+scripts\apply_program_tuition_mongodb_update.py:359:                program_id
+scripts\apply_program_tuition_mongodb_update.py:365:                    f"{program_id}: tuition "
+scripts\apply_program_tuition_mongodb_update.py:372:                f"{program_id}: invalid "
+scripts\apply_program_tuition_mongodb_update.py:382:            program_id
+scripts\apply_program_tuition_mongodb_update.py:401:            program_id
+scripts\apply_program_tuition_mongodb_update.py:471:        "Programs ready:",
+scripts\apply_program_tuition_mongodb_update.py:481:    # IMMEDIATE BACKUP OF MODIFIED FIELDS
+scripts\apply_program_tuition_mongodb_update.py:484:    backup_folder = (
+scripts\apply_program_tuition_mongodb_update.py:487:        / "backups"
+scripts\apply_program_tuition_mongodb_update.py:490:    backup_folder.mkdir(
+scripts\apply_program_tuition_mongodb_update.py:500:        backup_folder
+scripts\apply_program_tuition_mongodb_update.py:502:            "program_tuition_fields_"
+scripts\apply_program_tuition_mongodb_update.py:508:        "program_id",
+scripts\apply_program_tuition_mongodb_update.py:524:        for program_id in program_ids:
+scripts\apply_program_tuition_mongodb_update.py:526:                program_id
+scripts\apply_program_tuition_mongodb_update.py:530:                "program_id":
+scripts\apply_program_tuition_mongodb_update.py:531:                    program_id
+scripts\apply_program_tuition_mongodb_update.py:561:        "Immediate backup created:"
+scripts\apply_program_tuition_mongodb_update.py:583:        for program_id in program_ids:
+scripts\apply_program_tuition_mongodb_update.py:586:                    program_id
+scripts\apply_program_tuition_mongodb_update.py:592:                    "program_id":
+scripts\apply_program_tuition_mongodb_update.py:593:                        program_id
+scripts\apply_program_tuition_mongodb_update.py:603:                    f"{program_id}: "
+scripts\apply_program_tuition_mongodb_update.py:617:                program_id
+scripts\apply_program_tuition_mongodb_update.py:631:        for program_id in program_ids:
+scripts\apply_program_tuition_mongodb_update.py:635:                        "program_id":
+scripts\apply_program_tuition_mongodb_update.py:636:                            program_id
+scripts\apply_program_tuition_mongodb_update.py:651:                    f"{program_id}: missing "
+scripts\apply_program_tuition_mongodb_update.py:659:                    program_id
+scripts\apply_program_tuition_mongodb_update.py:694:                        f"{program_id}: "
+scripts\apply_program_tuition_mongodb_update.py:730:        for program_id in processed_ids:
+scripts\apply_program_tuition_mongodb_update.py:733:                    program_id
+scripts\apply_program_tuition_mongodb_update.py:774:                    "program_id":
+scripts\apply_program_tuition_mongodb_update.py:775:                        program_id
+scripts\apply_program_tuition_mongodb_update.py:799:        "CONTROLLED MONGODB UPDATE: PASSED"
+scripts\apply_program_tuition_mongodb_update.py:806:        "Programs matched:",
+scripts\apply_program_tuition_mongodb_update.py:811:        "Programs modified:",
+scripts\apply_program_tuition_mongodb_update.py:816:        "Programs verified after write:",
+scripts\apply_program_tuition_mongodb_update.py:817:        len(program_ids),
+scripts\apply_program_tuition_mongodb_update.py:844:        "for all 36 programs."
+scripts\apply_program_tuition_mongodb_update.py:849:        "Immediate pre-update backup:"
+scripts\apply_program_tuition_mongodb_update.py:858:        "MongoDB update and "
+scripts\audit_hong_kong_duration_mode_parity.py:7:    "hong_kong_programs_fields_enriched.csv"
+scripts\audit_hong_kong_duration_mode_parity.py:12:    "hong_kong_programs_duration_mode_enriched.csv"
+scripts\audit_hong_kong_duration_mode_parity.py:71:    row["program_id"]: row
+scripts\audit_hong_kong_duration_mode_parity.py:76:    row["program_id"]: row
+scripts\audit_hong_kong_language_batch_l1_closure.py:7:    "15_hong_kong_program_language_research_queue.csv"
+scripts\audit_hong_kong_language_batch_l1_closure.py:11:BACKUP_PATH = Path(
+scripts\audit_hong_kong_language_batch_l1_closure.py:12:    "data/backups/"
+scripts\audit_hong_kong_language_batch_l1_closure.py:14:    "hong_kong_program_language_queue_before_l1_20260821.csv"
+scripts\audit_hong_kong_language_batch_l1_closure.py:63:    with BACKUP_PATH.open(
+scripts\audit_hong_kong_language_batch_l1_closure.py:68:        backup_rows = list(
+scripts\audit_hong_kong_language_batch_l1_closure.py:82:        f"Backup rows               : {len(backup_rows)}"
+scripts\audit_hong_kong_language_batch_l1_closure.py:87:        row["program_id"]
+scripts\audit_hong_kong_language_batch_l1_closure.py:92:    backup_ids = {
+scripts\audit_hong_kong_language_batch_l1_closure.py:93:        row["program_id"]
+scripts\audit_hong_kong_language_batch_l1_closure.py:94:        for row in backup_rows
+scripts\audit_hong_kong_language_batch_l1_closure.py:100:        f"{current_ids == backup_ids}"
+scripts\audit_hong_kong_language_batch_l1_closure.py:107:        if row["program_id"] in L1_IDS
+scripts\audit_hong_kong_language_batch_l1_closure.py:114:        if row["program_id"] in L2_L3_IDS
+scripts\audit_hong_kong_language_batch_l1_closure.py:141:        f"L1 programme rows          : {len(l1_rows)}"
+scripts\audit_hong_kong_language_batch_l1_closure.py:203:            "15 / 15 L1 PROGRAMMES ARE "
+scripts\audit_hong_kong_language_batch_l2_closure.py:7:    "15_hong_kong_program_language_research_queue.csv"
+scripts\audit_hong_kong_language_batch_l2_closure.py:56:        if row["program_id"] in L2_IDS
+scripts\audit_hong_kong_language_batch_l2_closure.py:63:        if row["program_id"] in L3_IDS
+scripts\audit_hong_kong_language_batch_l2_closure.py:159:            "15 / 15 L2 PROGRAMMES ARE EVIDENCE COMPLETE"
+scripts\audit_hong_kong_language_batch_l3_closure.py:7:    "15_hong_kong_program_language_research_queue.csv"
+scripts\audit_hong_kong_language_batch_l3_closure.py:56:        if row["program_id"] in L1_L2_IDS
+scripts\audit_hong_kong_language_batch_l3_closure.py:63:        if row["program_id"] in L3_IDS
+scripts\audit_hong_kong_language_batch_l3_closure.py:165:            "15 / 15 L3 PROGRAMMES ARE "
+scripts\audit_hong_kong_language_batch_l3_closure.py:170:            "ALL 45 HONG KONG PROGRAMMES "
+scripts\audit_hong_kong_language_parity.py:7:    "hong_kong_programs_duration_mode_enriched.csv"
+scripts\audit_hong_kong_language_parity.py:12:    "hong_kong_programs_language_enriched.csv"
+scripts\audit_hong_kong_language_parity.py:52:        row["program_id"]: row
+scripts\audit_hong_kong_language_parity.py:57:        row["program_id"]: row
+scripts\audit_hong_kong_language_parity.py:82:                            "program_id": pid,
+scripts\audit_hong_kong_language_queue_structure.py:7:    "15_hong_kong_program_language_research_queue.csv"
+scripts\audit_hong_kong_language_queue_structure.py:67:        clean(row["program_id"])
+scripts\audit_hong_kong_language_queue_structure.py:81:        f"Duplicate programme IDs    : "
+scripts\audit_hong_kong_language_queue_structure.py:102:            if clean(row["program_id"])
+scripts\audit_hong_kong_language_queue_structure.py:108:            clean(row["program_id"])
+scripts\audit_hong_kong_language_queue_structure.py:151:            f"  Programmes             : "
+scripts\audit_hong_kong_language_queue_structure.py:187:        f"Unassigned programme rows : "
+scripts\audit_hong_kong_language_queue_structure.py:201:        "45 PROGRAMMES CLEANLY DIVIDED INTO "
+scripts\audit_program_tuition.py:77:    program: dict,
+scripts\audit_program_tuition.py:79:    fee = program.get(
+scripts\audit_program_tuition.py:84:        program.get(
+scripts\audit_program_tuition.py:91:        program.get(
+scripts\audit_program_tuition.py:117:        "EduPath - Japan Programme Tuition Audit"
+scripts\audit_program_tuition.py:146:    # Load all programmes
+scripts\audit_program_tuition.py:149:    all_programs = fetch_all(
+scripts\audit_program_tuition.py:150:        "/api/programs"
+scripts\audit_program_tuition.py:153:    japan_programs = [
+scripts\audit_program_tuition.py:154:        program
+scripts\audit_program_tuition.py:155:        for program in all_programs
+scripts\audit_program_tuition.py:156:        if program.get(
+scripts\audit_program_tuition.py:173:        "Japan programmes found:",
+scripts\audit_program_tuition.py:174:        len(japan_programs),
+scripts\audit_program_tuition.py:178:        program
+scripts\audit_program_tuition.py:179:        for program in japan_programs
+scripts\audit_program_tuition.py:180:        if program.get(
+scripts\audit_program_tuition.py:187:        "Programmes missing tuition:",
+scripts\audit_program_tuition.py:197:    for program in japan_programs:
+scripts\audit_program_tuition.py:199:            program.get(
+scripts\audit_program_tuition.py:202:            program.get(
+scripts\audit_program_tuition.py:205:            program.get(
+scripts\audit_program_tuition.py:234:            f"{count:>3} programmes"
+scripts\audit_program_tuition.py:248:    for program in japan_programs:
+scripts\audit_program_tuition.py:250:            program.get(
+scripts\audit_program_tuition.py:256:        fee = program.get(
+scripts\audit_program_tuition.py:260:        currency = program.get(
+scripts\audit_program_tuition.py:308:                f" programme(s)"
+scripts\audit_program_tuition.py:319:    print("PROGRAMME RECORDS")
+scripts\audit_program_tuition.py:322:    sorted_programs = sorted(
+scripts\audit_program_tuition.py:323:        japan_programs,
+scripts\audit_program_tuition.py:324:        key=lambda program: (
+scripts\audit_program_tuition.py:326:                program.get(
+scripts\audit_program_tuition.py:334:            program.get(
+scripts\audit_program_tuition.py:338:            program.get(
+scripts\audit_program_tuition.py:339:                "program_name",
+scripts\audit_program_tuition.py:345:    for index, program in enumerate(
+scripts\audit_program_tuition.py:346:        sorted_programs,
+scripts\audit_program_tuition.py:351:                program.get(
+scripts\audit_program_tuition.py:362:            or program.get(
+scripts\audit_program_tuition.py:371:            f"{program.get('program_id')}"
+scripts\audit_program_tuition.py:380:            "    Programme  :",
+scripts\audit_program_tuition.py:381:            program.get(
+scripts\audit_program_tuition.py:382:                "program_name"
+scripts\audit_program_tuition.py:388:            program.get(
+scripts\audit_program_tuition.py:396:                program
+scripts\audit_program_tuition.py:402:            program.get(
+scripts\audit_program_tuition.py:409:            program.get(
+scripts\audit_program_tuition.py:410:                "program_url"
+scripts\audit_program_tuition.py:425:            program.get(
+scripts\audit_program_tuition.py:428:            program.get(
+scripts\audit_program_tuition.py:431:            program.get(
+scripts\audit_program_tuition.py:435:        for program in japan_programs
+scripts\audit_program_tuition.py:436:        if program.get(
+scripts\audit_program_tuition.py:443:        japan_programs
+scripts\audit_program_tuition.py:453:            "All non-null Japan programme "
+scripts\audit_program_tuition.py:459:            "but every programme should be "
+scripts\audit_program_tuition.py:476:            "programme(s) have missing tuition."
+scripts\audit_program_tuition.py:480:        program
+scripts\audit_program_tuition.py:481:        for program in japan_programs
+scripts\audit_program_tuition.py:482:        if not program.get(
+scripts\audit_program_tuition.py:483:            "program_url"
+scripts\audit_program_tuition.py:495:            "programme(s) have no program URL."
+scripts\audit_program_tuition.py:499:        program
+scripts\audit_program_tuition.py:500:        for program in japan_programs
+scripts\audit_program_tuition.py:501:        if not program.get(
+scripts\audit_program_tuition.py:514:            "programme(s) have no "
+scripts\backup_apply_hong_kong_language_batch_l2_before_fix.py:9:    "15_hong_kong_program_language_research_queue.csv"
+scripts\backup_apply_hong_kong_language_batch_l2_before_fix.py:13:BACKUP_DIR = Path(
+scripts\backup_apply_hong_kong_language_batch_l2_before_fix.py:14:    "data/backups/"
+scripts\backup_apply_hong_kong_language_batch_l2_before_fix.py:34:        "reason": "HKU provides English-medium undergraduate education. Programme-specific language pathway 
+requires official programme confirmation."
+scripts\backup_apply_hong_kong_language_batch_l2_before_fix.py:41:        "reason": "HKU undergraduate programmes use English as the main teaching language."
+scripts\backup_apply_hong_kong_language_batch_l2_before_fix.py:48:        "reason": "HKU undergraduate programmes use English as the main teaching language."
+scripts\backup_apply_hong_kong_language_batch_l2_before_fix.py:55:        "reason": "CUHK engineering programmes provide English-medium instruction."
+scripts\backup_apply_hong_kong_language_batch_l2_before_fix.py:62:        "reason": "CUHK undergraduate business programmes use English as a major teaching language."
+scripts\backup_apply_hong_kong_language_batch_l2_before_fix.py:69:        "reason": "CUHK data science related undergraduate programmes use English-supported instruction."
+scripts\backup_apply_hong_kong_language_batch_l2_before_fix.py:76:        "reason": "HKUST official undergraduate programmes are taught in English."
+scripts\backup_apply_hong_kong_language_batch_l2_before_fix.py:83:        "reason": "HKUST official undergraduate programmes are taught in English."
+scripts\backup_apply_hong_kong_language_batch_l2_before_fix.py:90:        "reason": "HKUST business undergraduate programmes are taught in English."
+scripts\backup_apply_hong_kong_language_batch_l2_before_fix.py:97:        "reason": "PolyU international undergraduate programmes provide English-medium education."
+scripts\backup_apply_hong_kong_language_batch_l2_before_fix.py:104:        "reason": "PolyU international undergraduate programmes provide English-medium education."
+scripts\backup_apply_hong_kong_language_batch_l2_before_fix.py:111:        "reason": "English is used extensively in PolyU undergraduate teaching, but programme-specific 
+English-only confirmation is not claimed."
+scripts\backup_apply_hong_kong_language_batch_l2_before_fix.py:118:        "reason": "CityU undergraduate programmes are delivered mainly in English."
+scripts\backup_apply_hong_kong_language_batch_l2_before_fix.py:125:        "reason": "CityU undergraduate programmes are delivered mainly in English."
+scripts\backup_apply_hong_kong_language_batch_l2_before_fix.py:132:        "reason": "CityU business undergraduate programmes are delivered mainly in English."
+scripts\backup_apply_hong_kong_language_batch_l2_before_fix.py:147:    BACKUP_DIR.mkdir(
+scripts\backup_apply_hong_kong_language_batch_l2_before_fix.py:153:    backup_path = (
+scripts\backup_apply_hong_kong_language_batch_l2_before_fix.py:154:        BACKUP_DIR /
+scripts\backup_apply_hong_kong_language_batch_l2_before_fix.py:156:            "hong_kong_program_language_queue_"
+scripts\backup_apply_hong_kong_language_batch_l2_before_fix.py:164:        backup_path
+scripts\backup_apply_hong_kong_language_batch_l2_before_fix.py:170:        f"Backup created: {backup_path}"
+scripts\backup_apply_hong_kong_language_batch_l2_before_fix.py:189:        program_id = row["program_id"].strip()
+scripts\backup_apply_hong_kong_language_batch_l2_before_fix.py:192:        if program_id in L2_IDS:
+scripts\backup_apply_hong_kong_language_batch_l2_before_fix.py:195:                program_id
+scripts\backup_apply_hong_kong_language_batch_l2_before_fix.py:249:        f"L1 programme rows          : 15"
+scripts\backup_apply_hong_kong_language_batch_l2_before_fix.py:266:        "15 / 15 L1 PROGRAMMES UPDATED"
+scripts\backup_apply_hong_kong_language_batch_l2_before_fix.py:277:        "MONGODB WERE NOT MODIFIED"
+scripts\backup_baseline_dataset.py:18:# MongoDB Baseline Dataset Backup
+scripts\backup_baseline_dataset.py:22:# - This script does NOT modify MongoDB records.
+scripts\backup_baseline_dataset.py:28:BACKUP_DIR = (
+scripts\backup_baseline_dataset.py:30:    / "backups"
+scripts\backup_baseline_dataset.py:41:    "programs",
+scripts\backup_baseline_dataset.py:61:def get_mongodb_uri() -> str:
+scripts\backup_baseline_dataset.py:63:    Try commonly used MongoDB environment variable names.
+scripts\backup_baseline_dataset.py:67:        "MONGODB_URI",
+scripts\backup_baseline_dataset.py:69:        "MONGODB_URL",
+scripts\backup_baseline_dataset.py:80:        "MongoDB URI was not found.\n"
+scripts\backup_baseline_dataset.py:82:        "  MONGODB_URI\n"
+scripts\backup_baseline_dataset.py:84:        "  MONGODB_URL\n"
+scripts\backup_baseline_dataset.py:91:    Resolve MongoDB database name.
+scripts\backup_baseline_dataset.py:98:        "MONGODB_DB",
+scripts\backup_baseline_dataset.py:115:    Convert MongoDB/Python-specific values into JSON-safe values.
+scripts\backup_baseline_dataset.py:165:def backup_collection(
+scripts\backup_baseline_dataset.py:170:    Export one MongoDB collection into a JSON file.
+scripts\backup_baseline_dataset.py:180:        BACKUP_DIR
+scripts\backup_baseline_dataset.py:202:        "MongoDB Baseline Dataset Backup"
+scripts\backup_baseline_dataset.py:213:        f"Backup folder: {BACKUP_DIR}"
+scripts\backup_baseline_dataset.py:221:        mongodb_uri = get_mongodb_uri()
+scripts\backup_baseline_dataset.py:229:    BACKUP_DIR.mkdir(
+scripts\backup_baseline_dataset.py:237:        print("Connecting to MongoDB Atlas...")
+scripts\backup_baseline_dataset.py:240:            mongodb_uri,
+scripts\backup_baseline_dataset.py:247:            "MongoDB Atlas connection: SUCCESS"
+scripts\backup_baseline_dataset.py:263:        print("COLLECTION BACKUP")
+scripts\backup_baseline_dataset.py:290:            result = backup_collection(
+scripts\backup_baseline_dataset.py:307:        # Backup summary
+scripts\backup_baseline_dataset.py:314:            "backup_type": "MongoDB JSON baseline backup",
+scripts\backup_baseline_dataset.py:319:            "mongodb_records_modified": False,
+scripts\backup_baseline_dataset.py:325:            BACKUP_DIR
+scripts\backup_baseline_dataset.py:326:            / "backup_summary.json"
+scripts\backup_baseline_dataset.py:335:        print("BACKUP SUMMARY")
+scripts\backup_baseline_dataset.py:358:            "MongoDB records modified: NO"
+scripts\backup_baseline_dataset.py:365:            "STEP 152.5 BASELINE BACKUP: COMPLETED"
+scripts\backup_baseline_dataset.py:373:        print("MONGODB ERROR")
+scripts\backup_baseline_dataset.py:401:                "MongoDB connection closed safely."
+scripts\backup_japan_programs_before_tuition_update.py:78:        "EduPath - Backup Japan Programs "
+scripts\backup_japan_programs_before_tuition_update.py:104:    # Load all programs
+scripts\backup_japan_programs_before_tuition_update.py:107:    all_programs = fetch_all(
+scripts\backup_japan_programs_before_tuition_update.py:108:        "/api/programs"
+scripts\backup_japan_programs_before_tuition_update.py:111:    japan_programs = [
+scripts\backup_japan_programs_before_tuition_update.py:112:        program
+scripts\backup_japan_programs_before_tuition_update.py:113:        for program in all_programs
+scripts\backup_japan_programs_before_tuition_update.py:114:        if program.get(
+scripts\backup_japan_programs_before_tuition_update.py:131:        "Japan programs found:",
+scripts\backup_japan_programs_before_tuition_update.py:132:        len(japan_programs),
+scripts\backup_japan_programs_before_tuition_update.py:135:    if not japan_programs:
+scripts\backup_japan_programs_before_tuition_update.py:137:            "No Japan programs found. "
+scripts\backup_japan_programs_before_tuition_update.py:138:            "Backup cancelled."
+scripts\backup_japan_programs_before_tuition_update.py:142:    # Backup folder
+scripts\backup_japan_programs_before_tuition_update.py:149:    backup_folder = (
+scripts\backup_japan_programs_before_tuition_update.py:152:        / "backups"
+scripts\backup_japan_programs_before_tuition_update.py:155:    backup_folder.mkdir(
+scripts\backup_japan_programs_before_tuition_update.py:160:    backup_file = (
+scripts\backup_japan_programs_before_tuition_update.py:161:        backup_folder
+scripts\backup_japan_programs_before_tuition_update.py:162:        / "japan_programs_before_tuition_context_update.json"
+scripts\backup_japan_programs_before_tuition_update.py:166:    # Backup content
+scripts\backup_japan_programs_before_tuition_update.py:169:    backup_data = {
+scripts\backup_japan_programs_before_tuition_update.py:170:        "backup_type":
+scripts\backup_japan_programs_before_tuition_update.py:171:            "Japan programs before tuition context update",
+scripts\backup_japan_programs_before_tuition_update.py:184:        "program_count":
+scripts\backup_japan_programs_before_tuition_update.py:185:            len(japan_programs),
+scripts\backup_japan_programs_before_tuition_update.py:187:        "programs":
+scripts\backup_japan_programs_before_tuition_update.py:188:            japan_programs,
+scripts\backup_japan_programs_before_tuition_update.py:191:    with backup_file.open(
+scripts\backup_japan_programs_before_tuition_update.py:196:            backup_data,
+scripts\backup_japan_programs_before_tuition_update.py:208:        "Backup created successfully."
+scripts\backup_japan_programs_before_tuition_update.py:212:        "Programs backed up:",
+scripts\backup_japan_programs_before_tuition_update.py:213:        len(japan_programs),
+scripts\backup_japan_programs_before_tuition_update.py:217:        "Backup file:"
+scripts\backup_japan_programs_before_tuition_update.py:221:        backup_file
+scripts\build_hong_kong_program_duration_mode_enriched.py:8:    "hong_kong_programs_fields_enriched.csv"
+scripts\build_hong_kong_program_duration_mode_enriched.py:13:    "14_hong_kong_program_duration_mode_research_queue.csv"
+scripts\build_hong_kong_program_duration_mode_enriched.py:18:    "hong_kong_programs_duration_mode_enriched.csv"
+scripts\build_hong_kong_program_duration_mode_enriched.py:23:    "program_id",
+scripts\build_hong_kong_program_duration_mode_enriched.py:25:    "program_name",
+scripts\build_hong_kong_program_duration_mode_enriched.py:40:    "program_url",
+scripts\build_hong_kong_program_duration_mode_enriched.py:74:        clean(row["program_id"]): row
+scripts\build_hong_kong_program_duration_mode_enriched.py:84:        program_id = clean(
+scripts\build_hong_kong_program_duration_mode_enriched.py:85:            row["program_id"]
+scripts\build_hong_kong_program_duration_mode_enriched.py:89:            program_id
+scripts\build_hong_kong_program_duration_mode_enriched.py:94:                f"Missing research row: {program_id}"
+scripts\build_hong_kong_program_duration_mode_enriched.py:135:            "Expected exactly 45 Hong Kong programmes."
+scripts\build_hong_kong_program_duration_mode_enriched.py:140:        row["program_id"]
+scripts\build_hong_kong_program_duration_mode_enriched.py:147:            "Duplicate programme IDs detected."
+scripts\build_hong_kong_program_duration_mode_enriched.py:156:                f"{row['program_id']}"
+scripts\build_hong_kong_program_duration_mode_enriched.py:162:                f"{row['program_id']}"
+scripts\build_hong_kong_program_language_enriched.py:7:    "hong_kong_programs_duration_mode_enriched.csv"
+scripts\build_hong_kong_program_language_enriched.py:13:    "15_hong_kong_program_language_research_queue.csv"
+scripts\build_hong_kong_program_language_enriched.py:19:    "hong_kong_programs_language_enriched.csv"
+scripts\build_hong_kong_program_language_enriched.py:59:        clean(row["program_id"]): row
+scripts\build_hong_kong_program_language_enriched.py:69:        program_id = clean(
+scripts\build_hong_kong_program_language_enriched.py:70:            row["program_id"]
+scripts\build_hong_kong_program_language_enriched.py:74:        if program_id not in language_map:
+scripts\build_hong_kong_program_language_enriched.py:76:                f"Missing language research: {program_id}"
+scripts\build_hong_kong_program_language_enriched.py:80:        research = language_map[program_id]
+scripts\build_hong_kong_program_language_enriched.py:125:        row["program_id"]
+scripts\build_hong_kong_program_language_enriched.py:132:            "Duplicate programme IDs"
+scripts\build_hong_kong_program_language_enriched.py:142:                f"Missing language: {row['program_id']}"
+scripts\build_hong_kong_program_language_enriched.py:194:        "45 / 45 PROGRAMMES HAVE LANGUAGE DATA"
+scripts\build_hong_kong_program_master_rows.py:7:    "hong_kong_program_international_research_queue.csv"
+scripts\build_hong_kong_program_master_rows.py:12:    "hong_kong_programs_master_ready.csv"
+scripts\build_hong_kong_program_master_rows.py:15:EXPECTED_PROGRAM_COUNT = 45
+scripts\build_hong_kong_program_master_rows.py:17:EXPECTED_PROGRAM_IDS = [
+scripts\build_hong_kong_program_master_rows.py:22:PROGRAM_HEADERS = [
+scripts\build_hong_kong_program_master_rows.py:23:    "program_id",
+scripts\build_hong_kong_program_master_rows.py:25:    "program_name",
+scripts\build_hong_kong_program_master_rows.py:40:    "program_url",
+scripts\build_hong_kong_program_master_rows.py:57:        "PROGRAMME MASTER ROWS"
+scripts\build_hong_kong_program_master_rows.py:94:    if len(research_rows) != EXPECTED_PROGRAM_COUNT:
+scripts\build_hong_kong_program_master_rows.py:97:            f"{EXPECTED_PROGRAM_COUNT} research rows, "
+scripts\build_hong_kong_program_master_rows.py:105:    program_ids = [
+scripts\build_hong_kong_program_master_rows.py:106:        clean(row.get("program_id"))
+scripts\build_hong_kong_program_master_rows.py:110:    if len(program_ids) != len(set(program_ids)):
+scripts\build_hong_kong_program_master_rows.py:112:            "Duplicate program_id detected "
+scripts\build_hong_kong_program_master_rows.py:116:    if sorted(program_ids) != sorted(EXPECTED_PROGRAM_IDS):
+scripts\build_hong_kong_program_master_rows.py:118:            "Hong Kong program_id range does not match "
+scripts\build_hong_kong_program_master_rows.py:129:        program_id = clean(
+scripts\build_hong_kong_program_master_rows.py:130:            row.get("program_id")
+scripts\build_hong_kong_program_master_rows.py:137:        program_name = clean(
+scripts\build_hong_kong_program_master_rows.py:138:            row.get("program_name")
+scripts\build_hong_kong_program_master_rows.py:145:        program_url = clean(
+scripts\build_hong_kong_program_master_rows.py:146:            row.get("program_url")
+scripts\build_hong_kong_program_master_rows.py:150:            row.get("programme_identity_status")
+scripts\build_hong_kong_program_master_rows.py:159:                f"{program_id} is missing university_id."
+scripts\build_hong_kong_program_master_rows.py:162:        if not program_name:
+scripts\build_hong_kong_program_master_rows.py:164:                f"{program_id} is missing program_name."
+scripts\build_hong_kong_program_master_rows.py:169:                f"{program_id} has unexpected degree_level: "
+scripts\build_hong_kong_program_master_rows.py:173:        if not program_url:
+scripts\build_hong_kong_program_master_rows.py:175:                f"{program_id} is missing program_url."
+scripts\build_hong_kong_program_master_rows.py:180:                f"{program_id} programme identity "
+scripts\build_hong_kong_program_master_rows.py:186:                f"{program_id} is missing "
+scripts\build_hong_kong_program_master_rows.py:204:        program_id = clean(
+scripts\build_hong_kong_program_master_rows.py:205:            research.get("program_id")
+scripts\build_hong_kong_program_master_rows.py:212:        program_name = clean(
+scripts\build_hong_kong_program_master_rows.py:213:            research.get("program_name")
+scripts\build_hong_kong_program_master_rows.py:220:        program_url = clean(
+scripts\build_hong_kong_program_master_rows.py:221:            research.get("program_url")
+scripts\build_hong_kong_program_master_rows.py:231:                "program_id": program_id,
+scripts\build_hong_kong_program_master_rows.py:233:                "program_name": program_name,
+scripts\build_hong_kong_program_master_rows.py:255:                # Official programme identity source
+scripts\build_hong_kong_program_master_rows.py:256:                "program_url": program_url,
+scripts\build_hong_kong_program_master_rows.py:262:                # Full programme-detail verification
+scripts\build_hong_kong_program_master_rows.py:276:    if len(output_rows) != EXPECTED_PROGRAM_COUNT:
+scripts\build_hong_kong_program_master_rows.py:282:        row["program_id"]
+scripts\build_hong_kong_program_master_rows.py:286:    if output_ids != program_ids:
+scripts\build_hong_kong_program_master_rows.py:288:            "Program ID order changed during build."
+scripts\build_hong_kong_program_master_rows.py:293:            "Duplicate program_id detected "
+scripts\build_hong_kong_program_master_rows.py:298:        if list(row.keys()) != PROGRAM_HEADERS:
+scripts\build_hong_kong_program_master_rows.py:320:            fieldnames=PROGRAM_HEADERS,
+scripts\build_hong_kong_program_master_rows.py:341:        clean(row.get("program_id"))
+scripts\build_hong_kong_program_master_rows.py:346:        not clean(row.get("program_name"))
+scripts\build_hong_kong_program_master_rows.py:351:        not clean(row.get("program_url"))
+scripts\build_hong_kong_program_master_rows.py:363:        == sorted(EXPECTED_PROGRAM_IDS)
+scripts\build_hong_kong_program_master_rows.py:382:        written_headers == PROGRAM_HEADERS,
+scripts\build_hong_kong_program_master_rows.py:391:        "Duplicate programme IDs         :",
+scripts\build_hong_kong_program_master_rows.py:396:        "Blank programme names           :",
+scripts\build_hong_kong_program_master_rows.py:401:        "Blank programme URLs            :",
+scripts\build_hong_kong_program_master_rows.py:424:        and written_headers == PROGRAM_HEADERS
+scripts\build_hong_kong_program_master_rows.py:437:            "STEP 169.2D HONG KONG PROGRAMME "
+scripts\build_hong_kong_program_master_rows.py:441:            "45 / 45 VERIFIED PROGRAMME "
+scripts\build_hong_kong_program_master_rows.py:449:            "21-COLUMN PROGRAMME MASTER "
+scripts\build_hong_kong_program_master_rows.py:460:            "STEP 169.2D HONG KONG PROGRAMME "
+scripts\build_hong_kong_program_master_rows.py:474:        "WORKBOOK AND MONGODB WERE NOT MODIFIED"
+scripts\build_japan_program_master_rows.py:7:    "data/raw/japan_program_seed.csv"
+scripts\build_japan_program_master_rows.py:11:    "data/cleaned/japan_programs_master_ready.csv"
+scripts\build_japan_program_master_rows.py:16:EXPECTED_PROGRAM_COUNT = 36
+scripts\build_japan_program_master_rows.py:19:PROGRAM_HEADERS = [
+scripts\build_japan_program_master_rows.py:20:    "program_id",
+scripts\build_japan_program_master_rows.py:22:    "program_name",
+scripts\build_japan_program_master_rows.py:37:    "program_url",
+scripts\build_japan_program_master_rows.py:55:    # 2. Read Japan program seed
+scripts\build_japan_program_master_rows.py:67:        f"Seed program records: "
+scripts\build_japan_program_master_rows.py:71:    if len(seed_rows) != EXPECTED_PROGRAM_COUNT:
+scripts\build_japan_program_master_rows.py:74:            f"{EXPECTED_PROGRAM_COUNT} "
+scripts\build_japan_program_master_rows.py:75:            "Japan program records."
+scripts\build_japan_program_master_rows.py:110:            "program_slot"
+scripts\build_japan_program_master_rows.py:130:                f"invalid program slots: "
+scripts\build_japan_program_master_rows.py:148:        program_name = seed.get(
+scripts\build_japan_program_master_rows.py:149:            "program_name",
+scripts\build_japan_program_master_rows.py:158:        program_url = seed.get(
+scripts\build_japan_program_master_rows.py:170:                "A program record is missing "
+scripts\build_japan_program_master_rows.py:174:        if not program_name:
+scripts\build_japan_program_master_rows.py:176:                "A program record is missing "
+scripts\build_japan_program_master_rows.py:177:                "program_name."
+scripts\build_japan_program_master_rows.py:182:                f"{program_name} is missing "
+scripts\build_japan_program_master_rows.py:186:        if not program_url:
+scripts\build_japan_program_master_rows.py:188:                f"{program_name} is missing "
+scripts\build_japan_program_master_rows.py:192:        program_id = (
+scripts\build_japan_program_master_rows.py:198:                "program_id": program_id,
+scripts\build_japan_program_master_rows.py:200:                "program_name": program_name,
+scripts\build_japan_program_master_rows.py:223:                "program_url": program_url,
+scripts\build_japan_program_master_rows.py:236:    # 6. Check duplicate program IDs
+scripts\build_japan_program_master_rows.py:239:    program_ids = [
+scripts\build_japan_program_master_rows.py:240:        row["program_id"]
+scripts\build_japan_program_master_rows.py:245:        len(program_ids)
+scripts\build_japan_program_master_rows.py:246:        != len(set(program_ids))
+scripts\build_japan_program_master_rows.py:249:            "Duplicate program_id detected."
+scripts\build_japan_program_master_rows.py:268:            fieldnames=PROGRAM_HEADERS,
+scripts\build_japan_program_master_rows.py:297:        "=== Japan Program Master "
+scripts\build_japan_program_master_rows.py:307:        f"Programs: "
+scripts\build_japan_program_master_rows.py:320:        f"{len(PROGRAM_HEADERS)}"
+scripts\compare_scholarship_algorithms.py:1224:        "No MongoDB records were modified."
+scripts\create_hong_kong_program_language_research_queue.py:7:    "hong_kong_programs_duration_mode_enriched.csv"
+scripts\create_hong_kong_program_language_research_queue.py:12:    "15_hong_kong_program_language_research_queue.csv"
+scripts\create_hong_kong_program_language_research_queue.py:20:    "program_id",
+scripts\create_hong_kong_program_language_research_queue.py:22:    "program_name",
+scripts\create_hong_kong_program_language_research_queue.py:27:    "program_url",
+scripts\create_hong_kong_program_language_research_queue.py:60:            f"Expected {EXPECTED_COUNT} programmes."
+scripts\create_hong_kong_program_language_research_queue.py:65:        clean(row["program_id"])
+scripts\create_hong_kong_program_language_research_queue.py:72:            "Duplicate programme IDs detected."
+scripts\create_hong_kong_program_language_research_queue.py:83:                "program_id":
+scripts\create_hong_kong_program_language_research_queue.py:84:                    clean(row["program_id"]),
+scripts\create_hong_kong_program_language_research_queue.py:89:                "program_name":
+scripts\create_hong_kong_program_language_research_queue.py:90:                    clean(row["program_name"]),
+scripts\create_hong_kong_program_language_research_queue.py:104:                "program_url":
+scripts\create_hong_kong_program_language_research_queue.py:105:                    clean(row["program_url"]),
+scripts\create_hong_kong_program_language_research_queue.py:163:        "Duplicate programme IDs      : 0"
+scripts\create_hong_kong_program_language_research_queue.py:178:        "45 / 45 PROGRAMMES READY FOR "
+scripts\create_japan_program_seed.py:6:    "data/raw/japan_program_seed.csv"
+scripts\create_japan_program_seed.py:10:PROGRAMS = [
+scripts\create_japan_program_seed.py:158:        "International Master's/Doctoral Program in Information Science and Technology",
+scripts\create_japan_program_seed.py:166:        "International Master's/Doctoral Program in Electrical and Electronic Engineering",
+scripts\create_japan_program_seed.py:174:        "Master's Program in the Department of Design (Acoustic Design Course)",
+scripts\create_japan_program_seed.py:326:        "International Graduate Program",
+scripts\create_japan_program_seed.py:328:        "https://www.keio.ac.jp/en/st/admissions-en/masters_program/",
+scripts\create_japan_program_seed.py:334:        "International Graduate Program",
+scripts\create_japan_program_seed.py:336:        "https://www.keio.ac.jp/en/st/admissions-en/phd_program/",
+scripts\create_japan_program_seed.py:342:        "Double Degree Program",
+scripts\create_japan_program_seed.py:360:        program_slot,
+scripts\create_japan_program_seed.py:361:        program_name,
+scripts\create_japan_program_seed.py:364:    ) in PROGRAMS:
+scripts\create_japan_program_seed.py:371:                "program_slot": program_slot,
+scripts\create_japan_program_seed.py:372:                "program_name": program_name,
+scripts\create_japan_program_seed.py:376:                    "Program Identity Collected"
+scripts\create_japan_program_seed.py:388:        "program_slot",
+scripts\create_japan_program_seed.py:389:        "program_name",
+scripts\create_japan_program_seed.py:415:        "=== Japan Program Seed Created ==="
+scripts\create_japan_program_seed.py:422:        f"Program identities: "
+scripts\create_program_collection_queue.py:10:    "data/raw/program_collection_queue.csv"
+scripts\create_program_collection_queue.py:13:PROGRAMS_PER_UNIVERSITY = 3
+scripts\create_program_collection_queue.py:35:            PROGRAMS_PER_UNIVERSITY + 1,
+scripts\create_program_collection_queue.py:51:                    "program_slot": slot,
+scripts\create_program_collection_queue.py:52:                    "program_name": "",
+scripts\create_program_collection_queue.py:53:                    "program_url": "",
+scripts\create_program_collection_queue.py:68:        "program_slot",
+scripts\create_program_collection_queue.py:69:        "program_name",
+scripts\create_program_collection_queue.py:70:        "program_url",
+scripts\create_program_collection_queue.py:94:        "=== Program Collection Queue Created ==="
+scripts\create_program_collection_queue.py:100:        f"Programs per university: "
+scripts\create_program_collection_queue.py:101:        f"{PROGRAMS_PER_UNIVERSITY}"
+scripts\create_program_collection_queue.py:104:        f"Target program records: "
+scripts\create_program_tuition_context_staging.py:75:        "EduPath - Create Japan Program "
+scripts\create_program_tuition_context_staging.py:103:    # Load programs
+scripts\create_program_tuition_context_staging.py:106:    programs = fetch_all(
+scripts\create_program_tuition_context_staging.py:107:        "/api/programs"
+scripts\create_program_tuition_context_staging.py:110:    japan_programs = [
+scripts\create_program_tuition_context_staging.py:111:        program
+scripts\create_program_tuition_context_staging.py:112:        for program in programs
+scripts\create_program_tuition_context_staging.py:113:        if program.get("university_id")
+scripts\create_program_tuition_context_staging.py:124:        "Japan programs found:",
+scripts\create_program_tuition_context_staging.py:125:        len(japan_programs),
+scripts\create_program_tuition_context_staging.py:128:    if not japan_programs:
+scripts\create_program_tuition_context_staging.py:130:            "No Japan programs found."
+scripts\create_program_tuition_context_staging.py:147:        / "25_japan_program_tuition_context_staging.csv"
+scripts\create_program_tuition_context_staging.py:155:        "program_id",
+scripts\create_program_tuition_context_staging.py:158:        "program_name",
+scripts\create_program_tuition_context_staging.py:171:        "current_program_url",
+scripts\create_program_tuition_context_staging.py:179:    sorted_programs = sorted(
+scripts\create_program_tuition_context_staging.py:180:        japan_programs,
+scripts\create_program_tuition_context_staging.py:181:        key=lambda program: (
+scripts\create_program_tuition_context_staging.py:183:                program.get("university_id"),
+scripts\create_program_tuition_context_staging.py:186:            program.get(
+scripts\create_program_tuition_context_staging.py:190:            program.get(
+scripts\create_program_tuition_context_staging.py:191:                "program_name",
+scripts\create_program_tuition_context_staging.py:209:        for program in sorted_programs:
+scripts\create_program_tuition_context_staging.py:211:                program.get(
+scripts\create_program_tuition_context_staging.py:218:                    "program_id":
+scripts\create_program_tuition_context_staging.py:219:                        program.get(
+scripts\create_program_tuition_context_staging.py:220:                            "program_id"
+scripts\create_program_tuition_context_staging.py:232:                    "program_name":
+scripts\create_program_tuition_context_staging.py:233:                        program.get(
+scripts\create_program_tuition_context_staging.py:234:                            "program_name"
+scripts\create_program_tuition_context_staging.py:238:                        program.get(
+scripts\create_program_tuition_context_staging.py:243:                        program.get(
+scripts\create_program_tuition_context_staging.py:248:                        program.get(
+scripts\create_program_tuition_context_staging.py:253:                        program.get(
+scripts\create_program_tuition_context_staging.py:276:                    "current_program_url":
+scripts\create_program_tuition_context_staging.py:277:                        program.get(
+scripts\create_program_tuition_context_staging.py:278:                            "program_url"
+scripts\create_program_tuition_context_staging.py:282:                        program.get(
+scripts\create_program_tuition_context_staging.py:294:        "Programs exported:",
+scripts\create_program_tuition_context_staging.py:295:        len(sorted_programs),
+scripts\create_program_tuition_context_staging.py:311:        "No MongoDB records were modified."
+scripts\dry_run_program_tuition_mongodb_update.py:40:EXPECTED_PROGRAM_COUNT = 36
+scripts\dry_run_program_tuition_mongodb_update.py:51:COLLECTION_NAME = "programs"
+scripts\dry_run_program_tuition_mongodb_update.py:119:        "EduPath - Program Tuition "
+scripts\dry_run_program_tuition_mongodb_update.py:120:        "MongoDB Update DRY RUN"
+scripts\dry_run_program_tuition_mongodb_update.py:132:        / "29_japan_program_tuition_context_all_verified.csv"
+scripts\dry_run_program_tuition_mongodb_update.py:148:        "Checking MongoDB connection..."
+scripts\dry_run_program_tuition_mongodb_update.py:156:        "MongoDB connection: OK"
+scripts\dry_run_program_tuition_mongodb_update.py:174:        "MongoDB collections:"
+scripts\dry_run_program_tuition_mongodb_update.py:202:    programs_collection = (
+scripts\dry_run_program_tuition_mongodb_update.py:233:        != EXPECTED_PROGRAM_COUNT
+scripts\dry_run_program_tuition_mongodb_update.py:237:            f"{EXPECTED_PROGRAM_COUNT} "
+scripts\dry_run_program_tuition_mongodb_update.py:238:            "program rows but found "
+scripts\dry_run_program_tuition_mongodb_update.py:261:    # Compare CSV to MongoDB
+scripts\dry_run_program_tuition_mongodb_update.py:270:        "PROGRAM COMPARISON"
+scripts\dry_run_program_tuition_mongodb_update.py:278:        program_id = clean_text(
+scripts\dry_run_program_tuition_mongodb_update.py:280:                "program_id"
+scripts\dry_run_program_tuition_mongodb_update.py:284:        if not program_id:
+scripts\dry_run_program_tuition_mongodb_update.py:286:                "Blank program_id "
+scripts\dry_run_program_tuition_mongodb_update.py:291:            programs_collection.find_one(
+scripts\dry_run_program_tuition_mongodb_update.py:293:                    "program_id":
+scripts\dry_run_program_tuition_mongodb_update.py:294:                        program_id
+scripts\dry_run_program_tuition_mongodb_update.py:299:                    "program_id": 1,
+scripts\dry_run_program_tuition_mongodb_update.py:301:                    "program_name": 1,
+scripts\dry_run_program_tuition_mongodb_update.py:326:                program_id
+scripts\dry_run_program_tuition_mongodb_update.py:373:        # MongoDB should still equal the
+scripts\dry_run_program_tuition_mongodb_update.py:383:                    "program_id":
+scripts\dry_run_program_tuition_mongodb_update.py:384:                        program_id,
+scripts\dry_run_program_tuition_mongodb_update.py:402:                program_id
+scripts\dry_run_program_tuition_mongodb_update.py:406:                program_id
+scripts\dry_run_program_tuition_mongodb_update.py:411:                    program_id
+scripts\dry_run_program_tuition_mongodb_update.py:419:                    program_id
+scripts\dry_run_program_tuition_mongodb_update.py:428:                    program_id
+scripts\dry_run_program_tuition_mongodb_update.py:472:                    program_id
+scripts\dry_run_program_tuition_mongodb_update.py:477:                    program_id
+scripts\dry_run_program_tuition_mongodb_update.py:482:                program_id
+scripts\dry_run_program_tuition_mongodb_update.py:503:        "CSV program records:",
+scripts\dry_run_program_tuition_mongodb_update.py:508:        "MongoDB programs found:",
+scripts\dry_run_program_tuition_mongodb_update.py:513:        "Missing MongoDB program IDs:",
+scripts\dry_run_program_tuition_mongodb_update.py:520:        "Programs requiring "
+scripts\dry_run_program_tuition_mongodb_update.py:526:        "Context-only program updates:",
+scripts\dry_run_program_tuition_mongodb_update.py:531:        "Programs already containing "
+scripts\dry_run_program_tuition_mongodb_update.py:548:        "MongoDB baseline mismatches:",
+scripts\dry_run_program_tuition_mongodb_update.py:571:    for program_id in sorted(
+scripts\dry_run_program_tuition_mongodb_update.py:575:            f"{program_id}: "
+scripts\dry_run_program_tuition_mongodb_update.py:590:            "Missing MongoDB program IDs: "
+scripts\dry_run_program_tuition_mongodb_update.py:603:                f"{mismatch['program_id']}: "
+scripts\dry_run_program_tuition_mongodb_update.py:604:                "MongoDB tuition "
+scripts\dry_run_program_tuition_mongodb_update.py:633:            "program set.\n"
+scripts\dry_run_program_tuition_mongodb_update.py:691:        "MongoDB currently matches the "
+scripts\dry_run_program_tuition_mongodb_update.py:701:        "The remaining programs are ready "
+scripts\enrich_hong_kong_program_fields.py:8:    "hong_kong_programs_master_ready.csv"
+scripts\enrich_hong_kong_program_fields.py:13:    "hong_kong_programs_fields_enriched.csv"
+scripts\enrich_hong_kong_program_fields.py:140:        clean(row.get("program_id"))
+scripts\enrich_hong_kong_program_fields.py:146:            "Program ID range does not match "
+scripts\enrich_hong_kong_program_fields.py:152:            "Duplicate program_id detected."
+scripts\enrich_hong_kong_program_fields.py:164:        row["program_id"]
+scripts\enrich_hong_kong_program_fields.py:177:        program_id = clean(
+scripts\enrich_hong_kong_program_fields.py:178:            row.get("program_id")
+scripts\enrich_hong_kong_program_fields.py:182:            FIELD_MAPPING[program_id]
+scripts\enrich_hong_kong_program_fields.py:186:        row["program_id"]
+scripts\enrich_hong_kong_program_fields.py:233:        clean(row.get("program_id"))
+scripts\enrich_hong_kong_program_fields.py:262:        "Duplicate programme IDs         :",
+scripts\enrich_hong_kong_program_fields.py:306:            "45 / 45 PROGRAMMES HAVE "
+scripts\enrich_hong_kong_program_fields.py:341:        "WORKBOOK AND MONGODB WERE NOT MODIFIED"
+scripts\enrich_japan_program_duration_mode.py:6:    "data/cleaned/japan_programs_language_enriched.csv"
+scripts\enrich_japan_program_duration_mode.py:10:    "data/cleaned/japan_programs_duration_mode_enriched.csv"
+scripts\enrich_japan_program_duration_mode.py:14:    "planning/13_japan_program_duration_mode_audit.csv"
+scripts\enrich_japan_program_duration_mode.py:32:# Program-specific duration exceptions
+scripts\enrich_japan_program_duration_mode.py:38:    # five-year integrated doctoral program.
+scripts\enrich_japan_program_duration_mode.py:58:        "Undergraduate university programs "
+scripts\enrich_japan_program_duration_mode.py:74:        "Master's programs generally require "
+scripts\enrich_japan_program_duration_mode.py:81:PROGRAM_SOURCE_OVERRIDES = {
+scripts\enrich_japan_program_duration_mode.py:94:            "degree program."
+scripts\enrich_japan_program_duration_mode.py:101:            "Program Master's"
+scripts\enrich_japan_program_duration_mode.py:106:            "masters_program/"
+scripts\enrich_japan_program_duration_mode.py:111:            "a two-year Master's program."
+scripts\enrich_japan_program_duration_mode.py:118:            "Program Doctoral"
+scripts\enrich_japan_program_duration_mode.py:123:            "phd_program/"
+scripts\enrich_japan_program_duration_mode.py:128:            "a three-year doctoral program."
+scripts\enrich_japan_program_duration_mode.py:134:            "Keio Double Degree Program"
+scripts\enrich_japan_program_duration_mode.py:142:            "Program requires at least "
+scripts\enrich_japan_program_duration_mode.py:150:    program_id: str,
+scripts\enrich_japan_program_duration_mode.py:153:    if program_id in DURATION_OVERRIDES:
+scripts\enrich_japan_program_duration_mode.py:155:            program_id
+scripts\enrich_japan_program_duration_mode.py:165:            f"{program_id} / {degree_level}"
+scripts\enrich_japan_program_duration_mode.py:172:    program_id: str,
+scripts\enrich_japan_program_duration_mode.py:176:        program_id
+scripts\enrich_japan_program_duration_mode.py:177:        in PROGRAM_SOURCE_OVERRIDES
+scripts\enrich_japan_program_duration_mode.py:179:        return PROGRAM_SOURCE_OVERRIDES[
+scripts\enrich_japan_program_duration_mode.py:180:            program_id
+scripts\enrich_japan_program_duration_mode.py:194:        f"{program_id}"
+scripts\enrich_japan_program_duration_mode.py:226:            "Japan program records."
+scripts\enrich_japan_program_duration_mode.py:232:        program_id = row[
+scripts\enrich_japan_program_duration_mode.py:233:            "program_id"
+scripts\enrich_japan_program_duration_mode.py:245:            program_id,
+scripts\enrich_japan_program_duration_mode.py:250:            program_id,
+scripts\enrich_japan_program_duration_mode.py:268:        # programs. It is NOT a claim that
+scripts\enrich_japan_program_duration_mode.py:305:                "program_id": program_id,
+scripts\enrich_japan_program_duration_mode.py:309:                "program_name": row[
+scripts\enrich_japan_program_duration_mode.py:310:                    "program_name"
+scripts\enrich_japan_program_duration_mode.py:339:                    "program records; "
+scripts\enrich_japan_program_duration_mode.py:355:        row["program_id"]
+scripts\enrich_japan_program_duration_mode.py:363:        row["program_id"]
+scripts\enrich_japan_program_duration_mode.py:420:        "program_id",
+scripts\enrich_japan_program_duration_mode.py:422:        "program_name",
+scripts\enrich_japan_program_duration_mode.py:470:        "=== Japan Program Duration + "
+scripts\enrich_japan_program_duration_mode.py:475:        f"Programs enriched: "
+scripts\enrich_japan_program_duration_mode.py:491:            f"{count} programs"
+scripts\enrich_japan_program_duration_mode.py:502:        f"{len(rows)} programs"
+scripts\enrich_japan_program_fields.py:6:    "data/cleaned/japan_programs_master_ready.csv"
+scripts\enrich_japan_program_fields.py:10:    "data/cleaned/japan_programs_fields_enriched.csv"
+scripts\enrich_japan_program_fields.py:88:        f"Input program records: {len(rows)}"
+scripts\enrich_japan_program_fields.py:94:            "Japan program records."
+scripts\enrich_japan_program_fields.py:100:        program_id = row[
+scripts\enrich_japan_program_fields.py:101:            "program_id"
+scripts\enrich_japan_program_fields.py:105:            program_id
+scripts\enrich_japan_program_fields.py:110:                program_id
+scripts\enrich_japan_program_fields.py:127:        row["program_id"]
+scripts\enrich_japan_program_fields.py:175:        "=== Japan Program Field "
+scripts\enrich_japan_program_fields.py:180:        f"Programs enriched: "
+scripts\enrich_japan_program_intake_deadline.py:7:    "japan_programs_requirements_enriched.csv"
+scripts\enrich_japan_program_intake_deadline.py:12:    "japan_programs_intake_deadline_enriched.csv"
+scripts\enrich_japan_program_intake_deadline.py:17:    "15_japan_program_intake_deadline_audit.csv"
+scripts\enrich_japan_program_intake_deadline.py:29:# safely to the seed program / admission route.
+scripts\enrich_japan_program_intake_deadline.py:40:    # AY2027 Two-Year Master's Program
+scripts\enrich_japan_program_intake_deadline.py:126:            "en/013/graduate/programs/"
+scripts\enrich_japan_program_intake_deadline.py:144:            "en/013/graduate/programs/"
+scripts\enrich_japan_program_intake_deadline.py:155:    # Waseda English-based Graduate Program
+scripts\enrich_japan_program_intake_deadline.py:163:            "Program April 2027"
+scripts\enrich_japan_program_intake_deadline.py:180:            "Program April 2027"
+scripts\enrich_japan_program_intake_deadline.py:197:            "Program April 2027"
+scripts\enrich_japan_program_intake_deadline.py:286:            "International Graduate Programs"
+scripts\enrich_japan_program_intake_deadline.py:293:            "Program-level admission information "
+scripts\enrich_japan_program_intake_deadline.py:299:            "three seed programs was not safely "
+scripts\enrich_japan_program_intake_deadline.py:317:            "No single program-level deadline "
+scripts\enrich_japan_program_intake_deadline.py:338:            "Programs can have different "
+scripts\enrich_japan_program_intake_deadline.py:358:            "whole program."
+scripts\enrich_japan_program_intake_deadline.py:412:            "Japan program records."
+scripts\enrich_japan_program_intake_deadline.py:421:        program_id = row[
+scripts\enrich_japan_program_intake_deadline.py:422:            "program_id"
+scripts\enrich_japan_program_intake_deadline.py:430:            program_id
+scripts\enrich_japan_program_intake_deadline.py:463:                "program/admission route."
+scripts\enrich_japan_program_intake_deadline.py:515:                    "program source"
+scripts\enrich_japan_program_intake_deadline.py:519:                    "program_url",
+scripts\enrich_japan_program_intake_deadline.py:524:                    "Program source retained."
+scripts\enrich_japan_program_intake_deadline.py:529:                    "program-level intake and "
+scripts\enrich_japan_program_intake_deadline.py:573:                "program_id": program_id,
+scripts\enrich_japan_program_intake_deadline.py:577:                "program_name": row[
+scripts\enrich_japan_program_intake_deadline.py:578:                    "program_name"
+scripts\enrich_japan_program_intake_deadline.py:644:        "program_id",
+scripts\enrich_japan_program_intake_deadline.py:646:        "program_name",
+scripts\enrich_japan_program_intake_deadline.py:679:        f"Programs reviewed: "
+scripts\enrich_japan_program_language.py:6:    "data/cleaned/japan_programs_tuition_enriched.csv"
+scripts\enrich_japan_program_language.py:10:    "data/cleaned/japan_programs_language_enriched.csv"
+scripts\enrich_japan_program_language.py:14:    "planning/12_japan_program_language_audit.csv"
+scripts\enrich_japan_program_language.py:26:#   fully English-taught degree/program.
+scripts\enrich_japan_program_language.py:30:#   but this seed program is not automatically
+scripts\enrich_japan_program_language.py:38:#   Official source states the standard program
+scripts\enrich_japan_program_language.py:47:ENGLISH_PROGRAMS = {
+scripts\enrich_japan_program_language.py:48:    # Kyushu University international programs
+scripts\enrich_japan_program_language.py:54:    # Computer Science English Program
+scripts\enrich_japan_program_language.py:57:    # Keio International Graduate Program
+scripts\enrich_japan_program_language.py:63:ENGLISH_AVAILABLE_PROGRAMS = {
+scripts\enrich_japan_program_language.py:64:    # UTokyo English Program in IST
+scripts\enrich_japan_program_language.py:69:    # Kyoto International Program
+scripts\enrich_japan_program_language.py:73:    # Science Tokyo International Graduate Program
+scripts\enrich_japan_program_language.py:78:    # Waseda English-based graduate programs
+scripts\enrich_japan_program_language.py:88:MIXED_PROGRAMS = {
+scripts\enrich_japan_program_language.py:91:    # but the full English International Program
+scripts\enrich_japan_program_language.py:105:JAPANESE_PROGRAMS = {
+scripts\enrich_japan_program_language.py:116:UNKNOWN_PROGRAMS = {
+scripts\enrich_japan_program_language.py:141:            "UTokyo English Program "
+scripts\enrich_japan_program_language.py:153:            "of Informatics International Program"
+scripts\enrich_japan_program_language.py:157:            "en/education/intl_program/"
+scripts\enrich_japan_program_language.py:197:            "International Graduate Programs"
+scripts\enrich_japan_program_language.py:218:            "International Graduate Programs"
+scripts\enrich_japan_program_language.py:222:            "013/graduate/programs/"
+scripts\enrich_japan_program_language.py:251:            "English-based Graduate Programs"
+scripts\enrich_japan_program_language.py:262:            "Degree Programs Offered in English"
+scripts\enrich_japan_program_language.py:267:            "programs-offered-in-english/"
+scripts\enrich_japan_program_language.py:273:PROGRAM_SOURCE_OVERRIDES = {
+scripts\enrich_japan_program_language.py:277:            "Computer Science English Program"
+scripts\enrich_japan_program_language.py:309:    program_id: str,
+scripts\enrich_japan_program_language.py:311:    if program_id in ENGLISH_PROGRAMS:
+scripts\enrich_japan_program_language.py:314:    if program_id in ENGLISH_AVAILABLE_PROGRAMS:
+scripts\enrich_japan_program_language.py:317:    if program_id in MIXED_PROGRAMS:
+scripts\enrich_japan_program_language.py:320:    if program_id in JAPANESE_PROGRAMS:
+scripts\enrich_japan_program_language.py:323:    if program_id in UNKNOWN_PROGRAMS:
+scripts\enrich_japan_program_language.py:328:        f"{program_id}"
+scripts\enrich_japan_program_language.py:333:    program_id: str,
+scripts\enrich_japan_program_language.py:337:        program_id
+scripts\enrich_japan_program_language.py:338:        in PROGRAM_SOURCE_OVERRIDES
+scripts\enrich_japan_program_language.py:340:        return PROGRAM_SOURCE_OVERRIDES[
+scripts\enrich_japan_program_language.py:341:            program_id
+scripts\enrich_japan_program_language.py:363:            "an English-taught degree/program."
+scripts\enrich_japan_program_language.py:368:            "degree pathway, but this program "
+scripts\enrich_japan_program_language.py:382:            "program is basically conducted "
+scripts\enrich_japan_program_language.py:427:            "Japan program records."
+scripts\enrich_japan_program_language.py:433:        program_id = row[
+scripts\enrich_japan_program_language.py:434:            "program_id"
+scripts\enrich_japan_program_language.py:442:            program_id
+scripts\enrich_japan_program_language.py:446:            program_id,
+scripts\enrich_japan_program_language.py:487:                "program_id": program_id,
+scripts\enrich_japan_program_language.py:491:                "program_name": row[
+scripts\enrich_japan_program_language.py:492:                    "program_name"
+scripts\enrich_japan_program_language.py:517:        row["program_id"]
+scripts\enrich_japan_program_language.py:564:        "program_id",
+scripts\enrich_japan_program_language.py:566:        "program_name",
+scripts\enrich_japan_program_language.py:611:        "=== Japan Program Language "
+scripts\enrich_japan_program_language.py:616:        f"Programs checked: "
+scripts\enrich_japan_program_requirements.py:7:    "japan_programs_duration_mode_enriched.csv"
+scripts\enrich_japan_program_requirements.py:12:    "japan_programs_requirements_enriched.csv"
+scripts\enrich_japan_program_requirements.py:17:    "14_japan_program_requirements_audit.csv"
+scripts\enrich_japan_program_requirements.py:55:            "been verified for all seed programs."
+scripts\enrich_japan_program_requirements.py:134:            "Program-specific verification required"
+scripts\enrich_japan_program_requirements.py:148:            "current program-specific guide."
+scripts\enrich_japan_program_requirements.py:158:            "on international program"
+scripts\enrich_japan_program_requirements.py:163:            "all three seed programs"
+scripts\enrich_japan_program_requirements.py:171:            "score to every graduate program."
+scripts\enrich_japan_program_requirements.py:228:            "Program-specific language "
+scripts\enrich_japan_program_requirements.py:232:            "Program-specific"
+scripts\enrich_japan_program_requirements.py:242:            "Special international programs "
+scripts\enrich_japan_program_requirements.py:324:# Program-specific overrides
+scripts\enrich_japan_program_requirements.py:327:PROGRAM_OVERRIDES = {
+scripts\enrich_japan_program_requirements.py:328:    # Keio International Graduate Program Doctoral
+scripts\enrich_japan_program_requirements.py:359:    program_id: str,
+scripts\enrich_japan_program_requirements.py:375:    override = PROGRAM_OVERRIDES.get(
+scripts\enrich_japan_program_requirements.py:376:        program_id
+scripts\enrich_japan_program_requirements.py:416:            "Japan program records."
+scripts\enrich_japan_program_requirements.py:422:        program_id = row[
+scripts\enrich_japan_program_requirements.py:423:            "program_id"
+scripts\enrich_japan_program_requirements.py:431:            program_id,
+scripts\enrich_japan_program_requirements.py:445:        # a true program-level numeric
+scripts\enrich_japan_program_requirements.py:482:                "program_id": program_id,
+scripts\enrich_japan_program_requirements.py:484:                "program_name": row[
+scripts\enrich_japan_program_requirements.py:485:                    "program_name"
+scripts\enrich_japan_program_requirements.py:553:        "program_id",
+scripts\enrich_japan_program_requirements.py:555:        "program_name",
+scripts\enrich_japan_program_requirements.py:592:        f"Programs reviewed: "
+scripts\enrich_japan_program_tuition.py:6:    "data/cleaned/japan_programs_fields_enriched.csv"
+scripts\enrich_japan_program_tuition.py:10:    "data/cleaned/japan_programs_tuition_enriched.csv"
+scripts\enrich_japan_program_tuition.py:14:    "planning/11_japan_program_tuition_audit.csv"
+scripts\enrich_japan_program_tuition.py:223:            "Japan program records."
+scripts\enrich_japan_program_tuition.py:229:        program_id = row[
+scripts\enrich_japan_program_tuition.py:230:            "program_id"
+scripts\enrich_japan_program_tuition.py:278:                "program_id": program_id,
+scripts\enrich_japan_program_tuition.py:280:                "program_name": row[
+scripts\enrich_japan_program_tuition.py:281:                    "program_name"
+scripts\enrich_japan_program_tuition.py:301:        row["program_id"]
+scripts\enrich_japan_program_tuition.py:340:        "program_id",
+scripts\enrich_japan_program_tuition.py:342:        "program_name",
+scripts\enrich_japan_program_tuition.py:388:        f"Programs enriched: {len(rows)}"
+scripts\enrich_japan_program_tuition.py:392:        f"Programs with tuition: "
+scripts\enrich_japan_program_tuition.py:408:            f"{count} programs"
+scripts\finalize_scholarship_algorithm_v22.py:505:        backup_file = (
+scripts\finalize_scholarship_algorithm_v22.py:507:            / "backups"
+scripts\finalize_scholarship_algorithm_v22.py:514:        backup_file.parent.mkdir(
+scripts\finalize_scholarship_algorithm_v22.py:521:            backup_file,
+scripts\finalize_scholarship_algorithm_v22.py:529:            backup_file
+scripts\finalize_scholarship_algorithm_v22.py:1002:        "No MongoDB records were modified."
+scripts\freeze_hong_kong_language_l1_prepare_l2.py:8:    "15_hong_kong_program_language_research_queue.csv"
+scripts\freeze_hong_kong_language_l1_prepare_l2.py:12:BACKUP_DIR = Path(
+scripts\freeze_hong_kong_language_l1_prepare_l2.py:13:    "data/backups/"
+scripts\freeze_hong_kong_language_l1_prepare_l2.py:58:    BACKUP_DIR.mkdir(
+scripts\freeze_hong_kong_language_l1_prepare_l2.py:64:    backup_path = (
+scripts\freeze_hong_kong_language_l1_prepare_l2.py:65:        BACKUP_DIR /
+scripts\freeze_hong_kong_language_l1_prepare_l2.py:66:        "hong_kong_program_language_queue_post_l1_frozen.csv"
+scripts\freeze_hong_kong_language_l1_prepare_l2.py:72:        backup_path
+scripts\freeze_hong_kong_language_l1_prepare_l2.py:89:        if clean(row["program_id"]) in L1_IDS
+scripts\freeze_hong_kong_language_l1_prepare_l2.py:96:        if clean(row["program_id"]) in L2_IDS
+scripts\freeze_hong_kong_language_l1_prepare_l2.py:179:        f"Frozen snapshot                 : {backup_path}"
+scripts\freeze_hong_kong_language_l1_prepare_l2.py:205:            "15 / 15 L1 PROGRAMMES ARE FROZEN"
+scripts\freeze_hong_kong_language_l1_prepare_l2.py:209:            "15 / 15 L2 PROGRAMMES ARE READY"
+scripts\freeze_hong_kong_language_l1_prepare_l2.py:232:        "NO CLEANED DATASET OR MONGODB WAS MODIFIED"
+scripts\freeze_hong_kong_language_l2_prepare_l3.py:8:    "15_hong_kong_program_language_research_queue.csv"
+scripts\freeze_hong_kong_language_l2_prepare_l3.py:12:BACKUP_DIR = Path(
+scripts\freeze_hong_kong_language_l2_prepare_l3.py:13:    "data/backups/"
+scripts\freeze_hong_kong_language_l2_prepare_l3.py:49:    BACKUP_DIR.mkdir(
+scripts\freeze_hong_kong_language_l2_prepare_l3.py:56:        BACKUP_DIR /
+scripts\freeze_hong_kong_language_l2_prepare_l3.py:57:        "hong_kong_program_language_queue_post_l2_frozen.csv"
+scripts\freeze_hong_kong_language_l2_prepare_l3.py:79:            row["program_id"] in L1_IDS
+scripts\freeze_hong_kong_language_l2_prepare_l3.py:80:            or row["program_id"] in L2_IDS
+scripts\freeze_hong_kong_language_l2_prepare_l3.py:88:        if row["program_id"] in L3_IDS
+scripts\freeze_hong_kong_language_l2_prepare_l3.py:172:            "30 / 30 L1 + L2 PROGRAMMES ARE FROZEN"
+scripts\freeze_hong_kong_language_l2_prepare_l3.py:176:            "15 / 15 L3 PROGRAMMES ARE READY"
+scripts\import_university_batch.py:420:            "Write validated records to MongoDB. "
+scripts\load_countries_to_mongodb.py:33:MONGODB_URI = os.getenv("MONGODB_URI")
+scripts\load_countries_to_mongodb.py:36:    "MONGODB_DATABASE",
+scripts\load_countries_to_mongodb.py:95:    """Prepare one cleaned country record for MongoDB."""
+scripts\load_countries_to_mongodb.py:149:    """Load cleaned country records into MongoDB Atlas."""
+scripts\load_countries_to_mongodb.py:152:    print("EduPath MongoDB Country Loader")
+scripts\load_countries_to_mongodb.py:161:    if not MONGODB_URI:
+scripts\load_countries_to_mongodb.py:163:            "MONGODB_URI is missing from the .env file."
+scripts\load_countries_to_mongodb.py:172:    print("Connecting to MongoDB Atlas...")
+scripts\load_countries_to_mongodb.py:175:        MONGODB_URI,
+scripts\load_countries_to_mongodb.py:382:            "\nMongoDB country loading "
+scripts\load_countries_to_mongodb.py:388:            "A MongoDB operation failed.\n"
+scripts\load_countries_to_mongodb.py:395:        print("MongoDB connection closed safely.")
+scripts\load_japan_programs_into_full_dataset.py:12:    "japan_programs_intake_deadline_enriched.csv"
+scripts\load_japan_programs_into_full_dataset.py:19:SHEET_NAME = "programs"
+scripts\load_japan_programs_into_full_dataset.py:23:    "program_id",
+scripts\load_japan_programs_into_full_dataset.py:25:    "program_name",
+scripts\load_japan_programs_into_full_dataset.py:40:    "program_url",
+scripts\load_japan_programs_into_full_dataset.py:47:EXPECTED_JAPAN_PROGRAMS = 36
+scripts\load_japan_programs_into_full_dataset.py:114:def is_japan_program(
+scripts\load_japan_programs_into_full_dataset.py:115:    program_id,
+scripts\load_japan_programs_into_full_dataset.py:118:    program_id = (
+scripts\load_japan_programs_into_full_dataset.py:119:        str(program_id).strip()
+scripts\load_japan_programs_into_full_dataset.py:120:        if program_id is not None
+scripts\load_japan_programs_into_full_dataset.py:131:        program_id.startswith(
+scripts\load_japan_programs_into_full_dataset.py:158:    # 2. Read Japan program dataset
+scripts\load_japan_programs_into_full_dataset.py:175:                "Japan program CSV headers "
+scripts\load_japan_programs_into_full_dataset.py:177:                "21-column program schema."
+scripts\load_japan_programs_into_full_dataset.py:183:        f"Japan program CSV records: "
+scripts\load_japan_programs_into_full_dataset.py:189:        != EXPECTED_JAPAN_PROGRAMS
+scripts\load_japan_programs_into_full_dataset.py:193:            f"{EXPECTED_JAPAN_PROGRAMS} "
+scripts\load_japan_programs_into_full_dataset.py:194:            "Japan program records."
+scripts\load_japan_programs_into_full_dataset.py:202:    source_program_ids = [
+scripts\load_japan_programs_into_full_dataset.py:203:        row["program_id"].strip()
+scripts\load_japan_programs_into_full_dataset.py:208:        len(source_program_ids)
+scripts\load_japan_programs_into_full_dataset.py:209:        != len(set(source_program_ids))
+scripts\load_japan_programs_into_full_dataset.py:212:            "Duplicate program_id found "
+scripts\load_japan_programs_into_full_dataset.py:217:        row["program_id"]
+scripts\load_japan_programs_into_full_dataset.py:220:            "program_id"
+scripts\load_japan_programs_into_full_dataset.py:230:            "Japan program dataset: "
+scripts\load_japan_programs_into_full_dataset.py:237:    # 4. Safety backup
+scripts\load_japan_programs_into_full_dataset.py:244:    backup_path = (
+scripts\load_japan_programs_into_full_dataset.py:247:            f"japan_program_load_"
+scripts\load_japan_programs_into_full_dataset.py:254:        backup_path,
+scripts\load_japan_programs_into_full_dataset.py:258:        f"Backup created: "
+scripts\load_japan_programs_into_full_dataset.py:259:        f"{backup_path}"
+scripts\load_japan_programs_into_full_dataset.py:301:            "Programs sheet headers "
+scripts\load_japan_programs_into_full_dataset.py:307:        "Workbook program schema: OK"
+scripts\load_japan_programs_into_full_dataset.py:387:            program_id = values[0]
+scripts\load_japan_programs_into_full_dataset.py:390:            if is_japan_program(
+scripts\load_japan_programs_into_full_dataset.py:391:                program_id,
+scripts\load_japan_programs_into_full_dataset.py:401:        "Existing non-Japan programs "
+scripts\load_japan_programs_into_full_dataset.py:481:    # 11. Append 36 Japan programs
+scripts\load_japan_programs_into_full_dataset.py:484:    for program in japan_rows:
+scripts\load_japan_programs_into_full_dataset.py:500:                program.get(
+scripts\load_japan_programs_into_full_dataset.py:610:    saved_program_ids = []
+scripts\load_japan_programs_into_full_dataset.py:629:        program_id = values[0]
+scripts\load_japan_programs_into_full_dataset.py:632:        if program_id is not None:
+scripts\load_japan_programs_into_full_dataset.py:633:            saved_program_ids.append(
+scripts\load_japan_programs_into_full_dataset.py:634:                str(program_id)
+scripts\load_japan_programs_into_full_dataset.py:637:        if is_japan_program(
+scripts\load_japan_programs_into_full_dataset.py:638:            program_id,
+scripts\load_japan_programs_into_full_dataset.py:651:        != EXPECTED_JAPAN_PROGRAMS
+scripts\load_japan_programs_into_full_dataset.py:655:            f"expected 36 Japan programs, "
+scripts\load_japan_programs_into_full_dataset.py:660:        len(saved_program_ids)
+scripts\load_japan_programs_into_full_dataset.py:661:        != len(set(saved_program_ids))
+scripts\load_japan_programs_into_full_dataset.py:665:            "duplicate program IDs exist "
+scripts\load_japan_programs_into_full_dataset.py:670:        set(source_program_ids)
+scripts\load_japan_programs_into_full_dataset.py:671:        - set(saved_program_ids)
+scripts\load_japan_programs_into_full_dataset.py:677:            "some Japan program IDs "
+scripts\load_japan_programs_into_full_dataset.py:690:        "=== Japan Program Bulk "
+scripts\load_japan_programs_into_full_dataset.py:695:        f"Japan programs inserted: "
+scripts\load_japan_programs_into_full_dataset.py:700:        f"Non-Japan programs preserved: "
+scripts\load_japan_programs_into_full_dataset.py:705:        f"Total programs in workbook: "
+scripts\load_japan_programs_into_full_dataset.py:715:        f"Safety backup: "
+scripts\load_japan_programs_into_full_dataset.py:716:        f"{backup_path}"
+scripts\load_programs_to_mongodb.py:28:    / "programs.json"
+scripts\load_programs_to_mongodb.py:33:MONGODB_URI = os.getenv("MONGODB_URI")
+scripts\load_programs_to_mongodb.py:36:    "MONGODB_DATABASE",
+scripts\load_programs_to_mongodb.py:40:PROGRAMS_COLLECTION = "programs"
+scripts\load_programs_to_mongodb.py:94:    Create a stable hash representing the programme content.
+scripts\load_programs_to_mongodb.py:96:    If the programme data does not change, this hash remains
+scripts\load_programs_to_mongodb.py:115:    """Prepare one cleaned programme record for MongoDB."""
+scripts\load_programs_to_mongodb.py:147:    """Read programme records from the cleaned JSON file."""
+scripts\load_programs_to_mongodb.py:151:            "The cleaned programmes JSON file was not found.\n"
+scripts\load_programs_to_mongodb.py:163:            "programs.json must contain a list of records."
+scripts\load_programs_to_mongodb.py:168:            "programs.json does not contain any records."
+scripts\load_programs_to_mongodb.py:179:    """Load cleaned programme records into MongoDB Atlas."""
+scripts\load_programs_to_mongodb.py:182:    print("EduPath MongoDB Programme Loader")
+scripts\load_programs_to_mongodb.py:191:    if not MONGODB_URI:
+scripts\load_programs_to_mongodb.py:193:            "MONGODB_URI is missing from the .env file."
+scripts\load_programs_to_mongodb.py:201:    print(f"Collection: {PROGRAMS_COLLECTION}")
+scripts\load_programs_to_mongodb.py:202:    print("Connecting to MongoDB Atlas...")
+scripts\load_programs_to_mongodb.py:205:        MONGODB_URI,
+scripts\load_programs_to_mongodb.py:216:        programs_collection = database[
+scripts\load_programs_to_mongodb.py:217:            PROGRAMS_COLLECTION
+scripts\load_programs_to_mongodb.py:228:        program_id_index = programs_collection.create_index(
+scripts\load_programs_to_mongodb.py:229:            [("program_id", ASCENDING)],
+scripts\load_programs_to_mongodb.py:231:            name="unique_program_id",
+scripts\load_programs_to_mongodb.py:235:            programs_collection.create_index(
+scripts\load_programs_to_mongodb.py:237:                name="program_university_id",
+scripts\load_programs_to_mongodb.py:242:            programs_collection.create_index(
+scripts\load_programs_to_mongodb.py:244:                name="program_degree_level",
+scripts\load_programs_to_mongodb.py:248:        field_index = programs_collection.create_index(
+scripts\load_programs_to_mongodb.py:250:            name="program_field_of_study",
+scripts\load_programs_to_mongodb.py:253:        print(f"Index ready: {program_id_index}")
+scripts\load_programs_to_mongodb.py:263:        # Process each programme record
+scripts\load_programs_to_mongodb.py:269:            program_id = document.get("program_id")
+scripts\load_programs_to_mongodb.py:272:            if not program_id:
+scripts\load_programs_to_mongodb.py:274:                    "Every programme must contain a program_id."
+scripts\load_programs_to_mongodb.py:279:                    "Every programme must contain "
+scripts\load_programs_to_mongodb.py:283:            # Verify the programme's parent university.
+scripts\load_programs_to_mongodb.py:294:                    "exist in the MongoDB universities "
+scripts\load_programs_to_mongodb.py:299:                programs_collection.find_one(
+scripts\load_programs_to_mongodb.py:300:                    {"program_id": program_id},
+scripts\load_programs_to_mongodb.py:317:                    f"UNCHANGED: {program_id} - "
+scripts\load_programs_to_mongodb.py:318:                    f"{document.get('program_name')}"
+scripts\load_programs_to_mongodb.py:327:            result = programs_collection.update_one(
+scripts\load_programs_to_mongodb.py:328:                {"program_id": program_id},
+scripts\load_programs_to_mongodb.py:346:                f"{action}: {program_id} - "
+scripts\load_programs_to_mongodb.py:347:                f"{document.get('program_name')}"
+scripts\load_programs_to_mongodb.py:355:            programs_collection.count_documents({})
+scripts\load_programs_to_mongodb.py:365:            "Total documents in programs collection: "
+scripts\load_programs_to_mongodb.py:369:        first_program = programs_collection.find_one(
+scripts\load_programs_to_mongodb.py:370:            {"program_id": "prog_jp_001"},
+scripts\load_programs_to_mongodb.py:373:                "program_id": 1,
+scripts\load_programs_to_mongodb.py:375:                "program_name": 1,
+scripts\load_programs_to_mongodb.py:390:        if first_program is None:
+scripts\load_programs_to_mongodb.py:392:                "The programme could not be found "
+scripts\load_programs_to_mongodb.py:398:                first_program,
+scripts\load_programs_to_mongodb.py:406:            "\nMongoDB programme loading "
+scripts\load_programs_to_mongodb.py:412:            "A MongoDB operation failed.\n"
+scripts\load_programs_to_mongodb.py:419:        print("MongoDB connection closed safely.")
+scripts\load_scholarships_to_mongodb.py:33:MONGODB_URI = os.getenv("MONGODB_URI")
+scripts\load_scholarships_to_mongodb.py:36:    "MONGODB_DATABASE",
+scripts\load_scholarships_to_mongodb.py:120:    """Prepare one cleaned scholarship for MongoDB."""
+scripts\load_scholarships_to_mongodb.py:214:            "in the MongoDB countries collection."
+scripts\load_scholarships_to_mongodb.py:236:            "does not exist in the MongoDB "
+scripts\load_scholarships_to_mongodb.py:255:    """Load cleaned scholarships into MongoDB Atlas."""
+scripts\load_scholarships_to_mongodb.py:258:    print("EduPath MongoDB Scholarship Loader")
+scripts\load_scholarships_to_mongodb.py:267:    if not MONGODB_URI:
+scripts\load_scholarships_to_mongodb.py:269:            "MONGODB_URI is missing from the .env file."
+scripts\load_scholarships_to_mongodb.py:280:    print("Connecting to MongoDB Atlas...")
+scripts\load_scholarships_to_mongodb.py:283:        MONGODB_URI,
+scripts\load_scholarships_to_mongodb.py:289:        # Verify MongoDB Atlas connectivity.
+scripts\load_scholarships_to_mongodb.py:530:            "\nMongoDB scholarship loading "
+scripts\load_scholarships_to_mongodb.py:536:            "A MongoDB operation failed.\n"
+scripts\load_scholarships_to_mongodb.py:543:        print("MongoDB connection closed safely.")
+scripts\load_universities_into_full_dataset.py:117:    # 3. Create safety backup
+scripts\load_universities_into_full_dataset.py:124:    backup_path = WORKBOOK_PATH.with_name(
+scripts\load_universities_into_full_dataset.py:131:        backup_path,
+scripts\load_universities_into_full_dataset.py:135:        f"Backup created: {backup_path}"
+scripts\load_universities_into_full_dataset.py:360:        f"Safety backup: {backup_path}"
+scripts\load_universities_to_mongodb.py:32:MONGODB_URI = os.getenv("MONGODB_URI")
+scripts\load_universities_to_mongodb.py:34:    "MONGODB_DATABASE",
+scripts\load_universities_to_mongodb.py:75:    Prepare one cleaned JSON record for MongoDB.
+scripts\load_universities_to_mongodb.py:78:    MongoDB-compatible datetime values.
+scripts\load_universities_to_mongodb.py:137:# Main program
+scripts\load_universities_to_mongodb.py:141:    """Load cleaned university records into MongoDB Atlas."""
+scripts\load_universities_to_mongodb.py:144:    print("EduPath MongoDB University Loader")
+scripts\load_universities_to_mongodb.py:153:    if not MONGODB_URI:
+scripts\load_universities_to_mongodb.py:155:            "MONGODB_URI is missing from the .env file."
+scripts\load_universities_to_mongodb.py:164:    print("Connecting to MongoDB Atlas...")
+scripts\load_universities_to_mongodb.py:167:        MONGODB_URI,
+scripts\load_universities_to_mongodb.py:270:        print("\nMongoDB loading completed successfully.")
+scripts\load_universities_to_mongodb.py:274:            "A MongoDB operation failed.\n"
+scripts\load_universities_to_mongodb.py:281:        print("MongoDB connection closed safely.")
+scripts\load_user_profiles_to_mongodb.py:33:MONGODB_URI = os.getenv("MONGODB_URI")
+scripts\load_user_profiles_to_mongodb.py:36:    "MONGODB_DATABASE",
+scripts\load_user_profiles_to_mongodb.py:170:    """Verify all preferred country names exist in MongoDB."""
+scripts\load_user_profiles_to_mongodb.py:207:            "in the MongoDB countries collection:\n"
+scripts\load_user_profiles_to_mongodb.py:299:    """Load cleaned user profiles into MongoDB Atlas."""
+scripts\load_user_profiles_to_mongodb.py:302:    print("EduPath MongoDB User Profile Loader")
+scripts\load_user_profiles_to_mongodb.py:311:    if not MONGODB_URI:
+scripts\load_user_profiles_to_mongodb.py:313:            "MONGODB_URI is missing from the .env file."
+scripts\load_user_profiles_to_mongodb.py:322:    print("Connecting to MongoDB Atlas...")
+scripts\load_user_profiles_to_mongodb.py:325:        MONGODB_URI,
+scripts\load_user_profiles_to_mongodb.py:331:        # Verify MongoDB connectivity.
+scripts\load_user_profiles_to_mongodb.py:557:            "\nMongoDB user profile loading "
+scripts\load_user_profiles_to_mongodb.py:563:            "A MongoDB operation failed.\n"
+scripts\load_user_profiles_to_mongodb.py:570:        print("MongoDB connection closed safely.")
+scripts\query_universities.py:23:MONGODB_URI = os.getenv("MONGODB_URI")
+scripts\query_universities.py:25:    "MONGODB_DATABASE",
+scripts\query_universities.py:33:    """Print MongoDB data in a readable JSON-style format."""
+scripts\query_universities.py:46:    """Run basic university queries against MongoDB Atlas."""
+scripts\query_universities.py:58:    if not MONGODB_URI:
+scripts\query_universities.py:60:            "MONGODB_URI is missing from the .env file."
+scripts\query_universities.py:64:        MONGODB_URI,
+scripts\query_universities.py:77:        print("MongoDB connection: SUCCESS")
+scripts\query_universities.py:171:        print("\n5. Universities offering Master programmes")
+scripts\query_universities.py:176:        print("\nAll MongoDB queries completed successfully.")
+scripts\query_universities.py:180:            "A MongoDB query failed.\n"
+scripts\query_universities.py:187:        print("MongoDB connection closed safely.")
+scripts\recommend_programs.py:29:    / "program_recommendations.json"
+scripts\recommend_programs.py:34:MONGODB_URI = os.getenv("MONGODB_URI")
+scripts\recommend_programs.py:37:    "MONGODB_DATABASE",
+scripts\recommend_programs.py:148:    program_text: str,
+scripts\recommend_programs.py:157:    opportunity_text = normalise_text(program_text)
+scripts\recommend_programs.py:186:# Programme evaluation
+scripts\recommend_programs.py:189:def evaluate_program(
+scripts\recommend_programs.py:191:    program: dict[str, Any],
+scripts\recommend_programs.py:196:    Evaluate one programme against one user profile.
+scripts\recommend_programs.py:198:    Returns None when the programme fails a hard rule.
+scripts\recommend_programs.py:220:    program_degree = normalise_degree_level(
+scripts\recommend_programs.py:221:        program.get("degree_level")
+scripts\recommend_programs.py:224:    if target_degree != program_degree:
+scripts\recommend_programs.py:232:        "Target degree level matches the programme."
+scripts\recommend_programs.py:263:        f"Programme is located in preferred country: "
+scripts\recommend_programs.py:276:    program_text = " ".join(
+scripts\recommend_programs.py:278:            str(program.get("program_name") or ""),
+scripts\recommend_programs.py:279:            str(program.get("field_of_study") or ""),
+scripts\recommend_programs.py:285:        program_text=program_text,
+scripts\recommend_programs.py:305:            "The preferred major and programme field are "
+scripts\recommend_programs.py:317:    tuition_fee = program.get("tuition_fee")
+scripts\recommend_programs.py:318:    tuition_currency = program.get(
+scripts\recommend_programs.py:329:            "The programme tuition fee is unavailable."
+scripts\recommend_programs.py:371:        for intake in program.get("intake") or []
+scripts\recommend_programs.py:381:            "The programme intake information is unavailable."
+scripts\recommend_programs.py:399:            "is not listed for this programme."
+scripts\recommend_programs.py:406:    if program.get("minimum_gpa") is None:
+scripts\recommend_programs.py:413:        program.get("ielts_requirement") is None
+scripts\recommend_programs.py:414:        and program.get("toefl_requirement") is None
+scripts\recommend_programs.py:421:    if program.get("application_deadline") is None:
+scripts\recommend_programs.py:438:        "program_id": program.get("program_id"),
+scripts\recommend_programs.py:439:        "program_name": program.get("program_name"),
+scripts\recommend_programs.py:448:        "degree_level": program.get("degree_level"),
+scripts\recommend_programs.py:449:        "field_of_study": program.get(
+scripts\recommend_programs.py:452:        "language_of_instruction": program.get(
+scripts\recommend_programs.py:457:        "intake": program.get("intake") or [],
+scripts\recommend_programs.py:458:        "program_url": program.get("program_url"),
+scripts\recommend_programs.py:483:    """Generate ranked programme recommendations."""
+scripts\recommend_programs.py:526:    programs = list(
+scripts\recommend_programs.py:527:        database["programs"].find(
+scripts\recommend_programs.py:543:    for program in programs:
+scripts\recommend_programs.py:544:        university_id = program.get("university_id")
+scripts\recommend_programs.py:562:        recommendation = evaluate_program(
+scripts\recommend_programs.py:564:            program=program,
+scripts\recommend_programs.py:592:                "EduPath MVP Hybrid Programme "
+scripts\recommend_programs.py:636:        "total_program_candidates": len(programs),
+scripts\recommend_programs.py:652:# Main programme
+scripts\recommend_programs.py:656:    """Connect to MongoDB and generate recommendations."""
+scripts\recommend_programs.py:659:    print("EduPath Programme Recommendation Engine")
+scripts\recommend_programs.py:668:    if not MONGODB_URI:
+scripts\recommend_programs.py:670:            "MONGODB_URI is missing from the .env file."
+scripts\recommend_programs.py:674:        MONGODB_URI,
+scripts\recommend_programs.py:680:        print("Connecting to MongoDB Atlas...")
+scripts\recommend_programs.py:684:        print("MongoDB Atlas connection: SUCCESS")
+scripts\recommend_programs.py:716:            "Total programme candidates: "
+scripts\recommend_programs.py:717:            f"{result['total_program_candidates']}"
+scripts\recommend_programs.py:741:            print("No eligible programmes were found.")
+scripts\recommend_programs.py:749:                f"{recommendation['program_name']}"
+scripts\recommend_programs.py:793:            "Programme recommendation generation "
+scripts\recommend_programs.py:799:            "A MongoDB operation failed.\n"
+scripts\recommend_programs.py:806:        print("MongoDB connection closed safely.")
+scripts\recommend_scholarships.py:16:from scripts.recommend_programs import normalise_degree_level
+scripts\recommend_scholarships.py:36:MONGODB_URI = os.getenv("MONGODB_URI")
+scripts\recommend_scholarships.py:39:    "MONGODB_DATABASE",
+scripts\recommend_scholarships.py:88:    """Convert a MongoDB datetime into YYYY-MM-DD text."""
+scripts\recommend_scholarships.py:908:# Main programme
+scripts\recommend_scholarships.py:912:    """Connect to MongoDB and generate recommendations."""
+scripts\recommend_scholarships.py:924:    if not MONGODB_URI:
+scripts\recommend_scholarships.py:926:            "MONGODB_URI is missing from the .env file."
+scripts\recommend_scholarships.py:930:        MONGODB_URI,
+scripts\recommend_scholarships.py:936:        print("Connecting to MongoDB Atlas...")
+scripts\recommend_scholarships.py:940:        print("MongoDB Atlas connection: SUCCESS")
+scripts\recommend_scholarships.py:1064:            "A MongoDB operation failed.\n"
+scripts\recommend_scholarships.py:1071:        print("MongoDB connection closed safely.")
+scripts\recommend_scholarships_final.py:16:from recommend_scholarships_v1_backup import (
+scripts\recommend_scholarships_final.py:19:    MONGODB_URI,
+scripts\recommend_scholarships_final.py:1639:    if not MONGODB_URI:
+scripts\recommend_scholarships_final.py:1641:            "MONGODB_URI is missing "
+scripts\recommend_scholarships_final.py:1646:    # MongoDB connection
+scripts\recommend_scholarships_final.py:1650:        MONGODB_URI,
+scripts\recommend_scholarships_final.py:1657:            "Connecting to MongoDB Atlas..."
+scripts\recommend_scholarships_final.py:1665:            "MongoDB Atlas connection: SUCCESS"
+scripts\recommend_scholarships_final.py:1988:            "No MongoDB records were modified."
+scripts\recommend_scholarships_final.py:1995:            "MongoDB operation failed."
+scripts\recommend_scholarships_final.py:2002:            "MongoDB connection closed safely."
+scripts\recommend_scholarships_v1_backup.py:34:MONGODB_URI = os.getenv("MONGODB_URI")
+scripts\recommend_scholarships_v1_backup.py:37:    "MONGODB_DATABASE",
+scripts\recommend_scholarships_v1_backup.py:86:    """Convert a MongoDB datetime into YYYY-MM-DD text."""
+scripts\recommend_scholarships_v1_backup.py:905:# Main programme
+scripts\recommend_scholarships_v1_backup.py:909:    """Connect to MongoDB and generate recommendations."""
+scripts\recommend_scholarships_v1_backup.py:921:    if not MONGODB_URI:
+scripts\recommend_scholarships_v1_backup.py:923:            "MONGODB_URI is missing from the .env file."
+scripts\recommend_scholarships_v1_backup.py:927:        MONGODB_URI,
+scripts\recommend_scholarships_v1_backup.py:933:        print("Connecting to MongoDB Atlas...")
+scripts\recommend_scholarships_v1_backup.py:937:        print("MongoDB Atlas connection: SUCCESS")
+scripts\recommend_scholarships_v1_backup.py:1061:            "A MongoDB operation failed.\n"
+scripts\recommend_scholarships_v1_backup.py:1068:        print("MongoDB connection closed safely.")
+scripts\recommend_scholarships_v2.py:18:from recommend_scholarships_v1_backup import (
+scripts\recommend_scholarships_v2.py:21:    MONGODB_URI,
+scripts\recommend_scholarships_v2.py:1299:    if not MONGODB_URI:
+scripts\recommend_scholarships_v2.py:1301:            "MONGODB_URI is missing "
+scripts\recommend_scholarships_v2.py:1306:        MONGODB_URI,
+scripts\recommend_scholarships_v2.py:1313:            "Connecting to MongoDB Atlas..."
+scripts\recommend_scholarships_v2.py:1321:            "MongoDB Atlas connection: SUCCESS"
+scripts\recommend_scholarships_v2.py:1468:            "No MongoDB records were modified."
+scripts\recommend_scholarships_v2.py:1473:            "MongoDB operation failed."
+scripts\recommend_scholarships_v2.py:1480:            "MongoDB connection closed safely."
+scripts\recommend_scholarships_v21.py:19:from recommend_scholarships_v1_backup import (
+scripts\recommend_scholarships_v21.py:22:    MONGODB_URI,
+scripts\recommend_scholarships_v21.py:1793:    if not MONGODB_URI:
+scripts\recommend_scholarships_v21.py:1795:            "MONGODB_URI is missing "
+scripts\recommend_scholarships_v21.py:1804:        MONGODB_URI,
+scripts\recommend_scholarships_v21.py:1811:            "Connecting to MongoDB Atlas..."
+scripts\recommend_scholarships_v21.py:1819:            "MongoDB Atlas connection: SUCCESS"
+scripts\recommend_scholarships_v21.py:2079:            "No MongoDB records were modified."
+scripts\recommend_scholarships_v21.py:2086:            "MongoDB operation failed."
+scripts\recommend_scholarships_v21.py:2093:            "MongoDB connection closed safely."
+scripts\recommend_scholarships_v22.py:16:from recommend_scholarships_v1_backup import (
+scripts\recommend_scholarships_v22.py:19:    MONGODB_URI,
+scripts\recommend_scholarships_v22.py:1639:    if not MONGODB_URI:
+scripts\recommend_scholarships_v22.py:1641:            "MONGODB_URI is missing "
+scripts\recommend_scholarships_v22.py:1646:    # MongoDB connection
+scripts\recommend_scholarships_v22.py:1650:        MONGODB_URI,
+scripts\recommend_scholarships_v22.py:1657:            "Connecting to MongoDB Atlas..."
+scripts\recommend_scholarships_v22.py:1665:            "MongoDB Atlas connection: SUCCESS"
+scripts\recommend_scholarships_v22.py:1988:            "No MongoDB records were modified."
+scripts\recommend_scholarships_v22.py:1995:            "MongoDB operation failed."
+scripts\recommend_scholarships_v22.py:2002:            "MongoDB connection closed safely."
+scripts\repair_missing_country_master.py:30:BACKUP_DIRECTORY = (
+scripts\repair_missing_country_master.py:33:    / "backups"
+scripts\repair_missing_country_master.py:63:        MONGODB_URI,
+scripts\repair_missing_country_master.py:70:        "Could not import MongoDB configuration from "
+scripts\repair_missing_country_master.py:207:# CREATE BACKUP
+scripts\repair_missing_country_master.py:210:def create_backup(
+scripts\repair_missing_country_master.py:214:    BACKUP_DIRECTORY.mkdir(
+scripts\repair_missing_country_master.py:223:    backup_path = (
+scripts\repair_missing_country_master.py:224:        BACKUP_DIRECTORY
+scripts\repair_missing_country_master.py:228:    backup_payload = {
+scripts\repair_missing_country_master.py:231:            "Backup countries collection before "
+scripts\repair_missing_country_master.py:240:    with backup_path.open(
+scripts\repair_missing_country_master.py:246:            backup_payload,
+scripts\repair_missing_country_master.py:253:    return backup_path
+scripts\repair_missing_country_master.py:317:        "mongodb_modified":
+scripts\repair_missing_country_master.py:438:    if not MONGODB_URI:
+scripts\repair_missing_country_master.py:441:            "MONGODB_URI is unavailable."
+scripts\repair_missing_country_master.py:451:        MONGODB_URI,
+scripts\repair_missing_country_master.py:461:            "Connecting to MongoDB Atlas..."
+scripts\repair_missing_country_master.py:469:            "MongoDB Atlas connection: SUCCESS"
+scripts\repair_missing_country_master.py:803:        # Backup first
+scripts\repair_missing_country_master.py:806:        backup_path = create_backup(
+scripts\repair_missing_country_master.py:811:            "Backup created:"
+scripts\repair_missing_country_master.py:815:            backup_path
+scripts\repair_missing_country_master.py:996:            f"Backup: {backup_path}"
+scripts\repair_missing_country_master.py:1020:            "MongoDB country master repair failed."
+scripts\repair_missing_country_master.py:1028:            "MongoDB connection closed safely."
+scripts\select_university_candidates.py:48:        "it is an HKUST education program."
+scripts\test_mongodb_connection.py:22:MONGODB_URI = os.getenv("MONGODB_URI")
+scripts\test_mongodb_connection.py:23:MONGODB_DATABASE = os.getenv(
+scripts\test_mongodb_connection.py:24:    "MONGODB_DATABASE",
+scripts\test_mongodb_connection.py:30:    """Test whether Python can connect to MongoDB Atlas."""
+scripts\test_mongodb_connection.py:33:    print("EduPath MongoDB Connection Test")
+scripts\test_mongodb_connection.py:42:    if not MONGODB_URI:
+scripts\test_mongodb_connection.py:44:            "MONGODB_URI is missing from the .env file."
+scripts\test_mongodb_connection.py:47:    if "<db_password>" in MONGODB_URI:
+scripts\test_mongodb_connection.py:50:            "with your real MongoDB database password."
+scripts\test_mongodb_connection.py:54:    print(f"Database name: {MONGODB_DATABASE}")
+scripts\test_mongodb_connection.py:55:    print("Connecting to MongoDB Atlas...")
+scripts\test_mongodb_connection.py:58:        MONGODB_URI,
+scripts\test_mongodb_connection.py:69:        print("MongoDB Atlas connection: SUCCESS")
+scripts\test_mongodb_connection.py:70:        print(f"Selected database: {MONGODB_DATABASE}")
+scripts\test_mongodb_connection.py:73:            "with MongoDB Atlas."
+scripts\test_mongodb_connection.py:79:        print("MongoDB Atlas connection: FAILED")
+scripts\test_mongodb_connection.py:82:            "Unable to connect to MongoDB Atlas.\n"
+scripts\test_mongodb_connection.py:89:        print("\nMongoDB connection closed safely.")
+scripts\test_scholarship_v22_profiles.py:13:from recommend_scholarships_v1_backup import (
+scripts\test_scholarship_v22_profiles.py:16:    MONGODB_URI,
+scripts\test_scholarship_v22_profiles.py:59:# They are NOT written to MongoDB.
+scripts\test_scholarship_v22_profiles.py:67:#   MongoDB user_profiles
+scripts\test_scholarship_v22_profiles.py:1265:    if not MONGODB_URI:
+scripts\test_scholarship_v22_profiles.py:1268:            "MONGODB_URI is missing "
+scripts\test_scholarship_v22_profiles.py:1273:    # Connect MongoDB
+scripts\test_scholarship_v22_profiles.py:1277:        MONGODB_URI,
+scripts\test_scholarship_v22_profiles.py:1287:            "Connecting to MongoDB Atlas..."
+scripts\test_scholarship_v22_profiles.py:1295:            "MongoDB Atlas connection: SUCCESS"
+scripts\test_scholarship_v22_profiles.py:1582:            "No MongoDB records were modified."
+scripts\test_scholarship_v22_profiles.py:1590:            "MongoDB operation failed."
+scripts\test_scholarship_v22_profiles.py:1598:            "MongoDB connection closed safely."
+scripts\transform_countries.py:440:# Main programme
+scripts\transform_programs.py:34:OUTPUT_JSON = OUTPUT_DIRECTORY / "programs.json"
+scripts\transform_programs.py:36:SHEET_NAME = "programs"
+scripts\transform_programs.py:44:    "program_id",
+scripts\transform_programs.py:46:    "program_name",
+scripts\transform_programs.py:61:    "program_url",
+scripts\transform_programs.py:318:    This prevents a programme from referring to a university
+scripts\transform_programs.py:354:# Programme transformation
+scripts\transform_programs.py:357:def transform_program(
+scripts\transform_programs.py:362:    """Clean and validate one programme record."""
+scripts\transform_programs.py:365:        program_id = clean_required_text(
+scripts\transform_programs.py:366:            raw_record.get("program_id"),
+scripts\transform_programs.py:367:            "program_id",
+scripts\transform_programs.py:495:            "program_id": program_id,
+scripts\transform_programs.py:497:            "program_name": clean_required_text(
+scripts\transform_programs.py:498:                raw_record.get("program_name"),
+scripts\transform_programs.py:499:                "program_name",
+scripts\transform_programs.py:540:            "program_url": validate_url(
+scripts\transform_programs.py:541:                raw_record.get("program_url"),
+scripts\transform_programs.py:542:                "program_url",
+scripts\transform_programs.py:570:    """Check whether all 21 programme columns exist."""
+scripts\transform_programs.py:580:            "Required programme columns are missing "
+scripts\transform_programs.py:589:def validate_unique_program_ids(
+scripts\transform_programs.py:592:    """Reject duplicate program_id values."""
+scripts\transform_programs.py:598:        program_id = record["program_id"]
+scripts\transform_programs.py:600:        if program_id in seen_ids:
+scripts\transform_programs.py:601:            duplicate_ids.add(program_id)
+scripts\transform_programs.py:603:        seen_ids.add(program_id)
+scripts\transform_programs.py:607:            "Duplicate program_id values found:\n"
+scripts\transform_programs.py:609:                f"- {program_id}"
+scripts\transform_programs.py:610:                for program_id in sorted(duplicate_ids)
+scripts\transform_programs.py:615:def validate_unique_program_signatures(
+scripts\transform_programs.py:619:    Detect logically duplicated programmes.
+scripts\transform_programs.py:622:    university_id + program_name + degree_level + intake
+scripts\transform_programs.py:626:    duplicate_programs: list[str] = []
+scripts\transform_programs.py:635:            record["program_name"].strip().lower(),
+scripts\transform_programs.py:641:            duplicate_programs.append(
+scripts\transform_programs.py:642:                record["program_id"]
+scripts\transform_programs.py:647:    if duplicate_programs:
+scripts\transform_programs.py:649:            "Logically duplicated programme records found:\n"
+scripts\transform_programs.py:651:                f"- {program_id}"
+scripts\transform_programs.py:652:                for program_id in duplicate_programs
+scripts\transform_programs.py:658:# Main programme
+scripts\transform_programs.py:662:    """Read programmes from Excel and create cleaned JSON."""
+scripts\transform_programs.py:665:    print("EduPath Programme ETL")
+scripts\transform_programs.py:677:    programs_df = pd.read_excel(
+scripts\transform_programs.py:683:    if programs_df.empty:
+scripts\transform_programs.py:688:    validate_expected_columns(programs_df)
+scripts\transform_programs.py:697:    raw_records = programs_df.to_dict(
+scripts\transform_programs.py:709:        cleaned_record = transform_program(
+scripts\transform_programs.py:717:    validate_unique_program_ids(cleaned_records)
+scripts\transform_programs.py:718:    validate_unique_program_signatures(cleaned_records)
+scripts\transform_programs.py:744:    print("\nFirst cleaned programme")
+scripts\transform_programs.py:754:    print("\nProgramme ETL completed successfully.")
+scripts\transform_scholarships.py:896:# Main programme
+scripts\transform_scholarships_before_full_dataset.py:896:# Main programme
+scripts\transform_universities.py:448:# Main program
+scripts\transform_user_profiles.py:622:# Main programme
+scripts\validate_final_program_tuition_context.py:9:EXPECTED_PROGRAM_COUNT = 36
+scripts\validate_final_program_tuition_context.py:66:        "EduPath - Final Japan Program "
+scripts\validate_final_program_tuition_context.py:81:        / "29_japan_program_tuition_context_all_verified.csv"
+scripts\validate_final_program_tuition_context.py:119:        "program_id",
+scripts\validate_final_program_tuition_context.py:122:        "program_name",
+scripts\validate_final_program_tuition_context.py:156:    if len(rows) != EXPECTED_PROGRAM_COUNT:
+scripts\validate_final_program_tuition_context.py:159:            f"{EXPECTED_PROGRAM_COUNT} rows, "
+scripts\validate_final_program_tuition_context.py:164:    # UNIQUE PROGRAM IDs
+scripts\validate_final_program_tuition_context.py:167:    program_ids = [
+scripts\validate_final_program_tuition_context.py:169:            row.get("program_id")
+scripts\validate_final_program_tuition_context.py:174:    blank_program_ids = [
+scripts\validate_final_program_tuition_context.py:176:        for index, program_id
+scripts\validate_final_program_tuition_context.py:177:        in enumerate(program_ids)
+scripts\validate_final_program_tuition_context.py:178:        if not program_id
+scripts\validate_final_program_tuition_context.py:181:    if blank_program_ids:
+scripts\validate_final_program_tuition_context.py:183:            "Blank program_id found on "
+scripts\validate_final_program_tuition_context.py:188:                    blank_program_ids,
+scripts\validate_final_program_tuition_context.py:193:    duplicate_program_ids = [
+scripts\validate_final_program_tuition_context.py:194:        program_id
+scripts\validate_final_program_tuition_context.py:195:        for program_id, count
+scripts\validate_final_program_tuition_context.py:197:            program_ids
+scripts\validate_final_program_tuition_context.py:200:            program_id
+scripts\validate_final_program_tuition_context.py:205:    if duplicate_program_ids:
+scripts\validate_final_program_tuition_context.py:207:            "Duplicate program IDs: "
+scripts\validate_final_program_tuition_context.py:210:                    duplicate_program_ids
+scripts\validate_final_program_tuition_context.py:238:        program_id = normalize_text(
+scripts\validate_final_program_tuition_context.py:239:            row.get("program_id")
+scripts\validate_final_program_tuition_context.py:317:                program_id
+scripts\validate_final_program_tuition_context.py:331:                program_id
+scripts\validate_final_program_tuition_context.py:340:                program_id
+scripts\validate_final_program_tuition_context.py:377:                    program_id,
+scripts\validate_final_program_tuition_context.py:393:                program_id
+scripts\validate_final_program_tuition_context.py:411:                program_id
+scripts\validate_final_program_tuition_context.py:421:                    program_id
+scripts\validate_final_program_tuition_context.py:432:                    program_id
+scripts\validate_final_program_tuition_context.py:437:                program_id
+scripts\validate_final_program_tuition_context.py:444:        if program_id in EXPECTED_CHANGED_IDS:
+scripts\validate_final_program_tuition_context.py:450:                    f"{program_id}: expected "
+scripts\validate_final_program_tuition_context.py:460:                    f"{program_id}: expected "
+scripts\validate_final_program_tuition_context.py:467:                    f"{program_id}: expected "
+scripts\validate_final_program_tuition_context.py:518:            program_id,
+scripts\validate_final_program_tuition_context.py:523:                f"{program_id}: missing "
+scripts\validate_final_program_tuition_context.py:548:            "Changed program IDs do not "
+scripts\validate_final_program_tuition_context.py:570:        "Total program records:",
+scripts\validate_final_program_tuition_context.py:575:        "Unique program IDs:",
+scripts\validate_final_program_tuition_context.py:577:            set(program_ids)
+scripts\validate_final_program_tuition_context.py:599:        "Changed program IDs:"
+scripts\validate_final_program_tuition_context.py:602:    for program_id in sorted(
+scripts\validate_final_program_tuition_context.py:607:            program_id,
+scripts\validate_final_program_tuition_context.py:631:            f"{count:>3} program(s)"
+scripts\validate_final_program_tuition_context.py:657:            f"{count} program(s)"
+scripts\validate_final_program_tuition_context.py:713:        "36 / 36 Japan programs have "
+scripts\validate_final_program_tuition_context.py:725:        "controlled MongoDB update step."
+scripts\validate_hong_kong_final_program_dataset.py:7:    "hong_kong_programs_language_enriched.csv"
+scripts\validate_hong_kong_final_program_dataset.py:15:    "program_id",
+scripts\validate_hong_kong_final_program_dataset.py:17:    "program_name",
+scripts\validate_hong_kong_final_program_dataset.py:23:    "program_url",
+scripts\validate_hong_kong_final_program_dataset.py:36:        "FINAL PROGRAMME DATA VALIDATION"
+scripts\validate_hong_kong_final_program_dataset.py:54:                r["program_id"]
+scripts\validate_hong_kong_final_program_dataset.py:61:                r["program_id"]
+scripts\validate_hong_kong_final_program_dataset.py:73:        f"Programme rows : {len(rows)}"
+scripts\validate_hong_kong_final_program_dataset.py:115:            "FINAL PROGRAMME DATA VALIDATION: PASS"
+scripts\validate_hong_kong_final_program_dataset.py:119:            "READY FOR MONGODB IMPORT PREPARATION"
+scripts\verify_tuition_context_batch_01.py:17:    "programs/science-and-engineering"
+scripts\verify_tuition_context_batch_01.py:110:                "graduate programs. Enrollment "
+scripts\verify_tuition_context_batch_01.py:131:                "graduate programs. Enrollment "
+scripts\verify_tuition_context_batch_01.py:152:                "graduate programs. Enrollment "
+scripts\verify_tuition_context_batch_01.py:177:                "Technology Master's Program. "
+scripts\verify_tuition_context_batch_01.py:199:                "Technology Master's Program. "
+scripts\verify_tuition_context_batch_01.py:221:                "Technology Doctoral Program. "
+scripts\verify_tuition_context_batch_01.py:258:        / "25_japan_program_tuition_context_staging.csv"
+scripts\verify_tuition_context_batch_01.py:264:        / "26_japan_program_tuition_context_batch01_verified.csv"
+scripts\verify_tuition_context_batch_01.py:304:    found_program_ids = set()
+scripts\verify_tuition_context_batch_01.py:307:        program_id = row.get(
+scripts\verify_tuition_context_batch_01.py:308:            "program_id",
+scripts\verify_tuition_context_batch_01.py:313:            program_id
+scripts\verify_tuition_context_batch_01.py:319:        found_program_ids.add(
+scripts\verify_tuition_context_batch_01.py:320:            program_id
+scripts\verify_tuition_context_batch_01.py:337:                f"TUITION MISMATCH: {program_id}\n"
+scripts\verify_tuition_context_batch_01.py:386:        - found_program_ids
+scripts\verify_tuition_context_batch_01.py:391:            "Some expected program IDs were "
+scripts\verify_tuition_context_batch_01.py:426:        "Programs verified:",
+scripts\verify_tuition_context_batch_01.py:431:        "Programs still awaiting context:",
+scripts\verify_tuition_context_batch_01.py:437:        "Verified program IDs:"
+scripts\verify_tuition_context_batch_01.py:440:    for program_id in sorted(
+scripts\verify_tuition_context_batch_01.py:441:        found_program_ids
+scripts\verify_tuition_context_batch_01.py:445:            program_id,
+scripts\verify_tuition_context_batch_01.py:463:        "No MongoDB records were modified."
+scripts\verify_tuition_context_batch_02.py:138:        / "26_japan_program_tuition_context_batch01_verified.csv"
+scripts\verify_tuition_context_batch_02.py:144:        / "27_japan_program_tuition_context_batch02_verified.csv"
+scripts\verify_tuition_context_batch_02.py:210:        program_id = (
+scripts\verify_tuition_context_batch_02.py:212:                "program_id",
+scripts\verify_tuition_context_batch_02.py:240:                f"Program ID : {program_id}\n"
+scripts\verify_tuition_context_batch_02.py:242:                f"Program    : "
+scripts\verify_tuition_context_batch_02.py:243:                f"{row.get('program_name')}\n"
+scripts\verify_tuition_context_batch_02.py:285:            program_id
+scripts\verify_tuition_context_batch_02.py:367:        "Programs verified in Batch 02:",
+scripts\verify_tuition_context_batch_02.py:372:        "Total programs with tuition context:",
+scripts\verify_tuition_context_batch_02.py:377:        "Programs still awaiting context:",
+scripts\verify_tuition_context_batch_02.py:393:            f"{count} program(s)"
+scripts\verify_tuition_context_batch_02.py:398:        "Verified program IDs:"
+scripts\verify_tuition_context_batch_02.py:401:    for program_id in sorted(
+scripts\verify_tuition_context_batch_02.py:406:            program_id,
+scripts\verify_tuition_context_batch_02.py:424:        "No MongoDB records were modified."
+scripts\verify_tuition_context_batch_03.py:143:        / "27_japan_program_tuition_context_batch02_verified.csv"
+scripts\verify_tuition_context_batch_03.py:149:        / "28_japan_program_tuition_context_batch03_verified.csv"
+scripts\verify_tuition_context_batch_03.py:213:        program_id = (
+scripts\verify_tuition_context_batch_03.py:215:                "program_id",
+scripts\verify_tuition_context_batch_03.py:243:                f"Program ID : {program_id}\n"
+scripts\verify_tuition_context_batch_03.py:245:                f"Program    : "
+scripts\verify_tuition_context_batch_03.py:246:                f"{row.get('program_name')}\n"
+scripts\verify_tuition_context_batch_03.py:288:            program_id
+scripts\verify_tuition_context_batch_03.py:369:        "Programs verified in Batch 03:",
+scripts\verify_tuition_context_batch_03.py:374:        "Total programs with tuition context:",
+scripts\verify_tuition_context_batch_03.py:379:        "Programs still awaiting context:",
+scripts\verify_tuition_context_batch_03.py:395:            f"{count} program(s)"
+scripts\verify_tuition_context_batch_03.py:400:        "Verified program IDs:"
+scripts\verify_tuition_context_batch_03.py:403:    for program_id in sorted(
+scripts\verify_tuition_context_batch_03.py:408:            program_id,
+scripts\verify_tuition_context_batch_03.py:426:        "No MongoDB records were modified."
+scripts\verify_tuition_context_tsukuba_2027.py:22:TARGET_PROGRAMS = {
+scripts\verify_tuition_context_tsukuba_2027.py:107:        / "28_japan_program_tuition_context_batch03_verified.csv"
+scripts\verify_tuition_context_tsukuba_2027.py:113:        / "29_japan_program_tuition_context_all_verified.csv"
+scripts\verify_tuition_context_tsukuba_2027.py:169:        program_id = (
+scripts\verify_tuition_context_tsukuba_2027.py:171:                "program_id",
+scripts\verify_tuition_context_tsukuba_2027.py:177:        context = TARGET_PROGRAMS.get(
+scripts\verify_tuition_context_tsukuba_2027.py:178:            program_id
+scripts\verify_tuition_context_tsukuba_2027.py:184:        found_ids.add(program_id)
+scripts\verify_tuition_context_tsukuba_2027.py:199:                f"Program ID : {program_id}\n"
+scripts\verify_tuition_context_tsukuba_2027.py:222:                f"Program ID : {program_id}\n"
+scripts\verify_tuition_context_tsukuba_2027.py:237:        # MongoDB is NOT modified here.
+scripts\verify_tuition_context_tsukuba_2027.py:279:        TARGET_PROGRAMS.keys()
+scripts\verify_tuition_context_tsukuba_2027.py:289:            "Expected Tsukuba programs "
+scripts\verify_tuition_context_tsukuba_2027.py:348:            f"{remaining} program(s) still "
+scripts\verify_tuition_context_tsukuba_2027.py:379:        "Tsukuba programs corrected:",
+scripts\verify_tuition_context_tsukuba_2027.py:384:        "Total programs with tuition context:",
+scripts\verify_tuition_context_tsukuba_2027.py:389:        "Programs still awaiting context:",
+scripts\verify_tuition_context_tsukuba_2027.py:395:        "Corrected program IDs:"
+scripts\verify_tuition_context_tsukuba_2027.py:398:    for program_id in sorted(
+scripts\verify_tuition_context_tsukuba_2027.py:403:            program_id,
+scripts\verify_tuition_context_tsukuba_2027.py:422:        "MongoDB was NOT modified."
+
+

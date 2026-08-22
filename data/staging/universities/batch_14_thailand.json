@@ -1,0 +1,263 @@
+[
+  {
+    "university_id": "uni_th_012",
+    "university_name": "Burapha University",
+    "country_id": "country_th",
+    "city": "Chon Buri",
+    "university_type": "Public",
+    "official_website": "https://www.buu.ac.th/",
+    "source_url": "https://www.ops.go.th/en/inter-about-ops-mhesi/higher-education/download/5271/5708/16"
+  },
+  {
+    "university_id": "uni_th_013",
+    "university_name": "Srinakharinwirot University",
+    "country_id": "country_th",
+    "city": "Bangkok",
+    "university_type": "Public",
+    "official_website": "https://www.swu.ac.th/",
+    "source_url": "https://www.ops.go.th/en/inter-about-ops-mhesi/higher-education/download/5271/5708/16"
+  },
+  {
+    "university_id": "uni_th_014",
+    "university_name": "Silpakorn University",
+    "country_id": "country_th",
+    "city": "Nakhon Pathom",
+    "university_type": "Public",
+    "official_website": "https://www.su.ac.th/",
+    "source_url": "https://www.ops.go.th/en/inter-about-ops-mhesi/higher-education/download/5271/5708/16"
+  },
+  {
+    "university_id": "uni_th_015",
+    "university_name": "Naresuan University",
+    "country_id": "country_th",
+    "city": "Phitsanulok",
+    "university_type": "Public",
+    "official_website": "https://www.nu.ac.th/",
+    "source_url": "https://www.ops.go.th/en/inter-about-ops-mhesi/higher-education/download/5271/5708/16"
+  },
+  {
+    "university_id": "uni_th_016",
+    "university_name": "University of Phayao",
+    "country_id": "country_th",
+    "city": "Phayao",
+    "university_type": "Public",
+    "official_website": "https://www.up.ac.th/",
+    "source_url": "https://www.ops.go.th/en/inter-about-ops-mhesi/higher-education/download/5271/5708/16"
+  },
+  {
+    "university_id": "uni_th_017",
+    "university_name": "Walailak University",
+    "country_id": "country_th",
+    "city": "Nakhon Si Thammarat",
+    "university_type": "Public",
+    "official_website": "https://www.wu.ac.th/",
+    "source_url": "https://www.ops.go.th/en/inter-about-ops-mhesi/higher-education/download/5271/5708/16"
+  },
+  {
+    "university_id": "uni_th_018",
+    "university_name": "Suranaree University of Technology",
+    "country_id": "country_th",
+    "city": "Nakhon Ratchasima",
+    "university_type": "Public",
+    "official_website": "https://www.sut.ac.th/",
+    "source_url": "https://www.ops.go.th/en/inter-about-ops-mhesi/higher-education/download/5271/5708/16"
+  },
+  {
+    "university_id": "uni_th_019",
+    "university_name": "Maejo University",
+    "country_id": "country_th",
+    "city": "Chiang Mai",
+    "university_type": "Public",
+    "official_website": "https://www.mju.ac.th/",
+    "source_url": "https://www.ops.go.th/en/inter-about-ops-mhesi/higher-education/download/5271/5708/16"
+  },
+  {
+    "university_id": "uni_th_020",
+    "university_name": "Nakhon Phanom University",
+    "country_id": "country_th",
+    "city": "Nakhon Phanom",
+    "university_type": "Public",
+    "official_website": "https://www.npu.ac.th/",
+    "source_url": "https://www.ops.go.th/en/inter-about-ops-mhesi/higher-education/download/5271/5708/16"
+  },
+  {
+    "university_id": "uni_th_021",
+    "university_name": "Ubon Ratchathani University",
+    "country_id": "country_th",
+    "city": "Ubon Ratchathani",
+    "university_type": "Public",
+    "official_website": "https://www.ubu.ac.th/",
+    "source_url": "https://www.ops.go.th/en/inter-about-ops-mhesi/higher-education/download/5271/5708/16"
+  },
+  {
+    "university_id": "uni_th_022",
+    "university_name": "Sukhothai Thammathirat Open University",
+    "country_id": "country_th",
+    "city": "Nonthaburi",
+    "university_type": "Public",
+    "official_website": "https://www.stou.ac.th/",
+    "source_url": "https://www.ops.go.th/en/inter-about-ops-mhesi/higher-education/download/5271/5708/16"
+  },
+  {
+    "university_id": "uni_th_023",
+    "university_name": "Ramkhamhaeng University",
+    "country_id": "country_th",
+    "city": "Bangkok",
+    "university_type": "Public",
+    "official_website": "https://www.ru.ac.th/",
+    "source_url": "https://www.ops.go.th/en/inter-about-ops-mhesi/higher-education/download/5271/5708/16"
+  },
+  {
+    "university_id": "uni_th_024",
+    "university_name": "National Institute of Development Administration",
+    "country_id": "country_th",
+    "city": "Bangkok",
+    "university_type": "Public",
+    "official_website": "https://www.nida.ac.th/",
+    "source_url": "https://www.ops.go.th/en/inter-about-ops-mhesi/higher-education/download/5271/5708/16"
+  },
+  {
+    "university_id": "uni_th_025",
+    "university_name": "King Mongkut's University of Technology North Bangkok",
+    "country_id": "country_th",
+    "city": "Bangkok",
+    "university_type": "Public",
+    "official_website": "https://www.kmutnb.ac.th/",
+    "source_url": "https://www.ops.go.th/en/inter-about-ops-mhesi/higher-education/download/5271/5708/16"
+  },
+  {
+    "university_id": "uni_th_026",
+    "university_name": "Rajamangala University of Technology Thanyaburi",
+    "country_id": "country_th",
+    "city": "Pathum Thani",
+    "university_type": "Public",
+    "official_website": "https://www.rmutt.ac.th/",
+    "source_url": "https://www.ops.go.th/en/inter-about-ops-mhesi/higher-education/download/5271/5708/16"
+  },
+  {
+    "university_id": "uni_th_027",
+    "university_name": "Rajamangala University of Technology Suvarnabhumi",
+    "country_id": "country_th",
+    "city": "Ayutthaya",
+    "university_type": "Public",
+    "official_website": "https://www.rmutsb.ac.th/",
+    "source_url": "https://www.ops.go.th/en/inter-about-ops-mhesi/higher-education/download/5271/5708/16"
+  },
+  {
+    "university_id": "uni_th_028",
+    "university_name": "Rajamangala University of Technology Rattanakosin",
+    "country_id": "country_th",
+    "city": "Nakhon Pathom",
+    "university_type": "Public",
+    "official_website": "https://www.rmutr.ac.th/",
+    "source_url": "https://www.ops.go.th/en/inter-about-ops-mhesi/higher-education/download/5271/5708/16"
+  },
+  {
+    "university_id": "uni_th_029",
+    "university_name": "Rajamangala University of Technology Phra Nakhon",
+    "country_id": "country_th",
+    "city": "Bangkok",
+    "university_type": "Public",
+    "official_website": "https://www.rmutp.ac.th/",
+    "source_url": "https://www.ops.go.th/en/inter-about-ops-mhesi/higher-education/download/5271/5708/16"
+  },
+  {
+    "university_id": "uni_th_030",
+    "university_name": "Rajamangala University of Technology Krungthep",
+    "country_id": "country_th",
+    "city": "Bangkok",
+    "university_type": "Public",
+    "official_website": "https://www.rmutk.ac.th/",
+    "source_url": "https://www.ops.go.th/en/inter-about-ops-mhesi/higher-education/download/5271/5708/16"
+  },
+  {
+    "university_id": "uni_th_031",
+    "university_name": "Rajamangala University of Technology Srivijaya",
+    "country_id": "country_th",
+    "city": "Songkhla",
+    "university_type": "Public",
+    "official_website": "https://www.rmutsv.ac.th/",
+    "source_url": "https://www.ops.go.th/en/inter-about-ops-mhesi/higher-education/download/5271/5708/16"
+  },
+  {
+    "university_id": "uni_th_032",
+    "university_name": "Rajamangala University of Technology Isan",
+    "country_id": "country_th",
+    "city": "Nakhon Ratchasima",
+    "university_type": "Public",
+    "official_website": "https://www.rmuti.ac.th/",
+    "source_url": "https://www.ops.go.th/en/inter-about-ops-mhesi/higher-education/download/5271/5708/16"
+  },
+  {
+    "university_id": "uni_th_033",
+    "university_name": "Rajamangala University of Technology Lanna",
+    "country_id": "country_th",
+    "city": "Chiang Mai",
+    "university_type": "Public",
+    "official_website": "https://www.rmutl.ac.th/",
+    "source_url": "https://www.ops.go.th/en/inter-about-ops-mhesi/higher-education/download/5271/5708/16"
+  },
+  {
+    "university_id": "uni_th_034",
+    "university_name": "Rajamangala University of Technology Tawan-ok",
+    "country_id": "country_th",
+    "city": "Chon Buri",
+    "university_type": "Public",
+    "official_website": "https://www.rmutto.ac.th/",
+    "source_url": "https://www.ops.go.th/en/inter-about-ops-mhesi/higher-education/download/5271/5708/16"
+  },
+  {
+    "university_id": "uni_th_035",
+    "university_name": "Suan Sunandha Rajabhat University",
+    "country_id": "country_th",
+    "city": "Bangkok",
+    "university_type": "Public",
+    "official_website": "https://ssru.ac.th/",
+    "source_url": "https://www.ops.go.th/en/inter-about-ops-mhesi/higher-education/download/5271/5708/16"
+  },
+  {
+    "university_id": "uni_th_036",
+    "university_name": "Phranakhon Rajabhat University",
+    "country_id": "country_th",
+    "city": "Bangkok",
+    "university_type": "Public",
+    "official_website": "https://www.pnru.ac.th/",
+    "source_url": "https://www.ops.go.th/en/inter-about-ops-mhesi/higher-education/download/5271/5708/16"
+  },
+  {
+    "university_id": "uni_th_037",
+    "university_name": "Chiang Mai Rajabhat University",
+    "country_id": "country_th",
+    "city": "Chiang Mai",
+    "university_type": "Public",
+    "official_website": "https://www.cmru.ac.th/",
+    "source_url": "https://www.ops.go.th/en/inter-about-ops-mhesi/higher-education/download/5271/5708/16"
+  },
+  {
+    "university_id": "uni_th_038",
+    "university_name": "Nakhon Ratchasima Rajabhat University",
+    "country_id": "country_th",
+    "city": "Nakhon Ratchasima",
+    "university_type": "Public",
+    "official_website": "https://www.nrru.ac.th/",
+    "source_url": "https://www.ops.go.th/en/inter-about-ops-mhesi/higher-education/download/5271/5708/16"
+  },
+  {
+    "university_id": "uni_th_039",
+    "university_name": "Phuket Rajabhat University",
+    "country_id": "country_th",
+    "city": "Phuket",
+    "university_type": "Public",
+    "official_website": "https://www.pkru.ac.th/",
+    "source_url": "https://www.ops.go.th/en/inter-about-ops-mhesi/higher-education/download/5271/5708/16"
+  },
+  {
+    "university_id": "uni_th_040",
+    "university_name": "Suratthani Rajabhat University",
+    "country_id": "country_th",
+    "city": "Surat Thani",
+    "university_type": "Public",
+    "official_website": "https://www.sru.ac.th/",
+    "source_url": "https://www.ops.go.th/en/inter-about-ops-mhesi/higher-education/download/5271/5708/16"
+  }
+]

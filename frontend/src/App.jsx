@@ -609,6 +609,27 @@ function App() {
   ] = useState('all')
 
   // =========================
+  // HOME GLOBAL OVERVIEW
+  //
+  // These totals are independent from
+  // the Explore country filter.
+  // =========================
+  const [
+    homeTotals,
+    setHomeTotals,
+  ] = useState({
+    universities: 0,
+    programs: 0,
+    scholarships: 0,
+  })
+
+  const [
+    homeTotalsLoading,
+    setHomeTotalsLoading,
+  ] = useState(true)
+
+
+  // =========================
   // EXPLORE PAGINATION RESET
   // =========================
 
@@ -1112,6 +1133,105 @@ function App() {
         setCountries([])
       })
   }, [])
+
+  // =========================
+  // LOAD HOME GLOBAL TOTALS
+  // INDEPENDENT OF COUNTRY FILTER
+  // =========================
+  useEffect(() => {
+    let cancelled = false
+
+    const loadHomeTotals =
+      async () => {
+        setHomeTotalsLoading(true)
+
+        try {
+          const [
+            universityResponse,
+            programResponse,
+            scholarshipResponse,
+          ] = await Promise.all([
+            fetch(
+              `${API_BASE_URL}/api/universities?limit=1`
+            ),
+            fetch(
+              `${API_BASE_URL}/api/programs?limit=1`
+            ),
+            fetch(
+              `${API_BASE_URL}/api/scholarships?limit=1`
+            ),
+          ])
+
+          if (
+            !universityResponse.ok ||
+            !programResponse.ok ||
+            !scholarshipResponse.ok
+          ) {
+            throw new Error(
+              'Failed to load global Home totals.'
+            )
+          }
+
+          const [
+            universityData,
+            programData,
+            scholarshipData,
+          ] = await Promise.all([
+            universityResponse.json(),
+            programResponse.json(),
+            scholarshipResponse.json(),
+          ])
+
+          if (cancelled) {
+            return
+          }
+
+          setHomeTotals({
+            universities:
+              Number(
+                universityData?.total
+              ) || 0,
+
+            programs:
+              Number(
+                programData?.total
+              ) || 0,
+
+            scholarships:
+              Number(
+                scholarshipData?.total
+              ) || 0,
+          })
+        } catch (error) {
+          if (cancelled) {
+            return
+          }
+
+         console.error(
+            'Home global totals error:',
+            error.message,
+            error
+          )
+
+          setHomeTotals({
+            universities: 0,
+            programs: 0,
+            scholarships: 0,
+          })
+        } finally {
+          if (!cancelled) {
+            setHomeTotalsLoading(false)
+          }
+        }
+      }
+
+    loadHomeTotals()
+
+    return () => {
+      cancelled = true
+    }
+  }, [])
+
 
   // =========================
   // LOAD UNIVERSITIES
@@ -2336,7 +2456,11 @@ function App() {
                 </span>
 
                 <strong>
-                  {totalUniversities}
+                  {
+                    homeTotalsLoading
+                      ? '\u2014'
+                      : homeTotals.universities
+                  }
                 </strong>
 
                 <span>
@@ -2363,8 +2487,9 @@ function App() {
 
                 <strong>
                   {
-                    selectedCountryPrograms
-                      .length
+                    homeTotalsLoading
+                      ? '\u2014'
+                      : homeTotals.programs
                   }
                 </strong>
 
@@ -2391,15 +2516,19 @@ function App() {
                 </span>
 
                 <strong>
-                  {totalScholarships}
+                  {
+                    homeTotalsLoading
+                      ? '\u2014'
+                      : homeTotals.scholarships
+                  }
                 </strong>
 
                 <span>
-                  Scholarships
+                  Verified Scholarships
                 </span>
 
                 <small>
-                  Find funding opportunities
+                  Public verified opportunities
                 </small>
               </button>
             </div>
@@ -2412,7 +2541,7 @@ function App() {
               <div className="home-preview-heading">
                 <div>
                   <p className="edupath-home-eyebrow">
-                    EXPLORE UNIVERSITIES
+                    CONTINUE EXPLORING
                   </p>
 
                   <h2>
@@ -2421,9 +2550,9 @@ function App() {
                   </h2>
 
                   <p>
-                    Start by exploring universities
-                    available in your selected study
-                    destination.
+                    Continue exploring your selected
+                    study destination, or use Explore
+                    to switch to another country.
                   </p>
                 </div>
 
@@ -2498,7 +2627,8 @@ function App() {
                   </p>
 
                   <h2>
-                    Featured Programmes
+                    Featured Programmes in{' '}
+                    {selectedCountryName}
                   </h2>
 
                   <p>
@@ -2599,7 +2729,8 @@ function App() {
                   </p>
 
                   <h2>
-                    Featured Scholarships
+                    Scholarships in{' '}
+                    {selectedCountryName}
                   </h2>
 
                   <p>

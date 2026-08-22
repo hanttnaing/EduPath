@@ -209,52 +209,111 @@ def check_database_conflicts(
         )
     }
 
-    conflicts = []
+    existing_name_map = {
+        (
+            item.get("country_id"),
+            clean_text(
+                item.get("university_name")
+            ).lower(),
+        ): item.get("university_id")
+        for item in database[
+            "universities"
+        ].find(
+            {},
+            {
+                "_id": 0,
+                "university_id": 1,
+                "university_name": 1,
+                "country_id": 1,
+            },
+        )
+    }
+
+    id_conflicts = []
+    name_conflicts = []
 
     for record in records:
+
         existing = existing_by_id.get(
             record["university_id"]
         )
 
-        if existing is None:
-            continue
+        if existing is not None:
+            if (
+                clean_text(
+                    existing.get("university_name")
+                ).lower()
+                != record[
+                    "university_name"
+                ].lower()
+                or existing.get("country_id")
+                != record["country_id"]
+            ):
+                id_conflicts.append(
+                    (
+                        record["university_id"],
+                        existing.get(
+                            "university_name"
+                        ),
+                        record[
+                            "university_name"
+                        ],
+                    )
+                )
+
+        name_key = (
+            record["country_id"],
+            record[
+                "university_name"
+            ].lower(),
+        )
+
+        existing_name_id = (
+            existing_name_map.get(
+                name_key
+            )
+        )
 
         if (
-            clean_text(
-                existing.get("university_name")
-            ).lower()
-            != record[
-                "university_name"
-            ].lower()
-            or existing.get("country_id")
-            != record["country_id"]
+            existing_name_id is not None
+            and existing_name_id
+            != record["university_id"]
         ):
-            conflicts.append(
+            name_conflicts.append(
                 (
-                    record["university_id"],
-                    existing.get(
-                        "university_name"
-                    ),
                     record[
                         "university_name"
+                    ],
+                    existing_name_id,
+                    record[
+                        "university_id"
                     ],
                 )
             )
 
-    if conflicts:
+    if id_conflicts:
         print()
         print("=" * 72)
         print("DATABASE ID CONFLICTS")
         print("=" * 72)
 
-        for item in conflicts:
+        for item in id_conflicts:
             print(item)
 
+    if name_conflicts:
+        print()
+        print("=" * 72)
+        print("DATABASE NAME CONFLICTS")
+        print("=" * 72)
+
+        for item in name_conflicts:
+            print(item)
+
+    if id_conflicts or name_conflicts:
         raise SystemExit(
-            "Existing university_id conflict "
+            "University database conflict "
             "detected. Import cancelled."
         )
-
 
 def import_records(
     records: list[dict[str, Any]],

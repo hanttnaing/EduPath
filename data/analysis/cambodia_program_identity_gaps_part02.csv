@@ -1,0 +1,4 @@
+﻿reserved_program_id,university_id,program_slot,status,reason,evidence_note
+prog_kh_028,uni_kh_010,1,DEFERRED,Exact current programme identity not sufficiently verified from a current first-party programme source.,"Current government sources confirm National Mean Chey University is active; recent government-sector evidence confirms faculties, but not an exact current degree title for this slot."
+prog_kh_029,uni_kh_010,2,DEFERRED,Exact current programme identity not sufficiently verified from a current first-party programme source.,"Historical evidence exists for degree programmes, but historical programme data is not promoted to current status."
+prog_kh_030,uni_kh_010,3,DEFERRED,Exact current programme identity not sufficiently verified from a current first-party programme source.,Slot remains reserved for future first-party verification; no programme name is fabricated.

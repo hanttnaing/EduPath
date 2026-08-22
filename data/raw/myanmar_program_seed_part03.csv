@@ -1,0 +1,4 @@
+﻿program_id,university_id,program_slot,program_name,field_of_study,degree_level,official_source_url,collection_status,verification_status,research_notes
+prog_mm_037,uni_mm_013,1,Bachelor of Arts in English,English,Bachelor,https://www.yude.edu.mm/english-department/,Identity Collected,Current First-Party Degree Verified,YUDE English Department explicitly lists B.A. (English) under Degree Offered with First through Fourth Year study.
+prog_mm_038,uni_mm_013,2,Online Bachelor of Laws (LLB),Law,Bachelor,https://www.yude.edu.mm/law-department/,Identity Collected,First-Party Online Programme Verified,YUDE Law Department explicitly identifies the Online LLB programme and states a five-year duration.
+prog_mm_039,uni_mm_013,3,Online Master of Laws (LLM),Law,Master,https://www.yude.edu.mm/law-department/,Identity Collected,First-Party Online Programme Verified,YUDE Law Department explicitly identifies the Online LLM programme and states a two-year duration.

@@ -1,0 +1,34 @@
+﻿program_id,university_id,program_name,field_of_study,degree_level,duration_years,study_mode,language_of_instruction,tuition_fee,tuition_currency,tuition_period,minimum_gpa,gpa_scale,ielts_requirement,toefl_requirement,intake,application_deadline,program_url,collected_at,last_verified_at,freshness_status
+prog_mn_001,uni_mn_001,Business Administration,Business Administration,Bachelor,4,Full-time,Unknown,,,,,,,,,,https://registration.num.edu.mn/Admission/Programs/2,2026-08-22,2026-08-22,current
+prog_mn_002,uni_mn_001,Information Technology,Information Technology,Bachelor,4,Full-time,Unknown,,,,,,,,,,https://registration.num.edu.mn/Admission/Programs/2,2026-08-22,2026-08-22,current
+prog_mn_003,uni_mn_001,Electrical Engineering,Electrical Engineering,Bachelor,4,Full-time,Unknown,,,,,,,,,,https://registration.num.edu.mn/Admission/Programs/2,2026-08-22,2026-08-22,current
+prog_mn_004,uni_mn_002,Structural Engineering,Structural Engineering,Bachelor,4,,English,,,,,,5.5,60,,,https://admission.must.edu.mn/programs,2026-08-22,2026-08-22,current
+prog_mn_005,uni_mn_002,Business Administration,Business Administration,Bachelor,4,,English,,,,,,5.5,60,,,https://admission.must.edu.mn/programs,2026-08-22,2026-08-22,current
+prog_mn_006,uni_mn_002,Mechanical Engineering,Mechanical Engineering,Bachelor,4,,English,,,,,,5.5,60,,,https://admission.must.edu.mn/programs,2026-08-22,2026-08-22,current
+prog_mn_007,uni_mn_003,Medicine,Medicine,Bachelor,6,,Unknown,,,,,,,,,,https://mnums.edu.mn/%D0%B1%D0%B0%D0%BA%D0%B0%D0%BB%D0%B0%D0%B2%D1%80/,2026-08-22,2026-08-22,current
+prog_mn_008,uni_mn_003,Dentistry,Dentistry,Bachelor,6,,Unknown,,,,,,,,,,https://mnums.edu.mn/%D0%B1%D0%B0%D0%BA%D0%B0%D0%BB%D0%B0%D0%B2%D1%80/,2026-08-22,2026-08-22,current
+prog_mn_009,uni_mn_003,Nursing,Nursing,Bachelor,4,,Unknown,,,,,,,,,,https://mnums.edu.mn/%D0%B1%D0%B0%D0%BA%D0%B0%D0%BB%D0%B0%D0%B2%D1%80/,2026-08-22,2026-08-22,current
+prog_mn_010,uni_mn_004,Teacher Education in Mathematics,Education / Mathematics,Bachelor,,,Unknown,,,,,,,,,,https://smns.msue.edu.mn/p/r/5648,2026-08-22,2026-08-22,current
+prog_mn_011,uni_mn_004,Teacher Education in Informatics,Education / Information Technology,Bachelor,,,Unknown,,,,,,,,,,https://smns.msue.edu.mn/p/r/5648,2026-08-22,2026-08-22,current
+prog_mn_012,uni_mn_004,Software,Software Engineering,Bachelor,,,Unknown,,,,,,,,,,https://smns.msue.edu.mn/p/r/5648,2026-08-22,2026-08-22,current
+prog_mn_013,uni_mn_005,Business Management,Business Administration,Bachelor,,Full-time,Unknown,,,,,,,,,,https://admission.ufe.edu.mn/en/professions/1,2026-08-22,2026-08-22,current
+prog_mn_014,uni_mn_005,Marketing + AI,Marketing,Bachelor,,Full-time,Unknown,,,,,,,,,,https://admission.ufe.edu.mn/en/professions/1,2026-08-22,2026-08-22,current
+prog_mn_015,uni_mn_005,Finance and Banking,Finance and Banking,Bachelor,,Full-time,Unknown,,,,,,,,,,https://admission.ufe.edu.mn/en/professions/1,2026-08-22,2026-08-22,current
+prog_mn_016,uni_mn_006,Veterinary Medicine,Veterinary Medicine,Bachelor,,,Unknown,,,,,,,,,,https://muls.edu.mn/view_program_new.php?value_profession=ZW5jb2RldXNlcmlkNjc%3D,2026-08-22,2026-08-22,current
+prog_mn_017,uni_mn_006,Agricultural Biotechnology,Biotechnology,Bachelor,,,Unknown,,,,,,,,,,https://muls.edu.mn/view_program_new.php?value_profession=ZW5jb2RldXNlcmlkMTc%3D,2026-08-22,2026-08-22,current
+prog_mn_018,uni_mn_006,Forestry Engineering,Forestry,Bachelor,,,Unknown,,,,,,,,,,https://muls.edu.mn/view_program_new.php?value_profession=ZW5jb2RldXNlcmlkNjc%3D,2026-08-22,2026-08-22,current
+prog_mn_019,uni_mn_007,Raw Materials and Process Engineering,Raw Materials and Process Engineering,Bachelor,4,,Unknown,,,,,,6,80,,,https://www.gmit.edu.mn/eng/p/16,2026-08-22,2026-08-22,current
+prog_mn_020,uni_mn_007,Mechanical Engineering,Mechanical Engineering,Bachelor,4,,Unknown,,,,,,6,80,,,https://www.gmit.edu.mn/eng/p/18,2026-08-22,2026-08-22,current
+prog_mn_021,uni_mn_007,Environmental Engineering,Environmental Engineering,Bachelor,4,,Unknown,,,,,,6,80,,,https://www.gmit.edu.mn/eng/p/40,2026-08-22,2026-08-22,current
+prog_mn_025,uni_mn_009,Computer Programming,Computer Science / Programming,Bachelor,4,,Unknown,,,,,,,,,,https://www.otgontenger.edu.mn/en/training/programs,2026-08-22,2026-08-22,current
+prog_mn_026,uni_mn_009,Tourism Management,Tourism Management,Bachelor,4,,Unknown,,,,,,,,,,https://www.otgontenger.edu.mn/en/training/programs,2026-08-22,2026-08-22,current
+prog_mn_027,uni_mn_009,International Relations,International Relations,Bachelor,4,,Unknown,,,,,,,,,,https://www.otgontenger.edu.mn/en/training/programs,2026-08-22,2026-08-22,current
+prog_mn_028,uni_mn_010,Medicine - Medical Doctor,Medicine,Bachelor,6,,Unknown,,,,,,,,,,https://etugen.edu.mn/public/juram2627.pdf,2026-08-22,2026-08-22,current
+prog_mn_029,uni_mn_010,Pharmacy,Pharmacy,Bachelor,5,,Unknown,,,,,,,,,,https://etugen.edu.mn/public/juram2627.pdf,2026-08-22,2026-08-22,current
+prog_mn_030,uni_mn_010,Nursing,Nursing,Bachelor,4,,Unknown,,,,,,,,,,https://etugen.edu.mn/public/juram2627.pdf,2026-08-22,2026-08-22,current
+prog_mn_031,uni_mn_011,Software,Software Engineering,Bachelor,,,Unknown,,,,,,,,,,https://www.iuu.edu.mn/bachelor/program,2026-08-22,2026-08-22,current
+prog_mn_032,uni_mn_011,Business Administration,Business Administration,Bachelor,,,Unknown,,,,,,,,,,https://www.iuu.edu.mn/bachelor/program,2026-08-22,2026-08-22,current
+prog_mn_033,uni_mn_011,International Relations,International Relations,Bachelor,,,Unknown,,,,,,,,,,https://www.iuu.edu.mn/training/department/15,2026-08-22,2026-08-22,current
+prog_mn_034,uni_mn_012,Information System,Information Systems,Bachelor,4,,Unknown,,,,,,,,,,https://en.mandakh.edu.mn/information-system,2026-08-22,2026-08-22,current
+prog_mn_035,uni_mn_012,Software,Software Engineering,Bachelor,4,,Unknown,,,,,,,,,,https://en.mandakh.edu.mn/software,2026-08-22,2026-08-22,current
+prog_mn_036,uni_mn_012,Business Administration,Business Administration,Bachelor,4,,Unknown,,,,,,,,,,https://en.mandakh.edu.mn/business-administration-bachelor,2026-08-22,2026-08-22,current

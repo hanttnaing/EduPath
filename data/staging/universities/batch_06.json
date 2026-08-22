@@ -1,0 +1,144 @@
+﻿[
+  {
+    "university_id": "uni_bn_003",
+    "university_name": "Universiti Islam Sultan Sharif Ali",
+    "country_id": "country_bn",
+    "city": "Bandar Seri Begawan",
+    "official_website": "https://unissa.edu.bn/",
+    "source_url": "https://unissa.edu.bn/"
+  },
+  {
+    "university_id": "uni_bn_004",
+    "university_name": "Kolej Universiti Perguruan Ugama Seri Begawan",
+    "country_id": "country_bn",
+    "city": "Bandar Seri Begawan",
+    "official_website": "https://www.kupu-sb.edu.bn/",
+    "source_url": "https://www.kupu-sb.edu.bn/tawaran-kursus-program/"
+  },
+
+  {
+    "university_id": "uni_kh_003",
+    "university_name": "Royal University of Agriculture",
+    "country_id": "country_kh",
+    "city": "Phnom Penh",
+    "official_website": "https://www.rua.edu.kh/",
+    "source_url": "https://www.rua.edu.kh/"
+  },
+  {
+    "university_id": "uni_kh_004",
+    "university_name": "University of Health Sciences Cambodia",
+    "country_id": "country_kh",
+    "city": "Phnom Penh",
+    "official_website": "https://uhs.edu.kh/",
+    "source_url": "https://uhs.edu.kh/"
+  },
+  {
+    "university_id": "uni_kh_005",
+    "university_name": "National University of Management",
+    "country_id": "country_kh",
+    "city": "Phnom Penh",
+    "official_website": "https://numuniversity.com/",
+    "source_url": "https://numuniversity.com/"
+  },
+
+  {
+    "university_id": "uni_la_003",
+    "university_name": "University of Health Sciences Laos",
+    "country_id": "country_la",
+    "city": "Vientiane",
+    "official_website": "https://uhs.edu.la/",
+    "source_url": "https://uhs.edu.la/"
+  },
+  {
+    "university_id": "uni_la_004",
+    "university_name": "Savannakhet University",
+    "country_id": "country_la",
+    "city": "Kaysone Phomvihane",
+    "official_website": "http://sku.edu.la/",
+    "source_url": "https://usco2.umap.org/Institution/InstitutionDetails/583"
+  },
+  {
+    "university_id": "uni_la_005",
+    "university_name": "Champasak University",
+    "country_id": "country_la",
+    "city": "Pakse",
+    "official_website": "http://www.cu.edu.la/",
+    "source_url": "https://www.nuol.edu.la/index.php/en/news-events"
+  },
+
+  {
+    "university_id": "uni_mn_004",
+    "university_name": "Mongolian National University of Education",
+    "country_id": "country_mn",
+    "city": "Ulaanbaatar",
+    "official_website": "https://msue.edu.mn/",
+    "source_url": "https://msue.edu.mn/"
+  },
+  {
+    "university_id": "uni_mn_005",
+    "university_name": "University of Finance and Economics",
+    "country_id": "country_mn",
+    "city": "Ulaanbaatar",
+    "official_website": "https://www.ufe.edu.mn/",
+    "source_url": "https://www.ufe.edu.mn/en/c/28"
+  },
+  {
+    "university_id": "uni_mn_006",
+    "university_name": "Mongolian University of Life Sciences",
+    "country_id": "country_mn",
+    "city": "Ulaanbaatar",
+    "official_website": "https://muls.edu.mn/",
+    "source_url": "https://muls.edu.mn/"
+  },
+
+  {
+    "university_id": "uni_mm_004",
+    "university_name": "Dagon University",
+    "country_id": "country_mm",
+    "city": "Yangon",
+    "official_website": "https://www.dagonuniversity.edu.mm/",
+    "source_url": "https://www.dagonuniversity.edu.mm/"
+  },
+
+  {
+    "university_id": "uni_mo_005",
+    "university_name": "University of Saint Joseph",
+    "country_id": "country_mo",
+    "city": "Macau",
+    "official_website": "https://www.usj.edu.mo/en/",
+    "source_url": "https://www.usj.edu.mo/en/"
+  },
+  {
+    "university_id": "uni_mo_006",
+    "university_name": "Macao University of Tourism",
+    "country_id": "country_mo",
+    "city": "Macau",
+    "official_website": "https://www.utm.edu.mo/EN/",
+    "source_url": "https://www.utm.edu.mo/EN/"
+  },
+
+  {
+    "university_id": "uni_tl_004",
+    "university_name": "Universidade Oriental Timor Lorosa'e",
+    "country_id": "country_tl",
+    "city": "Dili",
+    "official_website": "https://unital.edu.tl/",
+    "source_url": "https://unital.edu.tl/"
+  },
+  {
+    "university_id": "uni_tl_005",
+    "university_name": "Universidade de Dili",
+    "country_id": "country_tl",
+    "city": "Dili",
+    "official_website": "https://undil.tl/",
+    "source_url": "https://undil.tl/"
+  },
+  {
+    "university_id": "uni_tl_006",
+    "university_name": "Universidade Catolica Timorense",
+    "country_id": "country_tl",
+    "city": "Dili",
+    "official_website": "https://uct.edu.tl/",
+    "source_url": "https://uct.edu.tl/"
+  }
+]

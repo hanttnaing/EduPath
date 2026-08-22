@@ -1,0 +1,362 @@
+[
+  {
+    "university_id": "uni_vn_011",
+    "university_name": "Vietnam National University of Agriculture",
+    "country_id": "country_vn",
+    "city": "Hanoi",
+    "university_type": "Public",
+    "official_website": "https://vnua.edu.vn/",
+    "source_url": "https://moet.gov.vn/co-so-giao-duc/danh-sach-cac-co-so-giao-duc"
+  },
+  {
+    "university_id": "uni_vn_012",
+    "university_name": "Thuyloi University",
+    "country_id": "country_vn",
+    "city": "Hanoi",
+    "university_type": "Public",
+    "official_website": "https://www.tlu.edu.vn/",
+    "source_url": "https://moet.gov.vn/co-so-giao-duc/danh-sach-cac-co-so-giao-duc"
+  },
+  {
+    "university_id": "uni_vn_013",
+    "university_name": "University of Transport and Communications",
+    "country_id": "country_vn",
+    "city": "Hanoi",
+    "university_type": "Public",
+    "official_website": "https://www.utc.edu.vn/",
+    "source_url": "https://moet.gov.vn/co-so-giao-duc/danh-sach-cac-co-so-giao-duc"
+  },
+  {
+    "university_id": "uni_vn_014",
+    "university_name": "Hanoi University of Civil Engineering",
+    "country_id": "country_vn",
+    "city": "Hanoi",
+    "university_type": "Public",
+    "official_website": "https://huce.edu.vn/",
+    "source_url": "https://moet.gov.vn/co-so-giao-duc/danh-sach-cac-co-so-giao-duc"
+  },
+  {
+    "university_id": "uni_vn_015",
+    "university_name": "Hanoi University",
+    "country_id": "country_vn",
+    "city": "Hanoi",
+    "university_type": "Public",
+    "official_website": "https://www.hanu.vn/",
+    "source_url": "https://moet.gov.vn/co-so-giao-duc/danh-sach-cac-co-so-giao-duc"
+  },
+  {
+    "university_id": "uni_vn_016",
+    "university_name": "Hanoi National University of Education",
+    "country_id": "country_vn",
+    "city": "Hanoi",
+    "university_type": "Public",
+    "official_website": "https://hnue.edu.vn/",
+    "source_url": "https://moet.gov.vn/co-so-giao-duc/danh-sach-cac-co-so-giao-duc"
+  },
+  {
+    "university_id": "uni_vn_017",
+    "university_name": "Hanoi Medical University",
+    "country_id": "country_vn",
+    "city": "Hanoi",
+    "university_type": "Public",
+    "official_website": "https://hmu.edu.vn/",
+    "source_url": "https://moet.gov.vn/co-so-giao-duc/danh-sach-cac-co-so-giao-duc"
+  },
+  {
+    "university_id": "uni_vn_018",
+    "university_name": "Hanoi University of Pharmacy",
+    "country_id": "country_vn",
+    "city": "Hanoi",
+    "university_type": "Public",
+    "official_website": "https://www.hup.edu.vn/",
+    "source_url": "https://moet.gov.vn/co-so-giao-duc/danh-sach-cac-co-so-giao-duc"
+  },
+  {
+    "university_id": "uni_vn_019",
+    "university_name": "Posts and Telecommunications Institute of Technology",
+    "country_id": "country_vn",
+    "city": "Hanoi",
+    "university_type": "Public",
+    "official_website": "https://ptit.edu.vn/",
+    "source_url": "https://moet.gov.vn/co-so-giao-duc/danh-sach-cac-co-so-giao-duc"
+  },
+  {
+    "university_id": "uni_vn_020",
+    "university_name": "Electric Power University",
+    "country_id": "country_vn",
+    "city": "Hanoi",
+    "university_type": "Public",
+    "official_website": "https://epu.edu.vn/",
+    "source_url": "https://moet.gov.vn/co-so-giao-duc/danh-sach-cac-co-so-giao-duc"
+  },
+  {
+    "university_id": "uni_vn_021",
+    "university_name": "Hanoi University of Mining and Geology",
+    "country_id": "country_vn",
+    "city": "Hanoi",
+    "university_type": "Public",
+    "official_website": "https://humg.edu.vn/",
+    "source_url": "https://moet.gov.vn/co-so-giao-duc/danh-sach-cac-co-so-giao-duc"
+  },
+  {
+    "university_id": "uni_vn_022",
+    "university_name": "Thuongmai University",
+    "country_id": "country_vn",
+    "city": "Hanoi",
+    "university_type": "Public",
+    "official_website": "https://tmu.edu.vn/",
+    "source_url": "https://moet.gov.vn/co-so-giao-duc/danh-sach-cac-co-so-giao-duc"
+  },
+  {
+    "university_id": "uni_vn_023",
+    "university_name": "Banking Academy of Vietnam",
+    "country_id": "country_vn",
+    "city": "Hanoi",
+    "university_type": "Public",
+    "official_website": "https://hvnh.edu.vn/",
+    "source_url": "https://moet.gov.vn/co-so-giao-duc/danh-sach-cac-co-so-giao-duc"
+  },
+  {
+    "university_id": "uni_vn_024",
+    "university_name": "Academy of Finance",
+    "country_id": "country_vn",
+    "city": "Hanoi",
+    "university_type": "Public",
+    "official_website": "https://hvtc.edu.vn/",
+    "source_url": "https://moet.gov.vn/co-so-giao-duc/danh-sach-cac-co-so-giao-duc"
+  },
+  {
+    "university_id": "uni_vn_025",
+    "university_name": "Phenikaa University",
+    "country_id": "country_vn",
+    "city": "Hanoi",
+    "university_type": "Private",
+    "official_website": "https://phenikaa-uni.edu.vn/",
+    "source_url": "https://moet.gov.vn/co-so-giao-duc/danh-sach-cac-co-so-giao-duc"
+  },
+  {
+    "university_id": "uni_vn_026",
+    "university_name": "FPT University",
+    "country_id": "country_vn",
+    "city": "Hanoi",
+    "university_type": "Private",
+    "official_website": "https://daihoc.fpt.edu.vn/",
+    "source_url": "https://moet.gov.vn/co-so-giao-duc/danh-sach-cac-co-so-giao-duc"
+  },
+  {
+    "university_id": "uni_vn_027",
+    "university_name": "VinUniversity",
+    "country_id": "country_vn",
+    "city": "Hanoi",
+    "university_type": "Private",
+    "official_website": "https://vinuni.edu.vn/",
+    "source_url": "https://moet.gov.vn/co-so-giao-duc/danh-sach-cac-co-so-giao-duc"
+  },
+  {
+    "university_id": "uni_vn_028",
+    "university_name": "Thai Nguyen University",
+    "country_id": "country_vn",
+    "city": "Thai Nguyen",
+    "university_type": "Public",
+    "official_website": "https://tnu.edu.vn/",
+    "source_url": "https://moet.gov.vn/co-so-giao-duc/danh-sach-cac-co-so-giao-duc"
+  },
+  {
+    "university_id": "uni_vn_029",
+    "university_name": "Vinh University",
+    "country_id": "country_vn",
+    "city": "Vinh",
+    "university_type": "Public",
+    "official_website": "https://vinhuni.edu.vn/",
+    "source_url": "https://moet.gov.vn/co-so-giao-duc/danh-sach-cac-co-so-giao-duc"
+  },
+  {
+    "university_id": "uni_vn_030",
+    "university_name": "Hue University",
+    "country_id": "country_vn",
+    "city": "Hue",
+    "university_type": "Public",
+    "official_website": "https://hueuni.edu.vn/",
+    "source_url": "https://moet.gov.vn/co-so-giao-duc/danh-sach-cac-co-so-giao-duc"
+  },
+  {
+    "university_id": "uni_vn_031",
+    "university_name": "Quy Nhon University",
+    "country_id": "country_vn",
+    "city": "Quy Nhon",
+    "university_type": "Public",
+    "official_website": "https://www.qnu.edu.vn/",
+    "source_url": "https://moet.gov.vn/co-so-giao-duc/danh-sach-cac-co-so-giao-duc"
+  },
+  {
+    "university_id": "uni_vn_032",
+    "university_name": "Nha Trang University",
+    "country_id": "country_vn",
+    "city": "Nha Trang",
+    "university_type": "Public",
+    "official_website": "https://www.ntu.edu.vn/",
+    "source_url": "https://moet.gov.vn/co-so-giao-duc/danh-sach-cac-co-so-giao-duc"
+  },
+  {
+    "university_id": "uni_vn_033",
+    "university_name": "Dalat University",
+    "country_id": "country_vn",
+    "city": "Da Lat",
+    "university_type": "Public",
+    "official_website": "https://dlu.edu.vn/",
+    "source_url": "https://moet.gov.vn/co-so-giao-duc/danh-sach-cac-co-so-giao-duc"
+  },
+  {
+    "university_id": "uni_vn_034",
+    "university_name": "Ho Chi Minh City Open University",
+    "country_id": "country_vn",
+    "city": "Ho Chi Minh City",
+    "university_type": "Public",
+    "official_website": "https://ou.edu.vn/",
+    "source_url": "https://moet.gov.vn/co-so-giao-duc/danh-sach-cac-co-so-giao-duc"
+  },
+  {
+    "university_id": "uni_vn_035",
+    "university_name": "Ho Chi Minh City University of Technology and Education",
+    "country_id": "country_vn",
+    "city": "Ho Chi Minh City",
+    "university_type": "Public",
+    "official_website": "https://hcmute.edu.vn/",
+    "source_url": "https://moet.gov.vn/co-so-giao-duc/danh-sach-cac-co-so-giao-duc"
+  },
+  {
+    "university_id": "uni_vn_036",
+    "university_name": "Industrial University of Ho Chi Minh City",
+    "country_id": "country_vn",
+    "city": "Ho Chi Minh City",
+    "university_type": "Public",
+    "official_website": "https://iuh.edu.vn/",
+    "source_url": "https://moet.gov.vn/co-so-giao-duc/danh-sach-cac-co-so-giao-duc"
+  },
+  {
+    "university_id": "uni_vn_037",
+    "university_name": "University of Finance - Marketing",
+    "country_id": "country_vn",
+    "city": "Ho Chi Minh City",
+    "university_type": "Public",
+    "official_website": "https://ufm.edu.vn/",
+    "source_url": "https://moet.gov.vn/co-so-giao-duc/danh-sach-cac-co-so-giao-duc"
+  },
+  {
+    "university_id": "uni_vn_038",
+    "university_name": "Nong Lam University Ho Chi Minh City",
+    "country_id": "country_vn",
+    "city": "Ho Chi Minh City",
+    "university_type": "Public",
+    "official_website": "https://hcmuaf.edu.vn/",
+    "source_url": "https://moet.gov.vn/co-so-giao-duc/danh-sach-cac-co-so-giao-duc"
+  },
+  {
+    "university_id": "uni_vn_039",
+    "university_name": "Ho Chi Minh City University of Law",
+    "country_id": "country_vn",
+    "city": "Ho Chi Minh City",
+    "university_type": "Public",
+    "official_website": "https://www.hcmulaw.edu.vn/",
+    "source_url": "https://moet.gov.vn/co-so-giao-duc/danh-sach-cac-co-so-giao-duc"
+  },
+  {
+    "university_id": "uni_vn_040",
+    "university_name": "University of Medicine and Pharmacy at Ho Chi Minh City",
+    "country_id": "country_vn",
+    "city": "Ho Chi Minh City",
+    "university_type": "Public",
+    "official_website": "https://ump.edu.vn/",
+    "source_url": "https://moet.gov.vn/co-so-giao-duc/danh-sach-cac-co-so-giao-duc"
+  },
+  {
+    "university_id": "uni_vn_041",
+    "university_name": "Saigon University",
+    "country_id": "country_vn",
+    "city": "Ho Chi Minh City",
+    "university_type": "Public",
+    "official_website": "https://sgu.edu.vn/",
+    "source_url": "https://moet.gov.vn/co-so-giao-duc/danh-sach-cac-co-so-giao-duc"
+  },
+  {
+    "university_id": "uni_vn_042",
+    "university_name": "Van Lang University",
+    "country_id": "country_vn",
+    "city": "Ho Chi Minh City",
+    "university_type": "Private",
+    "official_website": "https://www.vlu.edu.vn/",
+    "source_url": "https://moet.gov.vn/co-so-giao-duc/danh-sach-cac-co-so-giao-duc"
+  },
+  {
+    "university_id": "uni_vn_043",
+    "university_name": "Hoa Sen University",
+    "country_id": "country_vn",
+    "city": "Ho Chi Minh City",
+    "university_type": "Private",
+    "official_website": "https://www.hoasen.edu.vn/",
+    "source_url": "https://moet.gov.vn/co-so-giao-duc/danh-sach-cac-co-so-giao-duc"
+  },
+  {
+    "university_id": "uni_vn_044",
+    "university_name": "Nguyen Tat Thanh University",
+    "country_id": "country_vn",
+    "city": "Ho Chi Minh City",
+    "university_type": "Private",
+    "official_website": "https://ntt.edu.vn/",
+    "source_url": "https://moet.gov.vn/co-so-giao-duc/danh-sach-cac-co-so-giao-duc"
+  },
+  {
+    "university_id": "uni_vn_045",
+    "university_name": "Ho Chi Minh City University of Technology",
+    "country_id": "country_vn",
+    "city": "Ho Chi Minh City",
+    "university_type": "Private",
+    "official_website": "https://www.hutech.edu.vn/",
+    "source_url": "https://moet.gov.vn/co-so-giao-duc/danh-sach-cac-co-so-giao-duc"
+  },
+  {
+    "university_id": "uni_vn_046",
+    "university_name": "Ho Chi Minh University of Banking",
+    "country_id": "country_vn",
+    "city": "Ho Chi Minh City",
+    "university_type": "Public",
+    "official_website": "https://hub.edu.vn/",
+    "source_url": "https://moet.gov.vn/co-so-giao-duc/danh-sach-cac-co-so-giao-duc"
+  },
+  {
+    "university_id": "uni_vn_047",
+    "university_name": "Ho Chi Minh City University of Foreign Languages and Information Technology",
+    "country_id": "country_vn",
+    "city": "Ho Chi Minh City",
+    "university_type": "Private",
+    "official_website": "https://huflit.edu.vn/",
+    "source_url": "https://moet.gov.vn/co-so-giao-duc/danh-sach-cac-co-so-giao-duc"
+  },
+  {
+    "university_id": "uni_vn_048",
+    "university_name": "Tra Vinh University",
+    "country_id": "country_vn",
+    "city": "Tra Vinh",
+    "university_type": "Public",
+    "official_website": "https://www.tvu.edu.vn/",
+    "source_url": "https://moet.gov.vn/co-so-giao-duc/danh-sach-cac-co-so-giao-duc"
+  },
+  {
+    "university_id": "uni_vn_049",
+    "university_name": "Dong Thap University",
+    "country_id": "country_vn",
+    "city": "Cao Lanh",
+    "university_type": "Public",
+    "official_website": "https://www.dthu.edu.vn/",
+    "source_url": "https://moet.gov.vn/co-so-giao-duc/danh-sach-cac-co-so-giao-duc"
+  },
+  {
+    "university_id": "uni_vn_050",
+    "university_name": "Can Tho University of Medicine and Pharmacy",
+    "country_id": "country_vn",
+    "city": "Can Tho",
+    "university_type": "Public",
+    "official_website": "https://www.ctump.edu.vn/",
+    "source_url": "https://moet.gov.vn/co-so-giao-duc/danh-sach-cac-co-so-giao-duc"
+  }
+]

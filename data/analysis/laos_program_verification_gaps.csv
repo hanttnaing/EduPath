@@ -1,0 +1,4 @@
+﻿country_id,university_id,university_name,program_slot,gap_type,status,reason,official_source_url
+country_la,uni_la_002,Souphanouvong University,1,PROGRAM_IDENTITY_RESOLVED,RESOLVED,A current first-party official Souphanouvong University source was found after the initial audit. Resolved as prog_la_013.,https://www.iro-su.edu.la/graduate-profiles-report/
+country_la,uni_la_002,Souphanouvong University,2,PROGRAM_IDENTITY_RESOLVED,RESOLVED,A current first-party official Souphanouvong University source was found after the initial audit. Resolved as prog_la_014.,https://www.iro-su.edu.la/graduate-profiles-report/
+country_la,uni_la_002,Souphanouvong University,3,PROGRAM_IDENTITY_RESOLVED,RESOLVED,A current first-party official Souphanouvong University source was found after the initial audit. Resolved as prog_la_015.,https://www.iro-su.edu.la/graduate-profiles-report/

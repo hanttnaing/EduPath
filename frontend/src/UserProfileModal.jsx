@@ -1779,6 +1779,7 @@ function UserProfileModal({
             )}
         </section>
         
+        
         {/* PERSONALIZED RECOMMENDATIONS */}
         <section className="profile-recommendation-cta">
           <div>

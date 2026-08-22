@@ -1,0 +1,1150 @@
+====================================================================================================
+EDUPATH STEP 168.1B - INTERNATIONAL ELIGIBILITY FIELD PROPAGATION AUDIT
+====================================================================================================
+
+SCHEMAS
+----------------------------------------------------------------------------------------------------
+FILE: backend\app\schemas.py
+
+--- lines 25-41 ---
+   25:     database: str
+   26:     mongodb: str
+   27: 
+   28: 
+   29: class UniversityResponse(BaseModel):
+   30:     """Public university information returned by the API."""
+   31: 
+   32:     model_config = ConfigDict(extra="ignore")
+   33: 
+   34:     university_id: str
+   35:     university_name: str
+   36:     country_id: str
+   37:     city: str
+   38:     university_type: str | None = None
+   39:     official_website: str
+   40: 
+   41:     establishment_year: int | None = None
+
+--- lines 50-66 ---
+   50:     collected_at: datetime
+   51:     last_verified_at: datetime | None = None
+   52:     freshness_status: str
+   53: 
+   54: class UniversityListResponse(BaseModel):
+   55:     """Response returned for a university list request."""
+   56: 
+   57:     total: int
+   58:     count: int
+   59:     items: list[UniversityResponse]
+   60: 
+   61: class ProgramResponse(BaseModel):
+   62:     """Public academic programme data returned by the API."""
+   63: 
+   64:     model_config = ConfigDict(extra="ignore")
+   65: 
+   66:     program_id: str
+
+--- lines 96-112 ---
+   96:     last_verified_at: datetime
+   97:     freshness_status: str
+   98: 
+   99: 
+  100: class ProgramListResponse(BaseModel):
+  101:     """Response returned for a programme list request."""
+  102: 
+  103:     total: int
+  104:     count: int
+  105:     items: list[ProgramResponse]
+  106: 
+  107: class CountryResponse(BaseModel):
+  108:     country_id: str
+  109:     country_name: str
+  110: 
+  111:     region: Optional[str] = None
+  112:     capital_city: Optional[str] = None
+
+UNIVERSITY LOADER / IMPORT REFERENCES
+----------------------------------------------------------------------------------------------------
+Matched Python files: 37
+
+FILE: scripts\apply_program_tuition_mongodb_update.py
+
+--- lines 586-602 ---
+  586:                     program_id
+  587:                 ]
+  588:             )
+  589: 
+  590:             result = collection.update_one(
+  591:                 {
+  592:                     "program_id":
+  593:                         program_id
+  594:                 },
+  595:                 {
+  596:                     "$set":
+  597:                         update_data
+  598:                 },
+  599:             )
+  600: 
+  601:             if result.matched_count != 1:
+  602:                 raise RuntimeError(
+
+--- lines 768-784 ---
+  768:                 update_operation[
+  769:                     "$unset"
+  770:                 ] = unset_fields
+  771: 
+  772:             collection.update_one(
+  773:                 {
+  774:                     "program_id":
+  775:                         program_id
+  776:                 },
+  777:                 update_operation,
+  778:             )
+  779: 
+  780:         print(
+  781:             "Rollback complete."
+  782:         )
+  783: 
+  784:         print(
+
+FILE: scripts\audit_program_tuition.py
+
+--- lines 131-147 ---
+  131:     )
+  132: 
+  133:     university_by_id = {
+  134:         university.get(
+  135:             "university_id"
+  136:         ): university
+  137:         for university
+  138:         in japan_universities
+  139:     }
+  140: 
+  141:     japan_university_ids = set(
+  142:         university_by_id.keys()
+  143:     )
+  144: 
+  145:     # --------------------------------------------------
+  146:     # Load all programmes
+  147:     # --------------------------------------------------
+
+--- lines 153-169 ---
+  153:     japan_programs = [
+  154:         program
+  155:         for program in all_programs
+  156:         if program.get(
+  157:             "university_id"
+  158:         )
+  159:         in japan_university_ids
+  160:     ]
+  161: 
+  162:     # --------------------------------------------------
+  163:     # Basic summary
+  164:     # --------------------------------------------------
+  165: 
+  166:     print()
+  167:     print(
+  168:         "Japan universities loaded:",
+  169:         len(japan_universities),
+
+--- lines 323-339 ---
+  323:         japan_programs,
+  324:         key=lambda program: (
+  325:             university_by_id.get(
+  326:                 program.get(
+  327:                     "university_id"
+  328:                 ),
+  329:                 {},
+  330:             ).get(
+  331:                 "university_name",
+  332:                 "",
+  333:             ),
+  334:             program.get(
+  335:                 "degree_level",
+  336:                 "",
+  337:             ),
+  338:             program.get(
+  339:                 "program_name",
+
+--- lines 348-364 ---
+  348:     ):
+  349:         university = (
+  350:             university_by_id.get(
+  351:                 program.get(
+  352:                     "university_id"
+  353:                 ),
+  354:                 {},
+  355:             )
+  356:         )
+  357: 
+  358:         university_name = (
+  359:             university.get(
+  360:                 "university_name"
+  361:             )
+  362:             or program.get(
+  363:                 "university_id"
+  364:             )
+
+FILE: scripts\backup_japan_programs_before_tuition_update.py
+
+--- lines 91-107 ---
+   91:                 JAPAN_COUNTRY_ID
+   92:         },
+   93:     )
+   94: 
+   95:     japan_university_ids = {
+   96:         university.get(
+   97:             "university_id"
+   98:         )
+   99:         for university
+  100:         in japan_universities
+  101:     }
+  102: 
+  103:     # ---------------------------------------
+  104:     # Load all programs
+  105:     # ---------------------------------------
+  106: 
+  107:     all_programs = fetch_all(
+
+--- lines 111-127 ---
+  111:     japan_programs = [
+  112:         program
+  113:         for program in all_programs
+  114:         if program.get(
+  115:             "university_id"
+  116:         )
+  117:         in japan_university_ids
+  118:     ]
+  119: 
+  120:     # ---------------------------------------
+  121:     # Safety checks
+  122:     # ---------------------------------------
+  123: 
+  124:     print()
+  125:     print(
+  126:         "Japan universities found:",
+  127:         len(japan_universities),
+
+FILE: scripts\build_japan_program_master_rows.py
+
+--- lines 17-33 ---
+   17: 
+   18: 
+   19: PROGRAM_HEADERS = [
+   20:     "program_id",
+   21:     "university_id",
+   22:     "program_name",
+   23:     "field_of_study",
+   24:     "degree_level",
+   25:     "duration_years",
+   26:     "study_mode",
+   27:     "language_of_instruction",
+   28:     "tuition_fee",
+   29:     "tuition_currency",
+   30:     "tuition_period",
+   31:     "minimum_gpa",
+   32:     "gpa_scale",
+   33:     "ielts_requirement",
+
+--- lines 78-94 ---
+   78:     # ---------------------------------
+   79:     # 3. Validate universities
+   80:     # ---------------------------------
+   81: 
+   82:     university_ids = {
+   83:         row["university_id"].strip()
+   84:         for row in seed_rows
+   85:         if row.get("university_id")
+   86:     }
+   87: 
+   88:     if (
+   89:         len(university_ids)
+   90:         != EXPECTED_UNIVERSITY_COUNT
+   91:     ):
+   92:         raise ValueError(
+   93:             "Expected exactly "
+   94:             f"{EXPECTED_UNIVERSITY_COUNT} "
+
+--- lines 101-117 ---
+  101: 
+  102:     university_slots = {}
+  103: 
+  104:     for row in seed_rows:
+  105:         university_id = row[
+  106:             "university_id"
+  107:         ].strip()
+  108: 
+  109:         slot = row[
+  110:             "program_slot"
+  111:         ].strip()
+  112: 
+  113:         university_slots.setdefault(
+  114:             university_id,
+  115:             set(),
+  116:         ).add(slot)
+  117: 
+
+--- lines 125-141 ---
+  125:         }
+  126: 
+  127:         if slots != expected_slots:
+  128:             raise ValueError(
+  129:                 f"{university_id} has "
+  130:                 f"invalid program slots: "
+  131:                 f"{sorted(slots)}"
+  132:             )
+  133: 
+  134:     # ---------------------------------
+  135:     # 5. Build 21-column rows
+  136:     # ---------------------------------
+  137: 
+  138:     collected_at = datetime.now(
+  139:         timezone.utc
+  140:     ).date().isoformat()
+  141: 
+
+--- lines 159-175 ---
+  159:             "official_source_url",
+  160:             "",
+  161:         ).strip()
+  162: 
+  163:         university_id = seed.get(
+  164:             "university_id",
+  165:             "",
+  166:         ).strip()
+  167: 
+  168:         if not university_id:
+  169:             raise ValueError(
+  170:                 "A program record is missing "
+  171:                 "university_id."
+  172:             )
+  173: 
+  174:         if not program_name:
+  175:             raise ValueError(
+
+--- lines 195-211 ---
+  195: 
+  196:         output_rows.append(
+  197:             {
+  198:                 "program_id": program_id,
+  199:                 "university_id": university_id,
+  200:                 "program_name": program_name,
+  201: 
+  202:                 # Will be enriched later
+  203:                 "field_of_study": "",
+  204: 
+  205:                 "degree_level": degree_level,
+  206: 
+  207:                 # Recommendation-critical
+  208:                 # fields remain blank until
+  209:                 # official verification.
+  210:                 "duration_years": "",
+  211:                 "study_mode": "",
+
+--- lines 299-315 ---
+  299:     )
+  300: 
+  301:     print(
+  302:         f"Universities: "
+  303:         f"{len(university_ids)}"
+  304:     )
+  305: 
+  306:     print(
+  307:         f"Programs: "
+  308:         f"{len(output_rows)}"
+  309:     )
+  310: 
+  311:     for degree, count in sorted(
+  312:         degree_counts.items()
+  313:     ):
+  314:         print(
+  315:             f"{degree}: {count}"
+
+FILE: scripts\build_university_master_rows.py
+
+--- lines 62-78 ---
+   62:         sequence = counters[
+   63:             country_id
+   64:         ]
+   65: 
+   66:         university_id = (
+   67:             f"uni_{prefix}_{sequence:03d}"
+   68:         )
+   69: 
+   70:         output_rows.append(
+   71:             {
+   72:                 "university_id": university_id,
+   73:                 "university_name": row[
+   74:                     "university_name"
+   75:                 ].strip(),
+   76:                 "country_id": country_id,
+   77:                 "city": row[
+   78:                     "city"
+
+--- lines 100-116 ---
+  100:             }
+  101:         )
+  102: 
+  103:     fieldnames = [
+  104:         "university_id",
+  105:         "university_name",
+  106:         "country_id",
+  107:         "city",
+  108:         "university_type",
+  109:         "official_website",
+  110:         "establishment_year",
+  111:         "global_ranking",
+  112:         "ranking_source",
+  113:         "ranking_year",
+  114:         "degree_levels",
+  115:         "scholarship_available",
+  116:         "source_url",
+
+FILE: scripts\create_japan_program_seed.py
+
+--- lines 354-370 ---
+  354: 
+  355:     rows = []
+  356: 
+  357:     for (
+  358:         university_id,
+  359:         university_name,
+  360:         program_slot,
+  361:         program_name,
+  362:         degree_level_hint,
+  363:         source_url,
+  364:     ) in PROGRAMS:
+  365: 
+  366:         rows.append(
+  367:             {
+  368:                 "university_id": university_id,
+  369:                 "university_name": university_name,
+  370:                 "country_id": "country_jp",
+
+--- lines 381-397 ---
+  381:             }
+  382:         )
+  383: 
+  384:     fieldnames = [
+  385:         "university_id",
+  386:         "university_name",
+  387:         "country_id",
+  388:         "program_slot",
+  389:         "program_name",
+  390:         "degree_level_hint",
+  391:         "official_source_url",
+  392:         "collection_status",
+  393:         "verification_status",
+  394:     ]
+  395: 
+  396:     with OUTPUT_PATH.open(
+  397:         "w",
+
+--- lines 406-422 ---
+  406:         writer.writeheader()
+  407:         writer.writerows(rows)
+  408: 
+  409:     unique_universities = {
+  410:         row["university_id"]
+  411:         for row in rows
+  412:     }
+  413: 
+  414:     print(
+  415:         "=== Japan Program Seed Created ==="
+  416:     )
+  417:     print(
+  418:         f"Universities: "
+  419:         f"{len(unique_universities)}"
+  420:     )
+  421:     print(
+  422:         f"Program identities: "
+
+FILE: scripts\create_program_collection_queue.py
+
+--- lines 35-51 ---
+   35:             PROGRAMS_PER_UNIVERSITY + 1,
+   36:         ):
+   37:             queue_rows.append(
+   38:                 {
+   39:                     "university_id": university[
+   40:                         "university_id"
+   41:                     ],
+   42:                     "university_name": university[
+   43:                         "university_name"
+   44:                     ],
+   45:                     "country_id": university[
+   46:                         "country_id"
+   47:                     ],
+   48:                     "official_website": university[
+   49:                         "official_website"
+   50:                     ],
+   51:                     "program_slot": slot,
+
+--- lines 60-76 ---
+   60:                 }
+   61:             )
+   62: 
+   63:     fieldnames = [
+   64:         "university_id",
+   65:         "university_name",
+   66:         "country_id",
+   67:         "official_website",
+   68:         "program_slot",
+   69:         "program_name",
+   70:         "program_url",
+   71:         "collection_status",
+   72:         "verification_status",
+   73:     ]
+   74: 
+   75:     OUTPUT_PATH.parent.mkdir(
+   76:         parents=True,
+
+FILE: scripts\create_program_tuition_context_staging.py
+
+--- lines 89-105 ---
+   89:         },
+   90:     )
+   91: 
+   92:     university_by_id = {
+   93:         university.get("university_id"):
+   94:             university.get("university_name")
+   95:         for university in universities
+   96:     }
+   97: 
+   98:     japan_university_ids = set(
+   99:         university_by_id.keys()
+  100:     )
+  101: 
+  102:     # --------------------------------------------------
+  103:     # Load programs
+  104:     # --------------------------------------------------
+  105: 
+
+--- lines 109-125 ---
+  109: 
+  110:     japan_programs = [
+  111:         program
+  112:         for program in programs
+  113:         if program.get("university_id")
+  114:         in japan_university_ids
+  115:     ]
+  116: 
+  117:     print()
+  118:     print(
+  119:         "Japan universities found:",
+  120:         len(universities),
+  121:     )
+  122: 
+  123:     print(
+  124:         "Japan programs found:",
+  125:         len(japan_programs),
+
+--- lines 152-168 ---
+  152:     # --------------------------------------------------
+  153: 
+  154:     fieldnames = [
+  155:         "program_id",
+  156:         "university_id",
+  157:         "university_name",
+  158:         "program_name",
+  159:         "degree_level",
+  160: 
+  161:         "current_tuition_fee",
+  162:         "current_tuition_currency",
+  163:         "current_tuition_period",
+  164: 
+  165:         "tuition_academic_year",
+  166:         "tuition_student_scope",
+  167:         "tuition_source_url",
+  168:         "tuition_last_verified_at",
+
+--- lines 179-195 ---
+  179:     sorted_programs = sorted(
+  180:         japan_programs,
+  181:         key=lambda program: (
+  182:             university_by_id.get(
+  183:                 program.get("university_id"),
+  184:                 "",
+  185:             ),
+  186:             program.get(
+  187:                 "degree_level",
+  188:                 "",
+  189:             ),
+  190:             program.get(
+  191:                 "program_name",
+  192:                 "",
+  193:             ),
+  194:         ),
+  195:     )
+
+--- lines 206-222 ---
+  206: 
+  207:         writer.writeheader()
+  208: 
+  209:         for program in sorted_programs:
+  210:             university_id = (
+  211:                 program.get(
+  212:                     "university_id"
+  213:                 )
+  214:             )
+  215: 
+  216:             writer.writerow(
+  217:                 {
+  218:                     "program_id":
+  219:                         program.get(
+  220:                             "program_id"
+  221:                         ),
+  222: 
+
+--- lines 224-240 ---
+  224:                         university_id,
+  225: 
+  226:                     "university_name":
+  227:                         university_by_id.get(
+  228:                             university_id,
+  229:                             "",
+  230:                         ),
+  231: 
+  232:                     "program_name":
+  233:                         program.get(
+  234:                             "program_name"
+  235:                         ),
+  236: 
+  237:                     "degree_level":
+  238:                         program.get(
+  239:                             "degree_level"
+  240:                         ),
+
+FILE: scripts\dry_run_program_tuition_mongodb_update.py
+
+--- lines 299-315 ---
+  299:                     "program_id": 1,
+  300: 
+  301:                     "program_name": 1,
+  302: 
+  303:                     "university_id": 1,
+  304: 
+  305:                     "tuition_fee": 1,
+  306: 
+  307:                     "tuition_currency": 1,
+  308: 
+  309:                     "tuition_period": 1,
+  310: 
+  311:                     "tuition_academic_year": 1,
+  312: 
+  313:                     "tuition_student_scope": 1,
+  314: 
+  315:                     "tuition_source_url": 1,
+
+FILE: scripts\enrich_japan_program_duration_mode.py
+
+--- lines 236-252 ---
+  236:         degree_level = row[
+  237:             "degree_level"
+  238:         ].strip()
+  239: 
+  240:         university_id = row[
+  241:             "university_id"
+  242:         ].strip()
+  243: 
+  244:         duration = get_duration(
+  245:             program_id,
+  246:             degree_level,
+  247:         )
+  248: 
+  249:         source = get_duration_source(
+  250:             program_id,
+  251:             degree_level,
+  252:         )
+
+--- lines 302-318 ---
+  302: 
+  303:         audit_rows.append(
+  304:             {
+  305:                 "program_id": program_id,
+  306:                 "university_id": (
+  307:                     university_id
+  308:                 ),
+  309:                 "program_name": row[
+  310:                     "program_name"
+  311:                 ],
+  312:                 "degree_level": (
+  313:                     degree_level
+  314:                 ),
+  315:                 "duration_years": (
+  316:                     duration
+  317:                 ),
+  318:                 "study_mode": (
+
+--- lines 417-433 ---
+  417:     )
+  418: 
+  419:     audit_headers = [
+  420:         "program_id",
+  421:         "university_id",
+  422:         "program_name",
+  423:         "degree_level",
+  424:         "duration_years",
+  425:         "study_mode",
+  426:         "duration_source_name",
+  427:         "duration_source_url",
+  428:         "duration_reason",
+  429:         "study_mode_basis",
+  430:         "verified_at",
+  431:     ]
+  432: 
+  433:     with AUDIT_PATH.open(
+
+FILE: scripts\enrich_japan_program_intake_deadline.py
+
+--- lines 421-437 ---
+  421:         program_id = row[
+  422:             "program_id"
+  423:         ].strip()
+  424: 
+  425:         university_id = row[
+  426:             "university_id"
+  427:         ].strip()
+  428: 
+  429:         direct_rule = DIRECT_RULES.get(
+  430:             program_id
+  431:         )
+  432: 
+  433:         if direct_rule:
+  434:             row["intake"] = direct_rule[
+  435:                 "intake"
+  436:             ]
+  437: 
+
+--- lines 477-493 ---
+  477:             ] = ""
+  478: 
+  479:             complex_info = (
+  480:                 COMPLEX_SOURCES.get(
+  481:                     university_id
+  482:                 )
+  483:             )
+  484: 
+  485:             if complex_info:
+  486:                 schedule_status = (
+  487:                     "Reviewed - "
+  488:                     "Route Dependent"
+  489:                 )
+  490: 
+  491:                 source_name = complex_info[
+  492:                     "source_name"
+  493:                 ]
+
+--- lines 570-586 ---
+  570: 
+  571:         audit_rows.append(
+  572:             {
+  573:                 "program_id": program_id,
+  574:                 "university_id": (
+  575:                     university_id
+  576:                 ),
+  577:                 "program_name": row[
+  578:                     "program_name"
+  579:                 ],
+  580:                 "degree_level": row[
+  581:                     "degree_level"
+  582:                 ],
+  583:                 "schedule_status": (
+  584:                     schedule_status
+  585:                 ),
+  586:                 "stored_intake": row[
+
+--- lines 641-657 ---
+  641:     )
+  642: 
+  643:     audit_headers = [
+  644:         "program_id",
+  645:         "university_id",
+  646:         "program_name",
+  647:         "degree_level",
+  648:         "schedule_status",
+  649:         "stored_intake",
+  650:         "stored_application_deadline",
+  651:         "source_name",
+  652:         "source_url",
+  653:         "schedule_evidence",
+  654:         "storage_reason",
+  655:         "verified_at",
+  656:     ]
+  657: 
+
+FILE: scripts\enrich_japan_program_language.py
+
+--- lines 330-346 ---
+  330: 
+  331: 
+  332: def get_source(
+  333:     program_id: str,
+  334:     university_id: str,
+  335: ) -> dict:
+  336:     if (
+  337:         program_id
+  338:         in PROGRAM_SOURCE_OVERRIDES
+  339:     ):
+  340:         return PROGRAM_SOURCE_OVERRIDES[
+  341:             program_id
+  342:         ]
+  343: 
+  344:     source = SOURCE_INFO.get(
+  345:         university_id
+  346:     )
+
+--- lines 347-363 ---
+  347: 
+  348:     if source is None:
+  349:         raise ValueError(
+  350:             f"No language source for "
+  351:             f"{university_id}"
+  352:         )
+  353: 
+  354:     return source
+  355: 
+  356: 
+  357: def get_reason(
+  358:     language: str,
+  359: ) -> str:
+  360:     reasons = {
+  361:         "English": (
+  362:             "Official source explicitly confirms "
+  363:             "an English-taught degree/program."
+
+--- lines 433-449 ---
+  433:         program_id = row[
+  434:             "program_id"
+  435:         ].strip()
+  436: 
+  437:         university_id = row[
+  438:             "university_id"
+  439:         ].strip()
+  440: 
+  441:         language = get_language(
+  442:             program_id
+  443:         )
+  444: 
+  445:         source = get_source(
+  446:             program_id,
+  447:             university_id,
+  448:         )
+  449: 
+
+--- lines 484-500 ---
+  484: 
+  485:         audit_rows.append(
+  486:             {
+  487:                 "program_id": program_id,
+  488:                 "university_id": (
+  489:                     university_id
+  490:                 ),
+  491:                 "program_name": row[
+  492:                     "program_name"
+  493:                 ],
+  494:                 "language_classification": (
+  495:                     language
+  496:                 ),
+  497:                 "source_name": source[
+  498:                     "source_name"
+  499:                 ],
+  500:                 "source_url": source[
+
+--- lines 561-577 ---
+  561:     )
+  562: 
+  563:     audit_headers = [
+  564:         "program_id",
+  565:         "university_id",
+  566:         "program_name",
+  567:         "language_classification",
+  568:         "source_name",
+  569:         "source_url",
+  570:         "verified_at",
+  571:         "reason",
+  572:     ]
+  573: 
+  574:     with AUDIT_PATH.open(
+  575:         "w",
+  576:         encoding="utf-8-sig",
+  577:         newline="",
+
+PROGRAMME LOADER / IMPORT REFERENCES
+----------------------------------------------------------------------------------------------------
+FILE: scripts\load_programs_to_mongodb.py
+
+--- lines 24-40 ---
+   24: INPUT_JSON = (
+   25:     PROJECT_ROOT
+   26:     / "data"
+   27:     / "cleaned"
+   28:     / "programs.json"
+   29: )
+   30: 
+   31: load_dotenv(ENV_FILE)
+   32: 
+   33: MONGODB_URI = os.getenv("MONGODB_URI")
+   34: 
+   35: DATABASE_NAME = os.getenv(
+   36:     "MONGODB_DATABASE",
+   37:     "edupath_db",
+   38: )
+   39: 
+   40: PROGRAMS_COLLECTION = "programs"
+
+--- lines 159-175 ---
+  159:         records = json.load(input_file)
+  160: 
+  161:     if not isinstance(records, list):
+  162:         raise ValueError(
+  163:             "programs.json must contain a list of records."
+  164:         )
+  165: 
+  166:     if not records:
+  167:         raise ValueError(
+  168:             "programs.json does not contain any records."
+  169:         )
+  170: 
+  171:     return records
+  172: 
+  173: 
+  174: # ---------------------------------------------------------
+  175: # Main loader
+
+--- lines 224-240 ---
+  224:         # -------------------------------------------------
+  225:         # Create indexes
+  226:         # -------------------------------------------------
+  227: 
+  228:         program_id_index = programs_collection.create_index(
+  229:             [("program_id", ASCENDING)],
+  230:             unique=True,
+  231:             name="unique_program_id",
+  232:         )
+  233: 
+  234:         university_id_index = (
+  235:             programs_collection.create_index(
+  236:                 [("university_id", ASCENDING)],
+  237:                 name="program_university_id",
+  238:             )
+  239:         )
+  240: 
+
+--- lines 249-265 ---
+  249:             [("field_of_study", ASCENDING)],
+  250:             name="program_field_of_study",
+  251:         )
+  252: 
+  253:         print(f"Index ready: {program_id_index}")
+  254:         print(f"Index ready: {university_id_index}")
+  255:         print(f"Index ready: {degree_level_index}")
+  256:         print(f"Index ready: {field_index}")
+  257: 
+  258:         inserted_count = 0
+  259:         updated_count = 0
+  260:         unchanged_count = 0
+  261: 
+  262:         # -------------------------------------------------
+  263:         # Process each programme record
+  264:         # -------------------------------------------------
+  265: 
+
+--- lines 268-284 ---
+  268: 
+  269:             program_id = document.get("program_id")
+  270:             university_id = document.get("university_id")
+  271: 
+  272:             if not program_id:
+  273:                 raise ValueError(
+  274:                     "Every programme must contain a program_id."
+  275:                 )
+  276: 
+  277:             if not university_id:
+  278:                 raise ValueError(
+  279:                     "Every programme must contain "
+  280:                     "a university_id."
+  281:                 )
+  282: 
+  283:             # Verify the programme's parent university.
+  284:             university_exists = (
+
+--- lines 296-312 ---
+  296:                 )
+  297: 
+  298:             existing_document = (
+  299:                 programs_collection.find_one(
+  300:                     {"program_id": program_id},
+  301:                     {
+  302:                         "_id": 1,
+  303:                         "content_hash": 1,
+  304:                     },
+  305:                 )
+  306:             )
+  307: 
+  308:             # Skip the database write when nothing changed.
+  309:             if (
+  310:                 existing_document is not None
+  311:                 and existing_document.get("content_hash")
+  312:                 == document["content_hash"]
+
+--- lines 313-329 ---
+  313:             ):
+  314:                 unchanged_count += 1
+  315: 
+  316:                 print(
+  317:                     f"UNCHANGED: {program_id} - "
+  318:                     f"{document.get('program_name')}"
+  319:                 )
+  320: 
+  321:                 continue
+  322: 
+  323:             current_time = datetime.now(timezone.utc)
+  324: 
+  325:             document["database_updated_at"] = current_time
+  326: 
+  327:             result = programs_collection.update_one(
+  328:                 {"program_id": program_id},
+  329:                 {
+
+--- lines 335-351 ---
+  335:                 upsert=True,
+  336:             )
+  337: 
+  338:             if result.upserted_id is not None:
+  339:                 inserted_count += 1
+  340:                 action = "INSERTED"
+  341:             else:
+  342:                 updated_count += 1
+  343:                 action = "UPDATED"
+  344: 
+  345:             print(
+  346:                 f"{action}: {program_id} - "
+  347:                 f"{document.get('program_name')}"
+  348:             )
+  349: 
+  350:         # -------------------------------------------------
+  351:         # Display loading results
+
+--- lines 357-373 ---
+  357: 
+  358:         print("\nLoading summary")
+  359:         print("-" * 60)
+  360:         print(f"Records processed: {len(raw_records)}")
+  361:         print(f"Inserted: {inserted_count}")
+  362:         print(f"Updated: {updated_count}")
+  363:         print(f"Unchanged: {unchanged_count}")
+  364:         print(
+  365:             "Total documents in programs collection: "
+  366:             f"{total_documents}"
+  367:         )
+  368: 
+  369:         first_program = programs_collection.find_one(
+  370:             {"program_id": "prog_jp_001"},
+  371:             {
+  372:                 "_id": 0,
+  373:                 "program_id": 1,
+
+API UNIVERSITY / PROGRAMME REFERENCES
+----------------------------------------------------------------------------------------------------
+FILE: backend\app\main.py
+
+--- lines 44-60 ---
+   44:     CountryListResponse,
+   45:     CountryResponse,
+   46:     HealthResponse,
+   47:     ProgramListResponse,
+   48:     ProgramResponse,
+   49:     RootResponse,
+   50:     ScholarshipListResponse,
+   51:     ScholarshipResponse,
+   52:     UniversityListResponse,
+   53:     UniversityResponse,
+   54: )
+   55: 
+   56: # ---------------------------------------------------------
+   57: # Application lifespan
+   58: # ---------------------------------------------------------
+   59: 
+   60: @asynccontextmanager
+
+--- lines 177-193 ---
+  177: # List and filter universities
+  178: # ---------------------------------------------------------
+  179: 
+  180: @app.get(
+  181:     "/api/universities",
+  182:     response_model=UniversityListResponse,
+  183:     tags=["Universities"],
+  184: )
+  185: def list_universities(
+  186:     country_id: str | None = Query(
+  187:         default=None,
+  188:         description="Filter by country ID.",
+  189:         examples=["country_jp"],
+  190:     ),
+  191:     scholarship_available: bool | None = Query(
+  192:         default=None,
+  193:         description="Filter by scholarship availability.",
+
+--- lines 263-279 ---
+  263: # Find one university
+  264: # ---------------------------------------------------------
+  265: 
+  266: @app.get(
+  267:     "/api/universities/{university_id}",
+  268:     response_model=UniversityResponse,
+  269:     tags=["Universities"],
+  270: )
+  271: def get_university(
+  272:     university_id: str,
+  273: ) -> dict[str, Any]:
+  274:     """Return one university using its unique ID."""
+  275: 
+  276:     database = get_database()
+  277:     collection = database["universities"]
+  278: 
+  279:     try:
+
+--- lines 303-319 ---
+  303: # List and filter programmes
+  304: # ---------------------------------------------------------
+  305: 
+  306: @app.get(
+  307:     "/api/programs",
+  308:     response_model=ProgramListResponse,
+  309:     tags=["Programs"],
+  310: )
+  311: def list_programs(
+  312:     university_id: str | None = Query(
+  313:         default=None,
+  314:         description="Filter programmes by university ID.",
+  315:         examples=["uni_jp_001"],
+  316:     ),
+  317:     country_id: str | None = Query(
+  318:         default=None,
+  319:         description="Filter programmes by country ID.",
+
+--- lines 462-478 ---
+  462: # Find one programme
+  463: # ---------------------------------------------------------
+  464: 
+  465: @app.get(
+  466:     "/api/programs/{program_id}",
+  467:     response_model=ProgramResponse,
+  468:     tags=["Programs"],
+  469: )
+  470: def get_program(
+  471:     program_id: str,
+  472: ) -> dict[str, Any]:
+  473:     """Return one academic programme using its unique ID."""
+  474: 
+  475:     database = get_database()
+  476:     collection = database["programs"]
+  477: 
+  478:     try:
+
+====================================================================================================
+STEP 168.1B COMPLETE
+NO FILES OR DATABASE RECORDS WERE MODIFIED
+====================================================================================================

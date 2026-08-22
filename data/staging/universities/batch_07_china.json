@@ -1,0 +1,362 @@
+[
+  {
+    "university_id": "uni_cn_011",
+    "university_name": "Renmin University of China",
+    "country_id": "country_cn",
+    "city": "Beijing",
+    "university_type": "Public",
+    "official_website": "https://en.ruc.edu.cn/",
+    "source_url": "https://en.moe.gov.cn/subordinate_universities/"
+  },
+  {
+    "university_id": "uni_cn_012",
+    "university_name": "Beijing Normal University",
+    "country_id": "country_cn",
+    "city": "Beijing",
+    "university_type": "Public",
+    "official_website": "https://english.bnu.edu.cn/",
+    "source_url": "https://en.moe.gov.cn/subordinate_universities/"
+  },
+  {
+    "university_id": "uni_cn_013",
+    "university_name": "China Agricultural University",
+    "country_id": "country_cn",
+    "city": "Beijing",
+    "university_type": "Public",
+    "official_website": "https://en.cau.edu.cn/",
+    "source_url": "https://en.moe.gov.cn/subordinate_universities/"
+  },
+  {
+    "university_id": "uni_cn_014",
+    "university_name": "Beijing Foreign Studies University",
+    "country_id": "country_cn",
+    "city": "Beijing",
+    "university_type": "Public",
+    "official_website": "https://global.bfsu.edu.cn/",
+    "source_url": "https://en.moe.gov.cn/subordinate_universities/"
+  },
+  {
+    "university_id": "uni_cn_015",
+    "university_name": "University of Science and Technology Beijing",
+    "country_id": "country_cn",
+    "city": "Beijing",
+    "university_type": "Public",
+    "official_website": "https://en.ustb.edu.cn/",
+    "source_url": "https://en.moe.gov.cn/subordinate_universities/"
+  },
+  {
+    "university_id": "uni_cn_016",
+    "university_name": "Beijing Language and Culture University",
+    "country_id": "country_cn",
+    "city": "Beijing",
+    "university_type": "Public",
+    "official_website": "https://english.blcu.edu.cn/",
+    "source_url": "https://en.moe.gov.cn/subordinate_universities/"
+  },
+  {
+    "university_id": "uni_cn_017",
+    "university_name": "Beijing University of Chemical Technology",
+    "country_id": "country_cn",
+    "city": "Beijing",
+    "university_type": "Public",
+    "official_website": "https://english.buct.edu.cn/",
+    "source_url": "https://en.moe.gov.cn/subordinate_universities/"
+  },
+  {
+    "university_id": "uni_cn_018",
+    "university_name": "Beijing Jiaotong University",
+    "country_id": "country_cn",
+    "city": "Beijing",
+    "university_type": "Public",
+    "official_website": "https://en.bjtu.edu.cn/",
+    "source_url": "https://en.moe.gov.cn/subordinate_universities/"
+  },
+  {
+    "university_id": "uni_cn_019",
+    "university_name": "China University of Geosciences (Beijing)",
+    "country_id": "country_cn",
+    "city": "Beijing",
+    "university_type": "Public",
+    "official_website": "https://en.cugb.edu.cn/",
+    "source_url": "https://en.moe.gov.cn/subordinate_universities/"
+  },
+  {
+    "university_id": "uni_cn_020",
+    "university_name": "Beijing University of Posts and Telecommunications",
+    "country_id": "country_cn",
+    "city": "Beijing",
+    "university_type": "Public",
+    "official_website": "https://english.bupt.edu.cn/",
+    "source_url": "https://en.moe.gov.cn/subordinate_universities/"
+  },
+  {
+    "university_id": "uni_cn_021",
+    "university_name": "China University of Mining and Technology-Beijing",
+    "country_id": "country_cn",
+    "city": "Beijing",
+    "university_type": "Public",
+    "official_website": "https://english.cumtb.edu.cn/",
+    "source_url": "https://en.moe.gov.cn/subordinate_universities/"
+  },
+  {
+    "university_id": "uni_cn_022",
+    "university_name": "China University of Petroleum-Beijing",
+    "country_id": "country_cn",
+    "city": "Beijing",
+    "university_type": "Public",
+    "official_website": "https://www.cup.edu.cn/english/",
+    "source_url": "https://en.moe.gov.cn/subordinate_universities/"
+  },
+  {
+    "university_id": "uni_cn_023",
+    "university_name": "Beijing Forestry University",
+    "country_id": "country_cn",
+    "city": "Beijing",
+    "university_type": "Public",
+    "official_website": "https://english.bjfu.edu.cn/",
+    "source_url": "https://en.moe.gov.cn/subordinate_universities/"
+  },
+  {
+    "university_id": "uni_cn_024",
+    "university_name": "Communication University of China",
+    "country_id": "country_cn",
+    "city": "Beijing",
+    "university_type": "Public",
+    "official_website": "https://en.cuc.edu.cn/",
+    "source_url": "https://en.moe.gov.cn/subordinate_universities/"
+  },
+  {
+    "university_id": "uni_cn_025",
+    "university_name": "Central University of Finance and Economics",
+    "country_id": "country_cn",
+    "city": "Beijing",
+    "university_type": "Public",
+    "official_website": "https://en.cufe.edu.cn/",
+    "source_url": "https://en.moe.gov.cn/subordinate_universities/"
+  },
+  {
+    "university_id": "uni_cn_026",
+    "university_name": "China University of Political Science and Law",
+    "country_id": "country_cn",
+    "city": "Beijing",
+    "university_type": "Public",
+    "official_website": "https://en.cupl.edu.cn/",
+    "source_url": "https://en.moe.gov.cn/subordinate_universities/"
+  },
+  {
+    "university_id": "uni_cn_027",
+    "university_name": "Beijing University of Chinese Medicine",
+    "country_id": "country_cn",
+    "city": "Beijing",
+    "university_type": "Public",
+    "official_website": "https://english.bucm.edu.cn/",
+    "source_url": "https://en.moe.gov.cn/subordinate_universities/"
+  },
+  {
+    "university_id": "uni_cn_028",
+    "university_name": "University of International Business and Economics",
+    "country_id": "country_cn",
+    "city": "Beijing",
+    "university_type": "Public",
+    "official_website": "https://english.uibe.edu.cn/",
+    "source_url": "https://en.moe.gov.cn/subordinate_universities/"
+  },
+  {
+    "university_id": "uni_cn_029",
+    "university_name": "North China Electric Power University",
+    "country_id": "country_cn",
+    "city": "Beijing",
+    "university_type": "Public",
+    "official_website": "https://english.ncepu.edu.cn/",
+    "source_url": "https://en.moe.gov.cn/subordinate_universities/"
+  },
+  {
+    "university_id": "uni_cn_030",
+    "university_name": "Tianjin University",
+    "country_id": "country_cn",
+    "city": "Tianjin",
+    "university_type": "Public",
+    "official_website": "https://www.tju.edu.cn/english/",
+    "source_url": "https://en.moe.gov.cn/subordinate_universities/"
+  },
+  {
+    "university_id": "uni_cn_031",
+    "university_name": "Nankai University",
+    "country_id": "country_cn",
+    "city": "Tianjin",
+    "university_type": "Public",
+    "official_website": "https://en.nankai.edu.cn/",
+    "source_url": "https://en.moe.gov.cn/subordinate_universities/"
+  },
+  {
+    "university_id": "uni_cn_032",
+    "university_name": "Dalian University of Technology",
+    "country_id": "country_cn",
+    "city": "Dalian",
+    "university_type": "Public",
+    "official_website": "https://en.dlut.edu.cn/",
+    "source_url": "https://en.moe.gov.cn/subordinate_universities/"
+  },
+  {
+    "university_id": "uni_cn_033",
+    "university_name": "Northeastern University",
+    "country_id": "country_cn",
+    "city": "Shenyang",
+    "university_type": "Public",
+    "official_website": "https://english.neu.edu.cn/",
+    "source_url": "https://en.moe.gov.cn/subordinate_universities/"
+  },
+  {
+    "university_id": "uni_cn_034",
+    "university_name": "Jilin University",
+    "country_id": "country_cn",
+    "city": "Changchun",
+    "university_type": "Public",
+    "official_website": "https://global.jlu.edu.cn/",
+    "source_url": "https://en.moe.gov.cn/subordinate_universities/"
+  },
+  {
+    "university_id": "uni_cn_035",
+    "university_name": "Northeast Normal University",
+    "country_id": "country_cn",
+    "city": "Changchun",
+    "university_type": "Public",
+    "official_website": "https://en.nenu.edu.cn/",
+    "source_url": "https://en.moe.gov.cn/subordinate_universities/"
+  },
+  {
+    "university_id": "uni_cn_036",
+    "university_name": "Northeast Forestry University",
+    "country_id": "country_cn",
+    "city": "Harbin",
+    "university_type": "Public",
+    "official_website": "https://en.nefu.edu.cn/",
+    "source_url": "https://en.moe.gov.cn/subordinate_universities/"
+  },
+  {
+    "university_id": "uni_cn_037",
+    "university_name": "East China University of Science and Technology",
+    "country_id": "country_cn",
+    "city": "Shanghai",
+    "university_type": "Public",
+    "official_website": "https://english.ecust.edu.cn/",
+    "source_url": "https://en.moe.gov.cn/subordinate_universities/"
+  },
+  {
+    "university_id": "uni_cn_038",
+    "university_name": "Donghua University",
+    "country_id": "country_cn",
+    "city": "Shanghai",
+    "university_type": "Public",
+    "official_website": "https://english.dhu.edu.cn/",
+    "source_url": "https://en.moe.gov.cn/subordinate_universities/"
+  },
+  {
+    "university_id": "uni_cn_039",
+    "university_name": "East China Normal University",
+    "country_id": "country_cn",
+    "city": "Shanghai",
+    "university_type": "Public",
+    "official_website": "https://english.ecnu.edu.cn/",
+    "source_url": "https://en.moe.gov.cn/subordinate_universities/"
+  },
+  {
+    "university_id": "uni_cn_040",
+    "university_name": "Shanghai University of Finance and Economics",
+    "country_id": "country_cn",
+    "city": "Shanghai",
+    "university_type": "Public",
+    "official_website": "https://english.sufe.edu.cn/",
+    "source_url": "https://en.moe.gov.cn/subordinate_universities/"
+  },
+  {
+    "university_id": "uni_cn_041",
+    "university_name": "Shanghai International Studies University",
+    "country_id": "country_cn",
+    "city": "Shanghai",
+    "university_type": "Public",
+    "official_website": "https://en.shisu.edu.cn/",
+    "source_url": "https://en.moe.gov.cn/subordinate_universities/"
+  },
+  {
+    "university_id": "uni_cn_042",
+    "university_name": "Nanjing University",
+    "country_id": "country_cn",
+    "city": "Nanjing",
+    "university_type": "Public",
+    "official_website": "https://www.nju.edu.cn/en/",
+    "source_url": "https://en.moe.gov.cn/subordinate_universities/"
+  },
+  {
+    "university_id": "uni_cn_043",
+    "university_name": "Southeast University",
+    "country_id": "country_cn",
+    "city": "Nanjing",
+    "university_type": "Public",
+    "official_website": "https://www.seu.edu.cn/english/",
+    "source_url": "https://en.moe.gov.cn/subordinate_universities/"
+  },
+  {
+    "university_id": "uni_cn_044",
+    "university_name": "Hohai University",
+    "country_id": "country_cn",
+    "city": "Nanjing",
+    "university_type": "Public",
+    "official_website": "https://en.hhu.edu.cn/",
+    "source_url": "https://en.moe.gov.cn/subordinate_universities/"
+  },
+  {
+    "university_id": "uni_cn_045",
+    "university_name": "China University of Mining and Technology",
+    "country_id": "country_cn",
+    "city": "Xuzhou",
+    "university_type": "Public",
+    "official_website": "https://en.cumt.edu.cn/",
+    "source_url": "https://en.moe.gov.cn/subordinate_universities/"
+  },
+  {
+    "university_id": "uni_cn_046",
+    "university_name": "Jiangnan University",
+    "country_id": "country_cn",
+    "city": "Wuxi",
+    "university_type": "Public",
+    "official_website": "https://english.jiangnan.edu.cn/",
+    "source_url": "https://en.moe.gov.cn/subordinate_universities/"
+  },
+  {
+    "university_id": "uni_cn_047",
+    "university_name": "Nanjing Agricultural University",
+    "country_id": "country_cn",
+    "city": "Nanjing",
+    "university_type": "Public",
+    "official_website": "https://english.njau.edu.cn/",
+    "source_url": "https://en.moe.gov.cn/subordinate_universities/"
+  },
+  {
+    "university_id": "uni_cn_048",
+    "university_name": "China Pharmaceutical University",
+    "country_id": "country_cn",
+    "city": "Nanjing",
+    "university_type": "Public",
+    "official_website": "https://en.cpu.edu.cn/",
+    "source_url": "https://en.moe.gov.cn/subordinate_universities/"
+  },
+  {
+    "university_id": "uni_cn_049",
+    "university_name": "Hefei University of Technology",
+    "country_id": "country_cn",
+    "city": "Hefei",
+    "university_type": "Public",
+    "official_website": "https://en.hfut.edu.cn/",
+    "source_url": "https://en.moe.gov.cn/subordinate_universities/"
+  },
+  {
+    "university_id": "uni_cn_050",
+    "university_name": "Xiamen University",
+    "country_id": "country_cn",
+    "city": "Xiamen",
+    "university_type": "Public",
+    "official_website": "https://en.xmu.edu.cn/",
+    "source_url": "https://en.moe.gov.cn/subordinate_universities/"
+  }
+]

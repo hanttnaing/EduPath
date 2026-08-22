@@ -1,0 +1,38 @@
+{
+  "audit": "Malaysia Final Staging Audit",
+  "status": "PASS",
+  "staging_records": 120,
+  "identity_seed_records": 120,
+  "gap_records": 0,
+  "evidence_records": 120,
+  "unique_staging_ids": 120,
+  "parent_universities": 40,
+  "duration_known": 99,
+  "study_mode_known": 59,
+  "tuition_known": 53,
+  "minimum_gpa_known": 0,
+  "gpa_scale_known": 0,
+  "ielts_known": 57,
+  "toefl_known": 30,
+  "intake_known": 66,
+  "deadline_known": 9,
+  "freshness": {
+    "current": 100,
+    "unknown": 20
+  },
+  "language": {
+    "Unknown": 105,
+    "Bahasa Melayu": 3,
+    "English": 9,
+    "English and Arabic": 3
+  },
+  "tuition_currency": {
+    "MYR": 44,
+    "USD": 9
+  },
+  "local_baseline": 171,
+  "mongodb_baseline": 171,
+  "malaysia_in_mongodb": 0,
+  "proposed_total": 291,
+  "issue_count": 0
+}

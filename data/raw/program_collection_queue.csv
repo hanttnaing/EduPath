@@ -1,4 +1,385 @@
 ﻿university_id,university_name,country_id,official_website,program_slot,program_name,program_url,collection_status,verification_status
+uni_bn_001,Universiti Brunei Darussalam,country_bn,https://ubd.edu.bn/,1,,,Pending Collection,Not Verified
+uni_bn_001,Universiti Brunei Darussalam,country_bn,https://ubd.edu.bn/,2,,,Pending Collection,Not Verified
+uni_bn_001,Universiti Brunei Darussalam,country_bn,https://ubd.edu.bn/,3,,,Pending Collection,Not Verified
+uni_bn_002,Universiti Teknologi Brunei,country_bn,https://www.utb.edu.bn/,1,,,Pending Collection,Not Verified
+uni_bn_002,Universiti Teknologi Brunei,country_bn,https://www.utb.edu.bn/,2,,,Pending Collection,Not Verified
+uni_bn_002,Universiti Teknologi Brunei,country_bn,https://www.utb.edu.bn/,3,,,Pending Collection,Not Verified
+uni_bn_003,Universiti Islam Sultan Sharif Ali,country_bn,https://unissa.edu.bn/,1,,,Pending Collection,Not Verified
+uni_bn_003,Universiti Islam Sultan Sharif Ali,country_bn,https://unissa.edu.bn/,2,,,Pending Collection,Not Verified
+uni_bn_003,Universiti Islam Sultan Sharif Ali,country_bn,https://unissa.edu.bn/,3,,,Pending Collection,Not Verified
+uni_bn_004,Kolej Universiti Perguruan Ugama Seri Begawan,country_bn,https://www.kupu-sb.edu.bn/,1,,,Pending Collection,Not Verified
+uni_bn_004,Kolej Universiti Perguruan Ugama Seri Begawan,country_bn,https://www.kupu-sb.edu.bn/,2,,,Pending Collection,Not Verified
+uni_bn_004,Kolej Universiti Perguruan Ugama Seri Begawan,country_bn,https://www.kupu-sb.edu.bn/,3,,,Pending Collection,Not Verified
+uni_cn_001,Tsinghua University,country_cn,https://www.tsinghua.edu.cn/en/,1,,,Pending Collection,Not Verified
+uni_cn_001,Tsinghua University,country_cn,https://www.tsinghua.edu.cn/en/,2,,,Pending Collection,Not Verified
+uni_cn_001,Tsinghua University,country_cn,https://www.tsinghua.edu.cn/en/,3,,,Pending Collection,Not Verified
+uni_cn_002,Peking University,country_cn,https://english.pku.edu.cn/,1,,,Pending Collection,Not Verified
+uni_cn_002,Peking University,country_cn,https://english.pku.edu.cn/,2,,,Pending Collection,Not Verified
+uni_cn_002,Peking University,country_cn,https://english.pku.edu.cn/,3,,,Pending Collection,Not Verified
+uni_cn_003,Zhejiang University,country_cn,https://www.zju.edu.cn/english/,1,,,Pending Collection,Not Verified
+uni_cn_003,Zhejiang University,country_cn,https://www.zju.edu.cn/english/,2,,,Pending Collection,Not Verified
+uni_cn_003,Zhejiang University,country_cn,https://www.zju.edu.cn/english/,3,,,Pending Collection,Not Verified
+uni_cn_004,Shanghai Jiao Tong University,country_cn,https://en.sjtu.edu.cn/,1,,,Pending Collection,Not Verified
+uni_cn_004,Shanghai Jiao Tong University,country_cn,https://en.sjtu.edu.cn/,2,,,Pending Collection,Not Verified
+uni_cn_004,Shanghai Jiao Tong University,country_cn,https://en.sjtu.edu.cn/,3,,,Pending Collection,Not Verified
+uni_cn_005,Fudan University,country_cn,https://www.fudan.edu.cn/en/,1,,,Pending Collection,Not Verified
+uni_cn_005,Fudan University,country_cn,https://www.fudan.edu.cn/en/,2,,,Pending Collection,Not Verified
+uni_cn_005,Fudan University,country_cn,https://www.fudan.edu.cn/en/,3,,,Pending Collection,Not Verified
+uni_cn_006,University of Science and Technology of China,country_cn,https://www.ustc.edu.cn/,1,,,Pending Collection,Not Verified
+uni_cn_006,University of Science and Technology of China,country_cn,https://www.ustc.edu.cn/,2,,,Pending Collection,Not Verified
+uni_cn_006,University of Science and Technology of China,country_cn,https://www.ustc.edu.cn/,3,,,Pending Collection,Not Verified
+uni_cn_007,Harbin Institute of Technology,country_cn,https://en.hit.edu.cn/,1,,,Pending Collection,Not Verified
+uni_cn_007,Harbin Institute of Technology,country_cn,https://en.hit.edu.cn/,2,,,Pending Collection,Not Verified
+uni_cn_007,Harbin Institute of Technology,country_cn,https://en.hit.edu.cn/,3,,,Pending Collection,Not Verified
+uni_cn_008,Xi'an Jiaotong University,country_cn,https://en.xjtu.edu.cn/,1,,,Pending Collection,Not Verified
+uni_cn_008,Xi'an Jiaotong University,country_cn,https://en.xjtu.edu.cn/,2,,,Pending Collection,Not Verified
+uni_cn_008,Xi'an Jiaotong University,country_cn,https://en.xjtu.edu.cn/,3,,,Pending Collection,Not Verified
+uni_cn_009,Sun Yat-sen University,country_cn,https://www.sysu.edu.cn/sysuen/,1,,,Pending Collection,Not Verified
+uni_cn_009,Sun Yat-sen University,country_cn,https://www.sysu.edu.cn/sysuen/,2,,,Pending Collection,Not Verified
+uni_cn_009,Sun Yat-sen University,country_cn,https://www.sysu.edu.cn/sysuen/,3,,,Pending Collection,Not Verified
+uni_cn_010,Tongji University,country_cn,https://en.tongji.edu.cn/,1,,,Pending Collection,Not Verified
+uni_cn_010,Tongji University,country_cn,https://en.tongji.edu.cn/,2,,,Pending Collection,Not Verified
+uni_cn_010,Tongji University,country_cn,https://en.tongji.edu.cn/,3,,,Pending Collection,Not Verified
+uni_cn_011,Renmin University of China,country_cn,https://en.ruc.edu.cn/,1,,,Pending Collection,Not Verified
+uni_cn_011,Renmin University of China,country_cn,https://en.ruc.edu.cn/,2,,,Pending Collection,Not Verified
+uni_cn_011,Renmin University of China,country_cn,https://en.ruc.edu.cn/,3,,,Pending Collection,Not Verified
+uni_cn_012,Beijing Normal University,country_cn,https://english.bnu.edu.cn/,1,,,Pending Collection,Not Verified
+uni_cn_012,Beijing Normal University,country_cn,https://english.bnu.edu.cn/,2,,,Pending Collection,Not Verified
+uni_cn_012,Beijing Normal University,country_cn,https://english.bnu.edu.cn/,3,,,Pending Collection,Not Verified
+uni_cn_013,China Agricultural University,country_cn,https://en.cau.edu.cn/,1,,,Pending Collection,Not Verified
+uni_cn_013,China Agricultural University,country_cn,https://en.cau.edu.cn/,2,,,Pending Collection,Not Verified
+uni_cn_013,China Agricultural University,country_cn,https://en.cau.edu.cn/,3,,,Pending Collection,Not Verified
+uni_cn_014,Beijing Foreign Studies University,country_cn,https://global.bfsu.edu.cn/,1,,,Pending Collection,Not Verified
+uni_cn_014,Beijing Foreign Studies University,country_cn,https://global.bfsu.edu.cn/,2,,,Pending Collection,Not Verified
+uni_cn_014,Beijing Foreign Studies University,country_cn,https://global.bfsu.edu.cn/,3,,,Pending Collection,Not Verified
+uni_cn_015,University of Science and Technology Beijing,country_cn,https://en.ustb.edu.cn/,1,,,Pending Collection,Not Verified
+uni_cn_015,University of Science and Technology Beijing,country_cn,https://en.ustb.edu.cn/,2,,,Pending Collection,Not Verified
+uni_cn_015,University of Science and Technology Beijing,country_cn,https://en.ustb.edu.cn/,3,,,Pending Collection,Not Verified
+uni_cn_016,Beijing Language and Culture University,country_cn,https://english.blcu.edu.cn/,1,,,Pending Collection,Not Verified
+uni_cn_016,Beijing Language and Culture University,country_cn,https://english.blcu.edu.cn/,2,,,Pending Collection,Not Verified
+uni_cn_016,Beijing Language and Culture University,country_cn,https://english.blcu.edu.cn/,3,,,Pending Collection,Not Verified
+uni_cn_017,Beijing University of Chemical Technology,country_cn,https://english.buct.edu.cn/,1,,,Pending Collection,Not Verified
+uni_cn_017,Beijing University of Chemical Technology,country_cn,https://english.buct.edu.cn/,2,,,Pending Collection,Not Verified
+uni_cn_017,Beijing University of Chemical Technology,country_cn,https://english.buct.edu.cn/,3,,,Pending Collection,Not Verified
+uni_cn_018,Beijing Jiaotong University,country_cn,https://en.bjtu.edu.cn/,1,,,Pending Collection,Not Verified
+uni_cn_018,Beijing Jiaotong University,country_cn,https://en.bjtu.edu.cn/,2,,,Pending Collection,Not Verified
+uni_cn_018,Beijing Jiaotong University,country_cn,https://en.bjtu.edu.cn/,3,,,Pending Collection,Not Verified
+uni_cn_019,China University of Geosciences (Beijing),country_cn,https://en.cugb.edu.cn/,1,,,Pending Collection,Not Verified
+uni_cn_019,China University of Geosciences (Beijing),country_cn,https://en.cugb.edu.cn/,2,,,Pending Collection,Not Verified
+uni_cn_019,China University of Geosciences (Beijing),country_cn,https://en.cugb.edu.cn/,3,,,Pending Collection,Not Verified
+uni_cn_020,Beijing University of Posts and Telecommunications,country_cn,https://english.bupt.edu.cn/,1,,,Pending Collection,Not Verified
+uni_cn_020,Beijing University of Posts and Telecommunications,country_cn,https://english.bupt.edu.cn/,2,,,Pending Collection,Not Verified
+uni_cn_020,Beijing University of Posts and Telecommunications,country_cn,https://english.bupt.edu.cn/,3,,,Pending Collection,Not Verified
+uni_cn_021,China University of Mining and Technology-Beijing,country_cn,https://english.cumtb.edu.cn/,1,,,Pending Collection,Not Verified
+uni_cn_021,China University of Mining and Technology-Beijing,country_cn,https://english.cumtb.edu.cn/,2,,,Pending Collection,Not Verified
+uni_cn_021,China University of Mining and Technology-Beijing,country_cn,https://english.cumtb.edu.cn/,3,,,Pending Collection,Not Verified
+uni_cn_022,China University of Petroleum-Beijing,country_cn,https://www.cup.edu.cn/english/,1,,,Pending Collection,Not Verified
+uni_cn_022,China University of Petroleum-Beijing,country_cn,https://www.cup.edu.cn/english/,2,,,Pending Collection,Not Verified
+uni_cn_022,China University of Petroleum-Beijing,country_cn,https://www.cup.edu.cn/english/,3,,,Pending Collection,Not Verified
+uni_cn_023,Beijing Forestry University,country_cn,https://english.bjfu.edu.cn/,1,,,Pending Collection,Not Verified
+uni_cn_023,Beijing Forestry University,country_cn,https://english.bjfu.edu.cn/,2,,,Pending Collection,Not Verified
+uni_cn_023,Beijing Forestry University,country_cn,https://english.bjfu.edu.cn/,3,,,Pending Collection,Not Verified
+uni_cn_024,Communication University of China,country_cn,https://en.cuc.edu.cn/,1,,,Pending Collection,Not Verified
+uni_cn_024,Communication University of China,country_cn,https://en.cuc.edu.cn/,2,,,Pending Collection,Not Verified
+uni_cn_024,Communication University of China,country_cn,https://en.cuc.edu.cn/,3,,,Pending Collection,Not Verified
+uni_cn_025,Central University of Finance and Economics,country_cn,https://en.cufe.edu.cn/,1,,,Pending Collection,Not Verified
+uni_cn_025,Central University of Finance and Economics,country_cn,https://en.cufe.edu.cn/,2,,,Pending Collection,Not Verified
+uni_cn_025,Central University of Finance and Economics,country_cn,https://en.cufe.edu.cn/,3,,,Pending Collection,Not Verified
+uni_cn_026,China University of Political Science and Law,country_cn,https://en.cupl.edu.cn/,1,,,Pending Collection,Not Verified
+uni_cn_026,China University of Political Science and Law,country_cn,https://en.cupl.edu.cn/,2,,,Pending Collection,Not Verified
+uni_cn_026,China University of Political Science and Law,country_cn,https://en.cupl.edu.cn/,3,,,Pending Collection,Not Verified
+uni_cn_027,Beijing University of Chinese Medicine,country_cn,https://english.bucm.edu.cn/,1,,,Pending Collection,Not Verified
+uni_cn_027,Beijing University of Chinese Medicine,country_cn,https://english.bucm.edu.cn/,2,,,Pending Collection,Not Verified
+uni_cn_027,Beijing University of Chinese Medicine,country_cn,https://english.bucm.edu.cn/,3,,,Pending Collection,Not Verified
+uni_cn_028,University of International Business and Economics,country_cn,https://english.uibe.edu.cn/,1,,,Pending Collection,Not Verified
+uni_cn_028,University of International Business and Economics,country_cn,https://english.uibe.edu.cn/,2,,,Pending Collection,Not Verified
+uni_cn_028,University of International Business and Economics,country_cn,https://english.uibe.edu.cn/,3,,,Pending Collection,Not Verified
+uni_cn_029,North China Electric Power University,country_cn,https://english.ncepu.edu.cn/,1,,,Pending Collection,Not Verified
+uni_cn_029,North China Electric Power University,country_cn,https://english.ncepu.edu.cn/,2,,,Pending Collection,Not Verified
+uni_cn_029,North China Electric Power University,country_cn,https://english.ncepu.edu.cn/,3,,,Pending Collection,Not Verified
+uni_cn_030,Tianjin University,country_cn,https://www.tju.edu.cn/english/,1,,,Pending Collection,Not Verified
+uni_cn_030,Tianjin University,country_cn,https://www.tju.edu.cn/english/,2,,,Pending Collection,Not Verified
+uni_cn_030,Tianjin University,country_cn,https://www.tju.edu.cn/english/,3,,,Pending Collection,Not Verified
+uni_cn_031,Nankai University,country_cn,https://en.nankai.edu.cn/,1,,,Pending Collection,Not Verified
+uni_cn_031,Nankai University,country_cn,https://en.nankai.edu.cn/,2,,,Pending Collection,Not Verified
+uni_cn_031,Nankai University,country_cn,https://en.nankai.edu.cn/,3,,,Pending Collection,Not Verified
+uni_cn_032,Dalian University of Technology,country_cn,https://en.dlut.edu.cn/,1,,,Pending Collection,Not Verified
+uni_cn_032,Dalian University of Technology,country_cn,https://en.dlut.edu.cn/,2,,,Pending Collection,Not Verified
+uni_cn_032,Dalian University of Technology,country_cn,https://en.dlut.edu.cn/,3,,,Pending Collection,Not Verified
+uni_cn_033,Northeastern University,country_cn,https://english.neu.edu.cn/,1,,,Pending Collection,Not Verified
+uni_cn_033,Northeastern University,country_cn,https://english.neu.edu.cn/,2,,,Pending Collection,Not Verified
+uni_cn_033,Northeastern University,country_cn,https://english.neu.edu.cn/,3,,,Pending Collection,Not Verified
+uni_cn_034,Jilin University,country_cn,https://global.jlu.edu.cn/,1,,,Pending Collection,Not Verified
+uni_cn_034,Jilin University,country_cn,https://global.jlu.edu.cn/,2,,,Pending Collection,Not Verified
+uni_cn_034,Jilin University,country_cn,https://global.jlu.edu.cn/,3,,,Pending Collection,Not Verified
+uni_cn_035,Northeast Normal University,country_cn,https://en.nenu.edu.cn/,1,,,Pending Collection,Not Verified
+uni_cn_035,Northeast Normal University,country_cn,https://en.nenu.edu.cn/,2,,,Pending Collection,Not Verified
+uni_cn_035,Northeast Normal University,country_cn,https://en.nenu.edu.cn/,3,,,Pending Collection,Not Verified
+uni_cn_036,Northeast Forestry University,country_cn,https://en.nefu.edu.cn/,1,,,Pending Collection,Not Verified
+uni_cn_036,Northeast Forestry University,country_cn,https://en.nefu.edu.cn/,2,,,Pending Collection,Not Verified
+uni_cn_036,Northeast Forestry University,country_cn,https://en.nefu.edu.cn/,3,,,Pending Collection,Not Verified
+uni_cn_037,East China University of Science and Technology,country_cn,https://english.ecust.edu.cn/,1,,,Pending Collection,Not Verified
+uni_cn_037,East China University of Science and Technology,country_cn,https://english.ecust.edu.cn/,2,,,Pending Collection,Not Verified
+uni_cn_037,East China University of Science and Technology,country_cn,https://english.ecust.edu.cn/,3,,,Pending Collection,Not Verified
+uni_cn_038,Donghua University,country_cn,https://english.dhu.edu.cn/,1,,,Pending Collection,Not Verified
+uni_cn_038,Donghua University,country_cn,https://english.dhu.edu.cn/,2,,,Pending Collection,Not Verified
+uni_cn_038,Donghua University,country_cn,https://english.dhu.edu.cn/,3,,,Pending Collection,Not Verified
+uni_cn_039,East China Normal University,country_cn,https://english.ecnu.edu.cn/,1,,,Pending Collection,Not Verified
+uni_cn_039,East China Normal University,country_cn,https://english.ecnu.edu.cn/,2,,,Pending Collection,Not Verified
+uni_cn_039,East China Normal University,country_cn,https://english.ecnu.edu.cn/,3,,,Pending Collection,Not Verified
+uni_cn_040,Shanghai University of Finance and Economics,country_cn,https://english.sufe.edu.cn/,1,,,Pending Collection,Not Verified
+uni_cn_040,Shanghai University of Finance and Economics,country_cn,https://english.sufe.edu.cn/,2,,,Pending Collection,Not Verified
+uni_cn_040,Shanghai University of Finance and Economics,country_cn,https://english.sufe.edu.cn/,3,,,Pending Collection,Not Verified
+uni_cn_041,Shanghai International Studies University,country_cn,https://en.shisu.edu.cn/,1,,,Pending Collection,Not Verified
+uni_cn_041,Shanghai International Studies University,country_cn,https://en.shisu.edu.cn/,2,,,Pending Collection,Not Verified
+uni_cn_041,Shanghai International Studies University,country_cn,https://en.shisu.edu.cn/,3,,,Pending Collection,Not Verified
+uni_cn_042,Nanjing University,country_cn,https://www.nju.edu.cn/en/,1,,,Pending Collection,Not Verified
+uni_cn_042,Nanjing University,country_cn,https://www.nju.edu.cn/en/,2,,,Pending Collection,Not Verified
+uni_cn_042,Nanjing University,country_cn,https://www.nju.edu.cn/en/,3,,,Pending Collection,Not Verified
+uni_cn_043,Southeast University,country_cn,https://www.seu.edu.cn/english/,1,,,Pending Collection,Not Verified
+uni_cn_043,Southeast University,country_cn,https://www.seu.edu.cn/english/,2,,,Pending Collection,Not Verified
+uni_cn_043,Southeast University,country_cn,https://www.seu.edu.cn/english/,3,,,Pending Collection,Not Verified
+uni_cn_044,Hohai University,country_cn,https://en.hhu.edu.cn/,1,,,Pending Collection,Not Verified
+uni_cn_044,Hohai University,country_cn,https://en.hhu.edu.cn/,2,,,Pending Collection,Not Verified
+uni_cn_044,Hohai University,country_cn,https://en.hhu.edu.cn/,3,,,Pending Collection,Not Verified
+uni_cn_045,China University of Mining and Technology,country_cn,https://en.cumt.edu.cn/,1,,,Pending Collection,Not Verified
+uni_cn_045,China University of Mining and Technology,country_cn,https://en.cumt.edu.cn/,2,,,Pending Collection,Not Verified
+uni_cn_045,China University of Mining and Technology,country_cn,https://en.cumt.edu.cn/,3,,,Pending Collection,Not Verified
+uni_cn_046,Jiangnan University,country_cn,https://english.jiangnan.edu.cn/,1,,,Pending Collection,Not Verified
+uni_cn_046,Jiangnan University,country_cn,https://english.jiangnan.edu.cn/,2,,,Pending Collection,Not Verified
+uni_cn_046,Jiangnan University,country_cn,https://english.jiangnan.edu.cn/,3,,,Pending Collection,Not Verified
+uni_cn_047,Nanjing Agricultural University,country_cn,https://english.njau.edu.cn/,1,,,Pending Collection,Not Verified
+uni_cn_047,Nanjing Agricultural University,country_cn,https://english.njau.edu.cn/,2,,,Pending Collection,Not Verified
+uni_cn_047,Nanjing Agricultural University,country_cn,https://english.njau.edu.cn/,3,,,Pending Collection,Not Verified
+uni_cn_048,China Pharmaceutical University,country_cn,https://en.cpu.edu.cn/,1,,,Pending Collection,Not Verified
+uni_cn_048,China Pharmaceutical University,country_cn,https://en.cpu.edu.cn/,2,,,Pending Collection,Not Verified
+uni_cn_048,China Pharmaceutical University,country_cn,https://en.cpu.edu.cn/,3,,,Pending Collection,Not Verified
+uni_cn_049,Hefei University of Technology,country_cn,https://en.hfut.edu.cn/,1,,,Pending Collection,Not Verified
+uni_cn_049,Hefei University of Technology,country_cn,https://en.hfut.edu.cn/,2,,,Pending Collection,Not Verified
+uni_cn_049,Hefei University of Technology,country_cn,https://en.hfut.edu.cn/,3,,,Pending Collection,Not Verified
+uni_cn_050,Xiamen University,country_cn,https://en.xmu.edu.cn/,1,,,Pending Collection,Not Verified
+uni_cn_050,Xiamen University,country_cn,https://en.xmu.edu.cn/,2,,,Pending Collection,Not Verified
+uni_cn_050,Xiamen University,country_cn,https://en.xmu.edu.cn/,3,,,Pending Collection,Not Verified
+uni_cn_051,Wuhan University,country_cn,https://www.whu.edu.cn/,1,,,Pending Collection,Not Verified
+uni_cn_051,Wuhan University,country_cn,https://www.whu.edu.cn/,2,,,Pending Collection,Not Verified
+uni_cn_051,Wuhan University,country_cn,https://www.whu.edu.cn/,3,,,Pending Collection,Not Verified
+uni_cn_052,Huazhong University of Science and Technology,country_cn,https://www.hust.edu.cn/,1,,,Pending Collection,Not Verified
+uni_cn_052,Huazhong University of Science and Technology,country_cn,https://www.hust.edu.cn/,2,,,Pending Collection,Not Verified
+uni_cn_052,Huazhong University of Science and Technology,country_cn,https://www.hust.edu.cn/,3,,,Pending Collection,Not Verified
+uni_cn_053,Shandong University,country_cn,https://www.sdu.edu.cn/,1,,,Pending Collection,Not Verified
+uni_cn_053,Shandong University,country_cn,https://www.sdu.edu.cn/,2,,,Pending Collection,Not Verified
+uni_cn_053,Shandong University,country_cn,https://www.sdu.edu.cn/,3,,,Pending Collection,Not Verified
+uni_cn_054,Sichuan University,country_cn,https://www.scu.edu.cn/,1,,,Pending Collection,Not Verified
+uni_cn_054,Sichuan University,country_cn,https://www.scu.edu.cn/,2,,,Pending Collection,Not Verified
+uni_cn_054,Sichuan University,country_cn,https://www.scu.edu.cn/,3,,,Pending Collection,Not Verified
+uni_cn_055,Central South University,country_cn,https://www.csu.edu.cn/,1,,,Pending Collection,Not Verified
+uni_cn_055,Central South University,country_cn,https://www.csu.edu.cn/,2,,,Pending Collection,Not Verified
+uni_cn_055,Central South University,country_cn,https://www.csu.edu.cn/,3,,,Pending Collection,Not Verified
+uni_cn_056,Chongqing University,country_cn,https://www.cqu.edu.cn/,1,,,Pending Collection,Not Verified
+uni_cn_056,Chongqing University,country_cn,https://www.cqu.edu.cn/,2,,,Pending Collection,Not Verified
+uni_cn_056,Chongqing University,country_cn,https://www.cqu.edu.cn/,3,,,Pending Collection,Not Verified
+uni_cn_057,Xidian University,country_cn,https://www.xidian.edu.cn/,1,,,Pending Collection,Not Verified
+uni_cn_057,Xidian University,country_cn,https://www.xidian.edu.cn/,2,,,Pending Collection,Not Verified
+uni_cn_057,Xidian University,country_cn,https://www.xidian.edu.cn/,3,,,Pending Collection,Not Verified
+uni_cn_058,Lanzhou University,country_cn,https://www.lzu.edu.cn/,1,,,Pending Collection,Not Verified
+uni_cn_058,Lanzhou University,country_cn,https://www.lzu.edu.cn/,2,,,Pending Collection,Not Verified
+uni_cn_058,Lanzhou University,country_cn,https://www.lzu.edu.cn/,3,,,Pending Collection,Not Verified
+uni_hk_001,The University of Hong Kong,country_hk,https://www.hku.hk,1,,,Pending Collection,Not Verified
+uni_hk_001,The University of Hong Kong,country_hk,https://www.hku.hk,2,,,Pending Collection,Not Verified
+uni_hk_001,The University of Hong Kong,country_hk,https://www.hku.hk,3,,,Pending Collection,Not Verified
+uni_hk_002,The Chinese University of Hong Kong,country_hk,http://www.cuhk.edu.hk/english/index.html,1,,,Pending Collection,Not Verified
+uni_hk_002,The Chinese University of Hong Kong,country_hk,http://www.cuhk.edu.hk/english/index.html,2,,,Pending Collection,Not Verified
+uni_hk_002,The Chinese University of Hong Kong,country_hk,http://www.cuhk.edu.hk/english/index.html,3,,,Pending Collection,Not Verified
+uni_hk_003,The Hong Kong University of Science and Technology,country_hk,https://hkust.edu.hk,1,,,Pending Collection,Not Verified
+uni_hk_003,The Hong Kong University of Science and Technology,country_hk,https://hkust.edu.hk,2,,,Pending Collection,Not Verified
+uni_hk_003,The Hong Kong University of Science and Technology,country_hk,https://hkust.edu.hk,3,,,Pending Collection,Not Verified
+uni_hk_004,The Hong Kong Polytechnic University,country_hk,http://www.polyu.edu.hk/web/en/home/index.html,1,,,Pending Collection,Not Verified
+uni_hk_004,The Hong Kong Polytechnic University,country_hk,http://www.polyu.edu.hk/web/en/home/index.html,2,,,Pending Collection,Not Verified
+uni_hk_004,The Hong Kong Polytechnic University,country_hk,http://www.polyu.edu.hk/web/en/home/index.html,3,,,Pending Collection,Not Verified
+uni_hk_005,City University of Hong Kong,country_hk,https://www.cityu.edu.hk,1,,,Pending Collection,Not Verified
+uni_hk_005,City University of Hong Kong,country_hk,https://www.cityu.edu.hk,2,,,Pending Collection,Not Verified
+uni_hk_005,City University of Hong Kong,country_hk,https://www.cityu.edu.hk,3,,,Pending Collection,Not Verified
+uni_hk_006,Hong Kong Baptist University,country_hk,https://www.hkbu.edu.hk/,1,,,Pending Collection,Not Verified
+uni_hk_006,Hong Kong Baptist University,country_hk,https://www.hkbu.edu.hk/,2,,,Pending Collection,Not Verified
+uni_hk_006,Hong Kong Baptist University,country_hk,https://www.hkbu.edu.hk/,3,,,Pending Collection,Not Verified
+uni_hk_007,Lingnan University,country_hk,https://www.ln.edu.hk/,1,,,Pending Collection,Not Verified
+uni_hk_007,Lingnan University,country_hk,https://www.ln.edu.hk/,2,,,Pending Collection,Not Verified
+uni_hk_007,Lingnan University,country_hk,https://www.ln.edu.hk/,3,,,Pending Collection,Not Verified
+uni_hk_008,The Education University of Hong Kong,country_hk,https://www.eduhk.hk/en/,1,,,Pending Collection,Not Verified
+uni_hk_008,The Education University of Hong Kong,country_hk,https://www.eduhk.hk/en/,2,,,Pending Collection,Not Verified
+uni_hk_008,The Education University of Hong Kong,country_hk,https://www.eduhk.hk/en/,3,,,Pending Collection,Not Verified
+uni_hk_009,Hong Kong Metropolitan University,country_hk,https://www.hkmu.edu.hk/,1,,,Pending Collection,Not Verified
+uni_hk_009,Hong Kong Metropolitan University,country_hk,https://www.hkmu.edu.hk/,2,,,Pending Collection,Not Verified
+uni_hk_009,Hong Kong Metropolitan University,country_hk,https://www.hkmu.edu.hk/,3,,,Pending Collection,Not Verified
+uni_hk_010,Hong Kong Shue Yan University,country_hk,https://www.hksyu.edu/,1,,,Pending Collection,Not Verified
+uni_hk_010,Hong Kong Shue Yan University,country_hk,https://www.hksyu.edu/,2,,,Pending Collection,Not Verified
+uni_hk_010,Hong Kong Shue Yan University,country_hk,https://www.hksyu.edu/,3,,,Pending Collection,Not Verified
+uni_hk_011,The Hang Seng University of Hong Kong,country_hk,https://www.hsu.edu.hk/en/,1,,,Pending Collection,Not Verified
+uni_hk_011,The Hang Seng University of Hong Kong,country_hk,https://www.hsu.edu.hk/en/,2,,,Pending Collection,Not Verified
+uni_hk_011,The Hang Seng University of Hong Kong,country_hk,https://www.hsu.edu.hk/en/,3,,,Pending Collection,Not Verified
+uni_hk_012,Hong Kong Chu Hai College,country_hk,https://www.chuhai.edu.hk/,1,,,Pending Collection,Not Verified
+uni_hk_012,Hong Kong Chu Hai College,country_hk,https://www.chuhai.edu.hk/,2,,,Pending Collection,Not Verified
+uni_hk_012,Hong Kong Chu Hai College,country_hk,https://www.chuhai.edu.hk/,3,,,Pending Collection,Not Verified
+uni_hk_013,Saint Francis University,country_hk,https://www.sfu.edu.hk/en/,1,,,Pending Collection,Not Verified
+uni_hk_013,Saint Francis University,country_hk,https://www.sfu.edu.hk/en/,2,,,Pending Collection,Not Verified
+uni_hk_013,Saint Francis University,country_hk,https://www.sfu.edu.hk/en/,3,,,Pending Collection,Not Verified
+uni_hk_014,Technological and Higher Education Institute of Hong Kong,country_hk,https://www.thei.edu.hk/,1,,,Pending Collection,Not Verified
+uni_hk_014,Technological and Higher Education Institute of Hong Kong,country_hk,https://www.thei.edu.hk/,2,,,Pending Collection,Not Verified
+uni_hk_014,Technological and Higher Education Institute of Hong Kong,country_hk,https://www.thei.edu.hk/,3,,,Pending Collection,Not Verified
+uni_hk_015,Tung Wah College,country_hk,https://www.twc.edu.hk/en/,1,,,Pending Collection,Not Verified
+uni_hk_015,Tung Wah College,country_hk,https://www.twc.edu.hk/en/,2,,,Pending Collection,Not Verified
+uni_hk_015,Tung Wah College,country_hk,https://www.twc.edu.hk/en/,3,,,Pending Collection,Not Verified
+uni_id_001,Universitas Indonesia,country_id,https://www.ui.ac.id/,1,,,Pending Collection,Not Verified
+uni_id_001,Universitas Indonesia,country_id,https://www.ui.ac.id/,2,,,Pending Collection,Not Verified
+uni_id_001,Universitas Indonesia,country_id,https://www.ui.ac.id/,3,,,Pending Collection,Not Verified
+uni_id_002,Institut Teknologi Bandung,country_id,https://itb.ac.id/en/,1,,,Pending Collection,Not Verified
+uni_id_002,Institut Teknologi Bandung,country_id,https://itb.ac.id/en/,2,,,Pending Collection,Not Verified
+uni_id_002,Institut Teknologi Bandung,country_id,https://itb.ac.id/en/,3,,,Pending Collection,Not Verified
+uni_id_003,Universitas Gadjah Mada,country_id,https://ugm.ac.id/en/,1,,,Pending Collection,Not Verified
+uni_id_003,Universitas Gadjah Mada,country_id,https://ugm.ac.id/en/,2,,,Pending Collection,Not Verified
+uni_id_003,Universitas Gadjah Mada,country_id,https://ugm.ac.id/en/,3,,,Pending Collection,Not Verified
+uni_id_004,IPB University,country_id,https://www.ipb.ac.id/en/,1,,,Pending Collection,Not Verified
+uni_id_004,IPB University,country_id,https://www.ipb.ac.id/en/,2,,,Pending Collection,Not Verified
+uni_id_004,IPB University,country_id,https://www.ipb.ac.id/en/,3,,,Pending Collection,Not Verified
+uni_id_005,Universitas Airlangga,country_id,https://unair.ac.id/en/,1,,,Pending Collection,Not Verified
+uni_id_005,Universitas Airlangga,country_id,https://unair.ac.id/en/,2,,,Pending Collection,Not Verified
+uni_id_005,Universitas Airlangga,country_id,https://unair.ac.id/en/,3,,,Pending Collection,Not Verified
+uni_id_006,Diponegoro University,country_id,https://www.undip.ac.id/language/en,1,,,Pending Collection,Not Verified
+uni_id_006,Diponegoro University,country_id,https://www.undip.ac.id/language/en,2,,,Pending Collection,Not Verified
+uni_id_006,Diponegoro University,country_id,https://www.undip.ac.id/language/en,3,,,Pending Collection,Not Verified
+uni_id_007,Universitas Brawijaya,country_id,https://ub.ac.id/,1,,,Pending Collection,Not Verified
+uni_id_007,Universitas Brawijaya,country_id,https://ub.ac.id/,2,,,Pending Collection,Not Verified
+uni_id_007,Universitas Brawijaya,country_id,https://ub.ac.id/,3,,,Pending Collection,Not Verified
+uni_id_008,Institut Teknologi Sepuluh Nopember,country_id,https://www.its.ac.id/,1,,,Pending Collection,Not Verified
+uni_id_008,Institut Teknologi Sepuluh Nopember,country_id,https://www.its.ac.id/,2,,,Pending Collection,Not Verified
+uni_id_008,Institut Teknologi Sepuluh Nopember,country_id,https://www.its.ac.id/,3,,,Pending Collection,Not Verified
+uni_id_009,Hasanuddin University,country_id,https://www.unhas.ac.id/,1,,,Pending Collection,Not Verified
+uni_id_009,Hasanuddin University,country_id,https://www.unhas.ac.id/,2,,,Pending Collection,Not Verified
+uni_id_009,Hasanuddin University,country_id,https://www.unhas.ac.id/,3,,,Pending Collection,Not Verified
+uni_id_010,Universitas Sebelas Maret,country_id,https://uns.ac.id/en/,1,,,Pending Collection,Not Verified
+uni_id_010,Universitas Sebelas Maret,country_id,https://uns.ac.id/en/,2,,,Pending Collection,Not Verified
+uni_id_010,Universitas Sebelas Maret,country_id,https://uns.ac.id/en/,3,,,Pending Collection,Not Verified
+uni_id_011,Universitas Padjadjaran,country_id,https://www.unpad.ac.id/,1,,,Pending Collection,Not Verified
+uni_id_011,Universitas Padjadjaran,country_id,https://www.unpad.ac.id/,2,,,Pending Collection,Not Verified
+uni_id_011,Universitas Padjadjaran,country_id,https://www.unpad.ac.id/,3,,,Pending Collection,Not Verified
+uni_id_012,Universitas Pendidikan Indonesia,country_id,https://www.upi.edu/,1,,,Pending Collection,Not Verified
+uni_id_012,Universitas Pendidikan Indonesia,country_id,https://www.upi.edu/,2,,,Pending Collection,Not Verified
+uni_id_012,Universitas Pendidikan Indonesia,country_id,https://www.upi.edu/,3,,,Pending Collection,Not Verified
+uni_id_013,Universitas Negeri Yogyakarta,country_id,https://www.uny.ac.id/,1,,,Pending Collection,Not Verified
+uni_id_013,Universitas Negeri Yogyakarta,country_id,https://www.uny.ac.id/,2,,,Pending Collection,Not Verified
+uni_id_013,Universitas Negeri Yogyakarta,country_id,https://www.uny.ac.id/,3,,,Pending Collection,Not Verified
+uni_id_014,Universitas Negeri Malang,country_id,https://um.ac.id/,1,,,Pending Collection,Not Verified
+uni_id_014,Universitas Negeri Malang,country_id,https://um.ac.id/,2,,,Pending Collection,Not Verified
+uni_id_014,Universitas Negeri Malang,country_id,https://um.ac.id/,3,,,Pending Collection,Not Verified
+uni_id_015,Universitas Negeri Semarang,country_id,https://unnes.ac.id/,1,,,Pending Collection,Not Verified
+uni_id_015,Universitas Negeri Semarang,country_id,https://unnes.ac.id/,2,,,Pending Collection,Not Verified
+uni_id_015,Universitas Negeri Semarang,country_id,https://unnes.ac.id/,3,,,Pending Collection,Not Verified
+uni_id_016,Universitas Negeri Surabaya,country_id,https://www.unesa.ac.id/,1,,,Pending Collection,Not Verified
+uni_id_016,Universitas Negeri Surabaya,country_id,https://www.unesa.ac.id/,2,,,Pending Collection,Not Verified
+uni_id_016,Universitas Negeri Surabaya,country_id,https://www.unesa.ac.id/,3,,,Pending Collection,Not Verified
+uni_id_017,Universitas Negeri Padang,country_id,https://unp.ac.id/,1,,,Pending Collection,Not Verified
+uni_id_017,Universitas Negeri Padang,country_id,https://unp.ac.id/,2,,,Pending Collection,Not Verified
+uni_id_017,Universitas Negeri Padang,country_id,https://unp.ac.id/,3,,,Pending Collection,Not Verified
+uni_id_018,Universitas Negeri Makassar,country_id,https://unm.ac.id/,1,,,Pending Collection,Not Verified
+uni_id_018,Universitas Negeri Makassar,country_id,https://unm.ac.id/,2,,,Pending Collection,Not Verified
+uni_id_018,Universitas Negeri Makassar,country_id,https://unm.ac.id/,3,,,Pending Collection,Not Verified
+uni_id_019,Universitas Negeri Jakarta,country_id,https://unj.ac.id/,1,,,Pending Collection,Not Verified
+uni_id_019,Universitas Negeri Jakarta,country_id,https://unj.ac.id/,2,,,Pending Collection,Not Verified
+uni_id_019,Universitas Negeri Jakarta,country_id,https://unj.ac.id/,3,,,Pending Collection,Not Verified
+uni_id_020,Universitas Sumatera Utara,country_id,https://www.usu.ac.id/,1,,,Pending Collection,Not Verified
+uni_id_020,Universitas Sumatera Utara,country_id,https://www.usu.ac.id/,2,,,Pending Collection,Not Verified
+uni_id_020,Universitas Sumatera Utara,country_id,https://www.usu.ac.id/,3,,,Pending Collection,Not Verified
+uni_id_021,Universitas Andalas,country_id,https://www.unand.ac.id/,1,,,Pending Collection,Not Verified
+uni_id_021,Universitas Andalas,country_id,https://www.unand.ac.id/,2,,,Pending Collection,Not Verified
+uni_id_021,Universitas Andalas,country_id,https://www.unand.ac.id/,3,,,Pending Collection,Not Verified
+uni_id_022,Universitas Sriwijaya,country_id,https://unsri.ac.id/,1,,,Pending Collection,Not Verified
+uni_id_022,Universitas Sriwijaya,country_id,https://unsri.ac.id/,2,,,Pending Collection,Not Verified
+uni_id_022,Universitas Sriwijaya,country_id,https://unsri.ac.id/,3,,,Pending Collection,Not Verified
+uni_id_023,Universitas Lampung,country_id,https://www.unila.ac.id/,1,,,Pending Collection,Not Verified
+uni_id_023,Universitas Lampung,country_id,https://www.unila.ac.id/,2,,,Pending Collection,Not Verified
+uni_id_023,Universitas Lampung,country_id,https://www.unila.ac.id/,3,,,Pending Collection,Not Verified
+uni_id_024,Universitas Riau,country_id,https://www.unri.ac.id/,1,,,Pending Collection,Not Verified
+uni_id_024,Universitas Riau,country_id,https://www.unri.ac.id/,2,,,Pending Collection,Not Verified
+uni_id_024,Universitas Riau,country_id,https://www.unri.ac.id/,3,,,Pending Collection,Not Verified
+uni_id_025,Universitas Jember,country_id,https://unej.ac.id/,1,,,Pending Collection,Not Verified
+uni_id_025,Universitas Jember,country_id,https://unej.ac.id/,2,,,Pending Collection,Not Verified
+uni_id_025,Universitas Jember,country_id,https://unej.ac.id/,3,,,Pending Collection,Not Verified
+uni_id_026,Universitas Udayana,country_id,https://www.unud.ac.id/,1,,,Pending Collection,Not Verified
+uni_id_026,Universitas Udayana,country_id,https://www.unud.ac.id/,2,,,Pending Collection,Not Verified
+uni_id_026,Universitas Udayana,country_id,https://www.unud.ac.id/,3,,,Pending Collection,Not Verified
+uni_id_027,Universitas Mataram,country_id,https://unram.ac.id/,1,,,Pending Collection,Not Verified
+uni_id_027,Universitas Mataram,country_id,https://unram.ac.id/,2,,,Pending Collection,Not Verified
+uni_id_027,Universitas Mataram,country_id,https://unram.ac.id/,3,,,Pending Collection,Not Verified
+uni_id_028,Universitas Sam Ratulangi,country_id,https://www.unsrat.ac.id/,1,,,Pending Collection,Not Verified
+uni_id_028,Universitas Sam Ratulangi,country_id,https://www.unsrat.ac.id/,2,,,Pending Collection,Not Verified
+uni_id_028,Universitas Sam Ratulangi,country_id,https://www.unsrat.ac.id/,3,,,Pending Collection,Not Verified
+uni_id_029,Universitas Mulawarman,country_id,https://unmul.ac.id/,1,,,Pending Collection,Not Verified
+uni_id_029,Universitas Mulawarman,country_id,https://unmul.ac.id/,2,,,Pending Collection,Not Verified
+uni_id_029,Universitas Mulawarman,country_id,https://unmul.ac.id/,3,,,Pending Collection,Not Verified
+uni_id_030,Universitas Syiah Kuala,country_id,https://usk.ac.id/,1,,,Pending Collection,Not Verified
+uni_id_030,Universitas Syiah Kuala,country_id,https://usk.ac.id/,2,,,Pending Collection,Not Verified
+uni_id_030,Universitas Syiah Kuala,country_id,https://usk.ac.id/,3,,,Pending Collection,Not Verified
+uni_id_031,Universitas Bengkulu,country_id,https://www.unib.ac.id/,1,,,Pending Collection,Not Verified
+uni_id_031,Universitas Bengkulu,country_id,https://www.unib.ac.id/,2,,,Pending Collection,Not Verified
+uni_id_031,Universitas Bengkulu,country_id,https://www.unib.ac.id/,3,,,Pending Collection,Not Verified
+uni_id_032,Universitas Halu Oleo,country_id,https://uho.ac.id/,1,,,Pending Collection,Not Verified
+uni_id_032,Universitas Halu Oleo,country_id,https://uho.ac.id/,2,,,Pending Collection,Not Verified
+uni_id_032,Universitas Halu Oleo,country_id,https://uho.ac.id/,3,,,Pending Collection,Not Verified
+uni_id_033,Universitas Tadulako,country_id,https://untad.ac.id/,1,,,Pending Collection,Not Verified
+uni_id_033,Universitas Tadulako,country_id,https://untad.ac.id/,2,,,Pending Collection,Not Verified
+uni_id_033,Universitas Tadulako,country_id,https://untad.ac.id/,3,,,Pending Collection,Not Verified
+uni_id_034,Universitas Cenderawasih,country_id,https://www.uncen.ac.id/,1,,,Pending Collection,Not Verified
+uni_id_034,Universitas Cenderawasih,country_id,https://www.uncen.ac.id/,2,,,Pending Collection,Not Verified
+uni_id_034,Universitas Cenderawasih,country_id,https://www.uncen.ac.id/,3,,,Pending Collection,Not Verified
+uni_id_035,Universitas Negeri Gorontalo,country_id,https://ung.ac.id/,1,,,Pending Collection,Not Verified
+uni_id_035,Universitas Negeri Gorontalo,country_id,https://ung.ac.id/,2,,,Pending Collection,Not Verified
+uni_id_035,Universitas Negeri Gorontalo,country_id,https://ung.ac.id/,3,,,Pending Collection,Not Verified
+uni_id_036,Universitas Pendidikan Ganesha,country_id,https://undiksha.ac.id/,1,,,Pending Collection,Not Verified
+uni_id_036,Universitas Pendidikan Ganesha,country_id,https://undiksha.ac.id/,2,,,Pending Collection,Not Verified
+uni_id_036,Universitas Pendidikan Ganesha,country_id,https://undiksha.ac.id/,3,,,Pending Collection,Not Verified
+uni_id_037,Universitas Sultan Ageng Tirtayasa,country_id,https://untirta.ac.id/,1,,,Pending Collection,Not Verified
+uni_id_037,Universitas Sultan Ageng Tirtayasa,country_id,https://untirta.ac.id/,2,,,Pending Collection,Not Verified
+uni_id_037,Universitas Sultan Ageng Tirtayasa,country_id,https://untirta.ac.id/,3,,,Pending Collection,Not Verified
+uni_id_038,Universitas Jenderal Soedirman,country_id,https://unsoed.ac.id/,1,,,Pending Collection,Not Verified
+uni_id_038,Universitas Jenderal Soedirman,country_id,https://unsoed.ac.id/,2,,,Pending Collection,Not Verified
+uni_id_038,Universitas Jenderal Soedirman,country_id,https://unsoed.ac.id/,3,,,Pending Collection,Not Verified
+uni_id_039,UPN Veteran Yogyakarta,country_id,https://www.upnyk.ac.id/,1,,,Pending Collection,Not Verified
+uni_id_039,UPN Veteran Yogyakarta,country_id,https://www.upnyk.ac.id/,2,,,Pending Collection,Not Verified
+uni_id_039,UPN Veteran Yogyakarta,country_id,https://www.upnyk.ac.id/,3,,,Pending Collection,Not Verified
+uni_id_040,UPN Veteran Jawa Timur,country_id,https://www.upnjatim.ac.id/,1,,,Pending Collection,Not Verified
+uni_id_040,UPN Veteran Jawa Timur,country_id,https://www.upnjatim.ac.id/,2,,,Pending Collection,Not Verified
+uni_id_040,UPN Veteran Jawa Timur,country_id,https://www.upnjatim.ac.id/,3,,,Pending Collection,Not Verified
+uni_id_041,UPN Veteran Jakarta,country_id,https://www.upnvj.ac.id/,1,,,Pending Collection,Not Verified
+uni_id_041,UPN Veteran Jakarta,country_id,https://www.upnvj.ac.id/,2,,,Pending Collection,Not Verified
+uni_id_041,UPN Veteran Jakarta,country_id,https://www.upnvj.ac.id/,3,,,Pending Collection,Not Verified
+uni_id_042,Universitas Bangka Belitung,country_id,https://www.ubb.ac.id/,1,,,Pending Collection,Not Verified
+uni_id_042,Universitas Bangka Belitung,country_id,https://www.ubb.ac.id/,2,,,Pending Collection,Not Verified
+uni_id_042,Universitas Bangka Belitung,country_id,https://www.ubb.ac.id/,3,,,Pending Collection,Not Verified
+uni_id_043,Universitas Tanjungpura,country_id,https://www.untan.ac.id/,1,,,Pending Collection,Not Verified
+uni_id_043,Universitas Tanjungpura,country_id,https://www.untan.ac.id/,2,,,Pending Collection,Not Verified
+uni_id_043,Universitas Tanjungpura,country_id,https://www.untan.ac.id/,3,,,Pending Collection,Not Verified
+uni_id_044,Universitas Palangka Raya,country_id,https://www.upr.ac.id/,1,,,Pending Collection,Not Verified
+uni_id_044,Universitas Palangka Raya,country_id,https://www.upr.ac.id/,2,,,Pending Collection,Not Verified
+uni_id_044,Universitas Palangka Raya,country_id,https://www.upr.ac.id/,3,,,Pending Collection,Not Verified
+uni_id_045,Universitas Pattimura,country_id,https://www.unpatti.ac.id/,1,,,Pending Collection,Not Verified
+uni_id_045,Universitas Pattimura,country_id,https://www.unpatti.ac.id/,2,,,Pending Collection,Not Verified
+uni_id_045,Universitas Pattimura,country_id,https://www.unpatti.ac.id/,3,,,Pending Collection,Not Verified
+uni_id_046,Universitas Khairun,country_id,https://unkhair.ac.id/,1,,,Pending Collection,Not Verified
+uni_id_046,Universitas Khairun,country_id,https://unkhair.ac.id/,2,,,Pending Collection,Not Verified
+uni_id_046,Universitas Khairun,country_id,https://unkhair.ac.id/,3,,,Pending Collection,Not Verified
+uni_id_047,Universitas Nusa Cendana,country_id,https://undana.ac.id/,1,,,Pending Collection,Not Verified
+uni_id_047,Universitas Nusa Cendana,country_id,https://undana.ac.id/,2,,,Pending Collection,Not Verified
+uni_id_047,Universitas Nusa Cendana,country_id,https://undana.ac.id/,3,,,Pending Collection,Not Verified
+uni_id_048,Universitas Negeri Medan,country_id,https://www.unimed.ac.id/,1,,,Pending Collection,Not Verified
+uni_id_048,Universitas Negeri Medan,country_id,https://www.unimed.ac.id/,2,,,Pending Collection,Not Verified
+uni_id_048,Universitas Negeri Medan,country_id,https://www.unimed.ac.id/,3,,,Pending Collection,Not Verified
+uni_id_049,Universitas Lambung Mangkurat,country_id,https://ulm.ac.id/,1,,,Pending Collection,Not Verified
+uni_id_049,Universitas Lambung Mangkurat,country_id,https://ulm.ac.id/,2,,,Pending Collection,Not Verified
+uni_id_049,Universitas Lambung Mangkurat,country_id,https://ulm.ac.id/,3,,,Pending Collection,Not Verified
+uni_id_050,Universitas Maritim Raja Ali Haji,country_id,https://umrah.ac.id/,1,,,Pending Collection,Not Verified
+uni_id_050,Universitas Maritim Raja Ali Haji,country_id,https://umrah.ac.id/,2,,,Pending Collection,Not Verified
+uni_id_050,Universitas Maritim Raja Ali Haji,country_id,https://umrah.ac.id/,3,,,Pending Collection,Not Verified
 uni_jp_001,The University of Tokyo,country_jp,https://www.u-tokyo.ac.jp,1,,,Pending Collection,Not Verified
 uni_jp_001,The University of Tokyo,country_jp,https://www.u-tokyo.ac.jp,2,,,Pending Collection,Not Verified
 uni_jp_001,The University of Tokyo,country_jp,https://www.u-tokyo.ac.jp,3,,,Pending Collection,Not Verified
@@ -35,24 +416,471 @@ uni_jp_011,Waseda University,country_jp,https://www.waseda.jp/top/,3,,,Pending C
 uni_jp_012,Keio University,country_jp,https://www.keio.ac.jp,1,,,Pending Collection,Not Verified
 uni_jp_012,Keio University,country_jp,https://www.keio.ac.jp,2,,,Pending Collection,Not Verified
 uni_jp_012,Keio University,country_jp,https://www.keio.ac.jp,3,,,Pending Collection,Not Verified
-uni_sg_001,National University of Singapore,country_sg,http://www.nus.edu.sg/,1,,,Pending Collection,Not Verified
-uni_sg_001,National University of Singapore,country_sg,http://www.nus.edu.sg/,2,,,Pending Collection,Not Verified
-uni_sg_001,National University of Singapore,country_sg,http://www.nus.edu.sg/,3,,,Pending Collection,Not Verified
-uni_sg_002,Nanyang Technological University,country_sg,https://www.ntu.edu.sg,1,,,Pending Collection,Not Verified
-uni_sg_002,Nanyang Technological University,country_sg,https://www.ntu.edu.sg,2,,,Pending Collection,Not Verified
-uni_sg_002,Nanyang Technological University,country_sg,https://www.ntu.edu.sg,3,,,Pending Collection,Not Verified
-uni_sg_003,Singapore Management University,country_sg,https://www.smu.edu.sg,1,,,Pending Collection,Not Verified
-uni_sg_003,Singapore Management University,country_sg,https://www.smu.edu.sg,2,,,Pending Collection,Not Verified
-uni_sg_003,Singapore Management University,country_sg,https://www.smu.edu.sg,3,,,Pending Collection,Not Verified
-uni_sg_004,Singapore University of Technology and Design,country_sg,https://www.sutd.edu.sg,1,,,Pending Collection,Not Verified
-uni_sg_004,Singapore University of Technology and Design,country_sg,https://www.sutd.edu.sg,2,,,Pending Collection,Not Verified
-uni_sg_004,Singapore University of Technology and Design,country_sg,https://www.sutd.edu.sg,3,,,Pending Collection,Not Verified
-uni_sg_005,Singapore Institute of Technology,country_sg,https://www.singaporetech.edu.sg/,1,,,Pending Collection,Not Verified
-uni_sg_005,Singapore Institute of Technology,country_sg,https://www.singaporetech.edu.sg/,2,,,Pending Collection,Not Verified
-uni_sg_005,Singapore Institute of Technology,country_sg,https://www.singaporetech.edu.sg/,3,,,Pending Collection,Not Verified
-uni_sg_006,Singapore University of Social Sciences,country_sg,https://www.suss.edu.sg,1,,,Pending Collection,Not Verified
-uni_sg_006,Singapore University of Social Sciences,country_sg,https://www.suss.edu.sg,2,,,Pending Collection,Not Verified
-uni_sg_006,Singapore University of Social Sciences,country_sg,https://www.suss.edu.sg,3,,,Pending Collection,Not Verified
+uni_jp_013,Ritsumeikan Asia Pacific University,country_jp,https://en.apu.ac.jp/home/,1,,,Pending Collection,Not Verified
+uni_jp_013,Ritsumeikan Asia Pacific University,country_jp,https://en.apu.ac.jp/home/,2,,,Pending Collection,Not Verified
+uni_jp_013,Ritsumeikan Asia Pacific University,country_jp,https://en.apu.ac.jp/home/,3,,,Pending Collection,Not Verified
+uni_jp_014,Soka University,country_jp,https://www.soka.ac.jp/en/,1,,,Pending Collection,Not Verified
+uni_jp_014,Soka University,country_jp,https://www.soka.ac.jp/en/,2,,,Pending Collection,Not Verified
+uni_jp_014,Soka University,country_jp,https://www.soka.ac.jp/en/,3,,,Pending Collection,Not Verified
+uni_jp_015,Akita University,country_jp,https://www.akita-u.ac.jp/eng/,1,,,Pending Collection,Not Verified
+uni_jp_015,Akita University,country_jp,https://www.akita-u.ac.jp/eng/,2,,,Pending Collection,Not Verified
+uni_jp_015,Akita University,country_jp,https://www.akita-u.ac.jp/eng/,3,,,Pending Collection,Not Verified
+uni_jp_016,"The Graduate University for Advanced Studies, SOKENDAI",country_jp,https://www.soken.ac.jp/en/,1,,,Pending Collection,Not Verified
+uni_jp_016,"The Graduate University for Advanced Studies, SOKENDAI",country_jp,https://www.soken.ac.jp/en/,2,,,Pending Collection,Not Verified
+uni_jp_016,"The Graduate University for Advanced Studies, SOKENDAI",country_jp,https://www.soken.ac.jp/en/,3,,,Pending Collection,Not Verified
+uni_jp_017,Hiroshima University,country_jp,https://www.hiroshima-u.ac.jp/en,1,,,Pending Collection,Not Verified
+uni_jp_017,Hiroshima University,country_jp,https://www.hiroshima-u.ac.jp/en,2,,,Pending Collection,Not Verified
+uni_jp_017,Hiroshima University,country_jp,https://www.hiroshima-u.ac.jp/en,3,,,Pending Collection,Not Verified
+uni_jp_018,Ritsumeikan University,country_jp,https://en.ritsumei.ac.jp/,1,,,Pending Collection,Not Verified
+uni_jp_018,Ritsumeikan University,country_jp,https://en.ritsumei.ac.jp/,2,,,Pending Collection,Not Verified
+uni_jp_018,Ritsumeikan University,country_jp,https://en.ritsumei.ac.jp/,3,,,Pending Collection,Not Verified
+uni_jp_019,Sophia University,country_jp,https://www.sophia.ac.jp/eng/,1,,,Pending Collection,Not Verified
+uni_jp_019,Sophia University,country_jp,https://www.sophia.ac.jp/eng/,2,,,Pending Collection,Not Verified
+uni_jp_019,Sophia University,country_jp,https://www.sophia.ac.jp/eng/,3,,,Pending Collection,Not Verified
+uni_jp_020,Tokyo University of Science,country_jp,https://www.tus.ac.jp/en/,1,,,Pending Collection,Not Verified
+uni_jp_020,Tokyo University of Science,country_jp,https://www.tus.ac.jp/en/,2,,,Pending Collection,Not Verified
+uni_jp_020,Tokyo University of Science,country_jp,https://www.tus.ac.jp/en/,3,,,Pending Collection,Not Verified
+uni_jp_021,Tokyo Metropolitan University,country_jp,https://www.tmu.ac.jp/english/,1,,,Pending Collection,Not Verified
+uni_jp_021,Tokyo Metropolitan University,country_jp,https://www.tmu.ac.jp/english/,2,,,Pending Collection,Not Verified
+uni_jp_021,Tokyo Metropolitan University,country_jp,https://www.tmu.ac.jp/english/,3,,,Pending Collection,Not Verified
+uni_jp_022,Chiba University,country_jp,https://www.chiba-u.jp/,1,,,Pending Collection,Not Verified
+uni_jp_022,Chiba University,country_jp,https://www.chiba-u.jp/,2,,,Pending Collection,Not Verified
+uni_jp_022,Chiba University,country_jp,https://www.chiba-u.jp/,3,,,Pending Collection,Not Verified
+uni_jp_023,Yokohama National University,country_jp,https://www.ynu.ac.jp/,1,,,Pending Collection,Not Verified
+uni_jp_023,Yokohama National University,country_jp,https://www.ynu.ac.jp/,2,,,Pending Collection,Not Verified
+uni_jp_023,Yokohama National University,country_jp,https://www.ynu.ac.jp/,3,,,Pending Collection,Not Verified
+uni_jp_024,Tokyo University of Foreign Studies,country_jp,https://www.tufs.ac.jp/,1,,,Pending Collection,Not Verified
+uni_jp_024,Tokyo University of Foreign Studies,country_jp,https://www.tufs.ac.jp/,2,,,Pending Collection,Not Verified
+uni_jp_024,Tokyo University of Foreign Studies,country_jp,https://www.tufs.ac.jp/,3,,,Pending Collection,Not Verified
+uni_jp_025,Ochanomizu University,country_jp,https://www.ocha.ac.jp/,1,,,Pending Collection,Not Verified
+uni_jp_025,Ochanomizu University,country_jp,https://www.ocha.ac.jp/,2,,,Pending Collection,Not Verified
+uni_jp_025,Ochanomizu University,country_jp,https://www.ocha.ac.jp/,3,,,Pending Collection,Not Verified
+uni_jp_026,Hitotsubashi University,country_jp,https://www.hit-u.ac.jp/,1,,,Pending Collection,Not Verified
+uni_jp_026,Hitotsubashi University,country_jp,https://www.hit-u.ac.jp/,2,,,Pending Collection,Not Verified
+uni_jp_026,Hitotsubashi University,country_jp,https://www.hit-u.ac.jp/,3,,,Pending Collection,Not Verified
+uni_jp_027,Tokyo University of Agriculture and Technology,country_jp,https://www.tuat.ac.jp/,1,,,Pending Collection,Not Verified
+uni_jp_027,Tokyo University of Agriculture and Technology,country_jp,https://www.tuat.ac.jp/,2,,,Pending Collection,Not Verified
+uni_jp_027,Tokyo University of Agriculture and Technology,country_jp,https://www.tuat.ac.jp/,3,,,Pending Collection,Not Verified
+uni_jp_028,The University of Electro-Communications,country_jp,https://www.uec.ac.jp/,1,,,Pending Collection,Not Verified
+uni_jp_028,The University of Electro-Communications,country_jp,https://www.uec.ac.jp/,2,,,Pending Collection,Not Verified
+uni_jp_028,The University of Electro-Communications,country_jp,https://www.uec.ac.jp/,3,,,Pending Collection,Not Verified
+uni_jp_029,Saitama University,country_jp,https://www.saitama-u.ac.jp/,1,,,Pending Collection,Not Verified
+uni_jp_029,Saitama University,country_jp,https://www.saitama-u.ac.jp/,2,,,Pending Collection,Not Verified
+uni_jp_029,Saitama University,country_jp,https://www.saitama-u.ac.jp/,3,,,Pending Collection,Not Verified
+uni_jp_030,Niigata University,country_jp,https://www.niigata-u.ac.jp/,1,,,Pending Collection,Not Verified
+uni_jp_030,Niigata University,country_jp,https://www.niigata-u.ac.jp/,2,,,Pending Collection,Not Verified
+uni_jp_030,Niigata University,country_jp,https://www.niigata-u.ac.jp/,3,,,Pending Collection,Not Verified
+uni_jp_031,Kanazawa University,country_jp,https://www.kanazawa-u.ac.jp/,1,,,Pending Collection,Not Verified
+uni_jp_031,Kanazawa University,country_jp,https://www.kanazawa-u.ac.jp/,2,,,Pending Collection,Not Verified
+uni_jp_031,Kanazawa University,country_jp,https://www.kanazawa-u.ac.jp/,3,,,Pending Collection,Not Verified
+uni_jp_032,Shinshu University,country_jp,https://www.shinshu-u.ac.jp/,1,,,Pending Collection,Not Verified
+uni_jp_032,Shinshu University,country_jp,https://www.shinshu-u.ac.jp/,2,,,Pending Collection,Not Verified
+uni_jp_032,Shinshu University,country_jp,https://www.shinshu-u.ac.jp/,3,,,Pending Collection,Not Verified
+uni_jp_033,Gifu University,country_jp,https://www.gifu-u.ac.jp/,1,,,Pending Collection,Not Verified
+uni_jp_033,Gifu University,country_jp,https://www.gifu-u.ac.jp/,2,,,Pending Collection,Not Verified
+uni_jp_033,Gifu University,country_jp,https://www.gifu-u.ac.jp/,3,,,Pending Collection,Not Verified
+uni_jp_034,Shizuoka University,country_jp,https://www.shizuoka.ac.jp/,1,,,Pending Collection,Not Verified
+uni_jp_034,Shizuoka University,country_jp,https://www.shizuoka.ac.jp/,2,,,Pending Collection,Not Verified
+uni_jp_034,Shizuoka University,country_jp,https://www.shizuoka.ac.jp/,3,,,Pending Collection,Not Verified
+uni_jp_035,Mie University,country_jp,https://www.mie-u.ac.jp/,1,,,Pending Collection,Not Verified
+uni_jp_035,Mie University,country_jp,https://www.mie-u.ac.jp/,2,,,Pending Collection,Not Verified
+uni_jp_035,Mie University,country_jp,https://www.mie-u.ac.jp/,3,,,Pending Collection,Not Verified
+uni_jp_036,Nagoya Institute of Technology,country_jp,https://www.nitech.ac.jp/,1,,,Pending Collection,Not Verified
+uni_jp_036,Nagoya Institute of Technology,country_jp,https://www.nitech.ac.jp/,2,,,Pending Collection,Not Verified
+uni_jp_036,Nagoya Institute of Technology,country_jp,https://www.nitech.ac.jp/,3,,,Pending Collection,Not Verified
+uni_jp_037,Nara Institute of Science and Technology,country_jp,https://www.naist.jp/,1,,,Pending Collection,Not Verified
+uni_jp_037,Nara Institute of Science and Technology,country_jp,https://www.naist.jp/,2,,,Pending Collection,Not Verified
+uni_jp_037,Nara Institute of Science and Technology,country_jp,https://www.naist.jp/,3,,,Pending Collection,Not Verified
+uni_jp_038,Okayama University,country_jp,https://www.okayama-u.ac.jp/,1,,,Pending Collection,Not Verified
+uni_jp_038,Okayama University,country_jp,https://www.okayama-u.ac.jp/,2,,,Pending Collection,Not Verified
+uni_jp_038,Okayama University,country_jp,https://www.okayama-u.ac.jp/,3,,,Pending Collection,Not Verified
+uni_jp_039,Yamaguchi University,country_jp,https://www.yamaguchi-u.ac.jp/,1,,,Pending Collection,Not Verified
+uni_jp_039,Yamaguchi University,country_jp,https://www.yamaguchi-u.ac.jp/,2,,,Pending Collection,Not Verified
+uni_jp_039,Yamaguchi University,country_jp,https://www.yamaguchi-u.ac.jp/,3,,,Pending Collection,Not Verified
+uni_jp_040,Tokushima University,country_jp,https://www.tokushima-u.ac.jp/,1,,,Pending Collection,Not Verified
+uni_jp_040,Tokushima University,country_jp,https://www.tokushima-u.ac.jp/,2,,,Pending Collection,Not Verified
+uni_jp_040,Tokushima University,country_jp,https://www.tokushima-u.ac.jp/,3,,,Pending Collection,Not Verified
+uni_jp_041,Kagawa University,country_jp,https://www.kagawa-u.ac.jp/,1,,,Pending Collection,Not Verified
+uni_jp_041,Kagawa University,country_jp,https://www.kagawa-u.ac.jp/,2,,,Pending Collection,Not Verified
+uni_jp_041,Kagawa University,country_jp,https://www.kagawa-u.ac.jp/,3,,,Pending Collection,Not Verified
+uni_jp_042,Ehime University,country_jp,https://www.ehime-u.ac.jp/,1,,,Pending Collection,Not Verified
+uni_jp_042,Ehime University,country_jp,https://www.ehime-u.ac.jp/,2,,,Pending Collection,Not Verified
+uni_jp_042,Ehime University,country_jp,https://www.ehime-u.ac.jp/,3,,,Pending Collection,Not Verified
+uni_jp_043,Kochi University,country_jp,https://www.kochi-u.ac.jp/,1,,,Pending Collection,Not Verified
+uni_jp_043,Kochi University,country_jp,https://www.kochi-u.ac.jp/,2,,,Pending Collection,Not Verified
+uni_jp_043,Kochi University,country_jp,https://www.kochi-u.ac.jp/,3,,,Pending Collection,Not Verified
+uni_jp_044,Saga University,country_jp,https://www.saga-u.ac.jp/,1,,,Pending Collection,Not Verified
+uni_jp_044,Saga University,country_jp,https://www.saga-u.ac.jp/,2,,,Pending Collection,Not Verified
+uni_jp_044,Saga University,country_jp,https://www.saga-u.ac.jp/,3,,,Pending Collection,Not Verified
+uni_jp_045,Nagasaki University,country_jp,https://www.nagasaki-u.ac.jp/,1,,,Pending Collection,Not Verified
+uni_jp_045,Nagasaki University,country_jp,https://www.nagasaki-u.ac.jp/,2,,,Pending Collection,Not Verified
+uni_jp_045,Nagasaki University,country_jp,https://www.nagasaki-u.ac.jp/,3,,,Pending Collection,Not Verified
+uni_jp_046,Kumamoto University,country_jp,https://www.kumamoto-u.ac.jp/,1,,,Pending Collection,Not Verified
+uni_jp_046,Kumamoto University,country_jp,https://www.kumamoto-u.ac.jp/,2,,,Pending Collection,Not Verified
+uni_jp_046,Kumamoto University,country_jp,https://www.kumamoto-u.ac.jp/,3,,,Pending Collection,Not Verified
+uni_jp_047,Oita University,country_jp,https://www.oita-u.ac.jp/,1,,,Pending Collection,Not Verified
+uni_jp_047,Oita University,country_jp,https://www.oita-u.ac.jp/,2,,,Pending Collection,Not Verified
+uni_jp_047,Oita University,country_jp,https://www.oita-u.ac.jp/,3,,,Pending Collection,Not Verified
+uni_jp_048,University of Miyazaki,country_jp,https://www.miyazaki-u.ac.jp/,1,,,Pending Collection,Not Verified
+uni_jp_048,University of Miyazaki,country_jp,https://www.miyazaki-u.ac.jp/,2,,,Pending Collection,Not Verified
+uni_jp_048,University of Miyazaki,country_jp,https://www.miyazaki-u.ac.jp/,3,,,Pending Collection,Not Verified
+uni_jp_049,Kagoshima University,country_jp,https://www.kagoshima-u.ac.jp/,1,,,Pending Collection,Not Verified
+uni_jp_049,Kagoshima University,country_jp,https://www.kagoshima-u.ac.jp/,2,,,Pending Collection,Not Verified
+uni_jp_049,Kagoshima University,country_jp,https://www.kagoshima-u.ac.jp/,3,,,Pending Collection,Not Verified
+uni_jp_050,University of the Ryukyus,country_jp,https://www.u-ryukyu.ac.jp/,1,,,Pending Collection,Not Verified
+uni_jp_050,University of the Ryukyus,country_jp,https://www.u-ryukyu.ac.jp/,2,,,Pending Collection,Not Verified
+uni_jp_050,University of the Ryukyus,country_jp,https://www.u-ryukyu.ac.jp/,3,,,Pending Collection,Not Verified
+uni_jp_051,Ibaraki University,country_jp,https://www.ibaraki.ac.jp/,1,,,Pending Collection,Not Verified
+uni_jp_051,Ibaraki University,country_jp,https://www.ibaraki.ac.jp/,2,,,Pending Collection,Not Verified
+uni_jp_051,Ibaraki University,country_jp,https://www.ibaraki.ac.jp/,3,,,Pending Collection,Not Verified
+uni_jp_052,Utsunomiya University,country_jp,https://www.utsunomiya-u.ac.jp/,1,,,Pending Collection,Not Verified
+uni_jp_052,Utsunomiya University,country_jp,https://www.utsunomiya-u.ac.jp/,2,,,Pending Collection,Not Verified
+uni_jp_052,Utsunomiya University,country_jp,https://www.utsunomiya-u.ac.jp/,3,,,Pending Collection,Not Verified
+uni_jp_053,Gunma University,country_jp,https://www.gunma-u.ac.jp/,1,,,Pending Collection,Not Verified
+uni_jp_053,Gunma University,country_jp,https://www.gunma-u.ac.jp/,2,,,Pending Collection,Not Verified
+uni_jp_053,Gunma University,country_jp,https://www.gunma-u.ac.jp/,3,,,Pending Collection,Not Verified
+uni_jp_054,University of Yamanashi,country_jp,https://www.yamanashi.ac.jp/,1,,,Pending Collection,Not Verified
+uni_jp_054,University of Yamanashi,country_jp,https://www.yamanashi.ac.jp/,2,,,Pending Collection,Not Verified
+uni_jp_054,University of Yamanashi,country_jp,https://www.yamanashi.ac.jp/,3,,,Pending Collection,Not Verified
+uni_jp_055,University of Toyama,country_jp,https://www.u-toyama.ac.jp/,1,,,Pending Collection,Not Verified
+uni_jp_055,University of Toyama,country_jp,https://www.u-toyama.ac.jp/,2,,,Pending Collection,Not Verified
+uni_jp_055,University of Toyama,country_jp,https://www.u-toyama.ac.jp/,3,,,Pending Collection,Not Verified
+uni_kh_001,Royal University of Phnom Penh,country_kh,https://www.rupp.edu.kh/,1,,,Pending Collection,Not Verified
+uni_kh_001,Royal University of Phnom Penh,country_kh,https://www.rupp.edu.kh/,2,,,Pending Collection,Not Verified
+uni_kh_001,Royal University of Phnom Penh,country_kh,https://www.rupp.edu.kh/,3,,,Pending Collection,Not Verified
+uni_kh_002,Institute of Technology of Cambodia,country_kh,https://itc.edu.kh/,1,,,Pending Collection,Not Verified
+uni_kh_002,Institute of Technology of Cambodia,country_kh,https://itc.edu.kh/,2,,,Pending Collection,Not Verified
+uni_kh_002,Institute of Technology of Cambodia,country_kh,https://itc.edu.kh/,3,,,Pending Collection,Not Verified
+uni_kh_003,Royal University of Agriculture,country_kh,https://www.rua.edu.kh/,1,,,Pending Collection,Not Verified
+uni_kh_003,Royal University of Agriculture,country_kh,https://www.rua.edu.kh/,2,,,Pending Collection,Not Verified
+uni_kh_003,Royal University of Agriculture,country_kh,https://www.rua.edu.kh/,3,,,Pending Collection,Not Verified
+uni_kh_004,University of Health Sciences Cambodia,country_kh,https://uhs.edu.kh/,1,,,Pending Collection,Not Verified
+uni_kh_004,University of Health Sciences Cambodia,country_kh,https://uhs.edu.kh/,2,,,Pending Collection,Not Verified
+uni_kh_004,University of Health Sciences Cambodia,country_kh,https://uhs.edu.kh/,3,,,Pending Collection,Not Verified
+uni_kh_005,National University of Management,country_kh,https://numuniversity.com/,1,,,Pending Collection,Not Verified
+uni_kh_005,National University of Management,country_kh,https://numuniversity.com/,2,,,Pending Collection,Not Verified
+uni_kh_005,National University of Management,country_kh,https://numuniversity.com/,3,,,Pending Collection,Not Verified
+uni_kh_006,Royal University of Law and Economics,country_kh,https://www.rule.edu.kh/,1,,,Pending Collection,Not Verified
+uni_kh_006,Royal University of Law and Economics,country_kh,https://www.rule.edu.kh/,2,,,Pending Collection,Not Verified
+uni_kh_006,Royal University of Law and Economics,country_kh,https://www.rule.edu.kh/,3,,,Pending Collection,Not Verified
+uni_kh_007,National University of Battambang,country_kh,https://nubb.edu.kh/en/,1,,,Pending Collection,Not Verified
+uni_kh_007,National University of Battambang,country_kh,https://nubb.edu.kh/en/,2,,,Pending Collection,Not Verified
+uni_kh_007,National University of Battambang,country_kh,https://nubb.edu.kh/en/,3,,,Pending Collection,Not Verified
+uni_kh_008,Svay Rieng University,country_kh,https://sru.edu.kh/,1,,,Pending Collection,Not Verified
+uni_kh_008,Svay Rieng University,country_kh,https://sru.edu.kh/,2,,,Pending Collection,Not Verified
+uni_kh_008,Svay Rieng University,country_kh,https://sru.edu.kh/,3,,,Pending Collection,Not Verified
+uni_kh_009,Chea Sim University of Kamchay Mear,country_kh,http://www.csuk.edu.kh/,1,,,Pending Collection,Not Verified
+uni_kh_009,Chea Sim University of Kamchay Mear,country_kh,http://www.csuk.edu.kh/,2,,,Pending Collection,Not Verified
+uni_kh_009,Chea Sim University of Kamchay Mear,country_kh,http://www.csuk.edu.kh/,3,,,Pending Collection,Not Verified
+uni_kh_010,Mean Chey University,country_kh,http://www.mcu.edu.kh/,1,,,Pending Collection,Not Verified
+uni_kh_010,Mean Chey University,country_kh,http://www.mcu.edu.kh/,2,,,Pending Collection,Not Verified
+uni_kh_010,Mean Chey University,country_kh,http://www.mcu.edu.kh/,3,,,Pending Collection,Not Verified
+uni_kh_011,Royal University of Fine Arts,country_kh,https://www.rufa.edu.kh/,1,,,Pending Collection,Not Verified
+uni_kh_011,Royal University of Fine Arts,country_kh,https://www.rufa.edu.kh/,2,,,Pending Collection,Not Verified
+uni_kh_011,Royal University of Fine Arts,country_kh,https://www.rufa.edu.kh/,3,,,Pending Collection,Not Verified
+uni_kh_012,American University of Phnom Penh,country_kh,https://www.aupp.edu.kh/,1,,,Pending Collection,Not Verified
+uni_kh_012,American University of Phnom Penh,country_kh,https://www.aupp.edu.kh/,2,,,Pending Collection,Not Verified
+uni_kh_012,American University of Phnom Penh,country_kh,https://www.aupp.edu.kh/,3,,,Pending Collection,Not Verified
+uni_kh_013,Pannasastra University of Cambodia,country_kh,https://www.puc.edu.kh/,1,,,Pending Collection,Not Verified
+uni_kh_013,Pannasastra University of Cambodia,country_kh,https://www.puc.edu.kh/,2,,,Pending Collection,Not Verified
+uni_kh_013,Pannasastra University of Cambodia,country_kh,https://www.puc.edu.kh/,3,,,Pending Collection,Not Verified
+uni_kh_014,The University of Cambodia,country_kh,https://uc.edu.kh/,1,,,Pending Collection,Not Verified
+uni_kh_014,The University of Cambodia,country_kh,https://uc.edu.kh/,2,,,Pending Collection,Not Verified
+uni_kh_014,The University of Cambodia,country_kh,https://uc.edu.kh/,3,,,Pending Collection,Not Verified
+uni_kh_015,Build Bright University,country_kh,https://www.bbu.edu.kh/,1,,,Pending Collection,Not Verified
+uni_kh_015,Build Bright University,country_kh,https://www.bbu.edu.kh/,2,,,Pending Collection,Not Verified
+uni_kh_015,Build Bright University,country_kh,https://www.bbu.edu.kh/,3,,,Pending Collection,Not Verified
+uni_kr_001,Seoul National University,country_kr,https://www.snu.ac.kr,1,,,Pending Collection,Not Verified
+uni_kr_001,Seoul National University,country_kr,https://www.snu.ac.kr,2,,,Pending Collection,Not Verified
+uni_kr_001,Seoul National University,country_kr,https://www.snu.ac.kr,3,,,Pending Collection,Not Verified
+uni_kr_002,Korea Advanced Institute of Science and Technology,country_kr,https://www.kaist.ac.kr,1,,,Pending Collection,Not Verified
+uni_kr_002,Korea Advanced Institute of Science and Technology,country_kr,https://www.kaist.ac.kr,2,,,Pending Collection,Not Verified
+uni_kr_002,Korea Advanced Institute of Science and Technology,country_kr,https://www.kaist.ac.kr,3,,,Pending Collection,Not Verified
+uni_kr_003,Yonsei University,country_kr,https://www.yonsei.ac.kr,1,,,Pending Collection,Not Verified
+uni_kr_003,Yonsei University,country_kr,https://www.yonsei.ac.kr,2,,,Pending Collection,Not Verified
+uni_kr_003,Yonsei University,country_kr,https://www.yonsei.ac.kr,3,,,Pending Collection,Not Verified
+uni_kr_004,Korea University,country_kr,https://www.korea.ac.kr,1,,,Pending Collection,Not Verified
+uni_kr_004,Korea University,country_kr,https://www.korea.ac.kr,2,,,Pending Collection,Not Verified
+uni_kr_004,Korea University,country_kr,https://www.korea.ac.kr,3,,,Pending Collection,Not Verified
+uni_kr_005,Sungkyunkwan University,country_kr,https://skku.edu,1,,,Pending Collection,Not Verified
+uni_kr_005,Sungkyunkwan University,country_kr,https://skku.edu,2,,,Pending Collection,Not Verified
+uni_kr_005,Sungkyunkwan University,country_kr,https://skku.edu,3,,,Pending Collection,Not Verified
+uni_kr_006,Pohang University of Science and Technology,country_kr,http://www.postech.ac.kr/,1,,,Pending Collection,Not Verified
+uni_kr_006,Pohang University of Science and Technology,country_kr,http://www.postech.ac.kr/,2,,,Pending Collection,Not Verified
+uni_kr_006,Pohang University of Science and Technology,country_kr,http://www.postech.ac.kr/,3,,,Pending Collection,Not Verified
+uni_kr_007,Hanyang University,country_kr,http://www.hanyang.ac.kr/english/,1,,,Pending Collection,Not Verified
+uni_kr_007,Hanyang University,country_kr,http://www.hanyang.ac.kr/english/,2,,,Pending Collection,Not Verified
+uni_kr_007,Hanyang University,country_kr,http://www.hanyang.ac.kr/english/,3,,,Pending Collection,Not Verified
+uni_kr_008,Kyung Hee University,country_kr,http://www.kyunghee.edu/,1,,,Pending Collection,Not Verified
+uni_kr_008,Kyung Hee University,country_kr,http://www.kyunghee.edu/,2,,,Pending Collection,Not Verified
+uni_kr_008,Kyung Hee University,country_kr,http://www.kyunghee.edu/,3,,,Pending Collection,Not Verified
+uni_kr_009,Ewha Womans University,country_kr,https://www.ewha.ac.kr/ewhaen/index.do,1,,,Pending Collection,Not Verified
+uni_kr_009,Ewha Womans University,country_kr,https://www.ewha.ac.kr/ewhaen/index.do,2,,,Pending Collection,Not Verified
+uni_kr_009,Ewha Womans University,country_kr,https://www.ewha.ac.kr/ewhaen/index.do,3,,,Pending Collection,Not Verified
+uni_kr_010,Sogang University,country_kr,https://www.sogang.ac.kr/en,1,,,Pending Collection,Not Verified
+uni_kr_010,Sogang University,country_kr,https://www.sogang.ac.kr/en,2,,,Pending Collection,Not Verified
+uni_kr_010,Sogang University,country_kr,https://www.sogang.ac.kr/en,3,,,Pending Collection,Not Verified
+uni_kr_011,Pusan National University,country_kr,https://www.pusan.ac.kr/eng/,1,,,Pending Collection,Not Verified
+uni_kr_011,Pusan National University,country_kr,https://www.pusan.ac.kr/eng/,2,,,Pending Collection,Not Verified
+uni_kr_011,Pusan National University,country_kr,https://www.pusan.ac.kr/eng/,3,,,Pending Collection,Not Verified
+uni_kr_012,Kyungpook National University,country_kr,https://en.knu.ac.kr/,1,,,Pending Collection,Not Verified
+uni_kr_012,Kyungpook National University,country_kr,https://en.knu.ac.kr/,2,,,Pending Collection,Not Verified
+uni_kr_012,Kyungpook National University,country_kr,https://en.knu.ac.kr/,3,,,Pending Collection,Not Verified
+uni_kr_013,Ulsan National Institute of Science and Technology,country_kr,https://www.unist.ac.kr/,1,,,Pending Collection,Not Verified
+uni_kr_013,Ulsan National Institute of Science and Technology,country_kr,https://www.unist.ac.kr/,2,,,Pending Collection,Not Verified
+uni_kr_013,Ulsan National Institute of Science and Technology,country_kr,https://www.unist.ac.kr/,3,,,Pending Collection,Not Verified
+uni_kr_014,Gwangju Institute of Science and Technology,country_kr,https://www.gist.ac.kr/en/,1,,,Pending Collection,Not Verified
+uni_kr_014,Gwangju Institute of Science and Technology,country_kr,https://www.gist.ac.kr/en/,2,,,Pending Collection,Not Verified
+uni_kr_014,Gwangju Institute of Science and Technology,country_kr,https://www.gist.ac.kr/en/,3,,,Pending Collection,Not Verified
+uni_kr_015,Ajou University,country_kr,https://www.ajou.ac.kr/en/,1,,,Pending Collection,Not Verified
+uni_kr_015,Ajou University,country_kr,https://www.ajou.ac.kr/en/,2,,,Pending Collection,Not Verified
+uni_kr_015,Ajou University,country_kr,https://www.ajou.ac.kr/en/,3,,,Pending Collection,Not Verified
+uni_kr_016,Chung-Ang University,country_kr,https://neweng.cau.ac.kr/,1,,,Pending Collection,Not Verified
+uni_kr_016,Chung-Ang University,country_kr,https://neweng.cau.ac.kr/,2,,,Pending Collection,Not Verified
+uni_kr_016,Chung-Ang University,country_kr,https://neweng.cau.ac.kr/,3,,,Pending Collection,Not Verified
+uni_kr_017,Chungnam National University,country_kr,https://plus.cnu.ac.kr/html/en/,1,,,Pending Collection,Not Verified
+uni_kr_017,Chungnam National University,country_kr,https://plus.cnu.ac.kr/html/en/,2,,,Pending Collection,Not Verified
+uni_kr_017,Chungnam National University,country_kr,https://plus.cnu.ac.kr/html/en/,3,,,Pending Collection,Not Verified
+uni_kr_018,Chungbuk National University,country_kr,https://www.chungbuk.ac.kr/site/english/main.do,1,,,Pending Collection,Not Verified
+uni_kr_018,Chungbuk National University,country_kr,https://www.chungbuk.ac.kr/site/english/main.do,2,,,Pending Collection,Not Verified
+uni_kr_018,Chungbuk National University,country_kr,https://www.chungbuk.ac.kr/site/english/main.do,3,,,Pending Collection,Not Verified
+uni_kr_019,Chonnam National University,country_kr,https://global.jnu.ac.kr/,1,,,Pending Collection,Not Verified
+uni_kr_019,Chonnam National University,country_kr,https://global.jnu.ac.kr/,2,,,Pending Collection,Not Verified
+uni_kr_019,Chonnam National University,country_kr,https://global.jnu.ac.kr/,3,,,Pending Collection,Not Verified
+uni_kr_020,Jeonbuk National University,country_kr,https://www.jbnu.ac.kr/en/,1,,,Pending Collection,Not Verified
+uni_kr_020,Jeonbuk National University,country_kr,https://www.jbnu.ac.kr/en/,2,,,Pending Collection,Not Verified
+uni_kr_020,Jeonbuk National University,country_kr,https://www.jbnu.ac.kr/en/,3,,,Pending Collection,Not Verified
+uni_kr_021,Gyeongsang National University,country_kr,https://www.gnu.ac.kr/eng/main.do,1,,,Pending Collection,Not Verified
+uni_kr_021,Gyeongsang National University,country_kr,https://www.gnu.ac.kr/eng/main.do,2,,,Pending Collection,Not Verified
+uni_kr_021,Gyeongsang National University,country_kr,https://www.gnu.ac.kr/eng/main.do,3,,,Pending Collection,Not Verified
+uni_kr_022,Kangwon National University,country_kr,https://www.kangwon.ac.kr/english/,1,,,Pending Collection,Not Verified
+uni_kr_022,Kangwon National University,country_kr,https://www.kangwon.ac.kr/english/,2,,,Pending Collection,Not Verified
+uni_kr_022,Kangwon National University,country_kr,https://www.kangwon.ac.kr/english/,3,,,Pending Collection,Not Verified
+uni_kr_023,Incheon National University,country_kr,https://www.inu.ac.kr/inuengl/index.do,1,,,Pending Collection,Not Verified
+uni_kr_023,Incheon National University,country_kr,https://www.inu.ac.kr/inuengl/index.do,2,,,Pending Collection,Not Verified
+uni_kr_023,Incheon National University,country_kr,https://www.inu.ac.kr/inuengl/index.do,3,,,Pending Collection,Not Verified
+uni_kr_024,Jeju National University,country_kr,https://www.jejunu.ac.kr/eng/,1,,,Pending Collection,Not Verified
+uni_kr_024,Jeju National University,country_kr,https://www.jejunu.ac.kr/eng/,2,,,Pending Collection,Not Verified
+uni_kr_024,Jeju National University,country_kr,https://www.jejunu.ac.kr/eng/,3,,,Pending Collection,Not Verified
+uni_kr_025,Pukyong National University,country_kr,https://www.pknu.ac.kr/eng,1,,,Pending Collection,Not Verified
+uni_kr_025,Pukyong National University,country_kr,https://www.pknu.ac.kr/eng,2,,,Pending Collection,Not Verified
+uni_kr_025,Pukyong National University,country_kr,https://www.pknu.ac.kr/eng,3,,,Pending Collection,Not Verified
+uni_kr_026,Seoul National University of Science and Technology,country_kr,https://en.seoultech.ac.kr/,1,,,Pending Collection,Not Verified
+uni_kr_026,Seoul National University of Science and Technology,country_kr,https://en.seoultech.ac.kr/,2,,,Pending Collection,Not Verified
+uni_kr_026,Seoul National University of Science and Technology,country_kr,https://en.seoultech.ac.kr/,3,,,Pending Collection,Not Verified
+uni_kr_027,University of Seoul,country_kr,https://www.uos.ac.kr/en/,1,,,Pending Collection,Not Verified
+uni_kr_027,University of Seoul,country_kr,https://www.uos.ac.kr/en/,2,,,Pending Collection,Not Verified
+uni_kr_027,University of Seoul,country_kr,https://www.uos.ac.kr/en/,3,,,Pending Collection,Not Verified
+uni_kr_028,Dongguk University,country_kr,https://www.dongguk.edu/eng/main,1,,,Pending Collection,Not Verified
+uni_kr_028,Dongguk University,country_kr,https://www.dongguk.edu/eng/main,2,,,Pending Collection,Not Verified
+uni_kr_028,Dongguk University,country_kr,https://www.dongguk.edu/eng/main,3,,,Pending Collection,Not Verified
+uni_kr_029,Konkuk University,country_kr,https://www.konkuk.ac.kr/en,1,,,Pending Collection,Not Verified
+uni_kr_029,Konkuk University,country_kr,https://www.konkuk.ac.kr/en,2,,,Pending Collection,Not Verified
+uni_kr_029,Konkuk University,country_kr,https://www.konkuk.ac.kr/en,3,,,Pending Collection,Not Verified
+uni_kr_030,Kookmin University,country_kr,https://english.kookmin.ac.kr/,1,,,Pending Collection,Not Verified
+uni_kr_030,Kookmin University,country_kr,https://english.kookmin.ac.kr/,2,,,Pending Collection,Not Verified
+uni_kr_030,Kookmin University,country_kr,https://english.kookmin.ac.kr/,3,,,Pending Collection,Not Verified
+uni_kr_031,Hongik University,country_kr,https://www.hongik.ac.kr/en/,1,,,Pending Collection,Not Verified
+uni_kr_031,Hongik University,country_kr,https://www.hongik.ac.kr/en/,2,,,Pending Collection,Not Verified
+uni_kr_031,Hongik University,country_kr,https://www.hongik.ac.kr/en/,3,,,Pending Collection,Not Verified
+uni_kr_032,Hankuk University of Foreign Studies,country_kr,https://www.hufs.ac.kr/,1,,,Pending Collection,Not Verified
+uni_kr_032,Hankuk University of Foreign Studies,country_kr,https://www.hufs.ac.kr/,2,,,Pending Collection,Not Verified
+uni_kr_032,Hankuk University of Foreign Studies,country_kr,https://www.hufs.ac.kr/,3,,,Pending Collection,Not Verified
+uni_kr_033,Inha University,country_kr,https://www.inha.ac.kr/eng/,1,,,Pending Collection,Not Verified
+uni_kr_033,Inha University,country_kr,https://www.inha.ac.kr/eng/,2,,,Pending Collection,Not Verified
+uni_kr_033,Inha University,country_kr,https://www.inha.ac.kr/eng/,3,,,Pending Collection,Not Verified
+uni_kr_034,Sejong University,country_kr,https://en.sejong.ac.kr/,1,,,Pending Collection,Not Verified
+uni_kr_034,Sejong University,country_kr,https://en.sejong.ac.kr/,2,,,Pending Collection,Not Verified
+uni_kr_034,Sejong University,country_kr,https://en.sejong.ac.kr/,3,,,Pending Collection,Not Verified
+uni_kr_035,Soongsil University,country_kr,https://ssu.ac.kr/eng/,1,,,Pending Collection,Not Verified
+uni_kr_035,Soongsil University,country_kr,https://ssu.ac.kr/eng/,2,,,Pending Collection,Not Verified
+uni_kr_035,Soongsil University,country_kr,https://ssu.ac.kr/eng/,3,,,Pending Collection,Not Verified
+uni_kr_036,Sookmyung Women's University,country_kr,https://www.sookmyung.ac.kr/en,1,,,Pending Collection,Not Verified
+uni_kr_036,Sookmyung Women's University,country_kr,https://www.sookmyung.ac.kr/en,2,,,Pending Collection,Not Verified
+uni_kr_036,Sookmyung Women's University,country_kr,https://www.sookmyung.ac.kr/en,3,,,Pending Collection,Not Verified
+uni_kr_037,Sungshin Women's University,country_kr,https://www.sungshin.ac.kr/sites/main_eng/main.jsp,1,,,Pending Collection,Not Verified
+uni_kr_037,Sungshin Women's University,country_kr,https://www.sungshin.ac.kr/sites/main_eng/main.jsp,2,,,Pending Collection,Not Verified
+uni_kr_037,Sungshin Women's University,country_kr,https://www.sungshin.ac.kr/sites/main_eng/main.jsp,3,,,Pending Collection,Not Verified
+uni_kr_038,Seoul Women's University,country_kr,https://www.swu.ac.kr/english/,1,,,Pending Collection,Not Verified
+uni_kr_038,Seoul Women's University,country_kr,https://www.swu.ac.kr/english/,2,,,Pending Collection,Not Verified
+uni_kr_038,Seoul Women's University,country_kr,https://www.swu.ac.kr/english/,3,,,Pending Collection,Not Verified
+uni_kr_039,Dankook University,country_kr,https://www.dankook.ac.kr/en,1,,,Pending Collection,Not Verified
+uni_kr_039,Dankook University,country_kr,https://www.dankook.ac.kr/en,2,,,Pending Collection,Not Verified
+uni_kr_039,Dankook University,country_kr,https://www.dankook.ac.kr/en,3,,,Pending Collection,Not Verified
+uni_kr_040,Myongji University,country_kr,https://www.mju.ac.kr/us/index.do,1,,,Pending Collection,Not Verified
+uni_kr_040,Myongji University,country_kr,https://www.mju.ac.kr/us/index.do,2,,,Pending Collection,Not Verified
+uni_kr_040,Myongji University,country_kr,https://www.mju.ac.kr/us/index.do,3,,,Pending Collection,Not Verified
+uni_kr_041,Gachon University,country_kr,https://www.gachon.ac.kr/eng/index.do,1,,,Pending Collection,Not Verified
+uni_kr_041,Gachon University,country_kr,https://www.gachon.ac.kr/eng/index.do,2,,,Pending Collection,Not Verified
+uni_kr_041,Gachon University,country_kr,https://www.gachon.ac.kr/eng/index.do,3,,,Pending Collection,Not Verified
+uni_kr_042,Hallym University,country_kr,https://www.hallym.ac.kr/hallym_en/,1,,,Pending Collection,Not Verified
+uni_kr_042,Hallym University,country_kr,https://www.hallym.ac.kr/hallym_en/,2,,,Pending Collection,Not Verified
+uni_kr_042,Hallym University,country_kr,https://www.hallym.ac.kr/hallym_en/,3,,,Pending Collection,Not Verified
+uni_kr_043,Keimyung University,country_kr,https://www.kmu.ac.kr/uni/eng/,1,,,Pending Collection,Not Verified
+uni_kr_043,Keimyung University,country_kr,https://www.kmu.ac.kr/uni/eng/,2,,,Pending Collection,Not Verified
+uni_kr_043,Keimyung University,country_kr,https://www.kmu.ac.kr/uni/eng/,3,,,Pending Collection,Not Verified
+uni_kr_044,Yeungnam University,country_kr,https://www.yu.ac.kr/english/,1,,,Pending Collection,Not Verified
+uni_kr_044,Yeungnam University,country_kr,https://www.yu.ac.kr/english/,2,,,Pending Collection,Not Verified
+uni_kr_044,Yeungnam University,country_kr,https://www.yu.ac.kr/english/,3,,,Pending Collection,Not Verified
+uni_kr_045,University of Ulsan,country_kr,https://www.ulsan.ac.kr/en/,1,,,Pending Collection,Not Verified
+uni_kr_045,University of Ulsan,country_kr,https://www.ulsan.ac.kr/en/,2,,,Pending Collection,Not Verified
+uni_kr_045,University of Ulsan,country_kr,https://www.ulsan.ac.kr/en/,3,,,Pending Collection,Not Verified
+uni_kr_046,Dong-A University,country_kr,https://english.donga.ac.kr/english/,1,,,Pending Collection,Not Verified
+uni_kr_046,Dong-A University,country_kr,https://english.donga.ac.kr/english/,2,,,Pending Collection,Not Verified
+uni_kr_046,Dong-A University,country_kr,https://english.donga.ac.kr/english/,3,,,Pending Collection,Not Verified
+uni_kr_047,Korea Maritime & Ocean University,country_kr,https://www.kmou.ac.kr/english/,1,,,Pending Collection,Not Verified
+uni_kr_047,Korea Maritime & Ocean University,country_kr,https://www.kmou.ac.kr/english/,2,,,Pending Collection,Not Verified
+uni_kr_047,Korea Maritime & Ocean University,country_kr,https://www.kmou.ac.kr/english/,3,,,Pending Collection,Not Verified
+uni_kr_048,Korea University of Technology and Education,country_kr,https://www.koreatech.ac.kr/eng/,1,,,Pending Collection,Not Verified
+uni_kr_048,Korea University of Technology and Education,country_kr,https://www.koreatech.ac.kr/eng/,2,,,Pending Collection,Not Verified
+uni_kr_048,Korea University of Technology and Education,country_kr,https://www.koreatech.ac.kr/eng/,3,,,Pending Collection,Not Verified
+uni_kr_049,Kumoh National Institute of Technology,country_kr,https://eng.kumoh.ac.kr/,1,,,Pending Collection,Not Verified
+uni_kr_049,Kumoh National Institute of Technology,country_kr,https://eng.kumoh.ac.kr/,2,,,Pending Collection,Not Verified
+uni_kr_049,Kumoh National Institute of Technology,country_kr,https://eng.kumoh.ac.kr/,3,,,Pending Collection,Not Verified
+uni_kr_050,Handong Global University,country_kr,https://www.handong.edu/eng/,1,,,Pending Collection,Not Verified
+uni_kr_050,Handong Global University,country_kr,https://www.handong.edu/eng/,2,,,Pending Collection,Not Verified
+uni_kr_050,Handong Global University,country_kr,https://www.handong.edu/eng/,3,,,Pending Collection,Not Verified
+uni_la_001,National University of Laos,country_la,https://www.nuol.edu.la/index.php/en/,1,,,Pending Collection,Not Verified
+uni_la_001,National University of Laos,country_la,https://www.nuol.edu.la/index.php/en/,2,,,Pending Collection,Not Verified
+uni_la_001,National University of Laos,country_la,https://www.nuol.edu.la/index.php/en/,3,,,Pending Collection,Not Verified
+uni_la_002,Souphanouvong University,country_la,https://su.edu.la/,1,,,Pending Collection,Not Verified
+uni_la_002,Souphanouvong University,country_la,https://su.edu.la/,2,,,Pending Collection,Not Verified
+uni_la_002,Souphanouvong University,country_la,https://su.edu.la/,3,,,Pending Collection,Not Verified
+uni_la_003,University of Health Sciences Laos,country_la,https://uhs.edu.la/,1,,,Pending Collection,Not Verified
+uni_la_003,University of Health Sciences Laos,country_la,https://uhs.edu.la/,2,,,Pending Collection,Not Verified
+uni_la_003,University of Health Sciences Laos,country_la,https://uhs.edu.la/,3,,,Pending Collection,Not Verified
+uni_la_004,Savannakhet University,country_la,http://sku.edu.la/,1,,,Pending Collection,Not Verified
+uni_la_004,Savannakhet University,country_la,http://sku.edu.la/,2,,,Pending Collection,Not Verified
+uni_la_004,Savannakhet University,country_la,http://sku.edu.la/,3,,,Pending Collection,Not Verified
+uni_la_005,Champasak University,country_la,http://www.cu.edu.la/,1,,,Pending Collection,Not Verified
+uni_la_005,Champasak University,country_la,http://www.cu.edu.la/,2,,,Pending Collection,Not Verified
+uni_la_005,Champasak University,country_la,http://www.cu.edu.la/,3,,,Pending Collection,Not Verified
+uni_mm_001,University of Yangon,country_mm,https://www.uy.edu.mm/,1,,,Pending Collection,Not Verified
+uni_mm_001,University of Yangon,country_mm,https://www.uy.edu.mm/,2,,,Pending Collection,Not Verified
+uni_mm_001,University of Yangon,country_mm,https://www.uy.edu.mm/,3,,,Pending Collection,Not Verified
+uni_mm_002,"University of Computer Studies, Yangon",country_mm,https://www.ucsy.edu.mm/,1,,,Pending Collection,Not Verified
+uni_mm_002,"University of Computer Studies, Yangon",country_mm,https://www.ucsy.edu.mm/,2,,,Pending Collection,Not Verified
+uni_mm_002,"University of Computer Studies, Yangon",country_mm,https://www.ucsy.edu.mm/,3,,,Pending Collection,Not Verified
+uni_mm_003,Yangon University of Economics,country_mm,https://yueco.edu.mm/,1,,,Pending Collection,Not Verified
+uni_mm_003,Yangon University of Economics,country_mm,https://yueco.edu.mm/,2,,,Pending Collection,Not Verified
+uni_mm_003,Yangon University of Economics,country_mm,https://yueco.edu.mm/,3,,,Pending Collection,Not Verified
+uni_mm_004,Dagon University,country_mm,https://www.dagonuniversity.edu.mm/,1,,,Pending Collection,Not Verified
+uni_mm_004,Dagon University,country_mm,https://www.dagonuniversity.edu.mm/,2,,,Pending Collection,Not Verified
+uni_mm_004,Dagon University,country_mm,https://www.dagonuniversity.edu.mm/,3,,,Pending Collection,Not Verified
+uni_mm_005,University of Mandalay,country_mm,http://www.mu.edu.mm/,1,,,Pending Collection,Not Verified
+uni_mm_005,University of Mandalay,country_mm,http://www.mu.edu.mm/,2,,,Pending Collection,Not Verified
+uni_mm_005,University of Mandalay,country_mm,http://www.mu.edu.mm/,3,,,Pending Collection,Not Verified
+uni_mm_006,Yangon University of Foreign Languages,country_mm,https://www.yufl.edu.mm/,1,,,Pending Collection,Not Verified
+uni_mm_006,Yangon University of Foreign Languages,country_mm,https://www.yufl.edu.mm/,2,,,Pending Collection,Not Verified
+uni_mm_006,Yangon University of Foreign Languages,country_mm,https://www.yufl.edu.mm/,3,,,Pending Collection,Not Verified
+uni_mm_007,Mandalay University of Foreign Languages,country_mm,https://www.mufl.edu.mm/,1,,,Pending Collection,Not Verified
+uni_mm_007,Mandalay University of Foreign Languages,country_mm,https://www.mufl.edu.mm/,2,,,Pending Collection,Not Verified
+uni_mm_007,Mandalay University of Foreign Languages,country_mm,https://www.mufl.edu.mm/,3,,,Pending Collection,Not Verified
+uni_mm_008,Yangon University of Education,country_mm,https://www.yuoe.edu.mm/,1,,,Pending Collection,Not Verified
+uni_mm_008,Yangon University of Education,country_mm,https://www.yuoe.edu.mm/,2,,,Pending Collection,Not Verified
+uni_mm_008,Yangon University of Education,country_mm,https://www.yuoe.edu.mm/,3,,,Pending Collection,Not Verified
+uni_mm_009,Pathein University,country_mm,https://www.pathein-u.edu.mm/,1,,,Pending Collection,Not Verified
+uni_mm_009,Pathein University,country_mm,https://www.pathein-u.edu.mm/,2,,,Pending Collection,Not Verified
+uni_mm_009,Pathein University,country_mm,https://www.pathein-u.edu.mm/,3,,,Pending Collection,Not Verified
+uni_mm_010,Monywa University of Economics,country_mm,https://mue.edu.mm/,1,,,Pending Collection,Not Verified
+uni_mm_010,Monywa University of Economics,country_mm,https://mue.edu.mm/,2,,,Pending Collection,Not Verified
+uni_mm_010,Monywa University of Economics,country_mm,https://mue.edu.mm/,3,,,Pending Collection,Not Verified
+uni_mm_011,Myeik University,country_mm,https://www.myeikuniversity.edu.mm/,1,,,Pending Collection,Not Verified
+uni_mm_011,Myeik University,country_mm,https://www.myeikuniversity.edu.mm/,2,,,Pending Collection,Not Verified
+uni_mm_011,Myeik University,country_mm,https://www.myeikuniversity.edu.mm/,3,,,Pending Collection,Not Verified
+uni_mm_012,Keng Tung University,country_mm,https://www.moe.gov.mm/en/departmentcategoryhighereducation/keng-tung-university,1,,,Pending Collection,Not Verified
+uni_mm_012,Keng Tung University,country_mm,https://www.moe.gov.mm/en/departmentcategoryhighereducation/keng-tung-university,2,,,Pending Collection,Not Verified
+uni_mm_012,Keng Tung University,country_mm,https://www.moe.gov.mm/en/departmentcategoryhighereducation/keng-tung-university,3,,,Pending Collection,Not Verified
+uni_mm_013,Yangon University of Distance Education,country_mm,https://www.yude.edu.mm/,1,,,Pending Collection,Not Verified
+uni_mm_013,Yangon University of Distance Education,country_mm,https://www.yude.edu.mm/,2,,,Pending Collection,Not Verified
+uni_mm_013,Yangon University of Distance Education,country_mm,https://www.yude.edu.mm/,3,,,Pending Collection,Not Verified
+uni_mm_014,Sittway University,country_mm,https://www.moe.gov.mm/en/departmentcategoryhighereducation/sittway-university,1,,,Pending Collection,Not Verified
+uni_mm_014,Sittway University,country_mm,https://www.moe.gov.mm/en/departmentcategoryhighereducation/sittway-university,2,,,Pending Collection,Not Verified
+uni_mm_014,Sittway University,country_mm,https://www.moe.gov.mm/en/departmentcategoryhighereducation/sittway-university,3,,,Pending Collection,Not Verified
+uni_mm_015,Yadanabon University,country_mm,https://ydnbu.edu.mm/,1,,,Pending Collection,Not Verified
+uni_mm_015,Yadanabon University,country_mm,https://ydnbu.edu.mm/,2,,,Pending Collection,Not Verified
+uni_mm_015,Yadanabon University,country_mm,https://ydnbu.edu.mm/,3,,,Pending Collection,Not Verified
+uni_mm_016,Meiktila University of Economics,country_mm,https://mtlaeco.edu.mm/,1,,,Pending Collection,Not Verified
+uni_mm_016,Meiktila University of Economics,country_mm,https://mtlaeco.edu.mm/,2,,,Pending Collection,Not Verified
+uni_mm_016,Meiktila University of Economics,country_mm,https://mtlaeco.edu.mm/,3,,,Pending Collection,Not Verified
+uni_mm_017,University of East Yangon,country_mm,https://www.eyu.edu.mm/,1,,,Pending Collection,Not Verified
+uni_mm_017,University of East Yangon,country_mm,https://www.eyu.edu.mm/,2,,,Pending Collection,Not Verified
+uni_mm_017,University of East Yangon,country_mm,https://www.eyu.edu.mm/,3,,,Pending Collection,Not Verified
+uni_mm_018,University of West Yangon,country_mm,https://www.moe.gov.mm/en/department-category-higher-education,1,,,Pending Collection,Not Verified
+uni_mm_018,University of West Yangon,country_mm,https://www.moe.gov.mm/en/department-category-higher-education,2,,,Pending Collection,Not Verified
+uni_mm_018,University of West Yangon,country_mm,https://www.moe.gov.mm/en/department-category-higher-education,3,,,Pending Collection,Not Verified
+uni_mm_019,Bago University,country_mm,https://www.moe.gov.mm/en/department-category-higher-education,1,,,Pending Collection,Not Verified
+uni_mm_019,Bago University,country_mm,https://www.moe.gov.mm/en/department-category-higher-education,2,,,Pending Collection,Not Verified
+uni_mm_019,Bago University,country_mm,https://www.moe.gov.mm/en/department-category-higher-education,3,,,Pending Collection,Not Verified
+uni_mm_020,Dawei University,country_mm,https://www.moe.gov.mm/en/department-category-higher-education?page=2,1,,,Pending Collection,Not Verified
+uni_mm_020,Dawei University,country_mm,https://www.moe.gov.mm/en/department-category-higher-education?page=2,2,,,Pending Collection,Not Verified
+uni_mm_020,Dawei University,country_mm,https://www.moe.gov.mm/en/department-category-higher-education?page=2,3,,,Pending Collection,Not Verified
+uni_mn_001,National University of Mongolia,country_mn,https://portal.num.edu.mn/en,1,,,Pending Collection,Not Verified
+uni_mn_001,National University of Mongolia,country_mn,https://portal.num.edu.mn/en,2,,,Pending Collection,Not Verified
+uni_mn_001,National University of Mongolia,country_mn,https://portal.num.edu.mn/en,3,,,Pending Collection,Not Verified
+uni_mn_002,Mongolian University of Science and Technology,country_mn,https://must.edu.mn/en/,1,,,Pending Collection,Not Verified
+uni_mn_002,Mongolian University of Science and Technology,country_mn,https://must.edu.mn/en/,2,,,Pending Collection,Not Verified
+uni_mn_002,Mongolian University of Science and Technology,country_mn,https://must.edu.mn/en/,3,,,Pending Collection,Not Verified
+uni_mn_003,Mongolian National University of Medical Sciences,country_mn,https://mnums.edu.mn/en/home-en/,1,,,Pending Collection,Not Verified
+uni_mn_003,Mongolian National University of Medical Sciences,country_mn,https://mnums.edu.mn/en/home-en/,2,,,Pending Collection,Not Verified
+uni_mn_003,Mongolian National University of Medical Sciences,country_mn,https://mnums.edu.mn/en/home-en/,3,,,Pending Collection,Not Verified
+uni_mn_004,Mongolian National University of Education,country_mn,https://msue.edu.mn/,1,,,Pending Collection,Not Verified
+uni_mn_004,Mongolian National University of Education,country_mn,https://msue.edu.mn/,2,,,Pending Collection,Not Verified
+uni_mn_004,Mongolian National University of Education,country_mn,https://msue.edu.mn/,3,,,Pending Collection,Not Verified
+uni_mn_005,University of Finance and Economics,country_mn,https://www.ufe.edu.mn/,1,,,Pending Collection,Not Verified
+uni_mn_005,University of Finance and Economics,country_mn,https://www.ufe.edu.mn/,2,,,Pending Collection,Not Verified
+uni_mn_005,University of Finance and Economics,country_mn,https://www.ufe.edu.mn/,3,,,Pending Collection,Not Verified
+uni_mn_006,Mongolian University of Life Sciences,country_mn,https://muls.edu.mn/,1,,,Pending Collection,Not Verified
+uni_mn_006,Mongolian University of Life Sciences,country_mn,https://muls.edu.mn/,2,,,Pending Collection,Not Verified
+uni_mn_006,Mongolian University of Life Sciences,country_mn,https://muls.edu.mn/,3,,,Pending Collection,Not Verified
+uni_mn_007,German-Mongolian Institute for Resources and Technology,country_mn,https://www.gmit.edu.mn/eng/,1,,,Pending Collection,Not Verified
+uni_mn_007,German-Mongolian Institute for Resources and Technology,country_mn,https://www.gmit.edu.mn/eng/,2,,,Pending Collection,Not Verified
+uni_mn_007,German-Mongolian Institute for Resources and Technology,country_mn,https://www.gmit.edu.mn/eng/,3,,,Pending Collection,Not Verified
+uni_mn_008,University of the Humanities,country_mn,https://humanities.mn/,1,,,Pending Collection,Not Verified
+uni_mn_008,University of the Humanities,country_mn,https://humanities.mn/,2,,,Pending Collection,Not Verified
+uni_mn_008,University of the Humanities,country_mn,https://humanities.mn/,3,,,Pending Collection,Not Verified
+uni_mn_009,Otgontenger University,country_mn,https://otgontenger.edu.mn/en/home,1,,,Pending Collection,Not Verified
+uni_mn_009,Otgontenger University,country_mn,https://otgontenger.edu.mn/en/home,2,,,Pending Collection,Not Verified
+uni_mn_009,Otgontenger University,country_mn,https://otgontenger.edu.mn/en/home,3,,,Pending Collection,Not Verified
+uni_mn_010,Etugen University,country_mn,https://www.etugen.edu.mn/,1,,,Pending Collection,Not Verified
+uni_mn_010,Etugen University,country_mn,https://www.etugen.edu.mn/,2,,,Pending Collection,Not Verified
+uni_mn_010,Etugen University,country_mn,https://www.etugen.edu.mn/,3,,,Pending Collection,Not Verified
+uni_mn_011,International University of Ulaanbaatar,country_mn,https://www.iuu.edu.mn/,1,,,Pending Collection,Not Verified
+uni_mn_011,International University of Ulaanbaatar,country_mn,https://www.iuu.edu.mn/,2,,,Pending Collection,Not Verified
+uni_mn_011,International University of Ulaanbaatar,country_mn,https://www.iuu.edu.mn/,3,,,Pending Collection,Not Verified
+uni_mn_012,Mandakh University,country_mn,https://en.mandakh.edu.mn/,1,,,Pending Collection,Not Verified
+uni_mn_012,Mandakh University,country_mn,https://en.mandakh.edu.mn/,2,,,Pending Collection,Not Verified
+uni_mn_012,Mandakh University,country_mn,https://en.mandakh.edu.mn/,3,,,Pending Collection,Not Verified
+uni_mo_001,University of Macau,country_mo,https://www.um.edu.mo/,1,,,Pending Collection,Not Verified
+uni_mo_001,University of Macau,country_mo,https://www.um.edu.mo/,2,,,Pending Collection,Not Verified
+uni_mo_001,University of Macau,country_mo,https://www.um.edu.mo/,3,,,Pending Collection,Not Verified
+uni_mo_002,Macao Polytechnic University,country_mo,https://www.mpu.edu.mo/,1,,,Pending Collection,Not Verified
+uni_mo_002,Macao Polytechnic University,country_mo,https://www.mpu.edu.mo/,2,,,Pending Collection,Not Verified
+uni_mo_002,Macao Polytechnic University,country_mo,https://www.mpu.edu.mo/,3,,,Pending Collection,Not Verified
+uni_mo_003,Macau University of Science and Technology,country_mo,https://www.must.edu.mo/,1,,,Pending Collection,Not Verified
+uni_mo_003,Macau University of Science and Technology,country_mo,https://www.must.edu.mo/,2,,,Pending Collection,Not Verified
+uni_mo_003,Macau University of Science and Technology,country_mo,https://www.must.edu.mo/,3,,,Pending Collection,Not Verified
+uni_mo_004,City University of Macau,country_mo,https://www.cityu.edu.mo/,1,,,Pending Collection,Not Verified
+uni_mo_004,City University of Macau,country_mo,https://www.cityu.edu.mo/,2,,,Pending Collection,Not Verified
+uni_mo_004,City University of Macau,country_mo,https://www.cityu.edu.mo/,3,,,Pending Collection,Not Verified
+uni_mo_005,University of Saint Joseph,country_mo,https://www.usj.edu.mo/en/,1,,,Pending Collection,Not Verified
+uni_mo_005,University of Saint Joseph,country_mo,https://www.usj.edu.mo/en/,2,,,Pending Collection,Not Verified
+uni_mo_005,University of Saint Joseph,country_mo,https://www.usj.edu.mo/en/,3,,,Pending Collection,Not Verified
+uni_mo_006,Macao University of Tourism,country_mo,https://www.utm.edu.mo/EN/,1,,,Pending Collection,Not Verified
+uni_mo_006,Macao University of Tourism,country_mo,https://www.utm.edu.mo/EN/,2,,,Pending Collection,Not Verified
+uni_mo_006,Macao University of Tourism,country_mo,https://www.utm.edu.mo/EN/,3,,,Pending Collection,Not Verified
+uni_mo_007,Academy of Public Security Forces of Macao,country_mo,https://www.fsm.gov.mo/esfsm/,1,,,Pending Collection,Not Verified
+uni_mo_007,Academy of Public Security Forces of Macao,country_mo,https://www.fsm.gov.mo/esfsm/,2,,,Pending Collection,Not Verified
+uni_mo_007,Academy of Public Security Forces of Macao,country_mo,https://www.fsm.gov.mo/esfsm/,3,,,Pending Collection,Not Verified
+uni_mo_008,Kiang Wu Nursing College of Macau,country_mo,https://www2.kwnc.edu.mo/en/standard/index.html,1,,,Pending Collection,Not Verified
+uni_mo_008,Kiang Wu Nursing College of Macau,country_mo,https://www2.kwnc.edu.mo/en/standard/index.html,2,,,Pending Collection,Not Verified
+uni_mo_008,Kiang Wu Nursing College of Macau,country_mo,https://www2.kwnc.edu.mo/en/standard/index.html,3,,,Pending Collection,Not Verified
+uni_mo_009,Macau Institute of Management,country_mo,https://mim.edu.mo/,1,,,Pending Collection,Not Verified
+uni_mo_009,Macau Institute of Management,country_mo,https://mim.edu.mo/,2,,,Pending Collection,Not Verified
+uni_mo_009,Macau Institute of Management,country_mo,https://mim.edu.mo/,3,,,Pending Collection,Not Verified
+uni_mo_010,Macau Millennium College,country_mo,https://mmc.edu.mo/en/,1,,,Pending Collection,Not Verified
+uni_mo_010,Macau Millennium College,country_mo,https://mmc.edu.mo/en/,2,,,Pending Collection,Not Verified
+uni_mo_010,Macau Millennium College,country_mo,https://mmc.edu.mo/en/,3,,,Pending Collection,Not Verified
 uni_my_001,Universiti Malaya,country_my,https://www.um.edu.my/,1,,,Pending Collection,Not Verified
 uni_my_001,Universiti Malaya,country_my,https://www.um.edu.my/,2,,,Pending Collection,Not Verified
 uni_my_001,Universiti Malaya,country_my,https://www.um.edu.my/,3,,,Pending Collection,Not Verified
@@ -80,60 +908,267 @@ uni_my_008,Taylor's University,country_my,http://university.taylors.edu.my/,3,,,
 uni_my_009,Sunway University,country_my,https://sunwayuniversity.edu.my,1,,,Pending Collection,Not Verified
 uni_my_009,Sunway University,country_my,https://sunwayuniversity.edu.my,2,,,Pending Collection,Not Verified
 uni_my_009,Sunway University,country_my,https://sunwayuniversity.edu.my,3,,,Pending Collection,Not Verified
-uni_kr_001,Seoul National University,country_kr,https://www.snu.ac.kr,1,,,Pending Collection,Not Verified
-uni_kr_001,Seoul National University,country_kr,https://www.snu.ac.kr,2,,,Pending Collection,Not Verified
-uni_kr_001,Seoul National University,country_kr,https://www.snu.ac.kr,3,,,Pending Collection,Not Verified
-uni_kr_002,Korea Advanced Institute of Science and Technology,country_kr,https://www.kaist.ac.kr,1,,,Pending Collection,Not Verified
-uni_kr_002,Korea Advanced Institute of Science and Technology,country_kr,https://www.kaist.ac.kr,2,,,Pending Collection,Not Verified
-uni_kr_002,Korea Advanced Institute of Science and Technology,country_kr,https://www.kaist.ac.kr,3,,,Pending Collection,Not Verified
-uni_kr_003,Yonsei University,country_kr,https://www.yonsei.ac.kr,1,,,Pending Collection,Not Verified
-uni_kr_003,Yonsei University,country_kr,https://www.yonsei.ac.kr,2,,,Pending Collection,Not Verified
-uni_kr_003,Yonsei University,country_kr,https://www.yonsei.ac.kr,3,,,Pending Collection,Not Verified
-uni_kr_004,Korea University,country_kr,https://www.korea.ac.kr,1,,,Pending Collection,Not Verified
-uni_kr_004,Korea University,country_kr,https://www.korea.ac.kr,2,,,Pending Collection,Not Verified
-uni_kr_004,Korea University,country_kr,https://www.korea.ac.kr,3,,,Pending Collection,Not Verified
-uni_kr_005,Sungkyunkwan University,country_kr,https://skku.edu,1,,,Pending Collection,Not Verified
-uni_kr_005,Sungkyunkwan University,country_kr,https://skku.edu,2,,,Pending Collection,Not Verified
-uni_kr_005,Sungkyunkwan University,country_kr,https://skku.edu,3,,,Pending Collection,Not Verified
-uni_kr_006,Pohang University of Science and Technology,country_kr,http://www.postech.ac.kr/,1,,,Pending Collection,Not Verified
-uni_kr_006,Pohang University of Science and Technology,country_kr,http://www.postech.ac.kr/,2,,,Pending Collection,Not Verified
-uni_kr_006,Pohang University of Science and Technology,country_kr,http://www.postech.ac.kr/,3,,,Pending Collection,Not Verified
-uni_kr_007,Hanyang University,country_kr,http://www.hanyang.ac.kr/english/,1,,,Pending Collection,Not Verified
-uni_kr_007,Hanyang University,country_kr,http://www.hanyang.ac.kr/english/,2,,,Pending Collection,Not Verified
-uni_kr_007,Hanyang University,country_kr,http://www.hanyang.ac.kr/english/,3,,,Pending Collection,Not Verified
-uni_kr_008,Kyung Hee University,country_kr,http://www.kyunghee.edu/,1,,,Pending Collection,Not Verified
-uni_kr_008,Kyung Hee University,country_kr,http://www.kyunghee.edu/,2,,,Pending Collection,Not Verified
-uni_kr_008,Kyung Hee University,country_kr,http://www.kyunghee.edu/,3,,,Pending Collection,Not Verified
-uni_tw_001,National Taiwan University,country_tw,http://www.ntu.edu.tw/english/,1,,,Pending Collection,Not Verified
-uni_tw_001,National Taiwan University,country_tw,http://www.ntu.edu.tw/english/,2,,,Pending Collection,Not Verified
-uni_tw_001,National Taiwan University,country_tw,http://www.ntu.edu.tw/english/,3,,,Pending Collection,Not Verified
-uni_tw_002,National Tsing Hua University,country_tw,http://www.nthu.edu.tw/english/,1,,,Pending Collection,Not Verified
-uni_tw_002,National Tsing Hua University,country_tw,http://www.nthu.edu.tw/english/,2,,,Pending Collection,Not Verified
-uni_tw_002,National Tsing Hua University,country_tw,http://www.nthu.edu.tw/english/,3,,,Pending Collection,Not Verified
-uni_tw_003,National Yang Ming Chiao Tung University,country_tw,https://www.nycu.edu.tw/,1,,,Pending Collection,Not Verified
-uni_tw_003,National Yang Ming Chiao Tung University,country_tw,https://www.nycu.edu.tw/,2,,,Pending Collection,Not Verified
-uni_tw_003,National Yang Ming Chiao Tung University,country_tw,https://www.nycu.edu.tw/,3,,,Pending Collection,Not Verified
-uni_tw_004,National Cheng Kung University,country_tw,http://web.ncku.edu.tw/bin/home.php,1,,,Pending Collection,Not Verified
-uni_tw_004,National Cheng Kung University,country_tw,http://web.ncku.edu.tw/bin/home.php,2,,,Pending Collection,Not Verified
-uni_tw_004,National Cheng Kung University,country_tw,http://web.ncku.edu.tw/bin/home.php,3,,,Pending Collection,Not Verified
-uni_tw_005,National Taiwan University of Science and Technology,country_tw,http://www.ntust.edu.tw/home.php?Lang=en,1,,,Pending Collection,Not Verified
-uni_tw_005,National Taiwan University of Science and Technology,country_tw,http://www.ntust.edu.tw/home.php?Lang=en,2,,,Pending Collection,Not Verified
-uni_tw_005,National Taiwan University of Science and Technology,country_tw,http://www.ntust.edu.tw/home.php?Lang=en,3,,,Pending Collection,Not Verified
-uni_hk_001,The University of Hong Kong,country_hk,https://www.hku.hk,1,,,Pending Collection,Not Verified
-uni_hk_001,The University of Hong Kong,country_hk,https://www.hku.hk,2,,,Pending Collection,Not Verified
-uni_hk_001,The University of Hong Kong,country_hk,https://www.hku.hk,3,,,Pending Collection,Not Verified
-uni_hk_002,The Chinese University of Hong Kong,country_hk,http://www.cuhk.edu.hk/english/index.html,1,,,Pending Collection,Not Verified
-uni_hk_002,The Chinese University of Hong Kong,country_hk,http://www.cuhk.edu.hk/english/index.html,2,,,Pending Collection,Not Verified
-uni_hk_002,The Chinese University of Hong Kong,country_hk,http://www.cuhk.edu.hk/english/index.html,3,,,Pending Collection,Not Verified
-uni_hk_003,The Hong Kong University of Science and Technology,country_hk,https://hkust.edu.hk,1,,,Pending Collection,Not Verified
-uni_hk_003,The Hong Kong University of Science and Technology,country_hk,https://hkust.edu.hk,2,,,Pending Collection,Not Verified
-uni_hk_003,The Hong Kong University of Science and Technology,country_hk,https://hkust.edu.hk,3,,,Pending Collection,Not Verified
-uni_hk_004,The Hong Kong Polytechnic University,country_hk,http://www.polyu.edu.hk/web/en/home/index.html,1,,,Pending Collection,Not Verified
-uni_hk_004,The Hong Kong Polytechnic University,country_hk,http://www.polyu.edu.hk/web/en/home/index.html,2,,,Pending Collection,Not Verified
-uni_hk_004,The Hong Kong Polytechnic University,country_hk,http://www.polyu.edu.hk/web/en/home/index.html,3,,,Pending Collection,Not Verified
-uni_hk_005,City University of Hong Kong,country_hk,https://www.cityu.edu.hk,1,,,Pending Collection,Not Verified
-uni_hk_005,City University of Hong Kong,country_hk,https://www.cityu.edu.hk,2,,,Pending Collection,Not Verified
-uni_hk_005,City University of Hong Kong,country_hk,https://www.cityu.edu.hk,3,,,Pending Collection,Not Verified
+uni_my_010,Universiti Utara Malaysia,country_my,https://www.uum.edu.my/,1,,,Pending Collection,Not Verified
+uni_my_010,Universiti Utara Malaysia,country_my,https://www.uum.edu.my/,2,,,Pending Collection,Not Verified
+uni_my_010,Universiti Utara Malaysia,country_my,https://www.uum.edu.my/,3,,,Pending Collection,Not Verified
+uni_my_011,Universiti Teknologi MARA,country_my,https://www.uitm.edu.my/,1,,,Pending Collection,Not Verified
+uni_my_011,Universiti Teknologi MARA,country_my,https://www.uitm.edu.my/,2,,,Pending Collection,Not Verified
+uni_my_011,Universiti Teknologi MARA,country_my,https://www.uitm.edu.my/,3,,,Pending Collection,Not Verified
+uni_my_012,Universiti Malaysia Sabah,country_my,https://www.ums.edu.my/,1,,,Pending Collection,Not Verified
+uni_my_012,Universiti Malaysia Sabah,country_my,https://www.ums.edu.my/,2,,,Pending Collection,Not Verified
+uni_my_012,Universiti Malaysia Sabah,country_my,https://www.ums.edu.my/,3,,,Pending Collection,Not Verified
+uni_my_013,Universiti Malaysia Sarawak,country_my,https://www.unimas.my/,1,,,Pending Collection,Not Verified
+uni_my_013,Universiti Malaysia Sarawak,country_my,https://www.unimas.my/,2,,,Pending Collection,Not Verified
+uni_my_013,Universiti Malaysia Sarawak,country_my,https://www.unimas.my/,3,,,Pending Collection,Not Verified
+uni_my_014,Multimedia University,country_my,https://www.mmu.edu.my/,1,,,Pending Collection,Not Verified
+uni_my_014,Multimedia University,country_my,https://www.mmu.edu.my/,2,,,Pending Collection,Not Verified
+uni_my_014,Multimedia University,country_my,https://www.mmu.edu.my/,3,,,Pending Collection,Not Verified
+uni_my_015,UCSI University,country_my,https://www.ucsiuniversity.edu.my/,1,,,Pending Collection,Not Verified
+uni_my_015,UCSI University,country_my,https://www.ucsiuniversity.edu.my/,2,,,Pending Collection,Not Verified
+uni_my_015,UCSI University,country_my,https://www.ucsiuniversity.edu.my/,3,,,Pending Collection,Not Verified
+uni_my_016,Universiti Tun Hussein Onn Malaysia,country_my,https://www.uthm.edu.my/en/,1,,,Pending Collection,Not Verified
+uni_my_016,Universiti Tun Hussein Onn Malaysia,country_my,https://www.uthm.edu.my/en/,2,,,Pending Collection,Not Verified
+uni_my_016,Universiti Tun Hussein Onn Malaysia,country_my,https://www.uthm.edu.my/en/,3,,,Pending Collection,Not Verified
+uni_my_017,Universiti Teknikal Malaysia Melaka,country_my,https://www.utem.edu.my/en/,1,,,Pending Collection,Not Verified
+uni_my_017,Universiti Teknikal Malaysia Melaka,country_my,https://www.utem.edu.my/en/,2,,,Pending Collection,Not Verified
+uni_my_017,Universiti Teknikal Malaysia Melaka,country_my,https://www.utem.edu.my/en/,3,,,Pending Collection,Not Verified
+uni_my_018,Universiti Sains Islam Malaysia,country_my,https://www.usim.edu.my/,1,,,Pending Collection,Not Verified
+uni_my_018,Universiti Sains Islam Malaysia,country_my,https://www.usim.edu.my/,2,,,Pending Collection,Not Verified
+uni_my_018,Universiti Sains Islam Malaysia,country_my,https://www.usim.edu.my/,3,,,Pending Collection,Not Verified
+uni_my_019,Universiti Pendidikan Sultan Idris,country_my,https://www.upsi.edu.my/,1,,,Pending Collection,Not Verified
+uni_my_019,Universiti Pendidikan Sultan Idris,country_my,https://www.upsi.edu.my/,2,,,Pending Collection,Not Verified
+uni_my_019,Universiti Pendidikan Sultan Idris,country_my,https://www.upsi.edu.my/,3,,,Pending Collection,Not Verified
+uni_my_020,Universiti Malaysia Terengganu,country_my,https://www.umt.edu.my/,1,,,Pending Collection,Not Verified
+uni_my_020,Universiti Malaysia Terengganu,country_my,https://www.umt.edu.my/,2,,,Pending Collection,Not Verified
+uni_my_020,Universiti Malaysia Terengganu,country_my,https://www.umt.edu.my/,3,,,Pending Collection,Not Verified
+uni_my_021,Universiti Malaysia Pahang Al-Sultan Abdullah,country_my,https://umpsa.edu.my/,1,,,Pending Collection,Not Verified
+uni_my_021,Universiti Malaysia Pahang Al-Sultan Abdullah,country_my,https://umpsa.edu.my/,2,,,Pending Collection,Not Verified
+uni_my_021,Universiti Malaysia Pahang Al-Sultan Abdullah,country_my,https://umpsa.edu.my/,3,,,Pending Collection,Not Verified
+uni_my_022,Universiti Malaysia Perlis,country_my,https://www.unimap.edu.my/,1,,,Pending Collection,Not Verified
+uni_my_022,Universiti Malaysia Perlis,country_my,https://www.unimap.edu.my/,2,,,Pending Collection,Not Verified
+uni_my_022,Universiti Malaysia Perlis,country_my,https://www.unimap.edu.my/,3,,,Pending Collection,Not Verified
+uni_my_023,Universiti Sultan Zainal Abidin,country_my,https://www.unisza.edu.my/,1,,,Pending Collection,Not Verified
+uni_my_023,Universiti Sultan Zainal Abidin,country_my,https://www.unisza.edu.my/,2,,,Pending Collection,Not Verified
+uni_my_023,Universiti Sultan Zainal Abidin,country_my,https://www.unisza.edu.my/,3,,,Pending Collection,Not Verified
+uni_my_024,Universiti Pertahanan Nasional Malaysia,country_my,https://www.upnm.edu.my/,1,,,Pending Collection,Not Verified
+uni_my_024,Universiti Pertahanan Nasional Malaysia,country_my,https://www.upnm.edu.my/,2,,,Pending Collection,Not Verified
+uni_my_024,Universiti Pertahanan Nasional Malaysia,country_my,https://www.upnm.edu.my/,3,,,Pending Collection,Not Verified
+uni_my_025,Universiti Malaysia Kelantan,country_my,https://www.umk.edu.my/,1,,,Pending Collection,Not Verified
+uni_my_025,Universiti Malaysia Kelantan,country_my,https://www.umk.edu.my/,2,,,Pending Collection,Not Verified
+uni_my_025,Universiti Malaysia Kelantan,country_my,https://www.umk.edu.my/,3,,,Pending Collection,Not Verified
+uni_my_026,Universiti Tenaga Nasional,country_my,https://www.uniten.edu.my/,1,,,Pending Collection,Not Verified
+uni_my_026,Universiti Tenaga Nasional,country_my,https://www.uniten.edu.my/,2,,,Pending Collection,Not Verified
+uni_my_026,Universiti Tenaga Nasional,country_my,https://www.uniten.edu.my/,3,,,Pending Collection,Not Verified
+uni_my_027,INCEIF University,country_my,https://inceif.edu.my/,1,,,Pending Collection,Not Verified
+uni_my_027,INCEIF University,country_my,https://inceif.edu.my/,2,,,Pending Collection,Not Verified
+uni_my_027,INCEIF University,country_my,https://inceif.edu.my/,3,,,Pending Collection,Not Verified
+uni_my_028,Universiti Tunku Abdul Rahman,country_my,https://www.utar.edu.my/,1,,,Pending Collection,Not Verified
+uni_my_028,Universiti Tunku Abdul Rahman,country_my,https://www.utar.edu.my/,2,,,Pending Collection,Not Verified
+uni_my_028,Universiti Tunku Abdul Rahman,country_my,https://www.utar.edu.my/,3,,,Pending Collection,Not Verified
+uni_my_029,Monash University Malaysia,country_my,https://www.monash.edu.my/,1,,,Pending Collection,Not Verified
+uni_my_029,Monash University Malaysia,country_my,https://www.monash.edu.my/,2,,,Pending Collection,Not Verified
+uni_my_029,Monash University Malaysia,country_my,https://www.monash.edu.my/,3,,,Pending Collection,Not Verified
+uni_my_030,University of Nottingham Malaysia,country_my,https://www.nottingham.edu.my/,1,,,Pending Collection,Not Verified
+uni_my_030,University of Nottingham Malaysia,country_my,https://www.nottingham.edu.my/,2,,,Pending Collection,Not Verified
+uni_my_030,University of Nottingham Malaysia,country_my,https://www.nottingham.edu.my/,3,,,Pending Collection,Not Verified
+uni_my_031,Asia Pacific University of Technology and Innovation,country_my,https://www.apu.edu.my/,1,,,Pending Collection,Not Verified
+uni_my_031,Asia Pacific University of Technology and Innovation,country_my,https://www.apu.edu.my/,2,,,Pending Collection,Not Verified
+uni_my_031,Asia Pacific University of Technology and Innovation,country_my,https://www.apu.edu.my/,3,,,Pending Collection,Not Verified
+uni_my_032,Management and Science University,country_my,https://www.msu.edu.my/,1,,,Pending Collection,Not Verified
+uni_my_032,Management and Science University,country_my,https://www.msu.edu.my/,2,,,Pending Collection,Not Verified
+uni_my_032,Management and Science University,country_my,https://www.msu.edu.my/,3,,,Pending Collection,Not Verified
+uni_my_033,Universiti Kuala Lumpur,country_my,https://www.unikl.edu.my/,1,,,Pending Collection,Not Verified
+uni_my_033,Universiti Kuala Lumpur,country_my,https://www.unikl.edu.my/,2,,,Pending Collection,Not Verified
+uni_my_033,Universiti Kuala Lumpur,country_my,https://www.unikl.edu.my/,3,,,Pending Collection,Not Verified
+uni_my_034,HELP University,country_my,https://help.edu.my/,1,,,Pending Collection,Not Verified
+uni_my_034,HELP University,country_my,https://help.edu.my/,2,,,Pending Collection,Not Verified
+uni_my_034,HELP University,country_my,https://help.edu.my/,3,,,Pending Collection,Not Verified
+uni_my_035,SEGi University,country_my,https://www.segi.edu.my/,1,,,Pending Collection,Not Verified
+uni_my_035,SEGi University,country_my,https://www.segi.edu.my/,2,,,Pending Collection,Not Verified
+uni_my_035,SEGi University,country_my,https://www.segi.edu.my/,3,,,Pending Collection,Not Verified
+uni_my_036,INTI International University,country_my,https://newinti.edu.my/,1,,,Pending Collection,Not Verified
+uni_my_036,INTI International University,country_my,https://newinti.edu.my/,2,,,Pending Collection,Not Verified
+uni_my_036,INTI International University,country_my,https://newinti.edu.my/,3,,,Pending Collection,Not Verified
+uni_my_037,AIMST University,country_my,https://aimst.edu.my/,1,,,Pending Collection,Not Verified
+uni_my_037,AIMST University,country_my,https://aimst.edu.my/,2,,,Pending Collection,Not Verified
+uni_my_037,AIMST University,country_my,https://aimst.edu.my/,3,,,Pending Collection,Not Verified
+uni_my_038,Open University Malaysia,country_my,https://www.oum.edu.my/,1,,,Pending Collection,Not Verified
+uni_my_038,Open University Malaysia,country_my,https://www.oum.edu.my/,2,,,Pending Collection,Not Verified
+uni_my_038,Open University Malaysia,country_my,https://www.oum.edu.my/,3,,,Pending Collection,Not Verified
+uni_my_039,MAHSA University,country_my,https://mahsa.edu.my/,1,,,Pending Collection,Not Verified
+uni_my_039,MAHSA University,country_my,https://mahsa.edu.my/,2,,,Pending Collection,Not Verified
+uni_my_039,MAHSA University,country_my,https://mahsa.edu.my/,3,,,Pending Collection,Not Verified
+uni_my_040,IMU University,country_my,https://imu.edu.my/,1,,,Pending Collection,Not Verified
+uni_my_040,IMU University,country_my,https://imu.edu.my/,2,,,Pending Collection,Not Verified
+uni_my_040,IMU University,country_my,https://imu.edu.my/,3,,,Pending Collection,Not Verified
+uni_ph_001,University of the Philippines Diliman,country_ph,https://upd.edu.ph/,1,,,Pending Collection,Not Verified
+uni_ph_001,University of the Philippines Diliman,country_ph,https://upd.edu.ph/,2,,,Pending Collection,Not Verified
+uni_ph_001,University of the Philippines Diliman,country_ph,https://upd.edu.ph/,3,,,Pending Collection,Not Verified
+uni_ph_002,Ateneo de Manila University,country_ph,https://www.ateneo.edu/,1,,,Pending Collection,Not Verified
+uni_ph_002,Ateneo de Manila University,country_ph,https://www.ateneo.edu/,2,,,Pending Collection,Not Verified
+uni_ph_002,Ateneo de Manila University,country_ph,https://www.ateneo.edu/,3,,,Pending Collection,Not Verified
+uni_ph_003,De La Salle University,country_ph,https://www.dlsu.edu.ph/,1,,,Pending Collection,Not Verified
+uni_ph_003,De La Salle University,country_ph,https://www.dlsu.edu.ph/,2,,,Pending Collection,Not Verified
+uni_ph_003,De La Salle University,country_ph,https://www.dlsu.edu.ph/,3,,,Pending Collection,Not Verified
+uni_ph_004,University of Santo Tomas,country_ph,https://www.ust.edu.ph/,1,,,Pending Collection,Not Verified
+uni_ph_004,University of Santo Tomas,country_ph,https://www.ust.edu.ph/,2,,,Pending Collection,Not Verified
+uni_ph_004,University of Santo Tomas,country_ph,https://www.ust.edu.ph/,3,,,Pending Collection,Not Verified
+uni_ph_005,University of the Philippines Los Banos,country_ph,https://uplb.edu.ph/,1,,,Pending Collection,Not Verified
+uni_ph_005,University of the Philippines Los Banos,country_ph,https://uplb.edu.ph/,2,,,Pending Collection,Not Verified
+uni_ph_005,University of the Philippines Los Banos,country_ph,https://uplb.edu.ph/,3,,,Pending Collection,Not Verified
+uni_ph_006,University of the Philippines Manila,country_ph,https://www.upm.edu.ph/,1,,,Pending Collection,Not Verified
+uni_ph_006,University of the Philippines Manila,country_ph,https://www.upm.edu.ph/,2,,,Pending Collection,Not Verified
+uni_ph_006,University of the Philippines Manila,country_ph,https://www.upm.edu.ph/,3,,,Pending Collection,Not Verified
+uni_ph_007,University of San Carlos,country_ph,https://www.usc.edu.ph/,1,,,Pending Collection,Not Verified
+uni_ph_007,University of San Carlos,country_ph,https://www.usc.edu.ph/,2,,,Pending Collection,Not Verified
+uni_ph_007,University of San Carlos,country_ph,https://www.usc.edu.ph/,3,,,Pending Collection,Not Verified
+uni_ph_008,Silliman University,country_ph,https://su.edu.ph/,1,,,Pending Collection,Not Verified
+uni_ph_008,Silliman University,country_ph,https://su.edu.ph/,2,,,Pending Collection,Not Verified
+uni_ph_008,Silliman University,country_ph,https://su.edu.ph/,3,,,Pending Collection,Not Verified
+uni_ph_009,Mapua University,country_ph,https://www.mapua.edu.ph/,1,,,Pending Collection,Not Verified
+uni_ph_009,Mapua University,country_ph,https://www.mapua.edu.ph/,2,,,Pending Collection,Not Verified
+uni_ph_009,Mapua University,country_ph,https://www.mapua.edu.ph/,3,,,Pending Collection,Not Verified
+uni_ph_010,Ateneo de Davao University,country_ph,https://www.addu.edu.ph/,1,,,Pending Collection,Not Verified
+uni_ph_010,Ateneo de Davao University,country_ph,https://www.addu.edu.ph/,2,,,Pending Collection,Not Verified
+uni_ph_010,Ateneo de Davao University,country_ph,https://www.addu.edu.ph/,3,,,Pending Collection,Not Verified
+uni_ph_011,Polytechnic University of the Philippines,country_ph,https://www.pup.edu.ph/,1,,,Pending Collection,Not Verified
+uni_ph_011,Polytechnic University of the Philippines,country_ph,https://www.pup.edu.ph/,2,,,Pending Collection,Not Verified
+uni_ph_011,Polytechnic University of the Philippines,country_ph,https://www.pup.edu.ph/,3,,,Pending Collection,Not Verified
+uni_ph_012,Batangas State University,country_ph,https://batstate-u.edu.ph/,1,,,Pending Collection,Not Verified
+uni_ph_012,Batangas State University,country_ph,https://batstate-u.edu.ph/,2,,,Pending Collection,Not Verified
+uni_ph_012,Batangas State University,country_ph,https://batstate-u.edu.ph/,3,,,Pending Collection,Not Verified
+uni_ph_013,Bulacan State University,country_ph,https://www.bulsu.edu.ph/,1,,,Pending Collection,Not Verified
+uni_ph_013,Bulacan State University,country_ph,https://www.bulsu.edu.ph/,2,,,Pending Collection,Not Verified
+uni_ph_013,Bulacan State University,country_ph,https://www.bulsu.edu.ph/,3,,,Pending Collection,Not Verified
+uni_ph_014,Cavite State University,country_ph,https://cvsu.edu.ph/,1,,,Pending Collection,Not Verified
+uni_ph_014,Cavite State University,country_ph,https://cvsu.edu.ph/,2,,,Pending Collection,Not Verified
+uni_ph_014,Cavite State University,country_ph,https://cvsu.edu.ph/,3,,,Pending Collection,Not Verified
+uni_ph_015,Cebu Technological University,country_ph,https://www.ctu.edu.ph/,1,,,Pending Collection,Not Verified
+uni_ph_015,Cebu Technological University,country_ph,https://www.ctu.edu.ph/,2,,,Pending Collection,Not Verified
+uni_ph_015,Cebu Technological University,country_ph,https://www.ctu.edu.ph/,3,,,Pending Collection,Not Verified
+uni_ph_016,Western Mindanao State University,country_ph,https://wmsu.edu.ph/,1,,,Pending Collection,Not Verified
+uni_ph_016,Western Mindanao State University,country_ph,https://wmsu.edu.ph/,2,,,Pending Collection,Not Verified
+uni_ph_016,Western Mindanao State University,country_ph,https://wmsu.edu.ph/,3,,,Pending Collection,Not Verified
+uni_ph_017,Mindanao State University,country_ph,https://www.msumain.edu.ph/,1,,,Pending Collection,Not Verified
+uni_ph_017,Mindanao State University,country_ph,https://www.msumain.edu.ph/,2,,,Pending Collection,Not Verified
+uni_ph_017,Mindanao State University,country_ph,https://www.msumain.edu.ph/,3,,,Pending Collection,Not Verified
+uni_ph_018,Cagayan State University,country_ph,https://www.csu.edu.ph/,1,,,Pending Collection,Not Verified
+uni_ph_018,Cagayan State University,country_ph,https://www.csu.edu.ph/,2,,,Pending Collection,Not Verified
+uni_ph_018,Cagayan State University,country_ph,https://www.csu.edu.ph/,3,,,Pending Collection,Not Verified
+uni_ph_019,Bicol University,country_ph,https://bicol-u.edu.ph/,1,,,Pending Collection,Not Verified
+uni_ph_019,Bicol University,country_ph,https://bicol-u.edu.ph/,2,,,Pending Collection,Not Verified
+uni_ph_019,Bicol University,country_ph,https://bicol-u.edu.ph/,3,,,Pending Collection,Not Verified
+uni_ph_020,Mariano Marcos State University,country_ph,https://www.mmsu.edu.ph/,1,,,Pending Collection,Not Verified
+uni_ph_020,Mariano Marcos State University,country_ph,https://www.mmsu.edu.ph/,2,,,Pending Collection,Not Verified
+uni_ph_020,Mariano Marcos State University,country_ph,https://www.mmsu.edu.ph/,3,,,Pending Collection,Not Verified
+uni_ph_021,Central Luzon State University,country_ph,https://clsu.edu.ph/,1,,,Pending Collection,Not Verified
+uni_ph_021,Central Luzon State University,country_ph,https://clsu.edu.ph/,2,,,Pending Collection,Not Verified
+uni_ph_021,Central Luzon State University,country_ph,https://clsu.edu.ph/,3,,,Pending Collection,Not Verified
+uni_ph_022,Tarlac State University,country_ph,https://www.tsu.edu.ph/,1,,,Pending Collection,Not Verified
+uni_ph_022,Tarlac State University,country_ph,https://www.tsu.edu.ph/,2,,,Pending Collection,Not Verified
+uni_ph_022,Tarlac State University,country_ph,https://www.tsu.edu.ph/,3,,,Pending Collection,Not Verified
+uni_ph_023,Visayas State University,country_ph,https://www.vsu.edu.ph/,1,,,Pending Collection,Not Verified
+uni_ph_023,Visayas State University,country_ph,https://www.vsu.edu.ph/,2,,,Pending Collection,Not Verified
+uni_ph_023,Visayas State University,country_ph,https://www.vsu.edu.ph/,3,,,Pending Collection,Not Verified
+uni_ph_024,Caraga State University,country_ph,https://www.carsu.edu.ph/,1,,,Pending Collection,Not Verified
+uni_ph_024,Caraga State University,country_ph,https://www.carsu.edu.ph/,2,,,Pending Collection,Not Verified
+uni_ph_024,Caraga State University,country_ph,https://www.carsu.edu.ph/,3,,,Pending Collection,Not Verified
+uni_ph_025,West Visayas State University,country_ph,https://wvsu.edu.ph/,1,,,Pending Collection,Not Verified
+uni_ph_025,West Visayas State University,country_ph,https://wvsu.edu.ph/,2,,,Pending Collection,Not Verified
+uni_ph_025,West Visayas State University,country_ph,https://wvsu.edu.ph/,3,,,Pending Collection,Not Verified
+uni_ph_026,Aklan State University,country_ph,https://asu.edu.ph/,1,,,Pending Collection,Not Verified
+uni_ph_026,Aklan State University,country_ph,https://asu.edu.ph/,2,,,Pending Collection,Not Verified
+uni_ph_026,Aklan State University,country_ph,https://asu.edu.ph/,3,,,Pending Collection,Not Verified
+uni_ph_027,Capiz State University,country_ph,https://capsu.edu.ph/,1,,,Pending Collection,Not Verified
+uni_ph_027,Capiz State University,country_ph,https://capsu.edu.ph/,2,,,Pending Collection,Not Verified
+uni_ph_027,Capiz State University,country_ph,https://capsu.edu.ph/,3,,,Pending Collection,Not Verified
+uni_ph_028,Iloilo Science and Technology University,country_ph,https://www.isatu.edu.ph/,1,,,Pending Collection,Not Verified
+uni_ph_028,Iloilo Science and Technology University,country_ph,https://www.isatu.edu.ph/,2,,,Pending Collection,Not Verified
+uni_ph_028,Iloilo Science and Technology University,country_ph,https://www.isatu.edu.ph/,3,,,Pending Collection,Not Verified
+uni_ph_029,Northern Iloilo State University,country_ph,https://nisu.edu.ph/,1,,,Pending Collection,Not Verified
+uni_ph_029,Northern Iloilo State University,country_ph,https://nisu.edu.ph/,2,,,Pending Collection,Not Verified
+uni_ph_029,Northern Iloilo State University,country_ph,https://nisu.edu.ph/,3,,,Pending Collection,Not Verified
+uni_ph_030,Cebu Normal University,country_ph,https://cnu.edu.ph/,1,,,Pending Collection,Not Verified
+uni_ph_030,Cebu Normal University,country_ph,https://cnu.edu.ph/,2,,,Pending Collection,Not Verified
+uni_ph_030,Cebu Normal University,country_ph,https://cnu.edu.ph/,3,,,Pending Collection,Not Verified
+uni_ph_031,Philippine Normal University,country_ph,https://www.pnu.edu.ph/,1,,,Pending Collection,Not Verified
+uni_ph_031,Philippine Normal University,country_ph,https://www.pnu.edu.ph/,2,,,Pending Collection,Not Verified
+uni_ph_031,Philippine Normal University,country_ph,https://www.pnu.edu.ph/,3,,,Pending Collection,Not Verified
+uni_ph_032,Rizal Technological University,country_ph,https://www.rtu.edu.ph/,1,,,Pending Collection,Not Verified
+uni_ph_032,Rizal Technological University,country_ph,https://www.rtu.edu.ph/,2,,,Pending Collection,Not Verified
+uni_ph_032,Rizal Technological University,country_ph,https://www.rtu.edu.ph/,3,,,Pending Collection,Not Verified
+uni_ph_033,Technological University of the Philippines,country_ph,https://www.tup.edu.ph/,1,,,Pending Collection,Not Verified
+uni_ph_033,Technological University of the Philippines,country_ph,https://www.tup.edu.ph/,2,,,Pending Collection,Not Verified
+uni_ph_033,Technological University of the Philippines,country_ph,https://www.tup.edu.ph/,3,,,Pending Collection,Not Verified
+uni_ph_034,Eulogio Amang Rodriguez Institute of Science and Technology,country_ph,https://earist.edu.ph/,1,,,Pending Collection,Not Verified
+uni_ph_034,Eulogio Amang Rodriguez Institute of Science and Technology,country_ph,https://earist.edu.ph/,2,,,Pending Collection,Not Verified
+uni_ph_034,Eulogio Amang Rodriguez Institute of Science and Technology,country_ph,https://earist.edu.ph/,3,,,Pending Collection,Not Verified
+uni_ph_035,Laguna State Polytechnic University,country_ph,https://lspu.edu.ph/,1,,,Pending Collection,Not Verified
+uni_ph_035,Laguna State Polytechnic University,country_ph,https://lspu.edu.ph/,2,,,Pending Collection,Not Verified
+uni_ph_035,Laguna State Polytechnic University,country_ph,https://lspu.edu.ph/,3,,,Pending Collection,Not Verified
+uni_ph_036,Southern Luzon State University,country_ph,https://www.slsu.edu.ph/,1,,,Pending Collection,Not Verified
+uni_ph_036,Southern Luzon State University,country_ph,https://www.slsu.edu.ph/,2,,,Pending Collection,Not Verified
+uni_ph_036,Southern Luzon State University,country_ph,https://www.slsu.edu.ph/,3,,,Pending Collection,Not Verified
+uni_ph_037,Benguet State University,country_ph,https://bsu.edu.ph/,1,,,Pending Collection,Not Verified
+uni_ph_037,Benguet State University,country_ph,https://bsu.edu.ph/,2,,,Pending Collection,Not Verified
+uni_ph_037,Benguet State University,country_ph,https://bsu.edu.ph/,3,,,Pending Collection,Not Verified
+uni_ph_038,Kalinga State University,country_ph,https://ksu.edu.ph/,1,,,Pending Collection,Not Verified
+uni_ph_038,Kalinga State University,country_ph,https://ksu.edu.ph/,2,,,Pending Collection,Not Verified
+uni_ph_038,Kalinga State University,country_ph,https://ksu.edu.ph/,3,,,Pending Collection,Not Verified
+uni_ph_039,Ifugao State University,country_ph,https://ifsu.edu.ph/,1,,,Pending Collection,Not Verified
+uni_ph_039,Ifugao State University,country_ph,https://ifsu.edu.ph/,2,,,Pending Collection,Not Verified
+uni_ph_039,Ifugao State University,country_ph,https://ifsu.edu.ph/,3,,,Pending Collection,Not Verified
+uni_ph_040,Central Mindanao University,country_ph,https://www.cmu.edu.ph/,1,,,Pending Collection,Not Verified
+uni_ph_040,Central Mindanao University,country_ph,https://www.cmu.edu.ph/,2,,,Pending Collection,Not Verified
+uni_ph_040,Central Mindanao University,country_ph,https://www.cmu.edu.ph/,3,,,Pending Collection,Not Verified
+uni_ph_041,University of Southern Mindanao,country_ph,https://www.usm.edu.ph/,1,,,Pending Collection,Not Verified
+uni_ph_041,University of Southern Mindanao,country_ph,https://www.usm.edu.ph/,2,,,Pending Collection,Not Verified
+uni_ph_041,University of Southern Mindanao,country_ph,https://www.usm.edu.ph/,3,,,Pending Collection,Not Verified
+uni_ph_042,Bukidnon State University,country_ph,https://buksu.edu.ph/,1,,,Pending Collection,Not Verified
+uni_ph_042,Bukidnon State University,country_ph,https://buksu.edu.ph/,2,,,Pending Collection,Not Verified
+uni_ph_042,Bukidnon State University,country_ph,https://buksu.edu.ph/,3,,,Pending Collection,Not Verified
+uni_ph_043,Mindanao State University - Iligan Institute of Technology,country_ph,https://www.msuiit.edu.ph/,1,,,Pending Collection,Not Verified
+uni_ph_043,Mindanao State University - Iligan Institute of Technology,country_ph,https://www.msuiit.edu.ph/,2,,,Pending Collection,Not Verified
+uni_ph_043,Mindanao State University - Iligan Institute of Technology,country_ph,https://www.msuiit.edu.ph/,3,,,Pending Collection,Not Verified
+uni_ph_044,University of Southeastern Philippines,country_ph,https://www.usep.edu.ph/,1,,,Pending Collection,Not Verified
+uni_ph_044,University of Southeastern Philippines,country_ph,https://www.usep.edu.ph/,2,,,Pending Collection,Not Verified
+uni_ph_044,University of Southeastern Philippines,country_ph,https://www.usep.edu.ph/,3,,,Pending Collection,Not Verified
+uni_ph_045,Sultan Kudarat State University,country_ph,https://sksu.edu.ph/,1,,,Pending Collection,Not Verified
+uni_ph_045,Sultan Kudarat State University,country_ph,https://sksu.edu.ph/,2,,,Pending Collection,Not Verified
+uni_ph_045,Sultan Kudarat State University,country_ph,https://sksu.edu.ph/,3,,,Pending Collection,Not Verified
+uni_ph_046,University of Science and Technology of Southern Philippines,country_ph,https://www.ustp.edu.ph/,1,,,Pending Collection,Not Verified
+uni_ph_046,University of Science and Technology of Southern Philippines,country_ph,https://www.ustp.edu.ph/,2,,,Pending Collection,Not Verified
+uni_ph_046,University of Science and Technology of Southern Philippines,country_ph,https://www.ustp.edu.ph/,3,,,Pending Collection,Not Verified
+uni_ph_047,Davao Oriental State University,country_ph,https://dorsu.edu.ph/,1,,,Pending Collection,Not Verified
+uni_ph_047,Davao Oriental State University,country_ph,https://dorsu.edu.ph/,2,,,Pending Collection,Not Verified
+uni_ph_047,Davao Oriental State University,country_ph,https://dorsu.edu.ph/,3,,,Pending Collection,Not Verified
+uni_ph_048,Sorsogon State University,country_ph,https://sorsu.edu.ph/,1,,,Pending Collection,Not Verified
+uni_ph_048,Sorsogon State University,country_ph,https://sorsu.edu.ph/,2,,,Pending Collection,Not Verified
+uni_ph_048,Sorsogon State University,country_ph,https://sorsu.edu.ph/,3,,,Pending Collection,Not Verified
+uni_ph_049,Partido State University,country_ph,https://parsu.edu.ph/,1,,,Pending Collection,Not Verified
+uni_ph_049,Partido State University,country_ph,https://parsu.edu.ph/,2,,,Pending Collection,Not Verified
+uni_ph_049,Partido State University,country_ph,https://parsu.edu.ph/,3,,,Pending Collection,Not Verified
+uni_ph_050,Eastern Visayas State University,country_ph,https://www.evsu.edu.ph/,1,,,Pending Collection,Not Verified
+uni_ph_050,Eastern Visayas State University,country_ph,https://www.evsu.edu.ph/,2,,,Pending Collection,Not Verified
+uni_ph_050,Eastern Visayas State University,country_ph,https://www.evsu.edu.ph/,3,,,Pending Collection,Not Verified
+uni_sg_001,National University of Singapore,country_sg,http://www.nus.edu.sg/,1,,,Pending Collection,Not Verified
+uni_sg_001,National University of Singapore,country_sg,http://www.nus.edu.sg/,2,,,Pending Collection,Not Verified
+uni_sg_001,National University of Singapore,country_sg,http://www.nus.edu.sg/,3,,,Pending Collection,Not Verified
+uni_sg_002,Nanyang Technological University,country_sg,https://www.ntu.edu.sg,1,,,Pending Collection,Not Verified
+uni_sg_002,Nanyang Technological University,country_sg,https://www.ntu.edu.sg,2,,,Pending Collection,Not Verified
+uni_sg_002,Nanyang Technological University,country_sg,https://www.ntu.edu.sg,3,,,Pending Collection,Not Verified
+uni_sg_003,Singapore Management University,country_sg,https://www.smu.edu.sg,1,,,Pending Collection,Not Verified
+uni_sg_003,Singapore Management University,country_sg,https://www.smu.edu.sg,2,,,Pending Collection,Not Verified
+uni_sg_003,Singapore Management University,country_sg,https://www.smu.edu.sg,3,,,Pending Collection,Not Verified
+uni_sg_004,Singapore University of Technology and Design,country_sg,https://www.sutd.edu.sg,1,,,Pending Collection,Not Verified
+uni_sg_004,Singapore University of Technology and Design,country_sg,https://www.sutd.edu.sg,2,,,Pending Collection,Not Verified
+uni_sg_004,Singapore University of Technology and Design,country_sg,https://www.sutd.edu.sg,3,,,Pending Collection,Not Verified
+uni_sg_005,Singapore Institute of Technology,country_sg,https://www.singaporetech.edu.sg/,1,,,Pending Collection,Not Verified
+uni_sg_005,Singapore Institute of Technology,country_sg,https://www.singaporetech.edu.sg/,2,,,Pending Collection,Not Verified
+uni_sg_005,Singapore Institute of Technology,country_sg,https://www.singaporetech.edu.sg/,3,,,Pending Collection,Not Verified
+uni_sg_006,Singapore University of Social Sciences,country_sg,https://www.suss.edu.sg,1,,,Pending Collection,Not Verified
+uni_sg_006,Singapore University of Social Sciences,country_sg,https://www.suss.edu.sg,2,,,Pending Collection,Not Verified
+uni_sg_006,Singapore University of Social Sciences,country_sg,https://www.suss.edu.sg,3,,,Pending Collection,Not Verified
 uni_th_001,Chulalongkorn University,country_th,http://www.chula.ac.th/en/,1,,,Pending Collection,Not Verified
 uni_th_001,Chulalongkorn University,country_th,http://www.chula.ac.th/en/,2,,,Pending Collection,Not Verified
 uni_th_001,Chulalongkorn University,country_th,http://www.chula.ac.th/en/,3,,,Pending Collection,Not Verified
@@ -149,3 +1184,366 @@ uni_th_004,Thammasat University,country_th,https://tu.ac.th,3,,,Pending Collecti
 uni_th_005,Kasetsart University,country_th,http://www.ku.ac.th/web2012/index.php?c=adms&m=mainpage1,1,,,Pending Collection,Not Verified
 uni_th_005,Kasetsart University,country_th,http://www.ku.ac.th/web2012/index.php?c=adms&m=mainpage1,2,,,Pending Collection,Not Verified
 uni_th_005,Kasetsart University,country_th,http://www.ku.ac.th/web2012/index.php?c=adms&m=mainpage1,3,,,Pending Collection,Not Verified
+uni_th_006,Khon Kaen University,country_th,https://www.kku.ac.th/en/,1,,,Pending Collection,Not Verified
+uni_th_006,Khon Kaen University,country_th,https://www.kku.ac.th/en/,2,,,Pending Collection,Not Verified
+uni_th_006,Khon Kaen University,country_th,https://www.kku.ac.th/en/,3,,,Pending Collection,Not Verified
+uni_th_007,Prince of Songkla University,country_th,https://www.psu.ac.th/en/,1,,,Pending Collection,Not Verified
+uni_th_007,Prince of Songkla University,country_th,https://www.psu.ac.th/en/,2,,,Pending Collection,Not Verified
+uni_th_007,Prince of Songkla University,country_th,https://www.psu.ac.th/en/,3,,,Pending Collection,Not Verified
+uni_th_008,King Mongkut's University of Technology Thonburi,country_th,https://www.kmutt.ac.th/en/,1,,,Pending Collection,Not Verified
+uni_th_008,King Mongkut's University of Technology Thonburi,country_th,https://www.kmutt.ac.th/en/,2,,,Pending Collection,Not Verified
+uni_th_008,King Mongkut's University of Technology Thonburi,country_th,https://www.kmutt.ac.th/en/,3,,,Pending Collection,Not Verified
+uni_th_009,King Mongkut's Institute of Technology Ladkrabang,country_th,https://www.kmitl.ac.th/,1,,,Pending Collection,Not Verified
+uni_th_009,King Mongkut's Institute of Technology Ladkrabang,country_th,https://www.kmitl.ac.th/,2,,,Pending Collection,Not Verified
+uni_th_009,King Mongkut's Institute of Technology Ladkrabang,country_th,https://www.kmitl.ac.th/,3,,,Pending Collection,Not Verified
+uni_th_010,Asian Institute of Technology,country_th,https://ait.ac.th/,1,,,Pending Collection,Not Verified
+uni_th_010,Asian Institute of Technology,country_th,https://ait.ac.th/,2,,,Pending Collection,Not Verified
+uni_th_010,Asian Institute of Technology,country_th,https://ait.ac.th/,3,,,Pending Collection,Not Verified
+uni_th_011,Mae Fah Luang University,country_th,https://en.mfu.ac.th/,1,,,Pending Collection,Not Verified
+uni_th_011,Mae Fah Luang University,country_th,https://en.mfu.ac.th/,2,,,Pending Collection,Not Verified
+uni_th_011,Mae Fah Luang University,country_th,https://en.mfu.ac.th/,3,,,Pending Collection,Not Verified
+uni_th_012,Burapha University,country_th,https://www.buu.ac.th/,1,,,Pending Collection,Not Verified
+uni_th_012,Burapha University,country_th,https://www.buu.ac.th/,2,,,Pending Collection,Not Verified
+uni_th_012,Burapha University,country_th,https://www.buu.ac.th/,3,,,Pending Collection,Not Verified
+uni_th_013,Srinakharinwirot University,country_th,https://www.swu.ac.th/,1,,,Pending Collection,Not Verified
+uni_th_013,Srinakharinwirot University,country_th,https://www.swu.ac.th/,2,,,Pending Collection,Not Verified
+uni_th_013,Srinakharinwirot University,country_th,https://www.swu.ac.th/,3,,,Pending Collection,Not Verified
+uni_th_014,Silpakorn University,country_th,https://www.su.ac.th/,1,,,Pending Collection,Not Verified
+uni_th_014,Silpakorn University,country_th,https://www.su.ac.th/,2,,,Pending Collection,Not Verified
+uni_th_014,Silpakorn University,country_th,https://www.su.ac.th/,3,,,Pending Collection,Not Verified
+uni_th_015,Naresuan University,country_th,https://www.nu.ac.th/,1,,,Pending Collection,Not Verified
+uni_th_015,Naresuan University,country_th,https://www.nu.ac.th/,2,,,Pending Collection,Not Verified
+uni_th_015,Naresuan University,country_th,https://www.nu.ac.th/,3,,,Pending Collection,Not Verified
+uni_th_016,University of Phayao,country_th,https://www.up.ac.th/,1,,,Pending Collection,Not Verified
+uni_th_016,University of Phayao,country_th,https://www.up.ac.th/,2,,,Pending Collection,Not Verified
+uni_th_016,University of Phayao,country_th,https://www.up.ac.th/,3,,,Pending Collection,Not Verified
+uni_th_017,Walailak University,country_th,https://www.wu.ac.th/,1,,,Pending Collection,Not Verified
+uni_th_017,Walailak University,country_th,https://www.wu.ac.th/,2,,,Pending Collection,Not Verified
+uni_th_017,Walailak University,country_th,https://www.wu.ac.th/,3,,,Pending Collection,Not Verified
+uni_th_018,Suranaree University of Technology,country_th,https://www.sut.ac.th/,1,,,Pending Collection,Not Verified
+uni_th_018,Suranaree University of Technology,country_th,https://www.sut.ac.th/,2,,,Pending Collection,Not Verified
+uni_th_018,Suranaree University of Technology,country_th,https://www.sut.ac.th/,3,,,Pending Collection,Not Verified
+uni_th_019,Maejo University,country_th,https://www.mju.ac.th/,1,,,Pending Collection,Not Verified
+uni_th_019,Maejo University,country_th,https://www.mju.ac.th/,2,,,Pending Collection,Not Verified
+uni_th_019,Maejo University,country_th,https://www.mju.ac.th/,3,,,Pending Collection,Not Verified
+uni_th_020,Nakhon Phanom University,country_th,https://www.npu.ac.th/,1,,,Pending Collection,Not Verified
+uni_th_020,Nakhon Phanom University,country_th,https://www.npu.ac.th/,2,,,Pending Collection,Not Verified
+uni_th_020,Nakhon Phanom University,country_th,https://www.npu.ac.th/,3,,,Pending Collection,Not Verified
+uni_th_021,Ubon Ratchathani University,country_th,https://www.ubu.ac.th/,1,,,Pending Collection,Not Verified
+uni_th_021,Ubon Ratchathani University,country_th,https://www.ubu.ac.th/,2,,,Pending Collection,Not Verified
+uni_th_021,Ubon Ratchathani University,country_th,https://www.ubu.ac.th/,3,,,Pending Collection,Not Verified
+uni_th_022,Sukhothai Thammathirat Open University,country_th,https://www.stou.ac.th/,1,,,Pending Collection,Not Verified
+uni_th_022,Sukhothai Thammathirat Open University,country_th,https://www.stou.ac.th/,2,,,Pending Collection,Not Verified
+uni_th_022,Sukhothai Thammathirat Open University,country_th,https://www.stou.ac.th/,3,,,Pending Collection,Not Verified
+uni_th_023,Ramkhamhaeng University,country_th,https://www.ru.ac.th/,1,,,Pending Collection,Not Verified
+uni_th_023,Ramkhamhaeng University,country_th,https://www.ru.ac.th/,2,,,Pending Collection,Not Verified
+uni_th_023,Ramkhamhaeng University,country_th,https://www.ru.ac.th/,3,,,Pending Collection,Not Verified
+uni_th_024,National Institute of Development Administration,country_th,https://www.nida.ac.th/,1,,,Pending Collection,Not Verified
+uni_th_024,National Institute of Development Administration,country_th,https://www.nida.ac.th/,2,,,Pending Collection,Not Verified
+uni_th_024,National Institute of Development Administration,country_th,https://www.nida.ac.th/,3,,,Pending Collection,Not Verified
+uni_th_025,King Mongkut's University of Technology North Bangkok,country_th,https://www.kmutnb.ac.th/,1,,,Pending Collection,Not Verified
+uni_th_025,King Mongkut's University of Technology North Bangkok,country_th,https://www.kmutnb.ac.th/,2,,,Pending Collection,Not Verified
+uni_th_025,King Mongkut's University of Technology North Bangkok,country_th,https://www.kmutnb.ac.th/,3,,,Pending Collection,Not Verified
+uni_th_026,Rajamangala University of Technology Thanyaburi,country_th,https://www.rmutt.ac.th/,1,,,Pending Collection,Not Verified
+uni_th_026,Rajamangala University of Technology Thanyaburi,country_th,https://www.rmutt.ac.th/,2,,,Pending Collection,Not Verified
+uni_th_026,Rajamangala University of Technology Thanyaburi,country_th,https://www.rmutt.ac.th/,3,,,Pending Collection,Not Verified
+uni_th_027,Rajamangala University of Technology Suvarnabhumi,country_th,https://www.rmutsb.ac.th/,1,,,Pending Collection,Not Verified
+uni_th_027,Rajamangala University of Technology Suvarnabhumi,country_th,https://www.rmutsb.ac.th/,2,,,Pending Collection,Not Verified
+uni_th_027,Rajamangala University of Technology Suvarnabhumi,country_th,https://www.rmutsb.ac.th/,3,,,Pending Collection,Not Verified
+uni_th_028,Rajamangala University of Technology Rattanakosin,country_th,https://www.rmutr.ac.th/,1,,,Pending Collection,Not Verified
+uni_th_028,Rajamangala University of Technology Rattanakosin,country_th,https://www.rmutr.ac.th/,2,,,Pending Collection,Not Verified
+uni_th_028,Rajamangala University of Technology Rattanakosin,country_th,https://www.rmutr.ac.th/,3,,,Pending Collection,Not Verified
+uni_th_029,Rajamangala University of Technology Phra Nakhon,country_th,https://www.rmutp.ac.th/,1,,,Pending Collection,Not Verified
+uni_th_029,Rajamangala University of Technology Phra Nakhon,country_th,https://www.rmutp.ac.th/,2,,,Pending Collection,Not Verified
+uni_th_029,Rajamangala University of Technology Phra Nakhon,country_th,https://www.rmutp.ac.th/,3,,,Pending Collection,Not Verified
+uni_th_030,Rajamangala University of Technology Krungthep,country_th,https://www.rmutk.ac.th/,1,,,Pending Collection,Not Verified
+uni_th_030,Rajamangala University of Technology Krungthep,country_th,https://www.rmutk.ac.th/,2,,,Pending Collection,Not Verified
+uni_th_030,Rajamangala University of Technology Krungthep,country_th,https://www.rmutk.ac.th/,3,,,Pending Collection,Not Verified
+uni_th_031,Rajamangala University of Technology Srivijaya,country_th,https://www.rmutsv.ac.th/,1,,,Pending Collection,Not Verified
+uni_th_031,Rajamangala University of Technology Srivijaya,country_th,https://www.rmutsv.ac.th/,2,,,Pending Collection,Not Verified
+uni_th_031,Rajamangala University of Technology Srivijaya,country_th,https://www.rmutsv.ac.th/,3,,,Pending Collection,Not Verified
+uni_th_032,Rajamangala University of Technology Isan,country_th,https://www.rmuti.ac.th/,1,,,Pending Collection,Not Verified
+uni_th_032,Rajamangala University of Technology Isan,country_th,https://www.rmuti.ac.th/,2,,,Pending Collection,Not Verified
+uni_th_032,Rajamangala University of Technology Isan,country_th,https://www.rmuti.ac.th/,3,,,Pending Collection,Not Verified
+uni_th_033,Rajamangala University of Technology Lanna,country_th,https://www.rmutl.ac.th/,1,,,Pending Collection,Not Verified
+uni_th_033,Rajamangala University of Technology Lanna,country_th,https://www.rmutl.ac.th/,2,,,Pending Collection,Not Verified
+uni_th_033,Rajamangala University of Technology Lanna,country_th,https://www.rmutl.ac.th/,3,,,Pending Collection,Not Verified
+uni_th_034,Rajamangala University of Technology Tawan-ok,country_th,https://www.rmutto.ac.th/,1,,,Pending Collection,Not Verified
+uni_th_034,Rajamangala University of Technology Tawan-ok,country_th,https://www.rmutto.ac.th/,2,,,Pending Collection,Not Verified
+uni_th_034,Rajamangala University of Technology Tawan-ok,country_th,https://www.rmutto.ac.th/,3,,,Pending Collection,Not Verified
+uni_th_035,Suan Sunandha Rajabhat University,country_th,https://ssru.ac.th/,1,,,Pending Collection,Not Verified
+uni_th_035,Suan Sunandha Rajabhat University,country_th,https://ssru.ac.th/,2,,,Pending Collection,Not Verified
+uni_th_035,Suan Sunandha Rajabhat University,country_th,https://ssru.ac.th/,3,,,Pending Collection,Not Verified
+uni_th_036,Phranakhon Rajabhat University,country_th,https://www.pnru.ac.th/,1,,,Pending Collection,Not Verified
+uni_th_036,Phranakhon Rajabhat University,country_th,https://www.pnru.ac.th/,2,,,Pending Collection,Not Verified
+uni_th_036,Phranakhon Rajabhat University,country_th,https://www.pnru.ac.th/,3,,,Pending Collection,Not Verified
+uni_th_037,Chiang Mai Rajabhat University,country_th,https://www.cmru.ac.th/,1,,,Pending Collection,Not Verified
+uni_th_037,Chiang Mai Rajabhat University,country_th,https://www.cmru.ac.th/,2,,,Pending Collection,Not Verified
+uni_th_037,Chiang Mai Rajabhat University,country_th,https://www.cmru.ac.th/,3,,,Pending Collection,Not Verified
+uni_th_038,Nakhon Ratchasima Rajabhat University,country_th,https://www.nrru.ac.th/,1,,,Pending Collection,Not Verified
+uni_th_038,Nakhon Ratchasima Rajabhat University,country_th,https://www.nrru.ac.th/,2,,,Pending Collection,Not Verified
+uni_th_038,Nakhon Ratchasima Rajabhat University,country_th,https://www.nrru.ac.th/,3,,,Pending Collection,Not Verified
+uni_th_039,Phuket Rajabhat University,country_th,https://www.pkru.ac.th/,1,,,Pending Collection,Not Verified
+uni_th_039,Phuket Rajabhat University,country_th,https://www.pkru.ac.th/,2,,,Pending Collection,Not Verified
+uni_th_039,Phuket Rajabhat University,country_th,https://www.pkru.ac.th/,3,,,Pending Collection,Not Verified
+uni_th_040,Suratthani Rajabhat University,country_th,https://www.sru.ac.th/,1,,,Pending Collection,Not Verified
+uni_th_040,Suratthani Rajabhat University,country_th,https://www.sru.ac.th/,2,,,Pending Collection,Not Verified
+uni_th_040,Suratthani Rajabhat University,country_th,https://www.sru.ac.th/,3,,,Pending Collection,Not Verified
+uni_tl_001,Universidade Nacional Timor Lorosa'e,country_tl,https://untl.edu.tl/,1,,,Pending Collection,Not Verified
+uni_tl_001,Universidade Nacional Timor Lorosa'e,country_tl,https://untl.edu.tl/,2,,,Pending Collection,Not Verified
+uni_tl_001,Universidade Nacional Timor Lorosa'e,country_tl,https://untl.edu.tl/,3,,,Pending Collection,Not Verified
+uni_tl_002,Dili Institute of Technology,country_tl,https://dit.edu.tl/,1,,,Pending Collection,Not Verified
+uni_tl_002,Dili Institute of Technology,country_tl,https://dit.edu.tl/,2,,,Pending Collection,Not Verified
+uni_tl_002,Dili Institute of Technology,country_tl,https://dit.edu.tl/,3,,,Pending Collection,Not Verified
+uni_tl_003,Universidade da Paz,country_tl,https://unpaz.tl/,1,,,Pending Collection,Not Verified
+uni_tl_003,Universidade da Paz,country_tl,https://unpaz.tl/,2,,,Pending Collection,Not Verified
+uni_tl_003,Universidade da Paz,country_tl,https://unpaz.tl/,3,,,Pending Collection,Not Verified
+uni_tl_004,Universidade Oriental Timor Lorosa'e,country_tl,https://unital.edu.tl/,1,,,Pending Collection,Not Verified
+uni_tl_004,Universidade Oriental Timor Lorosa'e,country_tl,https://unital.edu.tl/,2,,,Pending Collection,Not Verified
+uni_tl_004,Universidade Oriental Timor Lorosa'e,country_tl,https://unital.edu.tl/,3,,,Pending Collection,Not Verified
+uni_tl_005,Universidade de Dili,country_tl,https://undil.tl/,1,,,Pending Collection,Not Verified
+uni_tl_005,Universidade de Dili,country_tl,https://undil.tl/,2,,,Pending Collection,Not Verified
+uni_tl_005,Universidade de Dili,country_tl,https://undil.tl/,3,,,Pending Collection,Not Verified
+uni_tl_006,Universidade Catolica Timorense,country_tl,https://uct.edu.tl/,1,,,Pending Collection,Not Verified
+uni_tl_006,Universidade Catolica Timorense,country_tl,https://uct.edu.tl/,2,,,Pending Collection,Not Verified
+uni_tl_006,Universidade Catolica Timorense,country_tl,https://uct.edu.tl/,3,,,Pending Collection,Not Verified
+uni_tw_001,National Taiwan University,country_tw,http://www.ntu.edu.tw/english/,1,,,Pending Collection,Not Verified
+uni_tw_001,National Taiwan University,country_tw,http://www.ntu.edu.tw/english/,2,,,Pending Collection,Not Verified
+uni_tw_001,National Taiwan University,country_tw,http://www.ntu.edu.tw/english/,3,,,Pending Collection,Not Verified
+uni_tw_002,National Tsing Hua University,country_tw,http://www.nthu.edu.tw/english/,1,,,Pending Collection,Not Verified
+uni_tw_002,National Tsing Hua University,country_tw,http://www.nthu.edu.tw/english/,2,,,Pending Collection,Not Verified
+uni_tw_002,National Tsing Hua University,country_tw,http://www.nthu.edu.tw/english/,3,,,Pending Collection,Not Verified
+uni_tw_003,National Yang Ming Chiao Tung University,country_tw,https://www.nycu.edu.tw/,1,,,Pending Collection,Not Verified
+uni_tw_003,National Yang Ming Chiao Tung University,country_tw,https://www.nycu.edu.tw/,2,,,Pending Collection,Not Verified
+uni_tw_003,National Yang Ming Chiao Tung University,country_tw,https://www.nycu.edu.tw/,3,,,Pending Collection,Not Verified
+uni_tw_004,National Cheng Kung University,country_tw,http://web.ncku.edu.tw/bin/home.php,1,,,Pending Collection,Not Verified
+uni_tw_004,National Cheng Kung University,country_tw,http://web.ncku.edu.tw/bin/home.php,2,,,Pending Collection,Not Verified
+uni_tw_004,National Cheng Kung University,country_tw,http://web.ncku.edu.tw/bin/home.php,3,,,Pending Collection,Not Verified
+uni_tw_005,National Taiwan University of Science and Technology,country_tw,http://www.ntust.edu.tw/home.php?Lang=en,1,,,Pending Collection,Not Verified
+uni_tw_005,National Taiwan University of Science and Technology,country_tw,http://www.ntust.edu.tw/home.php?Lang=en,2,,,Pending Collection,Not Verified
+uni_tw_005,National Taiwan University of Science and Technology,country_tw,http://www.ntust.edu.tw/home.php?Lang=en,3,,,Pending Collection,Not Verified
+uni_tw_006,National Chengchi University,country_tw,https://www.nccu.edu.tw/index.php?Lang=en,1,,,Pending Collection,Not Verified
+uni_tw_006,National Chengchi University,country_tw,https://www.nccu.edu.tw/index.php?Lang=en,2,,,Pending Collection,Not Verified
+uni_tw_006,National Chengchi University,country_tw,https://www.nccu.edu.tw/index.php?Lang=en,3,,,Pending Collection,Not Verified
+uni_tw_007,National Central University,country_tw,https://www.ncu.edu.tw/?Lang=en,1,,,Pending Collection,Not Verified
+uni_tw_007,National Central University,country_tw,https://www.ncu.edu.tw/?Lang=en,2,,,Pending Collection,Not Verified
+uni_tw_007,National Central University,country_tw,https://www.ncu.edu.tw/?Lang=en,3,,,Pending Collection,Not Verified
+uni_tw_008,National Chung Hsing University,country_tw,https://www.nchu.edu.tw/en-index,1,,,Pending Collection,Not Verified
+uni_tw_008,National Chung Hsing University,country_tw,https://www.nchu.edu.tw/en-index,2,,,Pending Collection,Not Verified
+uni_tw_008,National Chung Hsing University,country_tw,https://www.nchu.edu.tw/en-index,3,,,Pending Collection,Not Verified
+uni_tw_009,National Taiwan Normal University,country_tw,https://en.ntnu.edu.tw/,1,,,Pending Collection,Not Verified
+uni_tw_009,National Taiwan Normal University,country_tw,https://en.ntnu.edu.tw/,2,,,Pending Collection,Not Verified
+uni_tw_009,National Taiwan Normal University,country_tw,https://en.ntnu.edu.tw/,3,,,Pending Collection,Not Verified
+uni_tw_010,National Taipei University of Technology,country_tw,https://www-en.ntut.edu.tw/,1,,,Pending Collection,Not Verified
+uni_tw_010,National Taipei University of Technology,country_tw,https://www-en.ntut.edu.tw/,2,,,Pending Collection,Not Verified
+uni_tw_010,National Taipei University of Technology,country_tw,https://www-en.ntut.edu.tw/,3,,,Pending Collection,Not Verified
+uni_tw_011,Tamkang University,country_tw,https://english.tku.edu.tw/,1,,,Pending Collection,Not Verified
+uni_tw_011,Tamkang University,country_tw,https://english.tku.edu.tw/,2,,,Pending Collection,Not Verified
+uni_tw_011,Tamkang University,country_tw,https://english.tku.edu.tw/,3,,,Pending Collection,Not Verified
+uni_tw_012,National Sun Yat-sen University,country_tw,https://www.nsysu.edu.tw/?Lang=en,1,,,Pending Collection,Not Verified
+uni_tw_012,National Sun Yat-sen University,country_tw,https://www.nsysu.edu.tw/?Lang=en,2,,,Pending Collection,Not Verified
+uni_tw_012,National Sun Yat-sen University,country_tw,https://www.nsysu.edu.tw/?Lang=en,3,,,Pending Collection,Not Verified
+uni_tw_013,National Chung Cheng University,country_tw,https://www.ccu.edu.tw/,1,,,Pending Collection,Not Verified
+uni_tw_013,National Chung Cheng University,country_tw,https://www.ccu.edu.tw/,2,,,Pending Collection,Not Verified
+uni_tw_013,National Chung Cheng University,country_tw,https://www.ccu.edu.tw/,3,,,Pending Collection,Not Verified
+uni_tw_014,National Taiwan Ocean University,country_tw,https://www.ntou.edu.tw/,1,,,Pending Collection,Not Verified
+uni_tw_014,National Taiwan Ocean University,country_tw,https://www.ntou.edu.tw/,2,,,Pending Collection,Not Verified
+uni_tw_014,National Taiwan Ocean University,country_tw,https://www.ntou.edu.tw/,3,,,Pending Collection,Not Verified
+uni_tw_015,National Dong Hwa University,country_tw,https://www.ndhu.edu.tw/,1,,,Pending Collection,Not Verified
+uni_tw_015,National Dong Hwa University,country_tw,https://www.ndhu.edu.tw/,2,,,Pending Collection,Not Verified
+uni_tw_015,National Dong Hwa University,country_tw,https://www.ndhu.edu.tw/,3,,,Pending Collection,Not Verified
+uni_tw_016,National University of Kaohsiung,country_tw,https://www.nuk.edu.tw/?Lang=en,1,,,Pending Collection,Not Verified
+uni_tw_016,National University of Kaohsiung,country_tw,https://www.nuk.edu.tw/?Lang=en,2,,,Pending Collection,Not Verified
+uni_tw_016,National University of Kaohsiung,country_tw,https://www.nuk.edu.tw/?Lang=en,3,,,Pending Collection,Not Verified
+uni_tw_017,National Kaohsiung University of Science and Technology,country_tw,https://eng.nkust.edu.tw/,1,,,Pending Collection,Not Verified
+uni_tw_017,National Kaohsiung University of Science and Technology,country_tw,https://eng.nkust.edu.tw/,2,,,Pending Collection,Not Verified
+uni_tw_017,National Kaohsiung University of Science and Technology,country_tw,https://eng.nkust.edu.tw/,3,,,Pending Collection,Not Verified
+uni_tw_018,National Yunlin University of Science and Technology,country_tw,https://www.yuntech.edu.tw/,1,,,Pending Collection,Not Verified
+uni_tw_018,National Yunlin University of Science and Technology,country_tw,https://www.yuntech.edu.tw/,2,,,Pending Collection,Not Verified
+uni_tw_018,National Yunlin University of Science and Technology,country_tw,https://www.yuntech.edu.tw/,3,,,Pending Collection,Not Verified
+uni_tw_019,National Pingtung University of Science and Technology,country_tw,https://wp.npust.edu.tw/en/,1,,,Pending Collection,Not Verified
+uni_tw_019,National Pingtung University of Science and Technology,country_tw,https://wp.npust.edu.tw/en/,2,,,Pending Collection,Not Verified
+uni_tw_019,National Pingtung University of Science and Technology,country_tw,https://wp.npust.edu.tw/en/,3,,,Pending Collection,Not Verified
+uni_tw_020,National United University,country_tw,https://www.nuu.edu.tw/index.php?Lang=en,1,,,Pending Collection,Not Verified
+uni_tw_020,National United University,country_tw,https://www.nuu.edu.tw/index.php?Lang=en,2,,,Pending Collection,Not Verified
+uni_tw_020,National United University,country_tw,https://www.nuu.edu.tw/index.php?Lang=en,3,,,Pending Collection,Not Verified
+uni_tw_021,National Taipei University,country_tw,https://new.ntpu.edu.tw/,1,,,Pending Collection,Not Verified
+uni_tw_021,National Taipei University,country_tw,https://new.ntpu.edu.tw/,2,,,Pending Collection,Not Verified
+uni_tw_021,National Taipei University,country_tw,https://new.ntpu.edu.tw/,3,,,Pending Collection,Not Verified
+uni_tw_022,Fu Jen Catholic University,country_tw,https://www.fju.edu.tw/,1,,,Pending Collection,Not Verified
+uni_tw_022,Fu Jen Catholic University,country_tw,https://www.fju.edu.tw/,2,,,Pending Collection,Not Verified
+uni_tw_022,Fu Jen Catholic University,country_tw,https://www.fju.edu.tw/,3,,,Pending Collection,Not Verified
+uni_tw_023,Feng Chia University,country_tw,https://www.fcu.edu.tw/en/,1,,,Pending Collection,Not Verified
+uni_tw_023,Feng Chia University,country_tw,https://www.fcu.edu.tw/en/,2,,,Pending Collection,Not Verified
+uni_tw_023,Feng Chia University,country_tw,https://www.fcu.edu.tw/en/,3,,,Pending Collection,Not Verified
+uni_tw_024,Tunghai University,country_tw,https://eng.thu.edu.tw/,1,,,Pending Collection,Not Verified
+uni_tw_024,Tunghai University,country_tw,https://eng.thu.edu.tw/,2,,,Pending Collection,Not Verified
+uni_tw_024,Tunghai University,country_tw,https://eng.thu.edu.tw/,3,,,Pending Collection,Not Verified
+uni_tw_025,Soochow University,country_tw,https://www-en.scu.edu.tw/,1,,,Pending Collection,Not Verified
+uni_tw_025,Soochow University,country_tw,https://www-en.scu.edu.tw/,2,,,Pending Collection,Not Verified
+uni_tw_025,Soochow University,country_tw,https://www-en.scu.edu.tw/,3,,,Pending Collection,Not Verified
+uni_tw_026,Taipei Medical University,country_tw,https://www.tmu.edu.tw/,1,,,Pending Collection,Not Verified
+uni_tw_026,Taipei Medical University,country_tw,https://www.tmu.edu.tw/,2,,,Pending Collection,Not Verified
+uni_tw_026,Taipei Medical University,country_tw,https://www.tmu.edu.tw/,3,,,Pending Collection,Not Verified
+uni_tw_027,China Medical University,country_tw,https://www.cmu.edu.tw/,1,,,Pending Collection,Not Verified
+uni_tw_027,China Medical University,country_tw,https://www.cmu.edu.tw/,2,,,Pending Collection,Not Verified
+uni_tw_027,China Medical University,country_tw,https://www.cmu.edu.tw/,3,,,Pending Collection,Not Verified
+uni_tw_028,Chang Gung University,country_tw,https://www.cgu.edu.tw/,1,,,Pending Collection,Not Verified
+uni_tw_028,Chang Gung University,country_tw,https://www.cgu.edu.tw/,2,,,Pending Collection,Not Verified
+uni_tw_028,Chang Gung University,country_tw,https://www.cgu.edu.tw/,3,,,Pending Collection,Not Verified
+uni_tw_029,Yuan Ze University,country_tw,https://www.yzu.edu.tw/index.php/en-us/,1,,,Pending Collection,Not Verified
+uni_tw_029,Yuan Ze University,country_tw,https://www.yzu.edu.tw/index.php/en-us/,2,,,Pending Collection,Not Verified
+uni_tw_029,Yuan Ze University,country_tw,https://www.yzu.edu.tw/index.php/en-us/,3,,,Pending Collection,Not Verified
+uni_tw_030,Chung Yuan Christian University,country_tw,https://www.cycu.edu.tw/eng/,1,,,Pending Collection,Not Verified
+uni_tw_030,Chung Yuan Christian University,country_tw,https://www.cycu.edu.tw/eng/,2,,,Pending Collection,Not Verified
+uni_tw_030,Chung Yuan Christian University,country_tw,https://www.cycu.edu.tw/eng/,3,,,Pending Collection,Not Verified
+uni_vn_001,"Vietnam National University, Hanoi",country_vn,https://en.vnu.edu.vn/,1,,,Pending Collection,Not Verified
+uni_vn_001,"Vietnam National University, Hanoi",country_vn,https://en.vnu.edu.vn/,2,,,Pending Collection,Not Verified
+uni_vn_001,"Vietnam National University, Hanoi",country_vn,https://en.vnu.edu.vn/,3,,,Pending Collection,Not Verified
+uni_vn_002,Vietnam National University Ho Chi Minh City,country_vn,https://vnuhcm.edu.vn/en/,1,,,Pending Collection,Not Verified
+uni_vn_002,Vietnam National University Ho Chi Minh City,country_vn,https://vnuhcm.edu.vn/en/,2,,,Pending Collection,Not Verified
+uni_vn_002,Vietnam National University Ho Chi Minh City,country_vn,https://vnuhcm.edu.vn/en/,3,,,Pending Collection,Not Verified
+uni_vn_003,Hanoi University of Science and Technology,country_vn,https://hust.edu.vn/,1,,,Pending Collection,Not Verified
+uni_vn_003,Hanoi University of Science and Technology,country_vn,https://hust.edu.vn/,2,,,Pending Collection,Not Verified
+uni_vn_003,Hanoi University of Science and Technology,country_vn,https://hust.edu.vn/,3,,,Pending Collection,Not Verified
+uni_vn_004,Ton Duc Thang University,country_vn,https://tdtu.edu.vn/en,1,,,Pending Collection,Not Verified
+uni_vn_004,Ton Duc Thang University,country_vn,https://tdtu.edu.vn/en,2,,,Pending Collection,Not Verified
+uni_vn_004,Ton Duc Thang University,country_vn,https://tdtu.edu.vn/en,3,,,Pending Collection,Not Verified
+uni_vn_005,University of Economics Ho Chi Minh City,country_vn,https://ueh.edu.vn/en/,1,,,Pending Collection,Not Verified
+uni_vn_005,University of Economics Ho Chi Minh City,country_vn,https://ueh.edu.vn/en/,2,,,Pending Collection,Not Verified
+uni_vn_005,University of Economics Ho Chi Minh City,country_vn,https://ueh.edu.vn/en/,3,,,Pending Collection,Not Verified
+uni_vn_006,Can Tho University,country_vn,https://en.ctu.edu.vn/,1,,,Pending Collection,Not Verified
+uni_vn_006,Can Tho University,country_vn,https://en.ctu.edu.vn/,2,,,Pending Collection,Not Verified
+uni_vn_006,Can Tho University,country_vn,https://en.ctu.edu.vn/,3,,,Pending Collection,Not Verified
+uni_vn_007,The University of Danang,country_vn,https://www.udn.vn/english,1,,,Pending Collection,Not Verified
+uni_vn_007,The University of Danang,country_vn,https://www.udn.vn/english,2,,,Pending Collection,Not Verified
+uni_vn_007,The University of Danang,country_vn,https://www.udn.vn/english,3,,,Pending Collection,Not Verified
+uni_vn_008,Foreign Trade University,country_vn,https://ftu.edu.vn/,1,,,Pending Collection,Not Verified
+uni_vn_008,Foreign Trade University,country_vn,https://ftu.edu.vn/,2,,,Pending Collection,Not Verified
+uni_vn_008,Foreign Trade University,country_vn,https://ftu.edu.vn/,3,,,Pending Collection,Not Verified
+uni_vn_009,Duy Tan University,country_vn,https://duytan.edu.vn/,1,,,Pending Collection,Not Verified
+uni_vn_009,Duy Tan University,country_vn,https://duytan.edu.vn/,2,,,Pending Collection,Not Verified
+uni_vn_009,Duy Tan University,country_vn,https://duytan.edu.vn/,3,,,Pending Collection,Not Verified
+uni_vn_010,National Economics University,country_vn,https://en.neu.edu.vn/,1,,,Pending Collection,Not Verified
+uni_vn_010,National Economics University,country_vn,https://en.neu.edu.vn/,2,,,Pending Collection,Not Verified
+uni_vn_010,National Economics University,country_vn,https://en.neu.edu.vn/,3,,,Pending Collection,Not Verified
+uni_vn_011,Vietnam National University of Agriculture,country_vn,https://vnua.edu.vn/,1,,,Pending Collection,Not Verified
+uni_vn_011,Vietnam National University of Agriculture,country_vn,https://vnua.edu.vn/,2,,,Pending Collection,Not Verified
+uni_vn_011,Vietnam National University of Agriculture,country_vn,https://vnua.edu.vn/,3,,,Pending Collection,Not Verified
+uni_vn_012,Thuyloi University,country_vn,https://www.tlu.edu.vn/,1,,,Pending Collection,Not Verified
+uni_vn_012,Thuyloi University,country_vn,https://www.tlu.edu.vn/,2,,,Pending Collection,Not Verified
+uni_vn_012,Thuyloi University,country_vn,https://www.tlu.edu.vn/,3,,,Pending Collection,Not Verified
+uni_vn_013,University of Transport and Communications,country_vn,https://www.utc.edu.vn/,1,,,Pending Collection,Not Verified
+uni_vn_013,University of Transport and Communications,country_vn,https://www.utc.edu.vn/,2,,,Pending Collection,Not Verified
+uni_vn_013,University of Transport and Communications,country_vn,https://www.utc.edu.vn/,3,,,Pending Collection,Not Verified
+uni_vn_014,Hanoi University of Civil Engineering,country_vn,https://huce.edu.vn/,1,,,Pending Collection,Not Verified
+uni_vn_014,Hanoi University of Civil Engineering,country_vn,https://huce.edu.vn/,2,,,Pending Collection,Not Verified
+uni_vn_014,Hanoi University of Civil Engineering,country_vn,https://huce.edu.vn/,3,,,Pending Collection,Not Verified
+uni_vn_015,Hanoi University,country_vn,https://www.hanu.vn/,1,,,Pending Collection,Not Verified
+uni_vn_015,Hanoi University,country_vn,https://www.hanu.vn/,2,,,Pending Collection,Not Verified
+uni_vn_015,Hanoi University,country_vn,https://www.hanu.vn/,3,,,Pending Collection,Not Verified
+uni_vn_016,Hanoi National University of Education,country_vn,https://hnue.edu.vn/,1,,,Pending Collection,Not Verified
+uni_vn_016,Hanoi National University of Education,country_vn,https://hnue.edu.vn/,2,,,Pending Collection,Not Verified
+uni_vn_016,Hanoi National University of Education,country_vn,https://hnue.edu.vn/,3,,,Pending Collection,Not Verified
+uni_vn_017,Hanoi Medical University,country_vn,https://hmu.edu.vn/,1,,,Pending Collection,Not Verified
+uni_vn_017,Hanoi Medical University,country_vn,https://hmu.edu.vn/,2,,,Pending Collection,Not Verified
+uni_vn_017,Hanoi Medical University,country_vn,https://hmu.edu.vn/,3,,,Pending Collection,Not Verified
+uni_vn_018,Hanoi University of Pharmacy,country_vn,https://www.hup.edu.vn/,1,,,Pending Collection,Not Verified
+uni_vn_018,Hanoi University of Pharmacy,country_vn,https://www.hup.edu.vn/,2,,,Pending Collection,Not Verified
+uni_vn_018,Hanoi University of Pharmacy,country_vn,https://www.hup.edu.vn/,3,,,Pending Collection,Not Verified
+uni_vn_019,Posts and Telecommunications Institute of Technology,country_vn,https://ptit.edu.vn/,1,,,Pending Collection,Not Verified
+uni_vn_019,Posts and Telecommunications Institute of Technology,country_vn,https://ptit.edu.vn/,2,,,Pending Collection,Not Verified
+uni_vn_019,Posts and Telecommunications Institute of Technology,country_vn,https://ptit.edu.vn/,3,,,Pending Collection,Not Verified
+uni_vn_020,Electric Power University,country_vn,https://epu.edu.vn/,1,,,Pending Collection,Not Verified
+uni_vn_020,Electric Power University,country_vn,https://epu.edu.vn/,2,,,Pending Collection,Not Verified
+uni_vn_020,Electric Power University,country_vn,https://epu.edu.vn/,3,,,Pending Collection,Not Verified
+uni_vn_021,Hanoi University of Mining and Geology,country_vn,https://humg.edu.vn/,1,,,Pending Collection,Not Verified
+uni_vn_021,Hanoi University of Mining and Geology,country_vn,https://humg.edu.vn/,2,,,Pending Collection,Not Verified
+uni_vn_021,Hanoi University of Mining and Geology,country_vn,https://humg.edu.vn/,3,,,Pending Collection,Not Verified
+uni_vn_022,Thuongmai University,country_vn,https://tmu.edu.vn/,1,,,Pending Collection,Not Verified
+uni_vn_022,Thuongmai University,country_vn,https://tmu.edu.vn/,2,,,Pending Collection,Not Verified
+uni_vn_022,Thuongmai University,country_vn,https://tmu.edu.vn/,3,,,Pending Collection,Not Verified
+uni_vn_023,Banking Academy of Vietnam,country_vn,https://hvnh.edu.vn/,1,,,Pending Collection,Not Verified
+uni_vn_023,Banking Academy of Vietnam,country_vn,https://hvnh.edu.vn/,2,,,Pending Collection,Not Verified
+uni_vn_023,Banking Academy of Vietnam,country_vn,https://hvnh.edu.vn/,3,,,Pending Collection,Not Verified
+uni_vn_024,Academy of Finance,country_vn,https://hvtc.edu.vn/,1,,,Pending Collection,Not Verified
+uni_vn_024,Academy of Finance,country_vn,https://hvtc.edu.vn/,2,,,Pending Collection,Not Verified
+uni_vn_024,Academy of Finance,country_vn,https://hvtc.edu.vn/,3,,,Pending Collection,Not Verified
+uni_vn_025,Phenikaa University,country_vn,https://phenikaa-uni.edu.vn/,1,,,Pending Collection,Not Verified
+uni_vn_025,Phenikaa University,country_vn,https://phenikaa-uni.edu.vn/,2,,,Pending Collection,Not Verified
+uni_vn_025,Phenikaa University,country_vn,https://phenikaa-uni.edu.vn/,3,,,Pending Collection,Not Verified
+uni_vn_026,FPT University,country_vn,https://daihoc.fpt.edu.vn/,1,,,Pending Collection,Not Verified
+uni_vn_026,FPT University,country_vn,https://daihoc.fpt.edu.vn/,2,,,Pending Collection,Not Verified
+uni_vn_026,FPT University,country_vn,https://daihoc.fpt.edu.vn/,3,,,Pending Collection,Not Verified
+uni_vn_027,VinUniversity,country_vn,https://vinuni.edu.vn/,1,,,Pending Collection,Not Verified
+uni_vn_027,VinUniversity,country_vn,https://vinuni.edu.vn/,2,,,Pending Collection,Not Verified
+uni_vn_027,VinUniversity,country_vn,https://vinuni.edu.vn/,3,,,Pending Collection,Not Verified
+uni_vn_028,Thai Nguyen University,country_vn,https://tnu.edu.vn/,1,,,Pending Collection,Not Verified
+uni_vn_028,Thai Nguyen University,country_vn,https://tnu.edu.vn/,2,,,Pending Collection,Not Verified
+uni_vn_028,Thai Nguyen University,country_vn,https://tnu.edu.vn/,3,,,Pending Collection,Not Verified
+uni_vn_029,Vinh University,country_vn,https://vinhuni.edu.vn/,1,,,Pending Collection,Not Verified
+uni_vn_029,Vinh University,country_vn,https://vinhuni.edu.vn/,2,,,Pending Collection,Not Verified
+uni_vn_029,Vinh University,country_vn,https://vinhuni.edu.vn/,3,,,Pending Collection,Not Verified
+uni_vn_030,Hue University,country_vn,https://hueuni.edu.vn/,1,,,Pending Collection,Not Verified
+uni_vn_030,Hue University,country_vn,https://hueuni.edu.vn/,2,,,Pending Collection,Not Verified
+uni_vn_030,Hue University,country_vn,https://hueuni.edu.vn/,3,,,Pending Collection,Not Verified
+uni_vn_031,Quy Nhon University,country_vn,https://www.qnu.edu.vn/,1,,,Pending Collection,Not Verified
+uni_vn_031,Quy Nhon University,country_vn,https://www.qnu.edu.vn/,2,,,Pending Collection,Not Verified
+uni_vn_031,Quy Nhon University,country_vn,https://www.qnu.edu.vn/,3,,,Pending Collection,Not Verified
+uni_vn_032,Nha Trang University,country_vn,https://www.ntu.edu.vn/,1,,,Pending Collection,Not Verified
+uni_vn_032,Nha Trang University,country_vn,https://www.ntu.edu.vn/,2,,,Pending Collection,Not Verified
+uni_vn_032,Nha Trang University,country_vn,https://www.ntu.edu.vn/,3,,,Pending Collection,Not Verified
+uni_vn_033,Dalat University,country_vn,https://dlu.edu.vn/,1,,,Pending Collection,Not Verified
+uni_vn_033,Dalat University,country_vn,https://dlu.edu.vn/,2,,,Pending Collection,Not Verified
+uni_vn_033,Dalat University,country_vn,https://dlu.edu.vn/,3,,,Pending Collection,Not Verified
+uni_vn_034,Ho Chi Minh City Open University,country_vn,https://ou.edu.vn/,1,,,Pending Collection,Not Verified
+uni_vn_034,Ho Chi Minh City Open University,country_vn,https://ou.edu.vn/,2,,,Pending Collection,Not Verified
+uni_vn_034,Ho Chi Minh City Open University,country_vn,https://ou.edu.vn/,3,,,Pending Collection,Not Verified
+uni_vn_035,Ho Chi Minh City University of Technology and Education,country_vn,https://hcmute.edu.vn/,1,,,Pending Collection,Not Verified
+uni_vn_035,Ho Chi Minh City University of Technology and Education,country_vn,https://hcmute.edu.vn/,2,,,Pending Collection,Not Verified
+uni_vn_035,Ho Chi Minh City University of Technology and Education,country_vn,https://hcmute.edu.vn/,3,,,Pending Collection,Not Verified
+uni_vn_036,Industrial University of Ho Chi Minh City,country_vn,https://iuh.edu.vn/,1,,,Pending Collection,Not Verified
+uni_vn_036,Industrial University of Ho Chi Minh City,country_vn,https://iuh.edu.vn/,2,,,Pending Collection,Not Verified
+uni_vn_036,Industrial University of Ho Chi Minh City,country_vn,https://iuh.edu.vn/,3,,,Pending Collection,Not Verified
+uni_vn_037,University of Finance - Marketing,country_vn,https://ufm.edu.vn/,1,,,Pending Collection,Not Verified
+uni_vn_037,University of Finance - Marketing,country_vn,https://ufm.edu.vn/,2,,,Pending Collection,Not Verified
+uni_vn_037,University of Finance - Marketing,country_vn,https://ufm.edu.vn/,3,,,Pending Collection,Not Verified
+uni_vn_038,Nong Lam University Ho Chi Minh City,country_vn,https://hcmuaf.edu.vn/,1,,,Pending Collection,Not Verified
+uni_vn_038,Nong Lam University Ho Chi Minh City,country_vn,https://hcmuaf.edu.vn/,2,,,Pending Collection,Not Verified
+uni_vn_038,Nong Lam University Ho Chi Minh City,country_vn,https://hcmuaf.edu.vn/,3,,,Pending Collection,Not Verified
+uni_vn_039,Ho Chi Minh City University of Law,country_vn,https://www.hcmulaw.edu.vn/,1,,,Pending Collection,Not Verified
+uni_vn_039,Ho Chi Minh City University of Law,country_vn,https://www.hcmulaw.edu.vn/,2,,,Pending Collection,Not Verified
+uni_vn_039,Ho Chi Minh City University of Law,country_vn,https://www.hcmulaw.edu.vn/,3,,,Pending Collection,Not Verified
+uni_vn_040,University of Medicine and Pharmacy at Ho Chi Minh City,country_vn,https://ump.edu.vn/,1,,,Pending Collection,Not Verified
+uni_vn_040,University of Medicine and Pharmacy at Ho Chi Minh City,country_vn,https://ump.edu.vn/,2,,,Pending Collection,Not Verified
+uni_vn_040,University of Medicine and Pharmacy at Ho Chi Minh City,country_vn,https://ump.edu.vn/,3,,,Pending Collection,Not Verified
+uni_vn_041,Saigon University,country_vn,https://sgu.edu.vn/,1,,,Pending Collection,Not Verified
+uni_vn_041,Saigon University,country_vn,https://sgu.edu.vn/,2,,,Pending Collection,Not Verified
+uni_vn_041,Saigon University,country_vn,https://sgu.edu.vn/,3,,,Pending Collection,Not Verified
+uni_vn_042,Van Lang University,country_vn,https://www.vlu.edu.vn/,1,,,Pending Collection,Not Verified
+uni_vn_042,Van Lang University,country_vn,https://www.vlu.edu.vn/,2,,,Pending Collection,Not Verified
+uni_vn_042,Van Lang University,country_vn,https://www.vlu.edu.vn/,3,,,Pending Collection,Not Verified
+uni_vn_043,Hoa Sen University,country_vn,https://www.hoasen.edu.vn/,1,,,Pending Collection,Not Verified
+uni_vn_043,Hoa Sen University,country_vn,https://www.hoasen.edu.vn/,2,,,Pending Collection,Not Verified
+uni_vn_043,Hoa Sen University,country_vn,https://www.hoasen.edu.vn/,3,,,Pending Collection,Not Verified
+uni_vn_044,Nguyen Tat Thanh University,country_vn,https://ntt.edu.vn/,1,,,Pending Collection,Not Verified
+uni_vn_044,Nguyen Tat Thanh University,country_vn,https://ntt.edu.vn/,2,,,Pending Collection,Not Verified
+uni_vn_044,Nguyen Tat Thanh University,country_vn,https://ntt.edu.vn/,3,,,Pending Collection,Not Verified
+uni_vn_045,Ho Chi Minh City University of Technology,country_vn,https://www.hutech.edu.vn/,1,,,Pending Collection,Not Verified
+uni_vn_045,Ho Chi Minh City University of Technology,country_vn,https://www.hutech.edu.vn/,2,,,Pending Collection,Not Verified
+uni_vn_045,Ho Chi Minh City University of Technology,country_vn,https://www.hutech.edu.vn/,3,,,Pending Collection,Not Verified
+uni_vn_046,Ho Chi Minh University of Banking,country_vn,https://hub.edu.vn/,1,,,Pending Collection,Not Verified
+uni_vn_046,Ho Chi Minh University of Banking,country_vn,https://hub.edu.vn/,2,,,Pending Collection,Not Verified
+uni_vn_046,Ho Chi Minh University of Banking,country_vn,https://hub.edu.vn/,3,,,Pending Collection,Not Verified
+uni_vn_047,Ho Chi Minh City University of Foreign Languages and Information Technology,country_vn,https://huflit.edu.vn/,1,,,Pending Collection,Not Verified
+uni_vn_047,Ho Chi Minh City University of Foreign Languages and Information Technology,country_vn,https://huflit.edu.vn/,2,,,Pending Collection,Not Verified
+uni_vn_047,Ho Chi Minh City University of Foreign Languages and Information Technology,country_vn,https://huflit.edu.vn/,3,,,Pending Collection,Not Verified
+uni_vn_048,Tra Vinh University,country_vn,https://www.tvu.edu.vn/,1,,,Pending Collection,Not Verified
+uni_vn_048,Tra Vinh University,country_vn,https://www.tvu.edu.vn/,2,,,Pending Collection,Not Verified
+uni_vn_048,Tra Vinh University,country_vn,https://www.tvu.edu.vn/,3,,,Pending Collection,Not Verified
+uni_vn_049,Dong Thap University,country_vn,https://www.dthu.edu.vn/,1,,,Pending Collection,Not Verified
+uni_vn_049,Dong Thap University,country_vn,https://www.dthu.edu.vn/,2,,,Pending Collection,Not Verified
+uni_vn_049,Dong Thap University,country_vn,https://www.dthu.edu.vn/,3,,,Pending Collection,Not Verified
+uni_vn_050,Can Tho University of Medicine and Pharmacy,country_vn,https://www.ctump.edu.vn/,1,,,Pending Collection,Not Verified
+uni_vn_050,Can Tho University of Medicine and Pharmacy,country_vn,https://www.ctump.edu.vn/,2,,,Pending Collection,Not Verified
+uni_vn_050,Can Tho University of Medicine and Pharmacy,country_vn,https://www.ctump.edu.vn/,3,,,Pending Collection,Not Verified

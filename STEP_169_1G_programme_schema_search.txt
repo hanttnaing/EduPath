@@ -1,0 +1,1030 @@
+﻿C:\Users\X1\EduPath\backend\app\main.py:195: degree_level: str | None = Query(
+C:\Users\X1\EduPath\backend\app\main.py:224: if degree_level is not None:
+C:\Users\X1\EduPath\backend\app\main.py:225: query["degree_levels"] = degree_level
+C:\Users\X1\EduPath\backend\app\main.py:267: "/api/universities/{university_id}",
+C:\Users\X1\EduPath\backend\app\main.py:272: university_id: str,
+C:\Users\X1\EduPath\backend\app\main.py:281: {"university_id": university_id},
+C:\Users\X1\EduPath\backend\app\main.py:312: university_id: str | None = Query(
+C:\Users\X1\EduPath\backend\app\main.py:322: degree_level: str | None = Query(
+C:\Users\X1\EduPath\backend\app\main.py:342: max_tuition_fee: float | None = Query(
+C:\Users\X1\EduPath\backend\app\main.py:369: if university_id is not None:
+C:\Users\X1\EduPath\backend\app\main.py:370: query["university_id"] = university_id
+C:\Users\X1\EduPath\backend\app\main.py:373: country_university_ids = [
+C:\Users\X1\EduPath\backend\app\main.py:374: university["university_id"]
+C:\Users\X1\EduPath\backend\app\main.py:383: "university_id": 1,
+C:\Users\X1\EduPath\backend\app\main.py:388: if not country_university_ids:
+C:\Users\X1\EduPath\backend\app\main.py:389: query["university_id"] = {
+C:\Users\X1\EduPath\backend\app\main.py:393: elif university_id is not None:
+C:\Users\X1\EduPath\backend\app\main.py:395: university_id
+C:\Users\X1\EduPath\backend\app\main.py:396: not in country_university_ids
+C:\Users\X1\EduPath\backend\app\main.py:398: query["university_id"] = {
+C:\Users\X1\EduPath\backend\app\main.py:403: query["university_id"] = {
+C:\Users\X1\EduPath\backend\app\main.py:404: "$in": country_university_ids,
+C:\Users\X1\EduPath\backend\app\main.py:407: if degree_level is not None:
+C:\Users\X1\EduPath\backend\app\main.py:408: query["degree_level"] = degree_level
+C:\Users\X1\EduPath\backend\app\main.py:419: if max_tuition_fee is not None:
+C:\Users\X1\EduPath\backend\app\main.py:420: query["tuition_fee"] = {
+C:\Users\X1\EduPath\backend\app\main.py:422: "$lte": max_tuition_fee,
+C:\Users\X1\EduPath\backend\app\main.py:649: host_university_id: str | None = Query(
+C:\Users\X1\EduPath\backend\app\main.py:656: degree_level: str | None = Query(
+C:\Users\X1\EduPath\backend\app\main.py:712: if host_university_id is not None:
+C:\Users\X1\EduPath\backend\app\main.py:713: query["host_university_id"] = host_university_id
+C:\Users\X1\EduPath\backend\app\main.py:715: if degree_level is not None:
+C:\Users\X1\EduPath\backend\app\main.py:716: query["degree_levels"] = degree_level
+C:\Users\X1\EduPath\backend\app\main.py:1094: target_degree_level: str | None = Query(
+C:\Users\X1\EduPath\backend\app\main.py:1121: if target_degree_level:
+C:\Users\X1\EduPath\backend\app\main.py:1122: query["target_degree_level"] = (
+C:\Users\X1\EduPath\backend\app\main.py:1123: target_degree_level
+C:\Users\X1\EduPath\backend\app\main.py:1229: "target_degree_level",
+C:\Users\X1\EduPath\backend\app\main.py:1712: "target_degree_level",
+C:\Users\X1\EduPath\backend\app\main.py:2101: "/saved-universities/{university_id}"
+C:\Users\X1\EduPath\backend\app\main.py:2107: university_id: str,
+C:\Users\X1\EduPath\backend\app\main.py:2141: {"university_id": university_id},
+C:\Users\X1\EduPath\backend\app\main.py:2144: "university_id": 1,
+C:\Users\X1\EduPath\backend\app\main.py:2156: f"University '{university_id}' "
+C:\Users\X1\EduPath\backend\app\main.py:2169: if university_id in existing_saved_universities:
+C:\Users\X1\EduPath\backend\app\main.py:2188: "saved_universities": university_id,
+C:\Users\X1\EduPath\backend\app\main.py:2250: "/saved-universities/{university_id}"
+C:\Users\X1\EduPath\backend\app\main.py:2256: university_id: str,
+C:\Users\X1\EduPath\backend\app\main.py:2290: {"university_id": university_id},
+C:\Users\X1\EduPath\backend\app\main.py:2293: "university_id": 1,
+C:\Users\X1\EduPath\backend\app\main.py:2305: f"University '{university_id}' "
+C:\Users\X1\EduPath\backend\app\main.py:2318: if university_id not in existing_saved_universities:
+C:\Users\X1\EduPath\backend\app\main.py:2337: "saved_universities": university_id,
+C:\Users\X1\EduPath\backend\app\main.py:2686: "university_id": 1,
+C:\Users\X1\EduPath\backend\app\main.py:2687: "degree_levels": 1,
+C:\Users\X1\EduPath\backend\app\main.py:2836: "university_id": 1,
+C:\Users\X1\EduPath\backend\app\main.py:2837: "degree_levels": 1,
+C:\Users\X1\EduPath\backend\app\main.py:2980: saved_university_ids = profile.get(
+C:\Users\X1\EduPath\backend\app\main.py:2998: "university_id": {
+C:\Users\X1\EduPath\backend\app\main.py:2999: "$in": saved_university_ids
+C:\Users\X1\EduPath\backend\app\main.py:3057: item["university_id"]: item
+C:\Users\X1\EduPath\backend\app\main.py:3059: if item.get("university_id")
+C:\Users\X1\EduPath\backend\app\main.py:3076: university_by_id[university_id]
+C:\Users\X1\EduPath\backend\app\main.py:3077: for university_id in saved_university_ids
+C:\Users\X1\EduPath\backend\app\main.py:3078: if university_id in university_by_id
+C:\Users\X1\EduPath\backend\app\main.py:3132: "/api/me/saved/universities/{university_id}",
+C:\Users\X1\EduPath\backend\app\main.py:3136: university_id: str,
+C:\Users\X1\EduPath\backend\app\main.py:3145: university_id=university_id,
+C:\Users\X1\EduPath\backend\app\main.py:3150: "/api/me/saved/universities/{university_id}",
+C:\Users\X1\EduPath\backend\app\main.py:3154: university_id: str,
+C:\Users\X1\EduPath\backend\app\main.py:3163: university_id=university_id,
+C:\Users\X1\EduPath\backend\app\schemas.py:36: university_id: str
+C:\Users\X1\EduPath\backend\app\schemas.py:48: degree_levels: list[str] | None = None
+C:\Users\X1\EduPath\backend\app\schemas.py:60: international_students_last_verified_at: (
+C:\Users\X1\EduPath\backend\app\schemas.py:64: source_url: str
+C:\Users\X1\EduPath\backend\app\schemas.py:66: last_verified_at: datetime | None = None
+C:\Users\X1\EduPath\backend\app\schemas.py:67: freshness_status: str
+C:\Users\X1\EduPath\backend\app\schemas.py:82: university_id: str
+C:\Users\X1\EduPath\backend\app\schemas.py:85: degree_level: str
+C:\Users\X1\EduPath\backend\app\schemas.py:91: tuition_fee: int | float | None = None
+C:\Users\X1\EduPath\backend\app\schemas.py:97: tuition_source_url: str | None = None
+C:\Users\X1\EduPath\backend\app\schemas.py:98: tuition_last_verified_at: datetime | None = None
+C:\Users\X1\EduPath\backend\app\schemas.py:118: international_applicants_last_verified_at: (
+C:\Users\X1\EduPath\backend\app\schemas.py:124: last_verified_at: datetime
+C:\Users\X1\EduPath\backend\app\schemas.py:125: freshness_status: str
+C:\Users\X1\EduPath\backend\app\schemas.py:150: source_url: Optional[str] = None
+C:\Users\X1\EduPath\backend\app\schemas.py:152: last_verified_at: Optional[datetime] = None
+C:\Users\X1\EduPath\backend\app\schemas.py:174: degree_level: str | None = None
+C:\Users\X1\EduPath\backend\app\schemas.py:185: degree_level: str | None = None
+C:\Users\X1\EduPath\backend\app\schemas.py:203: host_university_id: str | None = None
+C:\Users\X1\EduPath\backend\app\schemas.py:206: degree_levels: list[str]
+C:\Users\X1\EduPath\backend\app\schemas.py:240: source_url: str
+C:\Users\X1\EduPath\backend\app\schemas.py:243: last_verified_at: datetime
+C:\Users\X1\EduPath\backend\app\schemas.py:245: freshness_status: str
+C:\Users\X1\EduPath\backend\app\schemas.py:278: target_degree_level: str = Field(
+C:\Users\X1\EduPath\backend\app\schemas.py:358: target_degree_level: str = Field(
+C:\Users\X1\EduPath\backend\app\schemas.py:433: target_degree_level: str | None = Field(
+C:\Users\X1\EduPath\scripts\apply_program_tuition_mongodb_update.py:53: "tuition_fee",
+C:\Users\X1\EduPath\scripts\apply_program_tuition_mongodb_update.py:58: "tuition_source_url",
+C:\Users\X1\EduPath\scripts\apply_program_tuition_mongodb_update.py:59: "tuition_last_verified_at",
+C:\Users\X1\EduPath\scripts\apply_program_tuition_mongodb_update.py:324: "previous_tuition_fee"
+C:\Users\X1\EduPath\scripts\apply_program_tuition_mongodb_update.py:330: "tuition_fee"
+C:\Users\X1\EduPath\scripts\apply_program_tuition_mongodb_update.py:353: "current_tuition_fee"
+C:\Users\X1\EduPath\scripts\apply_program_tuition_mongodb_update.py:403: "tuition_fee":
+C:\Users\X1\EduPath\scripts\apply_program_tuition_mongodb_update.py:434: "tuition_source_url":
+C:\Users\X1\EduPath\scripts\apply_program_tuition_mongodb_update.py:437: "tuition_source_url"
+C:\Users\X1\EduPath\scripts\apply_program_tuition_mongodb_update.py:441: "tuition_last_verified_at":
+C:\Users\X1\EduPath\scripts\apply_program_tuition_mongodb_update.py:444: "tuition_last_verified_at"
+C:\Users\X1\EduPath\scripts\apply_program_tuition_mongodb_update.py:675: "tuition_last_verified_at"
+C:\Users\X1\EduPath\scripts\audit_program_tuition.py:80: "tuition_fee"
+C:\Users\X1\EduPath\scripts\audit_program_tuition.py:135: "university_id"
+C:\Users\X1\EduPath\scripts\audit_program_tuition.py:141: japan_university_ids = set(
+C:\Users\X1\EduPath\scripts\audit_program_tuition.py:157: "university_id"
+C:\Users\X1\EduPath\scripts\audit_program_tuition.py:159: in japan_university_ids
+C:\Users\X1\EduPath\scripts\audit_program_tuition.py:181: "tuition_fee"
+C:\Users\X1\EduPath\scripts\audit_program_tuition.py:200: "tuition_fee"
+C:\Users\X1\EduPath\scripts\audit_program_tuition.py:251: "degree_level"
+C:\Users\X1\EduPath\scripts\audit_program_tuition.py:257: "tuition_fee"
+C:\Users\X1\EduPath\scripts\audit_program_tuition.py:327: "university_id"
+C:\Users\X1\EduPath\scripts\audit_program_tuition.py:335: "degree_level",
+C:\Users\X1\EduPath\scripts\audit_program_tuition.py:352: "university_id"
+C:\Users\X1\EduPath\scripts\audit_program_tuition.py:363: "university_id"
+C:\Users\X1\EduPath\scripts\audit_program_tuition.py:389: "degree_level"
+C:\Users\X1\EduPath\scripts\audit_program_tuition.py:403: "last_verified_at"
+C:\Users\X1\EduPath\scripts\audit_program_tuition.py:426: "tuition_fee"
+C:\Users\X1\EduPath\scripts\audit_program_tuition.py:437: "tuition_fee"
+C:\Users\X1\EduPath\scripts\audit_program_tuition.py:502: "last_verified_at"
+C:\Users\X1\EduPath\scripts\audit_program_tuition.py:515: "last_verified_at value."
+C:\Users\X1\EduPath\scripts\backup_japan_programs_before_tuition_update.py:95: japan_university_ids = {
+C:\Users\X1\EduPath\scripts\backup_japan_programs_before_tuition_update.py:97: "university_id"
+C:\Users\X1\EduPath\scripts\backup_japan_programs_before_tuition_update.py:115: "university_id"
+C:\Users\X1\EduPath\scripts\backup_japan_programs_before_tuition_update.py:117: in japan_university_ids
+C:\Users\X1\EduPath\scripts\build_japan_program_master_rows.py:21: "university_id",
+C:\Users\X1\EduPath\scripts\build_japan_program_master_rows.py:24: "degree_level",
+C:\Users\X1\EduPath\scripts\build_japan_program_master_rows.py:28: "tuition_fee",
+C:\Users\X1\EduPath\scripts\build_japan_program_master_rows.py:39: "last_verified_at",
+C:\Users\X1\EduPath\scripts\build_japan_program_master_rows.py:40: "freshness_status",
+C:\Users\X1\EduPath\scripts\build_japan_program_master_rows.py:82: university_ids = {
+C:\Users\X1\EduPath\scripts\build_japan_program_master_rows.py:83: row["university_id"].strip()
+C:\Users\X1\EduPath\scripts\build_japan_program_master_rows.py:85: if row.get("university_id")
+C:\Users\X1\EduPath\scripts\build_japan_program_master_rows.py:89: len(university_ids)
+C:\Users\X1\EduPath\scripts\build_japan_program_master_rows.py:105: university_id = row[
+C:\Users\X1\EduPath\scripts\build_japan_program_master_rows.py:106: "university_id"
+C:\Users\X1\EduPath\scripts\build_japan_program_master_rows.py:114: university_id,
+C:\Users\X1\EduPath\scripts\build_japan_program_master_rows.py:118: for university_id, slots in (
+C:\Users\X1\EduPath\scripts\build_japan_program_master_rows.py:129: f"{university_id} has "
+C:\Users\X1\EduPath\scripts\build_japan_program_master_rows.py:153: degree_level = seed.get(
+C:\Users\X1\EduPath\scripts\build_japan_program_master_rows.py:154: "degree_level_hint",
+C:\Users\X1\EduPath\scripts\build_japan_program_master_rows.py:159: "official_source_url",
+C:\Users\X1\EduPath\scripts\build_japan_program_master_rows.py:163: university_id = seed.get(
+C:\Users\X1\EduPath\scripts\build_japan_program_master_rows.py:164: "university_id",
+C:\Users\X1\EduPath\scripts\build_japan_program_master_rows.py:168: if not university_id:
+C:\Users\X1\EduPath\scripts\build_japan_program_master_rows.py:171: "university_id."
+C:\Users\X1\EduPath\scripts\build_japan_program_master_rows.py:180: if not degree_level:
+C:\Users\X1\EduPath\scripts\build_japan_program_master_rows.py:183: "degree_level_hint."
+C:\Users\X1\EduPath\scripts\build_japan_program_master_rows.py:189: "official_source_url."
+C:\Users\X1\EduPath\scripts\build_japan_program_master_rows.py:199: "university_id": university_id,
+C:\Users\X1\EduPath\scripts\build_japan_program_master_rows.py:205: "degree_level": degree_level,
+C:\Users\X1\EduPath\scripts\build_japan_program_master_rows.py:213: "tuition_fee": "",
+C:\Users\X1\EduPath\scripts\build_japan_program_master_rows.py:228: "last_verified_at": "",
+C:\Users\X1\EduPath\scripts\build_japan_program_master_rows.py:229: "freshness_status": (
+C:\Users\X1\EduPath\scripts\build_japan_program_master_rows.py:284: "degree_level"
+C:\Users\X1\EduPath\scripts\build_japan_program_master_rows.py:303: f"{len(university_ids)}"
+C:\Users\X1\EduPath\scripts\build_university_master_rows.py:66: university_id = (
+C:\Users\X1\EduPath\scripts\build_university_master_rows.py:72: "university_id": university_id,
+C:\Users\X1\EduPath\scripts\build_university_master_rows.py:90: "degree_levels": "",
+C:\Users\X1\EduPath\scripts\build_university_master_rows.py:92: "source_url": row[
+C:\Users\X1\EduPath\scripts\build_university_master_rows.py:96: "last_verified_at": "",
+C:\Users\X1\EduPath\scripts\build_university_master_rows.py:97: "freshness_status": (
+C:\Users\X1\EduPath\scripts\build_university_master_rows.py:104: "university_id",
+C:\Users\X1\EduPath\scripts\build_university_master_rows.py:114: "degree_levels",
+C:\Users\X1\EduPath\scripts\build_university_master_rows.py:116: "source_url",
+C:\Users\X1\EduPath\scripts\build_university_master_rows.py:118: "last_verified_at",
+C:\Users\X1\EduPath\scripts\build_university_master_rows.py:119: "freshness_status",
+C:\Users\X1\EduPath\scripts\create_japan_program_seed.py:358: university_id,
+C:\Users\X1\EduPath\scripts\create_japan_program_seed.py:362: degree_level_hint,
+C:\Users\X1\EduPath\scripts\create_japan_program_seed.py:363: source_url,
+C:\Users\X1\EduPath\scripts\create_japan_program_seed.py:368: "university_id": university_id,
+C:\Users\X1\EduPath\scripts\create_japan_program_seed.py:373: "degree_level_hint": degree_level_hint,
+C:\Users\X1\EduPath\scripts\create_japan_program_seed.py:374: "official_source_url": source_url,
+C:\Users\X1\EduPath\scripts\create_japan_program_seed.py:385: "university_id",
+C:\Users\X1\EduPath\scripts\create_japan_program_seed.py:390: "degree_level_hint",
+C:\Users\X1\EduPath\scripts\create_japan_program_seed.py:391: "official_source_url",
+C:\Users\X1\EduPath\scripts\create_japan_program_seed.py:410: row["university_id"]
+C:\Users\X1\EduPath\scripts\create_program_collection_queue.py:39: "university_id": university[
+C:\Users\X1\EduPath\scripts\create_program_collection_queue.py:40: "university_id"
+C:\Users\X1\EduPath\scripts\create_program_collection_queue.py:64: "university_id",
+C:\Users\X1\EduPath\scripts\create_program_tuition_context_staging.py:93: university.get("university_id"):
+C:\Users\X1\EduPath\scripts\create_program_tuition_context_staging.py:98: japan_university_ids = set(
+C:\Users\X1\EduPath\scripts\create_program_tuition_context_staging.py:113: if program.get("university_id")
+C:\Users\X1\EduPath\scripts\create_program_tuition_context_staging.py:114: in japan_university_ids
+C:\Users\X1\EduPath\scripts\create_program_tuition_context_staging.py:156: "university_id",
+C:\Users\X1\EduPath\scripts\create_program_tuition_context_staging.py:159: "degree_level",
+C:\Users\X1\EduPath\scripts\create_program_tuition_context_staging.py:161: "current_tuition_fee",
+C:\Users\X1\EduPath\scripts\create_program_tuition_context_staging.py:167: "tuition_source_url",
+C:\Users\X1\EduPath\scripts\create_program_tuition_context_staging.py:168: "tuition_last_verified_at",
+C:\Users\X1\EduPath\scripts\create_program_tuition_context_staging.py:172: "current_last_verified_at",
+C:\Users\X1\EduPath\scripts\create_program_tuition_context_staging.py:183: program.get("university_id"),
+C:\Users\X1\EduPath\scripts\create_program_tuition_context_staging.py:187: "degree_level",
+C:\Users\X1\EduPath\scripts\create_program_tuition_context_staging.py:210: university_id = (
+C:\Users\X1\EduPath\scripts\create_program_tuition_context_staging.py:212: "university_id"
+C:\Users\X1\EduPath\scripts\create_program_tuition_context_staging.py:223: "university_id":
+C:\Users\X1\EduPath\scripts\create_program_tuition_context_staging.py:224: university_id,
+C:\Users\X1\EduPath\scripts\create_program_tuition_context_staging.py:228: university_id,
+C:\Users\X1\EduPath\scripts\create_program_tuition_context_staging.py:237: "degree_level":
+C:\Users\X1\EduPath\scripts\create_program_tuition_context_staging.py:239: "degree_level"
+C:\Users\X1\EduPath\scripts\create_program_tuition_context_staging.py:242: "current_tuition_fee":
+C:\Users\X1\EduPath\scripts\create_program_tuition_context_staging.py:244: "tuition_fee"
+C:\Users\X1\EduPath\scripts\create_program_tuition_context_staging.py:267: "tuition_source_url":
+C:\Users\X1\EduPath\scripts\create_program_tuition_context_staging.py:270: "tuition_last_verified_at":
+C:\Users\X1\EduPath\scripts\create_program_tuition_context_staging.py:281: "current_last_verified_at":
+C:\Users\X1\EduPath\scripts\create_program_tuition_context_staging.py:283: "last_verified_at"
+C:\Users\X1\EduPath\scripts\create_university_seed_list.py:193: source_name, source_url = SOURCE_INFO[
+C:\Users\X1\EduPath\scripts\create_university_seed_list.py:203: "national_source_url": source_url,
+C:\Users\X1\EduPath\scripts\create_university_seed_list.py:216: "national_source_url",
+C:\Users\X1\EduPath\scripts\dry_run_program_tuition_mongodb_update.py:303: "university_id": 1,
+C:\Users\X1\EduPath\scripts\dry_run_program_tuition_mongodb_update.py:305: "tuition_fee": 1,
+C:\Users\X1\EduPath\scripts\dry_run_program_tuition_mongodb_update.py:315: "tuition_source_url": 1,
+C:\Users\X1\EduPath\scripts\dry_run_program_tuition_mongodb_update.py:317: "tuition_last_verified_at": 1,
+C:\Users\X1\EduPath\scripts\dry_run_program_tuition_mongodb_update.py:340: "tuition_fee"
+C:\Users\X1\EduPath\scripts\dry_run_program_tuition_mongodb_update.py:348: "previous_tuition_fee"
+C:\Users\X1\EduPath\scripts\dry_run_program_tuition_mongodb_update.py:356: "current_tuition_fee"
+C:\Users\X1\EduPath\scripts\dry_run_program_tuition_mongodb_update.py:447: "tuition_source_url":
+C:\Users\X1\EduPath\scripts\dry_run_program_tuition_mongodb_update.py:449: "tuition_source_url"
+C:\Users\X1\EduPath\scripts\dry_run_program_tuition_mongodb_update.py:452: "tuition_last_verified_at":
+C:\Users\X1\EduPath\scripts\dry_run_program_tuition_mongodb_update.py:454: "tuition_last_verified_at"
+C:\Users\X1\EduPath\scripts\enrich_japan_program_duration_mode.py:52: "source_url": (
+C:\Users\X1\EduPath\scripts\enrich_japan_program_duration_mode.py:68: "source_url": (
+C:\Users\X1\EduPath\scripts\enrich_japan_program_duration_mode.py:87: "source_url": (
+C:\Users\X1\EduPath\scripts\enrich_japan_program_duration_mode.py:103: "source_url": (
+C:\Users\X1\EduPath\scripts\enrich_japan_program_duration_mode.py:120: "source_url": (
+C:\Users\X1\EduPath\scripts\enrich_japan_program_duration_mode.py:136: "source_url": (
+C:\Users\X1\EduPath\scripts\enrich_japan_program_duration_mode.py:151: degree_level: str,
+C:\Users\X1\EduPath\scripts\enrich_japan_program_duration_mode.py:159: degree_level
+C:\Users\X1\EduPath\scripts\enrich_japan_program_duration_mode.py:165: f"{program_id} / {degree_level}"
+C:\Users\X1\EduPath\scripts\enrich_japan_program_duration_mode.py:173: degree_level: str,
+C:\Users\X1\EduPath\scripts\enrich_japan_program_duration_mode.py:183: if degree_level == "Bachelor":
+C:\Users\X1\EduPath\scripts\enrich_japan_program_duration_mode.py:186: if degree_level in {
+C:\Users\X1\EduPath\scripts\enrich_japan_program_duration_mode.py:236: degree_level = row[
+C:\Users\X1\EduPath\scripts\enrich_japan_program_duration_mode.py:237: "degree_level"
+C:\Users\X1\EduPath\scripts\enrich_japan_program_duration_mode.py:240: university_id = row[
+C:\Users\X1\EduPath\scripts\enrich_japan_program_duration_mode.py:241: "university_id"
+C:\Users\X1\EduPath\scripts\enrich_japan_program_duration_mode.py:246: degree_level,
+C:\Users\X1\EduPath\scripts\enrich_japan_program_duration_mode.py:251: degree_level,
+C:\Users\X1\EduPath\scripts\enrich_japan_program_duration_mode.py:278: "last_verified_at"
+C:\Users\X1\EduPath\scripts\enrich_japan_program_duration_mode.py:282: "freshness_status",
+C:\Users\X1\EduPath\scripts\enrich_japan_program_duration_mode.py:293: "freshness_status"
+C:\Users\X1\EduPath\scripts\enrich_japan_program_duration_mode.py:300: "freshness_status"
+C:\Users\X1\EduPath\scripts\enrich_japan_program_duration_mode.py:306: "university_id": (
+C:\Users\X1\EduPath\scripts\enrich_japan_program_duration_mode.py:307: university_id
+C:\Users\X1\EduPath\scripts\enrich_japan_program_duration_mode.py:312: "degree_level": (
+C:\Users\X1\EduPath\scripts\enrich_japan_program_duration_mode.py:313: degree_level
+C:\Users\X1\EduPath\scripts\enrich_japan_program_duration_mode.py:326: "duration_source_url": (
+C:\Users\X1\EduPath\scripts\enrich_japan_program_duration_mode.py:328: "source_url"
+C:\Users\X1\EduPath\scripts\enrich_japan_program_duration_mode.py:421: "university_id",
+C:\Users\X1\EduPath\scripts\enrich_japan_program_duration_mode.py:423: "degree_level",
+C:\Users\X1\EduPath\scripts\enrich_japan_program_duration_mode.py:427: "duration_source_url",
+C:\Users\X1\EduPath\scripts\enrich_japan_program_intake_deadline.py:49: "source_url": (
+C:\Users\X1\EduPath\scripts\enrich_japan_program_intake_deadline.py:65: "source_url": (
+C:\Users\X1\EduPath\scripts\enrich_japan_program_intake_deadline.py:81: "source_url": (
+C:\Users\X1\EduPath\scripts\enrich_japan_program_intake_deadline.py:102: "source_url": (
+C:\Users\X1\EduPath\scripts\enrich_japan_program_intake_deadline.py:124: "source_url": (
+C:\Users\X1\EduPath\scripts\enrich_japan_program_intake_deadline.py:142: "source_url": (
+C:\Users\X1\EduPath\scripts\enrich_japan_program_intake_deadline.py:165: "source_url": (
+C:\Users\X1\EduPath\scripts\enrich_japan_program_intake_deadline.py:182: "source_url": (
+C:\Users\X1\EduPath\scripts\enrich_japan_program_intake_deadline.py:199: "source_url": (
+C:\Users\X1\EduPath\scripts\enrich_japan_program_intake_deadline.py:221: "source_url": (
+C:\Users\X1\EduPath\scripts\enrich_japan_program_intake_deadline.py:244: "source_url": (
+C:\Users\X1\EduPath\scripts\enrich_japan_program_intake_deadline.py:266: "source_url": (
+C:\Users\X1\EduPath\scripts\enrich_japan_program_intake_deadline.py:288: "source_url": (
+C:\Users\X1\EduPath\scripts\enrich_japan_program_intake_deadline.py:308: "source_url": (
+C:\Users\X1\EduPath\scripts\enrich_japan_program_intake_deadline.py:328: "source_url": (
+C:\Users\X1\EduPath\scripts\enrich_japan_program_intake_deadline.py:348: "source_url": (
+C:\Users\X1\EduPath\scripts\enrich_japan_program_intake_deadline.py:367: "source_url": (
+C:\Users\X1\EduPath\scripts\enrich_japan_program_intake_deadline.py:425: university_id = row[
+C:\Users\X1\EduPath\scripts\enrich_japan_program_intake_deadline.py:426: "university_id"
+C:\Users\X1\EduPath\scripts\enrich_japan_program_intake_deadline.py:452: source_url = direct_rule[
+C:\Users\X1\EduPath\scripts\enrich_japan_program_intake_deadline.py:453: "source_url"
+C:\Users\X1\EduPath\scripts\enrich_japan_program_intake_deadline.py:481: university_id
+C:\Users\X1\EduPath\scripts\enrich_japan_program_intake_deadline.py:495: source_url = complex_info[
+C:\Users\X1\EduPath\scripts\enrich_japan_program_intake_deadline.py:496: "source_url"
+C:\Users\X1\EduPath\scripts\enrich_japan_program_intake_deadline.py:518: source_url = row.get(
+C:\Users\X1\EduPath\scripts\enrich_japan_program_intake_deadline.py:537: "last_verified_at"
+C:\Users\X1\EduPath\scripts\enrich_japan_program_intake_deadline.py:541: "freshness_status",
+C:\Users\X1\EduPath\scripts\enrich_japan_program_intake_deadline.py:561: "freshness_status"
+C:\Users\X1\EduPath\scripts\enrich_japan_program_intake_deadline.py:568: "freshness_status"
+C:\Users\X1\EduPath\scripts\enrich_japan_program_intake_deadline.py:574: "university_id": (
+C:\Users\X1\EduPath\scripts\enrich_japan_program_intake_deadline.py:575: university_id
+C:\Users\X1\EduPath\scripts\enrich_japan_program_intake_deadline.py:580: "degree_level": row[
+C:\Users\X1\EduPath\scripts\enrich_japan_program_intake_deadline.py:581: "degree_level"
+C:\Users\X1\EduPath\scripts\enrich_japan_program_intake_deadline.py:597: "source_url": (
+C:\Users\X1\EduPath\scripts\enrich_japan_program_intake_deadline.py:598: source_url
+C:\Users\X1\EduPath\scripts\enrich_japan_program_intake_deadline.py:645: "university_id",
+C:\Users\X1\EduPath\scripts\enrich_japan_program_intake_deadline.py:647: "degree_level",
+C:\Users\X1\EduPath\scripts\enrich_japan_program_intake_deadline.py:652: "source_url",
+C:\Users\X1\EduPath\scripts\enrich_japan_program_language.py:144: "source_url": (
+C:\Users\X1\EduPath\scripts\enrich_japan_program_language.py:155: "source_url": (
+C:\Users\X1\EduPath\scripts\enrich_japan_program_language.py:166: "source_url": (
+C:\Users\X1\EduPath\scripts\enrich_japan_program_language.py:178: "source_url": (
+C:\Users\X1\EduPath\scripts\enrich_japan_program_language.py:188: "source_url": (
+C:\Users\X1\EduPath\scripts\enrich_japan_program_language.py:199: "source_url": (
+C:\Users\X1\EduPath\scripts\enrich_japan_program_language.py:210: "source_url": (
+C:\Users\X1\EduPath\scripts\enrich_japan_program_language.py:220: "source_url": (
+C:\Users\X1\EduPath\scripts\enrich_japan_program_language.py:232: "source_url": (
+C:\Users\X1\EduPath\scripts\enrich_japan_program_language.py:242: "source_url": (
+C:\Users\X1\EduPath\scripts\enrich_japan_program_language.py:253: "source_url": (
+C:\Users\X1\EduPath\scripts\enrich_japan_program_language.py:264: "source_url": (
+C:\Users\X1\EduPath\scripts\enrich_japan_program_language.py:279: "source_url": (
+C:\Users\X1\EduPath\scripts\enrich_japan_program_language.py:290: "source_url": (
+C:\Users\X1\EduPath\scripts\enrich_japan_program_language.py:301: "source_url": (
+C:\Users\X1\EduPath\scripts\enrich_japan_program_language.py:334: university_id: str,
+C:\Users\X1\EduPath\scripts\enrich_japan_program_language.py:345: university_id
+C:\Users\X1\EduPath\scripts\enrich_japan_program_language.py:351: f"{university_id}"
+C:\Users\X1\EduPath\scripts\enrich_japan_program_language.py:437: university_id = row[
+C:\Users\X1\EduPath\scripts\enrich_japan_program_language.py:438: "university_id"
+C:\Users\X1\EduPath\scripts\enrich_japan_program_language.py:447: university_id,
+C:\Users\X1\EduPath\scripts\enrich_japan_program_language.py:455: "last_verified_at"
+C:\Users\X1\EduPath\scripts\enrich_japan_program_language.py:459: "freshness_status",
+C:\Users\X1\EduPath\scripts\enrich_japan_program_language.py:475: "freshness_status"
+C:\Users\X1\EduPath\scripts\enrich_japan_program_language.py:482: "freshness_status"
+C:\Users\X1\EduPath\scripts\enrich_japan_program_language.py:488: "university_id": (
+C:\Users\X1\EduPath\scripts\enrich_japan_program_language.py:489: university_id
+C:\Users\X1\EduPath\scripts\enrich_japan_program_language.py:500: "source_url": source[
+C:\Users\X1\EduPath\scripts\enrich_japan_program_language.py:501: "source_url"
+C:\Users\X1\EduPath\scripts\enrich_japan_program_language.py:565: "university_id",
+C:\Users\X1\EduPath\scripts\enrich_japan_program_language.py:569: "source_url",
+C:\Users\X1\EduPath\scripts\enrich_japan_program_requirements.py:47: "source_url": (
+C:\Users\X1\EduPath\scripts\enrich_japan_program_requirements.py:73: "source_url": (
+C:\Users\X1\EduPath\scripts\enrich_japan_program_requirements.py:97: "source_url": (
+C:\Users\X1\EduPath\scripts\enrich_japan_program_requirements.py:119: "source_url": (
+C:\Users\X1\EduPath\scripts\enrich_japan_program_requirements.py:140: "source_url": (
+C:\Users\X1\EduPath\scripts\enrich_japan_program_requirements.py:165: "source_url": (
+C:\Users\X1\EduPath\scripts\enrich_japan_program_requirements.py:189: "source_url": (
+C:\Users\X1\EduPath\scripts\enrich_japan_program_requirements.py:213: "source_url": (
+C:\Users\X1\EduPath\scripts\enrich_japan_program_requirements.py:237: "source_url": (
+C:\Users\X1\EduPath\scripts\enrich_japan_program_requirements.py:260: "source_url": (
+C:\Users\X1\EduPath\scripts\enrich_japan_program_requirements.py:285: "source_url": (
+C:\Users\X1\EduPath\scripts\enrich_japan_program_requirements.py:309: "source_url": (
+C:\Users\X1\EduPath\scripts\enrich_japan_program_requirements.py:360: university_id: str,
+C:\Users\X1\EduPath\scripts\enrich_japan_program_requirements.py:364: university_id
+C:\Users\X1\EduPath\scripts\enrich_japan_program_requirements.py:370: f"{university_id}"
+C:\Users\X1\EduPath\scripts\enrich_japan_program_requirements.py:426: university_id = row[
+C:\Users\X1\EduPath\scripts\enrich_japan_program_requirements.py:427: "university_id"
+C:\Users\X1\EduPath\scripts\enrich_japan_program_requirements.py:432: university_id,
+C:\Users\X1\EduPath\scripts\enrich_japan_program_requirements.py:455: "last_verified_at"
+C:\Users\X1\EduPath\scripts\enrich_japan_program_requirements.py:459: "freshness_status",
+C:\Users\X1\EduPath\scripts\enrich_japan_program_requirements.py:470: "freshness_status"
+C:\Users\X1\EduPath\scripts\enrich_japan_program_requirements.py:477: "freshness_status"
+C:\Users\X1\EduPath\scripts\enrich_japan_program_requirements.py:483: "university_id": university_id,
+C:\Users\X1\EduPath\scripts\enrich_japan_program_requirements.py:487: "degree_level": row[
+C:\Users\X1\EduPath\scripts\enrich_japan_program_requirements.py:488: "degree_level"
+C:\Users\X1\EduPath\scripts\enrich_japan_program_requirements.py:508: "source_url": requirement[
+C:\Users\X1\EduPath\scripts\enrich_japan_program_requirements.py:509: "source_url"
+C:\Users\X1\EduPath\scripts\enrich_japan_program_requirements.py:554: "university_id",
+C:\Users\X1\EduPath\scripts\enrich_japan_program_requirements.py:556: "degree_level",
+C:\Users\X1\EduPath\scripts\enrich_japan_program_requirements.py:565: "source_url",
+C:\Users\X1\EduPath\scripts\enrich_japan_program_tuition.py:25: "source_url": (
+C:\Users\X1\EduPath\scripts\enrich_japan_program_tuition.py:27: "en/prospective-students/tuition_fees.html"
+C:\Users\X1\EduPath\scripts\enrich_japan_program_tuition.py:35: "source_url": (
+C:\Users\X1\EduPath\scripts\enrich_japan_program_tuition.py:45: "source_url": (
+C:\Users\X1\EduPath\scripts\enrich_japan_program_tuition.py:55: "source_url": (
+C:\Users\X1\EduPath\scripts\enrich_japan_program_tuition.py:65: "source_url": (
+C:\Users\X1\EduPath\scripts\enrich_japan_program_tuition.py:75: "source_url": (
+C:\Users\X1\EduPath\scripts\enrich_japan_program_tuition.py:85: "source_url": (
+C:\Users\X1\EduPath\scripts\enrich_japan_program_tuition.py:95: "source_url": (
+C:\Users\X1\EduPath\scripts\enrich_japan_program_tuition.py:108: "source_url": (
+C:\Users\X1\EduPath\scripts\enrich_japan_program_tuition.py:121: "source_url": (
+C:\Users\X1\EduPath\scripts\enrich_japan_program_tuition.py:137: "source_url": (
+C:\Users\X1\EduPath\scripts\enrich_japan_program_tuition.py:155: "source_url": (
+C:\Users\X1\EduPath\scripts\enrich_japan_program_tuition.py:167: university_id: str,
+C:\Users\X1\EduPath\scripts\enrich_japan_program_tuition.py:168: degree_level: str,
+C:\Users\X1\EduPath\scripts\enrich_japan_program_tuition.py:171: university_id
+C:\Users\X1\EduPath\scripts\enrich_japan_program_tuition.py:177: f"{university_id}"
+C:\Users\X1\EduPath\scripts\enrich_japan_program_tuition.py:180: if degree_level in config:
+C:\Users\X1\EduPath\scripts\enrich_japan_program_tuition.py:182: config[degree_level]
+C:\Users\X1\EduPath\scripts\enrich_japan_program_tuition.py:192: f"{university_id} / {degree_level}"
+C:\Users\X1\EduPath\scripts\enrich_japan_program_tuition.py:233: university_id = row[
+C:\Users\X1\EduPath\scripts\enrich_japan_program_tuition.py:234: "university_id"
+C:\Users\X1\EduPath\scripts\enrich_japan_program_tuition.py:237: degree_level = row[
+C:\Users\X1\EduPath\scripts\enrich_japan_program_tuition.py:238: "degree_level"
+C:\Users\X1\EduPath\scripts\enrich_japan_program_tuition.py:241: tuition_fee = get_tuition(
+C:\Users\X1\EduPath\scripts\enrich_japan_program_tuition.py:242: university_id,
+C:\Users\X1\EduPath\scripts\enrich_japan_program_tuition.py:243: degree_level,
+C:\Users\X1\EduPath\scripts\enrich_japan_program_tuition.py:247: university_id
+C:\Users\X1\EduPath\scripts\enrich_japan_program_tuition.py:250: row["tuition_fee"] = str(
+C:\Users\X1\EduPath\scripts\enrich_japan_program_tuition.py:251: tuition_fee
+C:\Users\X1\EduPath\scripts\enrich_japan_program_tuition.py:259: "last_verified_at"
+C:\Users\X1\EduPath\scripts\enrich_japan_program_tuition.py:262: if university_id == "uni_jp_009":
+C:\Users\X1\EduPath\scripts\enrich_japan_program_tuition.py:264: "freshness_status"
+C:\Users\X1\EduPath\scripts\enrich_japan_program_tuition.py:271: "freshness_status"
+C:\Users\X1\EduPath\scripts\enrich_japan_program_tuition.py:279: "university_id": university_id,
+C:\Users\X1\EduPath\scripts\enrich_japan_program_tuition.py:283: "degree_level": degree_level,
+C:\Users\X1\EduPath\scripts\enrich_japan_program_tuition.py:284: "tuition_fee": tuition_fee,
+C:\Users\X1\EduPath\scripts\enrich_japan_program_tuition.py:290: "source_url": config[
+C:\Users\X1\EduPath\scripts\enrich_japan_program_tuition.py:291: "source_url"
+C:\Users\X1\EduPath\scripts\enrich_japan_program_tuition.py:304: "tuition_fee"
+C:\Users\X1\EduPath\scripts\enrich_japan_program_tuition.py:341: "university_id",
+C:\Users\X1\EduPath\scripts\enrich_japan_program_tuition.py:343: "degree_level",
+C:\Users\X1\EduPath\scripts\enrich_japan_program_tuition.py:344: "tuition_fee",
+C:\Users\X1\EduPath\scripts\enrich_japan_program_tuition.py:348: "source_url",
+C:\Users\X1\EduPath\scripts\enrich_japan_program_tuition.py:372: "tuition_fee"
+C:\Users\X1\EduPath\scripts\enrich_japan_program_tuition.py:422: "Verification: tuition_fee, "
+C:\Users\X1\EduPath\scripts\enrich_university_seed_list.py:452: "national_source_url",
+C:\Users\X1\EduPath\scripts\finalize_scholarship_algorithm_v22.py:803: "degree_level":
+C:\Users\X1\EduPath\scripts\import_university_batch.py:21: "university_id",
+C:\Users\X1\EduPath\scripts\import_university_batch.py:26: "source_url",
+C:\Users\X1\EduPath\scripts\import_university_batch.py:73: university_id = clean_text(
+C:\Users\X1\EduPath\scripts\import_university_batch.py:74: record.get("university_id")
+C:\Users\X1\EduPath\scripts\import_university_batch.py:93: source_url = clean_text(
+C:\Users\X1\EduPath\scripts\import_university_batch.py:94: record.get("source_url")
+C:\Users\X1\EduPath\scripts\import_university_batch.py:98: university_id
+C:\Users\X1\EduPath\scripts\import_university_batch.py:99: and university_id in seen_ids
+C:\Users\X1\EduPath\scripts\import_university_batch.py:103: f"university_id {university_id}"
+C:\Users\X1\EduPath\scripts\import_university_batch.py:106: seen_ids.add(university_id)
+C:\Users\X1\EduPath\scripts\import_university_batch.py:145: source_url
+C:\Users\X1\EduPath\scripts\import_university_batch.py:146: and not source_url.startswith(
+C:\Users\X1\EduPath\scripts\import_university_batch.py:151: f"Row {position}: invalid source_url"
+C:\Users\X1\EduPath\scripts\import_university_batch.py:156: "university_id": university_id,
+C:\Users\X1\EduPath\scripts\import_university_batch.py:161: "source_url": source_url,
+C:\Users\X1\EduPath\scripts\import_university_batch.py:189: record["university_id"]
+C:\Users\X1\EduPath\scripts\import_university_batch.py:194: item["university_id"]: item
+C:\Users\X1\EduPath\scripts\import_university_batch.py:199: "university_id": {
+C:\Users\X1\EduPath\scripts\import_university_batch.py:205: "university_id": 1,
+C:\Users\X1\EduPath\scripts\import_university_batch.py:218: ): item.get("university_id")
+C:\Users\X1\EduPath\scripts\import_university_batch.py:225: "university_id": 1,
+C:\Users\X1\EduPath\scripts\import_university_batch.py:238: record["university_id"]
+C:\Users\X1\EduPath\scripts\import_university_batch.py:254: record["university_id"],
+C:\Users\X1\EduPath\scripts\import_university_batch.py:280: != record["university_id"]
+C:\Users\X1\EduPath\scripts\import_university_batch.py:289: "university_id"
+C:\Users\X1\EduPath\scripts\import_university_batch.py:352: "last_verified_at": now,
+C:\Users\X1\EduPath\scripts\import_university_batch.py:353: "freshness_status": "current",
+C:\Users\X1\EduPath\scripts\import_university_batch.py:359: "university_id":
+C:\Users\X1\EduPath\scripts\import_university_batch.py:360: record["university_id"],
+C:\Users\X1\EduPath\scripts\load_countries_to_mongodb.py:104: document["last_verified_at"] = parse_required_date(
+C:\Users\X1\EduPath\scripts\load_countries_to_mongodb.py:105: document.get("last_verified_at"),
+C:\Users\X1\EduPath\scripts\load_countries_to_mongodb.py:106: "last_verified_at",
+C:\Users\X1\EduPath\scripts\load_countries_to_mongodb.py:360: "last_verified_at": 1,
+C:\Users\X1\EduPath\scripts\load_japan_programs_into_full_dataset.py:24: "university_id",
+C:\Users\X1\EduPath\scripts\load_japan_programs_into_full_dataset.py:27: "degree_level",
+C:\Users\X1\EduPath\scripts\load_japan_programs_into_full_dataset.py:31: "tuition_fee",
+C:\Users\X1\EduPath\scripts\load_japan_programs_into_full_dataset.py:42: "last_verified_at",
+C:\Users\X1\EduPath\scripts\load_japan_programs_into_full_dataset.py:43: "freshness_status",
+C:\Users\X1\EduPath\scripts\load_japan_programs_into_full_dataset.py:64: "tuition_fee",
+C:\Users\X1\EduPath\scripts\load_japan_programs_into_full_dataset.py:102: "last_verified_at",
+C:\Users\X1\EduPath\scripts\load_japan_programs_into_full_dataset.py:116: university_id,
+C:\Users\X1\EduPath\scripts\load_japan_programs_into_full_dataset.py:124: university_id = (
+C:\Users\X1\EduPath\scripts\load_japan_programs_into_full_dataset.py:125: str(university_id).strip()
+C:\Users\X1\EduPath\scripts\load_japan_programs_into_full_dataset.py:126: if university_id is not None
+C:\Users\X1\EduPath\scripts\load_japan_programs_into_full_dataset.py:134: or university_id.startswith(
+C:\Users\X1\EduPath\scripts\load_japan_programs_into_full_dataset.py:223: "university_id"
+C:\Users\X1\EduPath\scripts\load_japan_programs_into_full_dataset.py:388: university_id = values[1]
+C:\Users\X1\EduPath\scripts\load_japan_programs_into_full_dataset.py:392: university_id,
+C:\Users\X1\EduPath\scripts\load_japan_programs_into_full_dataset.py:545: "last_verified_at",
+C:\Users\X1\EduPath\scripts\load_japan_programs_into_full_dataset.py:630: university_id = values[1]
+C:\Users\X1\EduPath\scripts\load_japan_programs_into_full_dataset.py:639: university_id,
+C:\Users\X1\EduPath\scripts\load_programs_to_mongodb.py:124: document["last_verified_at"] = parse_required_date(
+C:\Users\X1\EduPath\scripts\load_programs_to_mongodb.py:125: document.get("last_verified_at"),
+C:\Users\X1\EduPath\scripts\load_programs_to_mongodb.py:126: "last_verified_at",
+C:\Users\X1\EduPath\scripts\load_programs_to_mongodb.py:134: document["tuition_last_verified_at"] = parse_optional_date(
+C:\Users\X1\EduPath\scripts\load_programs_to_mongodb.py:135: document.get("tuition_last_verified_at"),
+C:\Users\X1\EduPath\scripts\load_programs_to_mongodb.py:136: "tuition_last_verified_at",
+C:\Users\X1\EduPath\scripts\load_programs_to_mongodb.py:234: university_id_index = (
+C:\Users\X1\EduPath\scripts\load_programs_to_mongodb.py:236: [("university_id", ASCENDING)],
+C:\Users\X1\EduPath\scripts\load_programs_to_mongodb.py:237: name="program_university_id",
+C:\Users\X1\EduPath\scripts\load_programs_to_mongodb.py:241: degree_level_index = (
+C:\Users\X1\EduPath\scripts\load_programs_to_mongodb.py:243: [("degree_level", ASCENDING)],
+C:\Users\X1\EduPath\scripts\load_programs_to_mongodb.py:244: name="program_degree_level",
+C:\Users\X1\EduPath\scripts\load_programs_to_mongodb.py:254: print(f"Index ready: {university_id_index}")
+C:\Users\X1\EduPath\scripts\load_programs_to_mongodb.py:255: print(f"Index ready: {degree_level_index}")
+C:\Users\X1\EduPath\scripts\load_programs_to_mongodb.py:270: university_id = document.get("university_id")
+C:\Users\X1\EduPath\scripts\load_programs_to_mongodb.py:277: if not university_id:
+C:\Users\X1\EduPath\scripts\load_programs_to_mongodb.py:280: "a university_id."
+C:\Users\X1\EduPath\scripts\load_programs_to_mongodb.py:286: {"university_id": university_id},
+C:\Users\X1\EduPath\scripts\load_programs_to_mongodb.py:293: f"University '{university_id}' does not "
+C:\Users\X1\EduPath\scripts\load_programs_to_mongodb.py:374: "university_id": 1,
+C:\Users\X1\EduPath\scripts\load_programs_to_mongodb.py:377: "degree_level": 1,
+C:\Users\X1\EduPath\scripts\load_programs_to_mongodb.py:379: "tuition_fee": 1,
+C:\Users\X1\EduPath\scripts\load_programs_to_mongodb.py:383: "freshness_status": 1,
+C:\Users\X1\EduPath\scripts\load_scholarships_to_mongodb.py:143: document["last_verified_at"] = parse_required_date(
+C:\Users\X1\EduPath\scripts\load_scholarships_to_mongodb.py:144: document.get("last_verified_at"),
+C:\Users\X1\EduPath\scripts\load_scholarships_to_mongodb.py:145: "last_verified_at",
+C:\Users\X1\EduPath\scripts\load_scholarships_to_mongodb.py:217: host_university_id = document.get(
+C:\Users\X1\EduPath\scripts\load_scholarships_to_mongodb.py:218: "host_university_id"
+C:\Users\X1\EduPath\scripts\load_scholarships_to_mongodb.py:221: if host_university_id is None:
+C:\Users\X1\EduPath\scripts\load_scholarships_to_mongodb.py:225: {"university_id": host_university_id},
+C:\Users\X1\EduPath\scripts\load_scholarships_to_mongodb.py:228: "university_id": 1,
+C:\Users\X1\EduPath\scripts\load_scholarships_to_mongodb.py:235: f"Host university '{host_university_id}' "
+C:\Users\X1\EduPath\scripts\load_scholarships_to_mongodb.py:244: f"Host university '{host_university_id}' "
+C:\Users\X1\EduPath\scripts\load_scholarships_to_mongodb.py:327: [("host_university_id", ASCENDING)],
+C:\Users\X1\EduPath\scripts\load_scholarships_to_mongodb.py:328: name="scholarship_host_university_id",
+C:\Users\X1\EduPath\scripts\load_scholarships_to_mongodb.py:334: [("degree_levels", ASCENDING)],
+C:\Users\X1\EduPath\scripts\load_scholarships_to_mongodb.py:335: name="scholarship_degree_levels",
+C:\Users\X1\EduPath\scripts\load_scholarships_to_mongodb.py:494: "host_university_id": 1,
+C:\Users\X1\EduPath\scripts\load_scholarships_to_mongodb.py:495: "degree_levels": 1,
+C:\Users\X1\EduPath\scripts\load_scholarships_to_mongodb.py:505: "freshness_status": 1,
+C:\Users\X1\EduPath\scripts\load_universities_into_full_dataset.py:21: "university_id",
+C:\Users\X1\EduPath\scripts\load_universities_into_full_dataset.py:31: "degree_levels",
+C:\Users\X1\EduPath\scripts\load_universities_into_full_dataset.py:33: "source_url",
+C:\Users\X1\EduPath\scripts\load_universities_into_full_dataset.py:35: "last_verified_at",
+C:\Users\X1\EduPath\scripts\load_universities_into_full_dataset.py:36: "freshness_status",
+C:\Users\X1\EduPath\scripts\load_universities_into_full_dataset.py:59: "last_verified_at",
+C:\Users\X1\EduPath\scripts\load_universities_into_full_dataset.py:282: "last_verified_at",
+C:\Users\X1\EduPath\scripts\load_universities_to_mongodb.py:88: last_verified_at = document.get(
+C:\Users\X1\EduPath\scripts\load_universities_to_mongodb.py:89: "last_verified_at"
+C:\Users\X1\EduPath\scripts\load_universities_to_mongodb.py:92: if last_verified_at is None:
+C:\Users\X1\EduPath\scripts\load_universities_to_mongodb.py:93: document["last_verified_at"] = None
+C:\Users\X1\EduPath\scripts\load_universities_to_mongodb.py:95: document["last_verified_at"] = parse_iso_date(
+C:\Users\X1\EduPath\scripts\load_universities_to_mongodb.py:96: last_verified_at,
+C:\Users\X1\EduPath\scripts\load_universities_to_mongodb.py:97: "last_verified_at",
+C:\Users\X1\EduPath\scripts\load_universities_to_mongodb.py:179: # Prevent duplicate university_id values.
+C:\Users\X1\EduPath\scripts\load_universities_to_mongodb.py:181: [("university_id", ASCENDING)],
+C:\Users\X1\EduPath\scripts\load_universities_to_mongodb.py:183: name="unique_university_id",
+C:\Users\X1\EduPath\scripts\load_universities_to_mongodb.py:195: university_id = document.get("university_id")
+C:\Users\X1\EduPath\scripts\load_universities_to_mongodb.py:197: if not university_id:
+C:\Users\X1\EduPath\scripts\load_universities_to_mongodb.py:200: "a university_id."
+C:\Users\X1\EduPath\scripts\load_universities_to_mongodb.py:204: {"university_id": university_id},
+C:\Users\X1\EduPath\scripts\load_universities_to_mongodb.py:221: f"{university_id} - "
+C:\Users\X1\EduPath\scripts\load_universities_to_mongodb.py:239: {"university_id": "uni_jp_001"},
+C:\Users\X1\EduPath\scripts\load_universities_to_mongodb.py:242: "university_id": 1,
+C:\Users\X1\EduPath\scripts\load_universities_to_mongodb.py:246: "degree_levels": 1,
+C:\Users\X1\EduPath\scripts\load_universities_to_mongodb.py:248: "last_verified_at": 1,
+C:\Users\X1\EduPath\scripts\load_universities_to_mongodb.py:249: "freshness_status": 1,
+C:\Users\X1\EduPath\scripts\load_user_profiles_to_mongodb.py:218: university_ids: list[Any],
+C:\Users\X1\EduPath\scripts\load_user_profiles_to_mongodb.py:223: if not university_ids:
+C:\Users\X1\EduPath\scripts\load_user_profiles_to_mongodb.py:228: "university_id": {
+C:\Users\X1\EduPath\scripts\load_user_profiles_to_mongodb.py:229: "$in": university_ids
+C:\Users\X1\EduPath\scripts\load_user_profiles_to_mongodb.py:234: "university_id": 1,
+C:\Users\X1\EduPath\scripts\load_user_profiles_to_mongodb.py:239: document["university_id"]
+C:\Users\X1\EduPath\scripts\load_user_profiles_to_mongodb.py:243: missing_ids = set(university_ids) - existing_ids
+C:\Users\X1\EduPath\scripts\load_user_profiles_to_mongodb.py:249: f"- {university_id}"
+C:\Users\X1\EduPath\scripts\load_user_profiles_to_mongodb.py:250: for university_id in sorted(missing_ids)
+C:\Users\X1\EduPath\scripts\load_user_profiles_to_mongodb.py:364: [("target_degree_level", ASCENDING)],
+C:\Users\X1\EduPath\scripts\load_user_profiles_to_mongodb.py:365: name="profile_target_degree_level",
+C:\Users\X1\EduPath\scripts\load_user_profiles_to_mongodb.py:424: university_ids=runtime_defaults[
+C:\Users\X1\EduPath\scripts\query_universities.py:90: # Query 2: Find one university by university_id
+C:\Users\X1\EduPath\scripts\query_universities.py:94: {"university_id": "uni_jp_001"},
+C:\Users\X1\EduPath\scripts\query_universities.py:98: print("\n2. Find university by university_id")
+C:\Users\X1\EduPath\scripts\query_universities.py:114: "university_id": 1,
+C:\Users\X1\EduPath\scripts\query_universities.py:136: "university_id": 1,
+C:\Users\X1\EduPath\scripts\query_universities.py:139: "degree_levels": 1,
+C:\Users\X1\EduPath\scripts\query_universities.py:160: {"degree_levels": "Master"},
+C:\Users\X1\EduPath\scripts\query_universities.py:163: "university_id": 1,
+C:\Users\X1\EduPath\scripts\query_universities.py:165: "degree_levels": 1,
+C:\Users\X1\EduPath\scripts\read_prototype_data.py:23: "university_id",
+C:\Users\X1\EduPath\scripts\read_prototype_data.py:33: "degree_levels",
+C:\Users\X1\EduPath\scripts\read_prototype_data.py:35: "source_url",
+C:\Users\X1\EduPath\scripts\read_prototype_data.py:37: "last_verified_at",
+C:\Users\X1\EduPath\scripts\read_prototype_data.py:38: "freshness_status",
+C:\Users\X1\EduPath\scripts\read_prototype_data.py:86: date_columns = ["collected_at", "last_verified_at"]
+C:\Users\X1\EduPath\scripts\read_prototype_data.py:112: print(f"University ID: {first_record['university_id']}")
+C:\Users\X1\EduPath\scripts\read_prototype_data.py:122: f"{first_record['last_verified_at'].date()}"
+C:\Users\X1\EduPath\scripts\recommend_programs.py:49: DEGREE_LEVEL_WEIGHT = 25
+C:\Users\X1\EduPath\scripts\recommend_programs.py:56: DEGREE_LEVEL_WEIGHT
+C:\Users\X1\EduPath\scripts\recommend_programs.py:78: def normalise_degree_level(value: object) -> str:
+C:\Users\X1\EduPath\scripts\recommend_programs.py:205: "degree_level": 0.0,
+C:\Users\X1\EduPath\scripts\recommend_programs.py:216: target_degree = normalise_degree_level(
+C:\Users\X1\EduPath\scripts\recommend_programs.py:217: profile.get("target_degree_level")
+C:\Users\X1\EduPath\scripts\recommend_programs.py:220: program_degree = normalise_degree_level(
+C:\Users\X1\EduPath\scripts\recommend_programs.py:221: program.get("degree_level")
+C:\Users\X1\EduPath\scripts\recommend_programs.py:227: score_breakdown["degree_level"] = (
+C:\Users\X1\EduPath\scripts\recommend_programs.py:228: DEGREE_LEVEL_WEIGHT
+C:\Users\X1\EduPath\scripts\recommend_programs.py:317: tuition_fee = program.get("tuition_fee")
+C:\Users\X1\EduPath\scripts\recommend_programs.py:327: elif tuition_fee is None:
+C:\Users\X1\EduPath\scripts\recommend_programs.py:345: elif tuition_fee <= annual_budget:
+C:\Users\X1\EduPath\scripts\recommend_programs.py:349: f"Annual tuition {tuition_fee} "
+C:\Users\X1\EduPath\scripts\recommend_programs.py:357: f"{tuition_fee - annual_budget} "
+C:\Users\X1\EduPath\scripts\recommend_programs.py:440: "university_id": university.get(
+C:\Users\X1\EduPath\scripts\recommend_programs.py:441: "university_id"
+C:\Users\X1\EduPath\scripts\recommend_programs.py:448: "degree_level": program.get("degree_level"),
+C:\Users\X1\EduPath\scripts\recommend_programs.py:455: "tuition_fee": tuition_fee,
+C:\Users\X1\EduPath\scripts\recommend_programs.py:513: university["university_id"]: university
+C:\Users\X1\EduPath\scripts\recommend_programs.py:518: "university_id": 1,
+C:\Users\X1\EduPath\scripts\recommend_programs.py:544: university_id = program.get("university_id")
+C:\Users\X1\EduPath\scripts\recommend_programs.py:547: university_id
+C:\Users\X1\EduPath\scripts\recommend_programs.py:600: "degree_level": DEGREE_LEVEL_WEIGHT,
+C:\Users\X1\EduPath\scripts\recommend_programs.py:614: "target_degree_level": profile.get(
+C:\Users\X1\EduPath\scripts\recommend_programs.py:615: "target_degree_level"
+C:\Users\X1\EduPath\scripts\recommend_scholarships.py:16: from scripts.recommend_programs import normalise_degree_level
+C:\Users\X1\EduPath\scripts\recommend_scholarships.py:51: DEGREE_LEVEL_WEIGHT = 20
+C:\Users\X1\EduPath\scripts\recommend_scholarships.py:61: DEGREE_LEVEL_WEIGHT
+C:\Users\X1\EduPath\scripts\recommend_scholarships.py:336: "degree_level": 0.0,
+C:\Users\X1\EduPath\scripts\recommend_scholarships.py:350: target_degree = normalise_degree_level(
+C:\Users\X1\EduPath\scripts\recommend_scholarships.py:351: profile.get("target_degree_level")
+C:\Users\X1\EduPath\scripts\recommend_scholarships.py:355: normalise_degree_level(value)
+C:\Users\X1\EduPath\scripts\recommend_scholarships.py:357: "degree_levels",
+C:\Users\X1\EduPath\scripts\recommend_scholarships.py:366: score_breakdown["degree_level"] = (
+C:\Users\X1\EduPath\scripts\recommend_scholarships.py:367: DEGREE_LEVEL_WEIGHT
+C:\Users\X1\EduPath\scripts\recommend_scholarships.py:654: "host_university_id": scholarship.get(
+C:\Users\X1\EduPath\scripts\recommend_scholarships.py:655: "host_university_id"
+C:\Users\X1\EduPath\scripts\recommend_scholarships.py:658: "degree_levels": scholarship.get(
+C:\Users\X1\EduPath\scripts\recommend_scholarships.py:659: "degree_levels"
+C:\Users\X1\EduPath\scripts\recommend_scholarships.py:693: "source_url": scholarship.get("source_url"),
+C:\Users\X1\EduPath\scripts\recommend_scholarships.py:748: university["university_id"]:
+C:\Users\X1\EduPath\scripts\recommend_scholarships.py:754: "university_id": 1,
+C:\Users\X1\EduPath\scripts\recommend_scholarships.py:788: host_university_id = scholarship.get(
+C:\Users\X1\EduPath\scripts\recommend_scholarships.py:789: "host_university_id"
+C:\Users\X1\EduPath\scripts\recommend_scholarships.py:794: if host_university_id is not None:
+C:\Users\X1\EduPath\scripts\recommend_scholarships.py:796: host_university_id
+C:\Users\X1\EduPath\scripts\recommend_scholarships.py:846: "degree_level": DEGREE_LEVEL_WEIGHT,
+C:\Users\X1\EduPath\scripts\recommend_scholarships.py:864: "target_degree_level": profile.get(
+C:\Users\X1\EduPath\scripts\recommend_scholarships.py:865: "target_degree_level"
+C:\Users\X1\EduPath\scripts\recommend_scholarships_final.py:67: DEGREE_LEVEL_WEIGHT = 20
+C:\Users\X1\EduPath\scripts\recommend_scholarships_final.py:75: DEGREE_LEVEL_WEIGHT
+C:\Users\X1\EduPath\scripts\recommend_scholarships_final.py:163: "degree_level": {
+C:\Users\X1\EduPath\scripts\recommend_scholarships_final.py:165: DEGREE_LEVEL_WEIGHT,
+C:\Users\X1\EduPath\scripts\recommend_scholarships_final.py:210: "target_degree_level"
+C:\Users\X1\EduPath\scripts\recommend_scholarships_final.py:216: "degree_levels"
+C:\Users\X1\EduPath\scripts\recommend_scholarships_final.py:225: "degree_level"
+C:\Users\X1\EduPath\scripts\recommend_scholarships_final.py:436: "degree_level": 0.0,
+C:\Users\X1\EduPath\scripts\recommend_scholarships_final.py:449: "target_degree_level"
+C:\Users\X1\EduPath\scripts\recommend_scholarships_final.py:459: "degree_levels",
+C:\Users\X1\EduPath\scripts\recommend_scholarships_final.py:472: "degree_level"
+C:\Users\X1\EduPath\scripts\recommend_scholarships_final.py:473: ] = DEGREE_LEVEL_WEIGHT
+C:\Users\X1\EduPath\scripts\recommend_scholarships_final.py:1076: "host_university_id":
+C:\Users\X1\EduPath\scripts\recommend_scholarships_final.py:1078: "host_university_id"
+C:\Users\X1\EduPath\scripts\recommend_scholarships_final.py:1084: "degree_levels":
+C:\Users\X1\EduPath\scripts\recommend_scholarships_final.py:1086: "degree_levels"
+C:\Users\X1\EduPath\scripts\recommend_scholarships_final.py:1142: "source_url":
+C:\Users\X1\EduPath\scripts\recommend_scholarships_final.py:1144: "source_url"
+C:\Users\X1\EduPath\scripts\recommend_scholarships_final.py:1309: "university_id"
+C:\Users\X1\EduPath\scripts\recommend_scholarships_final.py:1322: "university_id": 1,
+C:\Users\X1\EduPath\scripts\recommend_scholarships_final.py:1373: host_university_id = (
+C:\Users\X1\EduPath\scripts\recommend_scholarships_final.py:1375: "host_university_id"
+C:\Users\X1\EduPath\scripts\recommend_scholarships_final.py:1381: if host_university_id is not None:
+C:\Users\X1\EduPath\scripts\recommend_scholarships_final.py:1384: host_university_id
+C:\Users\X1\EduPath\scripts\recommend_scholarships_final.py:1476: "degree_level":
+C:\Users\X1\EduPath\scripts\recommend_scholarships_final.py:1477: DEGREE_LEVEL_WEIGHT,
+C:\Users\X1\EduPath\scripts\recommend_scholarships_final.py:1543: "target_degree_level":
+C:\Users\X1\EduPath\scripts\recommend_scholarships_final.py:1545: "target_degree_level"
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v1_backup.py:49: DEGREE_LEVEL_WEIGHT = 20
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v1_backup.py:59: DEGREE_LEVEL_WEIGHT
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v1_backup.py:334: "degree_level": 0.0,
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v1_backup.py:349: profile.get("target_degree_level")
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v1_backup.py:355: "degree_levels",
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v1_backup.py:363: score_breakdown["degree_level"] = (
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v1_backup.py:364: DEGREE_LEVEL_WEIGHT
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v1_backup.py:651: "host_university_id": scholarship.get(
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v1_backup.py:652: "host_university_id"
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v1_backup.py:655: "degree_levels": scholarship.get(
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v1_backup.py:656: "degree_levels"
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v1_backup.py:690: "source_url": scholarship.get("source_url"),
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v1_backup.py:745: university["university_id"]:
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v1_backup.py:751: "university_id": 1,
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v1_backup.py:785: host_university_id = scholarship.get(
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v1_backup.py:786: "host_university_id"
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v1_backup.py:791: if host_university_id is not None:
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v1_backup.py:793: host_university_id
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v1_backup.py:843: "degree_level": DEGREE_LEVEL_WEIGHT,
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v1_backup.py:861: "target_degree_level": profile.get(
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v1_backup.py:862: "target_degree_level"
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v2.py:54: DEGREE_LEVEL_WEIGHT = 20
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v2.py:61: DEGREE_LEVEL_WEIGHT
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v2.py:322: "degree_level": 0.0,
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v2.py:335: "target_degree_level"
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v2.py:345: "degree_levels",
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v2.py:358: "degree_level"
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v2.py:359: ] = DEGREE_LEVEL_WEIGHT
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v2.py:860: "host_university_id":
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v2.py:862: "host_university_id"
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v2.py:868: "degree_levels":
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v2.py:870: "degree_levels"
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v2.py:926: "source_url":
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v2.py:928: "source_url"
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v2.py:1024: university["university_id"]:
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v2.py:1034: "university_id": 1,
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v2.py:1077: host_university_id = (
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v2.py:1079: "host_university_id"
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v2.py:1085: if host_university_id is not None:
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v2.py:1088: host_university_id
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v2.py:1164: "degree_level":
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v2.py:1165: DEGREE_LEVEL_WEIGHT,
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v2.py:1207: "target_degree_level":
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v2.py:1209: "target_degree_level"
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v21.py:61: DEGREE_LEVEL_WEIGHT = 20
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v21.py:69: DEGREE_LEVEL_WEIGHT
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v21.py:672: "degree_level": 0.0,
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v21.py:685: "target_degree_level"
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v21.py:695: "degree_levels",
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v21.py:708: "degree_level"
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v21.py:709: ] = DEGREE_LEVEL_WEIGHT
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v21.py:1276: "host_university_id":
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v21.py:1278: "host_university_id"
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v21.py:1284: "degree_levels":
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v21.py:1286: "degree_levels"
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v21.py:1342: "source_url":
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v21.py:1344: "source_url"
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v21.py:1479: "university_id"
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v21.py:1492: "university_id": 1,
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v21.py:1544: host_university_id = (
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v21.py:1546: "host_university_id"
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v21.py:1552: if host_university_id is not None:
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v21.py:1555: host_university_id
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v21.py:1641: "degree_level":
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v21.py:1642: DEGREE_LEVEL_WEIGHT,
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v21.py:1697: "target_degree_level":
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v21.py:1699: "target_degree_level"
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v22.py:67: DEGREE_LEVEL_WEIGHT = 20
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v22.py:75: DEGREE_LEVEL_WEIGHT
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v22.py:163: "degree_level": {
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v22.py:165: DEGREE_LEVEL_WEIGHT,
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v22.py:210: "target_degree_level"
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v22.py:216: "degree_levels"
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v22.py:225: "degree_level"
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v22.py:436: "degree_level": 0.0,
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v22.py:449: "target_degree_level"
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v22.py:459: "degree_levels",
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v22.py:472: "degree_level"
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v22.py:473: ] = DEGREE_LEVEL_WEIGHT
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v22.py:1076: "host_university_id":
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v22.py:1078: "host_university_id"
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v22.py:1084: "degree_levels":
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v22.py:1086: "degree_levels"
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v22.py:1142: "source_url":
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v22.py:1144: "source_url"
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v22.py:1309: "university_id"
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v22.py:1322: "university_id": 1,
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v22.py:1373: host_university_id = (
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v22.py:1375: "host_university_id"
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v22.py:1381: if host_university_id is not None:
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v22.py:1384: host_university_id
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v22.py:1476: "degree_level":
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v22.py:1477: DEGREE_LEVEL_WEIGHT,
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v22.py:1543: "target_degree_level":
+C:\Users\X1\EduPath\scripts\recommend_scholarships_v22.py:1545: "target_degree_level"
+C:\Users\X1\EduPath\scripts\repair_missing_country_master.py:860: "last_verified_at"
+C:\Users\X1\EduPath\scripts\test_scholarship_v22_profiles.py:97: "target_degree_level":
+C:\Users\X1\EduPath\scripts\test_scholarship_v22_profiles.py:149: "target_degree_level":
+C:\Users\X1\EduPath\scripts\test_scholarship_v22_profiles.py:201: "target_degree_level":
+C:\Users\X1\EduPath\scripts\test_scholarship_v22_profiles.py:253: "target_degree_level":
+C:\Users\X1\EduPath\scripts\test_scholarship_v22_profiles.py:305: "target_degree_level":
+C:\Users\X1\EduPath\scripts\test_scholarship_v22_profiles.py:361: "target_degree_level":
+C:\Users\X1\EduPath\scripts\test_scholarship_v22_profiles.py:442: "university_id"
+C:\Users\X1\EduPath\scripts\test_scholarship_v22_profiles.py:455: "university_id": 1,
+C:\Users\X1\EduPath\scripts\test_scholarship_v22_profiles.py:561: host_university_id = (
+C:\Users\X1\EduPath\scripts\test_scholarship_v22_profiles.py:563: "host_university_id"
+C:\Users\X1\EduPath\scripts\test_scholarship_v22_profiles.py:569: if host_university_id:
+C:\Users\X1\EduPath\scripts\test_scholarship_v22_profiles.py:573: host_university_id
+C:\Users\X1\EduPath\scripts\test_scholarship_v22_profiles.py:676: "target_degree_level"
+C:\Users\X1\EduPath\scripts\test_scholarship_v22_profiles.py:770: "degree_levels",
+C:\Users\X1\EduPath\scripts\test_scholarship_v22_profiles.py:960: "degree_levels",
+C:\Users\X1\EduPath\scripts\test_scholarship_v22_profiles.py:1021: "target_degree_level"
+C:\Users\X1\EduPath\scripts\test_scholarship_v22_profiles.py:1076: "target_degree_level"
+C:\Users\X1\EduPath\scripts\test_scholarship_v22_profiles.py:1118: "degree_levels":
+C:\Users\X1\EduPath\scripts\test_scholarship_v22_profiles.py:1121: "degree_levels",
+C:\Users\X1\EduPath\scripts\transform_countries.py:44: "source_url",
+C:\Users\X1\EduPath\scripts\transform_countries.py:46: "last_verified_at",
+C:\Users\X1\EduPath\scripts\transform_countries.py:333: "source_url": validate_url(
+C:\Users\X1\EduPath\scripts\transform_countries.py:334: raw_record.get("source_url"),
+C:\Users\X1\EduPath\scripts\transform_countries.py:335: "source_url",
+C:\Users\X1\EduPath\scripts\transform_countries.py:341: "last_verified_at": clean_required_date(
+C:\Users\X1\EduPath\scripts\transform_countries.py:342: raw_record.get("last_verified_at"),
+C:\Users\X1\EduPath\scripts\transform_countries.py:343: "last_verified_at",
+C:\Users\X1\EduPath\scripts\transform_programs.py:45: "university_id",
+C:\Users\X1\EduPath\scripts\transform_programs.py:48: "degree_level",
+C:\Users\X1\EduPath\scripts\transform_programs.py:52: "tuition_fee",
+C:\Users\X1\EduPath\scripts\transform_programs.py:63: "last_verified_at",
+C:\Users\X1\EduPath\scripts\transform_programs.py:64: "freshness_status",
+C:\Users\X1\EduPath\scripts\transform_programs.py:72: ALLOWED_DEGREE_LEVELS = {
+C:\Users\X1\EduPath\scripts\transform_programs.py:93: ALLOWED_FRESHNESS_STATUSES = {
+C:\Users\X1\EduPath\scripts\transform_programs.py:314: def load_valid_university_ids() -> set[str]:
+C:\Users\X1\EduPath\scripts\transform_programs.py:339: university_ids = {
+C:\Users\X1\EduPath\scripts\transform_programs.py:340: str(record.get("university_id")).strip()
+C:\Users\X1\EduPath\scripts\transform_programs.py:342: if record.get("university_id")
+C:\Users\X1\EduPath\scripts\transform_programs.py:345: if not university_ids:
+C:\Users\X1\EduPath\scripts\transform_programs.py:350: return university_ids
+C:\Users\X1\EduPath\scripts\transform_programs.py:360: valid_university_ids: set[str],
+C:\Users\X1\EduPath\scripts\transform_programs.py:370: university_id = clean_required_text(
+C:\Users\X1\EduPath\scripts\transform_programs.py:371: raw_record.get("university_id"),
+C:\Users\X1\EduPath\scripts\transform_programs.py:372: "university_id",
+C:\Users\X1\EduPath\scripts\transform_programs.py:375: if university_id not in valid_university_ids:
+C:\Users\X1\EduPath\scripts\transform_programs.py:377: f"University ID '{university_id}' does not exist "
+C:\Users\X1\EduPath\scripts\transform_programs.py:381: degree_level = clean_required_text(
+C:\Users\X1\EduPath\scripts\transform_programs.py:382: raw_record.get("degree_level"),
+C:\Users\X1\EduPath\scripts\transform_programs.py:383: "degree_level",
+C:\Users\X1\EduPath\scripts\transform_programs.py:386: if degree_level not in ALLOWED_DEGREE_LEVELS:
+C:\Users\X1\EduPath\scripts\transform_programs.py:388: "Field 'degree_level' must be one of: "
+C:\Users\X1\EduPath\scripts\transform_programs.py:389: + ", ".join(sorted(ALLOWED_DEGREE_LEVELS))
+C:\Users\X1\EduPath\scripts\transform_programs.py:405: tuition_fee = clean_optional_number(
+C:\Users\X1\EduPath\scripts\transform_programs.py:406: raw_record.get("tuition_fee"),
+C:\Users\X1\EduPath\scripts\transform_programs.py:407: "tuition_fee",
+C:\Users\X1\EduPath\scripts\transform_programs.py:429: if tuition_fee is not None:
+C:\Users\X1\EduPath\scripts\transform_programs.py:433: "when tuition_fee is provided."
+C:\Users\X1\EduPath\scripts\transform_programs.py:439: "when tuition_fee is provided."
+C:\Users\X1\EduPath\scripts\transform_programs.py:476: raw_freshness_status = clean_required_text(
+C:\Users\X1\EduPath\scripts\transform_programs.py:477: raw_record.get("freshness_status"),
+C:\Users\X1\EduPath\scripts\transform_programs.py:478: "freshness_status",
+C:\Users\X1\EduPath\scripts\transform_programs.py:481: if raw_freshness_status.startswith("partial"):
+C:\Users\X1\EduPath\scripts\transform_programs.py:482: freshness_status = "unknown"
+C:\Users\X1\EduPath\scripts\transform_programs.py:484: freshness_status = raw_freshness_status
+C:\Users\X1\EduPath\scripts\transform_programs.py:486: if freshness_status not in ALLOWED_FRESHNESS_STATUSES:
+C:\Users\X1\EduPath\scripts\transform_programs.py:488: "Field 'freshness_status' must be one of: "
+C:\Users\X1\EduPath\scripts\transform_programs.py:490: sorted(ALLOWED_FRESHNESS_STATUSES)
+C:\Users\X1\EduPath\scripts\transform_programs.py:496: "university_id": university_id,
+C:\Users\X1\EduPath\scripts\transform_programs.py:505: "degree_level": degree_level,
+C:\Users\X1\EduPath\scripts\transform_programs.py:516: "tuition_fee": tuition_fee,
+C:\Users\X1\EduPath\scripts\transform_programs.py:548: "last_verified_at": clean_required_date(
+C:\Users\X1\EduPath\scripts\transform_programs.py:549: raw_record.get("last_verified_at"),
+C:\Users\X1\EduPath\scripts\transform_programs.py:550: "last_verified_at",
+C:\Users\X1\EduPath\scripts\transform_programs.py:552: "freshness_status": freshness_status,
+C:\Users\X1\EduPath\scripts\transform_programs.py:622: university_id + program_name + degree_level + intake
+C:\Users\X1\EduPath\scripts\transform_programs.py:634: record["university_id"],
+C:\Users\X1\EduPath\scripts\transform_programs.py:636: record["degree_level"],
+C:\Users\X1\EduPath\scripts\transform_programs.py:690: valid_university_ids = load_valid_university_ids()
+C:\Users\X1\EduPath\scripts\transform_programs.py:694: f"{len(valid_university_ids)}"
+C:\Users\X1\EduPath\scripts\transform_programs.py:712: valid_university_ids=valid_university_ids,
+C:\Users\X1\EduPath\scripts\transform_scholarships.py:59: "host_university_id",
+C:\Users\X1\EduPath\scripts\transform_scholarships.py:61: "degree_levels",
+C:\Users\X1\EduPath\scripts\transform_scholarships.py:81: "source_url",
+C:\Users\X1\EduPath\scripts\transform_scholarships.py:83: "last_verified_at",
+C:\Users\X1\EduPath\scripts\transform_scholarships.py:84: "freshness_status",
+C:\Users\X1\EduPath\scripts\transform_scholarships.py:102: ALLOWED_DEGREE_LEVELS = {
+C:\Users\X1\EduPath\scripts\transform_scholarships.py:125: ALLOWED_FRESHNESS_STATUSES = {
+C:\Users\X1\EduPath\scripts\transform_scholarships.py:459: Return university_id -> country_id relationships.
+C:\Users\X1\EduPath\scripts\transform_scholarships.py:471: str(record["university_id"]).strip():
+C:\Users\X1\EduPath\scripts\transform_scholarships.py:475: record.get("university_id")
+C:\Users\X1\EduPath\scripts\transform_scholarships.py:505: host_university_id = clean_optional_text(
+C:\Users\X1\EduPath\scripts\transform_scholarships.py:506: raw_record.get("host_university_id")
+C:\Users\X1\EduPath\scripts\transform_scholarships.py:509: if host_university_id is not None:
+C:\Users\X1\EduPath\scripts\transform_scholarships.py:510: if host_university_id not in university_country_map:
+C:\Users\X1\EduPath\scripts\transform_scholarships.py:513: f"'{host_university_id}' does not exist "
+C:\Users\X1\EduPath\scripts\transform_scholarships.py:518: university_country_map[host_university_id]
+C:\Users\X1\EduPath\scripts\transform_scholarships.py:523: f"Host university '{host_university_id}' "
+C:\Users\X1\EduPath\scripts\transform_scholarships.py:539: degree_levels = clean_required_array(
+C:\Users\X1\EduPath\scripts\transform_scholarships.py:540: raw_record.get("degree_levels"),
+C:\Users\X1\EduPath\scripts\transform_scholarships.py:541: "degree_levels",
+C:\Users\X1\EduPath\scripts\transform_scholarships.py:544: invalid_degree_levels = [
+C:\Users\X1\EduPath\scripts\transform_scholarships.py:545: degree_level
+C:\Users\X1\EduPath\scripts\transform_scholarships.py:546: for degree_level in degree_levels
+C:\Users\X1\EduPath\scripts\transform_scholarships.py:547: if degree_level not in ALLOWED_DEGREE_LEVELS
+C:\Users\X1\EduPath\scripts\transform_scholarships.py:550: if invalid_degree_levels:
+C:\Users\X1\EduPath\scripts\transform_scholarships.py:553: + ", ".join(invalid_degree_levels)
+C:\Users\X1\EduPath\scripts\transform_scholarships.py:672: freshness_status = clean_required_text(
+C:\Users\X1\EduPath\scripts\transform_scholarships.py:673: raw_record.get("freshness_status"),
+C:\Users\X1\EduPath\scripts\transform_scholarships.py:674: "freshness_status",
+C:\Users\X1\EduPath\scripts\transform_scholarships.py:677: if freshness_status not in ALLOWED_FRESHNESS_STATUSES:
+C:\Users\X1\EduPath\scripts\transform_scholarships.py:679: "Field 'freshness_status' must be one of: "
+C:\Users\X1\EduPath\scripts\transform_scholarships.py:681: sorted(ALLOWED_FRESHNESS_STATUSES)
+C:\Users\X1\EduPath\scripts\transform_scholarships.py:706: last_verified_at = clean_required_date(
+C:\Users\X1\EduPath\scripts\transform_scholarships.py:707: raw_record.get("last_verified_at"),
+C:\Users\X1\EduPath\scripts\transform_scholarships.py:708: "last_verified_at",
+C:\Users\X1\EduPath\scripts\transform_scholarships.py:711: if last_verified_at < collected_at:
+C:\Users\X1\EduPath\scripts\transform_scholarships.py:713: "last_verified_at cannot be earlier "
+C:\Users\X1\EduPath\scripts\transform_scholarships.py:732: "host_university_id": host_university_id,
+C:\Users\X1\EduPath\scripts\transform_scholarships.py:736: "degree_levels": degree_levels,
+C:\Users\X1\EduPath\scripts\transform_scholarships.py:788: "source_url": validate_url(
+C:\Users\X1\EduPath\scripts\transform_scholarships.py:789: raw_record.get("source_url"),
+C:\Users\X1\EduPath\scripts\transform_scholarships.py:790: "source_url",
+C:\Users\X1\EduPath\scripts\transform_scholarships.py:793: "last_verified_at": last_verified_at,
+C:\Users\X1\EduPath\scripts\transform_scholarships.py:794: "freshness_status": freshness_status,
+C:\Users\X1\EduPath\scripts\transform_scholarships_before_full_dataset.py:59: "host_university_id",
+C:\Users\X1\EduPath\scripts\transform_scholarships_before_full_dataset.py:61: "degree_levels",
+C:\Users\X1\EduPath\scripts\transform_scholarships_before_full_dataset.py:81: "source_url",
+C:\Users\X1\EduPath\scripts\transform_scholarships_before_full_dataset.py:83: "last_verified_at",
+C:\Users\X1\EduPath\scripts\transform_scholarships_before_full_dataset.py:84: "freshness_status",
+C:\Users\X1\EduPath\scripts\transform_scholarships_before_full_dataset.py:102: ALLOWED_DEGREE_LEVELS = {
+C:\Users\X1\EduPath\scripts\transform_scholarships_before_full_dataset.py:125: ALLOWED_FRESHNESS_STATUSES = {
+C:\Users\X1\EduPath\scripts\transform_scholarships_before_full_dataset.py:459: Return university_id -> country_id relationships.
+C:\Users\X1\EduPath\scripts\transform_scholarships_before_full_dataset.py:471: str(record["university_id"]).strip():
+C:\Users\X1\EduPath\scripts\transform_scholarships_before_full_dataset.py:475: record.get("university_id")
+C:\Users\X1\EduPath\scripts\transform_scholarships_before_full_dataset.py:505: host_university_id = clean_optional_text(
+C:\Users\X1\EduPath\scripts\transform_scholarships_before_full_dataset.py:506: raw_record.get("host_university_id")
+C:\Users\X1\EduPath\scripts\transform_scholarships_before_full_dataset.py:509: if host_university_id is not None:
+C:\Users\X1\EduPath\scripts\transform_scholarships_before_full_dataset.py:510: if host_university_id not in university_country_map:
+C:\Users\X1\EduPath\scripts\transform_scholarships_before_full_dataset.py:513: f"'{host_university_id}' does not exist "
+C:\Users\X1\EduPath\scripts\transform_scholarships_before_full_dataset.py:518: university_country_map[host_university_id]
+C:\Users\X1\EduPath\scripts\transform_scholarships_before_full_dataset.py:523: f"Host university '{host_university_id}' "
+C:\Users\X1\EduPath\scripts\transform_scholarships_before_full_dataset.py:539: degree_levels = clean_required_array(
+C:\Users\X1\EduPath\scripts\transform_scholarships_before_full_dataset.py:540: raw_record.get("degree_levels"),
+C:\Users\X1\EduPath\scripts\transform_scholarships_before_full_dataset.py:541: "degree_levels",
+C:\Users\X1\EduPath\scripts\transform_scholarships_before_full_dataset.py:544: invalid_degree_levels = [
+C:\Users\X1\EduPath\scripts\transform_scholarships_before_full_dataset.py:545: degree_level
+C:\Users\X1\EduPath\scripts\transform_scholarships_before_full_dataset.py:546: for degree_level in degree_levels
+C:\Users\X1\EduPath\scripts\transform_scholarships_before_full_dataset.py:547: if degree_level not in ALLOWED_DEGREE_LEVELS
+C:\Users\X1\EduPath\scripts\transform_scholarships_before_full_dataset.py:550: if invalid_degree_levels:
+C:\Users\X1\EduPath\scripts\transform_scholarships_before_full_dataset.py:553: + ", ".join(invalid_degree_levels)
+C:\Users\X1\EduPath\scripts\transform_scholarships_before_full_dataset.py:672: freshness_status = clean_required_text(
+C:\Users\X1\EduPath\scripts\transform_scholarships_before_full_dataset.py:673: raw_record.get("freshness_status"),
+C:\Users\X1\EduPath\scripts\transform_scholarships_before_full_dataset.py:674: "freshness_status",
+C:\Users\X1\EduPath\scripts\transform_scholarships_before_full_dataset.py:677: if freshness_status not in ALLOWED_FRESHNESS_STATUSES:
+C:\Users\X1\EduPath\scripts\transform_scholarships_before_full_dataset.py:679: "Field 'freshness_status' must be one of: "
+C:\Users\X1\EduPath\scripts\transform_scholarships_before_full_dataset.py:681: sorted(ALLOWED_FRESHNESS_STATUSES)
+C:\Users\X1\EduPath\scripts\transform_scholarships_before_full_dataset.py:706: last_verified_at = clean_required_date(
+C:\Users\X1\EduPath\scripts\transform_scholarships_before_full_dataset.py:707: raw_record.get("last_verified_at"),
+C:\Users\X1\EduPath\scripts\transform_scholarships_before_full_dataset.py:708: "last_verified_at",
+C:\Users\X1\EduPath\scripts\transform_scholarships_before_full_dataset.py:711: if last_verified_at < collected_at:
+C:\Users\X1\EduPath\scripts\transform_scholarships_before_full_dataset.py:713: "last_verified_at cannot be earlier "
+C:\Users\X1\EduPath\scripts\transform_scholarships_before_full_dataset.py:732: "host_university_id": host_university_id,
+C:\Users\X1\EduPath\scripts\transform_scholarships_before_full_dataset.py:736: "degree_levels": degree_levels,
+C:\Users\X1\EduPath\scripts\transform_scholarships_before_full_dataset.py:788: "source_url": validate_url(
+C:\Users\X1\EduPath\scripts\transform_scholarships_before_full_dataset.py:789: raw_record.get("source_url"),
+C:\Users\X1\EduPath\scripts\transform_scholarships_before_full_dataset.py:790: "source_url",
+C:\Users\X1\EduPath\scripts\transform_scholarships_before_full_dataset.py:793: "last_verified_at": last_verified_at,
+C:\Users\X1\EduPath\scripts\transform_scholarships_before_full_dataset.py:794: "freshness_status": freshness_status,
+C:\Users\X1\EduPath\scripts\transform_universities.py:36: "university_id",
+C:\Users\X1\EduPath\scripts\transform_universities.py:42: "degree_levels",
+C:\Users\X1\EduPath\scripts\transform_universities.py:44: "source_url",
+C:\Users\X1\EduPath\scripts\transform_universities.py:46: "last_verified_at",
+C:\Users\X1\EduPath\scripts\transform_universities.py:47: "freshness_status",
+C:\Users\X1\EduPath\scripts\transform_universities.py:58: ALLOWED_DEGREE_LEVELS = {
+C:\Users\X1\EduPath\scripts\transform_universities.py:66: ALLOWED_FRESHNESS_STATUSES = {
+C:\Users\X1\EduPath\scripts\transform_universities.py:265: raw_degree_levels = raw_record.get(
+C:\Users\X1\EduPath\scripts\transform_universities.py:266: "degree_levels"
+C:\Users\X1\EduPath\scripts\transform_universities.py:269: if is_missing(raw_degree_levels):
+C:\Users\X1\EduPath\scripts\transform_universities.py:270: degree_levels = []
+C:\Users\X1\EduPath\scripts\transform_universities.py:272: degree_levels = clean_array(
+C:\Users\X1\EduPath\scripts\transform_universities.py:273: raw_degree_levels,
+C:\Users\X1\EduPath\scripts\transform_universities.py:274: "degree_levels",
+C:\Users\X1\EduPath\scripts\transform_universities.py:277: invalid_degree_levels = [
+C:\Users\X1\EduPath\scripts\transform_universities.py:279: for level in degree_levels
+C:\Users\X1\EduPath\scripts\transform_universities.py:280: if level not in ALLOWED_DEGREE_LEVELS
+C:\Users\X1\EduPath\scripts\transform_universities.py:283: if invalid_degree_levels:
+C:\Users\X1\EduPath\scripts\transform_universities.py:286: + ", ".join(invalid_degree_levels)
+C:\Users\X1\EduPath\scripts\transform_universities.py:289: raw_freshness_status = clean_required_text(
+C:\Users\X1\EduPath\scripts\transform_universities.py:290: raw_record.get("freshness_status"),
+C:\Users\X1\EduPath\scripts\transform_universities.py:291: "freshness_status",
+C:\Users\X1\EduPath\scripts\transform_universities.py:294: freshness_status_aliases = {
+C:\Users\X1\EduPath\scripts\transform_universities.py:298: freshness_status = freshness_status_aliases.get(
+C:\Users\X1\EduPath\scripts\transform_universities.py:299: raw_freshness_status,
+C:\Users\X1\EduPath\scripts\transform_universities.py:300: raw_freshness_status,
+C:\Users\X1\EduPath\scripts\transform_universities.py:303: if freshness_status not in ALLOWED_FRESHNESS_STATUSES:
+C:\Users\X1\EduPath\scripts\transform_universities.py:305: "Field 'freshness_status' must be one of: "
+C:\Users\X1\EduPath\scripts\transform_universities.py:307: sorted(ALLOWED_FRESHNESS_STATUSES)
+C:\Users\X1\EduPath\scripts\transform_universities.py:323: raw_last_verified_at = raw_record.get(
+C:\Users\X1\EduPath\scripts\transform_universities.py:324: "last_verified_at"
+C:\Users\X1\EduPath\scripts\transform_universities.py:327: if is_missing(raw_last_verified_at):
+C:\Users\X1\EduPath\scripts\transform_universities.py:328: last_verified_at = None
+C:\Users\X1\EduPath\scripts\transform_universities.py:330: last_verified_at = clean_date(
+C:\Users\X1\EduPath\scripts\transform_universities.py:331: raw_last_verified_at,
+C:\Users\X1\EduPath\scripts\transform_universities.py:332: "last_verified_at",
+C:\Users\X1\EduPath\scripts\transform_universities.py:336: "university_id": clean_required_text(
+C:\Users\X1\EduPath\scripts\transform_universities.py:337: raw_record.get("university_id"),
+C:\Users\X1\EduPath\scripts\transform_universities.py:338: "university_id",
+C:\Users\X1\EduPath\scripts\transform_universities.py:372: "degree_levels": degree_levels,
+C:\Users\X1\EduPath\scripts\transform_universities.py:374: "source_url": validate_url(
+C:\Users\X1\EduPath\scripts\transform_universities.py:375: raw_record.get("source_url"),
+C:\Users\X1\EduPath\scripts\transform_universities.py:376: "source_url",
+C:\Users\X1\EduPath\scripts\transform_universities.py:382: "last_verified_at": last_verified_at,
+C:\Users\X1\EduPath\scripts\transform_universities.py:383: "freshness_status": freshness_status,
+C:\Users\X1\EduPath\scripts\transform_universities.py:424: university_ids = [
+C:\Users\X1\EduPath\scripts\transform_universities.py:425: record["university_id"]
+C:\Users\X1\EduPath\scripts\transform_universities.py:431: university_id
+C:\Users\X1\EduPath\scripts\transform_universities.py:432: for university_id in university_ids
+C:\Users\X1\EduPath\scripts\transform_universities.py:433: if university_ids.count(university_id) > 1
+C:\Users\X1\EduPath\scripts\transform_universities.py:439: "Duplicate university_id values found:\n"
+C:\Users\X1\EduPath\scripts\transform_universities.py:441: f"- {university_id}"
+C:\Users\X1\EduPath\scripts\transform_universities.py:442: for university_id in duplicate_ids
+C:\Users\X1\EduPath\scripts\transform_user_profiles.py:49: "target_degree_level",
+C:\Users\X1\EduPath\scripts\transform_user_profiles.py:80: ALLOWED_TARGET_DEGREE_LEVELS = {
+C:\Users\X1\EduPath\scripts\transform_user_profiles.py:376: target_degree_level = clean_required_text(
+C:\Users\X1\EduPath\scripts\transform_user_profiles.py:377: raw_record.get("target_degree_level"),
+C:\Users\X1\EduPath\scripts\transform_user_profiles.py:378: "target_degree_level",
+C:\Users\X1\EduPath\scripts\transform_user_profiles.py:382: target_degree_level
+C:\Users\X1\EduPath\scripts\transform_user_profiles.py:383: not in ALLOWED_TARGET_DEGREE_LEVELS
+C:\Users\X1\EduPath\scripts\transform_user_profiles.py:386: "Field 'target_degree_level' must be one of: "
+C:\Users\X1\EduPath\scripts\transform_user_profiles.py:388: sorted(ALLOWED_TARGET_DEGREE_LEVELS)
+C:\Users\X1\EduPath\scripts\transform_user_profiles.py:521: "target_degree_level": target_degree_level,
+C:\Users\X1\EduPath\scripts\validate_final_program_tuition_context.py:120: "university_id",
+C:\Users\X1\EduPath\scripts\validate_final_program_tuition_context.py:123: "degree_level",
+C:\Users\X1\EduPath\scripts\validate_final_program_tuition_context.py:125: "current_tuition_fee",
+C:\Users\X1\EduPath\scripts\validate_final_program_tuition_context.py:131: "tuition_source_url",
+C:\Users\X1\EduPath\scripts\validate_final_program_tuition_context.py:132: "tuition_last_verified_at",
+C:\Users\X1\EduPath\scripts\validate_final_program_tuition_context.py:135: "previous_tuition_fee",
+C:\Users\X1\EduPath\scripts\validate_final_program_tuition_context.py:250: "current_tuition_fee"
+C:\Users\X1\EduPath\scripts\validate_final_program_tuition_context.py:256: "previous_tuition_fee"
+C:\Users\X1\EduPath\scripts\validate_final_program_tuition_context.py:284: source_url = normalize_text(
+C:\Users\X1\EduPath\scripts\validate_final_program_tuition_context.py:286: "tuition_source_url"
+C:\Users\X1\EduPath\scripts\validate_final_program_tuition_context.py:292: "tuition_last_verified_at"
+C:\Users\X1\EduPath\scripts\validate_final_program_tuition_context.py:359: if not source_url:
+C:\Users\X1\EduPath\scripts\validate_final_program_tuition_context.py:361: "tuition_source_url"
+C:\Users\X1\EduPath\scripts\validate_final_program_tuition_context.py:366: "tuition_last_verified_at"
+C:\Users\X1\EduPath\scripts\validate_final_program_tuition_context.py:387: source_url
+C:\Users\X1\EduPath\scripts\validate_final_program_tuition_context.py:389: source_url
+C:\Users\X1\EduPath\scripts\verify_tuition_context_batch_01.py:41: "tuition_source_url":
+C:\Users\X1\EduPath\scripts\verify_tuition_context_batch_01.py:43: "tuition_last_verified_at":
+C:\Users\X1\EduPath\scripts\verify_tuition_context_batch_01.py:59: "tuition_source_url":
+C:\Users\X1\EduPath\scripts\verify_tuition_context_batch_01.py:61: "tuition_last_verified_at":
+C:\Users\X1\EduPath\scripts\verify_tuition_context_batch_01.py:77: "tuition_source_url":
+C:\Users\X1\EduPath\scripts\verify_tuition_context_batch_01.py:79: "tuition_last_verified_at":
+C:\Users\X1\EduPath\scripts\verify_tuition_context_batch_01.py:102: "tuition_source_url":
+C:\Users\X1\EduPath\scripts\verify_tuition_context_batch_01.py:104: "tuition_last_verified_at":
+C:\Users\X1\EduPath\scripts\verify_tuition_context_batch_01.py:123: "tuition_source_url":
+C:\Users\X1\EduPath\scripts\verify_tuition_context_batch_01.py:125: "tuition_last_verified_at":
+C:\Users\X1\EduPath\scripts\verify_tuition_context_batch_01.py:144: "tuition_source_url":
+C:\Users\X1\EduPath\scripts\verify_tuition_context_batch_01.py:146: "tuition_last_verified_at":
+C:\Users\X1\EduPath\scripts\verify_tuition_context_batch_01.py:169: "tuition_source_url":
+C:\Users\X1\EduPath\scripts\verify_tuition_context_batch_01.py:171: "tuition_last_verified_at":
+C:\Users\X1\EduPath\scripts\verify_tuition_context_batch_01.py:191: "tuition_source_url":
+C:\Users\X1\EduPath\scripts\verify_tuition_context_batch_01.py:193: "tuition_last_verified_at":
+C:\Users\X1\EduPath\scripts\verify_tuition_context_batch_01.py:213: "tuition_source_url":
+C:\Users\X1\EduPath\scripts\verify_tuition_context_batch_01.py:215: "tuition_last_verified_at":
+C:\Users\X1\EduPath\scripts\verify_tuition_context_batch_01.py:325: "current_tuition_fee",
+C:\Users\X1\EduPath\scripts\verify_tuition_context_batch_01.py:356: row["tuition_source_url"] = (
+C:\Users\X1\EduPath\scripts\verify_tuition_context_batch_01.py:358: "tuition_source_url"
+C:\Users\X1\EduPath\scripts\verify_tuition_context_batch_01.py:362: row["tuition_last_verified_at"] = (
+C:\Users\X1\EduPath\scripts\verify_tuition_context_batch_01.py:364: "tuition_last_verified_at"
+C:\Users\X1\EduPath\scripts\verify_tuition_context_batch_02.py:45: "tuition_source_url":
+C:\Users\X1\EduPath\scripts\verify_tuition_context_batch_02.py:61: "tuition_source_url":
+C:\Users\X1\EduPath\scripts\verify_tuition_context_batch_02.py:77: "tuition_source_url":
+C:\Users\X1\EduPath\scripts\verify_tuition_context_batch_02.py:92: "tuition_source_url":
+C:\Users\X1\EduPath\scripts\verify_tuition_context_batch_02.py:224: "current_tuition_fee",
+C:\Users\X1\EduPath\scripts\verify_tuition_context_batch_02.py:266: row["tuition_source_url"] = (
+C:\Users\X1\EduPath\scripts\verify_tuition_context_batch_02.py:268: "tuition_source_url"
+C:\Users\X1\EduPath\scripts\verify_tuition_context_batch_02.py:272: row["tuition_last_verified_at"] = (
+C:\Users\X1\EduPath\scripts\verify_tuition_context_batch_02.py:325: "tuition_source_url"
+C:\Users\X1\EduPath\scripts\verify_tuition_context_batch_02.py:328: "tuition_last_verified_at"
+C:\Users\X1\EduPath\scripts\verify_tuition_context_batch_03.py:49: "tuition_source_url":
+C:\Users\X1\EduPath\scripts\verify_tuition_context_batch_03.py:67: "tuition_source_url":
+C:\Users\X1\EduPath\scripts\verify_tuition_context_batch_03.py:84: "tuition_source_url":
+C:\Users\X1\EduPath\scripts\verify_tuition_context_batch_03.py:103: "tuition_source_url":
+C:\Users\X1\EduPath\scripts\verify_tuition_context_batch_03.py:223: "current_tuition_fee",
+C:\Users\X1\EduPath\scripts\verify_tuition_context_batch_03.py:269: row["tuition_source_url"] = (
+C:\Users\X1\EduPath\scripts\verify_tuition_context_batch_03.py:271: "tuition_source_url"
+C:\Users\X1\EduPath\scripts\verify_tuition_context_batch_03.py:275: row["tuition_last_verified_at"] = (
+C:\Users\X1\EduPath\scripts\verify_tuition_context_batch_03.py:328: "tuition_source_url"
+C:\Users\X1\EduPath\scripts\verify_tuition_context_batch_03.py:331: "tuition_last_verified_at"
+C:\Users\X1\EduPath\scripts\verify_tuition_context_tsukuba_2027.py:26: "source_url": TSUKUBA_SOURCE,
+C:\Users\X1\EduPath\scripts\verify_tuition_context_tsukuba_2027.py:44: "source_url": TSUKUBA_SOURCE,
+C:\Users\X1\EduPath\scripts\verify_tuition_context_tsukuba_2027.py:62: "source_url": TSUKUBA_DOCTORAL_SOURCE,
+C:\Users\X1\EduPath\scripts\verify_tuition_context_tsukuba_2027.py:153: "previous_tuition_fee",
+C:\Users\X1\EduPath\scripts\verify_tuition_context_tsukuba_2027.py:206: "current_tuition_fee",
+C:\Users\X1\EduPath\scripts\verify_tuition_context_tsukuba_2027.py:233: row["previous_tuition_fee"] = old_fee
+C:\Users\X1\EduPath\scripts\verify_tuition_context_tsukuba_2027.py:240: row["current_tuition_fee"] = (
+C:\Users\X1\EduPath\scripts\verify_tuition_context_tsukuba_2027.py:254: row["tuition_source_url"] = (
+C:\Users\X1\EduPath\scripts\verify_tuition_context_tsukuba_2027.py:256: "source_url"
+C:\Users\X1\EduPath\scripts\verify_tuition_context_tsukuba_2027.py:260: row["tuition_last_verified_at"] = (
+C:\Users\X1\EduPath\scripts\verify_tuition_context_tsukuba_2027.py:309: "previous_tuition_fee"
+C:\Users\X1\EduPath\scripts\verify_tuition_context_tsukuba_2027.py:312: "previous_tuition_fee"
+C:\Users\X1\EduPath\scripts\verify_tuition_context_tsukuba_2027.py:314: "current_tuition_fee",
+C:\Users\X1\EduPath\scripts\verify_tuition_context_tsukuba_2027.py:333: "tuition_source_url"
+C:\Users\X1\EduPath\scripts\verify_tuition_context_tsukuba_2027.py:336: "tuition_last_verified_at"

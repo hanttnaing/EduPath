@@ -1,0 +1,227 @@
+[
+  {
+    "university_id": "uni_my_016",
+    "university_name": "Universiti Tun Hussein Onn Malaysia",
+    "country_id": "country_my",
+    "city": "Batu Pahat",
+    "university_type": "Public",
+    "official_website": "https://www.uthm.edu.my/en/",
+    "source_url": "https://jpt.mohe.gov.my/index.php/en/hei/public-hei/public-universities"
+  },
+  {
+    "university_id": "uni_my_017",
+    "university_name": "Universiti Teknikal Malaysia Melaka",
+    "country_id": "country_my",
+    "city": "Durian Tunggal",
+    "university_type": "Public",
+    "official_website": "https://www.utem.edu.my/en/",
+    "source_url": "https://jpt.mohe.gov.my/index.php/en/hei/public-hei/public-universities"
+  },
+  {
+    "university_id": "uni_my_018",
+    "university_name": "Universiti Sains Islam Malaysia",
+    "country_id": "country_my",
+    "city": "Nilai",
+    "university_type": "Public",
+    "official_website": "https://www.usim.edu.my/",
+    "source_url": "https://jpt.mohe.gov.my/index.php/en/hei/public-hei/public-universities"
+  },
+  {
+    "university_id": "uni_my_019",
+    "university_name": "Universiti Pendidikan Sultan Idris",
+    "country_id": "country_my",
+    "city": "Tanjung Malim",
+    "university_type": "Public",
+    "official_website": "https://www.upsi.edu.my/",
+    "source_url": "https://jpt.mohe.gov.my/index.php/en/hei/public-hei/public-universities"
+  },
+  {
+    "university_id": "uni_my_020",
+    "university_name": "Universiti Malaysia Terengganu",
+    "country_id": "country_my",
+    "city": "Kuala Terengganu",
+    "university_type": "Public",
+    "official_website": "https://www.umt.edu.my/",
+    "source_url": "https://jpt.mohe.gov.my/index.php/en/hei/public-hei/public-universities"
+  },
+  {
+    "university_id": "uni_my_021",
+    "university_name": "Universiti Malaysia Pahang Al-Sultan Abdullah",
+    "country_id": "country_my",
+    "city": "Pekan",
+    "university_type": "Public",
+    "official_website": "https://umpsa.edu.my/",
+    "source_url": "https://jpt.mohe.gov.my/index.php/en/hei/public-hei/public-universities"
+  },
+  {
+    "university_id": "uni_my_022",
+    "university_name": "Universiti Malaysia Perlis",
+    "country_id": "country_my",
+    "city": "Arau",
+    "university_type": "Public",
+    "official_website": "https://www.unimap.edu.my/",
+    "source_url": "https://jpt.mohe.gov.my/index.php/en/hei/public-hei/public-universities"
+  },
+  {
+    "university_id": "uni_my_023",
+    "university_name": "Universiti Sultan Zainal Abidin",
+    "country_id": "country_my",
+    "city": "Kuala Terengganu",
+    "university_type": "Public",
+    "official_website": "https://www.unisza.edu.my/",
+    "source_url": "https://jpt.mohe.gov.my/index.php/en/hei/public-hei/public-universities"
+  },
+  {
+    "university_id": "uni_my_024",
+    "university_name": "Universiti Pertahanan Nasional Malaysia",
+    "country_id": "country_my",
+    "city": "Kuala Lumpur",
+    "university_type": "Public",
+    "official_website": "https://www.upnm.edu.my/",
+    "source_url": "https://jpt.mohe.gov.my/index.php/en/hei/public-hei/public-universities"
+  },
+  {
+    "university_id": "uni_my_025",
+    "university_name": "Universiti Malaysia Kelantan",
+    "country_id": "country_my",
+    "city": "Bachok",
+    "university_type": "Public",
+    "official_website": "https://www.umk.edu.my/",
+    "source_url": "https://jpt.mohe.gov.my/index.php/en/hei/public-hei/public-universities"
+  },
+  {
+    "university_id": "uni_my_026",
+    "university_name": "Universiti Tenaga Nasional",
+    "country_id": "country_my",
+    "city": "Kajang",
+    "university_type": "Private",
+    "official_website": "https://www.uniten.edu.my/",
+    "source_url": "https://discover.educationmalaysia.gov.my/institutions/"
+  },
+  {
+    "university_id": "uni_my_027",
+    "university_name": "INCEIF University",
+    "country_id": "country_my",
+    "city": "Kuala Lumpur",
+    "university_type": "Private",
+    "official_website": "https://inceif.edu.my/",
+    "source_url": "https://discover.educationmalaysia.gov.my/institutions/"
+  },
+  {
+    "university_id": "uni_my_028",
+    "university_name": "Universiti Tunku Abdul Rahman",
+    "country_id": "country_my",
+    "city": "Kampar",
+    "university_type": "Private",
+    "official_website": "https://www.utar.edu.my/",
+    "source_url": "https://discover.educationmalaysia.gov.my/institutions/"
+  },
+  {
+    "university_id": "uni_my_029",
+    "university_name": "Monash University Malaysia",
+    "country_id": "country_my",
+    "city": "Subang Jaya",
+    "university_type": "Private",
+    "official_website": "https://www.monash.edu.my/",
+    "source_url": "https://discover.educationmalaysia.gov.my/institutions/"
+  },
+  {
+    "university_id": "uni_my_030",
+    "university_name": "University of Nottingham Malaysia",
+    "country_id": "country_my",
+    "city": "Semenyih",
+    "university_type": "Private",
+    "official_website": "https://www.nottingham.edu.my/",
+    "source_url": "https://discover.educationmalaysia.gov.my/institutions/"
+  },
+  {
+    "university_id": "uni_my_031",
+    "university_name": "Asia Pacific University of Technology and Innovation",
+    "country_id": "country_my",
+    "city": "Kuala Lumpur",
+    "university_type": "Private",
+    "official_website": "https://www.apu.edu.my/",
+    "source_url": "https://discover.educationmalaysia.gov.my/institutions/"
+  },
+  {
+    "university_id": "uni_my_032",
+    "university_name": "Management and Science University",
+    "country_id": "country_my",
+    "city": "Shah Alam",
+    "university_type": "Private",
+    "official_website": "https://www.msu.edu.my/",
+    "source_url": "https://discover.educationmalaysia.gov.my/institutions/"
+  },
+  {
+    "university_id": "uni_my_033",
+    "university_name": "Universiti Kuala Lumpur",
+    "country_id": "country_my",
+    "city": "Kuala Lumpur",
+    "university_type": "Private",
+    "official_website": "https://www.unikl.edu.my/",
+    "source_url": "https://discover.educationmalaysia.gov.my/institutions/"
+  },
+  {
+    "university_id": "uni_my_034",
+    "university_name": "HELP University",
+    "country_id": "country_my",
+    "city": "Shah Alam",
+    "university_type": "Private",
+    "official_website": "https://help.edu.my/",
+    "source_url": "https://discover.educationmalaysia.gov.my/institutions/"
+  },
+  {
+    "university_id": "uni_my_035",
+    "university_name": "SEGi University",
+    "country_id": "country_my",
+    "city": "Petaling Jaya",
+    "university_type": "Private",
+    "official_website": "https://www.segi.edu.my/",
+    "source_url": "https://discover.educationmalaysia.gov.my/institutions/"
+  },
+  {
+    "university_id": "uni_my_036",
+    "university_name": "INTI International University",
+    "country_id": "country_my",
+    "city": "Nilai",
+    "university_type": "Private",
+    "official_website": "https://newinti.edu.my/",
+    "source_url": "https://discover.educationmalaysia.gov.my/institutions/"
+  },
+  {
+    "university_id": "uni_my_037",
+    "university_name": "AIMST University",
+    "country_id": "country_my",
+    "city": "Bedong",
+    "university_type": "Private",
+    "official_website": "https://aimst.edu.my/",
+    "source_url": "https://discover.educationmalaysia.gov.my/institutions/"
+  },
+  {
+    "university_id": "uni_my_038",
+    "university_name": "Open University Malaysia",
+    "country_id": "country_my",
+    "city": "Kuala Lumpur",
+    "university_type": "Private",
+    "official_website": "https://www.oum.edu.my/",
+    "source_url": "https://discover.educationmalaysia.gov.my/institutions/"
+  },
+  {
+    "university_id": "uni_my_039",
+    "university_name": "MAHSA University",
+    "country_id": "country_my",
+    "city": "Jenjarom",
+    "university_type": "Private",
+    "official_website": "https://mahsa.edu.my/",
+    "source_url": "https://discover.educationmalaysia.gov.my/institutions/"
+  },
+  {
+    "university_id": "uni_my_040",
+    "university_name": "IMU University",
+    "country_id": "country_my",
+    "city": "Kuala Lumpur",
+    "university_type": "Private",
+    "official_website": "https://imu.edu.my/",
+    "source_url": "https://discover.educationmalaysia.gov.my/institutions/"
+  }
+]

@@ -1,0 +1,263 @@
+[
+  {
+    "university_id": "uni_jp_022",
+    "university_name": "Chiba University",
+    "country_id": "country_jp",
+    "city": "Chiba",
+    "university_type": "Public",
+    "official_website": "https://www.chiba-u.jp/",
+    "source_url": "https://jpcup.niad.ac.jp/what-jpcup/lists.html"
+  },
+  {
+    "university_id": "uni_jp_023",
+    "university_name": "Yokohama National University",
+    "country_id": "country_jp",
+    "city": "Yokohama",
+    "university_type": "Public",
+    "official_website": "https://www.ynu.ac.jp/",
+    "source_url": "https://jpcup.niad.ac.jp/what-jpcup/lists.html"
+  },
+  {
+    "university_id": "uni_jp_024",
+    "university_name": "Tokyo University of Foreign Studies",
+    "country_id": "country_jp",
+    "city": "Fuchu",
+    "university_type": "Public",
+    "official_website": "https://www.tufs.ac.jp/",
+    "source_url": "https://jpcup.niad.ac.jp/what-jpcup/lists.html"
+  },
+  {
+    "university_id": "uni_jp_025",
+    "university_name": "Ochanomizu University",
+    "country_id": "country_jp",
+    "city": "Tokyo",
+    "university_type": "Public",
+    "official_website": "https://www.ocha.ac.jp/",
+    "source_url": "https://jpcup.niad.ac.jp/what-jpcup/lists.html"
+  },
+  {
+    "university_id": "uni_jp_026",
+    "university_name": "Hitotsubashi University",
+    "country_id": "country_jp",
+    "city": "Tokyo",
+    "university_type": "Public",
+    "official_website": "https://www.hit-u.ac.jp/",
+    "source_url": "https://jpcup.niad.ac.jp/what-jpcup/lists.html"
+  },
+  {
+    "university_id": "uni_jp_027",
+    "university_name": "Tokyo University of Agriculture and Technology",
+    "country_id": "country_jp",
+    "city": "Fuchu",
+    "university_type": "Public",
+    "official_website": "https://www.tuat.ac.jp/",
+    "source_url": "https://jpcup.niad.ac.jp/what-jpcup/lists.html"
+  },
+  {
+    "university_id": "uni_jp_028",
+    "university_name": "The University of Electro-Communications",
+    "country_id": "country_jp",
+    "city": "Chofu",
+    "university_type": "Public",
+    "official_website": "https://www.uec.ac.jp/",
+    "source_url": "https://jpcup.niad.ac.jp/what-jpcup/lists.html"
+  },
+  {
+    "university_id": "uni_jp_029",
+    "university_name": "Saitama University",
+    "country_id": "country_jp",
+    "city": "Saitama",
+    "university_type": "Public",
+    "official_website": "https://www.saitama-u.ac.jp/",
+    "source_url": "https://jpcup.niad.ac.jp/what-jpcup/lists.html"
+  },
+  {
+    "university_id": "uni_jp_030",
+    "university_name": "Niigata University",
+    "country_id": "country_jp",
+    "city": "Niigata",
+    "university_type": "Public",
+    "official_website": "https://www.niigata-u.ac.jp/",
+    "source_url": "https://jpcup.niad.ac.jp/what-jpcup/lists.html"
+  },
+  {
+    "university_id": "uni_jp_031",
+    "university_name": "Kanazawa University",
+    "country_id": "country_jp",
+    "city": "Kanazawa",
+    "university_type": "Public",
+    "official_website": "https://www.kanazawa-u.ac.jp/",
+    "source_url": "https://jpcup.niad.ac.jp/what-jpcup/lists.html"
+  },
+  {
+    "university_id": "uni_jp_032",
+    "university_name": "Shinshu University",
+    "country_id": "country_jp",
+    "city": "Matsumoto",
+    "university_type": "Public",
+    "official_website": "https://www.shinshu-u.ac.jp/",
+    "source_url": "https://jpcup.niad.ac.jp/what-jpcup/lists.html"
+  },
+  {
+    "university_id": "uni_jp_033",
+    "university_name": "Gifu University",
+    "country_id": "country_jp",
+    "city": "Gifu",
+    "university_type": "Public",
+    "official_website": "https://www.gifu-u.ac.jp/",
+    "source_url": "https://jpcup.niad.ac.jp/what-jpcup/lists.html"
+  },
+  {
+    "university_id": "uni_jp_034",
+    "university_name": "Shizuoka University",
+    "country_id": "country_jp",
+    "city": "Shizuoka",
+    "university_type": "Public",
+    "official_website": "https://www.shizuoka.ac.jp/",
+    "source_url": "https://jpcup.niad.ac.jp/what-jpcup/lists.html"
+  },
+  {
+    "university_id": "uni_jp_035",
+    "university_name": "Mie University",
+    "country_id": "country_jp",
+    "city": "Tsu",
+    "university_type": "Public",
+    "official_website": "https://www.mie-u.ac.jp/",
+    "source_url": "https://jpcup.niad.ac.jp/what-jpcup/lists.html"
+  },
+  {
+    "university_id": "uni_jp_036",
+    "university_name": "Nagoya Institute of Technology",
+    "country_id": "country_jp",
+    "city": "Nagoya",
+    "university_type": "Public",
+    "official_website": "https://www.nitech.ac.jp/",
+    "source_url": "https://jpcup.niad.ac.jp/what-jpcup/lists.html"
+  },
+  {
+    "university_id": "uni_jp_037",
+    "university_name": "Nara Institute of Science and Technology",
+    "country_id": "country_jp",
+    "city": "Ikoma",
+    "university_type": "Public",
+    "official_website": "https://www.naist.jp/",
+    "source_url": "https://jpcup.niad.ac.jp/what-jpcup/lists.html"
+  },
+  {
+    "university_id": "uni_jp_038",
+    "university_name": "Okayama University",
+    "country_id": "country_jp",
+    "city": "Okayama",
+    "university_type": "Public",
+    "official_website": "https://www.okayama-u.ac.jp/",
+    "source_url": "https://jpcup.niad.ac.jp/what-jpcup/lists.html"
+  },
+  {
+    "university_id": "uni_jp_039",
+    "university_name": "Yamaguchi University",
+    "country_id": "country_jp",
+    "city": "Yamaguchi",
+    "university_type": "Public",
+    "official_website": "https://www.yamaguchi-u.ac.jp/",
+    "source_url": "https://jpcup.niad.ac.jp/what-jpcup/lists.html"
+  },
+  {
+    "university_id": "uni_jp_040",
+    "university_name": "Tokushima University",
+    "country_id": "country_jp",
+    "city": "Tokushima",
+    "university_type": "Public",
+    "official_website": "https://www.tokushima-u.ac.jp/",
+    "source_url": "https://jpcup.niad.ac.jp/what-jpcup/lists.html"
+  },
+  {
+    "university_id": "uni_jp_041",
+    "university_name": "Kagawa University",
+    "country_id": "country_jp",
+    "city": "Takamatsu",
+    "university_type": "Public",
+    "official_website": "https://www.kagawa-u.ac.jp/",
+    "source_url": "https://jpcup.niad.ac.jp/what-jpcup/lists.html"
+  },
+  {
+    "university_id": "uni_jp_042",
+    "university_name": "Ehime University",
+    "country_id": "country_jp",
+    "city": "Matsuyama",
+    "university_type": "Public",
+    "official_website": "https://www.ehime-u.ac.jp/",
+    "source_url": "https://jpcup.niad.ac.jp/what-jpcup/lists.html"
+  },
+  {
+    "university_id": "uni_jp_043",
+    "university_name": "Kochi University",
+    "country_id": "country_jp",
+    "city": "Kochi",
+    "university_type": "Public",
+    "official_website": "https://www.kochi-u.ac.jp/",
+    "source_url": "https://jpcup.niad.ac.jp/what-jpcup/lists.html"
+  },
+  {
+    "university_id": "uni_jp_044",
+    "university_name": "Saga University",
+    "country_id": "country_jp",
+    "city": "Saga",
+    "university_type": "Public",
+    "official_website": "https://www.saga-u.ac.jp/",
+    "source_url": "https://jpcup.niad.ac.jp/what-jpcup/lists.html"
+  },
+  {
+    "university_id": "uni_jp_045",
+    "university_name": "Nagasaki University",
+    "country_id": "country_jp",
+    "city": "Nagasaki",
+    "university_type": "Public",
+    "official_website": "https://www.nagasaki-u.ac.jp/",
+    "source_url": "https://jpcup.niad.ac.jp/what-jpcup/lists.html"
+  },
+  {
+    "university_id": "uni_jp_046",
+    "university_name": "Kumamoto University",
+    "country_id": "country_jp",
+    "city": "Kumamoto",
+    "university_type": "Public",
+    "official_website": "https://www.kumamoto-u.ac.jp/",
+    "source_url": "https://jpcup.niad.ac.jp/what-jpcup/lists.html"
+  },
+  {
+    "university_id": "uni_jp_047",
+    "university_name": "Oita University",
+    "country_id": "country_jp",
+    "city": "Oita",
+    "university_type": "Public",
+    "official_website": "https://www.oita-u.ac.jp/",
+    "source_url": "https://jpcup.niad.ac.jp/what-jpcup/lists.html"
+  },
+  {
+    "university_id": "uni_jp_048",
+    "university_name": "University of Miyazaki",
+    "country_id": "country_jp",
+    "city": "Miyazaki",
+    "university_type": "Public",
+    "official_website": "https://www.miyazaki-u.ac.jp/",
+    "source_url": "https://jpcup.niad.ac.jp/what-jpcup/lists.html"
+  },
+  {
+    "university_id": "uni_jp_049",
+    "university_name": "Kagoshima University",
+    "country_id": "country_jp",
+    "city": "Kagoshima",
+    "university_type": "Public",
+    "official_website": "https://www.kagoshima-u.ac.jp/",
+    "source_url": "https://jpcup.niad.ac.jp/what-jpcup/lists.html"
+  },
+  {
+    "university_id": "uni_jp_050",
+    "university_name": "University of the Ryukyus",
+    "country_id": "country_jp",
+    "city": "Nishihara",
+    "university_type": "Public",
+    "official_website": "https://www.u-ryukyu.ac.jp/",
+    "source_url": "https://jpcup.niad.ac.jp/what-jpcup/lists.html"
+  }
+]

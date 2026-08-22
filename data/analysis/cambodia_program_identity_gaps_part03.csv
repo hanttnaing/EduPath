@@ -1,0 +1,4 @@
+﻿reserved_program_id,university_id,program_slot,status,reason,evidence_note
+prog_kh_031,uni_kh_011,1,DEFERRED,Exact current programme identity could not be sufficiently verified from a current first-party programme-level source.,"RUFA is active and its Faculty of Archaeology is well documented, but historical/alumni evidence is not promoted to a current programme record."
+prog_kh_032,uni_kh_011,2,DEFERRED,Exact current programme identity could not be sufficiently verified from a current first-party programme-level source.,"Architecture and Urbanism activity is externally documented, but a sufficiently current official RUFA programme page was not verified for this collection pass."
+prog_kh_033,uni_kh_011,3,DEFERRED,Third current programme identity not verified to EduPath source standard.,"Slot stays reserved. No Fine Arts, Music, Choreography, Archaeology or Architecture degree title is guessed from faculty names."
