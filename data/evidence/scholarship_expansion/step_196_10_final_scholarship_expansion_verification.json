@@ -1,0 +1,72 @@
+{
+  "step": "196.10",
+  "revision": "FIXED_LEGACY_FUNDING_VOCABULARY_AWARE",
+  "result": "PASS",
+  "canonical": {
+    "rows": 66,
+    "sha256": "64eeb3d8b512beaaa53cf4bb5c0ff6b1e5296192170ce396737a11247ff26eca",
+    "schema_errors": 0,
+    "duplicate_ids": 0
+  },
+  "mongodb": {
+    "rows": 66,
+    "sha256": "9f3486833595f0f571b14872ed0b8c044357c0cbf72c1a6139276f55c5186ab5",
+    "content_matches_canonical": true,
+    "unique_scholarship_id_index": "unique_scholarship_id"
+  },
+  "preservation": {
+    "canonical_original_18_exact": true,
+    "mongodb_original_18_exact": true
+  },
+  "expansion": {
+    "baseline": 18,
+    "new": 48,
+    "final": 66,
+    "countries": 18,
+    "research_queue_resolved": true
+  },
+  "funding_vocabulary": {
+    "baseline_distribution": {
+      "PhD fellowship": 1,
+      "Fully Funded": 12,
+      "Government scholarship": 2,
+      "Government postgraduate scholarship": 2,
+      "International graduate research award": 1
+    },
+    "new_48_distribution": {
+      "Fully Funded": 26,
+      "Partially Funded": 12,
+      "Variable Funding": 6,
+      "Unknown": 4
+    },
+    "final_66_distribution": {
+      "PhD fellowship": 1,
+      "Fully Funded": 38,
+      "Government scholarship": 2,
+      "Government postgraduate scholarship": 2,
+      "International graduate research award": 1,
+      "Partially Funded": 12,
+      "Variable Funding": 6,
+      "Unknown": 4
+    },
+    "legacy_baseline_records": 6,
+    "legacy_baseline_only": true,
+    "new_48_controlled": true,
+    "contract_exact": true
+  },
+  "recommendation": {
+    "safety_errors": 0,
+    "engine_ready": true,
+    "weight_total": 100,
+    "legacy_funding_labels_preserved": 6
+  },
+  "api": {
+    "ready": true,
+    "recommendation_route": true,
+    "scholarship_get_route": true
+  },
+  "immutability": {
+    "canonical": true,
+    "mongodb": true
+  }
+}

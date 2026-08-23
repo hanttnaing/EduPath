@@ -1,0 +1,40 @@
+[
+  {
+    "scholarship_id": "sch_bn_001",
+    "identity_status": "VERIFIED",
+    "funding_status": "VERIFIED",
+    "eligibility_status": "VERIFIED",
+    "source_type": "Official Ministry of Foreign Affairs Brunei Darussalam 2026/2027 scholarship page",
+    "source_url": "https://www.mfa.gov.bn/Pages/online-bdgs.aspx",
+    "supporting_urls": [
+      "https://ubd.edu.bn/admission/scholarship/"
+    ],
+    "funding_classification_basis": "The official 2026/2027 BDGS page provides full tuition-fee exemption, economy-class incoming and return airfare, BND 500 monthly personal allowance, BND 150 monthly meal allowance, BND 600 annual book allowance, residential-college accommodation, baggage support and comprehensive insurance.",
+    "unresolved_fields": [
+      "single age_limit because undergraduate/diploma and Master's limits differ",
+      "single mandatory IELTS or TOEFL hard-filter value because multiple English-proficiency alternatives are accepted",
+      "complete machine-readable nationality list because eligibility is expressed through foreign-student inclusion and exclusion rules"
+    ],
+    "notes": "Applications opened 15 December 2025 and closed 15 February 2026. The scholarship is available for Diploma, Undergraduate and Postgraduate Master's study at multiple Brunei institutions, so host_university_id is intentionally None."
+  },
+  {
+    "scholarship_id": "sch_bn_002",
+    "identity_status": "VERIFIED",
+    "funding_status": "VERIFIED",
+    "eligibility_status": "VERIFIED",
+    "source_type": "Official Universiti Brunei Darussalam UGRS page and official UGRS terms and conditions",
+    "source_url": "https://ubd.edu.bn/admission/graduate/graduate-fees-funding/ugrs/",
+    "supporting_urls": [
+      "https://ubd.edu.bn/wp-content/uploads/2026/03/UGRS-2024-TC-3.pdf",
+      "https://ubd.edu.bn/admission/graduate/graduate-entry-requirements/"
+    ],
+    "funding_classification_basis": "Official UBD UGRS information provides tuition and registration/acceptance fee waiver, BND 2,200 monthly subsistence allowance for 36 months, free on-campus accommodation, incoming and outgoing economy-class airfare for candidates not residing in Brunei, overseas research or conference funding up to BND 3,000 and visa-fee support.",
+    "unresolved_fields": [
+      "exact current scholarship application opening date",
+      "exact current scholarship application deadline",
+      "one strict age_limit because the official scholarship permits possible case-by-case exceptions",
+      "one mandatory English scalar because UBD accepts multiple proficiency routes and some programmes impose higher requirements"
+    ],
+    "notes": "UGRS is a PhD scholarship. The current UGRS page verifies the scheme and benefits but its application-period section still lists older intake cycles, so scholarship_status remains unknown instead of being guessed as open or closed."
+  }
+]

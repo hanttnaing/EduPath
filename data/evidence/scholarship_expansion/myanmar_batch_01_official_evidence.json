@@ -1,0 +1,27 @@
+[
+  {
+    "scholarship_id": "sch_mm_001",
+    "identity_status": "VERIFIED",
+    "funding_status": "UNRESOLVED",
+    "eligibility_status": "VERIFIED_AT_HOST_STUDENT_LEVEL",
+    "source_type": "Official Yangon University of Education Academic / Scholarship page",
+    "source_url": "https://www.yuoe.edu.mm/academic/",
+    "supporting_urls": [],
+    "funding_classification_basis": "The official YUOE page identifies Scholarship by Higher Education Department/MOE as one of the scholarships providing financial assistance to YUOE students and states that scholarship is provided every year. The current page does not publish the scholarship amount, tuition coverage, living allowance, accommodation, travel or insurance benefits. Funding is therefore recorded as Unknown rather than inferred.",
+    "unresolved_fields": [
+      "exact scholarship monetary value",
+      "tuition coverage",
+      "living allowance",
+      "accommodation support",
+      "travel support",
+      "health insurance",
+      "exact current-cycle application opening date",
+      "exact current-cycle application deadline",
+      "current-cycle recipient count",
+      "detailed current applicant selection criteria",
+      "nationality restriction"
+    ],
+    "historical_context": "The official page reports 158 recipients for Scholarship by Higher Education Department/MOE in academic year 2019-20. This historical recipient count is retained only as evidence and is not copied into the canonical scholarship fields as a current 2026 count.",
+    "notes": "The official page states that all undergraduate students are eligible to apply for all kinds of scholarship offered in YUOE and that scholarship is provided every year. Detailed eligibility criteria and recipient numbers are announced separately by the university. Because no exact current application dates are published on the verified page, scholarship_status remains unknown."
+  }
+]

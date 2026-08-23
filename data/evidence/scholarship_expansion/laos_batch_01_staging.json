@@ -1,0 +1,40 @@
+[
+  {
+    "scholarship_id": "sch_la_001",
+    "scholarship_name": "Lao Government Scholarship - National University of Laos",
+    "provider_name": "Ministry of Education and Sports, Lao PDR",
+    "provider_type": "Government",
+    "country_id": "country_la",
+    "host_university_id": "uni_la_001",
+    "eligible_nationalities": [
+      "Laos"
+    ],
+    "degree_levels": [
+      "Bachelor"
+    ],
+    "fields_of_study": null,
+    "minimum_gpa": null,
+    "gpa_scale": null,
+    "ielts_requirement": null,
+    "toefl_requirement": null,
+    "age_limit": null,
+    "funding_type": "Partially Funded",
+    "tuition_coverage": "Scholarship recipients do not pay education fees",
+    "monthly_allowance": null,
+    "allowance_currency": null,
+    "travel_allowance": null,
+    "accommodation_support": null,
+    "health_insurance": null,
+    "required_documents": null,
+    "application_opening_date": null,
+    "application_deadline": null,
+    "scholarship_status": "unknown",
+    "application_cycle": "Recurring annual Lao Government university scholarship quota",
+    "official_website": "https://www.nuol.edu.la/index.php/en/admission/educational-scholarship/government-scholarship",
+    "source_url": "https://www.nuol.edu.la/index.php/en/admission/educational-scholarship/government-scholarship",
+    "collected_at": "2026-08-23",
+    "last_verified_at": "2026-08-23",
+    "freshness_status": "current",
+    "data_quality_status": "verified"
+  }
+]

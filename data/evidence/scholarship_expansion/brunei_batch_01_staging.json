@@ -1,0 +1,117 @@
+[
+  {
+    "scholarship_id": "sch_bn_001",
+    "scholarship_name": "Government of Brunei Darussalam Scholarship for Foreign Students Tenable in Brunei Darussalam - 2026/2027",
+    "provider_name": "Ministry of Foreign Affairs, Government of Brunei Darussalam",
+    "provider_type": "Government",
+    "country_id": "country_bn",
+    "host_university_id": null,
+    "eligible_nationalities": null,
+    "degree_levels": [
+      "Diploma",
+      "Bachelor",
+      "Master"
+    ],
+    "fields_of_study": null,
+    "minimum_gpa": null,
+    "gpa_scale": null,
+    "ielts_requirement": null,
+    "toefl_requirement": null,
+    "ielts_requirement_text": "English proficiency may be demonstrated by IELTS 6.0, GCE O Level Credit 6, IGCSE English Grade C, or another accepted route stated by the official scholarship.",
+    "toefl_requirement_text": "TOEFL minimum 550 is one accepted English-proficiency route; alternative English qualifications are also accepted.",
+    "age_limit": null,
+    "funding_type": "Fully Funded",
+    "tuition_coverage": "Full exemption from tuition fees including acceptance, examination, registration and orientation fees for the duration of the programme",
+    "monthly_allowance": null,
+    "allowance_currency": "BND",
+    "monthly_allowance_details": [
+      {
+        "degree_level": "All eligible levels",
+        "amount": 500,
+        "currency": "BND",
+        "description": "Monthly personal allowance"
+      },
+      {
+        "degree_level": "All eligible levels",
+        "amount": 150,
+        "currency": "BND",
+        "description": "Monthly meals allowance"
+      }
+    ],
+    "travel_allowance": "Economy-class airfare to Brunei before commencement and return airfare after completion; baggage allowance also provided according to destination region",
+    "accommodation_support": "Accommodation at the residential college of the university or polytechnic",
+    "health_insurance": "Comprehensive insurance cover for the whole duration of the scholarship",
+    "required_documents": [
+      "Identification card",
+      "Certified academic qualifications and supporting documents",
+      "Certified English translations for documents not in English",
+      "Certified birth certificate",
+      "Certified passport copy",
+      "References and recommendations from referees"
+    ],
+    "application_opening_date": "2025-12-15",
+    "application_deadline": "2026-02-15",
+    "scholarship_status": "closed",
+    "application_cycle": "Academic Session 2026/2027",
+    "official_website": "https://www.mfa.gov.bn/Pages/online-bdgs.aspx",
+    "source_url": "https://www.mfa.gov.bn/Pages/online-bdgs.aspx",
+    "collected_at": "2026-08-23",
+    "last_verified_at": "2026-08-23",
+    "freshness_status": "current",
+    "data_quality_status": "verified"
+  },
+  {
+    "scholarship_id": "sch_bn_002",
+    "scholarship_name": "Universiti Brunei Darussalam Graduate Research Scholarship (UGRS)",
+    "provider_name": "Universiti Brunei Darussalam",
+    "provider_type": "University",
+    "country_id": "country_bn",
+    "host_university_id": "uni_bn_001",
+    "eligible_nationalities": null,
+    "degree_levels": [
+      "PhD"
+    ],
+    "fields_of_study": [
+      "Energy",
+      "Material Science",
+      "Biodiversity",
+      "Data Analytics",
+      "Asian and Islamic Studies",
+      "Bioinspiration",
+      "Climate Change",
+      "Herbal Medicine",
+      "Sensor Technology",
+      "Catalysis"
+    ],
+    "minimum_gpa": null,
+    "gpa_scale": null,
+    "ielts_requirement": null,
+    "toefl_requirement": null,
+    "ielts_requirement_text": "UBD graduate English proficiency may be demonstrated by IELTS Academic 6.0, accepted school English qualifications, TOEFL PBT 550, UBD-EPT B2, or another applicable programme-specific route.",
+    "toefl_requirement_text": "UBD graduate English proficiency may be demonstrated by TOEFL PBT 550, IELTS Academic 6.0, UBD-EPT B2, or another accepted qualification; programme-specific requirements may be higher.",
+    "age_limit": null,
+    "funding_type": "Fully Funded",
+    "tuition_coverage": "Tuition fees including registration and acceptance fees waived for 36 months",
+    "monthly_allowance": 2200,
+    "allowance_currency": "BND",
+    "travel_allowance": "One incoming and one outgoing economy-class air ticket for candidates not residing in Brunei; overseas research or conference funding up to BND 3,000",
+    "accommodation_support": "Free on-campus accommodation for 36 months, excluding applicable administrative fees",
+    "health_insurance": null,
+    "required_documents": [
+      "High-quality and impactful research proposal",
+      "Academic qualifications required by UBD graduate admission",
+      "English proficiency evidence",
+      "Passport or identification documents required by UBD admission"
+    ],
+    "application_opening_date": null,
+    "application_deadline": null,
+    "scholarship_status": "unknown",
+    "application_cycle": "Recurring UBD Graduate Research Scholarship; current scheme verified 2026-08-23",
+    "official_website": "https://ubd.edu.bn/admission/graduate/graduate-fees-funding/ugrs/",
+    "source_url": "https://ubd.edu.bn/wp-content/uploads/2026/03/UGRS-2024-TC-3.pdf",
+    "collected_at": "2026-08-23",
+    "last_verified_at": "2026-08-23",
+    "freshness_status": "current",
+    "data_quality_status": "verified"
+  }
+]

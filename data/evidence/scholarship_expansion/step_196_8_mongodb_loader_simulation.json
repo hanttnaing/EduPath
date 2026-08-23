@@ -1,0 +1,130 @@
+{
+  "step": "196.8",
+  "operation": "SCHOLARSHIP_MONGODB_LOADER_SIMULATION",
+  "mode": "READ_ONLY_NO_DATABASE_WRITES",
+  "canonical": {
+    "rows": 66,
+    "sha256": "64eeb3d8b512beaaa53cf4bb5c0ff6b1e5296192170ce396737a11247ff26eca",
+    "schema_valid": true
+  },
+  "mongodb_before": {
+    "rows": 18,
+    "sha256": "63b3d71b78c3c8fa349d535cf2620b198a521768bc8f25f367b7db888406868a",
+    "duplicate_ids": 0,
+    "baseline_exact": true
+  },
+  "existing_content_parity": {
+    "schema_errors": 0,
+    "logical_mismatches": 0,
+    "exact": true
+  },
+  "insert_plan": {
+    "strategy": "INSERT_ONLY_NEW_48",
+    "new_documents": 48,
+    "existing_updates": 0,
+    "deletes": 0,
+    "id_collisions": 0,
+    "bson_errors": 0,
+    "max_bson_size": 2492,
+    "total_bson_size": 69396,
+    "insert_plan_path": "data\\evidence\\scholarship_expansion\\step_196_8_mongodb_insert_plan.json",
+    "insert_plan_sha256": "fb5a07f783f35a5c4004482da42177021490227227560c70a39afac15889c754"
+  },
+  "index_readiness": {
+    "unique_scholarship_id_index_exists": true,
+    "safe_to_create_if_missing": true,
+    "import_ready": true,
+    "indexes": [
+      {
+        "name": "_id_",
+        "key": [
+          [
+            "_id",
+            1
+          ]
+        ],
+        "unique": false
+      },
+      {
+        "name": "unique_scholarship_id",
+        "key": [
+          [
+            "scholarship_id",
+            1
+          ]
+        ],
+        "unique": true
+      },
+      {
+        "name": "scholarship_country_id",
+        "key": [
+          [
+            "country_id",
+            1
+          ]
+        ],
+        "unique": false
+      },
+      {
+        "name": "scholarship_host_university_id",
+        "key": [
+          [
+            "host_university_id",
+            1
+          ]
+        ],
+        "unique": false
+      },
+      {
+        "name": "scholarship_degree_levels",
+        "key": [
+          [
+            "degree_levels",
+            1
+          ]
+        ],
+        "unique": false
+      },
+      {
+        "name": "scholarship_funding_type",
+        "key": [
+          [
+            "funding_type",
+            1
+          ]
+        ],
+        "unique": false
+      },
+      {
+        "name": "scholarship_status",
+        "key": [
+          [
+            "scholarship_status",
+            1
+          ]
+        ],
+        "unique": false
+      },
+      {
+        "name": "scholarship_deadline",
+        "key": [
+          [
+            "application_deadline",
+            1
+          ]
+        ],
+        "unique": false
+      }
+    ]
+  },
+  "simulated_after": {
+    "rows": 66,
+    "canonical_id_set_exact": true,
+    "count_exact": true
+  },
+  "mongodb_after_simulation": {
+    "rows": 18,
+    "sha256": "63b3d71b78c3c8fa349d535cf2620b198a521768bc8f25f367b7db888406868a",
+    "unchanged": true
+  }
+}

@@ -1,0 +1,61 @@
+program_id,university_id,university_name,program_name,official_program_url,official_department_source,international_application_url,verification_status,notes
+prog_cn_061,uni_cn_021,China University of Mining and Technology-Beijing,Mining Engineering,,,,PENDING_URL_VERIFICATION,Awaiting official URL evidence collection
+prog_cn_062,uni_cn_021,China University of Mining and Technology-Beijing,Geological Engineering,,,,PENDING_URL_VERIFICATION,Awaiting official URL evidence collection
+prog_cn_063,uni_cn_021,China University of Mining and Technology-Beijing,Computer Science and Technology,,,,PENDING_URL_VERIFICATION,Awaiting official URL evidence collection
+prog_cn_064,uni_cn_022,China University of Petroleum-Beijing,Petroleum Engineering,,,,PENDING_URL_VERIFICATION,Awaiting official URL evidence collection
+prog_cn_065,uni_cn_022,China University of Petroleum-Beijing,Chemical Engineering,,,,PENDING_URL_VERIFICATION,Awaiting official URL evidence collection
+prog_cn_066,uni_cn_022,China University of Petroleum-Beijing,Computer Science and Technology,,,,PENDING_URL_VERIFICATION,Awaiting official URL evidence collection
+prog_cn_067,uni_cn_023,Beijing Forestry University,Forestry,,,,PENDING_URL_VERIFICATION,Awaiting official URL evidence collection
+prog_cn_068,uni_cn_023,Beijing Forestry University,Landscape Architecture,,,,PENDING_URL_VERIFICATION,Awaiting official URL evidence collection
+prog_cn_069,uni_cn_023,Beijing Forestry University,Environmental Science and Engineering,,,,PENDING_URL_VERIFICATION,Awaiting official URL evidence collection
+prog_cn_070,uni_cn_024,Communication University of China,Communication Studies,,,,PENDING_URL_VERIFICATION,Awaiting official URL evidence collection
+prog_cn_071,uni_cn_024,Communication University of China,Journalism and Communication,,,,PENDING_URL_VERIFICATION,Awaiting official URL evidence collection
+prog_cn_072,uni_cn_024,Communication University of China,Digital Media Technology,,,,PENDING_URL_VERIFICATION,Awaiting official URL evidence collection
+prog_cn_073,uni_cn_025,Central University of Finance and Economics,Applied Economics,,,,PENDING_URL_VERIFICATION,Awaiting official URL evidence collection
+prog_cn_074,uni_cn_025,Central University of Finance and Economics,Finance,,,,PENDING_URL_VERIFICATION,Awaiting official URL evidence collection
+prog_cn_075,uni_cn_025,Central University of Finance and Economics,Business Administration,,,,PENDING_URL_VERIFICATION,Awaiting official URL evidence collection
+prog_cn_076,uni_cn_026,China University of Political Science and Law,Law,,,,PENDING_URL_VERIFICATION,Awaiting official URL evidence collection
+prog_cn_077,uni_cn_026,China University of Political Science and Law,International Law,,,,PENDING_URL_VERIFICATION,Awaiting official URL evidence collection
+prog_cn_078,uni_cn_026,China University of Political Science and Law,Political Science,,,,PENDING_URL_VERIFICATION,Awaiting official URL evidence collection
+prog_cn_079,uni_cn_027,Beijing University of Chinese Medicine,Traditional Chinese Medicine,,,,PENDING_URL_VERIFICATION,Awaiting official URL evidence collection
+prog_cn_080,uni_cn_027,Beijing University of Chinese Medicine,Chinese Materia Medica,,,,PENDING_URL_VERIFICATION,Awaiting official URL evidence collection
+prog_cn_081,uni_cn_027,Beijing University of Chinese Medicine,Clinical Medicine of Chinese Medicine,,,,PENDING_URL_VERIFICATION,Awaiting official URL evidence collection
+prog_cn_082,uni_cn_028,University of International Business and Economics,International Business,,,,PENDING_URL_VERIFICATION,Awaiting official URL evidence collection
+prog_cn_083,uni_cn_028,University of International Business and Economics,International Economics and Trade,,,,PENDING_URL_VERIFICATION,Awaiting official URL evidence collection
+prog_cn_084,uni_cn_028,University of International Business and Economics,Business Administration,,,,PENDING_URL_VERIFICATION,Awaiting official URL evidence collection
+prog_cn_085,uni_cn_029,North China Electric Power University,Electrical Engineering,,,,PENDING_URL_VERIFICATION,Awaiting official URL evidence collection
+prog_cn_086,uni_cn_029,North China Electric Power University,Power Engineering,,,,PENDING_URL_VERIFICATION,Awaiting official URL evidence collection
+prog_cn_087,uni_cn_029,North China Electric Power University,Computer Science and Technology,,,,PENDING_URL_VERIFICATION,Awaiting official URL evidence collection
+prog_cn_088,uni_cn_030,Tianjin University,Chemical Engineering,,,,PENDING_URL_VERIFICATION,Awaiting official URL evidence collection
+prog_cn_089,uni_cn_030,Tianjin University,Mechanical Engineering,,,,PENDING_URL_VERIFICATION,Awaiting official URL evidence collection
+prog_cn_090,uni_cn_030,Tianjin University,Computer Science and Technology,,,,PENDING_URL_VERIFICATION,Awaiting official URL evidence collection
+prog_cn_091,uni_cn_031,Nankai University,Chemistry,,,,PENDING_URL_VERIFICATION,Awaiting official URL evidence collection
+prog_cn_092,uni_cn_031,Nankai University,Economics,,,,PENDING_URL_VERIFICATION,Awaiting official URL evidence collection
+prog_cn_093,uni_cn_031,Nankai University,Computer Science and Technology,,,,PENDING_URL_VERIFICATION,Awaiting official URL evidence collection
+prog_cn_094,uni_cn_032,Dalian University of Technology,Mechanical Engineering,,,,PENDING_URL_VERIFICATION,Awaiting official URL evidence collection
+prog_cn_095,uni_cn_032,Dalian University of Technology,Chemical Engineering,,,,PENDING_URL_VERIFICATION,Awaiting official URL evidence collection
+prog_cn_096,uni_cn_032,Dalian University of Technology,Computer Science and Technology,,,,PENDING_URL_VERIFICATION,Awaiting official URL evidence collection
+prog_cn_097,uni_cn_033,Northeastern University,Computer Science and Technology,,,,PENDING_URL_VERIFICATION,Awaiting official URL evidence collection
+prog_cn_098,uni_cn_033,Northeastern University,Metallurgical Engineering,,,,PENDING_URL_VERIFICATION,Awaiting official URL evidence collection
+prog_cn_099,uni_cn_033,Northeastern University,Mechanical Engineering,,,,PENDING_URL_VERIFICATION,Awaiting official URL evidence collection
+prog_cn_100,uni_cn_034,Jilin University,Computer Science and Technology,,,,PENDING_URL_VERIFICATION,Awaiting official URL evidence collection
+prog_cn_101,uni_cn_034,Jilin University,Chemistry,,,,PENDING_URL_VERIFICATION,Awaiting official URL evidence collection
+prog_cn_102,uni_cn_034,Jilin University,Economics,,,,PENDING_URL_VERIFICATION,Awaiting official URL evidence collection
+prog_cn_103,uni_cn_035,Northeast Normal University,Education,,,,PENDING_URL_VERIFICATION,Awaiting official URL evidence collection
+prog_cn_104,uni_cn_035,Northeast Normal University,Psychology,,,,PENDING_URL_VERIFICATION,Awaiting official URL evidence collection
+prog_cn_105,uni_cn_035,Northeast Normal University,Biology,,,,PENDING_URL_VERIFICATION,Awaiting official URL evidence collection
+prog_cn_106,uni_cn_036,Northeast Forestry University,Forestry,,,,PENDING_URL_VERIFICATION,Awaiting official URL evidence collection
+prog_cn_107,uni_cn_036,Northeast Forestry University,Wildlife Conservation,,,,PENDING_URL_VERIFICATION,Awaiting official URL evidence collection
+prog_cn_108,uni_cn_036,Northeast Forestry University,Environmental Science,,,,PENDING_URL_VERIFICATION,Awaiting official URL evidence collection
+prog_cn_109,uni_cn_037,East China University of Science and Technology,Chemical Engineering,,,,PENDING_URL_VERIFICATION,Awaiting official URL evidence collection
+prog_cn_110,uni_cn_037,East China University of Science and Technology,Materials Science and Engineering,,,,PENDING_URL_VERIFICATION,Awaiting official URL evidence collection
+prog_cn_111,uni_cn_037,East China University of Science and Technology,Computer Science and Technology,,,,PENDING_URL_VERIFICATION,Awaiting official URL evidence collection
+prog_cn_112,uni_cn_038,Donghua University,Textile Engineering,,,,PENDING_URL_VERIFICATION,Awaiting official URL evidence collection
+prog_cn_113,uni_cn_038,Donghua University,Fashion Design,,,,PENDING_URL_VERIFICATION,Awaiting official URL evidence collection
+prog_cn_114,uni_cn_038,Donghua University,Materials Science and Engineering,,,,PENDING_URL_VERIFICATION,Awaiting official URL evidence collection
+prog_cn_115,uni_cn_039,East China Normal University,Education,,,,PENDING_URL_VERIFICATION,Awaiting official URL evidence collection
+prog_cn_116,uni_cn_039,East China Normal University,Psychology,,,,PENDING_URL_VERIFICATION,Awaiting official URL evidence collection
+prog_cn_117,uni_cn_039,East China Normal University,Computer Science and Technology,,,,PENDING_URL_VERIFICATION,Awaiting official URL evidence collection
+prog_cn_118,uni_cn_040,Shanghai University of Finance and Economics,Finance,,,,PENDING_URL_VERIFICATION,Awaiting official URL evidence collection
+prog_cn_119,uni_cn_040,Shanghai University of Finance and Economics,Economics,,,,PENDING_URL_VERIFICATION,Awaiting official URL evidence collection
+prog_cn_120,uni_cn_040,Shanghai University of Finance and Economics,Business Administration,,,,PENDING_URL_VERIFICATION,Awaiting official URL evidence collection

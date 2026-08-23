@@ -1,0 +1,37 @@
+program_id,university_id,university_name,target_programme,field_of_study,degree_level,official_department_target,programme_url_status,international_source_status,research_status,notes
+prog_cn_025,uni_cn_009,Sun Yat-sen University,,,Master,,pending,pending,pending,Awaiting official programme verification
+prog_cn_026,uni_cn_009,Sun Yat-sen University,,,Master,,pending,pending,pending,Awaiting official programme verification
+prog_cn_027,uni_cn_009,Sun Yat-sen University,,,Master,,pending,pending,pending,Awaiting official programme verification
+prog_cn_028,uni_cn_010,Tongji University,,,Master,,pending,pending,pending,Awaiting official programme verification
+prog_cn_029,uni_cn_010,Tongji University,,,Master,,pending,pending,pending,Awaiting official programme verification
+prog_cn_030,uni_cn_010,Tongji University,,,Master,,pending,pending,pending,Awaiting official programme verification
+prog_cn_031,uni_cn_011,Renmin University of China,,,Master,,pending,pending,pending,Awaiting official programme verification
+prog_cn_032,uni_cn_011,Renmin University of China,,,Master,,pending,pending,pending,Awaiting official programme verification
+prog_cn_033,uni_cn_011,Renmin University of China,,,Master,,pending,pending,pending,Awaiting official programme verification
+prog_cn_034,uni_cn_012,Beijing Normal University,,,Master,,pending,pending,pending,Awaiting official programme verification
+prog_cn_035,uni_cn_012,Beijing Normal University,,,Master,,pending,pending,pending,Awaiting official programme verification
+prog_cn_036,uni_cn_012,Beijing Normal University,,,Master,,pending,pending,pending,Awaiting official programme verification
+prog_cn_037,uni_cn_013,China Agricultural University,,,Master,,pending,pending,pending,Awaiting official programme verification
+prog_cn_038,uni_cn_013,China Agricultural University,,,Master,,pending,pending,pending,Awaiting official programme verification
+prog_cn_039,uni_cn_013,China Agricultural University,,,Master,,pending,pending,pending,Awaiting official programme verification
+prog_cn_040,uni_cn_014,Beijing Foreign Studies University,,,Master,,pending,pending,pending,Awaiting official programme verification
+prog_cn_041,uni_cn_014,Beijing Foreign Studies University,,,Master,,pending,pending,pending,Awaiting official programme verification
+prog_cn_042,uni_cn_014,Beijing Foreign Studies University,,,Master,,pending,pending,pending,Awaiting official programme verification
+prog_cn_043,uni_cn_015,University of Science and Technology Beijing,,,Master,,pending,pending,pending,Awaiting official programme verification
+prog_cn_044,uni_cn_015,University of Science and Technology Beijing,,,Master,,pending,pending,pending,Awaiting official programme verification
+prog_cn_045,uni_cn_015,University of Science and Technology Beijing,,,Master,,pending,pending,pending,Awaiting official programme verification
+prog_cn_046,uni_cn_016,Beijing Language and Culture University,,,Master,,pending,pending,pending,Awaiting official programme verification
+prog_cn_047,uni_cn_016,Beijing Language and Culture University,,,Master,,pending,pending,pending,Awaiting official programme verification
+prog_cn_048,uni_cn_016,Beijing Language and Culture University,,,Master,,pending,pending,pending,Awaiting official programme verification
+prog_cn_049,uni_cn_017,Beijing University of Chemical Technology,,,Master,,pending,pending,pending,Awaiting official programme verification
+prog_cn_050,uni_cn_017,Beijing University of Chemical Technology,,,Master,,pending,pending,pending,Awaiting official programme verification
+prog_cn_051,uni_cn_017,Beijing University of Chemical Technology,,,Master,,pending,pending,pending,Awaiting official programme verification
+prog_cn_052,uni_cn_018,Beijing Jiaotong University,,,Master,,pending,pending,pending,Awaiting official programme verification
+prog_cn_053,uni_cn_018,Beijing Jiaotong University,,,Master,,pending,pending,pending,Awaiting official programme verification
+prog_cn_054,uni_cn_018,Beijing Jiaotong University,,,Master,,pending,pending,pending,Awaiting official programme verification
+prog_cn_055,uni_cn_019,China University of Geosciences (Beijing),,,Master,,pending,pending,pending,Awaiting official programme verification
+prog_cn_056,uni_cn_019,China University of Geosciences (Beijing),,,Master,,pending,pending,pending,Awaiting official programme verification
+prog_cn_057,uni_cn_019,China University of Geosciences (Beijing),,,Master,,pending,pending,pending,Awaiting official programme verification
+prog_cn_058,uni_cn_020,Beijing University of Posts and Telecommunications,,,Master,,pending,pending,pending,Awaiting official programme verification
+prog_cn_059,uni_cn_020,Beijing University of Posts and Telecommunications,,,Master,,pending,pending,pending,Awaiting official programme verification
+prog_cn_060,uni_cn_020,Beijing University of Posts and Telecommunications,,,Master,,pending,pending,pending,Awaiting official programme verification

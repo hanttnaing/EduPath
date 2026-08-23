@@ -1,0 +1,49 @@
+[
+  {
+    "scholarship_id": "sch_hk_002",
+    "identity_status": "VERIFIED",
+    "funding_status": "VERIFIED",
+    "eligibility_status": "VERIFIED",
+    "source_type": "Official HKU Admissions scholarship page",
+    "source_url": "https://admissions.hku.hk/fees-and-scholarships/scholarships/belt-and-road-scholarship",
+    "supporting_urls": [],
+    "funding_classification_basis": "Official HKU source states that successful applicants receive an entrance scholarship valued at the full tuition amount for non-local students. No full living-cost package is established by the source.",
+    "unresolved_fields": [
+      "complete list of all participating Belt and Road nationalities"
+    ],
+    "notes": "Myanmar is explicitly included among participating countries. The complete nationality list is not forced into eligible_nationalities because the page states that additional countries are also included."
+  },
+  {
+    "scholarship_id": "sch_hk_003",
+    "identity_status": "VERIFIED",
+    "funding_status": "VERIFIED",
+    "eligibility_status": "VERIFIED",
+    "source_type": "Official HKUST Undergraduate Admissions scholarship pages",
+    "source_url": "https://join.hkust.edu.hk/global-learners-scholarship",
+    "supporting_urls": [
+      "https://join.hkust.edu.hk/intlscholarships"
+    ],
+    "funding_classification_basis": "Official HKUST source states a full tuition waiver renewable for the normal duration of undergraduate study. Since the scheme does not establish full living-cost coverage, it is classified as Partially Funded.",
+    "unresolved_fields": [
+      "complete list of underrepresented nationalities"
+    ],
+    "notes": "No separate scholarship application is required. Final 2026/27 late-round admission deadline was June 30, 2026, so the current cycle is stored as closed."
+  },
+  {
+    "scholarship_id": "sch_hk_004",
+    "identity_status": "VERIFIED",
+    "funding_status": "VERIFIED",
+    "eligibility_status": "VERIFIED",
+    "source_type": "Official CUHK Undergraduate Admissions scholarship and international admission pages",
+    "source_url": "https://admission.cuhk.edu.hk/fees-financing-your-studies/scholarships/admission-scholarships-for-undergraduates-only/",
+    "supporting_urls": [
+      "https://admission.cuhk.edu.hk/application/overseas-other-qualifications-non-local-international-team/important-dates/"
+    ],
+    "funding_classification_basis": "Official CUHK source states that admission scholarship values range from HKD 5,000 to full tuition and that some scholarships may include an allowance of up to HKD 66,000 per year.",
+    "unresolved_fields": [
+      "exact award value for an individual recipient",
+      "whether a particular recipient receives an annual allowance"
+    ],
+    "notes": "No separate scholarship application is required. Non-local undergraduate applicants are automatically considered. The 2026 international admission extended deadline was May 29, 2026."
+  }
+]

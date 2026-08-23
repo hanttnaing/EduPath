@@ -1,0 +1,63 @@
+{
+  "step": "196.7",
+  "operation": "CONTROLLED_CANONICAL_SCHOLARSHIP_MERGE",
+  "canonical_path": "data\\cleaned\\scholarships.json",
+  "before": {
+    "rows": 18,
+    "sha256": "faa8b70856492fd829b9ccce95d4f37db4999383bc81c9399731b29182b185fc"
+  },
+  "source_preview": {
+    "path": "data\\evidence\\scholarship_expansion\\step_196_6_scholarship_merge_preview.json",
+    "rows": 66,
+    "sha256": "64eeb3d8b512beaaa53cf4bb5c0ff6b1e5296192170ce396737a11247ff26eca"
+  },
+  "after": {
+    "rows": 66,
+    "sha256": "64eeb3d8b512beaaa53cf4bb5c0ff6b1e5296192170ce396737a11247ff26eca"
+  },
+  "new_rows_added": 48,
+  "preservation": {
+    "first_18_exact": true,
+    "backup_path": "backups\\step_196_6_scholarship_merge_preparation\\scholarships_canonical_before_merge.json",
+    "backup_sha256": "faa8b70856492fd829b9ccce95d4f37db4999383bc81c9399731b29182b185fc"
+  },
+  "post_merge_validation": {
+    "schema_valid": true,
+    "duplicate_ids": 0,
+    "parent_errors": 0,
+    "preview_exact": true
+  },
+  "mongodb": {
+    "modified": false,
+    "rows": 18,
+    "content_sha256_before": "63b3d71b78c3c8fa349d535cf2620b198a521768bc8f25f367b7db888406868a",
+    "content_sha256_after": "63b3d71b78c3c8fa349d535cf2620b198a521768bc8f25f367b7db888406868a",
+    "unchanged": true
+  },
+  "distribution": {
+    "status": {
+      "closed": 30,
+      "upcoming": 15,
+      "unknown": 15,
+      "open": 6
+    },
+    "funding": {
+      "PhD fellowship": 1,
+      "Fully Funded": 38,
+      "Government scholarship": 2,
+      "Government postgraduate scholarship": 2,
+      "International graduate research award": 1,
+      "Partially Funded": 12,
+      "Variable Funding": 6,
+      "Unknown": 4
+    },
+    "quality": {
+      "reviewed": 10,
+      "verified": 56
+    },
+    "freshness": {
+      "current": 65,
+      "needs_refresh": 1
+    }
+  }
+}

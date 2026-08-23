@@ -1,0 +1,86 @@
+[
+  {
+    "scholarship_id": "sch_kh_001",
+    "scholarship_name": "RUPP PhD Program in Physics Scholarship - Academic Year 2026-2027",
+    "provider_name": "Royal University of Phnom Penh / Higher Education Improvement Project (HEIP-2)",
+    "provider_type": "University project",
+    "country_id": "country_kh",
+    "host_university_id": "uni_kh_001",
+    "eligible_nationalities": null,
+    "degree_levels": [
+      "PhD"
+    ],
+    "fields_of_study": [
+      "Physics"
+    ],
+    "minimum_gpa": null,
+    "gpa_scale": null,
+    "ielts_requirement": null,
+    "toefl_requirement": null,
+    "age_limit": null,
+    "funding_type": "Partially Funded",
+    "tuition_coverage": "Full tuition fees for 4 scholarship positions supported by HEIP-2",
+    "monthly_allowance": null,
+    "allowance_currency": null,
+    "travel_allowance": null,
+    "accommodation_support": null,
+    "health_insurance": null,
+    "required_documents": null,
+    "application_opening_date": null,
+    "application_deadline": "2026-09-11",
+    "scholarship_status": "open",
+    "application_cycle": "Academic Year 2026-2027",
+    "official_website": "https://rupp.edu.kh/academics/faculties_and_institutes/gss/scholarship/56",
+    "source_url": "https://rupp.edu.kh/academics/faculties_and_institutes/gss/scholarship/56",
+    "collected_at": "2026-08-23",
+    "last_verified_at": "2026-08-23",
+    "freshness_status": "current",
+    "data_quality_status": "verified"
+  },
+  {
+    "scholarship_id": "sch_kh_002",
+    "scholarship_name": "ITC Techo Digital Talent Scholarship - International Engineering Program 2026",
+    "provider_name": "Institute of Technology of Cambodia",
+    "provider_type": "University",
+    "country_id": "country_kh",
+    "host_university_id": "uni_kh_002",
+    "eligible_nationalities": null,
+    "degree_levels": [
+      "Bachelor"
+    ],
+    "fields_of_study": [
+      "Artificial Intelligence Engineering and Cybersecurity",
+      "Software Engineering",
+      "Aerospace and Autonomous Systems Engineering"
+    ],
+    "minimum_gpa": null,
+    "gpa_scale": null,
+    "ielts_requirement": null,
+    "toefl_requirement": null,
+    "ielts_requirement_text": "International Engineering Program admission accepts IELTS 5.0 or above, TOEFL iBT 60 or above, or another equivalent English proficiency certificate.",
+    "toefl_requirement_text": "International Engineering Program admission accepts TOEFL iBT 60 or above, IELTS 5.0 or above, or another equivalent English proficiency certificate.",
+    "age_limit": null,
+    "funding_type": "Partially Funded",
+    "tuition_coverage": "100% scholarship under the Techo Digital Talent Scholarship for 65 places across the specified International Engineering Program majors",
+    "monthly_allowance": null,
+    "allowance_currency": null,
+    "travel_allowance": null,
+    "accommodation_support": null,
+    "health_insurance": null,
+    "required_documents": [
+      "High school diploma or equivalent certificate",
+      "English proficiency evidence",
+      "Entrance examination requirements"
+    ],
+    "application_opening_date": "2026-08-31",
+    "application_deadline": "2026-09-22",
+    "scholarship_status": "upcoming",
+    "application_cycle": "International Engineering Program 2026",
+    "official_website": "https://itc.edu.kh/international-engineering-program-2026/",
+    "source_url": "https://itc.edu.kh/international-engineering-program-2026/",
+    "collected_at": "2026-08-23",
+    "last_verified_at": "2026-08-23",
+    "freshness_status": "current",
+    "data_quality_status": "verified"
+  }
+]

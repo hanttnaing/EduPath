@@ -1,0 +1,125 @@
+{
+  "step": "196.6",
+  "created_at": "2026-08-23T10:02:06",
+  "mode": "SAFE_MERGE_DRY_RUN_AND_BACKUP_ONLY",
+  "canonical_before": {
+    "path": "data\\cleaned\\scholarships.json",
+    "rows": 18,
+    "sha256": "faa8b70856492fd829b9ccce95d4f37db4999383bc81c9399731b29182b185fc"
+  },
+  "mongodb_before": {
+    "collection": "scholarships",
+    "rows": 18,
+    "scholarship_ids": [
+      "sch_hk_001",
+      "sch_jp_001",
+      "sch_jp_002",
+      "sch_jp_003",
+      "sch_jp_004",
+      "sch_jp_005",
+      "sch_jp_008",
+      "sch_jp_010",
+      "sch_jp_012",
+      "sch_jp_013",
+      "sch_jp_017",
+      "sch_jp_019",
+      "sch_jp_020",
+      "sch_kr_001",
+      "sch_my_001",
+      "sch_sg_001",
+      "sch_th_001",
+      "sch_tw_001"
+    ]
+  },
+  "research_artifacts": {
+    "batch_count": 17,
+    "staging_rows": 48,
+    "evidence_rows": 48,
+    "queue_rows": 48,
+    "artifact_sha256": {
+      "data\\evidence\\scholarship_expansion\\east_southeast_asia_scholarship_gap_queue.csv": "2e1913d6255c946f1c3cfc0e1eb9590af6ed6485ceaa0830b820dde9df403c21",
+      "data\\evidence\\scholarship_expansion\\south_korea_batch_01_staging.json": "8a0fe89099b068cf1880c9c7c29d3504f02914aaabdece7ebea6c231f6616d23",
+      "data\\evidence\\scholarship_expansion\\china_batch_01_staging.json": "810595b106132670b3a7c5e96b855f8ab922aa1bf641591a71147ad838c09e5c",
+      "data\\evidence\\scholarship_expansion\\taiwan_batch_01_staging.json": "d7a9643c26d09e93f66daeba46cb4c168b1b399861f2d109e6d24910ebd97dc5",
+      "data\\evidence\\scholarship_expansion\\hong_kong_batch_01_staging.json": "c24439c489200c2287a03d18f86aa8e2fb2bd62ebbda8e846d82ea5019290323",
+      "data\\evidence\\scholarship_expansion\\singapore_batch_01_staging.json": "e23d80e22c56adbaccda12ff9c00743dc63fd615cef518d38734f18c023b1257",
+      "data\\evidence\\scholarship_expansion\\thailand_batch_01_staging.json": "ea238b40b35d842632fc49aaaba041305ba74938f07195377619ae533c8d4092",
+      "data\\evidence\\scholarship_expansion\\malaysia_batch_01_staging.json": "a865d7d0fbc0f20a7359127db655ebc795708a63a6eca9839a8ec69affb15c54",
+      "data\\evidence\\scholarship_expansion\\vietnam_batch_01_staging.json": "2412b7f7afa4ec1f65a4e4755b4db9d72a09693439255f44e66bcec43fa2bb5e",
+      "data\\evidence\\scholarship_expansion\\indonesia_batch_01_staging.json": "2dad538c47e704d861324b7818c0cb6819de83d55ac6c78f4e6777a335174ae8",
+      "data\\evidence\\scholarship_expansion\\philippines_batch_01_staging.json": "ee37800512088067d63100bddbaf42ed6c5ec419de27d3bb248eb080ed196609",
+      "data\\evidence\\scholarship_expansion\\brunei_batch_01_staging.json": "4dce9709fe3a6107aa5621c7c3e7fdb1a34ad967846a81087fee8c29f5ce0b07",
+      "data\\evidence\\scholarship_expansion\\cambodia_batch_01_staging.json": "4e91f604fc917446ec5e6ece78bc7e64b3780f4c8cf83ca3172744de3322dca7",
+      "data\\evidence\\scholarship_expansion\\laos_batch_01_staging.json": "213558c900f7fd4a45f9c02f8f9a8b415d048aed0eae2c835ca7abff9619bade",
+      "data\\evidence\\scholarship_expansion\\myanmar_batch_01_staging.json": "f0376996ab8d40a9462a698e9306525c6a4abc05ab60df424230e8479ed24dc6",
+      "data\\evidence\\scholarship_expansion\\macau_batch_01_staging.json": "c00955c5d6bb2abd64fa80276be5d1f04e1de693697d3314f9085691c18ad40e",
+      "data\\evidence\\scholarship_expansion\\mongolia_batch_01_staging.json": "fda481af5135d27e8f1c1ac452cfe5ed08a14d195db57ce65c22c5b3abd330ef",
+      "data\\evidence\\scholarship_expansion\\timor_leste_batch_01_staging.json": "af215073247e38198f4beca2c9c26e3911367a8c212ba2a780a5fc58b1b9af98",
+      "data\\evidence\\scholarship_expansion\\south_korea_batch_01_official_evidence.json": "f81b9d5a70f23a837faf7b7dce737e95c14a0bd09c6502e9339d97a9157a11a6",
+      "data\\evidence\\scholarship_expansion\\china_batch_01_official_evidence.json": "851206f38d2aee0dcfc4b975ed0077627708834e074282834feaad15bacf24a0",
+      "data\\evidence\\scholarship_expansion\\taiwan_batch_01_official_evidence.json": "b851c7d43c3abc525fef0391b5a448940b227744b5758ba62817fda144afbf89",
+      "data\\evidence\\scholarship_expansion\\hong_kong_batch_01_official_evidence.json": "e73f4e5a0b0b8d9adc951d8070f6583990aec3e201271e9e9e61d306e5b2c38e",
+      "data\\evidence\\scholarship_expansion\\singapore_batch_01_official_evidence.json": "b3e9bab3c552d30179ec70fb536147d0741957e1940a7fb42ad2d964247874ab",
+      "data\\evidence\\scholarship_expansion\\thailand_batch_01_official_evidence.json": "32c2e64d064636a0fa822ef3aa00c57ac9f3e2c4cf3a20d0ebf3af8991c5fdaf",
+      "data\\evidence\\scholarship_expansion\\malaysia_batch_01_official_evidence.json": "b921875ab6ff77c20504e306562dcb93216f8b53762f1daa671172a4691667b2",
+      "data\\evidence\\scholarship_expansion\\vietnam_batch_01_official_evidence.json": "5bdab5a7d3663ca07712b37623039a980ea5a3d49480a7bbbe593995892675df",
+      "data\\evidence\\scholarship_expansion\\indonesia_batch_01_official_evidence.json": "6b683a4af71f3102ef8a8b0899929d4790ee13f51b744337fcddb95bf6147f4f",
+      "data\\evidence\\scholarship_expansion\\philippines_batch_01_official_evidence.json": "bb17784acb853a9628be117dc41d4bb63d4484fe845ccfedb6db295de4d2b4ae",
+      "data\\evidence\\scholarship_expansion\\brunei_batch_01_official_evidence.json": "99f0bf60dbd04ca661654b6e78ec60f65fcd3c7f54c74c905193c725feaa4b28",
+      "data\\evidence\\scholarship_expansion\\cambodia_batch_01_official_evidence.json": "90d80cb47cd367aa1a54924a55739ecda17a13cb8e68c7b4846d7c2b720a72a6",
+      "data\\evidence\\scholarship_expansion\\laos_batch_01_official_evidence.json": "d0c75bd78ccd79c1b82a6148faa41893b82188034a3fe46a536c5457b9a87cac",
+      "data\\evidence\\scholarship_expansion\\myanmar_batch_01_official_evidence.json": "3eaad8ecb110d2a48615b8cfd9b2743b9b8e938d23e85880127bbeb0ad0cbadb",
+      "data\\evidence\\scholarship_expansion\\macau_batch_01_official_evidence.json": "f9053cdea7ff9dc8ec96f1b5fb886dcf06d7e44389c02bc0fd9a81723dec59f2",
+      "data\\evidence\\scholarship_expansion\\mongolia_batch_01_official_evidence.json": "c3d1034375b45775d4489e7248e71dddc420eb9a2c412ed10f7051bd012b68c5",
+      "data\\evidence\\scholarship_expansion\\timor_leste_batch_01_official_evidence.json": "33b4bf06f01114341372039d9c2889364258a9fee75b220182aea9446a8fdc12"
+    }
+  },
+  "dry_run_merge": {
+    "existing_rows": 18,
+    "new_rows": 48,
+    "projected_rows": 66,
+    "existing_rows_preserved": true,
+    "schema_valid_rows": 66,
+    "duplicate_ids": 0,
+    "parent_errors": 0
+  },
+  "new_record_distribution": {
+    "status": {
+      "unknown": 14,
+      "closed": 25,
+      "upcoming": 3,
+      "open": 6
+    },
+    "funding": {
+      "Fully Funded": 26,
+      "Partially Funded": 12,
+      "Variable Funding": 6,
+      "Unknown": 4
+    },
+    "data_quality": {
+      "verified": 44,
+      "reviewed": 4
+    },
+    "freshness": {
+      "current": 47,
+      "needs_refresh": 1
+    }
+  },
+  "backup": {
+    "canonical_backup_path": "backups\\step_196_6_scholarship_merge_preparation\\scholarships_canonical_before_merge.json",
+    "canonical_backup_sha256": "faa8b70856492fd829b9ccce95d4f37db4999383bc81c9399731b29182b185fc",
+    "mongodb_backup_path": "backups\\step_196_6_scholarship_merge_preparation\\scholarships_mongodb_before_merge.json",
+    "canonical_backup_exact": true,
+    "mongodb_backup_exact": true
+  },
+  "preview": {
+    "path": "data\\evidence\\scholarship_expansion\\step_196_6_scholarship_merge_preview.json",
+    "rows": 66,
+    "sha256": "64eeb3d8b512beaaa53cf4bb5c0ff6b1e5296192170ce396737a11247ff26eca",
+    "exact": true
+  },
+  "immutability": {
+    "canonical_untouched": true,
+    "mongodb_untouched": true
+  }
+}

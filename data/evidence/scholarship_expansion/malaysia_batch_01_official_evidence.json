@@ -1,0 +1,55 @@
+[
+  {
+    "scholarship_id": "sch_my_002",
+    "identity_status": "VERIFIED",
+    "funding_status": "VERIFIED",
+    "eligibility_status": "VERIFIED",
+    "source_type": "Current official Universiti Malaya Academic Services financial-aid page",
+    "source_url": "https://aasd.um.edu.my/financial-aid-for-postgraduate",
+    "supporting_urls": [
+      "https://aasd.um.edu.my/universiti-malaya-bright-scholarship"
+    ],
+    "funding_classification_basis": "The current UM page explicitly describes UM Bright as a prestigious full scholarship programme for outstanding local and international candidates pursuing PhD by Research.",
+    "unresolved_fields": [
+      "current itemised tuition package",
+      "current monthly stipend amount",
+      "exact calendar date represented by the phrase 'End of September'",
+      "current detailed applicant requirements"
+    ],
+    "notes": "A historical UM brochure lists specific stipend and fee-waiver amounts, but those older figures are deliberately not copied into the 2026 record because the current page does not re-state them. Applications are stated to be open throughout the year."
+  },
+  {
+    "scholarship_id": "sch_my_003",
+    "identity_status": "VERIFIED",
+    "funding_status": "VERIFIED",
+    "eligibility_status": "REVIEWED_WITH_CONFLICT",
+    "source_type": "Official UTM Admissions and School of Graduate Studies scholarship pages",
+    "source_url": "https://sps.utm.my/scholarship-financial-aids/",
+    "supporting_urls": [
+      "https://admission.utm.my/scholarship-and-financial-aid/"
+    ],
+    "funding_classification_basis": "Official UTM sources state tuition fees covered for six semesters and a monthly allowance of RM3,000.",
+    "unresolved_fields": [
+      "international-applicant GPA hard filter because the detailed page contains conflicting local-only wording",
+      "complete nationality eligibility rule"
+    ],
+    "notes": "UTM Admissions describes Bright Talent as for high-achieving local and international candidates. The SPS page heading also says LOCAL AND INTERNATIONAL, but one requirement bullet says local PhD applicants. To avoid false hard filtering, nationality and minimum_gpa remain None. The 2026 deadline was extended to 31 May 2026."
+  },
+  {
+    "scholarship_id": "sch_my_004",
+    "identity_status": "VERIFIED",
+    "funding_status": "VERIFIED",
+    "eligibility_status": "VERIFIED",
+    "source_type": "Official Pearson PTE scholarship terms jointly conducted with Universiti Malaya",
+    "source_url": "https://www.pearsonpte.com/pte-universiti-malaya-scholarship-2026/terms-and-conditions/",
+    "supporting_urls": [
+      "https://www.pearsonpte.com/pte-universiti-malaya-scholarship-2026/",
+      "https://aasd.um.edu.my/financial-aid-for-postgraduate"
+    ],
+    "funding_classification_basis": "Official terms specify one GBP 3,000 prize toward Universiti Malaya tuition fees. It does not provide full tuition or living-cost coverage, so it is classified as Partially Funded.",
+    "unresolved_fields": [
+      "programme-specific admission requirements"
+    ],
+    "notes": "Eligibility is for international students aged 18 or older worldwide who apply to an eligible UM Bachelor's, Master's or Doctoral programme and complete the scholarship competition requirements. Application period is 1 June through 31 December 2026."
+  }
+]

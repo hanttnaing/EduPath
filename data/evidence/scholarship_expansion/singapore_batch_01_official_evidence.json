@@ -1,0 +1,51 @@
+[
+  {
+    "scholarship_id": "sch_sg_002",
+    "identity_status": "VERIFIED",
+    "funding_status": "VERIFIED",
+    "eligibility_status": "VERIFIED",
+    "source_type": "Official NUS Office of Admissions scholarship and admission pages",
+    "source_url": "https://nus.edu.sg/oam/scholarships/scholarships-for-freshmen-international-students/nus-international-undergraduate-scholarship",
+    "supporting_urls": [
+      "https://www.nus.edu.sg/oam/admissions/international-qualifications-for-foreigners/admission-requirements"
+    ],
+    "funding_classification_basis": "Official NUS source states 100% coverage of subsidised undergraduate tuition fees, S$5,800 annual living allowance, S$1,750 one-time computer allowance and S$5,000 annual accommodation allowance.",
+    "unresolved_fields": [
+      "machine-readable nationality list because eligibility is expressed as all countries except Singapore",
+      "programme-specific English requirements"
+    ],
+    "notes": "Candidates are considered through their NUS undergraduate admission application. AY2026/2027 international-qualification applications ran from 3 December 2025 to 23 February 2026. Annual allowance amounts are not divided into artificial monthly values."
+  },
+  {
+    "scholarship_id": "sch_sg_003",
+    "identity_status": "VERIFIED",
+    "funding_status": "VERIFIED",
+    "eligibility_status": "VERIFIED",
+    "source_type": "Official NUS Office of Admissions ASEAN Undergraduate Scholarship page",
+    "source_url": "https://www.nus.edu.sg/oam/scholarships/scholarships-for-freshmen-international-students/asean-undergraduate-scholarship",
+    "supporting_urls": [
+      "https://www.nus.edu.sg/oam/admissions/international-qualifications-for-foreigners/admission-requirements"
+    ],
+    "funding_classification_basis": "Official NUS source states 100% coverage of subsidised undergraduate tuition, S$5,800 annual living allowance, S$1,750 computer allowance and S$3,000 annual accommodation allowance.",
+    "unresolved_fields": [
+      "programme-specific English requirements"
+    ],
+    "notes": "Official eligibility is citizenship of an ASEAN member country excluding Singapore. The official complete list includes Myanmar. Candidates are considered through undergraduate admission."
+  },
+  {
+    "scholarship_id": "sch_sg_004",
+    "identity_status": "VERIFIED",
+    "funding_status": "VERIFIED",
+    "eligibility_status": "VERIFIED",
+    "source_type": "Official Singapore Management University scholarship and international admissions pages",
+    "source_url": "https://admissions.smu.edu.sg/financial-aid/smu-international-scholarship",
+    "supporting_urls": [
+      "https://admissions.smu.edu.sg/admissions-requirements/international-and-other-qualifications"
+    ],
+    "funding_classification_basis": "Official SMU source states S$25,000 per annum toward subsidised tuition fees for up to four academic years. Since recurring living-cost support is not established, this record is classified as Partially Funded.",
+    "unresolved_fields": [
+      "complete list of all developing Southeast Asian nationalities covered by the award"
+    ],
+    "notes": "Official SMU source explicitly names Myanmar among priority eligible nationalities. No separate scholarship form is required; applicants indicate scholarship interest in the online admission application. AY2026/27 application closed on 19 March 2026."
+  }
+]

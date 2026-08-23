@@ -1,0 +1,87 @@
+{
+  "step": "196.9",
+  "operation": "CONTROLLED_SCHOLARSHIP_MONGODB_IMPORT",
+  "strategy": "INSERT_ONLY_NEW_48",
+  "canonical": {
+    "rows": 66,
+    "sha256": "64eeb3d8b512beaaa53cf4bb5c0ff6b1e5296192170ce396737a11247ff26eca",
+    "unchanged": true
+  },
+  "mongodb_before": {
+    "rows": 18,
+    "sha256": "63b3d71b78c3c8fa349d535cf2620b198a521768bc8f25f367b7db888406868a"
+  },
+  "write": {
+    "inserted": 48,
+    "updated": 0,
+    "deleted": 0,
+    "inserted_scholarship_ids": [
+      "sch_bn_001",
+      "sch_bn_002",
+      "sch_cn_001",
+      "sch_cn_002",
+      "sch_cn_003",
+      "sch_cn_004",
+      "sch_cn_005",
+      "sch_cn_006",
+      "sch_hk_002",
+      "sch_hk_003",
+      "sch_hk_004",
+      "sch_id_001",
+      "sch_id_002",
+      "sch_id_003",
+      "sch_id_004",
+      "sch_kh_001",
+      "sch_kh_002",
+      "sch_kr_002",
+      "sch_kr_003",
+      "sch_kr_004",
+      "sch_kr_005",
+      "sch_kr_006",
+      "sch_la_001",
+      "sch_mm_001",
+      "sch_mn_001",
+      "sch_mo_001",
+      "sch_my_002",
+      "sch_my_003",
+      "sch_my_004",
+      "sch_ph_001",
+      "sch_ph_002",
+      "sch_ph_003",
+      "sch_ph_004",
+      "sch_sg_002",
+      "sch_sg_003",
+      "sch_sg_004",
+      "sch_th_002",
+      "sch_th_003",
+      "sch_th_004",
+      "sch_tl_001",
+      "sch_tw_002",
+      "sch_tw_003",
+      "sch_tw_004",
+      "sch_tw_005",
+      "sch_vn_001",
+      "sch_vn_002",
+      "sch_vn_003",
+      "sch_vn_004"
+    ]
+  },
+  "mongodb_after": {
+    "rows": 66,
+    "sha256": "9f3486833595f0f571b14872ed0b8c044357c0cbf72c1a6139276f55c5186ab5",
+    "id_set_matches_canonical": true,
+    "duplicate_ids": 0,
+    "logical_content_matches_canonical": true
+  },
+  "existing_18_preservation": {
+    "raw_content_hash_before": "63b3d71b78c3c8fa349d535cf2620b198a521768bc8f25f367b7db888406868a",
+    "raw_content_hash_after": "63b3d71b78c3c8fa349d535cf2620b198a521768bc8f25f367b7db888406868a",
+    "unchanged": true
+  },
+  "index": {
+    "unique_scholarship_id_index": "unique_scholarship_id",
+    "created_this_step": false
+  },
+  "distribution_match": true,
+  "rollback_required": false
+}

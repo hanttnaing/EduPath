@@ -1,0 +1,216 @@
+﻿======================================================================================================================
+STEP 198.6B - GENERATE -> INSIGHTS GATE INTEGRATION INSPECTION
+======================================================================================================================
+
+KEY HIT LOCATIONS
+----------------------------------------------------------------------------------------------------------------------
+[15, 16, 19, 23, 24, 27, 118, 125, 173, 175, 184, 187, 192, 822, 852, 862, 863, 869, 951, 952, 953, 958, 962, 968, 969, 970, 980, 986, 988, 989, 999, 1011, 1023, 1035, 1057, 1078, 1090, 1091, 1104, 1113]
+
+======================================================================================================================
+RELEVANT BLOCK 1 | LINES 1-55
+======================================================================================================================
+    1: import { useEffect, useState } from 'react'
+    2: import { authFetch } from './api'
+    3: import './RecommendationModal.css'
+    4: 
+    5: function RecommendationModal({
+    6:   onClose,
+    7:   displayMode = 'modal',
+    8: }) {
+    9:   const isPageMode =
+   10:     displayMode === 'page'
+   11:   const [activeTab, setActiveTab] =
+   12:     useState('programs')
+   13: 
+   14:   const [
+   15:     recommendationsRequested,
+   16:     setRecommendationsRequested,
+   17:   ] = useState(false)
+   18: 
+   19:   const [programData, setProgramData] =
+   20:     useState(null)
+   21: 
+   22:   const [
+   23:     scholarshipData,
+   24:     setScholarshipData,
+   25:   ] = useState(null)
+   26: 
+   27:   const [loading, setLoading] =
+   28:     useState(false)
+   29: 
+   30:   const [error, setError] =
+   31:     useState('')
+   32: 
+   33:   // =========================
+   34:   // SAVED OPPORTUNITIES STATE
+   35:   // =========================
+   36:   const [
+   37:     savedUniversityIds,
+python : Traceback (most recent call last):
+At line:181 char:6
++ '@ | python - 2>&1 |
++      ~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "<stdin>", line 123, in <module>
+   38:     setSavedUniversityIds,
+   39:   ] = useState([])
+   40: 
+   41:   const [
+   42:     savedProgramIds,
+   43:     setSavedProgramIds,
+   44:   ] = useState([])
+   45: 
+   46: 
+   47:   const [
+   48:     savedScholarshipIds,
+   49:     setSavedScholarshipIds,
+   50:   ] = useState([])
+   51: 
+   52:   const [
+   53:     savingItem,
+   54:     setSavingItem,
+   55:   ] = useState('')
+
+======================================================================================================================
+RELEVANT BLOCK 2 | LINES 100-220
+======================================================================================================================
+  100:       setSavedScholarshipIds(
+  101:         Array.isArray(
+  102:           data.saved_scholarships
+  103:         )
+  104:           ? data.saved_scholarships
+  105:               .map(
+  106:                 (item) =>
+  107:                   item.scholarship_id
+  108:               )
+  109:               .filter(Boolean)
+  110:           : []
+  111:       )
+  112:     }
+  113: 
+  114:   // =========================
+  115:   // LOAD RECOMMENDATIONS
+  116:   // =========================
+  117:   useEffect(() => {
+  118:     if (!recommendationsRequested) {
+  119:       return
+  120:     }
+  121: 
+  122:     const loadRecommendations =
+  123:       async () => {
+  124:         try {
+  125:           setLoading(true)
+  126:           setError('')
+  127: 
+  128:           const [
+  129:             programResponse,
+  130:             scholarshipResponse,
+  131:           ] = await Promise.all([
+  132:             authFetch(
+  133:               '/api/me/recommendations/programs?top_k=5'
+  134:             ),
+  135: 
+  136:             authFetch(
+  137:               '/api/me/recommendations/scholarships?top_k=5'
+  138:             ),
+  139:           ])
+  140: 
+  141:           if (!programResponse.ok) {
+  142:             const data =
+  143:               await programResponse.json()
+  144: 
+  145:             throw new Error(
+  File "C:\Users\X1\AppData\Local\Programs\Python\Python310\lib\encodings\cp1252.py", line 19, in encode
+  146:               typeof data.detail ===
+  147:                 'string'
+  148:                 ? data.detail
+  149:                 : 'Unable to load programme recommendations.'
+  150:             )
+  151:           }
+  152: 
+  153:           if (!scholarshipResponse.ok) {
+  154:             const data =
+  155:               await scholarshipResponse.json()
+  156: 
+  157:             throw new Error(
+  158:               typeof data.detail ===
+  159:                 'string'
+  160:                 ? data.detail
+  161:                 : 'Unable to load scholarship recommendations.'
+  162:             )
+  163:           }
+  164: 
+  165:           const [
+  166:             programResult,
+  167:             scholarshipResult,
+  168:           ] = await Promise.all([
+  169:             programResponse.json(),
+  170:             scholarshipResponse.json(),
+  171:           ])
+  172: 
+  173:           setProgramData(programResult)
+  174: 
+  175:           setScholarshipData(
+  176:             scholarshipResult
+  177:           )
+  178: 
+  179:           await loadSavedOpportunities()
+  180: 
+  181:         } catch (err) {
+  182:           setError(
+  183:             err.message ||
+  184:               'Unable to generate recommendations.'
+  185:           )
+  186:         } finally {
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2197' in position 51: character maps to <undefined>
+  187:           setLoading(false)
+  188:         }
+  189:       }
+  190: 
+  191:     loadRecommendations()
+  192:   }, [recommendationsRequested])
+  193: 
+  194:   // =========================
+  195:   // SCORE HELPERS
+  196:   // =========================
+  197:   const getScoreClass = (score) => {
+  198:     if (score >= 80) {
+  199:       return 'recommendation-score-high'
+  200:     }
+  201: 
+  202:     if (score >= 60) {
+  203:       return 'recommendation-score-medium'
+  204:     }
+  205: 
+  206:     return 'recommendation-score-low'
+  207:   }
+  208: 
+  209:   const formatScore = (score) => {
+  210:     const numericScore =
+  211:       Number(score)
+  212: 
+  213:     if (Number.isNaN(numericScore)) {
+  214:       return '0.00'
+  215:     }
+  216: 
+  217:     return numericScore.toFixed(2)
+  218:   }
+  219: 
+  220:   // =========================
+
+======================================================================================================================
+RELEVANT BLOCK 3 | LINES 804-897
+======================================================================================================================
+  804: 
+  805:         {recommendation.official_website && (
+  806:           <a
+  807:             className="recommendation-link"
+  808:             href={
+  809:               recommendation.official_website
+  810:             }
+  811:             target="_blank"
+  812:             rel="noreferrer"
+  813:           >

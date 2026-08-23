@@ -1,0 +1,32 @@
+[
+  {
+    "scholarship_id": "sch_tl_001",
+    "identity_status": "VERIFIED",
+    "funding_status": "UNRESOLVED",
+    "eligibility_status": "VERIFIED_WITH_SOCIOECONOMIC_CONDITION",
+    "source_type": "Official Timor-Leste Government and Universidade Nacional Timor Lorosa'e sources",
+    "source_url": "https://timor-leste.gov.tl/?lang=en&p=27036&print=1",
+    "supporting_urls": [
+      "https://untl.edu.tl/pt/noticias-e-eventos?start=420",
+      "https://untl.edu.tl/pt/noticias-e-eventos/noticias/901-prak-sosializa-prosesu-aplikasaun-bolsa-interna-untl-iha-liquica",
+      "https://timor-leste.gov.tl/?cat=39&lang=en"
+    ],
+    "identity_basis": "The Timor-Leste Government officially launched and regulated the Kbi'it Laek Scholarship for students from vulnerable or needy families. UNTL official sources identify Bolsa Hakbiit as a Government/FDCH-supported internal scholarship and document UNTL beneficiaries.",
+    "eligibility_basis": "The Government describes the programme as supporting Timorese citizens from vulnerable or needy families to obtain equitable access to higher education. UNTL internal-scholarship communication requires the applicant to be a UNTL student and demonstrates merit-based institutional selection. Socioeconomic vulnerability is an additional eligibility condition that cannot currently be represented as a dedicated ScholarshipResponse hard-filter field.",
+    "continuation_basis": "The official UNTL 2024 beneficiary-monitoring report states that scholarship beneficiaries must achieve at least 75 percent academic progress each semester and that the Government may terminate the contract if this continuation condition is not met. This is deliberately preserved in evidence only and is not imported as minimum_gpa.",
+    "funding_classification_basis": "The scholarship is verified as a financial-support scheme, but the current official sources used here do not publish one exact 2026 tuition percentage, monthly allowance, accommodation package, travel benefit or insurance package. Historical monetary values are not reused as current values. funding_type is therefore Unknown.",
+    "freshness_basis": "The current IX Constitutional Government programme states that the Government will continue strengthening FDCH scholarship programmes and specific social-support programmes. However, a dedicated current 2026 Bolsa Hakbiit application call with current dates and benefit values was not located. The record is therefore reviewed with freshness_status needs_refresh.",
+    "unresolved_fields": [
+      "exact 2026 application opening date",
+      "exact 2026 application deadline",
+      "exact current monetary scholarship value",
+      "current tuition coverage",
+      "current monthly allowance",
+      "current accommodation support",
+      "current travel support",
+      "current health insurance",
+      "machine-readable socioeconomic eligibility threshold"
+    ],
+    "notes": "No historical monetary amount is promoted into the 2026 structured record. The 75 percent academic-progress condition is a continuation requirement rather than an application threshold. Host is restricted to UNTL for this record to preserve country and university recommendation consistency."
+  }
+]

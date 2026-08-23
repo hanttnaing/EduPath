@@ -1,0 +1,10 @@
+program_id,university_id,university_name,program_name,field_of_study,degree_level,official_program_url,official_department_source,programme_identity_status,programme_identity_evidence,international_application_url,international_applicants_status,international_requirements_note,research_status,research_note,last_verified_at,collected_at
+prog_cn_007,uni_cn_003,Zhejiang University,,,Master,,,pending,,,pending,,pending,Awaiting official programme verification,,2026-08-22
+prog_cn_008,uni_cn_003,Zhejiang University,,,Master,,,pending,,,pending,,pending,Awaiting official programme verification,,2026-08-22
+prog_cn_009,uni_cn_003,Zhejiang University,,,Master,,,pending,,,pending,,pending,Awaiting official programme verification,,2026-08-22
+prog_cn_010,uni_cn_004,Shanghai Jiao Tong University,,,Master,,,pending,,,pending,,pending,Awaiting official programme verification,,2026-08-22
+prog_cn_011,uni_cn_004,Shanghai Jiao Tong University,,,Master,,,pending,,,pending,,pending,Awaiting official programme verification,,2026-08-22
+prog_cn_012,uni_cn_004,Shanghai Jiao Tong University,,,Master,,,pending,,,pending,,pending,Awaiting official programme verification,,2026-08-22
+prog_cn_013,uni_cn_005,Fudan University,,,Master,,,pending,,,pending,,pending,Awaiting official programme verification,,2026-08-22
+prog_cn_014,uni_cn_005,Fudan University,,,Master,,,pending,,,pending,,pending,Awaiting official programme verification,,2026-08-22
+prog_cn_015,uni_cn_005,Fudan University,,,Master,,,pending,,,pending,,pending,Awaiting official programme verification,,2026-08-22

@@ -1,0 +1,30 @@
+[
+  {
+    "scholarship_id": "sch_mn_001",
+    "identity_status": "VERIFIED",
+    "funding_status": "UNRESOLVED",
+    "eligibility_status": "VERIFIED",
+    "source_type": "Official Mongolia Education Loan Fund Government Scholarship sources",
+    "source_url": "https://elf.gov.mn/muzgt/",
+    "supporting_urls": [
+      "https://elf.gov.mn/10371/",
+      "https://elf.gov.mn/sztbt-test/",
+      "https://elf.gov.mn/statistic/"
+    ],
+    "funding_classification_basis": "Official Education Loan Fund sources verify the Mongolian Government Scholarship and its active implementation for domestic higher-education students, but the current public scholarship page does not publish one exact tuition-coverage percentage, stipend amount, accommodation package, travel benefit, or insurance package. EduPath therefore records funding_type as Unknown rather than inferring Full or Partial funding.",
+    "eligibility_basis": "The official domestic Government Scholarship page requires Mongolian citizenship, study at a Mongolian accredited higher-education institution, an accredited programme, and study in an approved priority or in-demand field. The page covers Bachelor's, Master's and Doctoral levels.",
+    "academic_threshold_basis": "The official page gives different academic thresholds depending on applicant type: a new undergraduate entrant requires an entrance-exam average of at least 600; a continuing Bachelor's student requires GPA 3.0 or higher; Master's and Doctoral students require GPA 3.2 or higher. These conditions are intentionally not collapsed into one minimum_gpa scalar.",
+    "current_implementation_basis": "Official Education Loan Fund implementation reporting states that the Mongolian Government Scholarship funded domestic higher-education students during the 2025-2026 academic year, including 1,001 students in the first semester. This verifies that the scheme is active rather than merely historical.",
+    "unresolved_fields": [
+      "exact current scholarship tuition-coverage percentage",
+      "exact scholarship monetary value",
+      "monthly allowance",
+      "accommodation support",
+      "travel support",
+      "health insurance",
+      "exact current-cycle application opening date",
+      "exact current-cycle application deadline"
+    ],
+    "notes": "host_university_id remains None because this is a government scholarship implemented across multiple accredited domestic higher-education institutions. The record is deliberately restricted to Mongolia nationality so foreign users are not falsely recommended a domestic-only scheme."
+  }
+]

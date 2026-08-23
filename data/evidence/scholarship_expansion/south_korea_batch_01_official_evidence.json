@@ -1,0 +1,70 @@
+[
+  {
+    "scholarship_id": "sch_kr_002",
+    "identity_status": "VERIFIED",
+    "funding_status": "VERIFIED",
+    "eligibility_status": "VERIFIED",
+    "source_type": "Official KAIST international admissions scholarship page",
+    "source_url": "https://admission.kaist.ac.kr/intl-undergraduate/support/scholarships/kaist/",
+    "funding_classification_basis": "Official source states full tuition for 8 semesters, KRW 350,000 monthly living expenses, and medical health insurance.",
+    "unresolved_fields": [
+      "exact current admission-cycle opening date",
+      "exact current admission-cycle deadline",
+      "explicit nationality list"
+    ],
+    "notes": "KAIST GPA 2.7/4.3 is a continuation requirement after the freshman year, not an applicant minimum GPA; minimum_gpa therefore remains None."
+  },
+  {
+    "scholarship_id": "sch_kr_003",
+    "identity_status": "VERIFIED",
+    "funding_status": "VERIFIED",
+    "eligibility_status": "VERIFIED",
+    "source_type": "Official Seoul National University Office of Global Affairs Spring 2027 scholarship notice",
+    "source_url": "https://oga.snu.ac.kr/scholarship_notice-board/?mod=document&uid=574",
+    "funding_classification_basis": "Official Spring 2027 GSFS notice states full tuition up to four semesters plus a monthly living stipend.",
+    "unresolved_fields": [
+      "exact scalar monthly allowance because official amount is stated as a minimum and may vary",
+      "eligible-country list because it is cycle/college specific"
+    ],
+    "notes": "Official deadline is 2026-07-09. Since verification date is 2026-08-23, Spring 2027 cycle is stored as closed."
+  },
+  {
+    "scholarship_id": "sch_kr_004",
+    "identity_status": "VERIFIED",
+    "funding_status": "VERIFIED",
+    "eligibility_status": "VERIFIED",
+    "source_type": "Official Seoul National University Spring 2027 SPF announcement",
+    "source_url": "https://en.snu.ac.kr/admission/overview/notice?bbsidx=171863&md=v",
+    "funding_classification_basis": "Full tuition for six semesters, monthly stipend, round-trip airfare, health-insurance coverage and additional support.",
+    "unresolved_fields": [
+      "exact scalar monthly allowance because the official source publishes a range"
+    ],
+    "notes": "Official application period is 2026-07-06 through 2026-07-09. Monthly stipend range is not forced into the scalar monthly_allowance field."
+  },
+  {
+    "scholarship_id": "sch_kr_005",
+    "identity_status": "VERIFIED",
+    "funding_status": "VERIFIED",
+    "eligibility_status": "VERIFIED",
+    "source_type": "Official Sungkyunkwan University international scholarship page",
+    "source_url": "https://admission-global.skku.edu/eng/grad/scholarship_undergrad.html",
+    "funding_classification_basis": "Type A states full dues for eight semesters, KRW 570,000 monthly living expenses and conditional full dormitory fees.",
+    "unresolved_fields": [
+      "exact current scholarship/admission cycle dates"
+    ],
+    "notes": "Published GPA figures apply to maintaining the scholarship after award; they are not stored as applicant minimum_gpa."
+  },
+  {
+    "scholarship_id": "sch_kr_006",
+    "identity_status": "VERIFIED",
+    "funding_status": "VERIFIED",
+    "eligibility_status": "VERIFIED",
+    "source_type": "Official Hanyang University 2026 international graduate admissions guide",
+    "source_url": "https://oia.hanyang.ac.kr/files/attach/filebox/2026/02/24/9e341959d0a28e0c4ee5b3fb53ef287c.pdf",
+    "funding_classification_basis": "HISP Graduate offers 100%, 70%, or 50% tuition reduction depending on award type. It is classified as Partially Funded because the programme does not establish full living-cost coverage.",
+    "unresolved_fields": [
+      "exact next-cycle application dates"
+    ],
+    "notes": "Official applicant GPA threshold is 80 on a 100-point scale. This is stored as minimum_gpa=80 and gpa_scale=100."
+  }
+]

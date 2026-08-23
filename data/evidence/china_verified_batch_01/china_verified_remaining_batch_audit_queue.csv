@@ -1,0 +1,9 @@
+program_id,university_id,university_name,program_name,official_program_url,official_department_source,international_application_url,verification_status,research_note
+prog_cn_013,uni_cn_005,Fudan University,Computer Science,,School of Computer Science,,READY_FOR_OFFICIAL_CHECK,Official source verification required
+prog_cn_014,uni_cn_005,Fudan University,Economics,,School of Economics,,READY_FOR_OFFICIAL_CHECK,Official source verification required
+prog_cn_015,uni_cn_005,Fudan University,International Relations,,School of International Studies,,READY_FOR_OFFICIAL_CHECK,Official source verification required
+prog_cn_016,uni_cn_006,University of Science and Technology of China,Computer Science and Technology,,School of Computer Science and Technology,,READY_FOR_OFFICIAL_CHECK,Official source verification required
+prog_cn_017,uni_cn_006,University of Science and Technology of China,Electronic Engineering,,School of Information Science and Technology,,READY_FOR_OFFICIAL_CHECK,Official source verification required
+prog_cn_018,uni_cn_006,University of Science and Technology of China,Business Administration,,School of Management,,READY_FOR_OFFICIAL_CHECK,Official source verification required
+prog_cn_019,uni_cn_007,Harbin Institute of Technology,Computer Science and Technology,,School of Computer Science and Technology,,READY_FOR_OFFICIAL_CHECK,Official source verification required
+prog_cn_020,uni_cn_007,Harbin Institute of Technology,Mechanical Engineering,,School of Mechanical Engineering,,READY_FOR_OFFICIAL_CHECK,Official source verification required

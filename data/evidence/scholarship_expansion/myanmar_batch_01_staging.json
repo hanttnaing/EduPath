@@ -1,0 +1,40 @@
+[
+  {
+    "scholarship_id": "sch_mm_001",
+    "scholarship_name": "Higher Education Department / MOE Scholarship - Yangon University of Education",
+    "provider_name": "Higher Education Department, Ministry of Education, Myanmar",
+    "provider_type": "Government",
+    "country_id": "country_mm",
+    "host_university_id": "uni_mm_008",
+    "eligible_nationalities": null,
+    "degree_levels": [
+      "Bachelor"
+    ],
+    "fields_of_study": [
+      "Education"
+    ],
+    "minimum_gpa": null,
+    "gpa_scale": null,
+    "ielts_requirement": null,
+    "toefl_requirement": null,
+    "age_limit": null,
+    "funding_type": "Unknown",
+    "tuition_coverage": null,
+    "monthly_allowance": null,
+    "allowance_currency": null,
+    "travel_allowance": null,
+    "accommodation_support": null,
+    "health_insurance": null,
+    "required_documents": null,
+    "application_opening_date": null,
+    "application_deadline": null,
+    "scholarship_status": "unknown",
+    "application_cycle": "Recurring annual YUOE scholarship scheme",
+    "official_website": "https://www.yuoe.edu.mm/academic/",
+    "source_url": "https://www.yuoe.edu.mm/academic/",
+    "collected_at": "2026-08-23",
+    "last_verified_at": "2026-08-23",
+    "freshness_status": "current",
+    "data_quality_status": "reviewed"
+  }
+]

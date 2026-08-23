@@ -1,0 +1,882 @@
+========================================================================================================================
+STEP 198.6B.1 - GENERATE -> INSIGHTS GATE UTF-8 SAFE INSPECTION
+========================================================================================================================
+
+========================================================================================================================
+RECOMMENDATION STATE + API LOAD + SUCCESS POINT
+========================================================================================================================
+    1: import { useEffect, useState } from 'react'
+    2: import { authFetch } from './api'
+    3: import './RecommendationModal.css'
+    4: 
+    5: function RecommendationModal({
+    6:   onClose,
+    7:   displayMode = 'modal',
+    8: }) {
+    9:   const isPageMode =
+   10:     displayMode === 'page'
+   11:   const [activeTab, setActiveTab] =
+   12:     useState('programs')
+   13: 
+   14:   const [
+   15:     recommendationsRequested,
+   16:     setRecommendationsRequested,
+   17:   ] = useState(false)
+   18: 
+   19:   const [programData, setProgramData] =
+   20:     useState(null)
+   21: 
+   22:   const [
+   23:     scholarshipData,
+   24:     setScholarshipData,
+   25:   ] = useState(null)
+   26: 
+   27:   const [loading, setLoading] =
+   28:     useState(false)
+   29: 
+   30:   const [error, setError] =
+   31:     useState('')
+   32: 
+   33:   // =========================
+   34:   // SAVED OPPORTUNITIES STATE
+   35:   // =========================
+   36:   const [
+   37:     savedUniversityIds,
+   38:     setSavedUniversityIds,
+   39:   ] = useState([])
+   40: 
+   41:   const [
+   42:     savedProgramIds,
+   43:     setSavedProgramIds,
+   44:   ] = useState([])
+   45: 
+   46: 
+   47:   const [
+   48:     savedScholarshipIds,
+   49:     setSavedScholarshipIds,
+   50:   ] = useState([])
+   51: 
+   52:   const [
+   53:     savingItem,
+   54:     setSavingItem,
+   55:   ] = useState('')
+   56: 
+   57:   // =========================
+   58:   // LOAD SAVED OPPORTUNITIES
+   59:   // =========================
+   60:   const loadSavedOpportunities =
+   61:     async () => {
+   62:       const response = await authFetch(
+   63:         '/api/me/saved'
+   64:       )
+   65: 
+   66:       if (!response.ok) {
+   67:         throw new Error(
+   68:           'Unable to load saved opportunities.'
+   69:         )
+   70:       }
+   71: 
+   72:       const data = await response.json()
+   73: 
+   74:       setSavedUniversityIds(
+   75:         Array.isArray(
+   76:           data.saved_universities
+   77:         )
+   78:           ? data.saved_universities
+   79:               .map(
+   80:                 (item) =>
+   81:                   item.university_id
+   82:               )
+   83:               .filter(Boolean)
+   84:           : []
+   85:       )
+   86: 
+   87:       setSavedProgramIds(
+   88:         Array.isArray(
+   89:           data.saved_programs
+   90:         )
+   91:           ? data.saved_programs
+   92:               .map(
+   93:                 (item) =>
+   94:                   item.program_id
+   95:               )
+   96:               .filter(Boolean)
+   97:           : []
+   98:       )
+   99: 
+  100:       setSavedScholarshipIds(
+  101:         Array.isArray(
+  102:           data.saved_scholarships
+  103:         )
+  104:           ? data.saved_scholarships
+  105:               .map(
+  106:                 (item) =>
+  107:                   item.scholarship_id
+  108:               )
+  109:               .filter(Boolean)
+  110:           : []
+  111:       )
+  112:     }
+  113: 
+  114:   // =========================
+  115:   // LOAD RECOMMENDATIONS
+  116:   // =========================
+  117:   useEffect(() => {
+  118:     if (!recommendationsRequested) {
+  119:       return
+  120:     }
+  121: 
+  122:     const loadRecommendations =
+  123:       async () => {
+  124:         try {
+  125:           setLoading(true)
+  126:           setError('')
+  127: 
+  128:           const [
+  129:             programResponse,
+  130:             scholarshipResponse,
+  131:           ] = await Promise.all([
+  132:             authFetch(
+  133:               '/api/me/recommendations/programs?top_k=5'
+  134:             ),
+  135: 
+  136:             authFetch(
+  137:               '/api/me/recommendations/scholarships?top_k=5'
+  138:             ),
+  139:           ])
+  140: 
+  141:           if (!programResponse.ok) {
+  142:             const data =
+  143:               await programResponse.json()
+  144: 
+  145:             throw new Error(
+  146:               typeof data.detail ===
+  147:                 'string'
+  148:                 ? data.detail
+  149:                 : 'Unable to load programme recommendations.'
+  150:             )
+  151:           }
+  152: 
+  153:           if (!scholarshipResponse.ok) {
+  154:             const data =
+  155:               await scholarshipResponse.json()
+  156: 
+  157:             throw new Error(
+  158:               typeof data.detail ===
+  159:                 'string'
+  160:                 ? data.detail
+  161:                 : 'Unable to load scholarship recommendations.'
+  162:             )
+  163:           }
+  164: 
+  165:           const [
+  166:             programResult,
+  167:             scholarshipResult,
+  168:           ] = await Promise.all([
+  169:             programResponse.json(),
+  170:             scholarshipResponse.json(),
+  171:           ])
+  172: 
+  173:           setProgramData(programResult)
+  174: 
+  175:           setScholarshipData(
+  176:             scholarshipResult
+  177:           )
+  178: 
+  179:           await loadSavedOpportunities()
+  180: 
+  181:         } catch (err) {
+  182:           setError(
+  183:             err.message ||
+  184:               'Unable to generate recommendations.'
+  185:           )
+  186:         } finally {
+  187:           setLoading(false)
+  188:         }
+  189:       }
+  190: 
+  191:     loadRecommendations()
+  192:   }, [recommendationsRequested])
+  193: 
+  194:   // =========================
+  195:   // SCORE HELPERS
+  196:   // =========================
+  197:   const getScoreClass = (score) => {
+  198:     if (score >= 80) {
+  199:       return 'recommendation-score-high'
+  200:     }
+  201: 
+  202:     if (score >= 60) {
+  203:       return 'recommendation-score-medium'
+  204:     }
+  205: 
+  206:     return 'recommendation-score-low'
+  207:   }
+  208: 
+  209:   const formatScore = (score) => {
+  210:     const numericScore =
+  211:       Number(score)
+  212: 
+  213:     if (Number.isNaN(numericScore)) {
+  214:       return '0.00'
+  215:     }
+
+========================================================================================================================
+RECOMMENDATION RENDER HIT LOCATIONS
+========================================================================================================================
+[15, 16, 19, 23, 24, 27, 118, 125, 173, 175, 184, 187, 192, 822, 852, 862, 869, 951, 952, 953, 958, 968, 969, 970, 980, 986, 988, 989, 999, 1011, 1023, 1035, 1057, 1078, 1090, 1091, 1104, 1113]
+
+========================================================================================================================
+RECOMMENDATION RENDER BLOCK 1 | LINES 797-909
+========================================================================================================================
+  797:             ? 'Saving...'
+  798:             : savedScholarshipIds.includes(
+  799:                 recommendation.scholarship_id
+  800:               )
+  801:               ? '♥ Saved Scholarship'
+  802:               : '♡ Save Scholarship'}
+  803:         </button>
+  804: 
+  805:         {recommendation.official_website && (
+  806:           <a
+  807:             className="recommendation-link"
+  808:             href={
+  809:               recommendation.official_website
+  810:             }
+  811:             target="_blank"
+  812:             rel="noreferrer"
+  813:           >
+  814:             Visit Official Scholarship Page ↗
+  815:           </a>
+  816:         )}
+  817:       </div>
+  818:       
+  819:     </article>
+  820:   )
+  821: 
+  822:   return (
+  823:     <div
+  824:       className={
+  825:         isPageMode
+  826:           ? 'recommendation-page'
+  827:           : 'recommendation-modal-backdrop'
+  828:       }
+  829:     >
+  830:       <div
+  831:         className={`recommendation-modal ${
+  832:           isPageMode
+  833:             ? 'recommendation-modal-page'
+  834:             : ''
+  835:         }`}
+  836:       >
+  837:         {!isPageMode && (
+  838:           <div className="recommendation-sticky-close-row">
+  839:             <button
+  840:               type="button"
+  841:               className="recommendation-close-button"
+  842:               onClick={onClose}
+  843:               aria-label="Close recommendations"
+  844:             >
+  845:               &times;
+  846:             </button>
+  847:           </div>
+  848:         )}
+  849:         <header className="recommendation-modal-header">
+  850:           <div>
+  851:             <p className="recommendation-eyebrow">
+  852:               {recommendationsRequested
+  853:                 ? 'PERSONALIZED RESULTS'
+  854:                 : 'PERSONALIZED RECOMMENDATIONS'}
+  855:             </p>
+  856: 
+  857:             <h2>
+  858:               EduPath Recommendations
+  859:             </h2>
+  860: 
+  861:             <p>
+  862:               {recommendationsRequested
+  863:                 ? 'Recommendations generated from your academic profile'
+  864:                 : 'Discover programmes and scholarships matched to your goals'}
+  865:             </p>
+  866:           </div>
+  867:         </header>
+  868: 
+  869:         {!recommendationsRequested && (
+  870:           <section className="recommendation-start">
+  871:             <div className="recommendation-start-icon">
+  872:               EP
+  873:             </div>
+  874: 
+  875:             <p className="recommendation-start-label">
+  876:               PERSONALIZED FOR YOU
+  877:             </p>
+  878: 
+  879:             <h3>
+  880:               Find opportunities that
+  881:               match your goals.
+  882:             </h3>
+  883: 
+  884:             <p className="recommendation-start-description">
+  885:               EduPath analyses your academic
+  886:               profile and compares it with
+  887:               available programmes and
+  888:               scholarships to identify your
+  889:               strongest matches.
+  890:             </p>
+  891: 
+  892:             <div className="recommendation-start-features">
+  893:               <div>
+  894:                 <span>&#10003;</span>
+  895:                 <p>
+  896:                   <strong>
+  897:                     Degree and country
+  898:                   </strong>
+  899:                   <small>
+  900:                     Based on your study
+  901:                     destination and target level.
+  902:                   </small>
+  903:                 </p>
+  904:               </div>
+  905: 
+  906:               <div>
+  907:                 <span>&#10003;</span>
+  908:                 <p>
+  909:                   <strong>
+
+========================================================================================================================
+RECOMMENDATION RENDER BLOCK 2 | LINES 926-1126
+========================================================================================================================
+  926:                     Considers affordability
+  927:                     and preferred study intake.
+  928:                   </small>
+  929:                 </p>
+  930:               </div>
+  931: 
+  932:               <div>
+  933:                 <span>&#10003;</span>
+  934:                 <p>
+  935:                   <strong>
+  936:                     Scholarship eligibility
+  937:                   </strong>
+  938:                   <small>
+  939:                     Checks funding, GPA and
+  940:                     English requirements.
+  941:                   </small>
+  942:                 </p>
+  943:               </div>
+  944:             </div>
+  945: 
+  946:             <button
+  947:               type="button"
+  948:               className="recommendation-start-button"
+  949:               onClick={() => {
+  950:                 setError('')
+  951:                 setProgramData(null)
+  952:                 setScholarshipData(null)
+  953:                 setRecommendationsRequested(
+  954:                   true
+  955:                 )
+  956:               }}
+  957:             >
+  958:               Get Personalized Recommendations
+  959:             </button>
+  960: 
+  961:             <p className="recommendation-start-note">
+  962:               Recommendations are generated
+  963:               from your current academic profile.
+  964:             </p>
+  965:           </section>
+  966:         )}
+  967: 
+  968:         {recommendationsRequested &&
+  969:           loading && (
+  970:           <div className="recommendation-loading">
+  971:             <div className="recommendation-spinner" />
+  972: 
+  973:             <p>
+  974:               Analysing your profile and
+  975:               generating recommendations...
+  976:             </p>
+  977:           </div>
+  978:         )}
+  979: 
+  980:         {error && !loading && (
+  981:           <div className="recommendation-error">
+  982:             {error}
+  983:           </div>
+  984:         )}
+  985: 
+  986:         {!loading &&
+  987:           !error &&
+  988:           programData &&
+  989:           scholarshipData && (
+  990:             <>
+  991:               <section className="recommendation-summary">
+  992:                 <div>
+  993:                   <span>
+  994:                     Programme Candidates
+  995:                   </span>
+  996: 
+  997:                   <strong>
+  998:                     {
+  999:                       programData.total_program_candidates
+ 1000:                     }
+ 1001:                   </strong>
+ 1002:                 </div>
+ 1003: 
+ 1004:                 <div>
+ 1005:                   <span>
+ 1006:                     Eligible Programmes
+ 1007:                   </span>
+ 1008: 
+ 1009:                   <strong>
+ 1010:                     {
+ 1011:                       programData.eligible_candidates
+ 1012:                     }
+ 1013:                   </strong>
+ 1014:                 </div>
+ 1015: 
+ 1016:                 <div>
+ 1017:                   <span>
+ 1018:                     Scholarship Candidates
+ 1019:                   </span>
+ 1020: 
+ 1021:                   <strong>
+ 1022:                     {
+ 1023:                       scholarshipData.total_scholarship_candidates
+ 1024:                     }
+ 1025:                   </strong>
+ 1026:                 </div>
+ 1027: 
+ 1028:                 <div>
+ 1029:                   <span>
+ 1030:                     Eligible Scholarships
+ 1031:                   </span>
+ 1032: 
+ 1033:                   <strong>
+ 1034:                     {
+ 1035:                       scholarshipData.eligible_candidates
+ 1036:                     }
+ 1037:                   </strong>
+ 1038:                 </div>
+ 1039:               </section>
+ 1040: 
+ 1041:               <div className="recommendation-tabs">
+ 1042:                 <button
+ 1043:                   type="button"
+ 1044:                   className={
+ 1045:                     activeTab === 'programs'
+ 1046:                       ? 'active'
+ 1047:                       : ''
+ 1048:                   }
+ 1049:                   onClick={() =>
+ 1050:                     setActiveTab(
+ 1051:                       'programs'
+ 1052:                     )
+ 1053:                   }
+ 1054:                 >
+ 1055:                   Recommended Programmes (
+ 1056:                   {
+ 1057:                     programData.returned_recommendations
+ 1058:                   }
+ 1059:                   )
+ 1060:                 </button>
+ 1061: 
+ 1062:                 <button
+ 1063:                   type="button"
+ 1064:                   className={
+ 1065:                     activeTab ===
+ 1066:                     'scholarships'
+ 1067:                       ? 'active'
+ 1068:                       : ''
+ 1069:                   }
+ 1070:                   onClick={() =>
+ 1071:                     setActiveTab(
+ 1072:                       'scholarships'
+ 1073:                     )
+ 1074:                   }
+ 1075:                 >
+ 1076:                   Recommended Scholarships (
+ 1077:                   {
+ 1078:                     scholarshipData.returned_recommendations
+ 1079:                   }
+ 1080:                   )
+ 1081:                 </button>
+ 1082:               </div>
+ 1083: 
+ 1084:               <section className="recommendation-algorithm">
+ 1085:                 <strong>
+ 1086:                   Algorithm:
+ 1087:                 </strong>{' '}
+ 1088: 
+ 1089:                 {activeTab === 'programs'
+ 1090:                   ? programData.algorithm?.name
+ 1091:                   : scholarshipData.algorithm
+ 1092:                       ?.name}
+ 1093: 
+ 1094:                 <span>
+ 1095:                   TF-IDF cosine similarity +
+ 1096:                   weighted scoring
+ 1097:                 </span>
+ 1098:               </section>
+ 1099: 
+ 1100:               <div className="recommendation-list">
+ 1101:                 {activeTab ===
+ 1102:                   'programs' &&
+ 1103:                   (
+ 1104:                     programData.recommendations ||
+ 1105:                     []
+ 1106:                   ).map(
+ 1107:                     renderProgram
+ 1108:                   )}
+ 1109: 
+ 1110:                 {activeTab ===
+ 1111:                   'scholarships' &&
+ 1112:                   (
+ 1113:                     scholarshipData.recommendations ||
+ 1114:                     []
+ 1115:                   ).map(
+ 1116:                     renderScholarship
+ 1117:                   )}
+ 1118:               </div>
+ 1119:             </>
+ 1120:           )}
+ 1121:       </div>
+ 1122:     </div>
+ 1123:   )
+ 1124: }
+ 1125: 
+ 1126: export default RecommendationModal
+
+========================================================================================================================
+APP WORKSPACE HIT LOCATIONS
+========================================================================================================================
+[16, 18, 78, 79, 266, 375, 376, 422, 423, 424, 455, 456, 3233, 3242, 3361, 3370, 3652, 3657, 3772, 3773, 3776, 3777, 3782, 3783, 3787, 3794, 3795, 3798, 3799, 3804, 3805, 3809, 3816, 3817, 3826, 3827, 3828, 3834, 3835, 3836]
+
+========================================================================================================================
+CURRENT RESULTS | INSIGHTS WORKSPACE
+========================================================================================================================
+ 3617:             !scholarshipError && (
+ 3618:               <p className="scholarship-result-count">
+ 3619:                 Showing{' '}
+ 3620:                 {
+ 3621:                   getExplorePageStart(
+ 3622:                     filteredScholarships,
+ 3623:                     scholarshipPage
+ 3624:                   )
+ 3625:                 }
+ 3626:                 {' - '}
+ 3627:                 {
+ 3628:                   getExplorePageEnd(
+ 3629:                     filteredScholarships,
+ 3630:                     scholarshipPage
+ 3631:                   )
+ 3632:                 }
+ 3633:                 {' of '}
+ 3634:                 {
+ 3635:                   filteredScholarships.length
+ 3636:                 }{' '}
+ 3637:                 scholarships
+ 3638:               </p>
+ 3639:             )}
+ 3640: 
+ 3641:           {/* Scholarship Loading */}
+ 3642: 
+ 3643:           {scholarshipLoading && (
+ 3644:             <p className="status-message">
+ 3645:               Loading scholarships...
+ 3646:             </p>
+ 3647:           )}
+ 3648: 
+ 3649:           {/* Scholarship Error */}
+ 3650: 
+ 3651:           {scholarshipError && (
+ 3652:             <p className="no-results">
+ 3653:               {scholarshipError}
+ 3654:             </p>
+ 3655:           )}
+ 3656: 
+ 3657:           {/* No Scholarship Results */}
+ 3658: 
+ 3659:           {!scholarshipLoading &&
+ 3660:             !scholarshipError &&
+ 3661:             filteredScholarships.length ===
+ 3662:               0 && (
+ 3663:               <p className="status-message">
+ 3664:                 No scholarships found
+ 3665:                 for this country.
+ 3666:               </p>
+ 3667:             )}
+ 3668: 
+ 3669:           {/* Scholarship Cards */}
+ 3670: 
+ 3671:           {!scholarshipLoading &&
+ 3672:             !scholarshipError &&
+ 3673:             filteredScholarships.length >
+ 3674:               0 && (
+ 3675:               <div className="scholarship-grid">
+ 3676:                 {getExplorePageItems(
+ 3677:                   filteredScholarships,
+ 3678:                   scholarshipPage
+ 3679:                 ).map(
+ 3680:                   (
+ 3681:                     scholarship,
+ 3682:                     index
+ 3683:                   ) => {
+ 3684:                     const hostUniversityName =
+ 3685:                       universityNameById.get(
+ 3686:                         scholarship.host_university_id
+ 3687:                       ) ||
+ 3688:                       scholarship.host_university_name ||
+ 3689:                       scholarship.university_name ||
+ 3690:                       ''
+ 3691: 
+ 3692:                     return (
+ 3693:                       <ScholarshipCard
+ 3694:                         key={
+ 3695:                           scholarship.scholarship_id ||
+ 3696:                           scholarship._id ||
+ 3697:                           `${scholarship.scholarship_name}-${index}`
+ 3698:                         }
+ 3699:                         scholarship={
+ 3700:                           scholarship
+ 3701:                         }
+ 3702:                         hostUniversityName={
+ 3703:                           hostUniversityName
+ 3704:                         }
+ 3705:                         isSaved={
+ 3706:                           savedScholarshipIds.includes(
+ 3707:                             scholarship.scholarship_id
+ 3708:                           )
+ 3709:                         }
+ 3710:                         saving={
+ 3711:                           savingScholarshipId ===
+ 3712:                           scholarship.scholarship_id
+ 3713:                         }
+ 3714:                         onToggleSave={
+ 3715:                           handleToggleScholarshipSave
+ 3716:                         }
+ 3717:                       />
+ 3718:                     )
+ 3719:                   }
+ 3720:                 )}
+ 3721: 
+ 3722:                 <ExplorePagination
+ 3723:                   items={filteredScholarships}
+ 3724:                   page={scholarshipPage}
+ 3725:                   onPageChange={(nextPage) => {
+ 3726:                     setScholarshipPage(
+ 3727:                       nextPage
+ 3728:                     )
+ 3729: 
+ 3730:                     window.requestAnimationFrame(
+ 3731:                       () => {
+ 3732:                         document
+ 3733:                           .querySelector(
+ 3734:                             '.scholarship-section'
+ 3735:                           )
+ 3736:                           ?.scrollIntoView({
+ 3737:                             behavior:
+ 3738:                               'smooth',
+ 3739:                             block:
+ 3740:                               'start',
+ 3741:                           })
+ 3742:                       }
+ 3743:                     )
+ 3744:                   }}
+ 3745:                 />
+ 3746:               </div>
+ 3747:             )}
+ 3748:         </section>
+ 3749:         )}
+ 3750: 
+ 3751:       
+ 3752: 
+ 3753:         {/* =========================
+ 3754:             RECOMMENDATIONS PAGE
+ 3755:         ========================== */}
+ 3756: 
+ 3757:         {activePage === 'recommendations' && (
+ 3758:           <section className="recommendations-page-section">
+ 3759: 
+ 3760:             <div className="recommendation-workspace-tabs-shell">
+ 3761: 
+ 3762:               <div
+ 3763:                 className="recommendation-workspace-tabs"
+ 3764:                 role="tablist"
+ 3765:                 aria-label="Recommendation workspace views"
+ 3766:               >
+ 3767: 
+ 3768:                 <button
+ 3769:                   type="button"
+ 3770:                   role="tab"
+ 3771:                   aria-selected={
+ 3772:                     recommendationWorkspaceView ===
+ 3773:                     'results'
+ 3774:                   }
+ 3775:                   className={
+ 3776:                     recommendationWorkspaceView ===
+ 3777:                     'results'
+ 3778:                       ? 'active'
+ 3779:                       : ''
+ 3780:                   }
+ 3781:                   onClick={() =>
+ 3782:                     setRecommendationWorkspaceView(
+ 3783:                       'results'
+ 3784:                     )
+ 3785:                   }
+ 3786:                 >
+ 3787:                   Results
+ 3788:                 </button>
+ 3789: 
+ 3790:                 <button
+ 3791:                   type="button"
+ 3792:                   role="tab"
+ 3793:                   aria-selected={
+ 3794:                     recommendationWorkspaceView ===
+ 3795:                     'insights'
+ 3796:                   }
+ 3797:                   className={
+ 3798:                     recommendationWorkspaceView ===
+ 3799:                     'insights'
+ 3800:                       ? 'active'
+ 3801:                       : ''
+ 3802:                   }
+ 3803:                   onClick={() =>
+ 3804:                     setRecommendationWorkspaceView(
+ 3805:                       'insights'
+ 3806:                     )
+ 3807:                   }
+ 3808:                 >
+ 3809:                   Insights
+ 3810:                 </button>
+ 3811: 
+ 3812:               </div>
+ 3813: 
+ 3814:               <p className="recommendation-workspace-context">
+ 3815:                 {
+ 3816:                   recommendationWorkspaceView ===
+ 3817:                   'results'
+ 3818:                     ? 'Review the personalised opportunities generated from your profile.'
+ 3819:                     : 'Understand the scores, evidence and requirement gaps behind your current recommendations.'
+ 3820:                 }
+ 3821:               </p>
+ 3822: 
+ 3823:             </div>
+ 3824: 
+ 3825: 
+ 3826:             {recommendationWorkspaceView ===
+ 3827:               'results' && (
+ 3828:                 <RecommendationModal
+ 3829:                   displayMode="page"
+ 3830:                 />
+ 3831:               )}
+ 3832: 
+ 3833: 
+ 3834:             {recommendationWorkspaceView ===
+ 3835:               'insights' && (
+ 3836:                 <MyAnalyticsPage
+ 3837:                   embedded
+ 3838:                 />
+ 3839:               )}
+ 3840: 
+ 3841:           </section>
+ 3842:         )}
+ 3843: 
+ 3844: 
+ 3845: 
+ 3846:         {/* =========================
+ 3847:             SAVED FULL PAGE
+ 3848:         ========================== */}
+ 3849: 
+ 3850:         {activePage === 'saved' && (
+ 3851:           <section className="saved-main-page-section">
+ 3852:             <SavedPage
+ 3853:               displayMode="page"
+ 3854:             />
+ 3855:           </section>
+ 3856:         )}
+ 3857: 
+ 3858: 
+ 3859: 
+ 3860:         {/* =========================
+ 3861:             PROFILE FULL PAGE
+ 3862:         ========================== */}
+ 3863: 
+ 3864:         {activePage === 'profile' && (
+ 3865:           <section className="profile-main-page-section">
+ 3866:             <MyProfileModal
+ 3867:               account={currentAccount}
+ 3868:               displayMode="page"
+ 3869:             />
+ 3870:           </section>
+ 3871:         )}
+ 3872: 
+ 3873: </main>
+ 3874: 
+ 3875:       {/* =========================
+ 3876:           RECOMMENDATION MODAL
+ 3877:       ========================== */}
+ 3878: 
+ 3879: 
+ 3880: 
+ 3881:       {/* =========================
+ 3882:           SAVED OPPORTUNITIES
+ 3883:       ========================== */}
+ 3884: 
+ 3885:       {/* =========================
+ 3886:           ANALYSIS DASHBOARD
+ 3887:           FULL-SCREEN MODAL
+ 3888:       ========================== */}
+ 3889: 
+ 3890:     </>
+ 3891:   )
+
+========================================================================================================================
+RECOMMENDATION COMPONENT SIGNATURE
+========================================================================================================================
+    1: import { useEffect, useState } from 'react'
+    2: import { authFetch } from './api'
+    3: import './RecommendationModal.css'
+    4: 
+    5: function RecommendationModal({
+    6:   onClose,
+    7:   displayMode = 'modal',
+    8: }) {
+    9:   const isPageMode =
+   10:     displayMode === 'page'
+   11:   const [activeTab, setActiveTab] =
+   12:     useState('programs')
+   13: 
+   14:   const [
+   15:     recommendationsRequested,
+   16:     setRecommendationsRequested,
+   17:   ] = useState(false)
+   18: 
+   19:   const [programData, setProgramData] =
+   20:     useState(null)
+   21: 
+   22:   const [
+   23:     scholarshipData,
+   24:     setScholarshipData,
+   25:   ] = useState(null)
+   26: 
+   27:   const [loading, setLoading] =
+   28:     useState(false)
+   29: 
+   30:   const [error, setError] =
+   31:     useState('')
+   32: 
+   33:   // =========================
+   34:   // SAVED OPPORTUNITIES STATE
+   35:   // =========================
+
+========================================================================================================================
+STEP 198.6B.1 INSPECTION COMPLETE
+========================================================================================================================
+RecommendationModal lines : 1126
+App.jsx lines             : 3894
+READ-ONLY                 : YES
+FRONTEND MODIFIED         : NO
+BACKEND MODIFIED          : NO
+MONGODB MODIFIED          : NO

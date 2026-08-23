@@ -1,0 +1,10 @@
+program_id,university_id,university_name,target_programme,field_of_study,degree_level,official_department_target,programme_url_status,international_source_status,research_status,notes
+prog_cn_016,uni_cn_006,University of Science and Technology of China,,,Master,,pending,pending,pending,Awaiting official programme verification
+prog_cn_017,uni_cn_006,University of Science and Technology of China,,,Master,,pending,pending,pending,Awaiting official programme verification
+prog_cn_018,uni_cn_006,University of Science and Technology of China,,,Master,,pending,pending,pending,Awaiting official programme verification
+prog_cn_019,uni_cn_007,Harbin Institute of Technology,,,Master,,pending,pending,pending,Awaiting official programme verification
+prog_cn_020,uni_cn_007,Harbin Institute of Technology,,,Master,,pending,pending,pending,Awaiting official programme verification
+prog_cn_021,uni_cn_007,Harbin Institute of Technology,,,Master,,pending,pending,pending,Awaiting official programme verification
+prog_cn_022,uni_cn_008,Xi'an Jiaotong University,,,Master,,pending,pending,pending,Awaiting official programme verification
+prog_cn_023,uni_cn_008,Xi'an Jiaotong University,,,Master,,pending,pending,pending,Awaiting official programme verification
+prog_cn_024,uni_cn_008,Xi'an Jiaotong University,,,Master,,pending,pending,pending,Awaiting official programme verification

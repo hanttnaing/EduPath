@@ -1,0 +1,74 @@
+[
+  {
+    "scholarship_id": "sch_ph_001",
+    "identity_status": "VERIFIED",
+    "funding_status": "VERIFIED",
+    "eligibility_status": "VERIFIED",
+    "source_type": "Official SEARCA Full Master's and PhD Scholarship page",
+    "source_url": "https://www.searca.org/full-master-phd-scholarships",
+    "supporting_urls": [],
+    "funding_classification_basis": "SEARCA explicitly identifies the programme as fully funded and lists tuition and school fees, round-trip travel, thesis/dissertation support, books and supplies, health insurance, and stipend for food, lodging and incidental expenses.",
+    "unresolved_fields": [
+      "exact current application opening date",
+      "exact current application deadline",
+      "single age_limit because Master and PhD limits differ",
+      "exact scalar living stipend"
+    ],
+    "nationality_normalization": "Official SEAMEO country names were normalized to the project's canonical country-name vocabulary, including Lao PDR -> Laos and Brunei Darussalam -> Brunei.",
+    "notes": "UPLB is explicitly listed as a Philippines study post. IELTS 6.0 or TOEFL iBT 75 is preferred rather than mandatory, so numeric English hard-filter fields remain None."
+  },
+  {
+    "scholarship_id": "sch_ph_002",
+    "identity_status": "VERIFIED",
+    "funding_status": "VERIFIED",
+    "eligibility_status": "VERIFIED",
+    "source_type": "Official SEARCA DAAD In-Country/In-Region Scholarship page",
+    "source_url": "https://www.searca.org/daad-scholarship",
+    "supporting_urls": [],
+    "funding_classification_basis": "Official source states tuition and school fees, study and research allowance, printing allowance, stipend for food/lodging/incidental expenses, eligible travel allowance and insurance.",
+    "unresolved_fields": [
+      "one scalar age_limit because Master and PhD limits differ",
+      "exact monthly stipend scalar"
+    ],
+    "nationality_normalization": "Official eligible country names were normalized to project country names. Myanmar remains an explicit eligible nationality.",
+    "notes": "UPLB is an official study post for Environmental Science and Food Science. SEARCA portal deadline was extended to 30 January 2026; the DAAD portal deadline followed on 16 February 2026."
+  },
+  {
+    "scholarship_id": "sch_ph_003",
+    "identity_status": "VERIFIED",
+    "funding_status": "UNRESOLVED",
+    "eligibility_status": "VERIFIED",
+    "source_type": "Official Visayas State University scholarship page",
+    "source_url": "https://www.vsu.edu.ph/vsu/1135-vsu-scholarships",
+    "supporting_urls": [],
+    "funding_classification_basis": "The official VSU page verifies the Graduate Fellowship Program for Foreign Graduate Students and states that ten slots are available: five for PhD students and five for Master's students. The current public page does not itemise tuition waiver, stipend, travel, housing or insurance values, so funding_type remains Unknown.",
+    "unresolved_fields": [
+      "tuition coverage",
+      "stipend amount",
+      "travel allowance",
+      "accommodation support",
+      "health insurance",
+      "application opening date",
+      "application deadline"
+    ],
+    "notes": "Foreign students may take any Master's program offered by VSU. Listed PhD fields include Animal Science, Agricultural Education, Entomology, Horticulture and Plant Pathology. Additional PhD/MSc options are conditional on the lifting of a CHED moratorium and therefore are not promoted into the structured fields."
+  },
+  {
+    "scholarship_id": "sch_ph_004",
+    "identity_status": "VERIFIED",
+    "funding_status": "VERIFIED",
+    "eligibility_status": "VERIFIED",
+    "source_type": "Official Asian Development Bank Japan Scholarship Program pages",
+    "source_url": "https://www.adb.org/work-with-us/careers/japan-scholarship-program",
+    "supporting_urls": [
+      "https://www.adb.org/work-with-us/careers/japan-scholarship-program/institutions"
+    ],
+    "funding_classification_basis": "ADB-JSP officially covers full tuition, monthly subsistence including housing, books and instructional materials, medical insurance and travel expenses.",
+    "unresolved_fields": [
+      "exact current-cycle application opening date",
+      "exact current-cycle application deadline",
+      "exact monthly subsistence scalar"
+    ],
+    "notes": "Myanmar is explicitly included among eligible ADB borrowing member countries. IRRI for registration at UPLB is an official designated institution. ADB lists a normal June intake and 31 March deadline but instructs applicants to confirm the applicable academic year/intake with the institution; therefore no invented 2026/2027 deadline is stored."
+  }
+]

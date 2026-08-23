@@ -1,0 +1,41 @@
+[
+  {
+    "scholarship_id": "sch_kh_001",
+    "identity_status": "VERIFIED",
+    "funding_status": "VERIFIED",
+    "eligibility_status": "VERIFIED_WITH_UNRESOLVED_NATIONALITY",
+    "source_type": "Official Royal University of Phnom Penh Graduate School of Science scholarship announcement",
+    "source_url": "https://rupp.edu.kh/academics/faculties_and_institutes/gss/scholarship/56",
+    "supporting_urls": [],
+    "funding_classification_basis": "RUPP announces 10 PhD Physics positions for academic year 2026-2027, including 4 full scholarships supported by HEIP-2. The official announcement describes the scholarship benefit as full tuition fees. Recurring living-cost support is not established, so EduPath classifies the award as Partially Funded rather than Fully Funded.",
+    "unresolved_fields": [
+      "nationality restrictions",
+      "living stipend",
+      "accommodation support",
+      "travel support",
+      "health insurance",
+      "exact formal application opening date"
+    ],
+    "notes": "The scholarship announcement was published on 2 July 2026 and asks interested applicants to apply before 11 September 2026. The record is therefore open on the 23 August 2026 verification date."
+  },
+  {
+    "scholarship_id": "sch_kh_002",
+    "identity_status": "VERIFIED",
+    "funding_status": "VERIFIED",
+    "eligibility_status": "VERIFIED_WITH_UNRESOLVED_NATIONALITY",
+    "source_type": "Official Institute of Technology of Cambodia International Engineering Program 2026 page",
+    "source_url": "https://itc.edu.kh/international-engineering-program-2026/",
+    "supporting_urls": [
+      "https://itc.edu.kh/international-student-mobility/"
+    ],
+    "funding_classification_basis": "The official ITC International Engineering Program 2026 page lists 65 Techo Digital Talent Scholarships at 100% for Artificial Intelligence Engineering and Cybersecurity, Software Engineering, and Aerospace and Autonomous Systems Engineering. The source does not establish a recurring living-cost package, so the record is classified as Partially Funded.",
+    "unresolved_fields": [
+      "exact eligible nationality list",
+      "living allowance",
+      "travel allowance",
+      "accommodation support",
+      "health insurance"
+    ],
+    "notes": "ITC's International Engineering Program accepts a high-school diploma or equivalent and requires an English qualification plus an entrance examination. The explicit published application period is 31 August through 22 September 2026. Although the same page contains a generic 'Application now Open' label, the more precise dated application period is used for structured status; therefore the award is marked upcoming on 23 August 2026."
+  }
+]

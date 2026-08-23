@@ -1,0 +1,69 @@
+[
+  {
+    "scholarship_id": "sch_tw_002",
+    "identity_status": "VERIFIED",
+    "funding_status": "VERIFIED",
+    "eligibility_status": "VERIFIED",
+    "source_type": "Official TaiwanICDF scholarship pages",
+    "source_url": "https://www.icdf.org.tw/wSite/ct?ctNode=31280&mp=2&xItem=5166",
+    "supporting_urls": [
+      "https://www.icdf.org.tw/wSite/ct?ctNode=31562&mp=2&xItem=12505"
+    ],
+    "funding_classification_basis": "Official TaiwanICDF source identifies the program as a full scholarship covering airfare, accommodation, tuition and credit fees, insurance, books and degree-specific monthly allowances.",
+    "unresolved_fields": [
+      "complete machine-readable beneficiary-country nationality list",
+      "programme-specific admission requirements"
+    ],
+    "notes": "Bachelor scholarship eligibility has additional country restrictions. Eligible nationalities therefore remain None rather than creating an incomplete list."
+  },
+  {
+    "scholarship_id": "sch_tw_003",
+    "identity_status": "VERIFIED",
+    "funding_status": "VERIFIED",
+    "eligibility_status": "VERIFIED",
+    "source_type": "Official NTU international scholarship and admission pages",
+    "source_url": "https://admissions.ntu.edu.tw/apply/degree-students/international-students/",
+    "supporting_urls": [
+      "https://isss.ntu.edu.tw/finances/scholarships/"
+    ],
+    "funding_classification_basis": "Official NTU source states tuition waiver up to NTD 65,000 and NTD 8,000 monthly stipend while accommodation, insurance and other charges remain the recipient's responsibility.",
+    "unresolved_fields": [
+      "programme-specific language requirements"
+    ],
+    "notes": "Record is scoped to the currently open February 2027 international graduate admission cycle, which runs from August 3 to September 17, 2026."
+  },
+  {
+    "scholarship_id": "sch_tw_004",
+    "identity_status": "VERIFIED",
+    "funding_status": "VERIFIED",
+    "eligibility_status": "VERIFIED",
+    "source_type": "Official NTHU International Talent Cultivation scholarship and admission pages",
+    "source_url": "https://apply.nthu.edu.tw/en/article/210-admission",
+    "supporting_urls": [
+      "https://apply.nthu.edu.tw/en/article/102-nthu-scholarship"
+    ],
+    "funding_classification_basis": "Official NTHU source states tuition and credit fee waiver plus monthly stipend; stipend varies by degree and doctoral category.",
+    "unresolved_fields": [
+      "single monthly stipend scalar because award amount varies by degree/program",
+      "programme-specific language requirements"
+    ],
+    "notes": "Spring 2027 international degree admission is open from August 3 through September 30, 2026, and scholarship results are announced with the admission process."
+  },
+  {
+    "scholarship_id": "sch_tw_005",
+    "identity_status": "VERIFIED",
+    "funding_status": "VERIFIED",
+    "eligibility_status": "VERIFIED",
+    "source_type": "Official NCKU international scholarship and admission pages",
+    "source_url": "https://oia.ncku.edu.tw/p/406-1032-301821%2Cr3414.php?Lang=en",
+    "supporting_urls": [
+      "https://oia.ncku.edu.tw/p/404-1032-229890.php?Lang=en"
+    ],
+    "funding_classification_basis": "For students newly admitted from the 2026-2027 academic year, NCKU provides tuition waiver and a monthly stipend whose amount is determined by the respective college.",
+    "unresolved_fields": [
+      "exact monthly stipend scalar because amount is determined by college",
+      "programme-specific language requirements"
+    ],
+    "notes": "Spring 2027 international admission is open July 1 through September 15, 2026. First-year scholarship consideration is based on admission documents without a separate scholarship application."
+  }
+]

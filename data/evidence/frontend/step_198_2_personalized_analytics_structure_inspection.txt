@@ -1,0 +1,2746 @@
+﻿========================================================================================================================
+STEP 198.2 - PERSONALIZED ANALYTICS INTEGRATION STRUCTURE INSPECTION
+========================================================================================================================
+
+APP IMPORTS
+------------------------------------------------------------------------------------------------------------------------
+    1: import { useEffect, useState } from 'react'
+    2: import API_BASE_URL, {
+    3:   authFetch,
+    4:   clearAccessToken,
+    5:   getAccessToken,
+    6:   readApiError,
+    7:   setAccessToken,
+    8: } from './api'
+    9: import LoginPage from './auth/LoginPage'
+   10: import RegisterPage from './auth/RegisterPage'
+   11: import ProfileSetupPage from './auth/ProfileSetupPage'
+   12: import UniversityCard from './UniversityCard'
+   13: import ProgramCard from './ProgramCard'
+   14: import ScholarshipCard from './ScholarshipCard'
+   15: import MyProfileModal from './MyProfileModal'
+   16: import RecommendationModal from './RecommendationModal'
+   17: import SavedPage from './SavedPage'
+   18: import EduPathLogoMark from './assets/edupath-logo-mark.png'
+   19: import './App.css'
+   20: 
+   21: // =========================
+   22: // COUNTRY NORMALIZATION HELPERS
+   23: // =========================
+   24: function getCountryId(country) {
+   25:   if (!country) return ''
+   26: 
+   27:   const rawValue =
+   28:     country.country_id ??
+   29:     country.id ??
+   30:     country.country_code ??
+   31:     country.code ??
+   32:     country.iso2 ??
+   33:     country.iso_code ??
+   34:     ''
+   35: 
+
+APP PAGE / MODAL / NAVIGATION STATE
+------------------------------------------------------------------------------------------------------------------------
+  340:     authStatus,
+  341:     setAuthStatus,
+  342:   ] = useState('checking')
+  343: 
+  344:   const [
+  345:     authMode,
+  346:     setAuthMode,
+  347:   ] = useState('login')
+  348: 
+  349:   const [
+  350:     currentAccount,
+  351:     setCurrentAccount,
+  352:   ] = useState(null)
+  353: 
+  354:   // =========================
+  355:   // ANALYSIS DASHBOARD STATE
+  356:   // =========================
+  357:   const [
+  358:     showAnalysisDashboard,
+  359:     setShowAnalysisDashboard,
+  360:   ] = useState(false)
+  361: 
+  362:   // =========================
+  363:   // USER PROFILE MODAL STATE
+  364:   // =========================
+  365:   const [
+  366:     showUserProfile,
+  367:     setShowUserProfile,
+  368:   ] = useState(false)
+  369: 
+  370:   // =========================
+  371:   // RECOMMENDATION MODAL STATE
+  372:   // =========================
+  373:   const [
+  374:     showRecommendationModal,
+  375:     setShowRecommendationModal,
+  376:   ] = useState(false)
+  377: 
+  378:   // =========================
+  379:   // SAVED PROGRAMME STATE
+  380:   // =========================
+  381:   const [
+  382:     savedProgramIds,
+  383:     setSavedProgramIds,
+  384:   ] = useState([])
+  385: 
+  386:   const [
+  387:     savingProgramId,
+  388:     setSavingProgramId,
+  389:   ] = useState('')
+  390: 
+  391:   // =========================
+  392:   // SAVED SCHOLARSHIP STATE
+  393:   // =========================
+  394:   const [
+  395:     savedScholarshipIds,
+  396:     setSavedScholarshipIds,
+  397:   ] = useState([])
+  398: 
+  399:   const [
+  400:     savingScholarshipId,
+  401:     setSavingScholarshipId,
+  402:   ] = useState('')
+  403: 
+  404:   // =========================
+  405:   // SAVED OPPORTUNITIES STATE
+  406:   // =========================
+  407:   const [
+  408:     showSavedPage,
+  409:     setShowSavedPage,
+  410:   ] = useState(false)
+  411: 
+  412:   // =========================
+  413:   // MAIN NAVIGATION STATE
+  414:   // =========================
+  415:   const [
+  416:     activePage,
+  417:     setActivePage,
+  418:   ] = useState('home')
+  419: 
+  420:   const [
+  421:     showExploreMenu,
+  422:     setShowExploreMenu,
+  423:   ] = useState(false)
+  424: 
+  425:   const [
+  426:     showMobileMenu,
+  427:     setShowMobileMenu,
+  428:   ] = useState(false)
+  429: 
+  430:   const isExploreActive =
+  431:     [
+  432:       'universities',
+  433:       'programs',
+  434:       'scholarships',
+  435:     ].includes(activePage)
+  436: 
+  437: 
+  438: 
+  439: 
+  440:   // =========================
+  441:   // EXPLORE MENU KEYBOARD UX
+  442:   // =========================
+  443: 
+  444:   useEffect(() => {
+  445:     const handleExploreEscape =
+  446:       (event) => {
+  447:         if (
+  448:           event.key === 'Escape'
+  449:         ) {
+  450:           setShowExploreMenu(
+  451:             false
+  452:           )
+  453:         }
+  454:       }
+  455: 
+
+NAVIGATION HIT LOCATIONS
+------------------------------------------------------------------------------------------------------------------------
+[17, 383, 396, 408, 409, 417, 668, 675, 676, 696, 709, 724, 725, 730, 746, 763, 773, 780, 782, 811, 828, 838, 845, 847, 1037, 1038, 1040, 1043, 1055, 1056, 1058, 1996, 2042, 2047, 2088, 2100, 2112, 2127, 2132, 2138, 2144, 2149, 2153, 2162, 2167, 2181, 2209, 2238, 2243, 2293, 2298, 2309, 2314, 2325, 2330, 2347, 2352, 2357, 2364, 2369, 2374, 2381, 2386, 2391, 2433, 2459, 2464, 2471, 2486, 2516, 2546, 2600, 2646, 2682, 2747, 2783, 2853, 2978, 2989, 3000, 3021, 3026, 3032, 3037, 3043, 3048, 3092, 3094, 3100, 3102, 3157, 3281, 3386, 3438, 3683, 3735, 3749, 3751, 3763]
+
+APP NAVIGATION / PAGE RENDER BLOCK
+------------------------------------------------------------------------------------------------------------------------
+ 2002:               src={EduPathLogoMark}
+ 2003:               alt=""
+ 2004:               aria-hidden="true"
+ 2005:             />
+ 2006: 
+ 2007:             <span className="edupath-brand-name">
+ 2008:               EduPath
+ 2009:             </span>
+ 2010:           </button>
+ 2011: 
+ 2012:           <button
+ 2013:             type="button"
+ 2014:             className="edupath-mobile-menu-button"
+ 2015:             aria-label={
+ 2016:               showMobileMenu
+ 2017:                 ? 'Close navigation menu'
+ 2018:                 : 'Open navigation menu'
+ 2019:             }
+ 2020:             aria-expanded={showMobileMenu}
+ 2021:             onClick={() => {
+ 2022:               setShowExploreMenu(false)
+ 2023:               setShowMobileMenu(
+ 2024:                 (current) => !current
+ 2025:               )
+ 2026:             }}
+ 2027:           >
+ 2028:             <span
+ 2029:               className="edupath-mobile-menu-icon"
+ 2030:               aria-hidden="true"
+ 2031:             >
+ 2032:               <span />
+ 2033:               <span />
+ 2034:               <span />
+ 2035:             </span>
+ 2036:           </button>
+ 2037: 
+ 2038:           <div className="edupath-nav-links">
+ 2039:             <button
+ 2040:               type="button"
+ 2041:               className={
+ 2042:                 activePage === 'home'
+ 2043:                   ? 'edupath-nav-link active'
+ 2044:                   : 'edupath-nav-link'
+ 2045:               }
+ 2046:               onClick={() => {
+ 2047:                 setActivePage('home')
+ 2048:                 setShowExploreMenu(false)
+ 2049:               }}
+ 2050:             >
+ 2051:               Home
+ 2052:             </button>
+ 2053: 
+ 2054:             <div className="edupath-explore-wrapper">
+ 2055:               <button
+ 2056:                 type="button"
+ 2057:                 className={
+ 2058:                   [
+ 2059:                     'universities',
+ 2060:                     'programs',
+ 2061:                     'scholarships',
+ 2062:                   ].includes(activePage)
+ 2063:                     ? 'edupath-nav-link active'
+ 2064:                     : 'edupath-nav-link'
+ 2065:                 }
+ 2066:                 onClick={() =>
+ 2067:                   setShowExploreMenu(
+ 2068:                     (current) => !current
+ 2069:                   )
+ 2070:                 }
+ 2071:               >
+ 2072:                 Explore
+ 2073:                 <span
+ 2074:                   className={`edupath-nav-chevron ${
+ 2075:                     showExploreMenu
+ 2076:                       ? 'open'
+ 2077:                       : ''
+ 2078:                   }`}
+ 2079:                   aria-hidden="true"
+ 2080:                 />
+ 2081:               </button>
+ 2082: 
+ 2083:               {showExploreMenu && (
+ 2084:                 <div className="edupath-explore-menu">
+ 2085:                   <button
+ 2086:                     type="button"
+ 2087:                     onClick={() => {
+ 2088:                       setActivePage(
+ 2089:                         'universities'
+ 2090:                       )
+ 2091:                       setShowExploreMenu(false)
+ 2092:                     }}
+ 2093:                   >
+ 2094:                     Universities
+ 2095:                   </button>
+ 2096: 
+ 2097:                   <button
+ 2098:                     type="button"
+ 2099:                     onClick={() => {
+ 2100:                       setActivePage(
+ 2101:                         'programs'
+ 2102:                       )
+ 2103:                       setShowExploreMenu(false)
+ 2104:                     }}
+ 2105:                   >
+ 2106:                     Programmes
+ 2107:                   </button>
+ 2108: 
+ 2109:                   <button
+ 2110:                     type="button"
+ 2111:                     onClick={() => {
+ 2112:                       setActivePage(
+ 2113:                         'scholarships'
+ 2114:                       )
+ 2115:                       setShowExploreMenu(false)
+ 2116:                     }}
+ 2117:                   >
+ 2118:                     Scholarships
+ 2119:                   </button>
+ 2120:                 </div>
+ 2121:               )}
+ 2122:             </div>
+ 2123: 
+ 2124:             <button
+ 2125:               type="button"
+ 2126:               className={`edupath-nav-link ${
+ 2127:                 activePage === 'recommendations'
+ 2128:                   ? 'active'
+ 2129:                   : ''
+ 2130:               }`}
+ 2131:               onClick={() => {
+ 2132:                 setActivePage(
+ 2133:                   'recommendations'
+ 2134:                 )
+ 2135:                 setShowExploreMenu(false)
+ 2136:               }}
+ 2137:             >
+ 2138:               Recommendations
+ 2139:             </button>
+ 2140: 
+ 2141:             <button
+ 2142:               type="button"
+ 2143:               className={`edupath-nav-link ${
+ 2144:                 activePage === 'saved'
+ 2145:                   ? 'active'
+ 2146:                   : ''
+ 2147:               }`}
+ 2148:               onClick={() => {
+ 2149:                 setActivePage('saved')
+ 2150:                 setShowExploreMenu(false)
+ 2151:               }}
+ 2152:             >
+ 2153:               Saved
+ 2154:             </button>
+ 2155:           </div>
+ 2156: 
+ 2157:           <div className="edupath-account-nav">
+ 2158: 
+ 2159:             <button
+ 2160:               type="button"
+ 2161:               className={`edupath-profile-nav ${
+ 2162:                 activePage === 'profile'
+ 2163:                   ? 'active'
+ 2164:                   : ''
+ 2165:               }`}
+ 2166:               onClick={() => {
+ 2167:                 setActivePage('profile')
+ 2168:                 setShowExploreMenu(false)
+ 2169:               }}
+ 2170:             >
+ 2171:               <span
+ 2172:                 className="edupath-profile-avatar"
+ 2173:                 aria-hidden="true"
+ 2174:               >
+ 2175:                 {'\u{1F464}'}
+ 2176:               </span>
+ 2177: 
+ 2178:               <span className="edupath-profile-copy">
+ 2179:                 <strong>
+ 2180:                   {currentAccount?.full_name ||
+ 2181:                     'My Profile'}
+ 2182:                 </strong>
+ 2183: 
+ 2184:                 <small>
+ 2185:                   Profile
+ 2186:                 </small>
+ 2187:               </span>
+ 2188:             </button>
+ 2189: 
+ 2190:             <button
+ 2191:               type="button"
+ 2192:               className="edupath-navbar-logout"
+ 2193:               onClick={handleLogout}
+ 2194:             >
+ 2195:               Log out
+ 2196:             </button>
+ 2197: 
+ 2198:           </div>
+ 2199: 
+ 2200:         </div>
+ 2201: 
+ 2202:         {showMobileMenu && (
+ 2203:           <div className="edupath-mobile-panel">
+ 2204: 
+ 2205:             <button
+ 2206:               type="button"
+ 2207:               className="edupath-mobile-account"
+ 2208:               onClick={() => {
+ 2209:                 setActivePage('profile')
+ 2210:                 setShowExploreMenu(false)
+ 2211:                 setShowMobileMenu(false)
+ 2212:               }}
+ 2213:             >
+ 2214:               <span
+ 2215:                 className="edupath-mobile-account-avatar"
+ 2216:                 aria-hidden="true"
+ 2217:               >
+ 2218:                 {'\u{1F464}'}
+ 2219:               </span>
+ 2220: 
+ 2221:               <span className="edupath-mobile-account-copy">
+ 2222:                 <strong>
+ 2223:                   {currentAccount?.full_name ||
+ 2224:                     'EduPath Student'}
+ 2225:                 </strong>
+ 2226: 
+ 2227:                 <small>
+ 2228:                   View profile
+ 2229:                 </small>
+ 2230:               </span>
+ 2231:             </button>
+ 2232: 
+ 2233:             <div className="edupath-mobile-menu-divider" />
+ 2234: 
+ 2235:             <button
+ 2236:               type="button"
+ 2237:               className={`edupath-mobile-nav-item ${
+ 2238:                 activePage === 'home'
+ 2239:                   ? 'active'
+ 2240:                   : ''
+ 2241:               }`}
+ 2242:               onClick={() => {
+ 2243:                 setActivePage('home')
+ 2244:                 setShowExploreMenu(false)
+ 2245:                 setShowMobileMenu(false)
+ 2246:               }}
+ 2247:             >
+ 2248:               Home
+ 2249:             </button>
+ 2250: 
+ 2251: 
+ 2252:             <div className="edupath-mobile-explore">
+ 2253: 
+ 2254:               <button
+ 2255:                 type="button"
+ 2256:                 className={`edupath-mobile-nav-item edupath-mobile-explore-toggle ${
+ 2257:                   [
+ 2258:                     'universities',
+ 2259:                     'programs',
+ 2260:                     'scholarships',
+ 2261:                   ].includes(activePage)
+ 2262:                     ? 'active'
+ 2263:                     : ''
+ 2264:                 }`}
+ 2265:                 aria-expanded={showExploreMenu}
+ 2266:                 onClick={() => {
+ 2267:                   setShowExploreMenu(
+ 2268:                     (current) => !current
+ 2269:                   )
+ 2270:                 }}
+ 2271:               >
+ 2272:                 <span>
+ 2273:                   Explore
+ 2274:                 </span>
+ 2275: 
+ 2276:                 <span
+ 2277:                   className={`edupath-nav-chevron ${
+ 2278:                     showExploreMenu
+ 2279:                       ? 'open'
+ 2280:                       : ''
+ 2281:                   }`}
+ 2282:                   aria-hidden="true"
+ 2283:                 />
+ 2284:               </button>
+ 2285: 
+ 2286: 
+ 2287:               {showExploreMenu && (
+ 2288:                 <div className="edupath-mobile-explore-submenu">
+ 2289: 
+ 2290:                   <button
+ 2291:                     type="button"
+ 2292:                     className={
+ 2293:                       activePage === 'universities'
+ 2294:                         ? 'active'
+ 2295:                         : ''
+ 2296:                     }
+ 2297:                     onClick={() => {
+ 2298:                       setActivePage('universities')
+ 2299:                       setShowExploreMenu(false)
+ 2300:                       setShowMobileMenu(false)
+ 2301:                     }}
+ 2302:                   >
+ 2303:                     Universities
+ 2304:                   </button>
+ 2305: 
+ 2306:                   <button
+ 2307:                     type="button"
+ 2308:                     className={
+ 2309:                       activePage === 'programs'
+ 2310:                         ? 'active'
+ 2311:                         : ''
+ 2312:                     }
+ 2313:                     onClick={() => {
+ 2314:                       setActivePage('programs')
+ 2315:                       setShowExploreMenu(false)
+ 2316:                       setShowMobileMenu(false)
+ 2317:                     }}
+ 2318:                   >
+ 2319:                     Study Programmes
+ 2320:                   </button>
+ 2321: 
+ 2322:                   <button
+ 2323:                     type="button"
+ 2324:                     className={
+ 2325:                       activePage === 'scholarships'
+ 2326:                         ? 'active'
+ 2327:                         : ''
+ 2328:                     }
+ 2329:                     onClick={() => {
+ 2330:                       setActivePage('scholarships')
+ 2331:                       setShowExploreMenu(false)
+ 2332:                       setShowMobileMenu(false)
+ 2333:                     }}
+ 2334:                   >
+ 2335:                     Scholarships
+ 2336:                   </button>
+ 2337: 
+ 2338:                 </div>
+ 2339:               )}
+ 2340: 
+ 2341:             </div>
+ 2342: 
+ 2343: 
+ 2344:             <button
+ 2345:               type="button"
+ 2346:               className={`edupath-mobile-nav-item ${
+ 2347:                 activePage === 'recommendations'
+ 2348:                   ? 'active'
+ 2349:                   : ''
+ 2350:               }`}
+ 2351:               onClick={() => {
+ 2352:                 setActivePage('recommendations')
+ 2353:                 setShowExploreMenu(false)
+ 2354:                 setShowMobileMenu(false)
+ 2355:               }}
+ 2356:             >
+ 2357:               Recommendations
+ 2358:             </button>
+ 2359: 
+ 2360: 
+ 2361:             <button
+ 2362:               type="button"
+ 2363:               className={`edupath-mobile-nav-item ${
+ 2364:                 activePage === 'saved'
+ 2365:                   ? 'active'
+ 2366:                   : ''
+ 2367:               }`}
+ 2368:               onClick={() => {
+ 2369:                 setActivePage('saved')
+ 2370:                 setShowExploreMenu(false)
+ 2371:                 setShowMobileMenu(false)
+ 2372:               }}
+ 2373:             >
+ 2374:               Saved Opportunities
+ 2375:             </button>
+ 2376: 
+ 2377: 
+ 2378:             <button
+ 2379:               type="button"
+ 2380:               className={`edupath-mobile-nav-item ${
+ 2381:                 activePage === 'profile'
+ 2382:                   ? 'active'
+ 2383:                   : ''
+ 2384:               }`}
+ 2385:               onClick={() => {
+ 2386:                 setActivePage('profile')
+ 2387:                 setShowExploreMenu(false)
+ 2388:                 setShowMobileMenu(false)
+ 2389:               }}
+ 2390:             >
+ 2391:               My Profile
+ 2392:             </button>
+ 2393: 
+ 2394: 
+ 2395:             <div className="edupath-mobile-menu-divider" />
+ 2396: 
+ 2397: 
+ 2398:             <button
+ 2399:               type="button"
+ 2400:               className="edupath-mobile-logout"
+ 2401:               onClick={() => {
+ 2402:                 const confirmed =
+ 2403:                   window.confirm(
+ 2404:                     'Log out of EduPath?'
+ 2405:                   )
+ 2406: 
+ 2407:                 if (confirmed) {
+ 2408:                   setShowExploreMenu(false)
+ 2409:                   setShowMobileMenu(false)
+ 2410:                   handleLogout()
+ 2411:                 }
+ 2412:               }}
+ 2413:             >
+ 2414:               <span aria-hidden="true">
+ 2415:                 {'\u2192'}
+ 2416:               </span>
+ 2417: 
+ 2418:               <span>
+ 2419:                 Log out
+ 2420:               </span>
+ 2421:             </button>
+ 2422: 
+ 2423:           </div>
+ 2424:         )}
+ 2425: 
+ 2426:       </nav>
+ 2427: 
+ 2428:       <main>
+ 2429:         {/* =========================
+ 2430:             HOME PAGE
+ 2431:         ========================== */}
+ 2432: 
+ 2433:         {activePage === 'home' && (
+ 2434:           <section className="edupath-home">
+ 2435: 
+ 2436:             <div className="edupath-home-hero">
+ 2437:               <p className="edupath-home-eyebrow">
+ 2438:                 YOUR STUDY PATH STARTS HERE
+ 2439:               </p>
+ 2440: 
+ 2441:               <h1>
+ 2442:                 Find the right study
+ 2443:                 opportunity for you.
+ 2444:               </h1>
+ 2445: 
+ 2446:               <p className="edupath-home-description">
+ 2447:                 Explore universities,
+ 2448:                 programmes and scholarships,
+ 2449:                 or generate personalised
+ 2450:                 recommendations based on your
+ 2451:                 academic profile.
+ 2452:               </p>
+ 2453: 
+ 2454:               <div className="edupath-home-actions">
+ 2455:                 <button
+ 2456:                   type="button"
+ 2457:                   className="edupath-home-primary"
+ 2458:                   onClick={() =>
+ 2459:                     setActivePage(
+ 2460:                       'recommendations'
+ 2461:                     )
+ 2462:                   }
+ 2463:                 >
+ 2464:                   Get Personalized Recommendations
+ 2465:                 </button>
+ 2466: 
+ 2467:                 <button
+ 2468:                   type="button"
+ 2469:                   className="edupath-home-secondary"
+ 2470:                   onClick={() =>
+ 2471:                     setActivePage(
+ 2472:                       'universities'
+ 2473:                     )
+ 2474:                   }
+ 2475:                 >
+ 2476:                   Explore Opportunities
+ 2477:                 </button>
+ 2478:               </div>
+ 2479:             </div>
+ 2480: 
+ 2481:             <div className="edupath-home-stats">
+ 2482:               <button
+ 2483:                 type="button"
+ 2484:                 className="edupath-home-stat-card"
+ 2485:                 onClick={() =>
+ 2486:                   setActivePage(
+ 2487:                     'universities'
+ 2488:                   )
+ 2489:                 }
+ 2490:               >
+ 2491:                 <span className="home-stat-icon">
+ 2492:                   {'\u{1F393}'}
+ 2493:                 </span>
+ 2494: 
+ 2495:                 <strong>
+ 2496:                   {
+ 2497:                     homeTotalsLoading
+ 2498:                       ? '\u2014'
+ 2499:                       : homeTotals.universities
+ 2500:                   }
+ 2501:                 </strong>
+ 2502: 
+ 2503:                 <span>
+ 2504:                   Universities
+ 2505:                 </span>
+ 2506: 
+ 2507:                 <small>
+ 2508:                   Browse universities
+ 2509:                 </small>
+ 2510:               </button>
+ 2511: 
+ 2512:               <button
+ 2513:                 type="button"
+ 2514:                 className="edupath-home-stat-card"
+ 2515:                 onClick={() =>
+ 2516:                   setActivePage(
+ 2517:                     'programs'
+ 2518:                   )
+ 2519:                 }
+ 2520:               >
+ 2521:                 <span className="home-stat-icon">
+ 2522:                   {'\u{1F4D8}'}
+ 2523:                 </span>
+ 2524: 
+ 2525:                 <strong>
+ 2526:                   {
+ 2527:                     homeTotalsLoading
+ 2528:                       ? '\u2014'
+ 2529:                       : homeTotals.programs
+ 2530:                   }
+ 2531:                 </strong>
+ 2532: 
+ 2533:                 <span>
+ 2534:                   Study Programmes
+ 2535:                 </span>
+ 2536: 
+ 2537:                 <small>
+ 2538:                   Compare study options
+ 2539:                 </small>
+ 2540:               </button>
+ 2541: 
+ 2542:               <button
+ 2543:                 type="button"
+ 2544:                 className="edupath-home-stat-card"
+ 2545:                 onClick={() =>
+ 2546:                   setActivePage(
+ 2547:                     'scholarships'
+ 2548:                   )
+ 2549:                 }
+ 2550:               >
+ 2551:                 <span className="home-stat-icon">
+ 2552:                   {'\u{1F3C5}'}
+ 2553:                 </span>
+ 2554: 
+ 2555:                 <strong>
+ 2556:                   {
+ 2557:                     homeTotalsLoading
+ 2558:                       ? '\u2014'
+ 2559:                       : homeTotals.scholarships
+ 2560:                   }
+ 2561:                 </strong>
+ 2562: 
+ 2563:                 <span>
+ 2564:                   Verified Scholarships
+ 2565:                 </span>
+ 2566: 
+ 2567:                 <small>
+ 2568:                   Public verified opportunities
+ 2569:                 </small>
+ 2570:               </button>
+ 2571:             </div>
+ 2572: 
+ 2573:             {/* =========================
+ 2574:                 HOME OPPORTUNITY PREVIEWS
+ 2575:             ========================== */}
+ 2576: 
+ 2577:             <section className="home-preview-section">
+ 2578:               <div className="home-preview-heading">
+ 2579:                 <div>
+ 2580:                   <p className="edupath-home-eyebrow">
+ 2581:                     CONTINUE EXPLORING
+ 2582:                   </p>
+ 2583: 
+ 2584:                   <h2>
+ 2585:                     Universities in{' '}
+ 2586:                     {selectedCountryName}
+ 2587:                   </h2>
+ 2588: 
+ 2589:                   <p>
+ 2590:                     Continue exploring your selected
+ 2591:                     study destination, or use Explore
+ 2592:                     to switch to another country.
+ 2593:                   </p>
+ 2594:                 </div>
+ 2595: 
+ 2596:                 <button
+ 2597:                   type="button"
+ 2598:                   className="home-view-all"
+ 2599:                   onClick={() =>
+ 2600:                     setActivePage('universities')
+ 2601:                   }
+ 2602:                 >
+ 2603:                   View All
+ 2604:                 </button>
+ 2605:               </div>
+ 2606: 
+ 2607:               <div className="home-preview-grid">
+ 2608:                 {universities
+ 2609:                   .slice(0, 3)
+ 2610:                   .map((university) => (
+ 2611:                     <article
+ 2612:                       className="home-opportunity-card"
+ 2613:                       key={
+ 2614:                         university.university_id
+ 2615:                       }
+ 2616:                     >
+ 2617:                       <div className="home-preview-icon">
+ 2618:                         {'\u{1F393}'}
+ 2619:                       </div>
+ 2620: 
+ 2621:                       <div>
+ 2622:                         <span className="home-preview-type">
+ 2623:                           UNIVERSITY
+ 2624:                         </span>
+ 2625: 
+ 2626:                         <h3>
+ 2627:                           {
+ 2628:                             university.university_name
+ 2629:                           }
+ 2630:                         </h3>
+ 2631: 
+ 2632:                         <p>
+ 2633:                           {[
+ 2634:                             university.city,
+ 2635:                             selectedCountryName,
+ 2636:                           ]
+ 2637:                             .filter(Boolean)
+ 2638:                             .join(' \u2022 ')}
+ 2639:                         </p>
+ 2640:                       </div>
+ 2641: 
+ 2642:                       <button
+ 2643:                         type="button"
+ 2644:                         className="home-preview-action"
+ 2645:                         onClick={() =>
+ 2646:                           setActivePage(
+ 2647:                             'universities'
+ 2648:                           )
+ 2649:                         }
+ 2650:                       >
+ 2651:                         Explore University
+ 2652:                       </button>
+ 2653:                     </article>
+ 2654:                   ))}
+ 2655:               </div>
+ 2656:             </section>
+ 2657: 
+ 2658: 
+ 2659:             <section className="home-preview-section home-program-preview-section">
+ 2660:               <div className="home-preview-heading">
+ 2661:                 <div>
+ 2662:                   <p className="edupath-home-eyebrow">
+ 2663:                     STUDY OPTIONS
+ 2664:                   </p>
+ 2665: 
+ 2666:                   <h2>
+ 2667:                     Featured Programmes in{' '}
+ 2668:                     {selectedCountryName}
+ 2669:                   </h2>
+ 2670: 
+ 2671:                   <p>
+ 2672:                     Compare degree levels,
+ 2673:                     study fields and tuition
+ 2674:                     information.
+ 2675:                   </p>
+ 2676:                 </div>
+ 2677: 
+ 2678:                 <button
+ 2679:                   type="button"
+ 2680:                   className="home-view-all"
+ 2681:                   onClick={() =>
+ 2682:                     setActivePage('programs')
+ 2683:                   }
+ 2684:                 >
+ 2685:                   View All
+ 2686:                 </button>
+ 2687:               </div>
+ 2688: 
+ 2689:               <div className="home-preview-grid">
+ 2690:                 {selectedCountryPrograms
+ 2691:                   .slice(0, 3)
+ 2692:                   .map((program) => {
+ 2693:                     const university =
+ 2694:                       universities.find(
+ 2695:                         (item) =>
+ 2696:                           item.university_id ===
+ 2697:                           program.university_id
+ 2698:                       )
+ 2699: 
+ 2700:                     return (
+ 2701:                       <article
+ 2702:                         className="home-opportunity-card"
+ 2703:                         key={program.program_id}
+ 2704:                       >
+ 2705:                         <div className="home-preview-icon">
+ 2706:                           {'\u{1F4D8}'}
+ 2707:                         </div>
+ 2708: 
+ 2709:                         <div>
+ 2710:                           <span className="home-preview-type">
+ 2711:                             PROGRAMME
+ 2712:                           </span>
+ 2713: 
+ 2714:                           <h3>
+ 2715:                             {program.program_name}
+ 2716:                           </h3>
+ 2717: 
+ 2718:                           <p className="home-preview-subtitle">
+ 2719:                             {
+ 2720:                               university
+ 2721:                                 ?.university_name ||
+ 2722:                               'University information unavailable'
+ 2723:                             }
+ 2724:                           </p>
+ 2725: 
+ 2726:                           <div className="home-preview-meta">
+ 2727:                             {program.degree_level && (
+ 2728:                               <span>
+ 2729:                                 {program.degree_level}
+ 2730:                               </span>
+ 2731:                             )}
+ 2732: 
+ 2733:                             {program.field_of_study && (
+ 2734:                               <span>
+ 2735:                                 {
+ 2736:                                   program.field_of_study
+ 2737:                                 }
+ 2738:                               </span>
+ 2739:                             )}
+ 2740:                           </div>
+ 2741:                         </div>
+ 2742: 
+ 2743:                         <button
+ 2744:                           type="button"
+ 2745:                           className="home-preview-action"
+ 2746:                           onClick={() =>
+ 2747:                             setActivePage(
+ 2748:                               'programs'
+ 2749:                             )
+ 2750:                           }
+ 2751:                         >
+ 2752:                           Explore Programme
+ 2753:                         </button>
+ 2754:                       </article>
+ 2755:                     )
+ 2756:                   })}
+ 2757:               </div>
+ 2758:             </section>
+ 2759: 
+ 2760: 
+ 2761:             <section className="home-preview-section home-scholarship-preview-section">
+ 2762:               <div className="home-preview-heading">
+ 2763:                 <div>
+ 2764:                   <p className="edupath-home-eyebrow">
+ 2765:                     FUNDING OPPORTUNITIES
+ 2766:                   </p>
+ 2767: 
+ 2768:                   <h2>
+ 2769:                     Scholarships in{' '}
+ 2770:                     {selectedCountryName}
+ 2771:                   </h2>
+ 2772: 
+ 2773:                   <p>
+ 2774:                     Explore funding opportunities
+ 2775:                     for your study goals.
+ 2776:                   </p>
+ 2777:                 </div>
+ 2778: 
+ 2779:                 <button
+ 2780:                   type="button"
+ 2781:                   className="home-view-all"
+ 2782:                   onClick={() =>
+ 2783:                     setActivePage(
+ 2784:                       'scholarships'
+ 2785:                     )
+ 2786:                   }
+ 2787:                 >
+ 2788:                   View All
+ 2789:                 </button>
+ 2790:               </div>
+ 2791: 
+ 2792:               <div className="home-preview-grid">
+ 2793:                 {scholarships
+ 2794:                   .slice(0, 3)
+ 2795:                   .map((scholarship) => (
+ 2796:                     <article
+ 2797:                       className="home-opportunity-card"
+ 2798:                       key={
+ 2799:                         scholarship.scholarship_id
+ 2800:                       }
+ 2801:                     >
+ 2802:                       <div className="home-preview-icon">
+ 2803:                         {'\u{1F3C5}'}
+ 2804:                       </div>
+ 2805: 
+ 2806:                       <div>
+ 2807:                         <span className="home-preview-type">
+ 2808:                           SCHOLARSHIP
+ 2809:                         </span>
+ 2810: 
+ 2811:                         <h3>
+ 2812:                           {
+ 2813:                             scholarship.scholarship_name
+ 2814:                           }
+ 2815:                         </h3>
+ 2816: 
+ 2817:                         <p className="home-preview-subtitle">
+ 2818:                           {
+ 2819:                             scholarship.provider_name ||
+ 2820:                             'Scholarship provider'
+ 2821:                           }
+ 2822:                         </p>
+ 2823: 
+ 2824:                         <div className="home-preview-meta">
+ 2825:                           {scholarship.funding_type && (
+ 2826:                             <span>
+ 2827:                               {
+ 2828:                                 scholarship.funding_type
+ 2829:                               }
+ 2830:                             </span>
+ 2831:                           )}
+ 2832: 
+ 2833:                           {Array.isArray(
+ 2834:                             scholarship.degree_levels
+ 2835:                           ) &&
+ 2836:                             scholarship
+ 2837:                               .degree_levels
+ 2838:                               .length > 0 && (
+ 2839:                               <span>
+ 2840:                                 {scholarship
+ 2841:                                   .degree_levels
+ 2842:                                   .slice(0, 2)
+ 2843:                                   .join(', ')}
+ 2844:                               </span>
+ 2845:                             )}
+ 2846:                         </div>
+ 2847:                       </div>
+ 2848: 
+ 2849:                       <button
+ 2850:                         type="button"
+ 2851:                         className="home-preview-action"
+ 2852:                         onClick={() =>
+ 2853:                           setActivePage(
+ 2854:                             'scholarships'
+ 2855:                           )
+ 2856:                         }
+ 2857:                       >
+ 2858:                         Explore Scholarship
+ 2859:                       </button>
+ 2860:                     </article>
+ 2861:                   ))}
+ 2862:               </div>
+ 2863:             </section>
+ 2864: 
+ 2865: 
+ 2866:             <section className="edupath-home-guide">
+ 2867:               <div>
+ 2868:                 <p className="edupath-home-eyebrow">
+ 2869:                   HOW EDUPATH WORKS
+ 2870:                 </p>
+ 2871: 
+ 2872:                 <h2>
+ 2873:                   Three simple ways to
+ 2874:                   explore your options
+ 2875:                 </h2>
+ 2876:               </div>
+ 2877: 
+ 2878:               <div className="home-guide-grid">
+ 2879:                 <article>
+ 2880:                   <span>01</span>
+ 2881: 
+ 2882:                   <h3>
+ 2883:                     Complete your profile
+ 2884:                   </h3>
+ 2885: 
+ 2886:                   <p>
+ 2887:                     Tell EduPath about your
+ 2888:                     academic background,
+ 2889:                     study goals and budget.
+ 2890:                   </p>
+ 2891:                 </article>
+ 2892: 
+ 2893:                 <article>
+ 2894:                   <span>02</span>
+ 2895: 
+ 2896:                   <h3>
+ 2897:                     Explore opportunities
+ 2898:                   </h3>
+ 2899: 
+ 2900:                   <p>
+ 2901:                     Search universities,
+ 2902:                     programmes and
+ 2903:                     scholarships using
+ 2904:                     structured filters.
+ 2905:                   </p>
+ 2906:                 </article>
+ 2907: 
+ 2908:                 <article>
+ 2909:                   <span>03</span>
+ 2910: 
+ 2911:                   <h3>
+ 2912:                     Get matched
+ 2913:                   </h3>
+ 2914: 
+ 2915:                   <p>
+ 2916:                     Generate personalised
+ 2917:                     recommendations and
+ 2918:                     save opportunities you
+ 2919:                     want to revisit.
+ 2920:                   </p>
+ 2921:                 </article>
+ 2922:               </div>
+ 2923:             </section>
+ 2924: 
+ 2925: 
+ 2926: 
+ 2927:             {/* =========================
+ 2928:                 HOME FOOTER
+ 2929:             ========================== */}
+ 2930: 
+ 2931:             <footer className="edupath-home-footer">
+ 2932: 
+ 2933:               <div className="edupath-footer-main">
+ 2934: 
+ 2935:                 {/* Brand */}
+ 2936:                 <div className="edupath-footer-brand">
+ 2937: 
+ 2938:                   <div className="edupath-footer-brand-row">
+ 2939: 
+ 2940:                     <img
+ 2941:                       src={EduPathLogoMark}
+ 2942:                       alt="EduPath"
+ 2943:                       className="edupath-footer-logo"
+ 2944:                     />
+ 2945: 
+ 2946:                     <div>
+ 2947:                       <strong>
+ 2948:                         EduPath
+ 2949:                       </strong>
+ 2950: 
+ 2951:                       <span>
+ 2952:                         Analytics
+ 2953:                       </span>
+ 2954:                     </div>
+ 2955: 
+ 2956:                   </div>
+ 2957: 
+ 2958:                   <p>
+ 2959:                     Discover universities,
+ 2960:                     programmes and scholarships
+ 2961:                     that match your academic goals,
+ 2962:                     preferences and budget.
+ 2963:                   </p>
+ 2964: 
+ 2965:                 </div>
+ 2966: 
+ 2967: 
+ 2968:                 {/* Explore */}
+ 2969:                 <div className="edupath-footer-column">
+ 2970: 
+ 2971:                   <h4>
+ 2972:                     Explore
+ 2973:                   </h4>
+ 2974: 
+ 2975:                   <button
+ 2976:                     type="button"
+ 2977:                     onClick={() =>
+ 2978:                       setActivePage(
+ 2979:                         'universities'
+ 2980:                       )
+ 2981:                     }
+ 2982:                   >
+ 2983:                     Universities
+ 2984:                   </button>
+ 2985: 
+ 2986:                   <button
+ 2987:                     type="button"
+ 2988:                     onClick={() =>
+ 2989:                       setActivePage(
+ 2990:                         'programs'
+ 2991:                       )
+ 2992:                     }
+ 2993:                   >
+ 2994:                     Study Programmes
+ 2995:                   </button>
+ 2996: 
+ 2997:                   <button
+ 2998:                     type="button"
+ 2999:                     onClick={() =>
+ 3000:                       setActivePage(
+ 3001:                         'scholarships'
+ 3002:                       )
+ 3003:                     }
+ 3004:                   >
+ 3005:                     Scholarships
+ 3006:                   </button>
+ 3007: 
+ 3008:                 </div>
+ 3009: 
+ 3010: 
+ 3011:                 {/* Student tools */}
+ 3012:                 <div className="edupath-footer-column">
+ 3013: 
+ 3014:                   <h4>
+ 3015:                     Student Tools
+ 3016:                   </h4>
+ 3017: 
+ 3018:                   <button
+ 3019:                     type="button"
+ 3020:                     onClick={() =>
+ 3021:                       setActivePage(
+ 3022:                         'recommendations'
+ 3023:                       )
+ 3024:                     }
+ 3025:                   >
+ 3026:                     Recommendations
+ 3027:                   </button>
+ 3028: 
+ 3029:                   <button
+ 3030:                     type="button"
+ 3031:                     onClick={() =>
+ 3032:                       setActivePage(
+ 3033:                         'saved'
+ 3034:                       )
+ 3035:                     }
+ 3036:                   >
+ 3037:                     Saved Opportunities
+ 3038:                   </button>
+ 3039: 
+ 3040:                   <button
+ 3041:                     type="button"
+ 3042:                     onClick={() =>
+ 3043:                       setActivePage(
+ 3044:                         'profile'
+ 3045:                       )
+ 3046:                     }
+ 3047:                   >
+ 3048:                     My Profile
+ 3049:                   </button>
+ 3050: 
+ 3051:                 </div>
+ 3052: 
+ 3053:               </div>
+ 3054: 
+ 3055: 
+ 3056:               <div className="edupath-footer-bottom">
+ 3057: 
+ 3058:                 <p>
+ 3059:                   {'\u00A9'} 2026 EduPath.
+ 3060:                   University & Scholarship
+ 3061:                   Recommendation Platform.
+ 3062:                 </p>
+ 3063: 
+ 3064:                 <p>
+ 3065:                   Discover {'\u2022'} Compare {'\u2022'} Get Matched
+ 3066:                 </p>
+ 3067: 
+ 3068:               </div>
+ 3069: 
+ 3070:             </footer>
+ 3071: 
+ 3072:           </section>
+ 3073:         )}
+ 3074: 
+ 3075:         {/* =========================
+ 3076:             SHARED EXPLORE HEADER
+ 3077:         ========================== */}
+ 3078: 
+ 3079:         {[
+ 3080:           'universities',
+ 3081:           'programs',
+ 3082:           'scholarships',
+ 3083:         ].includes(activePage) && (
+ 3084:           <section className="explore-page-header">
+ 3085: 
+ 3086:             <div className="explore-page-heading">
+ 3087:               <p className="explore-page-eyebrow">
+ 3088:                 EXPLORE OPPORTUNITIES
+ 3089:               </p>
+ 3090: 
+ 3091:               <h1>
+ 3092:                 {activePage === 'universities'
+ 3093:                   ? 'Universities'
+ 3094:                   : activePage === 'programs'
+ 3095:                     ? 'Study Programmes'
+ 3096:                     : 'Scholarships'}
+ 3097:               </h1>
+ 3098: 
+ 3099:               <p>
+ 3100:                 {activePage === 'universities'
+ 3101:                   ? 'Discover universities and explore your study destinations.'
+ 3102:                   : activePage === 'programs'
+ 3103:                     ? 'Compare study programmes, fields, tuition and study options.'
+ 3104:                     : 'Find scholarship opportunities that match your study goals.'}
+ 3105:               </p>
+ 3106:             </div>
+ 3107: 
+ 3108:             <div className="explore-country-filter">
+ 3109:               <label htmlFor="explore-country">
+ 3110:                 Country
+ 3111:               </label>
+ 3112: 
+ 3113:               <select
+ 3114:                 id="explore-country"
+ 3115:                 value={selectedCountry}
+ 3116:                 onChange={handleCountryChange}
+ 3117:               >
+ 3118:                 <option value="">
+ 3119:                   Select a country
+ 3120:                 </option>
+ 3121: 
+ 3122:                 {countries.map(
+ 3123:                   (country, index) => {
+ 3124:                     const countryValue =
+ 3125:                       getCountryId(country)
+ 3126: 
+ 3127:                     const countryLabel =
+ 3128:                       getCountryLabel(country)
+ 3129: 
+ 3130:                     if (!countryValue) {
+ 3131:                       return null
+ 3132:                     }
+ 3133: 
+ 3134:                     return (
+ 3135:                       <option
+ 3136:                         key={
+ 3137:                           countryValue ||
+ 3138:                           index
+ 3139:                         }
+ 3140:                         value={countryValue}
+ 3141:                       >
+ 3142:                         {countryLabel}
+ 3143:                       </option>
+ 3144:                     )
+ 3145:                   }
+ 3146:                 )}
+ 3147:               </select>
+ 3148:             </div>
+ 3149: 
+ 3150:           </section>
+ 3151:         )}
+ 3152: 
+ 3153:         {/* =========================
+ 3154:             UNIVERSITY SECTION
+ 3155:         ========================== */}
+ 3156: 
+ 3157:         {activePage === 'universities' && (
+ 3158:         <section className="university-section">
+ 3159:           <h2>
+ 3160:             Universities in{' '}
+ 3161:             {selectedCountryName}{' '}
+ 3162:             ({totalUniversities})
+ 3163:           </h2>
+ 3164: 
+ 3165:           {/* University Search */}
+ 3166: 
+ 3167:           <input
+ 3168:             className="university-search"
+ 3169:             type="text"
+ 3170:             placeholder="Search by university or city..."
+ 3171:             value={searchTerm}
+ 3172:             onChange={(event) =>
+ 3173:               setSearchTerm(
+ 3174:                 event.target.value
+ 3175:               )
+ 3176:             }
+ 3177:           />
+ 3178: 
+ 3179:           {!loading &&
+ 3180:             !error && (
+ 3181:               <p className="search-result-count">
+ 3182:                 Showing{' '}
+ 3183:                 {
+ 3184:                   getExplorePageStart(
+ 3185:                     filteredUniversities,
+ 3186:                     universityPage
+ 3187:                   )
+ 3188:                 }
+ 3189:                 {' - '}
+ 3190:                 {
+ 3191:                   getExplorePageEnd(
+ 3192:                     filteredUniversities,
+ 3193:                     universityPage
+ 3194:                   )
+ 3195:                 }
+ 3196:                 {' of '}
+ 3197:                 {
+ 3198:                   filteredUniversities.length
+ 3199:                 }{' '}
+ 3200:                 universities
+ 3201:               </p>
+ 3202:             )}
+ 3203: 
+ 3204:           {loading && (
+ 3205:             <p className="status-message">
+ 3206:               Loading universities...
+ 3207:             </p>
+ 3208:           )}
+ 3209: 
+ 3210:           {error && (
+ 3211:             <p className="no-results">
+ 3212:               {error}
+ 3213:             </p>
+ 3214:           )}
+ 3215: 
+ 3216:           {!loading &&
+ 3217:             !error &&
+ 3218:             filteredUniversities.length ===
+ 3219:               0 && (
+ 3220:               <p className="no-results">
+ 3221:                 No universities found.
+ 3222:               </p>
+ 3223:             )}
+ 3224: 
+ 3225:           {!loading &&
+ 3226:             !error &&
+ 3227:             filteredUniversities.length >
+ 3228:               0 && (
+ 3229:               <div className="university-grid">
+ 3230:                 {getExplorePageItems(
+ 3231:                   filteredUniversities,
+ 3232:                   universityPage
+ 3233:                 ).map(
+ 3234:                   (university) => (
+ 3235:                     <UniversityCard
+ 3236:                       key={
+ 3237:                         university.university_id
+ 3238:                       }
+ 3239:                       university={
+ 3240:                         university
+ 3241:                       }
+ 3242:                     />
+ 3243:                   )
+ 3244:                 )}
+ 3245: 
+ 3246:                 <ExplorePagination
+ 3247:                   items={filteredUniversities}
+ 3248:                   page={universityPage}
+ 3249:                   onPageChange={(nextPage) => {
+ 3250:                     setUniversityPage(
+ 3251:                       nextPage
+ 3252:                     )
+ 3253: 
+ 3254:                     window.requestAnimationFrame(
+ 3255:                       () => {
+ 3256:                         document
+ 3257:                           .querySelector(
+ 3258:                             '.university-section'
+ 3259:                           )
+ 3260:                           ?.scrollIntoView({
+ 3261:                             behavior:
+ 3262:                               'smooth',
+ 3263:                             block:
+ 3264:                               'start',
+ 3265:                           })
+ 3266:                       }
+ 3267:                     )
+ 3268:                   }}
+ 3269:                 />
+ 3270:               </div>
+ 3271:             )}
+ 3272:         </section>
+ 3273:         )}
+ 3274: 
+ 3275: 
+ 3276: 
+ 3277:         {/* =========================
+ 3278:             PROGRAM SECTION
+ 3279:         ========================== */}
+ 3280: 
+ 3281:         {activePage === 'programs' && (
+ 3282:         <section className="program-section">
+ 3283:           <h2>
+ 3284:             Programs in{' '}
+ 3285:             {selectedCountryName}{' '}
+ 3286:             (
+ 3287:             {
+ 3288:               selectedCountryPrograms.length
+ 3289:             }
+ 3290:             )
+ 3291:           </h2>
+ 3292: 
+ 3293:           <input
+ 3294:             className="program-search"
+ 3295:             type="text"
+ 3296:             placeholder="Search programs, fields, or universities..."
+ 3297:             value={
+ 3298:               programSearchTerm
+ 3299:             }
+ 3300:             onChange={(event) =>
+ 3301:               setProgramSearchTerm(
+ 3302:                 event.target.value
+ 3303:               )
+ 3304:             }
+ 3305:           />
+ 3306: 
+ 3307:           {!programLoading &&
+ 3308:             !programError && (
+ 3309:               <p className="program-result-count">
+ 3310:                 Showing{' '}
+ 3311:                 {
+ 3312:                   getExplorePageStart(
+ 3313:                     filteredPrograms,
+ 3314:                     programPage
+ 3315:                   )
+ 3316:                 }
+ 3317:                 {' - '}
+ 3318:                 {
+ 3319:                   getExplorePageEnd(
+ 3320:                     filteredPrograms,
+ 3321:                     programPage
+ 3322:                   )
+ 3323:                 }
+ 3324:                 {' of '}
+ 3325:                 {
+ 3326:                   filteredPrograms.length
+ 3327:                 }{' '}
+ 3328:                 programs
+ 3329:               </p>
+ 3330:             )}
+ 3331: 
+ 3332:           {programLoading && (
+ 3333:             <p className="status-message">
+ 3334:               Loading programs...
+ 3335:             </p>
+ 3336:           )}
+ 3337: 
+ 3338:           {programError && (
+ 3339:             <p className="no-results">
+ 3340:               {programError}
+ 3341:             </p>
+ 3342:           )}
+ 3343: 
+ 3344:           {!programLoading &&
+ 3345:             !programError &&
+ 3346:             filteredPrograms.length ===
+ 3347:               0 && (
+ 3348:               <p className="no-results">
+ 3349:                 No programs available
+ 3350:                 for this country yet.
+ 3351:               </p>
+ 3352:             )}
+ 3353: 
+ 3354:           {!programLoading &&
+ 3355:             !programError &&
+ 3356:             filteredPrograms.length >
+ 3357:               0 && (
+ 3358:               <div className="program-grid">
+ 3359:                 {getExplorePageItems(
+ 3360:                   filteredPrograms,
+ 3361:                   programPage
+ 3362:                 ).map(
+ 3363:                   (program) => {
+ 3364:                     const university =
+ 3365:                       universities.find(
+ 3366:                         (
+ 3367:                           university
+ 3368:                         ) =>
+ 3369:                           university.university_id ===
+ 3370:                           program.university_id
+ 3371:                       )
+ 3372: 
+ 3373:                     return (
+ 3374:                       <ProgramCard
+ 3375:                         key={
+ 3376:                           program.program_id
+ 3377:                         }
+ 3378:                         program={
+ 3379:                           program
+ 3380:                         }
+ 3381:                         universityName={
+ 3382:                           university
+ 3383:                             ?.university_name ||
+ 3384:                           ''
+ 3385:                         }
+ 3386:                         isSaved={
+ 3387:                           savedProgramIds.includes(
+ 3388:                             program.program_id
+ 3389:                           )
+ 3390:                         }
+ 3391:                         saving={
+ 3392:                           savingProgramId ===
+ 3393:                           program.program_id
+ 3394:                         }
+ 3395:                         onToggleSave={
+ 3396:                           handleToggleProgramSave
+ 3397:                         }
+ 3398:                       />
+ 3399:                     )
+ 3400:                   }
+ 3401:                 )}
+ 3402: 
+ 3403:                 <ExplorePagination
+ 3404:                   items={filteredPrograms}
+ 3405:                   page={programPage}
+ 3406:                   onPageChange={(nextPage) => {
+ 3407:                     setProgramPage(
+ 3408:                       nextPage
+ 3409:                     )
+ 3410: 
+ 3411:                     window.requestAnimationFrame(
+ 3412:                       () => {
+ 3413:                         document
+ 3414:                           .querySelector(
+ 3415:                             '.program-section'
+ 3416:                           )
+ 3417:                           ?.scrollIntoView({
+ 3418:                             behavior:
+ 3419:                               'smooth',
+ 3420:                             block:
+ 3421:                               'start',
+ 3422:                           })
+ 3423:                       }
+ 3424:                     )
+ 3425:                   }}
+ 3426:                 />
+ 3427:               </div>
+ 3428:             )}
+ 3429:         </section>
+ 3430:         )}
+ 3431: 
+ 3432: 
+ 3433: 
+ 3434:         {/* =========================
+ 3435:             SCHOLARSHIP SECTION
+ 3436:         ========================== */}
+ 3437: 
+ 3438:         {activePage === 'scholarships' && (
+ 3439:         <section className="scholarship-section">
+ 3440:           <h2>
+ 3441:             Scholarships in{' '}
+ 3442:             {selectedCountryName}{' '}
+ 3443:             ({totalScholarships})
+ 3444:           </h2>
+ 3445: 
+ 3446:           {/* Scholarship Search */}
+ 3447: 
+ 3448:           <input
+ 3449:             className="scholarship-search"
+ 3450:             type="text"
+ 3451:             placeholder="Search scholarships, providers, degrees, funding, or universities..."
+ 3452:             value={
+ 3453:               scholarshipSearchTerm
+ 3454:             }
+ 3455:             onChange={(event) =>
+ 3456:               setScholarshipSearchTerm(
+ 3457:                 event.target.value
+ 3458:               )
+ 3459:             }
+ 3460:           />
+ 3461: 
+ 3462:           {/* =========================
+ 3463:               SCHOLARSHIP FILTERS
+ 3464:           ========================== */}
+ 3465: 
+ 3466:           <div className="scholarship-filters">
+ 3467:             {/* Degree Filter */}
+ 3468: 
+ 3469:             <select
+ 3470:               value={
+ 3471:                 selectedDegree
+ 3472:               }
+ 3473:               onChange={(event) =>
+ 3474:                 setSelectedDegree(
+ 3475:                   event.target.value
+ 3476:                 )
+ 3477:               }
+ 3478:             >
+ 3479:               <option value="all">
+ 3480:                 All Degrees
+ 3481:               </option>
+ 3482: 
+ 3483:               {scholarshipDegrees.map(
+ 3484:                 (degree) => (
+ 3485:                   <option
+ 3486:                     key={degree}
+ 3487:                     value={degree}
+ 3488:                   >
+ 3489:                     {degree}
+ 3490:                   </option>
+ 3491:                 )
+ 3492:               )}
+ 3493:             </select>
+ 3494: 
+ 3495:             {/* Funding Filter */}
+ 3496: 
+ 3497:             <select
+ 3498:               value={
+ 3499:                 selectedFunding
+ 3500:               }
+ 3501:               onChange={(event) =>
+ 3502:                 setSelectedFunding(
+ 3503:                   event.target.value
+ 3504:                 )
+ 3505:               }
+ 3506:             >
+ 3507:               <option value="all">
+ 3508:                 All Funding
+ 3509:               </option>
+ 3510: 
+ 3511:               {scholarshipFundings.map(
+ 3512:                 (funding) => (
+ 3513:                   <option
+ 3514:                     key={funding}
+ 3515:                     value={funding}
+ 3516:                   >
+ 3517:                     {funding}
+ 3518:                   </option>
+ 3519:                 )
+ 3520:               )}
+ 3521:             </select>
+ 3522: 
+ 3523:             {/* Status Filter */}
+ 3524: 
+ 3525:             <select
+ 3526:               value={
+ 3527:                 selectedStatus
+ 3528:               }
+ 3529:               onChange={(event) =>
+ 3530:                 setSelectedStatus(
+ 3531:                   event.target.value
+ 3532:                 )
+ 3533:               }
+ 3534:             >
+ 3535:               <option value="all">
+ 3536:                 All Status
+ 3537:               </option>
+ 3538: 
+ 3539:               {scholarshipStatuses.map(
+ 3540:                 (status) => (
+ 3541:                   <option
+ 3542:                     key={status}
+ 3543:                     value={status}
+ 3544:                   >
+ 3545:                     {status.charAt(0).toUpperCase() + status.slice(1)}
+ 3546:                   </option>
+ 3547:                 )
+ 3548:               )}
+ 3549:             </select>
+ 3550: 
+ 3551:             {/* Field Filter */}
+ 3552: 
+ 3553:             <select
+ 3554:               value={
+ 3555:                 selectedField
+ 3556:               }
+ 3557:               onChange={(event) =>
+ 3558:                 setSelectedField(
+ 3559:                   event.target.value
+ 3560:                 )
+ 3561:               }
+ 3562:             >
+ 3563:               <option value="all">
+ 3564:                 All Fields
+ 3565:               </option>
+ 3566: 
+ 3567:               {scholarshipFields.map(
+ 3568:                 (field) => (
+ 3569:                   <option
+ 3570:                     key={field}
+ 3571:                     value={field}
+ 3572:                   >
+ 3573:                     {field}
+ 3574:                   </option>
+ 3575:                 )
+ 3576:               )}
+ 3577:             </select>
+ 3578:           </div>
+ 3579: 
+ 3580:           {/* Reset Scholarship Filters */}
+ 3581: 
+ 3582:           <button
+ 3583:             className="reset-scholarship-filters"
+ 3584:             type="button"
+ 3585:             onClick={
+ 3586:               resetScholarshipFilters
+ 3587:             }
+ 3588:           >
+ 3589:             Reset Filters
+ 3590:           </button>
+ 3591: 
+ 3592:           {/* Scholarship Result Count */}
+ 3593: 
+ 3594:           {!scholarshipLoading &&
+ 3595:             !scholarshipError && (
+ 3596:               <p className="scholarship-result-count">
+ 3597:                 Showing{' '}
+ 3598:                 {
+ 3599:                   getExplorePageStart(
+ 3600:                     filteredScholarships,
+ 3601:                     scholarshipPage
+ 3602:                   )
+ 3603:                 }
+ 3604:                 {' - '}
+ 3605:                 {
+ 3606:                   getExplorePageEnd(
+ 3607:                     filteredScholarships,
+ 3608:                     scholarshipPage
+ 3609:                   )
+ 3610:                 }
+ 3611:                 {' of '}
+ 3612:                 {
+ 3613:                   filteredScholarships.length
+ 3614:                 }{' '}
+ 3615:                 scholarships
+ 3616:               </p>
+ 3617:             )}
+ 3618: 
+ 3619:           {/* Scholarship Loading */}
+ 3620: 
+ 3621:           {scholarshipLoading && (
+ 3622:             <p className="status-message">
+ 3623:               Loading scholarships...
+ 3624:             </p>
+ 3625:           )}
+ 3626: 
+ 3627:           {/* Scholarship Error */}
+ 3628: 
+ 3629:           {scholarshipError && (
+ 3630:             <p className="no-results">
+ 3631:               {scholarshipError}
+ 3632:             </p>
+ 3633:           )}
+ 3634: 
+ 3635:           {/* No Scholarship Results */}
+ 3636: 
+ 3637:           {!scholarshipLoading &&
+ 3638:             !scholarshipError &&
+ 3639:             filteredScholarships.length ===
+ 3640:               0 && (
+ 3641:               <p className="status-message">
+ 3642:                 No scholarships found
+ 3643:                 for this country.
+ 3644:               </p>
+ 3645:             )}
+ 3646: 
+ 3647:           {/* Scholarship Cards */}
+ 3648: 
+ 3649:           {!scholarshipLoading &&
+ 3650:             !scholarshipError &&
+ 3651:             filteredScholarships.length >
+ 3652:               0 && (
+ 3653:               <div className="scholarship-grid">
+ 3654:                 {getExplorePageItems(
+ 3655:                   filteredScholarships,
+ 3656:                   scholarshipPage
+ 3657:                 ).map(
+ 3658:                   (
+ 3659:                     scholarship,
+ 3660:                     index
+ 3661:                   ) => {
+ 3662:                     const hostUniversityName =
+ 3663:                       universityNameById.get(
+ 3664:                         scholarship.host_university_id
+ 3665:                       ) ||
+ 3666:                       scholarship.host_university_name ||
+ 3667:                       scholarship.university_name ||
+ 3668:                       ''
+ 3669: 
+ 3670:                     return (
+ 3671:                       <ScholarshipCard
+ 3672:                         key={
+ 3673:                           scholarship.scholarship_id ||
+ 3674:                           scholarship._id ||
+ 3675:                           `${scholarship.scholarship_name}-${index}`
+ 3676:                         }
+ 3677:                         scholarship={
+ 3678:                           scholarship
+ 3679:                         }
+ 3680:                         hostUniversityName={
+ 3681:                           hostUniversityName
+ 3682:                         }
+ 3683:                         isSaved={
+ 3684:                           savedScholarshipIds.includes(
+ 3685:                             scholarship.scholarship_id
+ 3686:                           )
+ 3687:                         }
+ 3688:                         saving={
+ 3689:                           savingScholarshipId ===
+ 3690:                           scholarship.scholarship_id
+ 3691:                         }
+ 3692:                         onToggleSave={
+ 3693:                           handleToggleScholarshipSave
+ 3694:                         }
+ 3695:                       />
+ 3696:                     )
+ 3697:                   }
+ 3698:                 )}
+ 3699: 
+ 3700:                 <ExplorePagination
+ 3701:                   items={filteredScholarships}
+ 3702:                   page={scholarshipPage}
+ 3703:                   onPageChange={(nextPage) => {
+ 3704:                     setScholarshipPage(
+ 3705:                       nextPage
+ 3706:                     )
+ 3707: 
+ 3708:                     window.requestAnimationFrame(
+ 3709:                       () => {
+ 3710:                         document
+ 3711:                           .querySelector(
+ 3712:                             '.scholarship-section'
+ 3713:                           )
+ 3714:                           ?.scrollIntoView({
+ 3715:                             behavior:
+ 3716:                               'smooth',
+ 3717:                             block:
+ 3718:                               'start',
+ 3719:                           })
+ 3720:                       }
+ 3721:                     )
+ 3722:                   }}
+ 3723:                 />
+ 3724:               </div>
+ 3725:             )}
+ 3726:         </section>
+ 3727:         )}
+ 3728: 
+ 3729:       
+ 3730: 
+ 3731:         {/* =========================
+ 3732:             RECOMMENDATIONS PAGE
+ 3733:         ========================== */}
+ 3734: 
+ 3735:         {activePage === 'recommendations' && (
+ 3736:           <section className="recommendations-page-section">
+ 3737:             <RecommendationModal
+ 3738:               displayMode="page"
+ 3739:             />
+ 3740:           </section>
+ 3741:         )}
+ 3742: 
+ 3743: 
+ 3744: 
+ 3745:         {/* =========================
+ 3746:             SAVED FULL PAGE
+ 3747:         ========================== */}
+ 3748: 
+ 3749:         {activePage === 'saved' && (
+ 3750:           <section className="saved-main-page-section">
+ 3751:             <SavedPage
+ 3752:               displayMode="page"
+ 3753:             />
+ 3754:           </section>
+ 3755:         )}
+ 3756: 
+ 3757: 
+ 3758: 
+ 3759:         {/* =========================
+ 3760:             PROFILE FULL PAGE
+ 3761:         ========================== */}
+ 3762: 
+ 3763:         {activePage === 'profile' && (
+ 3764:           <section className="profile-main-page-section">
+ 3765:             <MyProfileModal
+ 3766:               account={currentAccount}
+ 3767:               displayMode="page"
+ 3768:             />
+ 3769:           </section>
+ 3770:         )}
+ 3771: 
+ 3772: </main>
+ 3773: 
+ 3774:       {/* =========================
+ 3775:           RECOMMENDATION MODAL
+ 3776:       ========================== */}
+ 3777: 
+ 3778: 
+ 3779: 
+ 3780:       {/* =========================
+ 3781:           SAVED OPPORTUNITIES
+ 3782:       ========================== */}
+ 3783: 
+ 3784:       {/* =========================
+ 3785:           ANALYSIS DASHBOARD
+ 3786:           FULL-SCREEN MODAL
+ 3787:       ========================== */}
+ 3788: 
+ 3789:     </>
+ 3790:   )
+ 3791: }
+ 3792: 
+ 3793: export default App
+
+RECOMMENDATION MODAL STATE + API FETCH
+------------------------------------------------------------------------------------------------------------------------
+    1: import { useEffect, useState } from 'react'
+    2: import { authFetch } from './api'
+    3: import './RecommendationModal.css'
+    4: 
+    5: function RecommendationModal({
+    6:   onClose,
+    7:   displayMode = 'modal',
+    8: }) {
+    9:   const isPageMode =
+   10:     displayMode === 'page'
+   11:   const [activeTab, setActiveTab] =
+   12:     useState('programs')
+   13: 
+   14:   const [
+   15:     recommendationsRequested,
+   16:     setRecommendationsRequested,
+   17:   ] = useState(false)
+   18: 
+   19:   const [programData, setProgramData] =
+   20:     useState(null)
+   21: 
+   22:   const [
+   23:     scholarshipData,
+   24:     setScholarshipData,
+   25:   ] = useState(null)
+   26: 
+   27:   const [loading, setLoading] =
+   28:     useState(false)
+   29: 
+   30:   const [error, setError] =
+   31:     useState('')
+   32: 
+   33:   // =========================
+   34:   // SAVED OPPORTUNITIES STATE
+   35:   // =========================
+   36:   const [
+   37:     savedUniversityIds,
+   38:     setSavedUniversityIds,
+   39:   ] = useState([])
+   40: 
+   41:   const [
+   42:     savedProgramIds,
+   43:     setSavedProgramIds,
+   44:   ] = useState([])
+   45: 
+   46: 
+   47:   const [
+   48:     savedScholarshipIds,
+   49:     setSavedScholarshipIds,
+   50:   ] = useState([])
+   51: 
+   52:   const [
+   53:     savingItem,
+   54:     setSavingItem,
+   55:   ] = useState('')
+   56: 
+   57:   // =========================
+   58:   // LOAD SAVED OPPORTUNITIES
+   59:   // =========================
+   60:   const loadSavedOpportunities =
+   61:     async () => {
+   62:       const response = await authFetch(
+   63:         '/api/me/saved'
+   64:       )
+   65: 
+   66:       if (!response.ok) {
+   67:         throw new Error(
+   68:           'Unable to load saved opportunities.'
+   69:         )
+   70:       }
+   71: 
+   72:       const data = await response.json()
+   73: 
+   74:       setSavedUniversityIds(
+   75:         Array.isArray(
+   76:           data.saved_universities
+   77:         )
+   78:           ? data.saved_universities
+   79:               .map(
+   80:                 (item) =>
+   81:                   item.university_id
+   82:               )
+   83:               .filter(Boolean)
+   84:           : []
+   85:       )
+   86: 
+   87:       setSavedProgramIds(
+   88:         Array.isArray(
+   89:           data.saved_programs
+   90:         )
+   91:           ? data.saved_programs
+   92:               .map(
+   93:                 (item) =>
+   94:                   item.program_id
+   95:               )
+   96:               .filter(Boolean)
+   97:           : []
+   98:       )
+   99: 
+  100:       setSavedScholarshipIds(
+  101:         Array.isArray(
+  102:           data.saved_scholarships
+  103:         )
+  104:           ? data.saved_scholarships
+  105:               .map(
+  106:                 (item) =>
+  107:                   item.scholarship_id
+  108:               )
+  109:               .filter(Boolean)
+  110:           : []
+  111:       )
+  112:     }
+  113: 
+  114:   // =========================
+  115:   // LOAD RECOMMENDATIONS
+  116:   // =========================
+  117:   useEffect(() => {
+  118:     if (!recommendationsRequested) {
+  119:       return
+  120:     }
+  121: 
+  122:     const loadRecommendations =
+  123:       async () => {
+  124:         try {
+  125:           setLoading(true)
+  126:           setError('')
+  127: 
+  128:           const [
+  129:             programResponse,
+  130:             scholarshipResponse,
+  131:           ] = await Promise.all([
+  132:             authFetch(
+  133:               '/api/me/recommendations/programs?top_k=5'
+  134:             ),
+  135: 
+  136:             authFetch(
+  137:               '/api/me/recommendations/scholarships?top_k=5'
+  138:             ),
+  139:           ])
+  140: 
+  141:           if (!programResponse.ok) {
+  142:             const data =
+  143:               await programResponse.json()
+  144: 
+  145:             throw new Error(
+  146:               typeof data.detail ===
+  147:                 'string'
+  148:                 ? data.detail
+  149:                 : 'Unable to load programme recommendations.'
+  150:             )
+  151:           }
+  152: 
+  153:           if (!scholarshipResponse.ok) {
+  154:             const data =
+  155:               await scholarshipResponse.json()
+  156: 
+  157:             throw new Error(
+  158:               typeof data.detail ===
+  159:                 'string'
+  160:                 ? data.detail
+  161:                 : 'Unable to load scholarship recommendations.'
+  162:             )
+  163:           }
+  164: 
+  165:           const [
+  166:             programResult,
+  167:             scholarshipResult,
+  168:           ] = await Promise.all([
+  169:             programResponse.json(),
+  170:             scholarshipResponse.json(),
+  171:           ])
+  172: 
+  173:           setProgramData(programResult)
+  174: 
+  175:           setScholarshipData(
+  176:             scholarshipResult
+  177:           )
+  178: 
+  179:           await loadSavedOpportunities()
+  180: 
+
+PROGRAM RECOMMENDATION DISPLAY CONTRACT
+------------------------------------------------------------------------------------------------------------------------
+  430:       key={recommendation.program_id}
+  431:     >
+  432:       <div className="recommendation-card-top">
+  433:         <div>
+  434:           <p className="recommendation-rank">
+  435:             #{index + 1} Recommended Programme
+  436:           </p>
+  437: 
+  438:           <h3>
+  439:             {recommendation.program_name}
+  440:           </h3>
+  441: 
+  442:           <p className="recommendation-university">
+  443:             {
+  444:               recommendation.university_name
+  445:             }
+  446:           </p>
+  447: 
+  448:           <p className="recommendation-location">
+  449:             {recommendation.country_name}
+  450:             {' ò '}
+  451:             {recommendation.degree_level}
+  452:           </p>
+  453:         </div>
+  454: 
+  455:         <div
+  456:           className={`recommendation-score ${getScoreClass(
+  457:             recommendation.match_score
+  458:           )}`}
+  459:         >
+  460:           <strong>
+  461:             {formatScore(
+  462:               recommendation.match_score
+  463:             )}
+  464:           </strong>
+  465: 
+  466:           <span>/ 100</span>
+  467:         </div>
+  468:       </div>
+  469: 
+  470:       <div className="recommendation-meta-grid">
+  471:         <div>
+  472:           <span>Field</span>
+  473: 
+  474:           <strong>
+  475:             {recommendation.field_of_study ||
+  476:               'Not available'}
+  477:           </strong>
+  478:         </div>
+  479: 
+  480:         <div>
+  481:           <span>Language</span>
+  482: 
+  483:           <strong>
+  484:             {
+  485:               recommendation.language_of_instruction ||
+  486:               'Not available'
+  487:             }
+  488:           </strong>
+  489:         </div>
+  490: 
+  491:         <div>
+  492:           <span>Tuition</span>
+  493: 
+  494:           <strong>
+  495:             {recommendation.tuition_fee ??
+  496:               'N/A'}{' '}
+  497:             {
+  498:               recommendation.tuition_currency ||
+  499:               ''
+  500:             }
+  501:           </strong>
+  502:         </div>
+  503: 
+  504:         <div>
+  505:           <span>Known Status</span>
+  506: 
+  507:           <strong>
+  508:             {
+  509:               recommendation.known_eligibility_status ||
+  510:               'Requires checking'
+  511:             }
+  512:           </strong>
+  513:         </div>
+  514:       </div>
+  515: 
+  516:       <div className="recommendation-details-grid">
+  517:         <section className="recommendation-detail-box">
+  518:           <h4>Why Recommended</h4>
+  519: 
+  520:           <ul className="recommendation-reasons">
+  521:             {(
+  522:               recommendation.match_reasons ||
+  523:               recommendation.why_recommended ||
+  524:               []
+  525:             ).map((reason) => (
+  526:               <li key={reason}>
+  527:                 {reason}
+  528:               </li>
+  529:             ))}
+  530:           </ul>
+  531:         </section>
+  532: 
+  533:         <section className="recommendation-detail-box">
+  534:           <h4>Requirement Gaps</h4>
+  535: 
+  536:           <ul className="recommendation-gaps">
+  537:             {(
+  538:               recommendation.requirement_gaps ||
+  539:               []
+  540:             ).map((gap) => (
+  541:               <li key={gap}>
+  542:                 {gap}
+  543:               </li>
+  544:             ))}
+  545:           </ul>
+  546:         </section>
+  547:       </div>
+  548: 
+  549:       <section className="recommendation-breakdown">
+  550:         <h4>Match Score Breakdown</h4>
+  551: 
+  552:         <div className="recommendation-breakdown-grid">
+  553:           {Object.entries(
+  554:             recommendation.score_breakdown ||
+  555:               {}
+  556:           ).map(([key, value]) => (
+  557:             <div key={key}>
+  558:               <span>
+  559:                 {key
+  560:                   .replaceAll('_', ' ')
+  561:                   .replace(/\b\w/g, (letter) =>
+  562:                     letter.toUpperCase()
+  563:                   )}
+  564:               </span>
+  565: 
+  566:               <strong>
+  567:                 {Number(value).toFixed(2)}
+  568:               </strong>
+  569:             </div>
+  570:           ))}
+  571:         </div>
+  572:       </section>
+  573: 
+  574:       <div className="recommendation-card-actions">
+  575: 
+
+SCHOLARSHIP RECOMMENDATION DISPLAY CONTRACT
+------------------------------------------------------------------------------------------------------------------------
+  630:       className="recommendation-card"
+  631:       key={
+  632:         recommendation.scholarship_id
+  633:       }
+  634:     >
+  635:       <div className="recommendation-card-top">
+  636:         <div>
+  637:           <p className="recommendation-rank">
+  638:             #{index + 1} Recommended Scholarship
+  639:           </p>
+  640: 
+  641:           <h3>
+  642:             {
+  643:               recommendation.scholarship_name
+  644:             }
+  645:           </h3>
+  646: 
+  647:           <p className="recommendation-university">
+  648:             {recommendation.provider_name}
+  649:           </p>
+  650: 
+  651:           <p className="recommendation-location">
+  652:             {recommendation.country_name}
+  653: 
+  654:             {recommendation.host_university_name
+  655:               ? ` ò ${recommendation.host_university_name}`
+  656:               : ''}
+  657:           </p>
+  658:         </div>
+  659: 
+  660:         <div
+  661:           className={`recommendation-score ${getScoreClass(
+  662:             recommendation.match_score
+  663:           )}`}
+  664:         >
+  665:           <strong>
+  666:             {formatScore(
+  667:               recommendation.match_score
+  668:             )}
+  669:           </strong>
+  670: 
+  671:           <span>/ 100</span>
+  672:         </div>
+  673:       </div>
+  674: 
+  675:       <div className="recommendation-meta-grid">
+  676:         <div>
+  677:           <span>Funding</span>
+  678: 
+  679:           <strong>
+  680:             {recommendation.funding_type ||
+  681:               'Not available'}
+  682:           </strong>
+  683:         </div>
+  684: 
+  685:         <div>
+  686:           <span>Status</span>
+  687: 
+  688:           <strong>
+  689:             {
+  690:               recommendation.scholarship_status ||
+  691:               'Unknown'
+  692:             }
+  693:           </strong>
+  694:         </div>
+  695: 
+  696:         <div>
+  697:           <span>Deadline</span>
+  698: 
+  699:           <strong>
+  700:             {
+  701:               recommendation.application_deadline ||
+  702:               'Not available'
+  703:             }
+  704:           </strong>
+  705:         </div>
+  706: 
+  707:         <div>
+  708:           <span>Allowance</span>
+  709: 
+  710:           <strong>
+  711:             {recommendation.monthly_allowance
+  712:               ? `${recommendation.monthly_allowance} ${recommendation.allowance_currency || ''}`
+  713:               : 'Not available'}
+  714:           </strong>
+  715:         </div>
+  716:       </div>
+  717: 
+  718:       <div className="recommendation-details-grid">
+  719:         <section className="recommendation-detail-box">
+  720:           <h4>Why Recommended</h4>
+  721: 
+  722:           <ul className="recommendation-reasons">
+  723:             {(
+  724:               recommendation.match_reasons ||
+  725:               []
+  726:             ).map((reason) => (
+  727:               <li key={reason}>
+  728:                 {reason}
+  729:               </li>
+  730:             ))}
+  731:           </ul>
+  732:         </section>
+  733: 
+  734:         <section className="recommendation-detail-box">
+  735:           <h4>Requirement Gaps</h4>
+  736: 
+  737:           <ul className="recommendation-gaps">
+  738:             {(
+  739:               recommendation.requirement_gaps ||
+  740:               []
+  741:             ).map((gap) => (
+  742:               <li key={gap}>
+  743:                 {gap}
+  744:               </li>
+  745:             ))}
+  746:           </ul>
+  747:         </section>
+  748:       </div>
+  749: 
+  750:       <section className="recommendation-breakdown">
+  751:         <h4>Match Score Breakdown</h4>
+  752: 
+  753:         <div className="recommendation-breakdown-grid">
+  754:           {Object.entries(
+  755:             recommendation.score_breakdown ||
+  756:               {}
+  757:           ).map(([key, value]) => (
+  758:             <div key={key}>
+  759:               <span>
+  760:                 {key
+  761:                   .replaceAll('_', ' ')
+  762:                   .replace(/\b\w/g, (letter) =>
+  763:                     letter.toUpperCase()
+  764:                   )}
+  765:               </span>
+  766: 
+  767:               <strong>
+  768:                 {Number(value).toFixed(2)}
+  769:               </strong>
+  770:             </div>
+  771:           ))}
+  772:         </div>
+  773:       </section>
+  774: 
+  775:       <div className="recommendation-card-actions">
+  776:         <button
+  777:           type="button"
+  778:           className={`recommendation-save-button ${
+  779:             savedScholarshipIds.includes(
+  780:               recommendation.scholarship_id
+
+MY PROFILE API LOAD / SAVE CONTRACT
+------------------------------------------------------------------------------------------------------------------------
+  130:   account,
+  131:   onClose,
+  132:   displayMode = 'modal',
+  133: }) {
+  134:   const isPageMode =
+  135:     displayMode === 'page'
+  136:   const [profile, setProfile] =
+  137:     useState(EMPTY_PROFILE)
+  138: 
+  139:   const [loading, setLoading] =
+  140:     useState(true)
+  141: 
+  142:   const [saving, setSaving] =
+  143:     useState(false)
+  144: 
+  145:   const [editing, setEditing] =
+  146:     useState(false)
+  147: 
+  148:   const [error, setError] =
+  149:     useState('')
+  150: 
+  151:   const [message, setMessage] =
+  152:     useState('')
+  153: 
+  154:   const loadProfile = async () => {
+  155:     setLoading(true)
+  156:     setError('')
+  157: 
+  158:     try {
+  159:       const response = await authFetch(
+  160:         '/api/me/profile'
+  161:       )
+  162: 
+  163:       if (!response.ok) {
+  164:         throw new Error(
+  165:           await readApiError(
+  166:             response,
+  167:             'Unable to load your profile.'
+  168:           )
+  169:         )
+  170:       }
+  171: 
+  172:       const data = await response.json()
+  173: 
+  174:       setProfile(
+  175:         toFormProfile(data)
+  176:       )
+  177:     } catch (err) {
+  178:       setError(
+  179:         err instanceof Error
+  180:           ? err.message
+  181:           : 'Unable to load your profile.'
+  182:       )
+  183:     } finally {
+  184:       setLoading(false)
+  185:     }
+  186:   }
+  187: 
+  188:   useEffect(() => {
+  189:     loadProfile()
+  190:   }, [])
+  191: 
+  192:   const updateField = (
+  193:     field,
+  194:     value
+  195:   ) => {
+  196:     setProfile((current) => ({
+  197:       ...current,
+  198:       [field]: value,
+  199:     }))
+  200:   }
+  201: 
+  202:   const handleSave = async () => {
+  203:     setSaving(true)
+  204:     setError('')
+  205:     setMessage('')
+  206: 
+  207:     const payload = {
+  208:       nationality:
+  209:         profile.nationality.trim(),
+  210: 
+  211:       current_education_level:
+  212:         profile.current_education_level.trim(),
+  213: 
+  214:       target_degree_level:
+  215:         profile.target_degree_level.trim(),
+  216: 
+  217:       preferred_major:
+  218:         profile.preferred_major.trim(),
+  219: 
+  220:       gpa: optionalNumber(
+  221:         profile.gpa
+  222:       ),
+  223: 
+  224:       gpa_scale: optionalNumber(
+  225:         profile.gpa_scale
+  226:       ),
+  227: 
+  228:       ielts_score: optionalNumber(
+  229:         profile.ielts_score
+  230:       ),
+  231: 
+  232:       toefl_score: optionalNumber(
+  233:         profile.toefl_score
+  234:       ),
+  235: 
+  236:       annual_budget: optionalNumber(
+  237:         profile.annual_budget
+  238:       ),
+  239: 
+  240:       budget_currency:
+  241:         profile.annual_budget
+  242:           ? profile.budget_currency.trim()
+  243:           : null,
+  244: 
+  245:       preferred_countries:
+  246:         profile.preferred_countries,
+  247: 
+  248:       scholarship_required:
+  249:         Boolean(
+  250:           profile.scholarship_required
+  251:         ),
+  252: 
+  253:       preferred_funding_type:
+  254:         profile.scholarship_required
+  255:           ? (
+  256:               profile.preferred_funding_type
+  257:                 ?.trim() || null
+  258:             )
+  259:           : null,
+  260: 
+  261:       preferred_intake:
+  262:         profile.preferred_intake
+  263:           ?.trim() || null,
+  264:     }
+  265: 
+  266:     try {
+  267:       const response = await authFetch(
+  268:         '/api/me/profile',
+  269:         {
+  270:           method: 'PATCH',
+  271:           headers: {
+  272:             'Content-Type':
+  273:               'application/json',
+  274:           },
+  275:           body: JSON.stringify(
+  276:             payload
+  277:           ),
+  278:         }
+  279:       )
+  280: 
+  281:       if (!response.ok) {
+  282:         throw new Error(
+  283:           await readApiError(
+  284:             response,
+  285:             'Unable to update your profile.'
+  286:           )
+  287:         )
+  288:       }
+  289: 
+  290:       const result =
+
+EXISTING ANALYSIS DASHBOARD HEADER
+------------------------------------------------------------------------------------------------------------------------
+    1: import React, { useEffect, useMemo, useState } from "react";
+    2: import API_BASE_URL from "./api";
+    3: 
+    4: const DASHBOARD_ENDPOINT = `${API_BASE_URL}/api/analysis/dashboard`;
+    5: 
+    6: 
+    7: /* =========================================================
+    8:    Utility Functions
+    9: ========================================================= */
+   10: 
+   11: function isObject(value) {
+   12:   return (
+   13:     value !== null &&
+   14:     typeof value === "object" &&
+   15:     !Array.isArray(value)
+   16:   );
+   17: }
+   18: 
+   19: 
+   20: function safeNumber(value, fallback = 0) {
+   21:   const number = Number(value);
+   22: 
+   23:   if (Number.isFinite(number)) {
+   24:     return number;
+   25:   }
+   26: 
+   27:   return fallback;
+   28: }
+   29: 
+   30: 
+   31: function formatNumber(value) {
+   32:   const number = Number(value);
+   33: 
+   34:   if (!Number.isFinite(number)) {
+   35:     return value ?? "ù";
+   36:   }
+   37: 
+   38:   return new Intl.NumberFormat("en-US").format(number);
+   39: }
+   40: 
+   41: 
+   42: function formatPercent(value) {
+   43:   if (value === null || value === undefined) {
+   44:     return "ù";
+   45:   }
+   46: 
+   47:   const number = Number(value);
+   48: 
+   49:   if (!Number.isFinite(number)) {
+   50:     return String(value);
+   51:   }
+   52: 
+   53:   if (number <= 1 && number >= 0) {
+   54:     return `${(number * 100).toFixed(1)}%`;
+   55:   }
+   56: 
+   57:   return `${number.toFixed(1)}%`;
+   58: }
+   59: 
+   60: 
+   61: function humanizeKey(key = "") {
+   62:   return String(key)
+   63:     .replace(/_/g, " ")
+   64:     .replace(/([a-z])([A-Z])/g, "$1 $2")
+   65:     .replace(/\b\w/g, (char) => char.toUpperCase());
+   66: }
+   67: 
+   68: 
+   69: function firstDefined(...values) {
+   70:   for (const value of values) {
+   71:     if (
+   72:       value !== undefined &&
+   73:       value !== null &&
+   74:       value !== ""
+   75:     ) {
+   76:       return value;
+   77:     }
+   78:   }
+   79: 
+   80:   return undefined;
+
+EXISTING ANALYSIS DASHBOARD PURPOSE
+------------------------------------------------------------------------------------------------------------------------
+ 1430:                 </span>
+ 1431: 
+ 1432:                 <strong className="not-claimed">
+ 1433:                   {String(
+ 1434:                     supervisedAccuracy
+ 1435:                   )}
+ 1436:                 </strong>
+ 1437:               </div>
+ 1438:             </div>
+ 1439: 
+ 1440:             <p className="algorithm-note">
+ 1441:               Functional validation represents
+ 1442:               rule-based and scenario testing.
+ 1443:               Supervised machine-learning
+ 1444:               prediction accuracy is not claimed
+ 1445:               without a labelled relevance
+ 1446:               dataset.
+ 1447:             </p>
+ 1448:           </div>
+ 1449:         </section>
+ 1450: 
+ 1451: 
+ 1452:         <section className="dashboard-section">
+ 1453:           <SectionHeader
+ 1454:             eyebrow="Decision Support"
+ 1455:             title="Analytical Insights"
+ 1456:             description="Key findings, interpretations and decision-oriented recommendations generated from the current EduPath dataset."
+ 1457:           />
+ 1458: 
+ 1459:           {insights.length ? (
+ 1460:             <div className="insights-list">
+ 1461:               {insights.map(
+ 1462:                 (insight, index) => (
+ 1463:                   <InsightCard
+ 1464:                     key={`${insight.title}-${index}`}
+ 1465:                     insight={insight}
+ 1466:                     index={index}
+ 1467:                   />
+ 1468:                 )
+ 1469:               )}
+ 1470:             </div>
+
+========================================================================================================================
+STEP 198.2 STRUCTURE INSPECTION COMPLETE
+========================================================================================================================
+
+READ-ONLY INSPECTION : YES
+FRONTEND MODIFIED    : NO
+BACKEND MODIFIED     : NO
+MONGODB MODIFIED     : NO
+========================================================================================================================

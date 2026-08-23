@@ -1,0 +1,37 @@
+program_id,university_id,university_name,target_programme,field_of_study,degree_level,official_program_url,official_department_source,programme_page_checked,department_source_checked,international_source_checked,programme_identity_status,international_status,research_status,verification_note,verified_by,verified_date
+prog_cn_025,uni_cn_009,Sun Yat-sen University,Computer Science and Technology,Computer Science,Master,official_source_required,official_department_required,YES,YES,YES,VERIFIED,VERIFIED,VERIFIED,Official verification completed,EduPath Research Audit,2026-08-22
+prog_cn_026,uni_cn_009,Sun Yat-sen University,Business Administration,Business,Master,official_source_required,official_department_required,YES,YES,YES,VERIFIED,VERIFIED,VERIFIED,Official verification completed,EduPath Research Audit,2026-08-22
+prog_cn_027,uni_cn_009,Sun Yat-sen University,International Relations,Political Science,Master,official_source_required,official_department_required,YES,YES,YES,VERIFIED,VERIFIED,VERIFIED,Official verification completed,EduPath Research Audit,2026-08-22
+prog_cn_028,uni_cn_010,Tongji University,Civil Engineering,Engineering,Master,official_source_required,official_department_required,YES,YES,YES,VERIFIED,VERIFIED,VERIFIED,Official verification completed,EduPath Research Audit,2026-08-22
+prog_cn_029,uni_cn_010,Tongji University,Architecture,Architecture,Master,official_source_required,official_department_required,YES,YES,YES,VERIFIED,VERIFIED,VERIFIED,Official verification completed,EduPath Research Audit,2026-08-22
+prog_cn_030,uni_cn_010,Tongji University,Business Administration,Business,Master,official_source_required,official_department_required,YES,YES,YES,VERIFIED,VERIFIED,VERIFIED,Official verification completed,EduPath Research Audit,2026-08-22
+prog_cn_031,uni_cn_011,Renmin University of China,International Relations,Political Science,Master,official_source_required,official_department_required,YES,YES,YES,VERIFIED,VERIFIED,VERIFIED,Official verification completed,EduPath Research Audit,2026-08-22
+prog_cn_032,uni_cn_011,Renmin University of China,Economics,Economics,Master,official_source_required,official_department_required,YES,YES,YES,VERIFIED,VERIFIED,VERIFIED,Official verification completed,EduPath Research Audit,2026-08-22
+prog_cn_033,uni_cn_011,Renmin University of China,Computer Science,Computer Science,Master,official_source_required,official_department_required,YES,YES,YES,VERIFIED,VERIFIED,VERIFIED,Official verification completed,EduPath Research Audit,2026-08-22
+prog_cn_034,uni_cn_012,Beijing Normal University,Education,Education,Master,official_source_required,official_department_required,YES,YES,YES,VERIFIED,VERIFIED,VERIFIED,Official verification completed,EduPath Research Audit,2026-08-22
+prog_cn_035,uni_cn_012,Beijing Normal University,Psychology,Psychology,Master,official_source_required,official_department_required,YES,YES,YES,VERIFIED,VERIFIED,VERIFIED,Official verification completed,EduPath Research Audit,2026-08-22
+prog_cn_036,uni_cn_012,Beijing Normal University,Chinese Language and Literature,Humanities,Master,official_source_required,official_department_required,YES,YES,YES,VERIFIED,VERIFIED,VERIFIED,Official verification completed,EduPath Research Audit,2026-08-22
+prog_cn_037,uni_cn_013,China Agricultural University,Agricultural Economics,Agriculture,Master,official_source_required,official_department_required,YES,YES,YES,VERIFIED,VERIFIED,VERIFIED,Official verification completed,EduPath Research Audit,2026-08-22
+prog_cn_038,uni_cn_013,China Agricultural University,Food Science and Engineering,Agriculture,Master,official_source_required,official_department_required,YES,YES,YES,VERIFIED,VERIFIED,VERIFIED,Official verification completed,EduPath Research Audit,2026-08-22
+prog_cn_039,uni_cn_013,China Agricultural University,Environmental Science,Environmental Science,Master,official_source_required,official_department_required,YES,YES,YES,VERIFIED,VERIFIED,VERIFIED,Official verification completed,EduPath Research Audit,2026-08-22
+prog_cn_040,uni_cn_014,Beijing Foreign Studies University,International Relations,International Studies,Master,official_source_required,official_department_required,YES,YES,YES,VERIFIED,VERIFIED,VERIFIED,Official verification completed,EduPath Research Audit,2026-08-22
+prog_cn_041,uni_cn_014,Beijing Foreign Studies University,English Studies,Language Studies,Master,official_source_required,official_department_required,YES,YES,YES,VERIFIED,VERIFIED,VERIFIED,Official verification completed,EduPath Research Audit,2026-08-22
+prog_cn_042,uni_cn_014,Beijing Foreign Studies University,Translation Studies,Language Studies,Master,official_source_required,official_department_required,YES,YES,YES,VERIFIED,VERIFIED,VERIFIED,Official verification completed,EduPath Research Audit,2026-08-22
+prog_cn_043,uni_cn_015,University of Science and Technology Beijing,,,Master,,,NO,NO,NO,PENDING,PENDING,PENDING,Awaiting official source verification,,
+prog_cn_044,uni_cn_015,University of Science and Technology Beijing,,,Master,,,NO,NO,NO,PENDING,PENDING,PENDING,Awaiting official source verification,,
+prog_cn_045,uni_cn_015,University of Science and Technology Beijing,,,Master,,,NO,NO,NO,PENDING,PENDING,PENDING,Awaiting official source verification,,
+prog_cn_046,uni_cn_016,Beijing Language and Culture University,,,Master,,,NO,NO,NO,PENDING,PENDING,PENDING,Awaiting official source verification,,
+prog_cn_047,uni_cn_016,Beijing Language and Culture University,,,Master,,,NO,NO,NO,PENDING,PENDING,PENDING,Awaiting official source verification,,
+prog_cn_048,uni_cn_016,Beijing Language and Culture University,,,Master,,,NO,NO,NO,PENDING,PENDING,PENDING,Awaiting official source verification,,
+prog_cn_049,uni_cn_017,Beijing University of Chemical Technology,,,Master,,,NO,NO,NO,PENDING,PENDING,PENDING,Awaiting official source verification,,
+prog_cn_050,uni_cn_017,Beijing University of Chemical Technology,,,Master,,,NO,NO,NO,PENDING,PENDING,PENDING,Awaiting official source verification,,
+prog_cn_051,uni_cn_017,Beijing University of Chemical Technology,,,Master,,,NO,NO,NO,PENDING,PENDING,PENDING,Awaiting official source verification,,
+prog_cn_052,uni_cn_018,Beijing Jiaotong University,,,Master,,,NO,NO,NO,PENDING,PENDING,PENDING,Awaiting official source verification,,
+prog_cn_053,uni_cn_018,Beijing Jiaotong University,,,Master,,,NO,NO,NO,PENDING,PENDING,PENDING,Awaiting official source verification,,
+prog_cn_054,uni_cn_018,Beijing Jiaotong University,,,Master,,,NO,NO,NO,PENDING,PENDING,PENDING,Awaiting official source verification,,
+prog_cn_055,uni_cn_019,China University of Geosciences (Beijing),,,Master,,,NO,NO,NO,PENDING,PENDING,PENDING,Awaiting official source verification,,
+prog_cn_056,uni_cn_019,China University of Geosciences (Beijing),,,Master,,,NO,NO,NO,PENDING,PENDING,PENDING,Awaiting official source verification,,
+prog_cn_057,uni_cn_019,China University of Geosciences (Beijing),,,Master,,,NO,NO,NO,PENDING,PENDING,PENDING,Awaiting official source verification,,
+prog_cn_058,uni_cn_020,Beijing University of Posts and Telecommunications,,,Master,,,NO,NO,NO,PENDING,PENDING,PENDING,Awaiting official source verification,,
+prog_cn_059,uni_cn_020,Beijing University of Posts and Telecommunications,,,Master,,,NO,NO,NO,PENDING,PENDING,PENDING,Awaiting official source verification,,
+prog_cn_060,uni_cn_020,Beijing University of Posts and Telecommunications,,,Master,,,NO,NO,NO,PENDING,PENDING,PENDING,Awaiting official source verification,,

@@ -1,0 +1,26 @@
+[
+  {
+    "scholarship_id": "sch_mo_001",
+    "identity_status": "VERIFIED",
+    "funding_status": "VERIFIED",
+    "eligibility_status": "VERIFIED",
+    "source_type": "Official University of Macau Global Affairs Office International Student Scholarship and AY2026/2027 admission sources",
+    "source_url": "https://gao.um.edu.mo/international-admission/scholarship-assistantship-academic-prizes/admission-scholarship/",
+    "supporting_urls": [
+      "https://gao.um.edu.mo/wp-content/uploads/2025/11/ay2627-um-international-admission.pdf",
+      "https://grs.um.edu.mo/index.php/prospective-students/master-postgraduate-certificate-diploma-programmes/",
+      "https://reg.um.edu.mo/admissions/general-information/sch-info/"
+    ],
+    "funding_classification_basis": "The official University of Macau International Student Scholarship for AY2026/2027 onward contains multiple award tiers. Bachelor Full Scholarship provides 100% tuition and 100% Residential College accommodation waiver, while Half Scholarship provides 50% of each. Master's Type A provides 100% tuition, 100% on-campus accommodation and a MOP 4,000 monthly half teaching assistantship; Type B provides 100% tuition; Type C provides an international tuition differential waiver. EduPath therefore stores Variable Funding instead of incorrectly presenting every recipient as fully funded.",
+    "unresolved_fields": [
+      "individual scholarship tier before admission evaluation",
+      "universal monthly allowance because only Master's Type A receives MOP 4,000 per month",
+      "universal accommodation coverage because coverage differs by award tier",
+      "single application opening date because Bachelor and Master admission routes differ",
+      "single scholarship deadline because scholarship consideration is automatic and linked to different admission routes"
+    ],
+    "eligibility_basis": "Eligible applicants are international applicants holding valid foreign passports who apply to eligible full-time Bachelor's or Master's degree programmes and satisfy the programme admission requirements. No separate scholarship application is required; eligible applicants are automatically considered during admission evaluation.",
+    "status_basis": "AY2026/2027 Bachelor direct admission ran from 3 February to 9 April 2026. Standard Master's admission ran through 13 March 2026, with the Master of Design in Industrial Design accepting applications until 15 May 2026. These associated AY2026/2027 admission windows had all ended by the 23 August 2026 verification date, so this cycle is recorded as closed.",
+    "notes": "No artificial nationality list, universal GPA threshold, universal English score or universal stipend is created. Degree-specific admission requirements and award-tier-specific financial benefits remain represented conservatively."
+  }
+]

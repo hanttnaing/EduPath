@@ -1,0 +1,22 @@
+[
+  {
+    "scholarship_id": "sch_la_001",
+    "identity_status": "VERIFIED",
+    "funding_status": "VERIFIED",
+    "eligibility_status": "VERIFIED_DOMESTIC_SELECTION_SYSTEM",
+    "source_type": "Official National University of Laos Government Scholarship page",
+    "source_url": "https://www.nuol.edu.la/index.php/en/admission/educational-scholarship/government-scholarship",
+    "supporting_urls": [],
+    "funding_classification_basis": "The official NUOL page states that scholarship recipients do not pay education fees and also receive a monthly allowance. The page does not establish full accommodation, travel, insurance or complete living-cost coverage, so EduPath conservatively classifies the scholarship as Partially Funded.",
+    "unresolved_fields": [
+      "exact current academic-year application opening date",
+      "exact current academic-year application deadline",
+      "exact monthly allowance amount",
+      "accommodation support",
+      "travel support",
+      "health insurance"
+    ],
+    "eligibility_basis": "The official scheme uses Lao Ministry of Education and Sports scholarship quotas and selection through provincial and Vientiane Capital education authorities, including national-examination performance, provincial outstanding-student selection and eligible ethnic-group students. The canonical record is therefore restricted to Laos rather than being exposed to foreign applicants.",
+    "notes": "The official page states that the Lao Government provides scholarship quotas every year before a new academic year. Because no exact 2026/2027 application window is published, scholarship_status remains unknown. Bachelor scope reflects selection of pupils completing upper-secondary education for university scholarship places."
+  }
+]

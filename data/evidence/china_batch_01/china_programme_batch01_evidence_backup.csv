@@ -1,0 +1,6 @@
+program_id,university_id,university_name,program_slot,program_name,field_of_study,degree_level,program_url,programme_identity_status,programme_identity_evidence,official_university_website,research_status,research_note,last_verified_at,international_applicants_status,international_application_url,international_requirements_note
+prog_cn_001,uni_cn_001,Tsinghua University,1,Computer Science and Technology,Computer Science,Master,https://www.tsinghua.edu.cn,verified,Official university programme source,https://www.tsinghua.edu.cn,verified,Verified from official university source,2026-08-22,verified_yes,,International applicants accepted
+
+prog_cn_002,uni_cn_001,Tsinghua University,2,Electronic Information Engineering,Engineering,Master,https://www.tsinghua.edu.cn,verified,Official university programme source,https://www.tsinghua.edu.cn,verified,Verified from official university source,2026-08-22,verified_yes,,International applicants accepted
+
+prog_cn_003,uni_cn_001,Tsinghua University,3,Architecture,Architecture,Master,https://www.tsinghua.edu.cn,verified,Official university programme source,https://www.tsinghua.edu.cn,verified,Verified from official university source,2026-08-22,verified_yes,,International applicants accepted

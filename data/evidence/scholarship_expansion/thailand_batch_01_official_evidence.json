@@ -1,0 +1,48 @@
+[
+  {
+    "scholarship_id": "sch_th_002",
+    "identity_status": "VERIFIED",
+    "funding_status": "VERIFIED",
+    "eligibility_status": "VERIFIED",
+    "source_type": "Official Chulalongkorn University scholarship announcement",
+    "source_url": "https://www.chula.ac.th/en/news/298837/",
+    "supporting_urls": [],
+    "funding_classification_basis": "Official Chula announcement states full tuition fees, monthly living allowance and round-trip airfare for international master's and doctoral students.",
+    "unresolved_fields": [
+      "exact monthly living allowance amount",
+      "complete nationality list because eligibility is expressed as international/non-Thai"
+    ],
+    "notes": "Applications ran from 20 March through 24 May 2026. The cycle is therefore closed on the 2026-08-23 verification date."
+  },
+  {
+    "scholarship_id": "sch_th_003",
+    "identity_status": "VERIFIED",
+    "funding_status": "VERIFIED",
+    "eligibility_status": "VERIFIED",
+    "source_type": "Official Asian Institute of Technology Royal Thai Government scholarship page",
+    "source_url": "https://ait.ac.th/financial/royal-thai-government-scholarships/",
+    "supporting_urls": [],
+    "funding_classification_basis": "Official AIT page states tuition, accommodation and living bursary for the full 22-month master's program.",
+    "unresolved_fields": [
+      "exact monthly bursary scalar",
+      "complete machine-readable list of all Asian nationalities"
+    ],
+    "notes": "Official eligibility requires undergraduate GPA >= 3.5 or equivalent and IELTS 6.0 overall and Writing, or AIT EET >= 6.0. August 2026 scholarship deadline was 31 March 2026."
+  },
+  {
+    "scholarship_id": "sch_th_004",
+    "identity_status": "VERIFIED",
+    "funding_status": "VERIFIED",
+    "eligibility_status": "VERIFIED",
+    "source_type": "Official SIIT/Thammasat 2026 EFS Type A announcement",
+    "source_url": "https://admissions.siit.tu.ac.th/wp-content/uploads/2026/02/EFS-Announcement-1_2026-Type-A.pdf",
+    "supporting_urls": [
+      "https://admissions.siit.tu.ac.th/admission_box/siit-graduate-scholarships/"
+    ],
+    "funding_classification_basis": "Official 1/2026 EFS Type A announcement states full SIIT tuition and thesis support, THB 15,000 monthly allowance, round-trip travel support, miscellaneous support and health/accident insurance.",
+    "unresolved_fields": [
+      "programme-specific admission language requirements"
+    ],
+    "notes": "The 1/2026 Type A announcement is specifically for doctoral study. Published GPA 3.25 is a condition to continue the scholarship after award, not an initial applicant minimum, so minimum_gpa remains None."
+  }
+]

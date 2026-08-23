@@ -1,0 +1,70 @@
+[
+  {
+    "scholarship_id": "sch_vn_001",
+    "identity_status": "VERIFIED",
+    "funding_status": "VERIFIED",
+    "eligibility_status": "VERIFIED",
+    "source_type": "Official Ton Duc Thang University international undergraduate scholarship page",
+    "source_url": "https://admission.tdtu.edu.vn/en/undergraduate/Scholarships",
+    "supporting_urls": [],
+    "funding_classification_basis": "Official TDTU source states partial-to-full scholarships. Full awards cover 100% undergraduate tuition and dormitory fees; partial awards cover 50-75% tuition and 100% dormitory fees.",
+    "unresolved_fields": [
+      "individual scholarship award tier before evaluation",
+      "complete nationality list"
+    ],
+    "notes": "General scholarship application eligibility requires high-school GPA of at least 5.0/10. English-taught undergraduate programs require IELTS 5.5 or equivalent for non-native English speakers. January 2027 applications open 25 August 2026 and close 20 October 2026."
+  },
+  {
+    "scholarship_id": "sch_vn_002",
+    "identity_status": "VERIFIED",
+    "funding_status": "VERIFIED",
+    "eligibility_status": "VERIFIED",
+    "source_type": "Official TDTU Graduate Studies international scholarship policy",
+    "source_url": "https://grad.tdtu.edu.vn/en/scholarships/international-student-scholarships",
+    "supporting_urls": [],
+    "funding_classification_basis": "Official TDTU source states a 100% first-year tuition and dormitory tier for GPA 3.50/4.00 or above and a 50% tuition plus 100% dormitory tier for GPA 3.00/4.00 or above.",
+    "unresolved_fields": [
+      "exact current application opening date",
+      "exact current application deadline",
+      "individual award tier before evaluation"
+    ],
+    "notes": "minimum_gpa=3.0 represents the minimum GPA threshold for any first-year international graduate scholarship. The separate VND 3.5 million living-allowance support scheme is not merged because it has separate work requirements and limited awards."
+  },
+  {
+    "scholarship_id": "sch_vn_003",
+    "identity_status": "VERIFIED",
+    "funding_status": "VERIFIED",
+    "eligibility_status": "VERIFIED",
+    "source_type": "Official University of Economics Ho Chi Minh City 2026 international scholarship policy",
+    "source_url": "https://ueh.edu.vn/en/news/ueh-launches-scholarship-policies-to-promote-bilateral-academic-exchange-and-attract-international-students-76512",
+    "supporting_urls": [
+      "https://www.ueh.edu.vn/en/outreach/students/admissions/"
+    ],
+    "funding_classification_basis": "UEH's current 2026-2027 policy states 100% tuition waiver, free dormitory accommodation, and VND 2,600,000 monthly living allowance for international students pursuing full-time study.",
+    "unresolved_fields": [
+      "single exact current application opening date",
+      "single exact current application deadline",
+      "programme-specific admission requirements"
+    ],
+    "notes": "UEH states that 100 excellence scholarships are granted each year across Bachelor's, Master's and Doctoral levels, with 30 places reserved for students from Southeast Asian and low-income countries. Status remains unknown because the policy page does not publish one exact scholarship application window."
+  },
+  {
+    "scholarship_id": "sch_vn_004",
+    "identity_status": "VERIFIED",
+    "funding_status": "VERIFIED",
+    "eligibility_status": "VERIFIED",
+    "source_type": "Official VinUniversity 2026-2027 undergraduate scholarship and international admission pages",
+    "source_url": "https://admissions.vinuni.edu.vn/vinuniversity-scholarship-program-academic-year-2026-2027/",
+    "supporting_urls": [
+      "https://admissions.vinuni.edu.vn/scholarship-and-financial-aid/undergraduate-programs/scholarships/",
+      "https://admissions.vinuni.edu.vn/international-students/",
+      "https://admissions.vinuni.edu.vn/undergraduate/key-dates/"
+    ],
+    "funding_classification_basis": "VinUniversity identifies the President's Excellence Scholarship as a full-ride award covering 100% of tuition and living expenses.",
+    "unresolved_fields": [
+      "exact scalar monthly living allowance",
+      "complete nationality list"
+    ],
+    "notes": "International students are admitted and awarded scholarships by VinUniversity. Merit-based scholarship consideration is integrated with admission. The final 2026-2027 Rolling Round closed on 15 August 2026, so the record is closed on the 23 August 2026 verification date."
+  }
+]

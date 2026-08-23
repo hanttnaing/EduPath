@@ -1,0 +1,39 @@
+[
+  {
+    "scholarship_id": "sch_mo_001",
+    "scholarship_name": "University of Macau International Student Scholarship - AY2026/2027",
+    "provider_name": "University of Macau",
+    "provider_type": "University",
+    "country_id": "country_mo",
+    "host_university_id": "uni_mo_001",
+    "eligible_nationalities": null,
+    "degree_levels": [
+      "Bachelor",
+      "Master"
+    ],
+    "fields_of_study": null,
+    "minimum_gpa": null,
+    "gpa_scale": null,
+    "ielts_requirement": null,
+    "toefl_requirement": null,
+    "age_limit": null,
+    "funding_type": "Variable Funding",
+    "tuition_coverage": "Tiered scholarship: Bachelor awards range from 50% to 100% tuition waiver; Master awards range from international tuition differential waiver to 100% tuition waiver",
+    "monthly_allowance": null,
+    "allowance_currency": "MOP",
+    "travel_allowance": null,
+    "accommodation_support": null,
+    "health_insurance": null,
+    "required_documents": null,
+    "application_opening_date": null,
+    "application_deadline": null,
+    "scholarship_status": "closed",
+    "application_cycle": "Academic Year 2026/2027 - automatic scholarship consideration through international admission",
+    "official_website": "https://gao.um.edu.mo/international-admission/scholarship-assistantship-academic-prizes/admission-scholarship/",
+    "source_url": "https://gao.um.edu.mo/international-admission/scholarship-assistantship-academic-prizes/admission-scholarship/",
+    "collected_at": "2026-08-23",
+    "last_verified_at": "2026-08-23",
+    "freshness_status": "current",
+    "data_quality_status": "verified"
+  }
+]

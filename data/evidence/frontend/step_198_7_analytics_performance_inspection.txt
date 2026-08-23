@@ -1,0 +1,618 @@
+========================================================================================================================
+STEP 198.7 - ANALYTICS FAST TRANSITION INTEGRATION INSPECTION
+========================================================================================================================
+
+========================================================================================================================
+MY ANALYTICS DATA LOADING
+========================================================================================================================
+    1: import { useEffect, useMemo, useState } from 'react'
+    2: import {
+    3:   Bar,
+    4:   BarChart,
+    5:   CartesianGrid,
+    6:   Cell,
+    7:   Legend,
+    8:   Pie,
+    9:   PieChart,
+   10:   ResponsiveContainer,
+   11:   Tooltip,
+   12:   XAxis,
+   13:   YAxis,
+   14: } from 'recharts'
+   15: import { authFetch, readApiError } from './api'
+   16: import './MyAnalyticsPage.css'
+   17: 
+   18: 
+   19: const SCORE_MAXIMUMS = {
+   20:   degree_level: 20,
+   21:   preferred_country: 15,
+   22:   field_similarity: 20,
+   23:   funding_type: 20,
+   24:   scholarship_status: 10,
+   25:   nationality: 5,
+   26:   gpa: 5,
+   27:   english: 5,
+   28: }
+   29: 
+   30: 
+   31: const EVIDENCE_COLORS = [
+   32:   '#16a34a',
+   33:   '#f59e0b',
+   34:   '#94a3b8',
+   35: ]
+   36: 
+   37: 
+   38: function shortLabel(value, maximum = 22) {
+   39:   const text = String(value || 'Opportunity')
+   40: 
+   41:   if (text.length <= maximum) {
+   42:     return text
+   43:   }
+   44: 
+   45:   return `${text.slice(0, maximum - 3)}...`
+   46: }
+   47: 
+   48: 
+   49: function formatMetric(value) {
+   50:   const number = Number(value)
+   51: 
+   52:   if (!Number.isFinite(number)) {
+   53:     return '?'
+   54:   }
+   55: 
+   56:   return Number.isInteger(number)
+   57:     ? String(number)
+   58:     : number.toFixed(1)
+   59: }
+   60: 
+   61: 
+   62: function humanizeKey(value) {
+   63:   return String(value || '')
+   64:     .replaceAll('_', ' ')
+   65:     .replace(/\b\w/g, (letter) =>
+   66:       letter.toUpperCase()
+   67:     )
+   68: }
+   69: 
+   70: 
+   71: function getGapCategory(text) {
+   72:   const value = String(text || '').toLowerCase()
+   73: 
+   74:   if (
+   75:     value.includes('field') ||
+   76:     value.includes('major')
+   77:   ) {
+   78:     return 'Field alignment'
+   79:   }
+   80: 
+   81:   if (value.includes('gpa')) {
+   82:     return 'GPA requirement'
+   83:   }
+   84: 
+   85:   if (
+   86:     value.includes('english') ||
+   87:     value.includes('ielts') ||
+   88:     value.includes('toefl')
+   89:   ) {
+   90:     return 'English requirement'
+   91:   }
+   92: 
+   93:   if (
+   94:     value.includes('nationality') ||
+   95:     value.includes('citizenship')
+   96:   ) {
+   97:     return 'Nationality evidence'
+   98:   }
+   99: 
+  100:   if (value.includes('age')) {
+  101:     return 'Age requirement'
+  102:   }
+  103: 
+  104:   if (
+  105:     value.includes('deadline') ||
+  106:     value.includes('application date')
+  107:   ) {
+  108:     return 'Deadline evidence'
+  109:   }
+  110: 
+  111:   if (
+  112:     value.includes('budget') ||
+  113:     value.includes('tuition') ||
+  114:     value.includes('financial')
+  115:   ) {
+  116:     return 'Financial fit'
+  117:   }
+  118: 
+  119:   return 'Other requirement'
+  120: }
+  121: 
+  122: 
+  123: function isUnknownGap(text) {
+  124:   const value = String(text || '').toLowerCase()
+  125: 
+  126:   return (
+  127:     value.includes('unavailable') ||
+  128:     value.includes('unknown') ||
+  129:     value.includes('not available') ||
+  130:     value.includes('not provided') ||
+  131:     value.includes('not specified')
+  132:   )
+  133: }
+  134: 
+  135: 
+  136: function MyAnalyticsPage({
+  137:   embedded = false,
+  138: }) {
+  139:   const pageClassName =
+  140:     embedded
+  141:       ? 'my-analytics-page embedded'
+  142:       : 'my-analytics-page'
+  143: 
+  144:   const [profile, setProfile] =
+  145:     useState(null)
+  146: 
+  147:   const [
+  148:     programData,
+  149:     setProgramData,
+  150:   ] = useState(null)
+  151: 
+  152:   const [
+  153:     scholarshipData,
+  154:     setScholarshipData,
+  155:   ] = useState(null)
+  156: 
+  157:   const [savedData, setSavedData] =
+  158:     useState(null)
+  159: 
+  160:   const [loading, setLoading] =
+  161:     useState(true)
+  162: 
+  163:   const [error, setError] =
+  164:     useState('')
+  165: 
+  166: 
+  167:   useEffect(() => {
+  168:     let cancelled = false
+  169: 
+  170:     const loadAnalytics = async () => {
+  171:       try {
+  172:         setLoading(true)
+  173:         setError('')
+  174: 
+  175:         const [
+  176:           profileResponse,
+  177:           programResponse,
+  178:           scholarshipResponse,
+  179:           savedResponse,
+  180:         ] = await Promise.all([
+  181:           authFetch(
+  182:             '/api/me/profile'
+  183:           ),
+  184: 
+  185:           authFetch(
+  186:             '/api/me/recommendations/programs?top_k=5'
+  187:           ),
+  188: 
+  189:           authFetch(
+  190:             '/api/me/recommendations/scholarships?top_k=5'
+  191:           ),
+  192: 
+  193:           authFetch(
+  194:             '/api/me/saved'
+  195:           ),
+  196:         ])
+  197: 
+  198: 
+  199:         if (!profileResponse.ok) {
+  200:           throw new Error(
+  201:             await readApiError(
+  202:               profileResponse,
+  203:               'Unable to load your profile.'
+  204:             )
+  205:           )
+  206:         }
+  207: 
+  208: 
+  209:         if (!programResponse.ok) {
+  210:           throw new Error(
+  211:             await readApiError(
+  212:               programResponse,
+  213:               'Unable to load programme analytics.'
+  214:             )
+  215:           )
+  216:         }
+  217: 
+  218: 
+  219:         if (!scholarshipResponse.ok) {
+  220:           throw new Error(
+  221:             await readApiError(
+  222:               scholarshipResponse,
+  223:               'Unable to load scholarship analytics.'
+  224:             )
+  225:           )
+  226:         }
+  227: 
+  228: 
+  229:         if (!savedResponse.ok) {
+  230:           throw new Error(
+
+========================================================================================================================
+APP RECOMMENDATION WORKSPACE STATE
+========================================================================================================================
+    1: import { useEffect, useState } from 'react'
+    2: import API_BASE_URL, {
+    3:   authFetch,
+    4:   clearAccessToken,
+    5:   getAccessToken,
+    6:   readApiError,
+    7:   setAccessToken,
+    8: } from './api'
+    9: import LoginPage from './auth/LoginPage'
+   10: import RegisterPage from './auth/RegisterPage'
+   11: import ProfileSetupPage from './auth/ProfileSetupPage'
+   12: import UniversityCard from './UniversityCard'
+   13: import ProgramCard from './ProgramCard'
+   14: import ScholarshipCard from './ScholarshipCard'
+   15: import MyProfileModal from './MyProfileModal'
+   16: import RecommendationModal from './RecommendationModal'
+   17: import SavedPage from './SavedPage'
+   18: import MyAnalyticsPage from './MyAnalyticsPage'
+   19: import EduPathLogoMark from './assets/edupath-logo-mark.png'
+   20: import './App.css'
+   21: 
+   22: // =========================
+   23: // COUNTRY NORMALIZATION HELPERS
+   24: // =========================
+   25: function getCountryId(country) {
+   26:   if (!country) return ''
+   27: 
+   28:   const rawValue =
+   29:     country.country_id ??
+   30:     country.id ??
+   31:     country.country_code ??
+   32:     country.code ??
+   33:     country.iso2 ??
+   34:     country.iso_code ??
+   35:     ''
+   36: 
+   37:   const value = String(rawValue).trim()
+   38: 
+   39:   if (!value) return ''
+   40: 
+   41:   if (value.toLowerCase().startsWith('country_')) {
+   42:     return value.toLowerCase()
+   43:   }
+   44: 
+   45:   if (/^[a-zA-Z]{2}$/.test(value)) {
+   46:     return `country_${value.toLowerCase()}`
+   47:   }
+   48: 
+   49:   return value
+   50: }
+   51: 
+   52: function getCountryLabel(country) {
+   53:   if (!country) return ''
+   54: 
+   55:   return (
+   56:     country.country_name ??
+   57:     country.name ??
+   58:     country.country ??
+   59:     country.display_name ??
+   60:     country.label ??
+   61:     getCountryId(country)
+   62:   )
+   63: }
+   64: 
+   65: function extractCountryItems(data) {
+   66:   if (Array.isArray(data)) {
+   67:     return data
+   68:   }
+   69: 
+   70:   if (Array.isArray(data?.items)) {
+   71:     return data.items
+   72:   }
+   73: 
+   74:   if (Array.isArray(data?.countries)) {
+   75:     return data.countries
+   76:   }
+   77: 
+   78:   if (Array.isArray(data?.results)) {
+   79:     return data.results
+   80:   }
+   81: 
+   82:   return []
+   83: }
+   84: 
+   85: 
+   86: const EXPLORE_PAGE_SIZE = 12
+   87: 
+   88: 
+   89: async function fetchAllApiItems(
+   90:   baseUrl,
+   91:   pageSize = 100
+   92: ) {
+   93:   const collectedItems = []
+   94: 
+   95:   let skip = 0
+   96:   let expectedTotal = null
+   97: 
+   98:   while (true) {
+   99:     const separator =
+  100:       baseUrl.includes('?')
+  101:         ? '&'
+  102:         : '?'
+  103: 
+  104:     const response = await fetch(
+  105:       `${baseUrl}${separator}skip=${skip}&limit=${pageSize}`
+  106:     )
+  107: 
+  108:     if (!response.ok) {
+  109:       throw new Error(
+  110:         `Request failed with status ${response.status}`
+  111:       )
+  112:     }
+  113: 
+  114:     const data = await response.json()
+  115: 
+  116:     const pageItems =
+  117:       Array.isArray(data.items)
+  118:         ? data.items
+  119:         : []
+  120: 
+
+========================================================================================================================
+APP RESULTS INSIGHTS WORKSPACE
+========================================================================================================================
+ 3750:                           })
+ 3751:                       }
+ 3752:                     )
+ 3753:                   }}
+ 3754:                 />
+ 3755:               </div>
+ 3756:             )}
+ 3757:         </section>
+ 3758:         )}
+ 3759: 
+ 3760:       
+ 3761: 
+ 3762:         {/* =========================
+ 3763:             RECOMMENDATIONS PAGE
+ 3764:         ========================== */}
+ 3765: 
+ 3766:         {activePage === 'recommendations' && (
+ 3767:           <section className="recommendations-page-section">
+ 3768: 
+ 3769:             <div className="recommendation-workspace-tabs-shell">
+ 3770: 
+ 3771:               <div
+ 3772:                 className="recommendation-workspace-tabs"
+ 3773:                 role="tablist"
+ 3774:                 aria-label="Recommendation workspace views"
+ 3775:               >
+ 3776: 
+ 3777:                 <button
+ 3778:                   type="button"
+ 3779:                   role="tab"
+ 3780:                   aria-selected={
+ 3781:                     recommendationWorkspaceView ===
+ 3782:                     'results'
+ 3783:                   }
+ 3784:                   className={
+ 3785:                     recommendationWorkspaceView ===
+ 3786:                     'results'
+ 3787:                       ? 'active'
+ 3788:                       : ''
+ 3789:                   }
+ 3790:                   onClick={() =>
+ 3791:                     setRecommendationWorkspaceView(
+ 3792:                       'results'
+ 3793:                     )
+ 3794:                   }
+ 3795:                 >
+ 3796:                   Results
+ 3797:                 </button>
+ 3798: 
+ 3799:                 <button
+ 3800:                   type="button"
+ 3801:                   role="tab"
+ 3802:                   aria-selected={
+ 3803:                     recommendationWorkspaceView ===
+ 3804:                     'insights'
+ 3805:                   }
+ 3806:                   aria-disabled={
+ 3807:                     !recommendationsReady
+ 3808:                   }
+ 3809:                   disabled={
+ 3810:                     !recommendationsReady
+ 3811:                   }
+ 3812:                   className={`${
+ 3813:                     recommendationWorkspaceView ===
+ 3814:                     'insights'
+ 3815:                       ? 'active'
+ 3816:                       : ''
+ 3817:                   } ${
+ 3818:                     !recommendationsReady
+ 3819:                       ? 'locked'
+ 3820:                       : ''
+ 3821:                   }`}
+ 3822:                   title={
+ 3823:                     recommendationsReady
+ 3824:                       ? 'View recommendation insights'
+ 3825:                       : 'Generate recommendations first'
+ 3826:                   }
+ 3827:                   onClick={() => {
+ 3828:                     if (
+ 3829:                       recommendationsReady
+ 3830:                     ) {
+ 3831:                       setRecommendationWorkspaceView(
+ 3832:                         'insights'
+ 3833:                       )
+ 3834:                     }
+ 3835:                   }}
+ 3836:                 >
+ 3837:                   <span>
+ 3838:                     Insights
+ 3839:                   </span>
+ 3840: 
+ 3841:                   {
+ 3842:                     !recommendationsReady && (
+ 3843:                       <small className="recommendation-workspace-lock">
+ 3844:                         Locked
+ 3845:                       </small>
+ 3846:                     )
+ 3847:                   }
+ 3848:                 </button>
+ 3849: 
+ 3850:               </div>
+ 3851: 
+ 3852:               <p className="recommendation-workspace-context">
+ 3853:                 {
+ 3854:                   recommendationWorkspaceView ===
+ 3855:                   'insights'
+ 3856:                     ? 'Understand the scores, evidence and requirement gaps behind your current recommendations.'
+ 3857:                     : recommendationsReady
+ 3858:                       ? 'Your personalized recommendations are ready. Review the results or open Insights for deeper analysis.'
+ 3859:                       : 'Generate personalized recommendations first to unlock Insights.'
+ 3860:                 }
+
+========================================================================================================================
+RECOMMENDATION API SUCCESS
+========================================================================================================================
+  110:               .filter(Boolean)
+  111:           : []
+  112:       )
+  113:     }
+  114: 
+  115:   // =========================
+  116:   // LOAD RECOMMENDATIONS
+  117:   // =========================
+  118:   useEffect(() => {
+  119:     if (!recommendationsRequested) {
+  120:       return
+  121:     }
+  122: 
+  123:     const loadRecommendations =
+  124:       async () => {
+  125:         try {
+  126:           setLoading(true)
+  127:           setError('')
+  128: 
+  129:           const [
+  130:             programResponse,
+  131:             scholarshipResponse,
+  132:           ] = await Promise.all([
+  133:             authFetch(
+  134:               '/api/me/recommendations/programs?top_k=5'
+  135:             ),
+  136: 
+  137:             authFetch(
+  138:               '/api/me/recommendations/scholarships?top_k=5'
+  139:             ),
+  140:           ])
+  141: 
+  142:           if (!programResponse.ok) {
+  143:             const data =
+  144:               await programResponse.json()
+  145: 
+  146:             throw new Error(
+  147:               typeof data.detail ===
+  148:                 'string'
+  149:                 ? data.detail
+  150:                 : 'Unable to load programme recommendations.'
+  151:             )
+  152:           }
+  153: 
+  154:           if (!scholarshipResponse.ok) {
+  155:             const data =
+  156:               await scholarshipResponse.json()
+  157: 
+  158:             throw new Error(
+  159:               typeof data.detail ===
+  160:                 'string'
+  161:                 ? data.detail
+  162:                 : 'Unable to load scholarship recommendations.'
+  163:             )
+  164:           }
+  165: 
+  166:           const [
+  167:             programResult,
+  168:             scholarshipResult,
+  169:           ] = await Promise.all([
+  170:             programResponse.json(),
+  171:             scholarshipResponse.json(),
+  172:           ])
+  173: 
+  174:           setProgramData(programResult)
+  175: 
+  176:           setScholarshipData(
+  177:             scholarshipResult
+  178:           )
+  179: 
+  180:           await loadSavedOpportunities()
+  181: 
+  182:           onGenerationStateChange?.(
+  183:             true
+  184:           )
+  185: 
+  186:         } catch (err) {
+  187: 
+  188:           onGenerationStateChange?.(
+  189:             false
+  190:           )
+  191: 
+  192:           setError(
+  193:             err.message ||
+  194:               'Unable to generate recommendations.'
+  195:           )
+  196:         } finally {
+  197:           setLoading(false)
+  198:         }
+  199:       }
+  200: 
+
+========================================================================================================================
+RECOMMENDATION COMPONENT PROPS
+========================================================================================================================
+    1: import { useEffect, useState } from 'react'
+    2: import { authFetch } from './api'
+    3: import './RecommendationModal.css'
+    4: 
+    5: function RecommendationModal({
+    6:   onClose,
+    7:   displayMode = 'modal',
+    8:   onGenerationStateChange,
+    9: }) {
+   10:   const isPageMode =
+   11:     displayMode === 'page'
+   12:   const [activeTab, setActiveTab] =
+   13:     useState('programs')
+   14: 
+   15:   const [
+   16:     recommendationsRequested,
+   17:     setRecommendationsRequested,
+   18:   ] = useState(false)
+   19: 
+   20:   const [programData, setProgramData] =
+   21:     useState(null)
+   22: 
+   23:   const [
+   24:     scholarshipData,
+   25:     setScholarshipData,
+   26:   ] = useState(null)
+   27: 
+   28:   const [loading, setLoading] =
+   29:     useState(false)
+   30: 
+   31:   const [error, setError] =
+   32:     useState('')
+   33: 
+   34:   // =========================
+   35:   // SAVED OPPORTUNITIES STATE
+
+========================================================================================================================
+STEP 198.7 INSPECTION COMPLETE
+========================================================================================================================
+READ-ONLY         : YES
+FRONTEND MODIFIED : NO
+BACKEND MODIFIED  : NO
+MONGODB MODIFIED  : NO

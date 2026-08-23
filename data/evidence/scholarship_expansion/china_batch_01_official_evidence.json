@@ -1,0 +1,80 @@
+[
+  {
+    "scholarship_id": "sch_cn_001",
+    "identity_status": "VERIFIED",
+    "funding_status": "VERIFIED",
+    "eligibility_status": "VERIFIED",
+    "source_type": "Official Tsinghua University Graduate Admissions page",
+    "source_url": "https://yz.tsinghua.edu.cn/en/info/1027/1477.htm",
+    "funding_classification_basis": "Official source states tuition fees plus a living allowance covering accommodation, books and other materials.",
+    "unresolved_fields": [
+      "exact monthly living allowance amount",
+      "machine-readable nationality list"
+    ],
+    "notes": "Eligibility is non-Chinese citizens from Asia. The current recommender cannot safely represent a regional nationality rule as an exact list, so eligible_nationalities remains None."
+  },
+  {
+    "scholarship_id": "sch_cn_002",
+    "identity_status": "VERIFIED",
+    "funding_status": "VERIFIED",
+    "eligibility_status": "VERIFIED",
+    "source_type": "Official Peking University International Students Division 2026 notice",
+    "source_url": "https://www.isd.pku.edu.cn/en/detail.php?id=819",
+    "funding_classification_basis": "Official source explicitly states full or partial tuition waiver together with living stipend, housing and medical insurance.",
+    "unresolved_fields": [
+      "whether an individual recipient receives full or partial tuition coverage",
+      "exact living stipend amount"
+    ],
+    "notes": "Stored as Variable Funding rather than falsely assuming every award is fully funded. PKU scholarship application deadline was March 9, 2026; CSC submission followed by March 17."
+  },
+  {
+    "scholarship_id": "sch_cn_003",
+    "identity_status": "VERIFIED",
+    "funding_status": "VERIFIED",
+    "eligibility_status": "VERIFIED",
+    "source_type": "Official Peking University International Students Division 2026 notice",
+    "source_url": "https://www.isd.pku.edu.cn/en/detail.php?id=819",
+    "funding_classification_basis": "Official 2026 notice states full or partial tuition waiver only.",
+    "unresolved_fields": [
+      "exact tuition-waiver level for an individual award"
+    ],
+    "notes": "Classified as Partially Funded because the scholarship does not establish full living-cost support."
+  },
+  {
+    "scholarship_id": "sch_cn_004",
+    "identity_status": "VERIFIED",
+    "funding_status": "VERIFIED",
+    "eligibility_status": "VERIFIED",
+    "source_type": "Official Zhejiang University International College 2026 scholarship guide",
+    "source_url": "https://iczu.zju.edu.cn/admissionsen/2023/0118/c68995a2711454/page.htm",
+    "funding_classification_basis": "Official source explicitly identifies the award as a full scholarship with tuition waiver, campus accommodation, stipend and medical insurance.",
+    "unresolved_fields": [
+      "exact stipend scalar"
+    ],
+    "notes": "Applicants must be under 45; exclusive age wording is retained in evidence instead of being inaccurately converted to an inclusive age_limit value."
+  },
+  {
+    "scholarship_id": "sch_cn_005",
+    "identity_status": "VERIFIED",
+    "funding_status": "VERIFIED",
+    "eligibility_status": "VERIFIED",
+    "source_type": "Official USTC International College 2026 fellowship page",
+    "source_url": "https://ic.ustc.edu.cn/en/v7info.php?Nav_x=17",
+    "funding_classification_basis": "Level A covers tuition, insurance, CNY 2,500 monthly stipend and accommodation subsidy.",
+    "unresolved_fields": [
+      "exact accommodation-subsidy amount"
+    ],
+    "notes": "Applicants must be under 30 by September 1, 2026. The exclusive age requirement is not forced into the scalar age_limit field."
+  },
+  {
+    "scholarship_id": "sch_cn_006",
+    "identity_status": "VERIFIED",
+    "funding_status": "VERIFIED",
+    "eligibility_status": "VERIFIED",
+    "source_type": "Official Shanghai Jiao Tong University 2026 GIFT international undergraduate admissions page",
+    "source_url": "https://isc.sjtu.edu.cn/cn/content.aspx?flag=64&info_lb=365",
+    "funding_classification_basis": "First-Class Scholarship provides tuition waiver, CNY 2,500 monthly living allowance, CNY 1,100 monthly accommodation subsidy and insurance.",
+    "unresolved_fields": [],
+    "notes": "The record is intentionally scoped to the 2026 GIFT international undergraduate programs shown on the official source rather than generalized to every SJTU undergraduate program."
+  }
+]

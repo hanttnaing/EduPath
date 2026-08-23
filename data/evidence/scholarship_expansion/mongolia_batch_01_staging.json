@@ -1,0 +1,48 @@
+[
+  {
+    "scholarship_id": "sch_mn_001",
+    "scholarship_name": "Mongolian Government Scholarship - Domestic Higher Education Track",
+    "provider_name": "Government of Mongolia / Education Loan Fund",
+    "provider_type": "Government",
+    "country_id": "country_mn",
+    "host_university_id": null,
+    "eligible_nationalities": [
+      "Mongolia"
+    ],
+    "degree_levels": [
+      "Bachelor",
+      "Master",
+      "PhD"
+    ],
+    "fields_of_study": null,
+    "minimum_gpa": null,
+    "gpa_scale": null,
+    "ielts_requirement": null,
+    "toefl_requirement": null,
+    "age_limit": null,
+    "funding_type": "Unknown",
+    "tuition_coverage": null,
+    "monthly_allowance": null,
+    "allowance_currency": null,
+    "travel_allowance": null,
+    "accommodation_support": null,
+    "health_insurance": null,
+    "required_documents": [
+      "Mongolian citizenship identification reference",
+      "Admission or student-status documentation",
+      "Academic GPA statement for continuing students",
+      "Tuition invoice",
+      "Current-semester course confirmation"
+    ],
+    "application_opening_date": null,
+    "application_deadline": null,
+    "scholarship_status": "unknown",
+    "application_cycle": "Recurring Mongolian Government domestic higher-education scholarship scheme",
+    "official_website": "https://elf.gov.mn/muzgt/",
+    "source_url": "https://elf.gov.mn/muzgt/",
+    "collected_at": "2026-08-23",
+    "last_verified_at": "2026-08-23",
+    "freshness_status": "current",
+    "data_quality_status": "reviewed"
+  }
+]

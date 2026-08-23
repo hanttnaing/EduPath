@@ -1,0 +1,68 @@
+[
+  {
+    "scholarship_id": "sch_id_001",
+    "identity_status": "VERIFIED",
+    "funding_status": "VERIFIED",
+    "eligibility_status": "VERIFIED",
+    "source_type": "Official Indonesian Government KNB Scholarship portal",
+    "source_url": "https://knb.kemdiktisaintek.go.id/",
+    "supporting_urls": [],
+    "funding_classification_basis": "The official KNB portal states that the scholarship covers tuition, monthly living expenses, arrival allowance, book and research allowance, publication assistance, transportation for arrival and return, and monthly health insurance.",
+    "unresolved_fields": [
+      "one exact monthly allowance scalar",
+      "one exact GPA threshold because the threshold differs by degree",
+      "one exact age limit because age rules differ by degree",
+      "one exact English score because requirements differ by degree",
+      "complete machine-readable developing-country nationality list"
+    ],
+    "notes": "KNB is a multi-university Indonesian Government scholarship and therefore host_university_id is intentionally None. The 2026 application period ran from 2 February through 31 March 2026."
+  },
+  {
+    "scholarship_id": "sch_id_002",
+    "identity_status": "VERIFIED",
+    "funding_status": "VERIFIED",
+    "eligibility_status": "VERIFIED",
+    "source_type": "Official Universitas Indonesia International Office scholarship page",
+    "source_url": "https://international.ui.ac.id/new-ui-great/",
+    "supporting_urls": [
+      "https://admission.ui.ac.id/"
+    ],
+    "funding_classification_basis": "NEW UI GREAT 2026 publishes both Full and Partial scholarship tiers. The Full tier includes tuition waiver, visa and stay-permit processing, airfare reimbursement, settlement allowance, health insurance and IDR 3.5 million monthly living allowance. The Partial tier provides tuition waiver and immigration-processing support.",
+    "unresolved_fields": [
+      "individual award tier before selection",
+      "exact machine-readable scholarship application dates because the current timeline is presented as an image",
+      "program-specific language requirement"
+    ],
+    "notes": "funding_type is Variable Funding because applicants may receive either the Full or Partial tier. Full-tier living, travel and insurance benefits are kept in evidence rather than assigned to all recipients in the canonical structured fields."
+  },
+  {
+    "scholarship_id": "sch_id_003",
+    "identity_status": "VERIFIED",
+    "funding_status": "VERIFIED",
+    "eligibility_status": "VERIFIED",
+    "source_type": "Official Universitas Gadjah Mada international admission scholarship announcement",
+    "source_url": "https://admission.ugm.ac.id/2026/01/13/deie-scholarship-2026/",
+    "supporting_urls": [],
+    "funding_classification_basis": "The official UGM DEIE announcement provides tuition fees, student dormitory accommodation and IDR 3 million monthly living expenses for both Master's and Doctoral recipients.",
+    "unresolved_fields": [
+      "complete nationality list because the call is presented broadly for international students"
+    ],
+    "notes": "Minimum academic GPA is 3.25/4.0. English evidence is alternative-based: TOEFL ITP 500, IELTS 5.5, TOEFL iBT 61, or Duolingo 100. Numeric English hard-filter fields remain None to avoid treating alternatives as simultaneous requirements. Spring registration closed 31 July 2026."
+  },
+  {
+    "scholarship_id": "sch_id_004",
+    "identity_status": "VERIFIED",
+    "funding_status": "VERIFIED",
+    "eligibility_status": "VERIFIED",
+    "source_type": "Official ITB School of Architecture, Planning and Policy Development international undergraduate page",
+    "source_url": "https://sappk.itb.ac.id/iup_architecture/",
+    "supporting_urls": [
+      "https://admission.itb.ac.id/"
+    ],
+    "funding_classification_basis": "The official ITB Architecture international undergraduate page describes the 2026 scholarship as fully funded with 100% tuition waiver, one-time arrival settlement support, basic health insurance, monthly living allowance, round-trip international flights and visa fees.",
+    "unresolved_fields": [
+      "exact monthly living allowance scalar"
+    ],
+    "notes": "The scholarship is intentionally scoped to Architecture rather than generalized to every ITB program. Maximum age is 22 by 1 August 2026. English eligibility accepts IELTS 5.5, TOEFL iBT 61, or ITB ELQ as alternatives. Application deadline was 1 July 2026."
+  }
+]
