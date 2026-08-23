@@ -5,6 +5,8 @@ import './RecommendationModal.css'
 function RecommendationModal({
   onClose,
   displayMode = 'modal',
+  onGenerationStateChange,
+  onRecommendationsGenerated,
 }) {
   const isPageMode =
     displayMode === 'page'
@@ -109,6 +111,8 @@ function RecommendationModal({
               .filter(Boolean)
           : []
       )
+
+      return data
     }
 
   // =========================
@@ -128,6 +132,8 @@ function RecommendationModal({
           const [
             programResponse,
             scholarshipResponse,
+            profileResponse,
+            savedResult,
           ] = await Promise.all([
             authFetch(
               '/api/me/recommendations/programs?top_k=5'
@@ -136,6 +142,12 @@ function RecommendationModal({
             authFetch(
               '/api/me/recommendations/scholarships?top_k=5'
             ),
+
+            authFetch(
+              '/api/me/profile'
+            ),
+
+            loadSavedOpportunities(),
           ])
 
           if (!programResponse.ok) {
@@ -162,12 +174,26 @@ function RecommendationModal({
             )
           }
 
+          if (!profileResponse.ok) {
+            const data =
+              await profileResponse.json()
+
+            throw new Error(
+              typeof data.detail ===
+                'string'
+                ? data.detail
+                : 'Unable to load your profile for analytics.'
+            )
+          }
+
           const [
             programResult,
             scholarshipResult,
+            profileResult,
           ] = await Promise.all([
             programResponse.json(),
             scholarshipResponse.json(),
+            profileResponse.json(),
           ])
 
           setProgramData(programResult)
@@ -176,9 +202,34 @@ function RecommendationModal({
             scholarshipResult
           )
 
-          await loadSavedOpportunities()
+          onRecommendationsGenerated?.({
+            profile:
+              profileResult,
+
+            programData:
+              programResult,
+
+            scholarshipData:
+              scholarshipResult,
+
+            savedData:
+              savedResult,
+          })
+
+          onGenerationStateChange?.(
+            true
+          )
 
         } catch (err) {
+
+          onGenerationStateChange?.(
+            false
+          )
+
+          onRecommendationsGenerated?.(
+            null
+          )
+
           setError(
             err.message ||
               'Unable to generate recommendations.'
@@ -950,6 +1001,15 @@ function RecommendationModal({
                 setError('')
                 setProgramData(null)
                 setScholarshipData(null)
+
+                onGenerationStateChange?.(
+                  false
+                )
+
+                onRecommendationsGenerated?.(
+                  null
+                )
+
                 setRecommendationsRequested(
                   true
                 )

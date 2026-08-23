@@ -2750,3 +2750,354 @@
     border-radius: 18px;
   }
 }
+
+
+/* =========================================================
+   STEP 198.6F - RESULTS ALIGNMENT AND SPACING
+========================================================= */
+
+
+/* ---------------------------------------------------------
+   PAGE CONTAINER
+--------------------------------------------------------- */
+
+.recommendation-page {
+  width: 100%;
+}
+
+.recommendation-modal-page {
+  width: min(
+    1480px,
+    calc(100% - 48px)
+  );
+
+  margin:
+    0
+    auto
+    48px;
+
+  padding:
+    42px
+    38px
+    46px;
+
+  box-sizing: border-box;
+}
+
+
+/* ---------------------------------------------------------
+   PAGE HEADER
+--------------------------------------------------------- */
+
+.recommendation-modal-page
+.recommendation-modal-header {
+  max-width: 920px;
+  margin:
+    0
+    auto
+    30px;
+
+  text-align: center;
+}
+
+.recommendation-modal-page
+.recommendation-modal-header > div {
+  width: 100%;
+}
+
+.recommendation-modal-page
+.recommendation-modal-header h2 {
+  margin:
+    8px
+    0
+    10px;
+
+  line-height: 1.15;
+}
+
+.recommendation-modal-page
+.recommendation-modal-header p {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* ---------------------------------------------------------
+   FOUR SUMMARY BOXES
+--------------------------------------------------------- */
+
+.recommendation-modal-page
+.recommendation-summary {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      4,
+      minmax(0, 1fr)
+    );
+
+  gap: 18px;
+
+  width: 100%;
+
+  margin:
+    0
+    0
+    26px;
+
+  align-items: stretch;
+}
+
+.recommendation-modal-page
+.recommendation-summary > div {
+  min-width: 0;
+  min-height: 124px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  padding:
+    20px
+    18px;
+
+  box-sizing: border-box;
+
+  text-align: center;
+}
+
+.recommendation-modal-page
+.recommendation-summary > div span {
+  min-height: 38px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  line-height: 1.35;
+}
+
+.recommendation-modal-page
+.recommendation-summary > div strong {
+  margin-top: 7px;
+
+  line-height: 1;
+}
+
+
+/* ---------------------------------------------------------
+   PROGRAMME / SCHOLARSHIP RESULT TABS
+--------------------------------------------------------- */
+
+.recommendation-modal-page
+.recommendation-tabs {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(0, 1fr)
+    );
+
+  gap: 8px;
+
+  width: 100%;
+
+  margin:
+    0
+    0
+    20px;
+
+  padding: 7px;
+
+  box-sizing: border-box;
+}
+
+.recommendation-modal-page
+.recommendation-tabs button {
+  width: 100%;
+  min-width: 0;
+  min-height: 56px;
+
+  padding:
+    12px
+    18px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  line-height: 1.35;
+}
+
+
+/* ---------------------------------------------------------
+   ALGORITHM BOX
+--------------------------------------------------------- */
+
+.recommendation-modal-page
+.recommendation-algorithm {
+  width: 100%;
+
+  margin:
+    0
+    0
+    24px;
+
+  padding:
+    16px
+    20px;
+
+  box-sizing: border-box;
+
+  display: flex;
+
+  align-items: center;
+
+  gap:
+    7px
+    10px;
+
+  flex-wrap: wrap;
+}
+
+
+/* ---------------------------------------------------------
+   RECOMMENDATION LIST
+--------------------------------------------------------- */
+
+.recommendation-modal-page
+.recommendation-list {
+  display: grid;
+
+  gap: 20px;
+
+  width: 100%;
+
+  margin: 0;
+}
+
+.recommendation-modal-page
+.recommendation-card {
+  width: 100%;
+
+  box-sizing: border-box;
+}
+
+
+/* ---------------------------------------------------------
+   TABLET
+--------------------------------------------------------- */
+
+@media (max-width: 1100px) {
+
+  .recommendation-modal-page {
+    width: min(
+      100% - 32px,
+      1480px
+    );
+
+    padding:
+      34px
+      26px
+      40px;
+  }
+
+  .recommendation-modal-page
+  .recommendation-summary {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+  }
+}
+
+
+/* ---------------------------------------------------------
+   MOBILE
+--------------------------------------------------------- */
+
+@media (max-width: 720px) {
+
+  .recommendation-modal-page {
+    width: min(
+      100% - 20px,
+      1480px
+    );
+
+    margin-bottom: 28px;
+
+    padding:
+      26px
+      16px
+      32px;
+  }
+
+  .recommendation-modal-page
+  .recommendation-modal-header {
+    margin-bottom: 24px;
+  }
+
+  .recommendation-modal-page
+  .recommendation-summary {
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+
+    margin-bottom: 20px;
+  }
+
+  .recommendation-modal-page
+  .recommendation-summary > div {
+    min-height: 104px;
+  }
+
+  .recommendation-modal-page
+  .recommendation-tabs {
+    gap: 5px;
+
+    padding: 5px;
+  }
+
+  .recommendation-modal-page
+  .recommendation-tabs button {
+    min-height: 52px;
+
+    padding:
+      10px
+      8px;
+
+    font-size: 0.84rem;
+  }
+
+  .recommendation-modal-page
+  .recommendation-algorithm {
+    padding:
+      14px
+      15px;
+  }
+}
+
+
+/* =========================================================
+   STEP 198.6I - RESULTS CHILD WIDTH
+========================================================= */
+
+/* Width is controlled by the workspace panel.
+   Do not calculate another width inside it. */
+
+.recommendation-modal-page {
+  width: 100%;
+  max-width: none;
+
+  margin-left: 0;
+  margin-right: 0;
+
+  box-sizing: border-box;
+}

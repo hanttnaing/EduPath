@@ -15,6 +15,7 @@ import ScholarshipCard from './ScholarshipCard'
 import MyProfileModal from './MyProfileModal'
 import RecommendationModal from './RecommendationModal'
 import SavedPage from './SavedPage'
+import MyAnalyticsPage from './MyAnalyticsPage'
 import EduPathLogoMark from './assets/edupath-logo-mark.png'
 import './App.css'
 
@@ -418,6 +419,21 @@ function App() {
   ] = useState('home')
 
   const [
+    recommendationWorkspaceView,
+    setRecommendationWorkspaceView,
+  ] = useState('results')
+
+  const [
+    recommendationsReady,
+    setRecommendationsReady,
+  ] = useState(false)
+
+  const [
+    recommendationAnalyticsCache,
+    setRecommendationAnalyticsCache,
+  ] = useState(null)
+
+  const [
     showExploreMenu,
     setShowExploreMenu,
   ] = useState(false)
@@ -435,6 +451,30 @@ function App() {
     ].includes(activePage)
 
 
+
+
+  // =========================
+  // RECOMMENDATION WORKSPACE UX
+  // =========================
+
+  useEffect(() => {
+    if (
+      activePage !==
+      'recommendations'
+    ) {
+      setRecommendationWorkspaceView(
+        'results'
+      )
+
+      setRecommendationsReady(
+        false
+      )
+
+      setRecommendationAnalyticsCache(
+        null
+      )
+    }
+  }, [activePage])
 
 
   // =========================
@@ -1573,81 +1613,118 @@ function App() {
   // SCHOLARSHIP FILTER OPTIONS
   // =========================
   const scholarshipDegrees = [
-    ...new Set(
-      scholarships.flatMap(
-        (scholarship) => {
-          if (
-            Array.isArray(
-              scholarship.degree_levels
-            )
-          ) {
-            return scholarship.degree_levels
-          }
-
-          if (
-            scholarship.degree_levels
-          ) {
-            return [
-              scholarship.degree_levels,
-            ]
-          }
-
-          return []
-        }
-      )
-    ),
-  ].filter(Boolean)
+    "Bachelor",
+    "Master",
+    "PhD"
+  ]
 
   const scholarshipFundings = [
-    ...new Set(
-      scholarships
-        .map(
-          (scholarship) =>
-            scholarship.funding ||
-            scholarship.funding_type ||
-            scholarship.funding_status ||
-            ''
-        )
-        .filter(Boolean)
-    ),
+    "Fully Funded",
+    "Partially Funded",
+    "Variable Funding",
+    "Unknown"
   ]
 
   const scholarshipStatuses = [
-    ...new Set(
-      scholarships
-        .map(
-          (scholarship) =>
-            scholarship.status ||
-            scholarship.scholarship_status ||
-            scholarship.application_status ||
-            ''
-        )
-        .filter(Boolean)
-    ),
+    "open",
+    "upcoming",
+    "closed",
+    "unknown"
   ]
 
   const scholarshipFields = [
-    ...new Set(
-      scholarships.flatMap(
-        (scholarship) => {
-          const fields =
-            scholarship.fields_of_study
-
-          if (
-            Array.isArray(fields)
-          ) {
-            return fields
-          }
-
-          if (fields) {
-            return [fields]
-          }
-
-          return []
-        }
-      )
-    ),
-  ].filter(Boolean)
+    "Aerospace and Autonomous Systems Engineering",
+    "Agricultural and Rural Development",
+    "Agricultural Chemistry",
+    "Agricultural Economics",
+    "Agricultural Education",
+    "Agricultural Engineering",
+    "Agriculture",
+    "Agriculture and Food Security",
+    "Agriculture, Forestry, Fisheries and Veterinary",
+    "Agronomy",
+    "Applied Nutrition",
+    "Architecture",
+    "Artificial Intelligence Engineering and Cybersecurity",
+    "Arts and Humanities",
+    "Asian and Islamic Studies",
+    "Biochemical Engineering",
+    "Biochemistry",
+    "Biodiversity",
+    "Bioinspiration",
+    "Botany",
+    "Business, Administration and Law",
+    "Catalysis",
+    "Chemical Engineering",
+    "Chemistry",
+    "China Studies",
+    "Chinese Economy",
+    "Civil Engineering",
+    "Climate Change",
+    "Climate Resilience",
+    "Community Development",
+    "Computer Engineering",
+    "Computer Science",
+    "Creative Informatics",
+    "Data Analytics",
+    "Development Communication",
+    "Digital Engineering",
+    "Education",
+    "Electrical Engineering",
+    "Energy",
+    "Energy and Power Engineering",
+    "Energy Management",
+    "Energy Technology",
+    "Engineering Management",
+    "Engineering, Manufacturing and Construction",
+    "Entomology",
+    "Environmental Engineering",
+    "Environmental Management",
+    "Environmental Science",
+    "Environmental Technology",
+    "Extension Education",
+    "Food Science",
+    "Food Security and Nutrition",
+    "Genetics",
+    "Health and Welfare excluding medicine, nursing and pharmacy",
+    "Health and Wellness",
+    "Health Science and Technology",
+    "Herbal Medicine",
+    "ICT",
+    "Inclusive Development",
+    "Industrial Engineering",
+    "Information and Communication Engineering",
+    "Information Physics and Computing",
+    "Information Technology",
+    "Logistics Systems",
+    "Management Technology",
+    "Material Science",
+    "Materials Engineering",
+    "Materials Science",
+    "Materials Technology",
+    "Mathematical Informatics",
+    "Mechanical Engineering",
+    "Mechano-Informatics",
+    "Microbiology",
+    "Molecular Biology and Biotechnology",
+    "Natural Sciences, Mathematics and Statistics",
+    "Physics",
+    "Plant Breeding",
+    "Plant Pathology",
+    "Research fields available through A*STAR Research Institutes and partner universities",
+    "Science, Technology and Innovation for Development",
+    "Sensor Technology",
+    "SEP for SDGs",
+    "Social Sciences, Journalism and Information",
+    "Software Engineering",
+    "Soil Science",
+    "Statistics",
+    "Supply Chain Systems Engineering",
+    "Sustainable Agricultural Systems",
+    "Sustainable Energy",
+    "Trade and Economy",
+    "Various fields at GKS-designated universities"
+  ]
 
   // =========================
   // UNIVERSITY LOOKUP MAP
@@ -3505,7 +3582,7 @@ function App() {
                     key={status}
                     value={status}
                   >
-                    {status}
+                    {status.charAt(0).toUpperCase() + status.slice(1)}
                   </option>
                 )
               )}
@@ -3697,9 +3774,151 @@ function App() {
 
         {activePage === 'recommendations' && (
           <section className="recommendations-page-section">
-            <RecommendationModal
-              displayMode="page"
-            />
+
+            <div className="recommendation-workspace-tabs-shell">
+
+              <div
+                className="recommendation-workspace-tabs"
+                role="tablist"
+                aria-label="Recommendation workspace views"
+              >
+
+                <button
+                  type="button"
+                  role="tab"
+                  aria-selected={
+                    recommendationWorkspaceView ===
+                    'results'
+                  }
+                  className={
+                    recommendationWorkspaceView ===
+                    'results'
+                      ? 'active'
+                      : ''
+                  }
+                  onClick={() =>
+                    setRecommendationWorkspaceView(
+                      'results'
+                    )
+                  }
+                >
+                  Results
+                </button>
+
+                <button
+                  type="button"
+                  role="tab"
+                  aria-selected={
+                    recommendationWorkspaceView ===
+                    'insights'
+                  }
+                  aria-disabled={
+                    !recommendationsReady
+                  }
+                  disabled={
+                    !recommendationsReady
+                  }
+                  className={`${
+                    recommendationWorkspaceView ===
+                    'insights'
+                      ? 'active'
+                      : ''
+                  } ${
+                    !recommendationsReady
+                      ? 'locked'
+                      : ''
+                  }`}
+                  title={
+                    recommendationsReady
+                      ? 'View recommendation insights'
+                      : 'Generate recommendations first'
+                  }
+                  onClick={() => {
+                    if (
+                      recommendationsReady
+                    ) {
+                      setRecommendationWorkspaceView(
+                        'insights'
+                      )
+                    }
+                  }}
+                >
+                  <span>
+                    Insights
+                  </span>
+
+                  {
+                    !recommendationsReady && (
+                      <small className="recommendation-workspace-lock">
+                        Locked
+                      </small>
+                    )
+                  }
+                </button>
+
+              </div>
+
+              <p className="recommendation-workspace-context">
+                {
+                  recommendationWorkspaceView ===
+                  'insights'
+                    ? 'Understand the scores, evidence and requirement gaps behind your current recommendations.'
+                    : recommendationsReady
+                      ? 'Your personalized recommendations are ready. Review the results or open Insights for deeper analysis.'
+                      : 'Generate personalized recommendations first to unlock Insights.'
+                }
+              </p>
+
+            </div>
+
+
+            <div
+              className={
+                recommendationWorkspaceView ===
+                'results'
+                  ? 'recommendation-workspace-panel'
+                  : 'recommendation-workspace-panel is-hidden'
+              }
+              aria-hidden={
+                recommendationWorkspaceView !==
+                'results'
+              }
+            >
+              <RecommendationModal
+                displayMode="page"
+                onGenerationStateChange={
+                  (ready) => {
+                    setRecommendationsReady(
+                      ready
+                    )
+
+                    if (!ready) {
+                      setRecommendationAnalyticsCache(
+                        null
+                      )
+                    }
+                  }
+                }
+                onRecommendationsGenerated={
+                  setRecommendationAnalyticsCache
+                }
+              />
+            </div>
+
+
+            {recommendationWorkspaceView ===
+              'insights' &&
+              recommendationsReady && (
+                <div className="recommendation-workspace-panel">
+                  <MyAnalyticsPage
+                    embedded
+                    initialData={
+                      recommendationAnalyticsCache
+                    }
+                  />
+                </div>
+              )}
+
           </section>
         )}
 

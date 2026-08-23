@@ -5080,3 +5080,374 @@ img.edupath-brand-mark {
 
 }
 
+
+
+/* =========================================================
+   STEP 198.6A.1 - RECOMMENDATION WORKSPACE
+========================================================= */
+
+.recommendation-workspace-tabs-shell {
+  width: min(1440px, calc(100% - 40px));
+  margin: 26px auto 0;
+  padding: 18px 20px;
+  border: 1px solid #e1e7f0;
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow:
+    0 10px 30px
+    rgba(20, 35, 70, 0.05);
+}
+
+.recommendation-workspace-tabs {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  background: #f5f7fb;
+}
+
+.recommendation-workspace-tabs button {
+  min-width: 118px;
+  padding: 10px 20px;
+  border: 0;
+  border-radius: 10px;
+  background: transparent;
+  color: #667085;
+  font: inherit;
+  font-weight: 750;
+  cursor: pointer;
+
+  transition:
+    background 0.18s ease,
+    color 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+.recommendation-workspace-tabs button:hover {
+  color: #4338ca;
+}
+
+.recommendation-workspace-tabs button.active {
+  background: #ffffff;
+  color: #4f46e5;
+  box-shadow:
+    0 4px 14px
+    rgba(79, 70, 229, 0.12);
+}
+
+.recommendation-workspace-context {
+  margin: 13px 2px 0;
+  color: #7b8495;
+  font-size: 0.86rem;
+  line-height: 1.55;
+}
+
+
+@media (max-width: 720px) {
+
+  .recommendation-workspace-tabs-shell {
+    width: min(
+      100% - 24px,
+      1440px
+    );
+
+    margin-top: 16px;
+    padding: 14px;
+  }
+
+  .recommendation-workspace-tabs {
+    display: grid;
+    grid-template-columns:
+      1fr 1fr;
+    width: 100%;
+  }
+
+  .recommendation-workspace-tabs button {
+    min-width: 0;
+    width: 100%;
+  }
+}
+
+
+/* =========================================================
+   STEP 198.6C - GENERATE FIRST INSIGHTS GATE
+========================================================= */
+
+.recommendation-workspace-tabs button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.recommendation-workspace-tabs button.locked,
+.recommendation-workspace-tabs button:disabled {
+  cursor: not-allowed;
+  color: #98a2b3;
+  background: transparent;
+  box-shadow: none;
+  opacity: 0.72;
+}
+
+.recommendation-workspace-tabs button.locked:hover,
+.recommendation-workspace-tabs button:disabled:hover {
+  color: #98a2b3;
+}
+
+.recommendation-workspace-lock {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 7px;
+  border-radius: 999px;
+  background: #e9edf5;
+  color: #7c8799;
+  font-size: 0.62rem;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.recommendation-workspace-panel {
+  width: 100%;
+}
+
+.recommendation-workspace-panel.is-hidden {
+  display: none;
+}
+
+
+/* =========================================================
+   STEP 198.6F - WORKSPACE WIDTH ALIGNMENT
+========================================================= */
+
+
+/* Match the Results / Insights shell with the
+   recommendation content below it. */
+
+.recommendation-workspace-tabs-shell {
+  width: min(
+    1480px,
+    calc(100% - 48px)
+  );
+
+  margin:
+    26px
+    auto
+    0;
+
+  box-sizing: border-box;
+}
+
+
+/* Keep workspace content centered. */
+
+.recommendations-page-section {
+  width: 100%;
+}
+
+
+/* More consistent vertical space between
+   workspace control and recommendation content. */
+
+.recommendation-workspace-tabs-shell
++ .recommendation-workspace-panel {
+  margin-top: 0;
+}
+
+
+@media (max-width: 1100px) {
+
+  .recommendation-workspace-tabs-shell {
+    width: min(
+      100% - 32px,
+      1480px
+    );
+  }
+}
+
+
+@media (max-width: 720px) {
+
+  .recommendation-workspace-tabs-shell {
+    width: min(
+      100% - 20px,
+      1480px
+    );
+
+    margin-top: 16px;
+  }
+}
+
+
+/* =========================================================
+   STEP 198.6H - WORKSPACE BOX SEPARATION
+========================================================= */
+
+
+/* Create a clear visual gap between:
+   1. Results / Insights selector box
+   2. Main Results or Insights content box
+*/
+
+.recommendation-workspace-tabs-shell
++ .recommendation-workspace-panel {
+  margin-top: 24px;
+}
+
+
+/* Results panel itself should not add
+   conflicting negative / top spacing. */
+
+.recommendation-workspace-panel {
+  position: relative;
+}
+
+
+/* Tablet */
+
+@media (max-width: 1100px) {
+
+  .recommendation-workspace-tabs-shell
+  + .recommendation-workspace-panel {
+    margin-top: 20px;
+  }
+}
+
+
+/* Mobile */
+
+@media (max-width: 720px) {
+
+  .recommendation-workspace-tabs-shell
+  + .recommendation-workspace-panel {
+    margin-top: 16px;
+  }
+}
+
+
+/* =========================================================
+   STEP 198.6I - SHARED WORKSPACE WIDTH
+========================================================= */
+
+.recommendation-workspace-tabs-shell,
+.recommendation-workspace-panel {
+  width: min(
+    1480px,
+    calc(100% - 48px)
+  );
+
+  margin-left: auto;
+  margin-right: auto;
+
+  box-sizing: border-box;
+}
+
+
+/* The first content panel receives the
+   spacing below Results / Insights. */
+
+.recommendation-workspace-tabs-shell
++ .recommendation-workspace-panel {
+  margin-top: 24px;
+}
+
+
+@media (max-width: 1100px) {
+
+  .recommendation-workspace-tabs-shell,
+  .recommendation-workspace-panel {
+    width: min(
+      100% - 32px,
+      1480px
+    );
+  }
+
+  .recommendation-workspace-tabs-shell
+  + .recommendation-workspace-panel {
+    margin-top: 20px;
+  }
+}
+
+
+@media (max-width: 720px) {
+
+  .recommendation-workspace-tabs-shell,
+  .recommendation-workspace-panel {
+    width: min(
+      100% - 20px,
+      1480px
+    );
+  }
+
+  .recommendation-workspace-tabs-shell
+  + .recommendation-workspace-panel {
+    margin-top: 16px;
+  }
+}
+
+
+/* =========================================================
+   STEP 198.7C - VISIBLE WORKSPACE PANEL SPACING
+========================================================= */
+
+
+/*
+   Results remains mounted while Insights is visible.
+
+   Therefore spacing must belong to EVERY visible
+   workspace panel, not only the first adjacent sibling.
+*/
+
+.recommendation-workspace-panel {
+  margin-top: 24px !important;
+}
+
+
+/* Hidden Results panel must occupy no visual space. */
+
+.recommendation-workspace-panel.is-hidden {
+  display: none !important;
+  margin-top: 0 !important;
+}
+
+
+/* Selector box should not create another bottom margin. */
+
+.recommendation-workspace-tabs-shell {
+  margin-bottom: 0 !important;
+}
+
+
+/* ---------------------------------------------------------
+   TABLET
+--------------------------------------------------------- */
+
+@media (max-width: 1100px) {
+
+  .recommendation-workspace-panel {
+    margin-top: 20px !important;
+  }
+
+  .recommendation-workspace-panel.is-hidden {
+    margin-top: 0 !important;
+  }
+}
+
+
+/* ---------------------------------------------------------
+   MOBILE
+--------------------------------------------------------- */
+
+@media (max-width: 720px) {
+
+  .recommendation-workspace-panel {
+    margin-top: 16px !important;
+  }
+
+  .recommendation-workspace-panel.is-hidden {
+    margin-top: 0 !important;
+  }
+}
