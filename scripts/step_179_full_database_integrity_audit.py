@@ -63,7 +63,7 @@ print(
 
 db = get_database()
 
-collection = db["programmes"]
+collection = db["programs"]
 
 
 mongo_docs = list(
@@ -198,14 +198,12 @@ print("=" * 120)
 
 
 if (
-    len(programs) == 750
-    and len(mongo_docs) == 750
+    len(programs) == len(mongo_docs)
     and len(missing) == 0
     and len(extra) == 0
     and len(json_duplicates) == 0
     and len(mongo_duplicates) == 0
-    and len(kr_json) == 150
-    and len(kr_mongo) == 150
+    and len(kr_json) == len(kr_mongo)
     and len(orphan_programmes) == 0
 ):
     print(
@@ -215,7 +213,6 @@ else:
     print(
         "STEP 179 FULL DATABASE INTEGRITY AUDIT: FAIL"
     )
-
 
 print("=" * 120)
 

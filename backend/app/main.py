@@ -53,6 +53,75 @@ from backend.app.schemas import (
     UniversityResponse,
 )
 
+def normalize_program_response(program: dict) -> dict:
+    """
+    Normalize MongoDB programme document
+    into API ProgramResponse format.
+    """
+
+    program["program_url"] = (
+        program.get("program_url")
+        or program.get("official_program_url")
+        or ""
+    )
+
+    program["language_of_instruction"] = (
+        program.get("language_of_instruction")
+        or ""
+    )
+
+    program["collected_at"] = (
+        program.get("collected_at")
+        or program.get("last_verified_at")
+    )
+
+    program["last_verified_at"] = (
+        program.get("last_verified_at")
+        or program.get("collected_at")
+    )
+
+    program["freshness_status"] = (
+        program.get("freshness_status")
+        or "verified"
+    )
+
+    if isinstance(program.get("tuition_fee"), str):
+        try:
+            program["tuition_fee"] = float(
+                program["tuition_fee"]
+            )
+        except:
+            program["tuition_fee"] = None
+
+
+    numeric_fields = [
+        "duration_years",
+        "minimum_gpa",
+        "gpa_scale",
+        "ielts_requirement",
+        "toefl_requirement",
+    ]
+
+    for field in numeric_fields:
+
+        if isinstance(program.get(field), str):
+
+            try:
+                program[field] = float(
+                    program[field]
+                )
+
+            except:
+                program[field] = None
+
+
+    if isinstance(program.get("intake"), str):
+
+        program["intake"] = []
+
+
+    return program
+
 # ---------------------------------------------------------
 # Application lifespan
 # ---------------------------------------------------------
@@ -422,7 +491,7 @@ def list_programs(
             "$lte": max_tuition_fee,
         }
 
-    collection = database["programs"]
+    collection = database["programmes"]
 
     try:
         total = collection.count_documents(query)
@@ -444,6 +513,11 @@ def list_programs(
         )
 
         programs = list(cursor)
+
+        programs = [
+            normalize_program_response(p)
+            for p in programs
+        ]
 
     except PyMongoError as error:
         raise HTTPException(
@@ -473,7 +547,7 @@ def get_program(
     """Return one academic programme using its unique ID."""
 
     database = get_database()
-    collection = database["programs"]
+    collection = database["programmes"]
 
     try:
         program = collection.find_one(
@@ -497,6 +571,8 @@ def get_program(
             status_code=status.HTTP_404_NOT_FOUND,
             detail="Programme not found.",
         )
+    
+    program = normalize_program_response(program)
 
     return program
 
@@ -2431,7 +2507,7 @@ def save_program_for_user(
                 ),
             )
 
-        program = database["programs"].find_one(
+        program = database["programmes"].find_one(
             {"program_id": program_id},
             {
                 "_id": 0,
@@ -2546,7 +2622,7 @@ def unsave_program_for_user(
                 ),
             )
 
-        program = database["programs"].find_one(
+        program = database["programmes"].find_one(
             {"program_id": program_id},
             {
                 "_id": 0,
@@ -3009,7 +3085,7 @@ def get_saved_opportunities(
         )
 
         program_documents = list(
-            database["programs"].find(
+            database["programmes"].find(
                 {
                     "program_id": {
                         "$in": saved_program_ids

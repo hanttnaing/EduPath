@@ -471,13 +471,16 @@ def evaluate_scholarship(
         2,
     )
 
-    reasons.append(
-        "Preferred-major and scholarship-field "
-        f"similarity is "
-        f"{field_similarity * 100:.2f}%."
-    )
+    if field_similarity >= 0.50:
 
-    if field_similarity < 0.50:
+        reasons.append(
+            "Preferred-major and scholarship-field "
+            f"similarity is "
+            f"{field_similarity * 100:.2f}%."
+        )
+
+    else:
+
         gaps.append(
             "The preferred major is not a strong exact "
             "match with the scholarship study fields."
