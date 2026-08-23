@@ -52,3 +52,20 @@ backend/.env
 # Keep example configuration files
 !.env.example
 !frontend/.env.example
+# =========================================================
+# EduPath local/generated files
+# Added STEP 199.1
+# =========================================================
+# Local project backups
+/backups/
+backend/app/*_before_*.py
+frontend/src/*.step_*.jsx
+frontend/src/*.step_*.css
+scripts/*.step_*.py
+data/staging/*_backup_*.json
+# Accidental root-level npm artifacts
+/node_modules/
+/package.json
+/package-lock.json
+# Python / local runtime files
+*.pyc
