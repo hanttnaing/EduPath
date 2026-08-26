@@ -5,6 +5,7 @@ from uuid import uuid4
 import os
 from fastapi.middleware.cors import CORSMiddleware
 from dotenv import load_dotenv
+from datetime import datetime
 
 from contextlib import asynccontextmanager
 from typing import Any
@@ -79,6 +80,16 @@ def normalize_program_response(program: dict) -> dict:
         program.get("last_verified_at")
         or program.get("collected_at")
     )
+
+     # Normalize missing datetime fields
+    if not program.get("collected_at"):
+        program["collected_at"] = datetime.utcnow()
+
+    if not program.get("last_verified_at"):
+        program["last_verified_at"] = program["collected_at"]
+
+    if program.get("application_deadline") == "":
+        program["application_deadline"] = None
 
     program["freshness_status"] = (
         program.get("freshness_status")
@@ -429,7 +440,6 @@ def list_programs(
         description="Maximum number of records to return.",
     ),
 ) -> dict[str, Any]:
-    """Return academic programmes using optional filters."""
 
     database = get_database()
 
@@ -453,6 +463,7 @@ def list_programs(
                 },
             )
         ]
+
 
         if not country_university_ids:
             query["university_id"] = {
@@ -491,7 +502,7 @@ def list_programs(
             "$lte": max_tuition_fee,
         }
 
-    collection = database["programmes"]
+    collection = database["programs"]
 
     try:
         total = collection.count_documents(query)
@@ -547,7 +558,7 @@ def get_program(
     """Return one academic programme using its unique ID."""
 
     database = get_database()
-    collection = database["programmes"]
+    collection = database["programs"]
 
     try:
         program = collection.find_one(
@@ -560,9 +571,9 @@ def get_program(
             },
         )
 
-    except PyMongoError as error:
+    except Exception as error:
         raise HTTPException(
-            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            status_code=500,
             detail="Unable to retrieve the programme.",
         ) from error
 
@@ -2507,7 +2518,7 @@ def save_program_for_user(
                 ),
             )
 
-        program = database["programmes"].find_one(
+        program = database["programs"].find_one(
             {"program_id": program_id},
             {
                 "_id": 0,
@@ -2622,7 +2633,7 @@ def unsave_program_for_user(
                 ),
             )
 
-        program = database["programmes"].find_one(
+        program = database["programs"].find_one(
             {"program_id": program_id},
             {
                 "_id": 0,
@@ -3085,7 +3096,7 @@ def get_saved_opportunities(
         )
 
         program_documents = list(
-            database["programmes"].find(
+            database["programs"].find(
                 {
                     "program_id": {
                         "$in": saved_program_ids
