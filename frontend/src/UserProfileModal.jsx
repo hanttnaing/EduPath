@@ -1130,6 +1130,10 @@ function UserProfileModal({
                   Select degree
                 </option>
 
+                <option value="Diploma">
+                  Diploma
+                </option>
+
                 <option value="Bachelor's">
                   Bachelor's
                 </option>

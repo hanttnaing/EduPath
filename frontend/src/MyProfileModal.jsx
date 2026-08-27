@@ -7,6 +7,10 @@ import './MyProfileModal.css'
 
 const TARGET_DEGREE_OPTIONS = [
   {
+    value: 'Diploma',
+    label: 'Diploma',
+  },
+  {
     value: 'Bachelor',
     label: "Bachelor's",
   },
@@ -47,6 +51,10 @@ function normalizeTargetDegree(value) {
   )
     .trim()
     .toLowerCase()
+
+  if (clean === 'diploma') {
+    return 'Diploma'
+  }
 
   if (
     clean === 'bachelor' ||
