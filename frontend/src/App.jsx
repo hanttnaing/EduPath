@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import API_BASE_URL, {
+  apiFetchWithRetry,
   authFetch,
   clearAccessToken,
   getAccessToken,
@@ -969,8 +970,8 @@ function App() {
     email,
     password,
   }) => {
-    const response = await fetch(
-      `${API_BASE_URL}/api/auth/login`,
+    const response = await apiFetchWithRetry(
+      '/api/auth/login',
       {
         method: 'POST',
         headers: {

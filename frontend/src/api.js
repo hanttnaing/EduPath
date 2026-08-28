@@ -25,6 +25,100 @@ export function clearAccessToken() {
   );
 }
 
+
+function wait(milliseconds) {
+  return new Promise((resolve) => {
+    window.setTimeout(resolve, milliseconds);
+  });
+}
+
+export async function warmBackend() {
+  try {
+    await fetch(
+      `${API_BASE_URL}/api/health`,
+      {
+        method: "GET",
+        cache: "no-store",
+      }
+    );
+
+    return true;
+  } catch {
+    // A failed first request can still trigger
+    // a sleeping Render service to wake up.
+    return false;
+  }
+}
+
+export async function apiFetchWithRetry(
+  path,
+  options = {},
+  retryDelays = [
+    0,
+    5000,
+    10000,
+    15000,
+    20000,
+    25000,
+  ]
+) {
+  let lastNetworkError = null;
+
+  for (
+    let attempt = 0;
+    attempt < retryDelays.length;
+    attempt += 1
+  ) {
+    const delay = retryDelays[attempt];
+
+    if (delay > 0) {
+      await wait(delay);
+    }
+
+    try {
+      const response = await fetch(
+        `${API_BASE_URL}${path}`,
+        options
+      );
+
+      const retryable =
+        response.status === 502 ||
+        response.status === 503 ||
+        response.status === 504;
+
+      if (!retryable) {
+        return response;
+      }
+
+      if (
+        attempt ===
+        retryDelays.length - 1
+      ) {
+        return response;
+      }
+    } catch (error) {
+      lastNetworkError = error;
+
+      if (
+        attempt ===
+        retryDelays.length - 1
+      ) {
+        throw new Error(
+          "EduPath server is starting. " +
+          "Please wait a moment and try again."
+        );
+      }
+    }
+  }
+
+  throw (
+    lastNetworkError ||
+    new Error(
+      "Unable to connect to the EduPath server."
+    )
+  );
+}
+
 export async function authFetch(
   path,
   options = {}

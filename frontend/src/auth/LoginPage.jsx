@@ -1,5 +1,6 @@
 import EduPathLogoMark from '../assets/edupath-logo-mark.png'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import { warmBackend } from '../api'
 import './Auth.css'
 
 function LoginPage({
@@ -18,6 +19,10 @@ function LoginPage({
 
   const [error, setError] =
     useState('')
+
+  useEffect(() => {
+    void warmBackend();
+  }, []);
 
   const handleSubmit = async (event) => {
     event.preventDefault()
