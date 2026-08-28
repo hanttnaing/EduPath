@@ -55,14 +55,11 @@ export async function apiFetchWithRetry(
   options = {},
   retryDelays = [
     0,
-    5000,
-    10000,
-    15000,
-    20000,
-    25000,
+    1500,
+    2500,
   ]
 ) {
-  let lastNetworkError = null;
+  const REQUEST_TIMEOUT_MS = 8000;
 
   for (
     let attempt = 0;
@@ -75,10 +72,20 @@ export async function apiFetchWithRetry(
       await wait(delay);
     }
 
+    const controller = new AbortController();
+
+    const timeoutId = window.setTimeout(
+      () => controller.abort(),
+      REQUEST_TIMEOUT_MS
+    );
+
     try {
       const response = await fetch(
         `${API_BASE_URL}${path}`,
-        options
+        {
+          ...options,
+          signal: controller.signal,
+        }
       );
 
       const retryable =
@@ -94,28 +101,28 @@ export async function apiFetchWithRetry(
         attempt ===
         retryDelays.length - 1
       ) {
-        return response;
+        throw new Error(
+          "EduPath server is still starting. " +
+          "Please wait a few seconds and try again."
+        );
       }
     } catch (error) {
-      lastNetworkError = error;
-
       if (
         attempt ===
         retryDelays.length - 1
       ) {
         throw new Error(
-          "EduPath server is starting. " +
-          "Please wait a moment and try again."
+          "EduPath server is taking longer than expected to respond. " +
+          "Please wait a few seconds and try again."
         );
       }
+    } finally {
+      window.clearTimeout(timeoutId);
     }
   }
 
-  throw (
-    lastNetworkError ||
-    new Error(
-      "Unable to connect to the EduPath server."
-    )
+  throw new Error(
+    "Unable to connect to the EduPath server."
   );
 }
 
