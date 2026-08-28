@@ -927,8 +927,16 @@ function App() {
       }
 
       try {
-        const response = await authFetch(
-          '/api/auth/me'
+        const response = await apiFetchWithRetry(
+          '/api/auth/me',
+          {
+            method: 'GET',
+            headers: {
+              Accept: 'application/json',
+              Authorization: `Bearer ${token}`,
+            },
+          },
+          [0]
         )
 
         if (!response.ok) {
