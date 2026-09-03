@@ -501,17 +501,24 @@ function ProfileSetupPage({
                       )
                     }
                   >
-                    <option value="USD">
-                      USD
-                    </option>
-
-                    <option value="JPY">
-                      JPY
-                    </option>
-
-                    <option value="MMK">
-                      MMK
-                    </option>
+                    <option value="BND">BND</option>
+                    <option value="KHR">KHR</option>
+                    <option value="CNY">CNY</option>
+                    <option value="HKD">HKD</option>
+                    <option value="IDR">IDR</option>
+                    <option value="JPY">JPY</option>
+                    <option value="LAK">LAK</option>
+                    <option value="MOP">MOP</option>
+                    <option value="MYR">MYR</option>
+                    <option value="MNT">MNT</option>
+                    <option value="MMK">MMK</option>
+                    <option value="PHP">PHP</option>
+                    <option value="SGD">SGD</option>
+                    <option value="KRW">KRW</option>
+                    <option value="TWD">TWD</option>
+                    <option value="THB">THB</option>
+                    <option value="USD">USD</option>
+                    <option value="VND">VND</option>
                   </select>
                 </label>
 
